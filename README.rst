@@ -11,7 +11,7 @@ as well as relevant doc-string and doxygen updates.
 
 License
 #######
-The License is included in the **project_name** package
+The License is included in the **c_libs** package
 
 Requirements
 ############
