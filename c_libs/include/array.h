@@ -18,6 +18,13 @@
 
 #include <stdio.h>
 
+/**
+ * A container for a dynamically allocated array and related data
+ * @param array a pointer to an array in memory
+ * @param len The active length of the array
+ * @param size The total number of indices allocated for the array
+ * @param elem The memory consumption for each indice
+ */
 typedef struct
 {
 	void *array;  // Pointer to array
@@ -26,7 +33,7 @@ typedef struct
 	int elem;     // Memory consumption per indice
 } Array;
 
-#endif /* array_H */
+#endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
 // eof
