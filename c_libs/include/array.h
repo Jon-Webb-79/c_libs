@@ -17,6 +17,8 @@
 #define ARRAY_H
 
 #include <stdio.h>
+#include <stdio.h>
+#include <string.h>
 
 /**
  * A container for a dynamically allocated array and related data
@@ -32,6 +34,14 @@ typedef struct
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
 } Array;
+
+/**
+ * This function instantiates an Array container and all
+ * relevant variables
+ * @param array an Array structure
+ * @param num_indices A guess for the number of indices that will be consumed by the array
+ */
+void initiate_array(Array *array, size_t num_indices);
 
 #endif /* ARRAY_H */
 // ================================================================================

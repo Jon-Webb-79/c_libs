@@ -16,9 +16,21 @@
 #include "array.h"
 
 // Begin code
-int func() {
-	// Replace this function with the correct one
-	return 0;
+
+void initiate_array(Array *array, size_t num_indices) {
+	void *pointer;
+	pointer = malloc(num_indices * array->elem);
+
+	if (pointer == NULL) {
+		printf("Unable to allocate memory, exiting.\n");
+		free(pointer);
+		exit(0);
+	}
+	else {
+		array->array = pointer;
+		array->len = 0;
+		array->size = num_indices;
+	}
 }
 // ================================================================================
 // ================================================================================
