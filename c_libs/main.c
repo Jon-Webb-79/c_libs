@@ -13,9 +13,8 @@
 // Include modules here
 
 #include <stdio.h>
-#include "array.h"
+#include "include/array.h"
 // Begin code
-// TODO add array name
 // TODO add array type
 // TODO Fix doxygen to include function documentation
 // TODO Add test for array memory kickover
@@ -25,7 +24,8 @@
 // TODO Add functions from array TODO list
 int main(int argc, const char * argv[]) {
 	size_t indices = 20;
-	Array int_test = init_array(sizeof(int), indices);
+	char name[5] = "array";
+	Array int_test = init_array(sizeof(int), indices, name);
 
 	int a[3] = {10, 9, 8};
 	size_t test = sizeof(a) / sizeof(int);

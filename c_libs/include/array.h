@@ -26,6 +26,7 @@
  * @param len The active length of the array
  * @param size The total number of indices allocated for the array
  * @param elem The memory consumption for each indice
+ * @param name The name of the array
  */
 typedef struct
 {
@@ -33,6 +34,7 @@ typedef struct
 	size_t len;   // Active length of array
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
+	char *name;   // The array name
 } Array;
 // --------------------------------------------------------------------------------
 
@@ -59,7 +61,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
  * int_array init_array(sizeof(int), indices);
  * @endcode
  */
-Array init_array(int size, size_t num_indices);
+Array init_array(int size, size_t num_indices, char *name);
 // --------------------------------------------------------------------------------
 
 /**

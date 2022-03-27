@@ -36,11 +36,14 @@ void array_mem_alloc(Array *array, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
-Array init_array(int size, size_t num_indices) {
+Array init_array(int size, size_t num_indices, char *name) {
 	// Allocate indice size and call initiate_array
 	Array array;
     array.elem = size;
     array_mem_alloc(&array, num_indices);
+	printf("%s\n", name);
+	array.name = name;
+	printf("%s\n", array.name);
 	return array;
 }
 // --------------------------------------------------------------------------------
