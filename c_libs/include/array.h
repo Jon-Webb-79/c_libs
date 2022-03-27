@@ -53,7 +53,20 @@ void initiate_array(Array *array, size_t num_indices);
  * @param num_indices A guess for the number of indices required by the array
  */
 Array init_array(int size, size_t num_indices);
+// --------------------------------------------------------------------------------
 
+/**
+ * This function allows a user to append an existing or blank array container
+ * with scalars or arrays of any data type except strings.
+ * @param array A pointer to the memory location where an array exists
+ * @param elements A scalar or an array of variables.  The variables can
+ *                 be of any data type, so as long as they are of the same
+ *                 data type as the array being appended.
+ * @param count The size of the elements data type in number of indices they
+ *              will occupy
+ * @return integer A 0 or 1 indicating success of the function.
+ */
+int append_array(Array *array, void *elements, size_t count);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

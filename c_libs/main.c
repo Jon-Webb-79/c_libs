@@ -14,11 +14,15 @@
 
 #include <stdio.h>
 #include "array.h"
-// TODO remove avrMakeFile from git
-// TODO remove avrMakefile from repository
 // Begin code
 int main(int argc, const char * argv[]) {
-	printf("Hello, World!\n");
+	size_t indices = 20;
+	Array int_test = init_array(sizeof(int), indices);
+
+	int a[3] = {10, 9, 8};
+	size_t test = sizeof(a) / sizeof(int);
+	printf("%zu\n", test);
+	append_array(&int_test, &a, 1);
 }
 // ================================================================================
 // ================================================================================
