@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/array.h"
 // Begin code
-// TODO Fix doxygen to include function documentation
 // TODO Add test for array memory kickover
 // TODO Add float test for append_array
 // TODO Add double test for append array

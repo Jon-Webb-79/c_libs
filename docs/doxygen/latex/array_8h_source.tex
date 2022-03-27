@@ -24,25 +24,27 @@
 \DoxyCodeLine{20 \textcolor{preprocessor}{\#include <stdlib.h>}}
 \DoxyCodeLine{21 \textcolor{preprocessor}{\#include <string.h>}}
 \DoxyCodeLine{22 }
-\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
-\DoxyCodeLine{31 \{}
-\DoxyCodeLine{32     \textcolor{keywordtype}{void} *\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}};  \textcolor{comment}{// Pointer to array}}
-\DoxyCodeLine{33     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structArray_adc2079bc1e342709d756f3e6dd51bcf5}{len}};   \textcolor{comment}{// Active length of array}}
-\DoxyCodeLine{34     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structArray_a13f67ab957f4fdd3443d7f62b2fd09ce}{size}};  \textcolor{comment}{// Number of allocated indizes}}
-\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{structArray_a0c6b261b75471e83ce4aa51e02948846}{elem}};     \textcolor{comment}{// Memory consumption per indice}}
-\DoxyCodeLine{36 \} \mbox{\hyperlink{structArray}{Array}};}
-\DoxyCodeLine{37 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_af8fcd9e2d63703be376b4e30fdff338f}{initiate\_array}}(\mbox{\hyperlink{structArray}{Array}} *array, \textcolor{keywordtype}{size\_t} num\_indices);}
-\DoxyCodeLine{47 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{62 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a593ea9f9c83c973a8186f6699f44f709}{init\_array}}(\textcolor{keywordtype}{int} size, \textcolor{keywordtype}{size\_t} num\_indices);}
-\DoxyCodeLine{63 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{76 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_a2f286165693b57a7e284044174f00282}{append\_array}}(\mbox{\hyperlink{structArray}{Array}} *array, \textcolor{keywordtype}{void} *elements, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{77 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ARRAY\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{78 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{79 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{80 \textcolor{comment}{// eof}}
+\DoxyCodeLine{31 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} *\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}};  \textcolor{comment}{// Pointer to array}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structArray_adc2079bc1e342709d756f3e6dd51bcf5}{len}};   \textcolor{comment}{// Active length of array}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structArray_a13f67ab957f4fdd3443d7f62b2fd09ce}{size}};  \textcolor{comment}{// Number of allocated indizes}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} \mbox{\hyperlink{structArray_a0c6b261b75471e83ce4aa51e02948846}{elem}};     \textcolor{comment}{// Memory consumption per indice}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{char} *\mbox{\hyperlink{structArray_a4c6095ef60578dda7c921707ca9c169c}{name}};   \textcolor{comment}{// The array name}}
+\DoxyCodeLine{38     \textcolor{keywordtype}{char} *\mbox{\hyperlink{structArray_aa6654742e6bd473a014cbc2b033a1341}{dtype}};  \textcolor{comment}{// A string representing the datatype}}
+\DoxyCodeLine{39 \} \mbox{\hyperlink{structArray}{Array}};}
+\DoxyCodeLine{40 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{49 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a5d694a209687f470f9661070458bdafd}{array\_mem\_alloc}}(\mbox{\hyperlink{structArray}{Array}} *array, \textcolor{keywordtype}{size\_t} num\_indices);}
+\DoxyCodeLine{50 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{69 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(\textcolor{keywordtype}{char} *dtype, \textcolor{keywordtype}{size\_t} num\_indices, \textcolor{keywordtype}{char} *name);}
+\DoxyCodeLine{70 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{122 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_a2f286165693b57a7e284044174f00282}{append\_array}}(\mbox{\hyperlink{structArray}{Array}} *array, \textcolor{keywordtype}{void} *elements, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ARRAY\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{124 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{125 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{126 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

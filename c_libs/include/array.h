@@ -52,17 +52,18 @@ void array_mem_alloc(Array *array, size_t num_indices);
 /**
  * This function is a wrapper for initiate_array that pre-populates
  * data in the Array struct and returns the struct to the user
- * @param size The size of a single indice
+ * @param dtype A string representing the data type, can be 'float',
+ *              'double', 'char', or 'int'
  * @param num_indices A guess for the number of indices required by the array
  * @param name The name of the array as a character string
- * @param dtype A string representing the data type, can be 'float',
- *              'double', 'char', or 'int'.
  *
  * The following is a code example for how to instantiate the container for
  * an integer;
  * @code
  * size_t indices = 20;
- * int_array init_array(sizeof(int), indices);
+ * char dtype[4] = "int";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
  * @endcode
  */
 Array init_array(char *dtype, size_t num_indices, char *name);
@@ -78,6 +79,45 @@ Array init_array(char *dtype, size_t num_indices, char *name);
  * @param count The size of the elements data type in number of indices they
  *              will occupy
  * @return integer A 0 or 1 indicating success of the function.
+ *
+ * The following demonstrates several ways that the append_array function can
+ * be uses.  In these instances, the function will be used for an array
+ * of integers
+ * @code
+ * // Instantiate array
+ * size_t indices = 20;
+ * char dtype[4] = "int";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build array from scalar values
+ * for (int = 0; i < 3; i++) {
+ *     append_array(&arr_test, &i, 1);
+ * }
+ *
+ * // Print the array values
+ * for (int i = 0; i < 3; i ++) {
+ *     printf("%d\n", ((int *) arr_test.array)[i]);
+ * }
+ * @endcode
+ * The following code will also have the same effect
+ * @code
+* // Instantiate array
+ * size_t indices = 20;
+ * char dtype[4] = "int";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build from an already existing array
+ * int a[3] = {0, 1, 2};
+ * append_array(&arr_test, a, 3);
+ *
+ * // Print the array values
+ * for (int i = 0; i < 3; i ++) {
+ *     printf("%d\n", ((int *) arr_test.array)[i]);
+ * } 
+ *
+ * @endcode
  */
 int append_array(Array *array, void *elements, size_t count);
 #endif /* ARRAY_H */

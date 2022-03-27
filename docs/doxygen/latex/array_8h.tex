@@ -11,9 +11,9 @@ struct \mbox{\hyperlink{structArray}{Array}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{array_8h_af8fcd9e2d63703be376b4e30fdff338f}{initiate\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, size\+\_\+t num\+\_\+indices)
+void \mbox{\hyperlink{array_8h_a5d694a209687f470f9661070458bdafd}{array\+\_\+mem\+\_\+alloc}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, size\+\_\+t num\+\_\+indices)
 \item 
-\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a593ea9f9c83c973a8186f6699f44f709}{init\+\_\+array}} (int size, size\+\_\+t num\+\_\+indices)
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a8439385a0c04ae9e9fb599c225e6914e}{init\+\_\+array}} (char $\ast$dtype, size\+\_\+t num\+\_\+indices, char $\ast$name)
 \item 
 int \mbox{\hyperlink{array_8h_a2f286165693b57a7e284044174f00282}{append\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
 \end{DoxyCompactItemize}
@@ -36,32 +36,50 @@ This function allows a user to append an existing or blank array container with 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-integer A 0 or 1 indicating success of the function. 
+integer A 0 or 1 indicating success of the function.
 \end{DoxyReturn}
-\mbox{\Hypertarget{array_8h_a593ea9f9c83c973a8186f6699f44f709}\label{array_8h_a593ea9f9c83c973a8186f6699f44f709}} 
-\index{array.h@{array.h}!init\_array@{init\_array}}
-\index{init\_array@{init\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{init\_array()}{init\_array()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} init\+\_\+array (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
-
-This function is a wrapper for initiate\+\_\+array that pre-\/populates data in the \mbox{\hyperlink{structArray}{Array}} struct and returns the struct to the user 
-\begin{DoxyParams}{Parameters}
-{\em size} & The size of a single indice \\
-\hline
-{\em num\+\_\+indices} & A guess for the number of indices required by the array\\
-\hline
-\end{DoxyParams}
-The following is a code example for how to instantiate the container for an integer; 
+The following demonstrates several ways that the append\+\_\+array function can be uses. In these instances, the function will be used for an array of integers 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{int\_array \mbox{\hyperlink{array_8c_a593ea9f9c83c973a8186f6699f44f709}{init\_array}}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), indices);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build array from scalar values}}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < 3; i++) \{}
+\DoxyCodeLine{    \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, \&i, 1);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Print the array values}}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i ++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *) arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
+\DoxyCodeLine{\}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8h_af8fcd9e2d63703be376b4e30fdff338f}\label{array_8h_af8fcd9e2d63703be376b4e30fdff338f}} 
-\index{array.h@{array.h}!initiate\_array@{initiate\_array}}
-\index{initiate\_array@{initiate\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{initiate\_array()}{initiate\_array()}}
-{\footnotesize\ttfamily void initiate\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+ The following code will also have the same effect 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
+\DoxyCodeLine{ \textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{ \textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{ \textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{ \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
+\DoxyCodeLine{ \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 3);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{// Print the array values}}
+\DoxyCodeLine{ \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i ++) \{}
+\DoxyCodeLine{     printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *) arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
+\DoxyCodeLine{ \} }
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a5d694a209687f470f9661070458bdafd}\label{array_8h_a5d694a209687f470f9661070458bdafd}} 
+\index{array.h@{array.h}!array\_mem\_alloc@{array\_mem\_alloc}}
+\index{array\_mem\_alloc@{array\_mem\_alloc}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{array\_mem\_alloc()}{array\_mem\_alloc()}}
+{\footnotesize\ttfamily void array\+\_\+mem\+\_\+alloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
 
 This function instantiates an \mbox{\hyperlink{structArray}{Array}} container and all relevant variables. This function should not be used directly. Instead the user should invoke the init\+\_\+array function, which wraps this function. 
 \begin{DoxyParams}{Parameters}
@@ -70,3 +88,27 @@ This function instantiates an \mbox{\hyperlink{structArray}{Array}} container an
 {\em num\+\_\+indices} & A guess for the number of indices that will be consumed by the array \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{array_8h_a8439385a0c04ae9e9fb599c225e6914e}\label{array_8h_a8439385a0c04ae9e9fb599c225e6914e}} 
+\index{array.h@{array.h}!init\_array@{init\_array}}
+\index{init\_array@{init\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{init\_array()}{init\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} init\+\_\+array (\begin{DoxyParamCaption}\item[{char $\ast$}]{dtype,  }\item[{size\+\_\+t}]{num\+\_\+indices,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+This function is a wrapper for initiate\+\_\+array that pre-\/populates data in the \mbox{\hyperlink{structArray}{Array}} struct and returns the struct to the user 
+\begin{DoxyParams}{Parameters}
+{\em dtype} & A string representing the data type, can be \textquotesingle{}float\textquotesingle{}, \textquotesingle{}double\textquotesingle{}, \textquotesingle{}char\textquotesingle{}, or \textquotesingle{}int\textquotesingle{} \\
+\hline
+{\em num\+\_\+indices} & A guess for the number of indices required by the array \\
+\hline
+{\em name} & The name of the array as a character string\\
+\hline
+\end{DoxyParams}
+The following is a code example for how to instantiate the container for an integer; 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
+
+\end{DoxyCode}
+ 
