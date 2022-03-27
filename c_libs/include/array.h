@@ -53,6 +53,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
  * data in the Array struct and returns the struct to the user
  * @param size The size of a single indice
  * @param num_indices A guess for the number of indices required by the array
+ * @param name The name of the array as a character string
  *
  * The following is a code example for how to instantiate the container for
  * an integer;

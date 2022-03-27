@@ -24,7 +24,8 @@ extern "C" {
  */
 TEST(test_initialize_array, init_data) {
 	size_t indices = 20;
-	Array arr_test = init_array(sizeof(int), indices);
+	char name[6] = "array";
+	Array arr_test = init_array(sizeof(int), indices, name);
 	// Verify array -> size is 20
 	EXPECT_EQ(20, arr_test.size);
 	// Verify array -> len is 0
@@ -43,7 +44,8 @@ TEST(test_initialize_array, init_data) {
  */
 TEST(test_append_array, one_scalar_int) {
 	size_t indices = 10;
-	Array arr_test = init_array(sizeof(int), indices);
+	char name[6] = "array";
+	Array arr_test = init_array(sizeof(int), indices, name);
 	int a = 5;
     append_array(&arr_test, &a, 1);
 	int b = ((int *) arr_test.array)[0];
@@ -57,7 +59,8 @@ TEST(test_append_array, one_scalar_int) {
  */
 TEST(test_append_array, array_int) {
 	size_t indices = 10;
-	Array arr_test = init_array(sizeof(int), indices);
+	char name[6] = "array";
+	Array arr_test = init_array(sizeof(int), indices, name);
 	int a[3] = {10, 9, 8};
     append_array(&arr_test, &a, 3);
 	int b = ((int *) arr_test.array)[0];
