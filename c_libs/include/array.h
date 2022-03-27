@@ -35,6 +35,7 @@ typedef struct
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
 	char *name;   // The array name
+	char *dtype;  // A string representing the datatype
 } Array;
 // --------------------------------------------------------------------------------
 
@@ -54,6 +55,8 @@ void array_mem_alloc(Array *array, size_t num_indices);
  * @param size The size of a single indice
  * @param num_indices A guess for the number of indices required by the array
  * @param name The name of the array as a character string
+ * @param dtype A string representing the data type, can be 'float',
+ *              'double', 'char', or 'int'.
  *
  * The following is a code example for how to instantiate the container for
  * an integer;
@@ -62,7 +65,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
  * int_array init_array(sizeof(int), indices);
  * @endcode
  */
-Array init_array(int size, size_t num_indices, char *name);
+Array init_array(char *dtype, size_t num_indices, char *name);
 // --------------------------------------------------------------------------------
 
 /**

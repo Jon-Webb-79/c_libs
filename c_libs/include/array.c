@@ -36,9 +36,21 @@ void array_mem_alloc(Array *array, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
-Array init_array(int size, size_t num_indices, char *name) {
-	// Allocate indice size and call initiate_array
+Array init_array(char *dtype, size_t num_indices, char *name) {
+	// Determine memory blocks based on data type
+	int size;
+	if (strcmp(dtype, "float") == 0) size = sizeof(float);
+	else if (strcmp(dtype, "int") == 0) size = sizeof(int);
+	else if (strcmp(dtype, "double") == 0) size = sizeof(double);
+	else if (strcmp(dtype, "char") == 0) size = sizeof(char);
+	else {
+		printf("Data type not correctly entered into init_array, exiting program!\n");
+		exit(0);
+	}
+
+	// Allocate indice size and call array_mem_alloc
 	Array array;
+	array.dtype = dtype;
     array.elem = size;
     array_mem_alloc(&array, num_indices);
 	array.name = name;
