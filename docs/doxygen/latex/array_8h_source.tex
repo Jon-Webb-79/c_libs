@@ -21,18 +21,22 @@
 \DoxyCodeLine{17 \textcolor{preprocessor}{\#define ARRAY\_H}}
 \DoxyCodeLine{18 }
 \DoxyCodeLine{19 \textcolor{preprocessor}{\#include <stdio.h>}}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
-\DoxyCodeLine{29 \{}
-\DoxyCodeLine{30     \textcolor{keywordtype}{void} *array;  \textcolor{comment}{// Pointer to array}}
-\DoxyCodeLine{31     \textcolor{keywordtype}{size\_t} len;   \textcolor{comment}{// Active length of array}}
-\DoxyCodeLine{32     \textcolor{keywordtype}{size\_t} size;  \textcolor{comment}{// Number of allocated indizes}}
-\DoxyCodeLine{33     \textcolor{keywordtype}{int} elem;     \textcolor{comment}{// Memory consumption per indice}}
-\DoxyCodeLine{34 \} \mbox{\hyperlink{structArray}{Array}};}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ARRAY\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{37 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{38 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{39 \textcolor{comment}{// eof}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} *array;  \textcolor{comment}{// Pointer to array}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{size\_t} len;   \textcolor{comment}{// Active length of array}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{size\_t} size;  \textcolor{comment}{// Number of allocated indizes}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} elem;     \textcolor{comment}{// Memory consumption per indice}}
+\DoxyCodeLine{36 \} \mbox{\hyperlink{structArray}{Array}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} initiate\_array(\mbox{\hyperlink{structArray}{Array}} *array, \textcolor{keywordtype}{size\_t} num\_indices);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ARRAY\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{48 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{49 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{50 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

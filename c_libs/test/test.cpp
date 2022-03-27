@@ -16,7 +16,7 @@
 #include <gtest/gtest.h>
 
 extern "C" {
-#include "test_file.h"
+#include "array.h"
 }
 
 TEST(test_suite_name, test_name) {

@@ -17,7 +17,7 @@
 #define ARRAY_H
 
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -34,6 +34,7 @@ typedef struct
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
 } Array;
+// --------------------------------------------------------------------------------
 
 /**
  * This function instantiates an Array container and all
@@ -42,6 +43,15 @@ typedef struct
  * @param num_indices A guess for the number of indices that will be consumed by the array
  */
 void initiate_array(Array *array, size_t num_indices);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function is a wrapper for initiate_array that pre-populates
+ * data in the Array struct and returns the struct to the user
+ * @param size The size of a single indice
+ * @param num_indices A guess for the number of indices required by the array
+ */
+Array init_array(int size, size_t num_indices);
 
 #endif /* ARRAY_H */
 // ================================================================================

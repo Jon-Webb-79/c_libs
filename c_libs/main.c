@@ -13,6 +13,7 @@
 // Include modules here
 
 #include <stdio.h>
+#include "include/array.h"
 
 // Begin code
 int main(int argc, const char * argv[]) {
