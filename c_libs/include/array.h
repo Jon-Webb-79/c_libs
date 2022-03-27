@@ -37,8 +37,9 @@ typedef struct
 // --------------------------------------------------------------------------------
 
 /**
- * This function instantiates an Array container and all
- * relevant variables
+ * This function instantiates an Array container and all relevant variables. This
+ * function should not be used directly.  Instead the user should invoke the
+ * init_array function, which wraps this function.
  * @param array an Array structure
  * @param num_indices A guess for the number of indices that will be consumed by the array
  */

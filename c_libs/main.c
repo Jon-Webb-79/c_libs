@@ -13,12 +13,12 @@
 // Include modules here
 
 #include <stdio.h>
-#include "include/array.h"
-
+#include "array.h"
+// TODO remove avrMakeFile from git
+// TODO remove avrMakefile from repository
 // Begin code
 int main(int argc, const char * argv[]) {
-	printf("Hello, World\n");
-	return 0;
+	printf("Hello, World!\n");
 }
 // ================================================================================
 // ================================================================================
