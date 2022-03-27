@@ -1,0 +1,65 @@
+\hypertarget{array_8c}{}\doxysection{/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/array.c File Reference}
+\label{array_8c}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.c@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.c}}
+{\ttfamily \#include \char`\"{}array.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{array_8c_af8fcd9e2d63703be376b4e30fdff338f}{initiate\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, size\+\_\+t num\+\_\+indices)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8c_a593ea9f9c83c973a8186f6699f44f709}{init\+\_\+array}} (int size, size\+\_\+t num\+\_\+indices)
+\item 
+int \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{array_8c_a2f286165693b57a7e284044174f00282}\label{array_8c_a2f286165693b57a7e284044174f00282}} 
+\index{array.c@{array.c}!append\_array@{append\_array}}
+\index{append\_array@{append\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{append\_array()}{append\_array()}}
+{\footnotesize\ttfamily int append\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+This function allows a user to append an existing or blank array container with scalars or arrays of any data type except strings. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A pointer to the memory location where an array exists \\
+\hline
+{\em elements} & A scalar or an array of variables. The variables can be of any data type, so as long as they are of the same data type as the array being appended. \\
+\hline
+{\em count} & The size of the elements data type in number of indices they will occupy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer A 0 or 1 indicating success of the function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{array_8c_a593ea9f9c83c973a8186f6699f44f709}\label{array_8c_a593ea9f9c83c973a8186f6699f44f709}} 
+\index{array.c@{array.c}!init\_array@{init\_array}}
+\index{init\_array@{init\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{init\_array()}{init\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} init\+\_\+array (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+This function is a wrapper for initiate\+\_\+array that pre-\/populates data in the \mbox{\hyperlink{structArray}{Array}} struct and returns the struct to the user 
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of a single indice \\
+\hline
+{\em num\+\_\+indices} & A guess for the number of indices required by the array\\
+\hline
+\end{DoxyParams}
+The following is a code example for how to instantiate the container for an integer; 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{int\_array \mbox{\hyperlink{array_8c_a593ea9f9c83c973a8186f6699f44f709}{init\_array}}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), indices);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_af8fcd9e2d63703be376b4e30fdff338f}\label{array_8c_af8fcd9e2d63703be376b4e30fdff338f}} 
+\index{array.c@{array.c}!initiate\_array@{initiate\_array}}
+\index{initiate\_array@{initiate\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{initiate\_array()}{initiate\_array()}}
+{\footnotesize\ttfamily void initiate\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+This function instantiates an \mbox{\hyperlink{structArray}{Array}} container and all relevant variables. This function should not be used directly. Instead the user should invoke the init\+\_\+array function, which wraps this function. 
+\begin{DoxyParams}{Parameters}
+{\em array} & an \mbox{\hyperlink{structArray}{Array}} structure \\
+\hline
+{\em num\+\_\+indices} & A guess for the number of indices that will be consumed by the array \\
+\hline
+\end{DoxyParams}

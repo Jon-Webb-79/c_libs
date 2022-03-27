@@ -15,6 +15,14 @@
 #include <stdio.h>
 #include "array.h"
 // Begin code
+// TODO add array name
+// TODO add array type
+// TODO Fix doxygen to include function documentation
+// TODO Add test for array memory kickover
+// TODO Add float test for append_array
+// TODO Add double test for append array
+// TODO Add char test for append array
+// TODO Add functions from array TODO list
 int main(int argc, const char * argv[]) {
 	size_t indices = 20;
 	Array int_test = init_array(sizeof(int), indices);

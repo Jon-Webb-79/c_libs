@@ -43,7 +43,7 @@ typedef struct
  * @param array an Array structure
  * @param num_indices A guess for the number of indices that will be consumed by the array
  */
-void initiate_array(Array *array, size_t num_indices);
+void array_mem_alloc(Array *array, size_t num_indices);
 // --------------------------------------------------------------------------------
 
 /**
@@ -51,6 +51,13 @@ void initiate_array(Array *array, size_t num_indices);
  * data in the Array struct and returns the struct to the user
  * @param size The size of a single indice
  * @param num_indices A guess for the number of indices required by the array
+ *
+ * The following is a code example for how to instantiate the container for
+ * an integer;
+ * @code
+ * size_t indices = 20;
+ * int_array init_array(sizeof(int), indices);
+ * @endcode
  */
 Array init_array(int size, size_t num_indices);
 // --------------------------------------------------------------------------------
