@@ -15,11 +15,13 @@
 #include <stdio.h>
 #include "include/array.h"
 // Begin code
-// TODO Add test for array memory kickover
-// TODO Add float test for append_array
-// TODO Add double test for append array
-// TODO Add char test for append array
-// TODO Add functions from array TODO list
+// TODO Add free function
+// TODO Test free function
+// TODO Write a return indice function
+// TODO Test return indice funciton
+// TODO Write a return array function
+// TODO Test return array function
+// TODO Write prepend function
 int main(int argc, const char * argv[]) {
 	size_t indices = 20;
 	char name[5] = "array";

@@ -40,6 +40,7 @@ TEST(test_initialize_array, init_data) {
 	arr_test.len=0;
 }
 // --------------------------------------------------------------------------------
+
 /* This function tests to ensure that append_array can append a single
  * integer scalar
  */
@@ -55,8 +56,14 @@ TEST(test_append_array, one_scalar_int) {
 	EXPECT_EQ(10, arr_test.size);
 	EXPECT_EQ(1, arr_test.len);
 	EXPECT_EQ(4, arr_test.elem);
+
+	free(arr_test.array);
+	arr_test.array = NULL;
+	arr_test.size=0;
+	arr_test.len=0;
 }
 // --------------------------------------------------------------------------------
+
 /* This function tests to ensure that append_array can append an array
  */
 TEST(test_append_array, array_int) {
@@ -75,6 +82,97 @@ TEST(test_append_array, array_int) {
 	EXPECT_EQ(10, arr_test.size);
 	EXPECT_EQ(3, arr_test.len);
 	EXPECT_EQ(4, arr_test.elem);
+
+    free(arr_test.array);
+	arr_test.array = NULL;
+	arr_test.size=0;
+	arr_test.len=0;
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the append_array function to ensure it proprly appends
+ * float variables */
+TEST(test_append_array, array_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[6] = "float";
+	Array arr_test = init_array(dtype, indices, name);
+	float a[3] = {10.5, 9.4, 8.3};
+    append_array(&arr_test, &a, 3);
+	float b = ((float *) arr_test.array)[0];
+	float c  =((float *) arr_test.array)[1]; 
+	float d = ((float *) arr_test.array)[2]; 
+	EXPECT_FLOAT_EQ(10.5f, b); 
+	EXPECT_FLOAT_EQ(9.4f, c);
+	EXPECT_FLOAT_EQ(8.3f, d);
+
+	free(arr_test.array);
+	arr_test.array = NULL;
+	arr_test.size=0;
+	arr_test.len=0;
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the append_array function to ensure it proprly appends
+ * double variables */
+TEST(test_append_array, array_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "double";
+	Array arr_test = init_array(dtype, indices, name);
+	double a[3] = {10.5, 9.4, 8.3};
+    append_array(&arr_test, &a, 3);
+	double b = ((double *) arr_test.array)[0];
+	double c  =((double *) arr_test.array)[1]; 
+	double d = ((double *) arr_test.array)[2]; 
+	EXPECT_DOUBLE_EQ(10.5, b); 
+	EXPECT_DOUBLE_EQ(9.4, c);
+	EXPECT_DOUBLE_EQ(8.3, d);
+
+	free(arr_test.array);
+	arr_test.array = NULL;
+	arr_test.size=0;
+	arr_test.len=0;
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the append_array function to ensure it proprly appends
+ * double variables */
+TEST(test_append_array, array_char){
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "double";
+	Array arr_test = init_array(dtype, indices, name);
+	char a[7] = "Hello!";
+    append_array(&arr_test, &a, 3);
+	EXPECT_STREQ(a, ((char *)arr_test.array));
+
+    free(arr_test.array);
+	arr_test.array = NULL;
+	arr_test.size=0;
+	arr_test.len=0;
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the append_array function to ensure it properly adds
+ * memory allocatio when required */
+TEST(test_append_array, memory_rollover) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[4] = "int";
+	Array arr_test = init_array(dtype, indices, name);
+	
+	for (int i = 0; i < 11; i++) {
+		append_array(&arr_test, &i, 1);
+	}
+
+	EXPECT_EQ(11, arr_test.len);
+	EXPECT_EQ(22, arr_test.size);
+
+	free(arr_test.array);
+	arr_test.array = NULL;
+	arr_test.size=0;
+	arr_test.len=0;	
 }
 // ================================================================================
 // ================================================================================

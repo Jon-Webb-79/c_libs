@@ -115,7 +115,7 @@ Array init_array(char *dtype, size_t num_indices, char *name);
  * // Print the array values
  * for (int i = 0; i < 3; i ++) {
  *     printf("%d\n", ((int *) arr_test.array)[i]);
- * } 
+ * }
  *
  * @endcode
  */
