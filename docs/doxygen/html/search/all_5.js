@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../structArray.html#a4c6095ef60578dda7c921707ca9c169c',1,'Array']]]
+  ['len_0',['len',['../structArray.html#adc2079bc1e342709d756f3e6dd51bcf5',1,'Array']]]
 ];

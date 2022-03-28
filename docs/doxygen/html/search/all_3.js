@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5farray_0',['init_array',['../array_8c.html#a8439385a0c04ae9e9fb599c225e6914e',1,'init_array(char *dtype, size_t num_indices, char *name):&#160;array.c'],['../array_8h.html#a8439385a0c04ae9e9fb599c225e6914e',1,'init_array(char *dtype, size_t num_indices, char *name):&#160;array.c']]]
+  ['free_5farray_0',['free_array',['../array_8c.html#a1825c492d3c651b7bd4e6178f209f8e5',1,'free_array(Array *array):&#160;array.c'],['../array_8h.html#a1825c492d3c651b7bd4e6178f209f8e5',1,'free_array(Array *array):&#160;array.c']]]
 ];

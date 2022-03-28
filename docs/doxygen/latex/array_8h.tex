@@ -16,6 +16,8 @@ void \mbox{\hyperlink{array_8h_a5d694a209687f470f9661070458bdafd}{array\+\_\+mem
 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a8439385a0c04ae9e9fb599c225e6914e}{init\+\_\+array}} (char $\ast$dtype, size\+\_\+t num\+\_\+indices, char $\ast$name)
 \item 
 int \mbox{\hyperlink{array_8h_a2f286165693b57a7e284044174f00282}{append\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
+\item 
+void \mbox{\hyperlink{array_8h_a1825c492d3c651b7bd4e6178f209f8e5}{free\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -72,7 +74,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{ \textcolor{comment}{// Print the array values}}
 \DoxyCodeLine{ \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i ++) \{}
 \DoxyCodeLine{     printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *) arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
-\DoxyCodeLine{ \} }
+\DoxyCodeLine{ \}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8h_a5d694a209687f470f9661070458bdafd}\label{array_8h_a5d694a209687f470f9661070458bdafd}} 
@@ -86,6 +88,17 @@ This function instantiates an \mbox{\hyperlink{structArray}{Array}} container an
 {\em array} & an \mbox{\hyperlink{structArray}{Array}} structure \\
 \hline
 {\em num\+\_\+indices} & A guess for the number of indices that will be consumed by the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8h_a1825c492d3c651b7bd4e6178f209f8e5}\label{array_8h_a1825c492d3c651b7bd4e6178f209f8e5}} 
+\index{array.h@{array.h}!free\_array@{free\_array}}
+\index{free\_array@{free\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{free\_array()}{free\_array()}}
+{\footnotesize\ttfamily void free\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will free all memory allocation from an array and associated struct elements 
+\begin{DoxyParams}{Parameters}
+{\em array} & the array container \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{array_8h_a8439385a0c04ae9e9fb599c225e6914e}\label{array_8h_a8439385a0c04ae9e9fb599c225e6914e}} 

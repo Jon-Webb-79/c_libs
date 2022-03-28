@@ -91,6 +91,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8439385a0c04ae9e9fb599c225e6914e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f286165693b57a7e284044174f00282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a2f286165693b57a7e284044174f00282">append_array</a> (<a class="el" href="structArray.html">Array</a> *array, void *elements, size_t count)</td></tr>
 <tr class="separator:a2f286165693b57a7e284044174f00282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1825c492d3c651b7bd4e6178f209f8e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a1825c492d3c651b7bd4e6178f209f8e5">free_array</a> (<a class="el" href="structArray.html">Array</a> *array)</td></tr>
+<tr class="separator:a1825c492d3c651b7bd4e6178f209f8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
@@ -165,7 +167,7 @@ Functions</h2></td></tr>
 <div class="line"> <span class="comment">// Print the array values</span></div>
 <div class="line"> <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i ++) {</div>
 <div class="line">     printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *) arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[i]);</div>
-<div class="line"> } </div>
+<div class="line"> }</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -198,6 +200,30 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">array</td><td>an <a class="el" href="structArray.html">Array</a> structure </td></tr>
     <tr><td class="paramname">num_indices</td><td>A guess for the number of indices that will be consumed by the array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1825c492d3c651b7bd4e6178f209f8e5" name="a1825c492d3c651b7bd4e6178f209f8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1825c492d3c651b7bd4e6178f209f8e5">&#9670;&nbsp;</a></span>free_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will free all memory allocation from an array and associated struct elements </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>the array container </td></tr>
   </table>
   </dd>
 </dl>
