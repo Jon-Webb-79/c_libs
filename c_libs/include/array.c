@@ -77,6 +77,17 @@ int append_array(Array *array, void *elements, size_t count) {
     array->len += count;
     return 1;
 }
+// --------------------------------------------------------------------------------
+
+void free_array(Array *array) {
+	// Free all memory in the array
+	free(array->array);
+	// Reset all variables in the struct
+	array->array = NULL;
+	array->size = 0;
+    array->len = 0;
+	array->elem = 0;
+}
 // ================================================================================
 // ================================================================================
 // eof

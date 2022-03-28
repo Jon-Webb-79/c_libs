@@ -120,6 +120,15 @@ Array init_array(char *dtype, size_t num_indices, char *name);
  * @endcode
  */
 int append_array(Array *array, void *elements, size_t count);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory allocation from an array and associated
+ * struct elements
+ * @param array the array container
+ */
+void free_array(Array *array);
+
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

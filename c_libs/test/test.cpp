@@ -39,7 +39,8 @@ TEST(test_initialize_array, init_data) {
 	arr_test.size=0;
 	arr_test.len=0;
 }
-// --------------------------------------------------------------------------------
+// ================================================================================
+// ================================================================================
 
 /* This function tests to ensure that append_array can append a single
  * integer scalar
@@ -173,6 +174,28 @@ TEST(test_append_array, memory_rollover) {
 	arr_test.array = NULL;
 	arr_test.size=0;
 	arr_test.len=0;	
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the free_array function to ensure it adequately frees
+ * all memory from an array
+ */
+TEST(test_free_memory, free_memory) {
+	// Allocate and implement memory
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "double";
+	Array arr_test = init_array(dtype, indices, name);
+	double a[3] = {10.5, 9.4, 8.3};
+    append_array(&arr_test, &a, 3);
+
+	// free memory
+	free_array(&arr_test);
+
+	ASSERT_EQ(0, arr_test.size);
+	ASSERT_EQ(0, arr_test.len);
+	ASSERT_EQ(0, arr_test.elem);
 }
 // ================================================================================
 // ================================================================================
