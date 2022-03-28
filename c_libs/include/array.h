@@ -153,7 +153,7 @@ void free_array(Array *array);
  * @endcode
  * This process can be simplified with this function
  * @code
- * printf("%d\n", int_array_val(&arr_test, 0);
+ * printf("%d\n", int_array_val(&arr_test, 0));
  * @endcode
  */
 int int_array_val(Array *array, int indice);
@@ -182,7 +182,7 @@ int int_array_val(Array *array, int indice);
  * @endcode
  * This process can be simplified with this function
  * @code
- * printf("%f\n", float_array_val(&arr_test, 0);
+ * printf("%f\n", float_array_val(&arr_test, 0));
  * @endcode
  */
 float float_array_val(Array *array, int indice);
@@ -211,7 +211,7 @@ float float_array_val(Array *array, int indice);
  * @endcode
  * This process can be simplified with this function
  * @code
- * printf("%f\n", double_array_val(&arr_test, 0);
+ * printf("%f\n", double_array_val(&arr_test, 0));
  * @endcode
  */
 double double_array_val(Array *array, int indice);
@@ -240,7 +240,7 @@ double double_array_val(Array *array, int indice);
  * @endcode
  * This process can be simplified with this function
  * @code
- * printf("%f\n", char_array_val(&arr_test, 0);
+ * printf("%f\n", char_array_val(&arr_test, 0));
  * @endcode
  */
 char char_array_val(Array *array, int indice);
