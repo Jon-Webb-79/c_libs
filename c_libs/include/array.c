@@ -88,6 +88,54 @@ void free_array(Array *array) {
     array->len = 0;
 	array->elem = 0;
 }
+// --------------------------------------------------------------------------------
+
+int int_array_val(Array *array, int indice) {
+	// Ensure array contains integers
+	if (strcmp(array->dtype, "int") != 0) {
+		printf("Function can only return integer values, exiting function!\n");
+		exit(0);
+	}
+	// Cast value to an integer and return
+	int a = ((int *)array->array)[indice];
+	return a;
+}
+// --------------------------------------------------------------------------------
+
+float float_array_val(Array *array, int indice) {
+	// Ensure array contains floats
+	if (strcmp(array->dtype, "float") != 0) {
+		printf("Function can only return float values, exiting function!\n");
+		exit(0);
+	}
+	// Cast value to an integer and return
+	float a = ((float *)array->array)[indice];
+	return a;
+}
+// --------------------------------------------------------------------------------
+
+double double_array_val(Array *array, int indice) {
+	// Ensure array contains floats
+	if (strcmp(array->dtype, "double") != 0) {
+		printf("Function can only return double values, exiting function!\n");
+		exit(0);
+	}
+	// Cast value to an integer and return
+	double a = ((double *)array->array)[indice];
+	return a;
+}
+// --------------------------------------------------------------------------------
+
+char char_array_val(Array *array, int indice) {
+	// Ensure array contains floats
+	if (strcmp(array->dtype, "char") != 0) {
+		printf("Function can only return char values, exiting function!\n");
+		exit(0);
+	}
+	// Cast value to an integer and return
+	char a = ((char *)array->array)[indice];
+	return a;
+}
 // ================================================================================
 // ================================================================================
 // eof

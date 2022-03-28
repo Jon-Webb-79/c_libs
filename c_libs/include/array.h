@@ -128,6 +128,122 @@ int append_array(Array *array, void *elements, size_t count);
  * @param array the array container
  */
 void free_array(Array *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the value of an array assigned to a user specified
+ * indice, so as long as the data point is an integer.
+ * @param array The array container
+ * @param indice The indice the user wishes returned
+ * @return value The integer value associated with an indice
+ *
+ * When a user instantiates and populates an array they must access the array
+ * by casting it prior to retrieving the value.
+ * @code
+ * size_t indices = 20;
+ * char dtype[4] = "int";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build from an already existing array
+ * int a[3] = {0, 1, 2};
+ * append_array(&arr_test, a, 3);
+ * // recover array indice value 0 by casting
+ * printf("%d\n", ((int *)arr_test.array)[0]);
+ * @endcode
+ * This process can be simplified with this function
+ * @code
+ * printf("%d\n", int_array_val(&arr_test, 0);
+ * @endcode
+ */
+int int_array_val(Array *array, int indice);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the value of an array assigned to a user specified
+ * indice, so as long as the data point is a float.
+ * @param array The array container
+ * @param indice The indice the user wishes returned
+ * @return value The integer value associated with an indice
+ *
+ * When a user instantiates and populates an array they must access the array
+ * by casting it prior to retrieving the value.
+ * @code
+ * size_t indices = 20;
+ * char dtype[4] = "float";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build from an already existing array
+ * float a[3] = {1.1, 2.1, 3.1};
+ * append_array(&arr_test, a, 3);
+ * // recover array indice value 0 by casting
+ * printf("%d\n", ((float *)arr_test.array)[0]);
+ * @endcode
+ * This process can be simplified with this function
+ * @code
+ * printf("%f\n", float_array_val(&arr_test, 0);
+ * @endcode
+ */
+float float_array_val(Array *array, int indice);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the value of an array assigned to a user specified
+ * indice, so as long as the data point is a double.
+ * @param array The array container
+ * @param indice The indice the user wishes returned
+ * @return value The integer value associated with an indice
+ *
+ * When a user instantiates and populates an array they must access the array
+ * by casting it prior to retrieving the value.
+ * @code
+ * size_t indices = 20;
+ * char dtype[4] = "double";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build from an already existing array
+ * double a[3] = {1.1, 2.1, 3.1};
+ * append_array(&arr_test, a, 3);
+ * // recover array indice value 0 by casting
+ * printf("%d\n", ((double *)arr_test.array)[0]);
+ * @endcode
+ * This process can be simplified with this function
+ * @code
+ * printf("%f\n", double_array_val(&arr_test, 0);
+ * @endcode
+ */
+double double_array_val(Array *array, int indice);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the value of an array assigned to a user specified
+ * indice, so as long as the data point is a char.
+ * @param array The array container
+ * @param indice The indice the user wishes returned
+ * @return value The integer value associated with an indice
+ *
+ * When a user instantiates and populates an array they must access the array
+ * by casting it prior to retrieving the value.
+ * @code
+ * size_t indices = 20;
+ * char dtype[4] = "char";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build from an already existing array
+ * char a[7] = "Hello!";
+ * append_array(&arr_test, a, 7);
+ * // recover array indice value 0 by casting
+ * printf("%d\n", ((char *)arr_test.array)[0]);
+ * @endcode
+ * This process can be simplified with this function
+ * @code
+ * printf("%f\n", char_array_val(&arr_test, 0);
+ * @endcode
+ */
+char char_array_val(Array *array, int indice);
 
 #endif /* ARRAY_H */
 // ================================================================================

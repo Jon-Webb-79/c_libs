@@ -15,8 +15,6 @@
 #include <stdio.h>
 #include "include/array.h"
 // Begin code
-// TODO Write a return indice function
-// TODO Test return indice funciton
 // TODO Write a return array function
 // TODO Test return array function
 // TODO Write prepend function

@@ -193,9 +193,76 @@ TEST(test_free_memory, free_memory) {
 	// free memory
 	free_array(&arr_test);
 
-	ASSERT_EQ(0, arr_test.size);
-	ASSERT_EQ(0, arr_test.len);
-	ASSERT_EQ(0, arr_test.elem);
+	EXPECT_EQ(0, arr_test.size);
+	EXPECT_EQ(0, arr_test.len);
+	EXPECT_EQ(0, arr_test.elem);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the int_array_val function to ensure that it properly
+ * returns an integer value */
+TEST(test_retrieve_indice, int_indice) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[4] = "int";
+	Array arr_test = init_array(dtype, indices, name);
+	int a[3] = {10, 9, 8};
+    append_array(&arr_test, &a, 3);
+
+	EXPECT_EQ(10, int_array_val(&arr_test, 0));
+    EXPECT_EQ(9, int_array_val(&arr_test, 1));
+	EXPECT_EQ(8, int_array_val(&arr_test, 2));
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the float_array_val function to ensure that it 
+ * properly returns a float value */
+TEST(test_retrieve_indice, float_indice) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "float";
+	Array arr_test = init_array(dtype, indices, name);
+	float a[3] = {10.3, 9.5, 8.4};
+    append_array(&arr_test, &a, 3);
+
+	EXPECT_FLOAT_EQ(10.3f, float_array_val(&arr_test, 0));
+    EXPECT_FLOAT_EQ(9.5f, float_array_val(&arr_test, 1));
+	EXPECT_FLOAT_EQ(8.4f, float_array_val(&arr_test, 2));
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the double_array_val function to ensure that it 
+ * properly returns a double value */
+TEST(test_retrieve_indice, double_indice) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "double";
+	Array arr_test = init_array(dtype, indices, name);
+	double a[3] = {10.3, 9.5, 8.4};
+    append_array(&arr_test, &a, 3);
+
+	EXPECT_FLOAT_EQ(10.3f, double_array_val(&arr_test, 0));
+    EXPECT_FLOAT_EQ(9.5f, double_array_val(&arr_test, 1));
+	EXPECT_FLOAT_EQ(8.4f, double_array_val(&arr_test, 2));
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the char_array_val function to ensure that it 
+ * properly returns a char value */
+TEST(test_retrieve_indice, char_indice) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "char";
+	Array arr_test = init_array(dtype, indices, name);
+	char a[7] = "Hello!";
+    append_array(&arr_test, &a, 3);
+    char b = 'H';
+	char c = 'e';
+	char d = 'l';
+	EXPECT_EQ(b, char_array_val(&arr_test, 0));
+    EXPECT_EQ(c, char_array_val(&arr_test, 1));
+	EXPECT_EQ(d, char_array_val(&arr_test, 2));
 }
 // ================================================================================
 // ================================================================================
