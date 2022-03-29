@@ -244,6 +244,58 @@ double double_array_val(Array *array, int indice);
  * @endcode
  */
 char char_array_val(Array *array, int indice);
+// --------------------------------------------------------------------------------
+/**
+ * This function allows a user to preappend an existing or blank array container
+ * with scalars or arrays of any data type except strings.
+ * @param array A pointer to the memory location where an array exists
+ * @param elements A scalar or an array of variables.  The variables can
+ *                 be of any data type, so as long as they are of the same
+ *                 data type as the array being appended.
+ * @param count The size of the elements data type in number of indices they
+ *              will occupy
+ * @return integer A 0 or 1 indicating success of the function.
+ *
+ * The following demonstrates several ways that the append_array function can
+ * be uses.  In these instances, the function will be used for an array
+ * of integers
+ * @code
+ * // Instantiate array
+ * size_t indices = 20;
+ * char dtype[4] = "int";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build array from scalar values
+ * for (int = 0; i < 3; i++) {
+ *     preappend_array(&arr_test, &i, 1);
+ * }
+ *
+ * // Print the array values
+ * for (int i = 0; i < 3; i ++) {
+ *     printf("%d\n", ((int *) arr_test.array)[i]);
+ * }
+ * @endcode
+ * The following code will also have the same effect
+ * @code
+* // Instantiate array
+ * size_t indices = 20;
+ * char dtype[4] = "int";
+ * char name[5] = "Array";
+ * Array arr_test = init_array(dtype, indices, name);
+ *
+ * // Build from an already existing array
+ * int a[3] = {0, 1, 2};
+ * preappend_array(&arr_test, a, 3);
+ *
+ * // Print the array values
+ * for (int i = 0; i < 3; i ++) {
+ *     printf("%d\n", ((int *) arr_test.array)[i]);
+ * }
+ *
+ * @endcode
+ */
+int preappend_array(Array *array, void *elements, size_t count);
 
 #endif /* ARRAY_H */
 // ================================================================================

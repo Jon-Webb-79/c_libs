@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include "include/array.h"
 // Begin code
+// TODO Give write array functions an int type with exit 1 for failure
 // TODO Write a return array function
 // TODO Test return array function
 // TODO Write prepend function

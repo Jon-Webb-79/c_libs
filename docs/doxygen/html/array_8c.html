@@ -91,6 +91,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab41047d5b550a414bbb5eb3deb5c1782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ff24acf67bc37db2c7d9885f85b428"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#ae5ff24acf67bc37db2c7d9885f85b428">char_array_val</a> (<a class="el" href="structArray.html">Array</a> *array, int indice)</td></tr>
 <tr class="separator:ae5ff24acf67bc37db2c7d9885f85b428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fab7d1a479ee3874746cf818b2a264a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a> (<a class="el" href="structArray.html">Array</a> *array, void *elements, size_t count)</td></tr>
+<tr class="separator:a4fab7d1a479ee3874746cf818b2a264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
@@ -463,6 +465,79 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *)arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[0]);</div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, <a class="code hl_function" href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a>(&amp;arr_test, 0));</div>
 <div class="ttc" id="aarray_8c_html_a803955615e694eed4e7306642d96b288"><div class="ttname"><a href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a></div><div class="ttdeci">int int_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:93</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a4fab7d1a479ee3874746cf818b2a264a" name="a4fab7d1a479ee3874746cf818b2a264a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fab7d1a479ee3874746cf818b2a264a">&#9670;&nbsp;</a></span>preappend_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int preappend_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>elements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function allows a user to preappend an existing or blank array container with scalars or arrays of any data type except strings. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A pointer to the memory location where an array exists </td></tr>
+    <tr><td class="paramname">elements</td><td>A scalar or an array of variables. The variables can be of any data type, so as long as they are of the same data type as the array being appended. </td></tr>
+    <tr><td class="paramname">count</td><td>The size of the elements data type in number of indices they will occupy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer A 0 or 1 indicating success of the function.</dd></dl>
+<p>The following demonstrates several ways that the append_array function can be uses. In these instances, the function will be used for an array of integers </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
+<div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
+<div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Build array from scalar values</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; 3; i++) {</div>
+<div class="line">    <a class="code hl_function" href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a>(&amp;arr_test, &amp;i, 1);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Print the array values</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i ++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *) arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[i]);</div>
+<div class="line">}</div>
+<div class="ttc" id="aarray_8c_html_a4fab7d1a479ee3874746cf818b2a264a"><div class="ttname"><a href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a></div><div class="ttdeci">int preappend_array(Array *array, void *elements, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:141</div></div>
+</div><!-- fragment --><p> The following code will also have the same effect </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
+<div class="line"> <span class="keywordtype">size_t</span> indices = 20;</div>
+<div class="line"> <span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
+<div class="line"> <span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"> <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// Build from an already existing array</span></div>
+<div class="line"> <span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
+<div class="line"> <a class="code hl_function" href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a>(&amp;arr_test, a, 3);</div>
+<div class="line"> </div>
+<div class="line"> <span class="comment">// Print the array values</span></div>
+<div class="line"> <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i ++) {</div>
+<div class="line">     printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *) arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[i]);</div>
+<div class="line"> }</div>
 </div><!-- fragment --> 
 </div>
 </div>

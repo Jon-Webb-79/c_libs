@@ -266,4 +266,45 @@ TEST(test_retrieve_indice, char_indice) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the preappend_array function to ensure it can incorporate
+ * a scalar value */ 
+TEST(test_preappend_array, preappend_scalar) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "int";
+	Array arr_test = init_array(dtype, indices, name);
+	int a[3] = {10, 9, 8};
+    append_array(&arr_test, &a, 3);
+	int b = 3;
+	preappend_array(&arr_test, &b, 1);
+
+	EXPECT_EQ(3, int_array_val(&arr_test, 0));
+	EXPECT_EQ(10, int_array_val(&arr_test, 1));
+	EXPECT_EQ(9, int_array_val(&arr_test, 2));
+	EXPECT_EQ(8, int_array_val(&arr_test, 3));
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the preappend_array function to incorporate an array
+ * value */ 
+TEST(test_preappend_array, preappend_array) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "int";
+	Array arr_test = init_array(dtype, indices, name);
+	int a[3] = {10, 9, 8};
+    append_array(&arr_test, &a, 3);
+	int b[3] = {1, 2, 3};
+	preappend_array(&arr_test, b, 3);
+
+	EXPECT_EQ(1, int_array_val(&arr_test, 0));
+	EXPECT_EQ(2, int_array_val(&arr_test, 1));
+	EXPECT_EQ(3, int_array_val(&arr_test, 2));
+	EXPECT_EQ(10, int_array_val(&arr_test, 3));
+	EXPECT_EQ(9, int_array_val(&arr_test, 4));
+	EXPECT_EQ(8, int_array_val(&arr_test, 5));
+}
+// ================================================================================
+// ================================================================================
 // eof
