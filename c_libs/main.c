@@ -15,10 +15,15 @@
 #include <stdio.h>
 #include "include/array.h"
 // Begin code
-// TODO Give write array functions an int type with exit 1 for failure
-// TODO Write a return array function
-// TODO Test return array function
-// TODO Write prepend function
+// TODO Add pop function
+// TODO Add delete_element function
+// TODO Add replace_element function
+// TODO Add unique function
+// TODO Add median function
+// TODO Add average function
+// TODO Add sum function
+// TODO Add std_dev function
+// TODO Add cumsum function
 int main(int argc, const char * argv[]) {
 	size_t indices = 20;
 	char name[5] = "array";

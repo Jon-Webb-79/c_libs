@@ -146,7 +146,7 @@ int preappend_array(Array *array, void *elements, size_t count) {
 		// If memory is full return operations
         if (pointer == NULL) {
 			printf("Unable to allocate memory, exiting.\n");
-            return 0;
+            exit(0);
         }
 		// Allocate memory to variables and increment array size
         array->array = pointer;
@@ -161,6 +161,18 @@ int preappend_array(Array *array, void *elements, size_t count) {
     memcpy(array->array, elements, count * array->elem);
     array->len += count;
     return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_array(Array *array, int indice) {
+	if (indice >= array->len) {
+		printf("Indice %d out of bounds for pop_array", indice);
+		return 0;
+	}
+	unsigned char *dst = (unsigned char*)array->array + indice * array->elem;
+	memmove(dst, dst + array->elem, array->elem * (array->len - indice - 1));
+	array->len -= 1;
+	return 1;
 }
 // ================================================================================
 // ================================================================================

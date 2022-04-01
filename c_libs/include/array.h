@@ -242,6 +242,11 @@ double double_array_val(Array *array, int indice);
  * @code
  * printf("%f\n", char_array_val(&arr_test, 0));
  * @endcode
+ * However a character array can also be access the traditionale way with
+ * the following command.
+ * @code
+ * printf("%s\n", Array.array);
+ * @endcode
  */
 char char_array_val(Array *array, int indice);
 // --------------------------------------------------------------------------------
@@ -296,7 +301,20 @@ char char_array_val(Array *array, int indice);
  * @endcode
  */
 int preappend_array(Array *array, void *elements, size_t count);
+// --------------------------------------------------------------------------------
 
+/**
+ * This function will delete a user defined indices from the array.  However, the
+ * function must be embedded within an Array container and the container must be
+ * passed to the function
+ *
+ * @param array An Array container
+ * @param indice The indices within the array that the user wishes to delete
+ *               from the array
+ * @return integer An error code of 0 if the user defines an indice greater than
+ *                 the array lenght
+ */
+int pop_array(Array *array, int indice);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

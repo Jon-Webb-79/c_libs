@@ -305,6 +305,25 @@ TEST(test_preappend_array, preappend_array) {
 	EXPECT_EQ(9, int_array_val(&arr_test, 4));
 	EXPECT_EQ(8, int_array_val(&arr_test, 5));
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the pop_array function to ensure it proprly deletes an 
+ * array element
+ */
+TEST(test_pop_array, pop_int) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "int";
+	Array arr_test = init_array(dtype, indices, name);
+    int a[4] = {10, 9, 8, 7};
+	append_array(&arr_test, a, 4);
+	pop_array(&arr_test, 2);
+	for (int i = 0; i < arr_test.len; i++) {
+		printf("%d\n", int_array_val(&arr_test, i));
+	}
+	printf("%s\n", arr_test.name);
+	printf("%s\n", arr_test.dtype);
+}
 // ================================================================================
 // ================================================================================
 // eof
