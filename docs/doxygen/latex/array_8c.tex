@@ -21,6 +21,8 @@ double \mbox{\hyperlink{array_8c_ab41047d5b550a414bbb5eb3deb5c1782}{double\+\_\+
 char \mbox{\hyperlink{array_8c_ae5ff24acf67bc37db2c7d9885f85b428}{char\+\_\+array\+\_\+val}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
 \item 
 int \mbox{\hyperlink{array_8c_a4fab7d1a479ee3874746cf818b2a264a}{preappend\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
+\item 
+int \mbox{\hyperlink{array_8c_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
 \end{DoxyCompactItemize}
 
 
@@ -126,6 +128,11 @@ When a user instantiates and populates an array they must access the array by ca
  This process can be simplified with this function 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, \mbox{\hyperlink{array_8c_ae5ff24acf67bc37db2c7d9885f85b428}{char\_array\_val}}(\&arr\_test, 0));}
+
+\end{DoxyCode}
+ However a character array can also be access the traditionale way with the following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, \mbox{\hyperlink{structArray}{Array}}.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}});}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8c_ab41047d5b550a414bbb5eb3deb5c1782}\label{array_8c_ab41047d5b550a414bbb5eb3deb5c1782}} 
@@ -267,7 +274,25 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, \mbox{\hyperlink{array_8c_a803955615e694eed4e7306642d96b288}{int\_array\_val}}(\&arr\_test, 0));}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8c_a4fab7d1a479ee3874746cf818b2a264a}\label{array_8c_a4fab7d1a479ee3874746cf818b2a264a}} 
+ \mbox{\Hypertarget{array_8c_a5bb5a148d782ddaf08902466571294ab}\label{array_8c_a5bb5a148d782ddaf08902466571294ab}} 
+\index{array.c@{array.c}!pop\_array@{pop\_array}}
+\index{pop\_array@{pop\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
+{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+This function will delete a user defined indices from the array. However, the function must be embedded within an \mbox{\hyperlink{structArray}{Array}} container and the container must be passed to the function
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em indice} & The indices within the array that the user wishes to delete from the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An error code of 0 if the user defines an indice greater than the array lenght 
+\end{DoxyReturn}
+\mbox{\Hypertarget{array_8c_a4fab7d1a479ee3874746cf818b2a264a}\label{array_8c_a4fab7d1a479ee3874746cf818b2a264a}} 
 \index{array.c@{array.c}!preappend\_array@{preappend\_array}}
 \index{preappend\_array@{preappend\_array}!array.c@{array.c}}
 \doxysubsubsection{\texorpdfstring{preappend\_array()}{preappend\_array()}}

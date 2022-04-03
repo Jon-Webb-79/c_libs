@@ -93,6 +93,8 @@ Functions</h2></td></tr>
 <tr class="separator:ae5ff24acf67bc37db2c7d9885f85b428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fab7d1a479ee3874746cf818b2a264a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a> (<a class="el" href="structArray.html">Array</a> *array, void *elements, size_t count)</td></tr>
 <tr class="separator:a4fab7d1a479ee3874746cf818b2a264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb5a148d782ddaf08902466571294ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a5bb5a148d782ddaf08902466571294ab">pop_array</a> (<a class="el" href="structArray.html">Array</a> *array, int indice)</td></tr>
+<tr class="separator:a5bb5a148d782ddaf08902466571294ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
@@ -251,6 +253,7 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">char</span> *)arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[0]);</div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code hl_function" href="array_8c.html#ae5ff24acf67bc37db2c7d9885f85b428">char_array_val</a>(&amp;arr_test, 0));</div>
 <div class="ttc" id="aarray_8c_html_ae5ff24acf67bc37db2c7d9885f85b428"><div class="ttname"><a href="array_8c.html#ae5ff24acf67bc37db2c7d9885f85b428">char_array_val</a></div><div class="ttdeci">char char_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:129</div></div>
+</div><!-- fragment --><p> However a character array can also be access the traditionale way with the following command. </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_struct" href="structArray.html">Array</a>.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -466,6 +469,43 @@ Functions</h2></td></tr>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, <a class="code hl_function" href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a>(&amp;arr_test, 0));</div>
 <div class="ttc" id="aarray_8c_html_a803955615e694eed4e7306642d96b288"><div class="ttname"><a href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a></div><div class="ttdeci">int int_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:93</div></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a5bb5a148d782ddaf08902466571294ab" name="a5bb5a148d782ddaf08902466571294ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb5a148d782ddaf08902466571294ab">&#9670;&nbsp;</a></span>pop_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pop_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indice</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete a user defined indices from the array. However, the function must be embedded within an <a class="el" href="structArray.html">Array</a> container and the container must be passed to the function</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An <a class="el" href="structArray.html">Array</a> container </td></tr>
+    <tr><td class="paramname">indice</td><td>The indices within the array that the user wishes to delete from the array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>integer An error code of 0 if the user defines an indice greater than the array lenght </dd></dl>
+
 </div>
 </div>
 <a id="a4fab7d1a479ee3874746cf818b2a264a" name="a4fab7d1a479ee3874746cf818b2a264a"></a>
