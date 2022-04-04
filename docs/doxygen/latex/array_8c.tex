@@ -23,6 +23,8 @@ char \mbox{\hyperlink{array_8c_ae5ff24acf67bc37db2c7d9885f85b428}{char\+\_\+arra
 int \mbox{\hyperlink{array_8c_a4fab7d1a479ee3874746cf818b2a264a}{preappend\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
 \item 
 int \mbox{\hyperlink{array_8c_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
+\item 
+int $\ast$ \mbox{\hyperlink{array_8c_a1df34170274d77e5728ad82294eca984}{find\+\_\+int\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int integer)
 \end{DoxyCompactItemize}
 
 
@@ -170,7 +172,34 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, \mbox{\hyperlink{array_8c_ab41047d5b550a414bbb5eb3deb5c1782}{double\_array\_val}}(\&arr\_test, 0));}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}\label{array_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}} 
+ \mbox{\Hypertarget{array_8c_a1df34170274d77e5728ad82294eca984}\label{array_8c_a1df34170274d77e5728ad82294eca984}} 
+\index{array.c@{array.c}!find\_int\_array\_indices@{find\_int\_array\_indices}}
+\index{find\_int\_array\_indices@{find\_int\_array\_indices}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{find\_int\_array\_indices()}{find\_int\_array\_indices()}}
+{\footnotesize\ttfamily int $\ast$ find\+\_\+int\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{integer }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified integer. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em integer} & the integer the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified integer. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1df34170274d77e5728ad82294eca984}{find\_int\_array\_indices}}(\&arr\_test, 6);}
+
+\end{DoxyCode}
+ The above code should produce an array with indices 0, 3, and 4. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{array_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}\label{array_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}} 
 \index{array.c@{array.c}!float\_array\_val@{float\_array\_val}}
 \index{float\_array\_val@{float\_array\_val}!array.c@{array.c}}
 \doxysubsubsection{\texorpdfstring{float\_array\_val()}{float\_array\_val()}}
@@ -290,7 +319,18 @@ This function will delete a user defined indices from the array. However, the fu
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-integer An error code of 0 if the user defines an indice greater than the array lenght 
+integer An error code of 0 if the user defines an indice greater than the array length 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}float"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a5bb5a148d782ddaf08902466571294ab}{pop\_array}}(\&arr\_test, 2);}
+
+\end{DoxyCode}
+ The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.\+2, and 7.\+4. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{array_8c_a4fab7d1a479ee3874746cf818b2a264a}\label{array_8c_a4fab7d1a479ee3874746cf818b2a264a}} 
 \index{array.c@{array.c}!preappend\_array@{preappend\_array}}

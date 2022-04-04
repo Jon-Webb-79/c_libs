@@ -312,9 +312,41 @@ int preappend_array(Array *array, void *elements, size_t count);
  * @param indice The indices within the array that the user wishes to delete
  *               from the array
  * @return integer An error code of 0 if the user defines an indice greater than
- *                 the array lenght
+ *                 the array length
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * char dtype[7] = "float";
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[4] = {10.1, 9.2, 8.3, 7.4};
+ * append_array(&arr_test, a, 4);
+ * pop_array(&arr_test, 2);
+ * @endcode
+ * The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4.
  */
 int pop_array(Array *array, int indice);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find the indices that contain a user specified integer.
+ * This function allocates array space in heap memory and will return NULL
+ * if the array does not contain the appropriate value.
+ * @param array An array container
+ * @param integer the integer the user wishes to find an indice for
+ * @return array An array containing all indices associatd with the user
+ *               specified integer.
+ * @code
+ *size_t indices = 10;
+ * char name[6] = "array";
+ * char dtype[7] = "int";
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[7] = {6, 1, 3, 6, 6, 4, 5};
+ * append_array(&arr_test, a, 7);
+ * find_int_array_indices(&arr_test, 6);
+ * @endcode
+ * The above code should produce an array with indices 0, 3, and 4.
+ */
+int* find_int_array_indices(Array *array, int integer);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

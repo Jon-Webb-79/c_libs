@@ -305,7 +305,8 @@ TEST(test_preappend_array, preappend_array) {
 	EXPECT_EQ(9, int_array_val(&arr_test, 4));
 	EXPECT_EQ(8, int_array_val(&arr_test, 5));
 }
-// --------------------------------------------------------------------------------
+// ================================================================================
+// ================================================================================
 
 /* This function tests the pop_array function to ensure it proprly deletes an 
  * ainteger rray element
@@ -338,6 +339,23 @@ TEST(test_pop_array, pop_float) {
 	EXPECT_FLOAT_EQ(10.1f, float_array_val(&arr_test, 0));
 	EXPECT_FLOAT_EQ(9.2f, float_array_val(&arr_test, 1));
 	EXPECT_FLOAT_EQ(7.4f, float_array_val(&arr_test, 2));
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the fint_int_array function to ensure ir properly 
+ * finds the indices associated with specific values in an integer array.*/
+TEST(test_find_indices, find_integer_indices) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "int";
+	Array arr_test = init_array(dtype, indices, name);
+    int a[7] = {6, 1, 3, 6, 6, 4, 5};
+	append_array(&arr_test, a, 7);
+	int *p = find_int_array_indices(&arr_test, 6);
+	EXPECT_EQ(p[0], 0);
+	EXPECT_EQ(p[1], 3);
+	EXPECT_EQ(p[2], 4);
 }
 // ================================================================================
 // ================================================================================

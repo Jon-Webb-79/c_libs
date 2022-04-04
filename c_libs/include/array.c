@@ -174,6 +174,27 @@ int pop_array(Array *array, int indice) {
 	array->len -= 1;
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+int* find_int_array_indices(Array *array, int integer) {
+	int number = 0;
+	for (int i = 0; i < array->len; i++) {
+		if (integer == int_array_val(array, i)) {
+			number++;
+		}
+	}
+	int* arr = (int*) malloc(number * sizeof(int));
+	if (number == 0) return arr;
+
+	int counter = 0;
+	for (int i = 0; i < array->len; i++) {
+		if (integer == int_array_val(array, i)) {
+			arr[counter] = i;
+			counter++;
+		}
+	}
+	return arr;
+}
 // ================================================================================
 // ================================================================================
 // eof
