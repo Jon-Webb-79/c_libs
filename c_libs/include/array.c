@@ -183,12 +183,33 @@ int* find_int_array_indices(Array *array, int integer) {
 			number++;
 		}
 	}
+	if (number == 0) return NULL;
 	int* arr = (int*) malloc(number * sizeof(int));
-	if (number == 0) return arr;
 
 	int counter = 0;
 	for (int i = 0; i < array->len; i++) {
 		if (integer == int_array_val(array, i)) {
+			arr[counter] = i;
+			counter++;
+		}
+	}
+	return arr;
+}
+// --------------------------------------------------------------------------------
+
+int* find_float_array_indices(Array *array, float float_val) {
+	int number = 0;
+	for (int i = 0; i < array->len; i++) {
+		if (float_val == float_array_val(array, i)) {
+			number++;
+		}
+	}
+	if (number == 0) return NULL;
+	int* arr = (int*) malloc(number * sizeof(int));
+
+	int counter = 0;
+	for (int i = 0; i < array->len; i++) {
+		if (float_val == float_array_val(array, i)) {
 			arr[counter] = i;
 			counter++;
 		}
