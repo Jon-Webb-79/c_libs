@@ -34,6 +34,8 @@ int \mbox{\hyperlink{array_8h_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}
 int $\ast$ \mbox{\hyperlink{array_8h_a1df34170274d77e5728ad82294eca984}{find\+\_\+int\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int integer)
 \item 
 int $\ast$ \mbox{\hyperlink{array_8h_a890ace7d705bef6dc7f9097385b8a266}{find\+\_\+float\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float float\+\_\+val)
+\item 
+int $\ast$ \mbox{\hyperlink{array_8h_a13827145db004659f82978d5ce4110d0}{find\+\_\+double\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double double\+\_\+val)
 \end{DoxyCompactItemize}
 
 
@@ -181,7 +183,35 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, \mbox{\hyperlink{array_8c_ab41047d5b550a414bbb5eb3deb5c1782}{double\_array\_val}}(\&arr\_test, 0));}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a890ace7d705bef6dc7f9097385b8a266}\label{array_8h_a890ace7d705bef6dc7f9097385b8a266}} 
+ \mbox{\Hypertarget{array_8h_a13827145db004659f82978d5ce4110d0}\label{array_8h_a13827145db004659f82978d5ce4110d0}} 
+\index{array.h@{array.h}!find\_double\_array\_indices@{find\_double\_array\_indices}}
+\index{find\_double\_array\_indices@{find\_double\_array\_indices}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{find\_double\_array\_indices()}{find\_double\_array\_indices()}}
+{\footnotesize\ttfamily int $\ast$ find\+\_\+double\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{double}]{double\+\_\+val }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified double value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em double\+\_\+val} & the double value the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified float value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}double"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{  \textcolor{keywordtype}{double} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1df34170274d77e5728ad82294eca984}{find\_int\_array\_indices}}(\&arr\_test, 6.2);}
+\DoxyCodeLine{  free(p);}
+
+\end{DoxyCode}
+ The above code should produce an array with indices 0, 3, and 4. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{array_8h_a890ace7d705bef6dc7f9097385b8a266}\label{array_8h_a890ace7d705bef6dc7f9097385b8a266}} 
 \index{array.h@{array.h}!find\_float\_array\_indices@{find\_float\_array\_indices}}
 \index{find\_float\_array\_indices@{find\_float\_array\_indices}!array.h@{array.h}}
 \doxysubsubsection{\texorpdfstring{find\_float\_array\_indices()}{find\_float\_array\_indices()}}
@@ -191,7 +221,7 @@ This function will find the indices that contain a user specified float value. T
 \begin{DoxyParams}{Parameters}
 {\em array} & An array container \\
 \hline
-{\em float\+\_\+val} & the integer the user wishes to find an indice for \\
+{\em float\+\_\+val} & the float value the user wishes to find an indice for \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -203,7 +233,7 @@ array An array containing all indices associatd with the user specified float va
 \DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a8439385a0c04ae9e9fb599c225e6914e}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1df34170274d77e5728ad82294eca984}{find\_int\_array\_indices}}(\&arr\_test, 6.2);}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1df34170274d77e5728ad82294eca984}{find\_int\_array\_indices}}(\&arr\_test, 6.2f);}
 \DoxyCodeLine{  free(p);}
 
 \end{DoxyCode}

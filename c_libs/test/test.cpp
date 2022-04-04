@@ -376,6 +376,24 @@ TEST(test_find_indices, find_float_indices) {
 	EXPECT_EQ(p[2], 4);
 	free(p);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the find_float_array function to ensure ir properly 
+ * finds the indices associated with specific values in an integer array.*/
+TEST(test_find_indices, find_double_indices) {
+	size_t indices = 10;
+	char name[6] = "array";
+	char dtype[7] = "double";
+	Array arr_test = init_array(dtype, indices, name);
+    double a[7] = {6.2, 1.0, 3.2, 6.2, 6.2, 4.5, 5.7};
+	append_array(&arr_test, a, 7);
+	double value = 6.2;
+	int *p = find_double_array_indices(&arr_test, value);
+	EXPECT_EQ(p[0], 0);
+	EXPECT_EQ(p[1], 3);
+	EXPECT_EQ(p[2], 4);
+	free(p);
+}
 // ================================================================================
 // ================================================================================
 // eof

@@ -355,7 +355,7 @@ int* find_int_array_indices(Array *array, int integer);
  * This function allocates array space in heap memory and will return NULL
  * if the array does not contain the appropriate value.
  * @param array An array container
- * @param float_val the integer the user wishes to find an indice for
+ * @param float_val the float value the user wishes to find an indice for
  * @return array An array containing all indices associatd with the user
  *               specified float value.
  * @code
@@ -365,12 +365,35 @@ int* find_int_array_indices(Array *array, int integer);
  * Array arr_test = init_array(dtype, indices, name);
  * int a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
  * append_array(&arr_test, a, 7);
- * find_int_array_indices(&arr_test, 6.2);
+ * find_int_array_indices(&arr_test, 6.2f);
  * free(p);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
 int* find_float_array_indices(Array *array, float float_val);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find the indices that contain a user specified double value.
+ * This function allocates array space in heap memory and will return NULL
+ * if the array does not contain the appropriate value.
+ * @param array An array container
+ * @param double_val the double value the user wishes to find an indice for
+ * @return array An array containing all indices associatd with the user
+ *               specified float value.
+ * @code
+ *size_t indices = 10;
+ * char name[6] = "array";
+ * char dtype[7] = "double";
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
+ * append_array(&arr_test, a, 7);
+ * find_int_array_indices(&arr_test, 6.2);
+ * free(p);
+ * @endcode
+ * The above code should produce an array with indices 0, 3, and 4.
+ */
+int* find_double_array_indices(Array *array, double double_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
