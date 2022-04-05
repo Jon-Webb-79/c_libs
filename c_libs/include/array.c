@@ -50,10 +50,10 @@ Array init_array(char *dtype, size_t num_indices, char *name) {
 
 	// Allocate indice size and call array_mem_alloc
 	Array array;
-	array.dtype = dtype;
+	strcpy(array.dtype, dtype);
     array.elem = size;
     array_mem_alloc(&array, num_indices);
-	array.name = name;
+	strcpy(array.name, name);
 	return array;
 }
 // --------------------------------------------------------------------------------
@@ -176,66 +176,66 @@ int pop_array(Array *array, int indice) {
 }
 // --------------------------------------------------------------------------------
 
-int* find_int_array_indices(Array *array, int integer) {
+Array find_int_array_indices(Array *array, int integer) {
 	int number = 0;
+	int input;
 	for (int i = 0; i < array->len; i++) {
 		if (integer == int_array_val(array, i)) {
 			number++;
 		}
 	}
-	if (number == 0) return NULL;
-	int* arr = (int*) malloc(number * sizeof(int));
-
-	int counter = 0;
+    char dtype[7] = "int";
+	char name[9] = "indices";
+	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
+		input = i;
 		if (integer == int_array_val(array, i)) {
-			arr[counter] = i;
-			counter++;
+			append_array(&indice_arr, &input, 1);
 		}
 	}
-	return arr;
+	return indice_arr;
 }
 // --------------------------------------------------------------------------------
 
-int* find_float_array_indices(Array *array, float float_val) {
+Array find_float_array_indices(Array *array, float float_val) {
 	int number = 0;
+	int input;
 	for (int i = 0; i < array->len; i++) {
 		if (float_val == float_array_val(array, i)) {
 			number++;
 		}
 	}
-	if (number == 0) return NULL;
-	int* arr = (int*) malloc(number * sizeof(int));
-
-	int counter = 0;
+	char dtype[7] = "int";
+	char name[9] = "indices";
+	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		if (float_val == float_array_val(array, i)) {
-			arr[counter] = i;
-			counter++;
+			input = i;
+			append_array(&indice_arr, &input, 1);
 		}
 	}
-	return arr;
+	return indice_arr;
 }
 // --------------------------------------------------------------------------------
 
-int* find_double_array_indices(Array *array, double double_val) {
+Array find_double_array_indices(Array *array, double double_val) {
 	int number = 0;
+	int input;
 	for (int i = 0; i < array->len; i++) {
 		if (double_val == double_array_val(array, i)) {
 			number++;
 		}
 	}
-	if (number == 0) return NULL;
-	int* arr = (int*) malloc(number * sizeof(int));
-
-	int counter = 0;
+	char dtype[7] = "int";
+	char name[9] = "indices";
+	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		if (double_val == double_array_val(array, i)) {
-			arr[counter] = i;
-			counter++;
+			input = i;
+			append_array(&indice_arr, &input, 1);
 		}
 	}
-	return arr;
+	return indice_arr;
 }
 // ================================================================================
 // ================================================================================

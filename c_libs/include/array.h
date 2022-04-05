@@ -12,7 +12,11 @@
 // ================================================================================
 // ================================================================================
 // Include modules here
-
+// TODO Delete array.h/array.c
+// TODO move array_one.h/array_one.c to array.c/array.h
+// TODO Update git and push to remote
+// TODO Update all doc strings
+// TODO update git and push to remove
 #ifndef ARRAY_H
 #define ARRAY_H
 
@@ -34,8 +38,8 @@ typedef struct
 	size_t len;   // Active length of array
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
-	char *name;   // The array name
-	char *dtype;  // A string representing the datatype
+	char name[20];   // The array name
+	char dtype[10];  // A string representing the datatype
 } Array;
 // --------------------------------------------------------------------------------
 
@@ -50,8 +54,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
 // --------------------------------------------------------------------------------
 
 /**
- * This function is a wrapper for initiate_array that pre-populates
- * data in the Array struct and returns the struct to the user
+ * This function is the primary user interface to instantiate the Array container.
  * @param dtype A string representing the data type, can be 'float',
  *              'double', 'char', or 'int'
  * @param num_indices A guess for the number of indices required by the array
@@ -99,6 +102,8 @@ Array init_array(char *dtype, size_t num_indices, char *name);
  * for (int i = 0; i < 3; i ++) {
  *     printf("%d\n", ((int *) arr_test.array)[i]);
  * }
+ * // populated array
+ * // >> [0, 1, 2]
  * @endcode
  * The following code will also have the same effect
  * @code
@@ -116,7 +121,8 @@ Array init_array(char *dtype, size_t num_indices, char *name);
  * for (int i = 0; i < 3; i ++) {
  *     printf("%d\n", ((int *) arr_test.array)[i]);
  * }
- *
+ * // populated array
+ * // >> [0, 1, 2]
  * @endcode
  */
 int append_array(Array *array, void *elements, size_t count);
@@ -150,10 +156,12 @@ void free_array(Array *array);
  * append_array(&arr_test, a, 3);
  * // recover array indice value 0 by casting
  * printf("%d\n", ((int *)arr_test.array)[0]);
+ * // >> 0
  * @endcode
  * This process can be simplified with this function
  * @code
  * printf("%d\n", int_array_val(&arr_test, 0));
+ *  // >> 0
  * @endcode
  */
 int int_array_val(Array *array, int indice);
@@ -178,11 +186,13 @@ int int_array_val(Array *array, int indice);
  * float a[3] = {1.1, 2.1, 3.1};
  * append_array(&arr_test, a, 3);
  * // recover array indice value 0 by casting
- * printf("%d\n", ((float *)arr_test.array)[0]);
+ * printf("%f\n", ((float *)arr_test.array)[0]);
+ * // >> 1.1
  * @endcode
  * This process can be simplified with this function
  * @code
  * printf("%f\n", float_array_val(&arr_test, 0));
+ * // >> 1.1
  * @endcode
  */
 float float_array_val(Array *array, int indice);
@@ -207,11 +217,13 @@ float float_array_val(Array *array, int indice);
  * double a[3] = {1.1, 2.1, 3.1};
  * append_array(&arr_test, a, 3);
  * // recover array indice value 0 by casting
- * printf("%d\n", ((double *)arr_test.array)[0]);
+ * printf("%f\n", ((double *)arr_test.array)[0]);
+ * // >> 1.1
  * @endcode
  * This process can be simplified with this function
  * @code
  * printf("%f\n", double_array_val(&arr_test, 0));
+ * // >> 1.1
  * @endcode
  */
 double double_array_val(Array *array, int indice);
@@ -240,12 +252,14 @@ double double_array_val(Array *array, int indice);
  * @endcode
  * This process can be simplified with this function
  * @code
- * printf("%f\n", char_array_val(&arr_test, 0));
+ * printf("%s\n", char_array_val(&arr_test, 0));
+ * // >> H
  * @endcode
  * However a character array can also be access the traditionale way with
  * the following command.
  * @code
  * printf("%s\n", Array.array);
+ * // >> H
  * @endcode
  */
 char char_array_val(Array *array, int indice);
@@ -271,15 +285,19 @@ char char_array_val(Array *array, int indice);
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
- * // Build array from scalar values
- * for (int = 0; i < 3; i++) {
+ * // Build the base array
+ * int a[3] = {0, 1, 2};
+ * append_array(&arr_test, a, 3);
+ * // Original array
+ * // >> [0, 1, 2]
+ *
+ * // preappend array from scalar values
+ * for (int i = 4; i < 7; i++) {
  *     preappend_array(&arr_test, &i, 1);
  * }
+ * // Yields final array
+ * // >> [4, 5, 6, 0, 1, 2]
  *
- * // Print the array values
- * for (int i = 0; i < 3; i ++) {
- *     printf("%d\n", ((int *) arr_test.array)[i]);
- * }
  * @endcode
  * The following code will also have the same effect
  * @code
@@ -291,12 +309,12 @@ char char_array_val(Array *array, int indice);
  *
  * // Build from an already existing array
  * int a[3] = {0, 1, 2};
- * preappend_array(&arr_test, a, 3);
+ * append_array(&arr_test, 3);
+ * // >> [0, 1, 22]
  *
- * // Print the array values
- * for (int i = 0; i < 3; i ++) {
- *     printf("%d\n", ((int *) arr_test.array)[i]);
- * }
+ * int b[3] = {3, 4, 5};
+ * preappend_array(&arr_test, b, 3);
+ * // >> [3, 4, 5, 0, 1, 2]
  *
  * @endcode
  */
@@ -321,6 +339,7 @@ int preappend_array(Array *array, void *elements, size_t count);
  * float a[4] = {10.1, 9.2, 8.3, 7.4};
  * append_array(&arr_test, a, 4);
  * pop_array(&arr_test, 2);
+ * // >> [10.1, 9.2, 7.4]
  * @endcode
  * The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4.
  */
@@ -342,12 +361,14 @@ int pop_array(Array *array, int indice);
  * Array arr_test = init_array(dtype, indices, name);
  * int a[7] = {6, 1, 3, 6, 6, 4, 5};
  * append_array(&arr_test, a, 7);
- * find_int_array_indices(&arr_test, 6);
- * free(p);
+ * Array p = find_int_array_indices(&arr_test, 6);
+ * // P allocation
+ * // [0, 3, 4]
+ * free_array(p);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
-int* find_int_array_indices(Array *array, int integer);
+Array find_int_array_indices(Array *array, int integer);
 // --------------------------------------------------------------------------------
 
 /**
@@ -365,12 +386,14 @@ int* find_int_array_indices(Array *array, int integer);
  * Array arr_test = init_array(dtype, indices, name);
  * int a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
  * append_array(&arr_test, a, 7);
- * find_int_array_indices(&arr_test, 6.2f);
- * free(p);
+ * Array p = find_int_array_indices(&arr_test, 6.2f);
+ * // p allocation
+ * // >> [0, 3, 4]
+ * free_array(p);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
-int* find_float_array_indices(Array *array, float float_val);
+Array find_float_array_indices(Array *array, float float_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -388,12 +411,14 @@ int* find_float_array_indices(Array *array, float float_val);
  * Array arr_test = init_array(dtype, indices, name);
  * double a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
  * append_array(&arr_test, a, 7);
- * find_int_array_indices(&arr_test, 6.2);
- * free(p);
+ * Array p = find_int_array_indices(&arr_test, 6.2);
+ * // p allocation
+ * // >> [0, 3, 4]
+ * free_array(p);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
-int* find_double_array_indices(Array *array, double double_val);
+Array find_double_array_indices(Array *array, double double_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
