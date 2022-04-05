@@ -12,17 +12,29 @@
 // ================================================================================
 // ================================================================================
 // Include modules here
-// TODO Delete array.h/array.c
-// TODO move array_one.h/array_one.c to array.c/array.h
-// TODO Update git and push to remote
-// TODO Update all doc strings
-// TODO update git and push to remove
+
 #ifndef ARRAY_H
 #define ARRAY_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/**
+ * A container to describe different data types
+ * @param FLOAT An integer representing float data types
+ * &param DOUBLE An integer representing double data types
+ * @param CHAR An integer representing char data types
+ * @param INT An integer representing int data types
+ */
+typedef enum
+{
+	FLOAT,
+	DOUBLE,
+	CHAR,
+	INT
+} dat_type;
+// --------------------------------------------------------------------------------
 
 /**
  * A container for a dynamically allocated array and related data
@@ -39,7 +51,7 @@ typedef struct
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
 	char name[20];   // The array name
-	char dtype[10];  // A string representing the datatype
+	dat_type dat;
 } Array;
 // --------------------------------------------------------------------------------
 
@@ -55,8 +67,8 @@ void array_mem_alloc(Array *array, size_t num_indices);
 
 /**
  * This function is the primary user interface to instantiate the Array container.
- * @param dtype A string representing the data type, can be 'float',
- *              'double', 'char', or 'int'
+ * @param dtype An integer representing the data type, can be FLOAT,
+ *              DOUBLE, CHAR, or INT
  * @param num_indices A guess for the number of indices required by the array
  * @param name The name of the array as a character string
  *
@@ -69,7 +81,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
  * Array arr_test = init_array(dtype, indices, name);
  * @endcode
  */
-Array init_array(char *dtype, size_t num_indices, char *name);
+Array init_array(dat_type dat, size_t num_indices, char *name);
 // --------------------------------------------------------------------------------
 
 /**

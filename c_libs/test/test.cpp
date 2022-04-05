@@ -24,8 +24,8 @@ extern "C" {
  */
 TEST(test_initialize_array, init_data) {
 	size_t indices = 20;
+	dat_type dtype = INT;
 	char name[6] = "array";
-	char dtype[4] = "int";
 	Array arr_test = init_array(dtype, indices, name);
 	// Verify array -> size is 20
 	EXPECT_EQ(20, arr_test.size);
@@ -39,8 +39,8 @@ TEST(test_initialize_array, init_data) {
 	arr_test.size=0;
 	arr_test.len=0;
 }
-/* // ================================================================================*/
-/* // ================================================================================*/
+// ================================================================================*/
+// ================================================================================*/
 
 /* This function tests to ensure that append_array can append a single*/
 /*  * integer scalar
@@ -48,7 +48,7 @@ TEST(test_initialize_array, init_data) {
 TEST(test_append_array, one_scalar_int) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[4] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
 	int a = 5;
     append_array(&arr_test, &a, 1);
@@ -63,14 +63,14 @@ TEST(test_append_array, one_scalar_int) {
 	arr_test.size=0;
 	arr_test.len=0;
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests to ensure that append_array can append an array
  */
 TEST(test_append_array, array_int) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[4] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
 	int a[3] = {10, 9, 8};
     append_array(&arr_test, &a, 3);
@@ -89,14 +89,14 @@ TEST(test_append_array, array_int) {
 	arr_test.size=0;
 	arr_test.len=0;
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the append_array function to ensure it proprly appends
  * float variables */
 TEST(test_append_array, array_float) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[6] = "float";
+	dat_type dtype = FLOAT;
 	Array arr_test = init_array(dtype, indices, name);
 	float a[3] = {10.5, 9.4, 8.3};
     append_array(&arr_test, &a, 3);
@@ -112,7 +112,7 @@ TEST(test_append_array, array_float) {
 	arr_test.size=0;
 	arr_test.len=0;
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the append_array function to ensure it proprly appends
  * double variables
@@ -120,7 +120,7 @@ TEST(test_append_array, array_float) {
 TEST(test_append_array, array_double) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "double";
+	dat_type dtype = DOUBLE;
 	Array arr_test = init_array(dtype, indices, name);
 	double a[3] = {10.5, 9.4, 8.3};
     append_array(&arr_test, &a, 3);
@@ -136,7 +136,7 @@ TEST(test_append_array, array_double) {
 	arr_test.size=0;
 	arr_test.len=0;
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the append_array function to ensure it proprly appends
  * double variables
@@ -144,7 +144,7 @@ TEST(test_append_array, array_double) {
 TEST(test_append_array, array_char){
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "double";
+	dat_type dtype = DOUBLE;
 	Array arr_test = init_array(dtype, indices, name);
 	char a[7] = "Hello!";
     append_array(&arr_test, &a, 3);
@@ -155,7 +155,7 @@ TEST(test_append_array, array_char){
 	arr_test.size=0;
 	arr_test.len=0;
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the append_array function to ensure it properly adds
  * memory allocatio when required
@@ -163,7 +163,7 @@ TEST(test_append_array, array_char){
 TEST(test_append_array, memory_rollover) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[4] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
 	
 	for (int i = 0; i < 11; i++) {
@@ -178,8 +178,8 @@ TEST(test_append_array, memory_rollover) {
 	arr_test.size=0;
 	arr_test.len=0;	
 }
-/* // ================================================================================*/
-/* // ================================================================================*/
+// ================================================================================*/
+// ================================================================================*/
 
 /* This function tests the free_array function to ensure it adequately frees
  * all memory from an array
@@ -188,7 +188,7 @@ TEST(test_free_memory, free_memory) {
 	// Allocate and implement memory
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "double";
+	dat_type dtype = DOUBLE;
 	Array arr_test = init_array(dtype, indices, name);
 	double a[3] = {10.5, 9.4, 8.3};
     append_array(&arr_test, &a, 3);
@@ -200,8 +200,8 @@ TEST(test_free_memory, free_memory) {
 	EXPECT_EQ(0, arr_test.len);
 	EXPECT_EQ(0, arr_test.elem);
 }
-/* // ================================================================================*/
-/* // ================================================================================*/
+// ================================================================================*/
+// ================================================================================*/
 
 /* This function tests the int_array_val function to ensure that it properly
  * returns an integer value
@@ -209,7 +209,7 @@ TEST(test_free_memory, free_memory) {
 TEST(test_retrieve_indice, int_indice) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[4] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
 	int a[3] = {10, 9, 8};
     append_array(&arr_test, &a, 3);
@@ -219,7 +219,7 @@ TEST(test_retrieve_indice, int_indice) {
 	EXPECT_EQ(8, int_array_val(&arr_test, 2));
 	free_array(&arr_test);
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the float_array_val function to ensure that it
  * properly returns a float value
@@ -227,7 +227,7 @@ TEST(test_retrieve_indice, int_indice) {
 TEST(test_retrieve_indice, float_indice) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "float";
+	dat_type dtype = FLOAT;
 	Array arr_test = init_array(dtype, indices, name);
 	float a[3] = {10.3, 9.5, 8.4};
     append_array(&arr_test, &a, 3);
@@ -237,25 +237,25 @@ TEST(test_retrieve_indice, float_indice) {
 	EXPECT_FLOAT_EQ(8.4f, float_array_val(&arr_test, 2));
 	free_array(&arr_test);
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the double_array_val function to ensure that it
  * properly returns a double value
  */
-/* TEST(test_retrieve_indice, double_indice) {*/
-/* 	size_t indices = 10;*/
-/* 	char name[6] = "array";*/
-/* 	char dtype[7] = "double";*/
-/* 	Array arr_test = init_array(dtype, indices, name);*/
-/* 	double a[3] = {10.3, 9.5, 8.4};*/
-/*     append_array(&arr_test, &a, 3);*/
+TEST(test_retrieve_indice, double_indice) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Array arr_test = init_array(dtype, indices, name);
+	double a[3] = {10.3, 9.5, 8.4};
+    append_array(&arr_test, &a, 3);
 
-/* 	EXPECT_FLOAT_EQ(10.3f, double_array_val(&arr_test, 0));*/
-/*     EXPECT_FLOAT_EQ(9.5f, double_array_val(&arr_test, 1));*/
-/* 	EXPECT_FLOAT_EQ(8.4f, double_array_val(&arr_test, 2));*/
-/* 	free_array(&arr_test);*/
-/* }*/
-/* // --------------------------------------------------------------------------------*/
+	EXPECT_FLOAT_EQ(10.3f, double_array_val(&arr_test, 0));
+    EXPECT_FLOAT_EQ(9.5f, double_array_val(&arr_test, 1));
+	EXPECT_FLOAT_EQ(8.4f, double_array_val(&arr_test, 2));
+	free_array(&arr_test);
+}
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the char_array_val function to ensure that it
  * properly returns a char value
@@ -263,7 +263,7 @@ TEST(test_retrieve_indice, float_indice) {
 TEST(test_retrieve_indice, char_indice) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "char";
+	dat_type dtype = CHAR;
 	Array arr_test = init_array(dtype, indices, name);
 	char a[7] = "Hello!";
     append_array(&arr_test, &a, 3);
@@ -275,8 +275,8 @@ TEST(test_retrieve_indice, char_indice) {
 	EXPECT_EQ(d, char_array_val(&arr_test, 2));
 	free_array(&arr_test);
 }
-/* // ================================================================================*/
-/* // ================================================================================*/
+// ================================================================================*/
+// ================================================================================*/
 
 /* This function tests the preappend_array function to ensure it can incorporate
  * a scalar value
@@ -284,7 +284,7 @@ TEST(test_retrieve_indice, char_indice) {
 TEST(test_preappend_array, preappend_scalar) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
 	int a[3] = {10, 9, 8};
     append_array(&arr_test, &a, 3);
@@ -297,7 +297,7 @@ TEST(test_preappend_array, preappend_scalar) {
 	EXPECT_EQ(8, int_array_val(&arr_test, 3));
 	free_array(&arr_test);
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the preappend_array function to incorporate an array
  * value
@@ -305,7 +305,7 @@ TEST(test_preappend_array, preappend_scalar) {
 TEST(test_preappend_array, preappend_array) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
 	int a[3] = {10, 9, 8};
     append_array(&arr_test, &a, 3);
@@ -320,8 +320,8 @@ TEST(test_preappend_array, preappend_array) {
 	EXPECT_EQ(8, int_array_val(&arr_test, 5));
 	free_array(&arr_test);
 }
-/* // ================================================================================*/
-/* // ================================================================================*/
+// ================================================================================*/
+// ================================================================================*/
 
 /* This function tests the pop_array function to ensure it proprly deletes an
 * ainteger rray element
@@ -329,7 +329,7 @@ TEST(test_preappend_array, preappend_array) {
 TEST(test_pop_array, pop_int) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
     int a[4] = {10, 9, 8, 7};
 	append_array(&arr_test, a, 4);
@@ -339,7 +339,7 @@ TEST(test_pop_array, pop_int) {
 	EXPECT_EQ(7, int_array_val(&arr_test, 2)); 
 	free_array(&arr_test);
 }
-/* // --------------------------------------------------------------------------------*/
+// --------------------------------------------------------------------------------*/
 
 /* This function tests the pop_array function to ensure it proprly deletes an
  * float array element
@@ -347,7 +347,7 @@ TEST(test_pop_array, pop_int) {
 TEST(test_pop_array, pop_float) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "float";
+	dat_type dtype = FLOAT;
 	Array arr_test = init_array(dtype, indices, name);
     float a[4] = {10.1, 9.2, 8.3, 7.4};
 	append_array(&arr_test, a, 4);
@@ -365,7 +365,7 @@ TEST(test_pop_array, pop_float) {
 TEST(test_find_indices, find_integer_indices) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "int";
+	dat_type dtype = INT;
 	Array arr_test = init_array(dtype, indices, name);
     int a[7] = {6, 1, 3, 6, 6, 4, 5};
 	append_array(&arr_test, a, 7);
@@ -383,7 +383,7 @@ TEST(test_find_indices, find_integer_indices) {
 TEST(test_find_indices, find_float_indices) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "float";
+	dat_type dtype = FLOAT;
 	Array arr_test = init_array(dtype, indices, name);
     float a[7] = {6.2, 1.0, 3.2, 6.2, 6.2, 4.5, 5.7};
 	append_array(&arr_test, a, 7);
@@ -402,7 +402,7 @@ TEST(test_find_indices, find_float_indices) {
 TEST(test_find_indices, find_double_indices) {
 	size_t indices = 10;
 	char name[6] = "array";
-	char dtype[7] = "double";
+	dat_type dtype = DOUBLE;
 	Array arr_test = init_array(dtype, indices, name);
     double a[7] = {6.2, 1.0, 3.2, 6.2, 6.2, 4.5, 5.7};
 	append_array(&arr_test, a, 7);

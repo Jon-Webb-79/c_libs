@@ -36,21 +36,30 @@ void array_mem_alloc(Array *array, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
-Array init_array(char *dtype, size_t num_indices, char *name) {
+Array init_array(dat_type dat, size_t num_indices, char *name) {
 	// Determine memory blocks based on data type
 	int size;
-	if (strcmp(dtype, "float") == 0) size = sizeof(float);
-	else if (strcmp(dtype, "int") == 0) size = sizeof(int);
-	else if (strcmp(dtype, "double") == 0) size = sizeof(double);
-	else if (strcmp(dtype, "char") == 0) size = sizeof(char);
-	else {
-		printf("Data type not correctly entered into init_array, exiting program!\n");
-		exit(0);
+	switch(dat) {
+		case FLOAT:
+			size = sizeof(float);
+			break;
+		case INT:
+			size = sizeof(int);
+			break;
+		case DOUBLE:
+			size = sizeof(double);
+			break;
+		case CHAR:
+			size = sizeof(char);
+			break;
+		default:
+			printf("Data type not correctly entered, instantiating int array!\n");
+			size = sizeof(int);
 	}
 
 	// Allocate indice size and call array_mem_alloc
 	Array array;
-	strcpy(array.dtype, dtype);
+	array.dat = dat;
     array.elem = size;
     array_mem_alloc(&array, num_indices);
 	strcpy(array.name, name);
@@ -92,7 +101,7 @@ void free_array(Array *array) {
 
 int int_array_val(Array *array, int indice) {
 	// Ensure array contains integers
-	if (strcmp(array->dtype, "int") != 0) {
+	if (array->dat != INT) {
 		printf("Function can only return integer values, exiting function!\n");
 		exit(0);
 	}
@@ -104,7 +113,7 @@ int int_array_val(Array *array, int indice) {
 
 float float_array_val(Array *array, int indice) {
 	// Ensure array contains floats
-	if (strcmp(array->dtype, "float") != 0) {
+	if (array->dat != FLOAT) {
 		printf("Function can only return float values, exiting function!\n");
 		exit(0);
 	}
@@ -116,7 +125,7 @@ float float_array_val(Array *array, int indice) {
 
 double double_array_val(Array *array, int indice) {
 	// Ensure array contains floats
-	if (strcmp(array->dtype, "double") != 0) {
+	if (array->dat != DOUBLE) {
 		printf("Function can only return double values, exiting function!\n");
 		exit(0);
 	}
@@ -128,7 +137,7 @@ double double_array_val(Array *array, int indice) {
 
 char char_array_val(Array *array, int indice) {
 	// Ensure array contains floats
-	if (strcmp(array->dtype, "char") != 0) {
+	if (array->dat != CHAR) {
 		printf("Function can only return char values, exiting function!\n");
 		exit(0);
 	}
@@ -184,7 +193,7 @@ Array find_int_array_indices(Array *array, int integer) {
 			number++;
 		}
 	}
-    char dtype[7] = "int";
+	dat_type dtype = INT;
 	char name[9] = "indices";
 	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
@@ -205,7 +214,7 @@ Array find_float_array_indices(Array *array, float float_val) {
 			number++;
 		}
 	}
-	char dtype[7] = "int";
+	dat_type dtype = INT;
 	char name[9] = "indices";
 	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
@@ -226,7 +235,7 @@ Array find_double_array_indices(Array *array, double double_val) {
 			number++;
 		}
 	}
-	char dtype[7] = "int";
+	dat_type dtype = INT;
 	char name[9] = "indices";
 	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {

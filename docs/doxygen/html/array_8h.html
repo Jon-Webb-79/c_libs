@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">array.h File Reference</div></div>
 </div><!--header-->
@@ -83,12 +84,21 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structArray.html">Array</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a1abd8bcc329e46eb9463a815548d6686"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> { <a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>
+, <a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>
+, <a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>
+, <a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>
+ }</td></tr>
+<tr class="separator:a1abd8bcc329e46eb9463a815548d6686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5d694a209687f470f9661070458bdafd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a5d694a209687f470f9661070458bdafd">array_mem_alloc</a> (<a class="el" href="structArray.html">Array</a> *array, size_t num_indices)</td></tr>
 <tr class="separator:a5d694a209687f470f9661070458bdafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8439385a0c04ae9e9fb599c225e6914e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArray.html">Array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a> (char *dtype, size_t num_indices, char *name)</td></tr>
-<tr class="separator:a8439385a0c04ae9e9fb599c225e6914e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741da92429ba5d8accf86b6253cb309a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArray.html">Array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a741da92429ba5d8accf86b6253cb309a">init_array</a> (<a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dat, size_t num_indices, char *name)</td></tr>
+<tr class="separator:a741da92429ba5d8accf86b6253cb309a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f286165693b57a7e284044174f00282"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a2f286165693b57a7e284044174f00282">append_array</a> (<a class="el" href="structArray.html">Array</a> *array, void *elements, size_t count)</td></tr>
 <tr class="separator:a2f286165693b57a7e284044174f00282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1825c492d3c651b7bd4e6178f209f8e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a1825c492d3c651b7bd4e6178f209f8e5">free_array</a> (<a class="el" href="structArray.html">Array</a> *array)</td></tr>
@@ -112,6 +122,35 @@ Functions</h2></td></tr>
 <tr class="memitem:acf2747022fa2d4f4a26e527b74ad0395"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArray.html">Array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#acf2747022fa2d4f4a26e527b74ad0395">find_double_array_indices</a> (<a class="el" href="structArray.html">Array</a> *array, double double_val)</td></tr>
 <tr class="separator:acf2747022fa2d4f4a26e527b74ad0395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a1abd8bcc329e46eb9463a815548d6686" name="a1abd8bcc329e46eb9463a815548d6686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1abd8bcc329e46eb9463a815548d6686">&#9670;&nbsp;</a></span>dat_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >A container to describe different data types </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FLOAT</td><td>An integer representing float data types &amp;param DOUBLE An integer representing double data types </td></tr>
+    <tr><td class="paramname">CHAR</td><td>An integer representing char data types </td></tr>
+    <tr><td class="paramname">INT</td><td>An integer representing int data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c" name="a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92" name="a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"></a>DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8" name="a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8"></a>CHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a" name="a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a"></a>INT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f286165693b57a7e284044174f00282">&#9670;&nbsp;</a></span>append_array()</h2>
@@ -157,7 +196,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build array from scalar values</span></div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; 3; i++) {</div>
@@ -170,15 +209,15 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// populated array</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2]</span></div>
-<div class="ttc" id="aarray_8c_html_a2f286165693b57a7e284044174f00282"><div class="ttname"><a href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a></div><div class="ttdeci">int append_array(Array *array, void *elements, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:61</div></div>
-<div class="ttc" id="aarray_8c_html_a8439385a0c04ae9e9fb599c225e6914e"><div class="ttname"><a href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a></div><div class="ttdeci">Array init_array(char *dtype, size_t num_indices, char *name)</div><div class="ttdef"><b>Definition:</b> array.c:39</div></div>
-<div class="ttc" id="astructArray_html"><div class="ttname"><a href="structArray.html">Array</a></div><div class="ttdef"><b>Definition:</b> array.h:36</div></div>
-<div class="ttc" id="astructArray_html_ae5a3c34db1de06a6ae6ca3c455298377"><div class="ttname"><a href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">Array::array</a></div><div class="ttdeci">void * array</div><div class="ttdef"><b>Definition:</b> array.h:37</div></div>
+<div class="ttc" id="aarray_8c_html_a2f286165693b57a7e284044174f00282"><div class="ttname"><a href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a></div><div class="ttdeci">int append_array(Array *array, void *elements, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:70</div></div>
+<div class="ttc" id="aarray_8c_html_a741da92429ba5d8accf86b6253cb309a"><div class="ttname"><a href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a></div><div class="ttdeci">Array init_array(dat_type dat, size_t num_indices, char *name)</div><div class="ttdef"><b>Definition:</b> array.c:39</div></div>
+<div class="ttc" id="astructArray_html"><div class="ttname"><a href="structArray.html">Array</a></div><div class="ttdef"><b>Definition:</b> array.h:48</div></div>
+<div class="ttc" id="astructArray_html_ae5a3c34db1de06a6ae6ca3c455298377"><div class="ttname"><a href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">Array::array</a></div><div class="ttdeci">void * array</div><div class="ttdef"><b>Definition:</b> array.h:49</div></div>
 </div><!-- fragment --><p> The following code will also have the same effect </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line"> <span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"> <span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
 <div class="line"> <span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"> <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"> <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"> <span class="comment">// Build from an already existing array</span></div>
 <div class="line"> <span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
@@ -264,7 +303,7 @@ Functions</h2></td></tr>
 <p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;char&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">char</span> a[7] = <span class="stringliteral">&quot;Hello!&quot;</span>;</div>
@@ -273,7 +312,7 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">char</span> *)arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[0]);</div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="array_8c.html#ae5ff24acf67bc37db2c7d9885f85b428">char_array_val</a>(&amp;arr_test, 0));</div>
 <div class="line"><span class="comment">// &gt;&gt; H</span></div>
-<div class="ttc" id="aarray_8c_html_ae5ff24acf67bc37db2c7d9885f85b428"><div class="ttname"><a href="array_8c.html#ae5ff24acf67bc37db2c7d9885f85b428">char_array_val</a></div><div class="ttdeci">char char_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:129</div></div>
+<div class="ttc" id="aarray_8c_html_ae5ff24acf67bc37db2c7d9885f85b428"><div class="ttname"><a href="array_8c.html#ae5ff24acf67bc37db2c7d9885f85b428">char_array_val</a></div><div class="ttdeci">char char_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:138</div></div>
 </div><!-- fragment --><p> However a character array can also be access the traditionale way with the following command. </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_struct" href="structArray.html">Array</a>.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>);</div>
 <div class="line"><span class="comment">// &gt;&gt; H</span></div>
 </div><!-- fragment --> 
@@ -315,7 +354,7 @@ Functions</h2></td></tr>
 <p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;double&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">double</span> a[3] = {1.1, 2.1, 3.1};</div>
@@ -325,7 +364,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code hl_function" href="array_8c.html#ab41047d5b550a414bbb5eb3deb5c1782">double_array_val</a>(&amp;arr_test, 0));</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
-<div class="ttc" id="aarray_8c_html_ab41047d5b550a414bbb5eb3deb5c1782"><div class="ttname"><a href="array_8c.html#ab41047d5b550a414bbb5eb3deb5c1782">double_array_val</a></div><div class="ttdeci">double double_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:117</div></div>
+<div class="ttc" id="aarray_8c_html_ab41047d5b550a414bbb5eb3deb5c1782"><div class="ttname"><a href="array_8c.html#ab41047d5b550a414bbb5eb3deb5c1782">double_array_val</a></div><div class="ttdeci">double double_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:126</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -364,15 +403,15 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>array An array containing all indices associatd with the user specified float value. <div class="fragment"><div class="line">*<span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line">  <span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line">  <span class="keywordtype">char</span> dtype[7] = <span class="stringliteral">&quot;double&quot;</span>;</div>
-<div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line">  <span class="keywordtype">double</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
 <div class="line">  <a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> p = <a class="code hl_function" href="array_8c.html#a48e2fab529c03ee0752fb78eadc39b4f">find_int_array_indices</a>(&amp;arr_test, 6.2);</div>
 <div class="line">  <span class="comment">// p allocation</span></div>
 <div class="line">  <span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
 <div class="line">  <a class="code hl_function" href="array_8c.html#a1825c492d3c651b7bd4e6178f209f8e5">free_array</a>(p);</div>
-<div class="ttc" id="aarray_8c_html_a1825c492d3c651b7bd4e6178f209f8e5"><div class="ttname"><a href="array_8c.html#a1825c492d3c651b7bd4e6178f209f8e5">free_array</a></div><div class="ttdeci">void free_array(Array *array)</div><div class="ttdef"><b>Definition:</b> array.c:82</div></div>
-<div class="ttc" id="aarray_8c_html_a48e2fab529c03ee0752fb78eadc39b4f"><div class="ttname"><a href="array_8c.html#a48e2fab529c03ee0752fb78eadc39b4f">find_int_array_indices</a></div><div class="ttdeci">Array find_int_array_indices(Array *array, int integer)</div><div class="ttdef"><b>Definition:</b> array.c:179</div></div>
+<div class="ttc" id="aarray_8c_html_a1825c492d3c651b7bd4e6178f209f8e5"><div class="ttname"><a href="array_8c.html#a1825c492d3c651b7bd4e6178f209f8e5">free_array</a></div><div class="ttdeci">void free_array(Array *array)</div><div class="ttdef"><b>Definition:</b> array.c:91</div></div>
+<div class="ttc" id="aarray_8c_html_a48e2fab529c03ee0752fb78eadc39b4f"><div class="ttname"><a href="array_8c.html#a48e2fab529c03ee0752fb78eadc39b4f">find_int_array_indices</a></div><div class="ttdeci">Array find_int_array_indices(Array *array, int integer)</div><div class="ttdef"><b>Definition:</b> array.c:188</div></div>
 </div><!-- fragment --> The above code should produce an array with indices 0, 3, and 4. </dd></dl>
 
 </div>
@@ -412,7 +451,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>array An array containing all indices associatd with the user specified float value. <div class="fragment"><div class="line">*<span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line">  <span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line">  <span class="keywordtype">char</span> dtype[7] = <span class="stringliteral">&quot;float&quot;</span>;</div>
-<div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line">  <span class="keywordtype">int</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
 <div class="line">  <a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> p = <a class="code hl_function" href="array_8c.html#a48e2fab529c03ee0752fb78eadc39b4f">find_int_array_indices</a>(&amp;arr_test, 6.2f);</div>
@@ -458,7 +497,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>array An array containing all indices associatd with the user specified integer. <div class="fragment"><div class="line">*<span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line">  <span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line">  <span class="keywordtype">char</span> dtype[7] = <span class="stringliteral">&quot;int&quot;</span>;</div>
-<div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line">  <span class="keywordtype">int</span> a[7] = {6, 1, 3, 6, 6, 4, 5};</div>
 <div class="line">  <a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">  <a class="code hl_struct" href="structArray.html">Array</a> p = <a class="code hl_function" href="array_8c.html#a48e2fab529c03ee0752fb78eadc39b4f">find_int_array_indices</a>(&amp;arr_test, 6);</div>
@@ -505,7 +544,7 @@ Functions</h2></td></tr>
 <p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;float&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">float</span> a[3] = {1.1, 2.1, 3.1};</div>
@@ -515,7 +554,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code hl_function" href="array_8c.html#ad8ab38f5c3f47e13b5206cc5328bf88e">float_array_val</a>(&amp;arr_test, 0));</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
-<div class="ttc" id="aarray_8c_html_ad8ab38f5c3f47e13b5206cc5328bf88e"><div class="ttname"><a href="array_8c.html#ad8ab38f5c3f47e13b5206cc5328bf88e">float_array_val</a></div><div class="ttdeci">float float_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:105</div></div>
+<div class="ttc" id="aarray_8c_html_ad8ab38f5c3f47e13b5206cc5328bf88e"><div class="ttname"><a href="array_8c.html#ad8ab38f5c3f47e13b5206cc5328bf88e">float_array_val</a></div><div class="ttdeci">float float_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:114</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -543,8 +582,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8439385a0c04ae9e9fb599c225e6914e" name="a8439385a0c04ae9e9fb599c225e6914e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8439385a0c04ae9e9fb599c225e6914e">&#9670;&nbsp;</a></span>init_array()</h2>
+<a id="a741da92429ba5d8accf86b6253cb309a" name="a741da92429ba5d8accf86b6253cb309a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741da92429ba5d8accf86b6253cb309a">&#9670;&nbsp;</a></span>init_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -552,8 +591,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structArray.html">Array</a> init_array </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>dtype</em>, </td>
+          <td class="paramtype"><a class="el" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a>&#160;</td>
+          <td class="paramname"><em>dat</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -576,7 +615,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >This function is the primary user interface to instantiate the <a class="el" href="structArray.html">Array</a> container. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dtype</td><td>A string representing the data type, can be 'float', 'double', 'char', or 'int' </td></tr>
+    <tr><td class="paramname">dtype</td><td>An integer representing the data type, can be FLOAT, DOUBLE, CHAR, or INT </td></tr>
     <tr><td class="paramname">num_indices</td><td>A guess for the number of indices required by the array </td></tr>
     <tr><td class="paramname">name</td><td>The name of the array as a character string</td></tr>
   </table>
@@ -585,7 +624,7 @@ Functions</h2></td></tr>
 <p>The following is a code example for how to instantiate the container for an integer; </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -625,7 +664,7 @@ Functions</h2></td></tr>
 <p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
@@ -635,7 +674,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// &gt;&gt; 0</span></div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, <a class="code hl_function" href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a>(&amp;arr_test, 0));</div>
 <div class="line"> <span class="comment">// &gt;&gt; 0</span></div>
-<div class="ttc" id="aarray_8c_html_a803955615e694eed4e7306642d96b288"><div class="ttname"><a href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a></div><div class="ttdeci">int int_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:93</div></div>
+<div class="ttc" id="aarray_8c_html_a803955615e694eed4e7306642d96b288"><div class="ttname"><a href="array_8c.html#a803955615e694eed4e7306642d96b288">int_array_val</a></div><div class="ttdeci">int int_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:102</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -675,12 +714,12 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An error code of 0 if the user defines an indice greater than the array length <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[7] = <span class="stringliteral">&quot;float&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[4] = {10.1, 9.2, 8.3, 7.4};</div>
 <div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><a class="code hl_function" href="array_8c.html#a5bb5a148d782ddaf08902466571294ab">pop_array</a>(&amp;arr_test, 2);</div>
 <div class="line"><span class="comment">// &gt;&gt; [10.1, 9.2, 7.4]</span></div>
-<div class="ttc" id="aarray_8c_html_a5bb5a148d782ddaf08902466571294ab"><div class="ttname"><a href="array_8c.html#a5bb5a148d782ddaf08902466571294ab">pop_array</a></div><div class="ttdeci">int pop_array(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:167</div></div>
+<div class="ttc" id="aarray_8c_html_a5bb5a148d782ddaf08902466571294ab"><div class="ttname"><a href="array_8c.html#a5bb5a148d782ddaf08902466571294ab">pop_array</a></div><div class="ttdeci">int pop_array(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:176</div></div>
 </div><!-- fragment --> The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4. </dd></dl>
 
 </div>
@@ -729,7 +768,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
 <div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build the base array</span></div>
 <div class="line"><span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
@@ -743,12 +782,12 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// Yields final array</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [4, 5, 6, 0, 1, 2]</span></div>
-<div class="ttc" id="aarray_8c_html_a4fab7d1a479ee3874746cf818b2a264a"><div class="ttname"><a href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a></div><div class="ttdeci">int preappend_array(Array *array, void *elements, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:141</div></div>
+<div class="ttc" id="aarray_8c_html_a4fab7d1a479ee3874746cf818b2a264a"><div class="ttname"><a href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a></div><div class="ttdeci">int preappend_array(Array *array, void *elements, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:150</div></div>
 </div><!-- fragment --><p> The following code will also have the same effect </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line"> <span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"> <span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
 <div class="line"> <span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
-<div class="line"> <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a8439385a0c04ae9e9fb599c225e6914e">init_array</a>(dtype, indices, name);</div>
+<div class="line"> <a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"> <span class="comment">// Build from an already existing array</span></div>
 <div class="line"> <span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
