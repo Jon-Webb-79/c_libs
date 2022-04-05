@@ -55,6 +55,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name) {
 		default:
 			printf("Data type not correctly entered, instantiating int array!\n");
 			size = sizeof(int);
+			dat = INT;
 	}
 
 	// Allocate indice size and call array_mem_alloc
@@ -240,6 +241,27 @@ Array find_double_array_indices(Array *array, double double_val) {
 	Array indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		if (double_val == double_array_val(array, i)) {
+			input = i;
+			append_array(&indice_arr, &input, 1);
+		}
+	}
+	return indice_arr;
+}
+// --------------------------------------------------------------------------------
+
+Array find_char_array_indices(Array *array, char char_val) {
+	int number = 0;
+	int input;
+	for (int i = 0; i < array->len; i++) {
+		if (char_val == char_array_val(array, i)) {
+			number++;
+		}
+	}
+	dat_type dtype = INT;
+	char name[9] = "indices";
+	Array indice_arr = init_array(dtype, number, name);
+	for (int i = 0; i < array->len; i++) {
+		if (char_val == char_array_val(array, i)) {
 			input = i;
 			append_array(&indice_arr, &input, 1);
 		}

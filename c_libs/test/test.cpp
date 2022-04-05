@@ -414,6 +414,26 @@ TEST(test_find_indices, find_double_indices) {
 	free_array(&arr_test);
 	free_array(&p);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the find_char_array function to ensure ir properly 
+ * finds the indices associated with specific values in an integer array.*/
+TEST(test_find_indices, find_char_indices) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Array arr_test = init_array(dtype, indices, name);
+    char a[7] = {'a', 'b', 'b', 'b', 'd', 'e', 'b'};
+	append_array(&arr_test, a, 7);
+	char value = 'b';
+	Array p = find_char_array_indices(&arr_test, value);
+	EXPECT_EQ(int_array_val(&p, 0), 1);
+	EXPECT_EQ(int_array_val(&p, 1), 2);
+	EXPECT_EQ(int_array_val(&p, 2), 3);
+	EXPECT_EQ(int_array_val(&p, 3), 6);
+	free_array(&arr_test);
+	free_array(&p);
+}
 // ================================================================================
 // ================================================================================
 // eof

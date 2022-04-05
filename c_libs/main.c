@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/array.h"
 // Begin code
-// TODO Add find indices
 // TODO Add delete_element function
 // TODO Add replace_element function
 // TODO Add unique function

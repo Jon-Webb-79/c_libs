@@ -29,6 +29,8 @@ int \mbox{\hyperlink{array_8c_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}
 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8c_ac5abaf0c0ebc08edae2e31df64a70db6}{find\+\_\+float\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float float\+\_\+val)
 \item 
 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8c_acf2747022fa2d4f4a26e527b74ad0395}{find\+\_\+double\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double double\+\_\+val)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8c_a26efb661560563a784bde403728dedcc}{find\+\_\+char\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char char\+\_\+val)
 \end{DoxyCompactItemize}
 
 
@@ -184,7 +186,37 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8c_acf2747022fa2d4f4a26e527b74ad0395}\label{array_8c_acf2747022fa2d4f4a26e527b74ad0395}} 
+ \mbox{\Hypertarget{array_8c_a26efb661560563a784bde403728dedcc}\label{array_8c_a26efb661560563a784bde403728dedcc}} 
+\index{array.c@{array.c}!find\_char\_array\_indices@{find\_char\_array\_indices}}
+\index{find\_char\_array\_indices@{find\_char\_array\_indices}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{find\_char\_array\_indices()}{find\_char\_array\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} find\+\_\+char\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{char}]{char\+\_\+val }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified char value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em double\+\_\+val} & the double value the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified float value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}double"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} a[7] = \{a, b, b, q, b, a, c\};}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_a26efb661560563a784bde403728dedcc}{find\_char\_array\_indices}}(\&arr\_test, \textcolor{charliteral}{'b'});}
+\DoxyCodeLine{  \textcolor{comment}{// p allocation}}
+\DoxyCodeLine{  \textcolor{comment}{// >> [1, 2, 4]}}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{array_8c_acf2747022fa2d4f4a26e527b74ad0395}\label{array_8c_acf2747022fa2d4f4a26e527b74ad0395}} 
 \index{array.c@{array.c}!find\_double\_array\_indices@{find\_double\_array\_indices}}
 \index{find\_double\_array\_indices@{find\_double\_array\_indices}!array.c@{array.c}}
 \doxysubsubsection{\texorpdfstring{find\_double\_array\_indices()}{find\_double\_array\_indices()}}
@@ -206,7 +238,7 @@ array An array containing all indices associatd with the user specified float va
 \DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{  \textcolor{keywordtype}{double} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_a48e2fab529c03ee0752fb78eadc39b4f}{find\_int\_array\_indices}}(\&arr\_test, 6.2);}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_acf2747022fa2d4f4a26e527b74ad0395}{find\_double\_array\_indices}}(\&arr\_test, 6.2);}
 \DoxyCodeLine{  \textcolor{comment}{// p allocation}}
 \DoxyCodeLine{  \textcolor{comment}{// >> [0, 3, 4]}}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
@@ -236,7 +268,7 @@ array An array containing all indices associatd with the user specified float va
 \DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_a48e2fab529c03ee0752fb78eadc39b4f}{find\_int\_array\_indices}}(\&arr\_test, 6.2f);}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_ac5abaf0c0ebc08edae2e31df64a70db6}{find\_float\_array\_indices}}(\&arr\_test, 6.2f);}
 \DoxyCodeLine{  \textcolor{comment}{// p allocation}}
 \DoxyCodeLine{  \textcolor{comment}{// >> [0, 3, 4]}}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
