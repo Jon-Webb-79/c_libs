@@ -535,6 +535,9 @@ void delete_double_arr_values(Array *array, double double_value);
  * @endcode
  */
 void delete_char_arr_values(Array *array, char char_value);
+// --------------------------------------------------------------------------------
+
+void replace_int_array_indice(Array *array, int index, int replacement_value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

@@ -291,7 +291,7 @@ void delete_float_arr_values(Array *array, float float_value) {
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_float_array_indices(array, float_value);
-		pop_array(array, float_array_val(&indices, 0));
+		pop_array(array, int_array_val(&indices, 0));
 		free_array(&indices);
 	}
 	free_array(&indices_num);
@@ -305,7 +305,7 @@ void delete_double_arr_values(Array *array, double double_value) {
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_double_array_indices(array, double_value);
-		pop_array(array, double_array_val(&indices, 0));
+		pop_array(array, int_array_val(&indices, 0));
 		free_array(&indices);
 	}
 	free_array(&indices_num);
@@ -319,10 +319,20 @@ void delete_char_arr_values(Array *array, char char_value) {
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_char_array_indices(array, char_value);
-		pop_array(array, char_array_val(&indices, 0));
+		pop_array(array, int_array_val(&indices, 0));
 		free_array(&indices);
 	}
 	free_array(&indices_num);
+}
+// --------------------------------------------------------------------------------
+
+void replace_int_array_indice(Array *array, int index, int replacement_value) {
+	// Create intermediate array
+	Array inter_array;
+    memmove(
+    ((char *) array->array) + index * array->elem,
+    &replacement_value,
+    array->elem);
 }
 // ================================================================================
 // ================================================================================

@@ -482,7 +482,8 @@ TEST(test_delete_array_value, delete_float) {
 	Array arr_test = init_array(dtype, indices, name);
     float a[7] = {6.1, 1.2, 3.4, 6.1, 6.1, 4.5, 5.7};
 	append_array(&arr_test, a, 7);
-	delete_float_arr_values(&arr_test, 6.1f);
+	float b = 6.1;
+	delete_float_arr_values(&arr_test, b);
 	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 0), 1.2f);
 	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 1), 3.4f);
 	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 2), 4.5f);
@@ -519,9 +520,22 @@ TEST(test_delete_array_value, delete_char) {
     char a[6] = "Hello";
 	append_array(&arr_test, a, 6);
 	delete_char_arr_values(&arr_test, 'l');
-	EXPECT_EQ(double_array_val(&arr_test, 0), 'H');
-	EXPECT_EQ(double_array_val(&arr_test, 1), 'e');
-	EXPECT_EQ(double_array_val(&arr_test, 2), 'o');
+	EXPECT_EQ(char_array_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_array_val(&arr_test, 1), 'e');
+	EXPECT_EQ(char_array_val(&arr_test, 2), 'o');
+	free_array(&arr_test);
+}
+// ================================================================================
+// ================================================================================
+TEST(test_replace_index, replace_int) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Array arr_test = init_array(dtype, indices, name);
+    int a[6] = {1, 2, 3, 4, 5, 6};
+	append_array(&arr_test, a, 6);
+	replace_int_array_indice(&arr_test, 1, 5);
+	printf("%d\n", int_array_val(&arr_test, 2));
 	free_array(&arr_test);
 }
 // ================================================================================
