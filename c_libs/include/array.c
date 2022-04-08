@@ -282,6 +282,20 @@ void delete_int_arr_values(Array *array, int int_value) {
 	}
 	free_array(&indices_num);
 }
+// --------------------------------------------------------------------------------
+
+void delete_float_arr_values(Array *array, float float_value) {
+	Array indices;
+	// find the number of indices containing the value
+	Array indices_num = find_float_array_indices(array, float_value);
+	// Remove each appropriate indice
+    for (int i = indices_num.len; i > 0; i--) {
+        indices = find_float_array_indices(array, float_value);
+		pop_array(array, float_array_val(&indices, 0));
+		free_array(&indices);
+	}
+	free_array(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof

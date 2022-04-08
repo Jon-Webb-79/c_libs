@@ -454,6 +454,8 @@ TEST(test_delete_array_value, delete_int) {
 }
 // --------------------------------------------------------------------------------
 
+/* This function tests the delete_int_array function to ensure if properly
+ * executes if the expected value is not in the target array*/
 TEST(test_delete_array_value, no_delete) {
 	size_t indices = 10;
 	char name[6] = "array";
@@ -466,6 +468,22 @@ TEST(test_delete_array_value, no_delete) {
 	EXPECT_EQ(int_array_val(&arr_test, 1), 1);
 	EXPECT_EQ(int_array_val(&arr_test, 2), 3);
 	EXPECT_EQ(int_array_val(&arr_test, 3), 6);
+}
+// --------------------------------------------------------------------------------
+/* This function tests the delete_float_array_values function to ensure it 
+ * properly deletes a value from an array */
+TEST(test_delete_array_value, delete_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Array arr_test = init_array(dtype, indices, name);
+    float a[7] = {6.1, 1.2, 3.4, 6.1, 6.1, 4.5, 5.7};
+	append_array(&arr_test, a, 7);
+	delete_float_arr_values(&arr_test, 6.1f);
+	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 0), 1.2);
+	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 1), 3.4);
+	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 2), 4.5);
+	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 3), 5.7);
 }
 // ================================================================================
 // ================================================================================

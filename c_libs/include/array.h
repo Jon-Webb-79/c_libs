@@ -458,7 +458,7 @@ Array find_char_array_indices(Array *array, char char_val);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will find all integer value occurances in an array
+ * This function will find all integer values occurances in an array
  * and delete them.
  * @param array An array container
  * @param int_value An integer value that the user wishes to delete
@@ -475,6 +475,26 @@ Array find_char_array_indices(Array *array, char char_val);
  * @endcode
  */
 void delete_int_arr_values(Array *array, int int_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find all float values occurances in an array
+ * and delete them.
+ * @param array An array container
+ * @param float_value A float value that the user wishes to delete
+ *                    from an array
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};
+ * append_array(&arr_test, a, 7);
+ * delete_float_arr_values(&arr_test, 6.3);
+ * // >> [1.0, 3.2, 4.1, 5.7]
+ * @endcode
+ */
+void delete_float_arr_values(Array *array, float float_value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
