@@ -268,6 +268,20 @@ Array find_char_array_indices(Array *array, char char_val) {
 	}
 	return indice_arr;
 }
+// --------------------------------------------------------------------------------
+
+void delete_int_arr_values(Array *array, int int_value) {
+	Array indices;
+	// find the number of indices containing the value
+	Array indices_num = find_int_array_indices(array, int_value);
+	// Remove each appropriate indice
+    for (int i = indices_num.len; i > 0; i--) {
+        indices = find_int_array_indices(array, int_value);
+		pop_array(array, int_array_val(&indices, 0));
+		free_array(&indices);
+	}
+	free_array(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof

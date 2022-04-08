@@ -436,4 +436,37 @@ TEST(test_find_indices, find_char_indices) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the delete_int_array_values function to ensure it 
+ * properly deletes a value from an array */
+TEST(test_delete_array_value, delete_int) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Array arr_test = init_array(dtype, indices, name);
+    int a[7] = {6, 1, 3, 6, 6, 4, 5};
+	append_array(&arr_test, a, 7);
+	delete_int_arr_values(&arr_test, 6);
+	EXPECT_EQ(int_array_val(&arr_test, 0), 1);
+	EXPECT_EQ(int_array_val(&arr_test, 1), 3);
+	EXPECT_EQ(int_array_val(&arr_test, 2), 4);
+	EXPECT_EQ(int_array_val(&arr_test, 3), 5);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_delete_array_value, no_delete) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Array arr_test = init_array(dtype, indices, name);
+    int a[4] = {6, 1, 3, 6};
+	append_array(&arr_test, a, 4);
+	delete_int_arr_values(&arr_test, 5);
+	EXPECT_EQ(int_array_val(&arr_test, 0), 6);
+	EXPECT_EQ(int_array_val(&arr_test, 1), 1);
+	EXPECT_EQ(int_array_val(&arr_test, 2), 3);
+	EXPECT_EQ(int_array_val(&arr_test, 3), 6);
+}
+// ================================================================================
+// ================================================================================
 // eof

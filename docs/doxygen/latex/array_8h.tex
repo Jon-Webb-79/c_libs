@@ -47,6 +47,8 @@ int \mbox{\hyperlink{array_8h_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}
 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_acf2747022fa2d4f4a26e527b74ad0395}{find\+\_\+double\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double double\+\_\+val)
 \item 
 \mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a26efb661560563a784bde403728dedcc}{find\+\_\+char\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char char\+\_\+val)
+\item 
+void \mbox{\hyperlink{array_8h_a96a8a12581a7fa1d94e35f52a69593f5}{delete\+\_\+int\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int int\+\_\+value)
 \end{DoxyCompactItemize}
 
 
@@ -109,7 +111,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -130,7 +132,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
 \DoxyCodeLine{ \textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{ \textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{ \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{ \textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{ \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -178,7 +180,7 @@ value The integer value associated with an indice
 When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}char"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -201,7 +203,32 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{\textcolor{comment}{// >> H}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8h_ab41047d5b550a414bbb5eb3deb5c1782}\label{array_8h_ab41047d5b550a414bbb5eb3deb5c1782}} 
+ \mbox{\Hypertarget{array_8h_a96a8a12581a7fa1d94e35f52a69593f5}\label{array_8h_a96a8a12581a7fa1d94e35f52a69593f5}} 
+\index{array.h@{array.h}!delete\_int\_arr\_values@{delete\_int\_arr\_values}}
+\index{delete\_int\_arr\_values@{delete\_int\_arr\_values}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{delete\_int\_arr\_values()}{delete\_int\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+int\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{int\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all integer value occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em int\+\_\+value} & An integer value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a96a8a12581a7fa1d94e35f52a69593f5}{delete\_int\_arr\_values}}(\&arr\_test, 6);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 4, 5]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8h_ab41047d5b550a414bbb5eb3deb5c1782}\label{array_8h_ab41047d5b550a414bbb5eb3deb5c1782}} 
 \index{array.h@{array.h}!double\_array\_val@{double\_array\_val}}
 \index{double\_array\_val@{double\_array\_val}!array.h@{array.h}}
 \doxysubsubsection{\texorpdfstring{double\_array\_val()}{double\_array\_val()}}
@@ -220,7 +247,7 @@ value The integer value associated with an indice
 When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}double"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -254,16 +281,16 @@ This function will find the indices that contain a user specified char value. Th
 \begin{DoxyReturn}{Returns}
 array An array containing all indices associatd with the user specified float value. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
-\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
-\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}double"{}};}
-\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
-\DoxyCodeLine{  \textcolor{keywordtype}{char} a[7] = \{a, b, b, q, b, a, c\};}
-\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_a26efb661560563a784bde403728dedcc}{find\_char\_array\_indices}}(\&arr\_test, \textcolor{charliteral}{'b'});}
-\DoxyCodeLine{  \textcolor{comment}{// p allocation}}
-\DoxyCodeLine{  \textcolor{comment}{// >> [1, 2, 4]}}
-\DoxyCodeLine{  \mbox{\hyperlink{array_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}}}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[7] = \{a, b, b, q, b, a, c\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{array_8c_a26efb661560563a784bde403728dedcc}{find\_char\_array\_indices}}(\&arr\_test, \textcolor{charliteral}{'b'});}
+\DoxyCodeLine{\textcolor{comment}{// p allocation}}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 4]}}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
 
 \end{DoxyCode}
  
@@ -286,7 +313,7 @@ array An array containing all indices associatd with the user specified float va
 \begin{DoxyCode}{0}
 \DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
 \DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
-\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}double"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{  \textcolor{keywordtype}{double} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
@@ -316,7 +343,7 @@ array An array containing all indices associatd with the user specified float va
 \begin{DoxyCode}{0}
 \DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
 \DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
-\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}float"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
@@ -346,7 +373,7 @@ array An array containing all indices associatd with the user specified integer.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
 \DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
-\DoxyCodeLine{  \textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
 \DoxyCodeLine{  \mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
@@ -377,7 +404,7 @@ value The integer value associated with an indice
 When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}float"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -448,7 +475,7 @@ value The integer value associated with an indice
 When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -486,7 +513,7 @@ integer An error code of 0 if the user defines an indice greater than the array 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[7] = \textcolor{stringliteral}{"{}float"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 4);}
@@ -518,7 +545,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}
@@ -540,7 +567,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
 \DoxyCodeLine{ \textcolor{keywordtype}{size\_t} indices = 20;}
-\DoxyCodeLine{ \textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{ \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{ \textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
 \DoxyCodeLine{ \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{}

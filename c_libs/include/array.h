@@ -101,7 +101,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name);
  * @code
  * // Instantiate array
  * size_t indices = 20;
- * char dtype[4] = "int";
+ * dat_type dtype INT;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -121,7 +121,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name);
  * @code
 * // Instantiate array
  * size_t indices = 20;
- * char dtype[4] = "int";
+ * dat_type dtype = INT;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -159,7 +159,7 @@ void free_array(Array *array);
  * by casting it prior to retrieving the value.
  * @code
  * size_t indices = 20;
- * char dtype[4] = "int";
+ * dat_type dtype = INT;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -190,7 +190,7 @@ int int_array_val(Array *array, int indice);
  * by casting it prior to retrieving the value.
  * @code
  * size_t indices = 20;
- * char dtype[4] = "float";
+ * dat_type dtype = FLOAT;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -221,7 +221,7 @@ float float_array_val(Array *array, int indice);
  * by casting it prior to retrieving the value.
  * @code
  * size_t indices = 20;
- * char dtype[4] = "double";
+ * dat_type dtype = DOUBLE;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -252,7 +252,7 @@ double double_array_val(Array *array, int indice);
  * by casting it prior to retrieving the value.
  * @code
  * size_t indices = 20;
- * char dtype[4] = "char";
+ * dat_type dtype = CHAR;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -293,7 +293,7 @@ char char_array_val(Array *array, int indice);
  * @code
  * // Instantiate array
  * size_t indices = 20;
- * char dtype[4] = "int";
+ * dat_type dtype = INT;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -315,7 +315,7 @@ char char_array_val(Array *array, int indice);
  * @code
 * // Instantiate array
  * size_t indices = 20;
- * char dtype[4] = "int";
+ * dat_type dtype = INT;
  * char name[5] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
@@ -346,7 +346,7 @@ int preappend_array(Array *array, void *elements, size_t count);
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
- * char dtype[7] = "float";
+ * dat_type dtype = FLOAT;
  * Array arr_test = init_array(dtype, indices, name);
  * float a[4] = {10.1, 9.2, 8.3, 7.4};
  * append_array(&arr_test, a, 4);
@@ -369,7 +369,7 @@ int pop_array(Array *array, int indice);
  * @code
  *size_t indices = 10;
  * char name[6] = "array";
- * char dtype[7] = "int";
+ * dat_type dtype = INT;
  * Array arr_test = init_array(dtype, indices, name);
  * int a[7] = {6, 1, 3, 6, 6, 4, 5};
  * append_array(&arr_test, a, 7);
@@ -394,7 +394,7 @@ Array find_int_array_indices(Array *array, int integer);
  * @code
  *size_t indices = 10;
  * char name[6] = "array";
- * char dtype[7] = "float";
+ * dat_type dtype = FLOAT;
  * Array arr_test = init_array(dtype, indices, name);
  * int a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
  * append_array(&arr_test, a, 7);
@@ -419,7 +419,7 @@ Array find_float_array_indices(Array *array, float float_val);
  * @code
  *size_t indices = 10;
  * char name[6] = "array";
- * char dtype[7] = "double";
+ * dat_type dtype = DOUBLE;
  * Array arr_test = init_array(dtype, indices, name);
  * double a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
  * append_array(&arr_test, a, 7);
@@ -442,9 +442,9 @@ Array find_double_array_indices(Array *array, double double_val);
  * @return array An array containing all indices associatd with the user
  *               specified float value.
  * @code
- *size_t indices = 10;
+ * size_t indices = 10;
  * char name[6] = "array";
- * char dtype[7] = "double";
+ * dat_type dtype = DOUBLE
  * Array arr_test = init_array(dtype, indices, name);
  * char a[7] = {a, b, b, q, b, a, c};
  * append_array(&arr_test, a, 7);
@@ -455,6 +455,26 @@ Array find_double_array_indices(Array *array, double double_val);
  * @endcode
  */
 Array find_char_array_indices(Array *array, char char_val);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find all integer value occurances in an array
+ * and delete them.
+ * @param array An array container
+ * @param int_value An integer value that the user wishes to delete
+ *                  from an array
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[7] = {6, 1, 3, 6, 6, 4, 5};
+ * append_array(&arr_test, a, 7);
+ * delete_int_arr_values(&arr_test, 6);
+ * // >> [1, 3, 4, 5]
+ * @endcode
+ */
+void delete_int_arr_values(Array *array, int int_value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
