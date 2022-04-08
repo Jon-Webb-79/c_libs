@@ -296,6 +296,34 @@ void delete_float_arr_values(Array *array, float float_value) {
 	}
 	free_array(&indices_num);
 }
+// --------------------------------------------------------------------------------
+
+void delete_double_arr_values(Array *array, double double_value) {
+	Array indices;
+	// find the number of indices containing the value
+	Array indices_num = find_double_array_indices(array, double_value);
+	// Remove each appropriate indice
+    for (int i = indices_num.len; i > 0; i--) {
+        indices = find_double_array_indices(array, double_value);
+		pop_array(array, double_array_val(&indices, 0));
+		free_array(&indices);
+	}
+	free_array(&indices_num);
+}
+// --------------------------------------------------------------------------------
+
+void delete_char_arr_values(Array *array, char char_value) {
+	Array indices;
+	// find the number of indices containing the value
+	Array indices_num = find_char_array_indices(array, char_value);
+	// Remove each appropriate indice
+    for (int i = indices_num.len; i > 0; i--) {
+        indices = find_char_array_indices(array, char_value);
+		pop_array(array, char_array_val(&indices, 0));
+		free_array(&indices);
+	}
+	free_array(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof

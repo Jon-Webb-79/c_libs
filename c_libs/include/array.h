@@ -490,11 +490,51 @@ void delete_int_arr_values(Array *array, int int_value);
  * Array arr_test = init_array(dtype, indices, name);
  * float a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};
  * append_array(&arr_test, a, 7);
- * delete_float_arr_values(&arr_test, 6.3);
+ * delete_float_arr_values(&arr_test, 6.3f);
  * // >> [1.0, 3.2, 4.1, 5.7]
  * @endcode
  */
 void delete_float_arr_values(Array *array, float float_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find all double values occurances in an array
+ * and delete them.
+ * @param array An array container
+ * @param double_value A double value that the user wishes to delete
+ *                    from an array
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};
+ * append_array(&arr_test, a, 7);
+ * delete_double_arr_values(&arr_test, 6.3);
+ * // >> [1.0, 3.2, 4.1, 5.7]
+ * @endcode
+ */
+void delete_double_arr_values(Array *array, double double_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find all char values occurances in an array
+ * and delete them.
+ * @param array An array container
+ * @param char_value A char value that the user wishes to delete
+ *                   from an array
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[6] = "Hello";
+ * append_array(&arr_test, a, 6);
+ * delete_char_arr_values(&arr_test, 'l');
+ * // >> ['H', 'e', 'o']
+ * @endcode
+ */
+void delete_char_arr_values(Array *array, char char_value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

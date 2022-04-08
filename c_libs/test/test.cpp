@@ -451,6 +451,7 @@ TEST(test_delete_array_value, delete_int) {
 	EXPECT_EQ(int_array_val(&arr_test, 1), 3);
 	EXPECT_EQ(int_array_val(&arr_test, 2), 4);
 	EXPECT_EQ(int_array_val(&arr_test, 3), 5);
+	free_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -468,8 +469,10 @@ TEST(test_delete_array_value, no_delete) {
 	EXPECT_EQ(int_array_val(&arr_test, 1), 1);
 	EXPECT_EQ(int_array_val(&arr_test, 2), 3);
 	EXPECT_EQ(int_array_val(&arr_test, 3), 6);
+	free_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
+
 /* This function tests the delete_float_array_values function to ensure it 
  * properly deletes a value from an array */
 TEST(test_delete_array_value, delete_float) {
@@ -480,10 +483,46 @@ TEST(test_delete_array_value, delete_float) {
     float a[7] = {6.1, 1.2, 3.4, 6.1, 6.1, 4.5, 5.7};
 	append_array(&arr_test, a, 7);
 	delete_float_arr_values(&arr_test, 6.1f);
-	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 0), 1.2);
-	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 1), 3.4);
-	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 2), 4.5);
-	EXPECT_FLOAT_EQ(int_array_val(&arr_test, 3), 5.7);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 0), 1.2f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 1), 3.4f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 2), 4.5f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 3), 5.7f);
+	free_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_double_array_values function to ensure it 
+ * properly deletes a value from an array */
+TEST(test_delete_array_value, delete_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Array arr_test = init_array(dtype, indices, name);
+    double a[7] = {6.1, 1.2, 3.4, 6.1, 6.1, 4.5, 5.7};
+	append_array(&arr_test, a, 7);
+	delete_double_arr_values(&arr_test, 6.1);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 0), 1.2);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 1), 3.4);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 2), 4.5);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 3), 5.7);
+	free_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_char_array_values function to ensure it 
+ * properly deletes a value from an array */
+TEST(test_delete_array_value, delete_char) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Array arr_test = init_array(dtype, indices, name);
+    char a[6] = "Hello";
+	append_array(&arr_test, a, 6);
+	delete_char_arr_values(&arr_test, 'l');
+	EXPECT_EQ(double_array_val(&arr_test, 0), 'H');
+	EXPECT_EQ(double_array_val(&arr_test, 1), 'e');
+	EXPECT_EQ(double_array_val(&arr_test, 2), 'o');
+	free_array(&arr_test);
 }
 // ================================================================================
 // ================================================================================
