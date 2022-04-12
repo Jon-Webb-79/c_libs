@@ -111,8 +111,14 @@ Functions</h2></td></tr>
 <tr class="separator:a02415b878c4d603b068b1146f786929b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac87775b025cf99dcd66f2bba77aa3b41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#ac87775b025cf99dcd66f2bba77aa3b41">delete_char_arr_values</a> (<a class="el" href="structArray.html">Array</a> *array, char char_value)</td></tr>
 <tr class="separator:ac87775b025cf99dcd66f2bba77aa3b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25922177c0e3fa31a7d8b46a22d7d3c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a25922177c0e3fa31a7d8b46a22d7d3c4">replace_int_array_index</a> (<a class="el" href="structArray.html">Array</a> *array, int index, int replacement_value)</td></tr>
-<tr class="separator:a25922177c0e3fa31a7d8b46a22d7d3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f6d8e0de24d016e4bdfd966360619bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a7f6d8e0de24d016e4bdfd966360619bc">replace_int_array_index</a> (<a class="el" href="structArray.html">Array</a> *array, int index, int replacement_value)</td></tr>
+<tr class="separator:a7f6d8e0de24d016e4bdfd966360619bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b90db798f078ddd74e89920a7712c23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a4b90db798f078ddd74e89920a7712c23">replace_float_array_index</a> (<a class="el" href="structArray.html">Array</a> *array, int index, float replacement_value)</td></tr>
+<tr class="separator:a4b90db798f078ddd74e89920a7712c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5454e5bf34661b2f6591f5840b670199"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a5454e5bf34661b2f6591f5840b670199">replace_double_array_index</a> (<a class="el" href="structArray.html">Array</a> *array, int index, double replacement_value)</td></tr>
+<tr class="separator:a5454e5bf34661b2f6591f5840b670199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addfc4dd3c59eee136810328c02b38091"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#addfc4dd3c59eee136810328c02b38091">replace_char_array_index</a> (<a class="el" href="structArray.html">Array</a> *array, int index, char replacement_value)</td></tr>
+<tr class="separator:addfc4dd3c59eee136810328c02b38091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
@@ -993,14 +999,162 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a25922177c0e3fa31a7d8b46a22d7d3c4" name="a25922177c0e3fa31a7d8b46a22d7d3c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25922177c0e3fa31a7d8b46a22d7d3c4">&#9670;&nbsp;</a></span>replace_int_array_index()</h2>
+<a id="addfc4dd3c59eee136810328c02b38091" name="addfc4dd3c59eee136810328c02b38091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfc4dd3c59eee136810328c02b38091">&#9670;&nbsp;</a></span>replace_char_array_index()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void replace_int_array_index </td>
+          <td class="memname">int replace_char_array_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>replacement_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace a char value at a user defined indice with another char value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>A double value that will replace the existing double value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[6] = <span class="stringliteral">&quot;Hello &quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line">replace_float_char_index(&amp;arr_test, 1, <span class="charliteral">&#39;p&#39;</span>);</div>
+<div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;p&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;&#39;]</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5454e5bf34661b2f6591f5840b670199" name="a5454e5bf34661b2f6591f5840b670199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5454e5bf34661b2f6591f5840b670199">&#9670;&nbsp;</a></span>replace_double_array_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replace_double_array_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>replacement_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace a double value at a user defined indice with another double value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>A double value that will replace the existing double value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a4b90db798f078ddd74e89920a7712c23">replace_float_array_index</a>(&amp;arr_test, 1, 5.5);</div>
+<div class="line"><span class="comment">// &gt;&gt; [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]</span></div>
+<div class="ttc" id="aarray_8c_html_a4b90db798f078ddd74e89920a7712c23"><div class="ttname"><a href="array_8c.html#a4b90db798f078ddd74e89920a7712c23">replace_float_array_index</a></div><div class="ttdeci">int replace_float_array_index(Array *array, int index, float replacement_value)</div><div class="ttdef"><b>Definition:</b> array.c:344</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b90db798f078ddd74e89920a7712c23" name="a4b90db798f078ddd74e89920a7712c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b90db798f078ddd74e89920a7712c23">&#9670;&nbsp;</a></span>replace_float_array_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replace_float_array_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>replacement_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace a float value at a user defined indice with another float value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>A float value that will replace the existing float value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a4b90db798f078ddd74e89920a7712c23">replace_float_array_index</a>(&amp;arr_test, 1, 5.5f);</div>
+<div class="line"><span class="comment">// &gt;&gt; [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7f6d8e0de24d016e4bdfd966360619bc" name="a7f6d8e0de24d016e4bdfd966360619bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6d8e0de24d016e4bdfd966360619bc">&#9670;&nbsp;</a></span>replace_int_array_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replace_int_array_index </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
           <td class="paramname"><em>array</em>, </td>
@@ -1033,9 +1187,9 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
 <div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a25922177c0e3fa31a7d8b46a22d7d3c4">replace_int_array_index</a>(&amp;arr_test, 2, 5);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a7f6d8e0de24d016e4bdfd966360619bc">replace_int_array_index</a>(&amp;arr_test, 1, 5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 5, 3, 4, 5, 6]</span></div>
-<div class="ttc" id="aarray_8c_html_a25922177c0e3fa31a7d8b46a22d7d3c4"><div class="ttname"><a href="array_8c.html#a25922177c0e3fa31a7d8b46a22d7d3c4">replace_int_array_index</a></div><div class="ttdeci">void replace_int_array_index(Array *array, int index, int replacement_value)</div><div class="ttdef"><b>Definition:</b> array.c:329</div></div>
+<div class="ttc" id="aarray_8c_html_a7f6d8e0de24d016e4bdfd966360619bc"><div class="ttname"><a href="array_8c.html#a7f6d8e0de24d016e4bdfd966360619bc">replace_int_array_index</a></div><div class="ttdeci">int replace_int_array_index(Array *array, int index, int replacement_value)</div><div class="ttdef"><b>Definition:</b> array.c:329</div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>

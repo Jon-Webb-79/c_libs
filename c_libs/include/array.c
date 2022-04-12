@@ -326,9 +326,63 @@ void delete_char_arr_values(Array *array, char char_value) {
 }
 // --------------------------------------------------------------------------------
 
-void replace_int_array_index(Array *array, int index, int replacement_value) {
+int replace_int_array_index(Array *array, int index, int replacement_value) {
+	if (array->dat != INT) {
+		printf("Array data type must be an INT");
+		return 0;
+	}
+	if (index > array->len) {
+		printf("Index is greater than array length");
+		return 0;
+	}
     // re-cast array indice to new value
 	* (int *) ((char *) array->array + index * array->elem) = replacement_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_float_array_index(Array *array, int index, float replacement_value) {
+	if (array->dat != FLOAT) {
+		printf("Array data type must be an FLOAT");
+		return 0;
+	}
+	if (index > array->len) {
+		printf("Index is greater than array length");
+		return 0;
+	}
+    // re-cast array indice to new value
+	* (float *) ((char *) array->array + index * array->elem) = replacement_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_double_array_index(Array *array, int index, double replacement_value) {
+	if (array->dat != DOUBLE) {
+		printf("Array data type must be an DOUBLE");
+		return 0;
+	}
+	if (index > array->len) {
+		printf("Index is greater than array length");
+		return 0;
+	}
+    // re-cast array indice to new value
+	* (double *) ((char *) array->array + index * array->elem) = replacement_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_char_array_index(Array *array, int index, char replacement_value) {
+	if (array->dat != CHAR) {
+		printf("Array data type must be an CHAR");
+		return 0;
+	}
+	if (index > array->len) {
+		printf("Index is greater than array length");
+		return 0;
+	}
+    // re-cast array indice to new value
+	* (char *) ((char *) array->array + index * array->elem) = replacement_value;
+	return 1;
 }
 // ================================================================================
 // ================================================================================

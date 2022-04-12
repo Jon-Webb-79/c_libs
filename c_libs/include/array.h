@@ -550,11 +550,71 @@ void delete_char_arr_values(Array *array, char char_value);
  * Array arr_test = init_array(dtype, indices, name);
  * int a[6] = {1, 2, 3, 4, 5, 6};
  * append_array(&arr_test, a, 6);
- * replace_int_array_index(&arr_test, 2, 5);
+ * replace_int_array_index(&arr_test, 1, 5);
  * // >> [1, 5, 3, 4, 5, 6]
  * @endcode
  */
-void replace_int_array_index(Array *array, int index, int replacement_value);
+int replace_int_array_index(Array *array, int index, int replacement_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace a float value at a user defined indice
+ * with another float value
+ * @param array An array container
+ * @param replacement_value A float value that will replace the existing
+ *                          float value at the index location
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);
+ * replace_float_array_index(&arr_test, 1, 5.5f);
+ * // >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]
+ * @endcode
+ */
+int replace_float_array_index(Array *array, int index, float replacement_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace a double value at a user defined indice
+ * with another double value
+ * @param array An array container
+ * @param replacement_value A double value that will replace the existing
+ *                          double value at the index location
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);
+ * replace_float_array_index(&arr_test, 1, 5.5);
+ * // >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]
+ * @endcode
+ */
+int replace_double_array_index(Array *array, int index, double replacement_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace a char value at a user defined indice
+ * with another char value
+ * @param array An array container
+ * @param replacement_value A double value that will replace the existing
+ *                          double value at the index location
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = "Hello ";
+ * append_array(&arr_test, a, 6);
+ * replace_float_char_index(&arr_test, 1, 'p');
+ * // >> ['H', 'p', 'l', 'l', 'o', '']
+ * @endcode
+ */
+int replace_char_array_index(Array *array, int index, char replacement_value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

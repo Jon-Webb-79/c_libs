@@ -527,6 +527,9 @@ TEST(test_delete_array_value, delete_char) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the replace_int_array_index function to ensure
+ * it properly replaces an integer value at an index*/
 TEST(test_replace_index, replace_int) {
 	size_t indices = 10;
 	char name[6] = "array";
@@ -541,6 +544,66 @@ TEST(test_replace_index, replace_int) {
 	EXPECT_EQ(int_array_val(&arr_test, 3), 4);
 	EXPECT_EQ(int_array_val(&arr_test, 4), 5);
 	EXPECT_EQ(int_array_val(&arr_test, 5), 6);
+	free_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_float_array_index function to ensure
+ * it properly replaces a float value at an index*/
+TEST(test_replace_index, replace_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Array arr_test = init_array(dtype, indices, name);
+    float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_array(&arr_test, a, 6);
+	replace_float_array_index(&arr_test, 1, 5.5f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 0), 1.1f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 1), 5.5f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 2), 3.3f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 3), 4.4f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 4), 5.5f);
+	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 5), 6.6f);
+	free_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_double_array_index function to ensure
+ * it properly replaces a double value at an index*/
+TEST(test_replace_index, replace_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Array arr_test = init_array(dtype, indices, name);
+    double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_array(&arr_test, a, 6);
+	replace_double_array_index(&arr_test, 1, 5.5);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 0), 1.1);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 1), 5.5);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 2), 3.3);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 3), 4.4);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 4), 5.5);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 5), 6.6);
+	free_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_char_array_index function to ensure
+ * it properly replaces a char value at an index*/
+TEST(test_replace_index, replace_char) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Array arr_test = init_array(dtype, indices, name);
+    char a[7] = "Hello ";
+	append_array(&arr_test, a, 6);
+	replace_char_array_index(&arr_test, 1, 'p');
+	EXPECT_EQ(char_array_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_array_val(&arr_test, 1), 'p');
+	EXPECT_EQ(char_array_val(&arr_test, 2), 'l');
+	EXPECT_EQ(char_array_val(&arr_test, 3), 'l');
+	EXPECT_EQ(char_array_val(&arr_test, 4), 'o');
+	EXPECT_EQ(char_array_val(&arr_test, 5), ' ');
 	free_array(&arr_test);
 }
 // ================================================================================

@@ -56,7 +56,13 @@ void \mbox{\hyperlink{array_8h_a02415b878c4d603b068b1146f786929b}{delete\+\_\+do
 \item 
 void \mbox{\hyperlink{array_8h_ac87775b025cf99dcd66f2bba77aa3b41}{delete\+\_\+char\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char char\+\_\+value)
 \item 
-void \mbox{\hyperlink{array_8h_a25922177c0e3fa31a7d8b46a22d7d3c4}{replace\+\_\+int\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, int replacement\+\_\+value)
+int \mbox{\hyperlink{array_8h_a7f6d8e0de24d016e4bdfd966360619bc}{replace\+\_\+int\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, int replacement\+\_\+value)
+\item 
+int \mbox{\hyperlink{array_8h_a4b90db798f078ddd74e89920a7712c23}{replace\+\_\+float\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, float replacement\+\_\+value)
+\item 
+int \mbox{\hyperlink{array_8h_a5454e5bf34661b2f6591f5840b670199}{replace\+\_\+double\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, double replacement\+\_\+value)
+\item 
+int \mbox{\hyperlink{array_8h_addfc4dd3c59eee136810328c02b38091}{replace\+\_\+char\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, char replacement\+\_\+value)
 \end{DoxyCompactItemize}
 
 
@@ -664,11 +670,86 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{ \textcolor{comment}{// >> [3, 4, 5, 0, 1, 2]}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a25922177c0e3fa31a7d8b46a22d7d3c4}\label{array_8h_a25922177c0e3fa31a7d8b46a22d7d3c4}} 
+ \mbox{\Hypertarget{array_8h_addfc4dd3c59eee136810328c02b38091}\label{array_8h_addfc4dd3c59eee136810328c02b38091}} 
+\index{array.h@{array.h}!replace\_char\_array\_index@{replace\_char\_array\_index}}
+\index{replace\_char\_array\_index@{replace\_char\_array\_index}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{replace\_char\_array\_index()}{replace\_char\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+char\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{char}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace a char value at a user defined indice with another char value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & A double value that will replace the existing double value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \textcolor{stringliteral}{"{}Hello "{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{replace\_float\_char\_index(\&arr\_test, 1, \textcolor{charliteral}{'p'});}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'p', 'l', 'l', 'o', '']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8h_a5454e5bf34661b2f6591f5840b670199}\label{array_8h_a5454e5bf34661b2f6591f5840b670199}} 
+\index{array.h@{array.h}!replace\_double\_array\_index@{replace\_double\_array\_index}}
+\index{replace\_double\_array\_index@{replace\_double\_array\_index}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{replace\_double\_array\_index()}{replace\_double\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+double\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{double}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace a double value at a user defined indice with another double value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & A double value that will replace the existing double value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a4b90db798f078ddd74e89920a7712c23}{replace\_float\_array\_index}}(\&arr\_test, 1, 5.5);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8h_a4b90db798f078ddd74e89920a7712c23}\label{array_8h_a4b90db798f078ddd74e89920a7712c23}} 
+\index{array.h@{array.h}!replace\_float\_array\_index@{replace\_float\_array\_index}}
+\index{replace\_float\_array\_index@{replace\_float\_array\_index}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{replace\_float\_array\_index()}{replace\_float\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+float\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{float}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace a float value at a user defined indice with another float value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & A float value that will replace the existing float value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a4b90db798f078ddd74e89920a7712c23}{replace\_float\_array\_index}}(\&arr\_test, 1, 5.5f);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8h_a7f6d8e0de24d016e4bdfd966360619bc}\label{array_8h_a7f6d8e0de24d016e4bdfd966360619bc}} 
 \index{array.h@{array.h}!replace\_int\_array\_index@{replace\_int\_array\_index}}
 \index{replace\_int\_array\_index@{replace\_int\_array\_index}!array.h@{array.h}}
 \doxysubsubsection{\texorpdfstring{replace\_int\_array\_index()}{replace\_int\_array\_index()}}
-{\footnotesize\ttfamily void replace\+\_\+int\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int replace\+\_\+int\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{replacement\+\_\+value }\end{DoxyParamCaption})}
 
 This function will replace an integer value at a user defined indice with another integer 
 \begin{DoxyParams}{Parameters}
@@ -682,7 +763,7 @@ This function will replace an integer value at a user defined indice with anothe
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a25922177c0e3fa31a7d8b46a22d7d3c4}{replace\_int\_array\_index}}(\&arr\_test, 2, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a7f6d8e0de24d016e4bdfd966360619bc}{replace\_int\_array\_index}}(\&arr\_test, 1, 5);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
 
 \end{DoxyCode}
