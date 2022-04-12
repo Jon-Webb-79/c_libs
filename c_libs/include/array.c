@@ -63,7 +63,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name) {
 	array.dat = dat;
     array.elem = size;
     array_mem_alloc(&array, num_indices);
-	strcpy(array.name, name);
+	strncpy(array.name, name, sizeof(array.name));
 	return array;
 }
 // --------------------------------------------------------------------------------
@@ -326,13 +326,9 @@ void delete_char_arr_values(Array *array, char char_value) {
 }
 // --------------------------------------------------------------------------------
 
-void replace_int_array_indice(Array *array, int index, int replacement_value) {
-	// Create intermediate array
-	Array inter_array;
-    memmove(
-    ((char *) array->array) + index * array->elem,
-    &replacement_value,
-    array->elem);
+void replace_int_array_index(Array *array, int index, int replacement_value) {
+    // re-cast array indice to new value
+	* (int *) ((char *) array->array + index * array->elem) = replacement_value;
 }
 // ================================================================================
 // ================================================================================

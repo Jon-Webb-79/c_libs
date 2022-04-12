@@ -35,6 +35,12 @@ int \mbox{\hyperlink{array_8c_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}
 void \mbox{\hyperlink{array_8c_a96a8a12581a7fa1d94e35f52a69593f5}{delete\+\_\+int\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int int\+\_\+value)
 \item 
 void \mbox{\hyperlink{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}{delete\+\_\+float\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float float\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_a02415b878c4d603b068b1146f786929b}{delete\+\_\+double\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double double\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_ac87775b025cf99dcd66f2bba77aa3b41}{delete\+\_\+char\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char char\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_a25922177c0e3fa31a7d8b46a22d7d3c4}{replace\+\_\+int\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, int replacement\+\_\+value)
 \end{DoxyCompactItemize}
 
 
@@ -153,7 +159,57 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{\textcolor{comment}{// >> H}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}\label{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}} 
+ \mbox{\Hypertarget{array_8c_ac87775b025cf99dcd66f2bba77aa3b41}\label{array_8c_ac87775b025cf99dcd66f2bba77aa3b41}} 
+\index{array.c@{array.c}!delete\_char\_arr\_values@{delete\_char\_arr\_values}}
+\index{delete\_char\_arr\_values@{delete\_char\_arr\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{delete\_char\_arr\_values()}{delete\_char\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+char\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{char}]{char\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all char values occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em char\+\_\+value} & A char value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac87775b025cf99dcd66f2bba77aa3b41}{delete\_char\_arr\_values}}(\&arr\_test, \textcolor{charliteral}{'l'});}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', 'o']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8c_a02415b878c4d603b068b1146f786929b}\label{array_8c_a02415b878c4d603b068b1146f786929b}} 
+\index{array.c@{array.c}!delete\_double\_arr\_values@{delete\_double\_arr\_values}}
+\index{delete\_double\_arr\_values@{delete\_double\_arr\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{delete\_double\_arr\_values()}{delete\_double\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+double\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{double}]{double\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all double values occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em double\+\_\+value} & A double value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a02415b878c4d603b068b1146f786929b}{delete\_double\_arr\_values}}(\&arr\_test, 6.3);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}\label{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}} 
 \index{array.c@{array.c}!delete\_float\_arr\_values@{delete\_float\_arr\_values}}
 \index{delete\_float\_arr\_values@{delete\_float\_arr\_values}!array.c@{array.c}}
 \doxysubsubsection{\texorpdfstring{delete\_float\_arr\_values()}{delete\_float\_arr\_values()}}
@@ -171,7 +227,7 @@ This function will find all float values occurances in an array and delete them.
 \DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}{delete\_float\_arr\_values}}(\&arr\_test, 6.3);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}{delete\_float\_arr\_values}}(\&arr\_test, 6.3f);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
 
 \end{DoxyCode}
@@ -556,4 +612,28 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{ \textcolor{comment}{// >> [3, 4, 5, 0, 1, 2]}}
 
 \end{DoxyCode}
- 
+ \mbox{\Hypertarget{array_8c_a25922177c0e3fa31a7d8b46a22d7d3c4}\label{array_8c_a25922177c0e3fa31a7d8b46a22d7d3c4}} 
+\index{array.c@{array.c}!replace\_int\_array\_index@{replace\_int\_array\_index}}
+\index{replace\_int\_array\_index@{replace\_int\_array\_index}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_int\_array\_index()}{replace\_int\_array\_index()}}
+{\footnotesize\ttfamily void replace\+\_\+int\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace an integer value at a user defined indice with another integer 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & An integer value that will replace the existing integer value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{array_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a25922177c0e3fa31a7d8b46a22d7d3c4}{replace\_int\_array\_index}}(\&arr\_test, 2, 5);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}

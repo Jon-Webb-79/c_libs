@@ -537,7 +537,24 @@ void delete_double_arr_values(Array *array, double double_value);
 void delete_char_arr_values(Array *array, char char_value);
 // --------------------------------------------------------------------------------
 
-void replace_int_array_indice(Array *array, int index, int replacement_value);
+/**
+ * This function will replace an integer value at a user defined indice
+ * with another integer
+ * @param array An array container
+ * @param replacement_value An integer value that will replace the existing
+ *                          integer value at the index location
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 2, 3, 4, 5, 6};
+ * append_array(&arr_test, a, 6);
+ * replace_int_array_index(&arr_test, 2, 5);
+ * // >> [1, 5, 3, 4, 5, 6]
+ * @endcode
+ */
+void replace_int_array_index(Array *array, int index, int replacement_value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

@@ -127,6 +127,12 @@ Functions</h2></td></tr>
 <tr class="separator:a96a8a12581a7fa1d94e35f52a69593f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1147cba6d0c02dbaa18b2ce0300a8a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a1147cba6d0c02dbaa18b2ce0300a8a52">delete_float_arr_values</a> (<a class="el" href="structArray.html">Array</a> *array, float float_value)</td></tr>
 <tr class="separator:a1147cba6d0c02dbaa18b2ce0300a8a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02415b878c4d603b068b1146f786929b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a02415b878c4d603b068b1146f786929b">delete_double_arr_values</a> (<a class="el" href="structArray.html">Array</a> *array, double double_value)</td></tr>
+<tr class="separator:a02415b878c4d603b068b1146f786929b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87775b025cf99dcd66f2bba77aa3b41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#ac87775b025cf99dcd66f2bba77aa3b41">delete_char_arr_values</a> (<a class="el" href="structArray.html">Array</a> *array, char char_value)</td></tr>
+<tr class="separator:ac87775b025cf99dcd66f2bba77aa3b41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25922177c0e3fa31a7d8b46a22d7d3c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a25922177c0e3fa31a7d8b46a22d7d3c4">replace_int_array_index</a> (<a class="el" href="structArray.html">Array</a> *array, int index, int replacement_value)</td></tr>
+<tr class="separator:a25922177c0e3fa31a7d8b46a22d7d3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a1abd8bcc329e46eb9463a815548d6686" name="a1abd8bcc329e46eb9463a815548d6686"></a>
@@ -327,6 +333,95 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
+<a id="ac87775b025cf99dcd66f2bba77aa3b41" name="ac87775b025cf99dcd66f2bba77aa3b41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87775b025cf99dcd66f2bba77aa3b41">&#9670;&nbsp;</a></span>delete_char_arr_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delete_char_arr_values </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>char_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will find all char values occurances in an array and delete them. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">char_value</td><td>A char value that the user wishes to delete from an array <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#ac87775b025cf99dcd66f2bba77aa3b41">delete_char_arr_values</a>(&amp;arr_test, <span class="charliteral">&#39;l&#39;</span>);</div>
+<div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;o&#39;]</span></div>
+<div class="ttc" id="aarray_8c_html_ac87775b025cf99dcd66f2bba77aa3b41"><div class="ttname"><a href="array_8c.html#ac87775b025cf99dcd66f2bba77aa3b41">delete_char_arr_values</a></div><div class="ttdeci">void delete_char_arr_values(Array *array, char char_value)</div><div class="ttdef"><b>Definition:</b> array.c:315</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a02415b878c4d603b068b1146f786929b" name="a02415b878c4d603b068b1146f786929b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02415b878c4d603b068b1146f786929b">&#9670;&nbsp;</a></span>delete_double_arr_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delete_double_arr_values </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>double_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will find all double values occurances in an array and delete them. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">double_value</td><td>A double value that the user wishes to delete from an array <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a02415b878c4d603b068b1146f786929b">delete_double_arr_values</a>(&amp;arr_test, 6.3);</div>
+<div class="line"><span class="comment">// &gt;&gt; [1.0, 3.2, 4.1, 5.7]</span></div>
+<div class="ttc" id="aarray_8c_html_a02415b878c4d603b068b1146f786929b"><div class="ttname"><a href="array_8c.html#a02415b878c4d603b068b1146f786929b">delete_double_arr_values</a></div><div class="ttdeci">void delete_double_arr_values(Array *array, double double_value)</div><div class="ttdef"><b>Definition:</b> array.c:301</div></div>
+<div class="ttc" id="aarray_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> array.h:33</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1147cba6d0c02dbaa18b2ce0300a8a52" name="a1147cba6d0c02dbaa18b2ce0300a8a52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1147cba6d0c02dbaa18b2ce0300a8a52">&#9670;&nbsp;</a></span>delete_float_arr_values()</h2>
 
@@ -361,7 +456,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};</div>
 <div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 7);</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a1147cba6d0c02dbaa18b2ce0300a8a52">delete_float_arr_values</a>(&amp;arr_test, 6.3);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a1147cba6d0c02dbaa18b2ce0300a8a52">delete_float_arr_values</a>(&amp;arr_test, 6.3f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.0, 3.2, 4.1, 5.7]</span></div>
 <div class="ttc" id="aarray_8c_html_a1147cba6d0c02dbaa18b2ce0300a8a52"><div class="ttname"><a href="array_8c.html#a1147cba6d0c02dbaa18b2ce0300a8a52">delete_float_arr_values</a></div><div class="ttdeci">void delete_float_arr_values(Array *array, float float_value)</div><div class="ttdef"><b>Definition:</b> array.c:287</div></div>
 <div class="ttc" id="aarray_8h_html_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> array.h:32</div></div>
@@ -460,7 +555,6 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, ((<span class="keywordtype">double</span> *)arr_test.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[0]);</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
-<div class="ttc" id="aarray_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> array.h:33</div></div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code hl_function" href="array_8c.html#ab41047d5b550a414bbb5eb3deb5c1782">double_array_val</a>(&amp;arr_test, 0));</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
 <div class="ttc" id="aarray_8c_html_ab41047d5b550a414bbb5eb3deb5c1782"><div class="ttname"><a href="array_8c.html#ab41047d5b550a414bbb5eb3deb5c1782">double_array_val</a></div><div class="ttdeci">double double_array_val(Array *array, int indice)</div><div class="ttdef"><b>Definition:</b> array.c:127</div></div>
@@ -946,6 +1040,56 @@ Functions</h2></td></tr>
 <div class="line"> <a class="code hl_function" href="array_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a>(&amp;arr_test, b, 3);</div>
 <div class="line"> <span class="comment">// &gt;&gt; [3, 4, 5, 0, 1, 2]</span></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a25922177c0e3fa31a7d8b46a22d7d3c4" name="a25922177c0e3fa31a7d8b46a22d7d3c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25922177c0e3fa31a7d8b46a22d7d3c4">&#9670;&nbsp;</a></span>replace_int_array_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void replace_int_array_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>replacement_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace an integer value at a user defined indice with another integer </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>An integer value that will replace the existing integer value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="array_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a25922177c0e3fa31a7d8b46a22d7d3c4">replace_int_array_index</a>(&amp;arr_test, 2, 5);</div>
+<div class="line"><span class="comment">// &gt;&gt; [1, 5, 3, 4, 5, 6]</span></div>
+<div class="ttc" id="aarray_8c_html_a25922177c0e3fa31a7d8b46a22d7d3c4"><div class="ttname"><a href="array_8c.html#a25922177c0e3fa31a7d8b46a22d7d3c4">replace_int_array_index</a></div><div class="ttdeci">void replace_int_array_index(Array *array, int index, int replacement_value)</div><div class="ttdef"><b>Definition:</b> array.c:329</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->

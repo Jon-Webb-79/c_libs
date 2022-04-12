@@ -534,8 +534,13 @@ TEST(test_replace_index, replace_int) {
 	Array arr_test = init_array(dtype, indices, name);
     int a[6] = {1, 2, 3, 4, 5, 6};
 	append_array(&arr_test, a, 6);
-	replace_int_array_indice(&arr_test, 1, 5);
-	printf("%d\n", int_array_val(&arr_test, 2));
+	replace_int_array_index(&arr_test, 1, 5);
+	EXPECT_EQ(int_array_val(&arr_test, 0), 1);
+	EXPECT_EQ(int_array_val(&arr_test, 1), 5);
+	EXPECT_EQ(int_array_val(&arr_test, 2), 3);
+	EXPECT_EQ(int_array_val(&arr_test, 3), 4);
+	EXPECT_EQ(int_array_val(&arr_test, 4), 5);
+	EXPECT_EQ(int_array_val(&arr_test, 5), 6);
 	free_array(&arr_test);
 }
 // ================================================================================
