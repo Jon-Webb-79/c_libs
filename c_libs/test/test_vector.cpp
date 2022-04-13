@@ -608,4 +608,24 @@ TEST(test_replace_index, replace_char) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the replace_int_array_element function to ensure it
+ * properly replace int values in an array */
+TEST(test_replace_element, replace_int_element) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Array arr_test = init_array(dtype, indices, name);
+    int a[6] = {1, 2, 3, 2, 5, 2};
+	append_array(&arr_test, a, 6);
+	replace_int_array_element(&arr_test, 2, 3);
+	EXPECT_EQ(int_array_val(&arr_test, 0), 1);
+	EXPECT_EQ(int_array_val(&arr_test, 1), 3);
+	EXPECT_EQ(int_array_val(&arr_test, 2), 3);
+	EXPECT_EQ(int_array_val(&arr_test, 3), 3);
+	EXPECT_EQ(int_array_val(&arr_test, 4), 5);
+	EXPECT_EQ(int_array_val(&arr_test, 5), 3);
+}
+// ================================================================================
+// ================================================================================
 // eof

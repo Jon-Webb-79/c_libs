@@ -1,0 +1,747 @@
+\hypertarget{vector_8c}{}\doxysection{/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/vector.c File Reference}
+\label{vector_8c}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vector.c@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vector.c}}
+{\ttfamily \#include \char`\"{}vector.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vector_8c_a5d694a209687f470f9661070458bdafd}{array\+\_\+mem\+\_\+alloc}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, size\+\_\+t num\+\_\+indices)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\+\_\+array}} (\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} dat, size\+\_\+t num\+\_\+indices, char $\ast$name)
+\item 
+int \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
+\item 
+void \mbox{\hyperlink{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array)
+\item 
+int \mbox{\hyperlink{vector_8c_a803955615e694eed4e7306642d96b288}{int\+\_\+array\+\_\+val}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
+\item 
+float \mbox{\hyperlink{vector_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}{float\+\_\+array\+\_\+val}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
+\item 
+double \mbox{\hyperlink{vector_8c_ab41047d5b550a414bbb5eb3deb5c1782}{double\+\_\+array\+\_\+val}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
+\item 
+char \mbox{\hyperlink{vector_8c_ae5ff24acf67bc37db2c7d9885f85b428}{char\+\_\+array\+\_\+val}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
+\item 
+int \mbox{\hyperlink{vector_8c_a4fab7d1a479ee3874746cf818b2a264a}{preappend\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, void $\ast$elements, size\+\_\+t count)
+\item 
+int \mbox{\hyperlink{vector_8c_a5bb5a148d782ddaf08902466571294ab}{pop\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int indice)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{vector_8c_a48e2fab529c03ee0752fb78eadc39b4f}{find\+\_\+int\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int integer)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{vector_8c_ac5abaf0c0ebc08edae2e31df64a70db6}{find\+\_\+float\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float float\+\_\+val)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{vector_8c_acf2747022fa2d4f4a26e527b74ad0395}{find\+\_\+double\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double double\+\_\+val)
+\item 
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{vector_8c_a26efb661560563a784bde403728dedcc}{find\+\_\+char\+\_\+array\+\_\+indices}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char char\+\_\+val)
+\item 
+void \mbox{\hyperlink{vector_8c_a96a8a12581a7fa1d94e35f52a69593f5}{delete\+\_\+int\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int int\+\_\+value)
+\item 
+void \mbox{\hyperlink{vector_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}{delete\+\_\+float\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float float\+\_\+value)
+\item 
+void \mbox{\hyperlink{vector_8c_a02415b878c4d603b068b1146f786929b}{delete\+\_\+double\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double double\+\_\+value)
+\item 
+void \mbox{\hyperlink{vector_8c_ac87775b025cf99dcd66f2bba77aa3b41}{delete\+\_\+char\+\_\+arr\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char char\+\_\+value)
+\item 
+int \mbox{\hyperlink{vector_8c_a7f6d8e0de24d016e4bdfd966360619bc}{replace\+\_\+int\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, int replacement\+\_\+value)
+\item 
+int \mbox{\hyperlink{vector_8c_a4b90db798f078ddd74e89920a7712c23}{replace\+\_\+float\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, float replacement\+\_\+value)
+\item 
+int \mbox{\hyperlink{vector_8c_a5454e5bf34661b2f6591f5840b670199}{replace\+\_\+double\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, double replacement\+\_\+value)
+\item 
+int \mbox{\hyperlink{vector_8c_addfc4dd3c59eee136810328c02b38091}{replace\+\_\+char\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int index, char replacement\+\_\+value)
+\item 
+void \mbox{\hyperlink{vector_8c_ab23e56a6f43a6b193fa1b165ec211b45}{replace\+\_\+int\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int old\+\_\+val, int new\+\_\+val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vector_8c_a2f286165693b57a7e284044174f00282}\label{vector_8c_a2f286165693b57a7e284044174f00282}} 
+\index{vector.c@{vector.c}!append\_array@{append\_array}}
+\index{append\_array@{append\_array}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{append\_array()}{append\_array()}}
+{\footnotesize\ttfamily int append\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+This function allows a user to append an existing or blank array container with scalars or arrays of any data type except strings. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A pointer to the memory location where an array exists \\
+\hline
+{\em elements} & A scalar or an array of variables. The variables can be of any data type, so as long as they are of the same data type as the array being appended. \\
+\hline
+{\em count} & The size of the elements data type in number of indices they will occupy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer A 0 or 1 indicating success of the function.
+\end{DoxyReturn}
+The following demonstrates several ways that the append\+\_\+array function can be uses. In these instances, the function will be used for an array of integers 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build array from scalar values}}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < 3; i++) \{}
+\DoxyCodeLine{    \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, \&i, 1);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Print the array values}}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i ++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *) arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// populated array}}
+\DoxyCodeLine{\textcolor{comment}{// >> [0, 1, 2]}}
+
+\end{DoxyCode}
+ The following code will also have the same effect 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
+\DoxyCodeLine{ \textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{ \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{ \textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{ \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
+\DoxyCodeLine{ \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 3);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{// Print the array values}}
+\DoxyCodeLine{ \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i ++) \{}
+\DoxyCodeLine{     printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *) arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
+\DoxyCodeLine{ \}}
+\DoxyCodeLine{ \textcolor{comment}{// populated array}}
+\DoxyCodeLine{ \textcolor{comment}{// >> [0, 1, 2]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a5d694a209687f470f9661070458bdafd}\label{vector_8c_a5d694a209687f470f9661070458bdafd}} 
+\index{vector.c@{vector.c}!array\_mem\_alloc@{array\_mem\_alloc}}
+\index{array\_mem\_alloc@{array\_mem\_alloc}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{array\_mem\_alloc()}{array\_mem\_alloc()}}
+{\footnotesize\ttfamily void array\+\_\+mem\+\_\+alloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+This function instantiates an \mbox{\hyperlink{structArray}{Array}} container and all relevant variables. This function should not be used directly. Instead the user should invoke the init\+\_\+array function, which wraps this function. 
+\begin{DoxyParams}{Parameters}
+{\em array} & an \mbox{\hyperlink{structArray}{Array}} structure \\
+\hline
+{\em num\+\_\+indices} & A guess for the number of indices that will be consumed by the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_ae5ff24acf67bc37db2c7d9885f85b428}\label{vector_8c_ae5ff24acf67bc37db2c7d9885f85b428}} 
+\index{vector.c@{vector.c}!char\_array\_val@{char\_array\_val}}
+\index{char\_array\_val@{char\_array\_val}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{char\_array\_val()}{char\_array\_val()}}
+{\footnotesize\ttfamily char char\+\_\+array\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+This function will return the value of an array assigned to a user specified indice, so as long as the data point is a char. 
+\begin{DoxyParams}{Parameters}
+{\em array} & The array container \\
+\hline
+{\em indice} & The indice the user wishes returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value The integer value associated with an indice
+\end{DoxyReturn}
+When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[7] = \textcolor{stringliteral}{"{}Hello!"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{char} *)arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[0]);}
+
+\end{DoxyCode}
+ This process can be simplified with this function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, \mbox{\hyperlink{vector_8c_ae5ff24acf67bc37db2c7d9885f85b428}{char\_array\_val}}(\&arr\_test, 0));}
+\DoxyCodeLine{\textcolor{comment}{// >> H}}
+
+\end{DoxyCode}
+ However a character array can also be access the traditionale way with the following command. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, \mbox{\hyperlink{structArray}{Array}}.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}});}
+\DoxyCodeLine{\textcolor{comment}{// >> H}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_ac87775b025cf99dcd66f2bba77aa3b41}\label{vector_8c_ac87775b025cf99dcd66f2bba77aa3b41}} 
+\index{vector.c@{vector.c}!delete\_char\_arr\_values@{delete\_char\_arr\_values}}
+\index{delete\_char\_arr\_values@{delete\_char\_arr\_values}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{delete\_char\_arr\_values()}{delete\_char\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+char\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{char}]{char\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all char values occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em char\+\_\+value} & A char value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac87775b025cf99dcd66f2bba77aa3b41}{delete\_char\_arr\_values}}(\&arr\_test, \textcolor{charliteral}{'l'});}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', 'o']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a02415b878c4d603b068b1146f786929b}\label{vector_8c_a02415b878c4d603b068b1146f786929b}} 
+\index{vector.c@{vector.c}!delete\_double\_arr\_values@{delete\_double\_arr\_values}}
+\index{delete\_double\_arr\_values@{delete\_double\_arr\_values}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{delete\_double\_arr\_values()}{delete\_double\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+double\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{double}]{double\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all double values occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em double\+\_\+value} & A double value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a02415b878c4d603b068b1146f786929b}{delete\_double\_arr\_values}}(\&arr\_test, 6.3);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}\label{vector_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}} 
+\index{vector.c@{vector.c}!delete\_float\_arr\_values@{delete\_float\_arr\_values}}
+\index{delete\_float\_arr\_values@{delete\_float\_arr\_values}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{delete\_float\_arr\_values()}{delete\_float\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+float\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{float}]{float\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all float values occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em float\+\_\+value} & A float value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a1147cba6d0c02dbaa18b2ce0300a8a52}{delete\_float\_arr\_values}}(\&arr\_test, 6.3f);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a96a8a12581a7fa1d94e35f52a69593f5}\label{vector_8c_a96a8a12581a7fa1d94e35f52a69593f5}} 
+\index{vector.c@{vector.c}!delete\_int\_arr\_values@{delete\_int\_arr\_values}}
+\index{delete\_int\_arr\_values@{delete\_int\_arr\_values}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{delete\_int\_arr\_values()}{delete\_int\_arr\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+int\+\_\+arr\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{int\+\_\+value }\end{DoxyParamCaption})}
+
+This function will find all integer values occurances in an array and delete them. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em int\+\_\+value} & An integer value that the user wishes to delete from an array 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a96a8a12581a7fa1d94e35f52a69593f5}{delete\_int\_arr\_values}}(\&arr\_test, 6);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 4, 5]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_ab41047d5b550a414bbb5eb3deb5c1782}\label{vector_8c_ab41047d5b550a414bbb5eb3deb5c1782}} 
+\index{vector.c@{vector.c}!double\_array\_val@{double\_array\_val}}
+\index{double\_array\_val@{double\_array\_val}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{double\_array\_val()}{double\_array\_val()}}
+{\footnotesize\ttfamily double double\+\_\+array\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+This function will return the value of an array assigned to a user specified indice, so as long as the data point is a double. 
+\begin{DoxyParams}{Parameters}
+{\em array} & The array container \\
+\hline
+{\em indice} & The indice the user wishes returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value The integer value associated with an indice
+\end{DoxyReturn}
+When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[3] = \{1.1, 2.1, 3.1\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 3);}
+\DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, ((\textcolor{keywordtype}{double} *)arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[0]);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
+
+\end{DoxyCode}
+ This process can be simplified with this function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, \mbox{\hyperlink{vector_8c_ab41047d5b550a414bbb5eb3deb5c1782}{double\_array\_val}}(\&arr\_test, 0));}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a26efb661560563a784bde403728dedcc}\label{vector_8c_a26efb661560563a784bde403728dedcc}} 
+\index{vector.c@{vector.c}!find\_char\_array\_indices@{find\_char\_array\_indices}}
+\index{find\_char\_array\_indices@{find\_char\_array\_indices}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{find\_char\_array\_indices()}{find\_char\_array\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} find\+\_\+char\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{char}]{char\+\_\+val }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified char value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em double\+\_\+val} & the double value the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified float value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}}}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[7] = \{a, b, b, q, b, a, c\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{vector_8c_a26efb661560563a784bde403728dedcc}{find\_char\_array\_indices}}(\&arr\_test, \textcolor{charliteral}{'b'});}
+\DoxyCodeLine{\textcolor{comment}{// p allocation}}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 4]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_acf2747022fa2d4f4a26e527b74ad0395}\label{vector_8c_acf2747022fa2d4f4a26e527b74ad0395}} 
+\index{vector.c@{vector.c}!find\_double\_array\_indices@{find\_double\_array\_indices}}
+\index{find\_double\_array\_indices@{find\_double\_array\_indices}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{find\_double\_array\_indices()}{find\_double\_array\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} find\+\_\+double\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{double}]{double\+\_\+val }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified double value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em double\+\_\+val} & the double value the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified float value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{  \textcolor{keywordtype}{double} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{vector_8c_acf2747022fa2d4f4a26e527b74ad0395}{find\_double\_array\_indices}}(\&arr\_test, 6.2);}
+\DoxyCodeLine{  \textcolor{comment}{// p allocation}}
+\DoxyCodeLine{  \textcolor{comment}{// >> [0, 3, 4]}}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
+
+\end{DoxyCode}
+ The above code should produce an array with indices 0, 3, and 4. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_ac5abaf0c0ebc08edae2e31df64a70db6}\label{vector_8c_ac5abaf0c0ebc08edae2e31df64a70db6}} 
+\index{vector.c@{vector.c}!find\_float\_array\_indices@{find\_float\_array\_indices}}
+\index{find\_float\_array\_indices@{find\_float\_array\_indices}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{find\_float\_array\_indices()}{find\_float\_array\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} find\+\_\+float\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{float}]{float\+\_\+val }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified float value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em float\+\_\+val} & the float value the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified float value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{vector_8c_ac5abaf0c0ebc08edae2e31df64a70db6}{find\_float\_array\_indices}}(\&arr\_test, 6.2f);}
+\DoxyCodeLine{  \textcolor{comment}{// p allocation}}
+\DoxyCodeLine{  \textcolor{comment}{// >> [0, 3, 4]}}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
+
+\end{DoxyCode}
+ The above code should produce an array with indices 0, 3, and 4. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_a48e2fab529c03ee0752fb78eadc39b4f}\label{vector_8c_a48e2fab529c03ee0752fb78eadc39b4f}} 
+\index{vector.c@{vector.c}!find\_int\_array\_indices@{find\_int\_array\_indices}}
+\index{find\_int\_array\_indices@{find\_int\_array\_indices}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{find\_int\_array\_indices()}{find\_int\_array\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} find\+\_\+int\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{integer }\end{DoxyParamCaption})}
+
+This function will find the indices that contain a user specified integer. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em integer} & the integer the user wishes to find an indice for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array An array containing all indices associatd with the user specified integer. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 7);}
+\DoxyCodeLine{  \mbox{\hyperlink{structArray}{Array}} p = \mbox{\hyperlink{vector_8c_a48e2fab529c03ee0752fb78eadc39b4f}{find\_int\_array\_indices}}(\&arr\_test, 6);}
+\DoxyCodeLine{  \textcolor{comment}{// P allocation}}
+\DoxyCodeLine{  \textcolor{comment}{// [0, 3, 4]}}
+\DoxyCodeLine{  \mbox{\hyperlink{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}{free\_array}}(p);}
+
+\end{DoxyCode}
+ The above code should produce an array with indices 0, 3, and 4. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}\label{vector_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}} 
+\index{vector.c@{vector.c}!float\_array\_val@{float\_array\_val}}
+\index{float\_array\_val@{float\_array\_val}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{float\_array\_val()}{float\_array\_val()}}
+{\footnotesize\ttfamily float float\+\_\+array\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+This function will return the value of an array assigned to a user specified indice, so as long as the data point is a float. 
+\begin{DoxyParams}{Parameters}
+{\em array} & The array container \\
+\hline
+{\em indice} & The indice the user wishes returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value The integer value associated with an indice
+\end{DoxyReturn}
+When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[3] = \{1.1, 2.1, 3.1\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 3);}
+\DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[0]);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
+
+\end{DoxyCode}
+ This process can be simplified with this function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, \mbox{\hyperlink{vector_8c_ad8ab38f5c3f47e13b5206cc5328bf88e}{float\_array\_val}}(\&arr\_test, 0));}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}\label{vector_8c_a1825c492d3c651b7bd4e6178f209f8e5}} 
+\index{vector.c@{vector.c}!free\_array@{free\_array}}
+\index{free\_array@{free\_array}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{free\_array()}{free\_array()}}
+{\footnotesize\ttfamily void free\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will free all memory allocation from an array and associated struct elements 
+\begin{DoxyParams}{Parameters}
+{\em array} & the array container \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a741da92429ba5d8accf86b6253cb309a}\label{vector_8c_a741da92429ba5d8accf86b6253cb309a}} 
+\index{vector.c@{vector.c}!init\_array@{init\_array}}
+\index{init\_array@{init\_array}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{init\_array()}{init\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} init\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}}}]{dat,  }\item[{size\+\_\+t}]{num\+\_\+indices,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+
+This function is the primary user interface to instantiate the \mbox{\hyperlink{structArray}{Array}} container. 
+\begin{DoxyParams}{Parameters}
+{\em dtype} & An integer representing the data type, can be FLOAT, DOUBLE, CHAR, or INT \\
+\hline
+{\em num\+\_\+indices} & A guess for the number of indices required by the array \\
+\hline
+{\em name} & The name of the array as a character string\\
+\hline
+\end{DoxyParams}
+The following is a code example for how to instantiate the container for an integer; 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} dtype[4] = \textcolor{stringliteral}{"{}int"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a803955615e694eed4e7306642d96b288}\label{vector_8c_a803955615e694eed4e7306642d96b288}} 
+\index{vector.c@{vector.c}!int\_array\_val@{int\_array\_val}}
+\index{int\_array\_val@{int\_array\_val}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{int\_array\_val()}{int\_array\_val()}}
+{\footnotesize\ttfamily int int\+\_\+array\+\_\+val (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+This function will return the value of an array assigned to a user specified indice, so as long as the data point is an integer. 
+\begin{DoxyParams}{Parameters}
+{\em array} & The array container \\
+\hline
+{\em indice} & The indice the user wishes returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value The integer value associated with an indice
+\end{DoxyReturn}
+When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 3);}
+\DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr\_test.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[0]);}
+\DoxyCodeLine{\textcolor{comment}{// >> 0}}
+
+\end{DoxyCode}
+ This process can be simplified with this function 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, \mbox{\hyperlink{vector_8c_a803955615e694eed4e7306642d96b288}{int\_array\_val}}(\&arr\_test, 0));}
+\DoxyCodeLine{ \textcolor{comment}{// >> 0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a5bb5a148d782ddaf08902466571294ab}\label{vector_8c_a5bb5a148d782ddaf08902466571294ab}} 
+\index{vector.c@{vector.c}!pop\_array@{pop\_array}}
+\index{pop\_array@{pop\_array}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
+{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{indice }\end{DoxyParamCaption})}
+
+This function will delete a user defined indices from the array. However, the function must be embedded within an \mbox{\hyperlink{structArray}{Array}} container and the container must be passed to the function
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em indice} & The indices within the array that the user wishes to delete from the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An error code of 0 if the user defines an indice greater than the array length 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5bb5a148d782ddaf08902466571294ab}{pop\_array}}(\&arr\_test, 2);}
+\DoxyCodeLine{\textcolor{comment}{// >> [10.1, 9.2, 7.4]}}
+
+\end{DoxyCode}
+ The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.\+2, and 7.\+4. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_a4fab7d1a479ee3874746cf818b2a264a}\label{vector_8c_a4fab7d1a479ee3874746cf818b2a264a}} 
+\index{vector.c@{vector.c}!preappend\_array@{preappend\_array}}
+\index{preappend\_array@{preappend\_array}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{preappend\_array()}{preappend\_array()}}
+{\footnotesize\ttfamily int preappend\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+This function allows a user to preappend an existing or blank array container with scalars or arrays of any data type except strings. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A pointer to the memory location where an array exists \\
+\hline
+{\em elements} & A scalar or an array of variables. The variables can be of any data type, so as long as they are of the same data type as the array being appended. \\
+\hline
+{\em count} & The size of the elements data type in number of indices they will occupy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer A 0 or 1 indicating success of the function.
+\end{DoxyReturn}
+The following demonstrates several ways that the append\+\_\+array function can be uses. In these instances, the function will be used for an array of integers 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Build the base array}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 3);}
+\DoxyCodeLine{\textcolor{comment}{// Original array}}
+\DoxyCodeLine{\textcolor{comment}{// >> [0, 1, 2]}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// preappend array from scalar values}}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 4; i < 7; i++) \{}
+\DoxyCodeLine{    \mbox{\hyperlink{vector_8c_a4fab7d1a479ee3874746cf818b2a264a}{preappend\_array}}(\&arr\_test, \&i, 1);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// Yields final array}}
+\DoxyCodeLine{\textcolor{comment}{// >> [4, 5, 6, 0, 1, 2]}}
+
+\end{DoxyCode}
+ The following code will also have the same effect 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
+\DoxyCodeLine{ \textcolor{keywordtype}{size\_t} indices = 20;}
+\DoxyCodeLine{ \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{ \textcolor{keywordtype}{char} name[5] = \textcolor{stringliteral}{"{}Array"{}};}
+\DoxyCodeLine{ \mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{comment}{// Build from an already existing array}}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
+\DoxyCodeLine{ \mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, 3);}
+\DoxyCodeLine{ \textcolor{comment}{// >> [0, 1, 22]}}
+\DoxyCodeLine{}
+\DoxyCodeLine{ \textcolor{keywordtype}{int} b[3] = \{3, 4, 5\};}
+\DoxyCodeLine{ \mbox{\hyperlink{vector_8c_a4fab7d1a479ee3874746cf818b2a264a}{preappend\_array}}(\&arr\_test, b, 3);}
+\DoxyCodeLine{ \textcolor{comment}{// >> [3, 4, 5, 0, 1, 2]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_addfc4dd3c59eee136810328c02b38091}\label{vector_8c_addfc4dd3c59eee136810328c02b38091}} 
+\index{vector.c@{vector.c}!replace\_char\_array\_index@{replace\_char\_array\_index}}
+\index{replace\_char\_array\_index@{replace\_char\_array\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_char\_array\_index()}{replace\_char\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+char\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{char}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace a char value at a user defined indice with another char value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & A double value that will replace the existing double value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \textcolor{stringliteral}{"{}Hello "{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{replace\_float\_char\_index(\&arr\_test, 1, \textcolor{charliteral}{'p'});}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'p', 'l', 'l', 'o', '']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a5454e5bf34661b2f6591f5840b670199}\label{vector_8c_a5454e5bf34661b2f6591f5840b670199}} 
+\index{vector.c@{vector.c}!replace\_double\_array\_index@{replace\_double\_array\_index}}
+\index{replace\_double\_array\_index@{replace\_double\_array\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_double\_array\_index()}{replace\_double\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+double\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{double}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace a double value at a user defined indice with another double value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & A double value that will replace the existing double value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a4b90db798f078ddd74e89920a7712c23}{replace\_float\_array\_index}}(\&arr\_test, 1, 5.5);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a4b90db798f078ddd74e89920a7712c23}\label{vector_8c_a4b90db798f078ddd74e89920a7712c23}} 
+\index{vector.c@{vector.c}!replace\_float\_array\_index@{replace\_float\_array\_index}}
+\index{replace\_float\_array\_index@{replace\_float\_array\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_float\_array\_index()}{replace\_float\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+float\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{float}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace a float value at a user defined indice with another float value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & A float value that will replace the existing float value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a4b90db798f078ddd74e89920a7712c23}{replace\_float\_array\_index}}(\&arr\_test, 1, 5.5f);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_ab23e56a6f43a6b193fa1b165ec211b45}\label{vector_8c_ab23e56a6f43a6b193fa1b165ec211b45}} 
+\index{vector.c@{vector.c}!replace\_int\_array\_element@{replace\_int\_array\_element}}
+\index{replace\_int\_array\_element@{replace\_int\_array\_element}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_int\_array\_element()}{replace\_int\_array\_element()}}
+{\footnotesize\ttfamily void replace\+\_\+int\+\_\+array\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{old\+\_\+val,  }\item[{int}]{new\+\_\+val }\end{DoxyParamCaption})}
+
+This function will replace integer values defined by a user with another integer 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & An integer value that will replace the existing integer value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 3, 3, 3, 5, 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab23e56a6f43a6b193fa1b165ec211b45}{replace\_int\_array\_element}}(\&arr\_test, 3, 2);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 2, 2, 5, 2]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a7f6d8e0de24d016e4bdfd966360619bc}\label{vector_8c_a7f6d8e0de24d016e4bdfd966360619bc}} 
+\index{vector.c@{vector.c}!replace\_int\_array\_index@{replace\_int\_array\_index}}
+\index{replace\_int\_array\_index@{replace\_int\_array\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_int\_array\_index()}{replace\_int\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+int\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{replacement\+\_\+value }\end{DoxyParamCaption})}
+
+This function will replace an integer value at a user defined indice with another integer 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em replacement\+\_\+value} & An integer value that will replace the existing integer value at the index location 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7f6d8e0de24d016e4bdfd966360619bc}{replace\_int\_array\_index}}(\&arr\_test, 1, 5);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}

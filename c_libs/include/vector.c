@@ -384,6 +384,20 @@ int replace_char_array_index(Array *array, int index, char replacement_value) {
 	* (char *) ((char *) array->array + index * array->elem) = replacement_value;
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+void replace_int_array_element(Array *array, int old_val, int new_val) {
+	Array indices;
+	// find the number of indices containing the value
+	Array indices_num = find_int_array_indices(array, old_val);
+	// Remove each appropriate indice
+    for (int i = indices_num.len; i > 0; i--) {
+        indices = find_int_array_indices(array, old_val);
+		replace_int_array_index(array, int_array_val(&indices, 0), new_val);
+		free_array(&indices);
+	}
+	free_array(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof

@@ -615,6 +615,26 @@ int replace_double_array_index(Array *array, int index, double replacement_value
  * @endcode
  */
 int replace_char_array_index(Array *array, int index, char replacement_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace integer values defined by a user
+ * with another integer
+ * @param array An array container
+ * @param replacement_value An integer value that will replace the existing
+ *                          integer value at the index location
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 3, 3, 3, 5, 3};
+ * append_array(&arr_test, a, 6);
+ * replace_int_array_element(&arr_test, 3, 2);
+ * // >> [1, 2, 2, 2, 5, 2]
+ * @endcode
+ */
+void replace_int_array_element(Array *array, int old_val, int new_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
