@@ -125,6 +125,8 @@ Functions</h2></td></tr>
 <tr class="separator:ae9083dd422ecded7f6f00bedaff2ead0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e4bb2da19aabb2e1be4cf3c020b6b28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a7e4bb2da19aabb2e1be4cf3c020b6b28">replace_double_array_element</a> (<a class="el" href="structArray.html">Array</a> *array, double old_val, double new_val)</td></tr>
 <tr class="separator:a7e4bb2da19aabb2e1be4cf3c020b6b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbf63ca6b82f0b940f769d4a1c08034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a5fbf63ca6b82f0b940f769d4a1c08034">replace_char_array_element</a> (<a class="el" href="structArray.html">Array</a> *array, char old_val, char new_val)</td></tr>
+<tr class="separator:a5fbf63ca6b82f0b940f769d4a1c08034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
@@ -1003,6 +1005,57 @@ Functions</h2></td></tr>
 <div class="line"> <a class="code hl_function" href="vector_8c.html#a4fab7d1a479ee3874746cf818b2a264a">preappend_array</a>(&amp;arr_test, b, 3);</div>
 <div class="line"> <span class="comment">// &gt;&gt; [3, 4, 5, 0, 1, 2]</span></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a5fbf63ca6b82f0b940f769d4a1c08034" name="a5fbf63ca6b82f0b940f769d4a1c08034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fbf63ca6b82f0b940f769d4a1c08034">&#9670;&nbsp;</a></span>replace_char_array_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void replace_char_array_element </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>old_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>new_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace char values defined by a user with another char value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">old_val</td><td>The char value to be replaced </td></tr>
+    <tr><td class="paramname">new_val</td><td>The char value to replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="vector_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a5fbf63ca6b82f0b940f769d4a1c08034">replace_char_array_element</a>(&amp;arr_test, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;q&#39;</span>);</div>
+<div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;q&#39;, &#39;q&#39;, &#39;o&#39;]</span></div>
+<div class="ttc" id="avector_8c_html_a5fbf63ca6b82f0b940f769d4a1c08034"><div class="ttname"><a href="vector_8c.html#a5fbf63ca6b82f0b940f769d4a1c08034">replace_char_array_element</a></div><div class="ttdeci">void replace_char_array_element(Array *array, char old_val, char new_val)</div><div class="ttdef"><b>Definition:</b> vector.c:431</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="addfc4dd3c59eee136810328c02b38091" name="addfc4dd3c59eee136810328c02b38091"></a>

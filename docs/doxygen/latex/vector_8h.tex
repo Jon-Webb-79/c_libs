@@ -69,6 +69,8 @@ void \mbox{\hyperlink{vector_8h_ab23e56a6f43a6b193fa1b165ec211b45}{replace\+\_\+
 void \mbox{\hyperlink{vector_8h_ae9083dd422ecded7f6f00bedaff2ead0}{replace\+\_\+float\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float old\+\_\+val, float new\+\_\+val)
 \item 
 void \mbox{\hyperlink{vector_8h_a7e4bb2da19aabb2e1be4cf3c020b6b28}{replace\+\_\+double\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double old\+\_\+val, double new\+\_\+val)
+\item 
+void \mbox{\hyperlink{vector_8h_a5fbf63ca6b82f0b940f769d4a1c08034}{replace\+\_\+char\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, char old\+\_\+val, char new\+\_\+val)
 \end{DoxyCompactItemize}
 
 
@@ -676,7 +678,34 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{ \textcolor{comment}{// >> [3, 4, 5, 0, 1, 2]}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_addfc4dd3c59eee136810328c02b38091}\label{vector_8h_addfc4dd3c59eee136810328c02b38091}} 
+ \mbox{\Hypertarget{vector_8h_a5fbf63ca6b82f0b940f769d4a1c08034}\label{vector_8h_a5fbf63ca6b82f0b940f769d4a1c08034}} 
+\index{vector.h@{vector.h}!replace\_char\_array\_element@{replace\_char\_array\_element}}
+\index{replace\_char\_array\_element@{replace\_char\_array\_element}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{replace\_char\_array\_element()}{replace\_char\_array\_element()}}
+{\footnotesize\ttfamily void replace\+\_\+char\+\_\+array\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{char}]{old\+\_\+val,  }\item[{char}]{new\+\_\+val }\end{DoxyParamCaption})}
+
+This function will replace char values defined by a user with another char value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em old\+\_\+val} & The char value to be replaced \\
+\hline
+{\em new\+\_\+val} & The char value to replace the old\+\_\+val 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5fbf63ca6b82f0b940f769d4a1c08034}{replace\_char\_array\_element}}(\&arr\_test, \textcolor{charliteral}{'l'}, \textcolor{charliteral}{'q'});}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', 'q', 'q', 'o']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_addfc4dd3c59eee136810328c02b38091}\label{vector_8h_addfc4dd3c59eee136810328c02b38091}} 
 \index{vector.h@{vector.h}!replace\_char\_array\_index@{replace\_char\_array\_index}}
 \index{replace\_char\_array\_index@{replace\_char\_array\_index}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{replace\_char\_array\_index()}{replace\_char\_array\_index()}}
