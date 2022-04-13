@@ -655,6 +655,26 @@ void replace_int_array_element(Array *array, int old_val, int new_val);
  * @endcode
  */
 void replace_float_array_element(Array *array, float old_val, float new_val);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace double values defined by a user
+ * with another double value
+ * @param array An array container
+ * @param old_val The double value to be replaced
+ * @param new_val The double value to replace the old_val
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.1, 3.3, 3.3, 3.3, 5.2, 3.3};
+ * append_array(&arr_test, a, 6);
+ * replace_double_array_element(&arr_test, 3.3, 2.1);
+ * // >> [1, 2.1, 2.1, 2.1, 5, 2.1]
+ * @endcode
+ */
+void replace_double_array_element(Array *array, double old_val, double new_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

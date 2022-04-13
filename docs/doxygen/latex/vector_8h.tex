@@ -67,6 +67,8 @@ int \mbox{\hyperlink{vector_8h_addfc4dd3c59eee136810328c02b38091}{replace\+\_\+c
 void \mbox{\hyperlink{vector_8h_ab23e56a6f43a6b193fa1b165ec211b45}{replace\+\_\+int\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, int old\+\_\+val, int new\+\_\+val)
 \item 
 void \mbox{\hyperlink{vector_8h_ae9083dd422ecded7f6f00bedaff2ead0}{replace\+\_\+float\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, float old\+\_\+val, float new\+\_\+val)
+\item 
+void \mbox{\hyperlink{vector_8h_a7e4bb2da19aabb2e1be4cf3c020b6b28}{replace\+\_\+double\+\_\+array\+\_\+element}} (\mbox{\hyperlink{structArray}{Array}} $\ast$array, double old\+\_\+val, double new\+\_\+val)
 \end{DoxyCompactItemize}
 
 
@@ -694,6 +696,33 @@ This function will replace a char value at a user defined indice with another ch
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_float\_char\_index(\&arr\_test, 1, \textcolor{charliteral}{'p'});}
 \DoxyCodeLine{\textcolor{comment}{// >> ['H', 'p', 'l', 'l', 'o', '']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a7e4bb2da19aabb2e1be4cf3c020b6b28}\label{vector_8h_a7e4bb2da19aabb2e1be4cf3c020b6b28}} 
+\index{vector.h@{vector.h}!replace\_double\_array\_element@{replace\_double\_array\_element}}
+\index{replace\_double\_array\_element@{replace\_double\_array\_element}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{replace\_double\_array\_element()}{replace\_double\_array\_element()}}
+{\footnotesize\ttfamily void replace\+\_\+double\+\_\+array\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{array,  }\item[{double}]{old\+\_\+val,  }\item[{double}]{new\+\_\+val }\end{DoxyParamCaption})}
+
+This function will replace double values defined by a user with another double value 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em old\+\_\+val} & The double value to be replaced \\
+\hline
+{\em new\+\_\+val} & The double value to replace the old\+\_\+val 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = \mbox{\hyperlink{vector_8c_a741da92429ba5d8accf86b6253cb309a}{init\_array}}(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 3.3, 3.3, 3.3, 5.2, 3.3\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2f286165693b57a7e284044174f00282}{append\_array}}(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7e4bb2da19aabb2e1be4cf3c020b6b28}{replace\_double\_array\_element}}(\&arr\_test, 3.3, 2.1);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 2.1, 2.1, 2.1, 5, 2.1]}}
 
 \end{DoxyCode}
  \\

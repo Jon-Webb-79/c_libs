@@ -628,8 +628,8 @@ TEST(test_replace_element, replace_int_element) {
 }
 // --------------------------------------------------------------------------------
 
-/* This function tests the replace_int_array_element function to ensure it
- * properly replace int values in an array */
+/* This function tests the replace_float_array_element function to ensure it
+ * properly replace a float values in an array */
 TEST(test_replace_element, replace_float_element) {
 	size_t indices = 10;
 	char name[6] = "array";
@@ -644,6 +644,25 @@ TEST(test_replace_element, replace_float_element) {
 	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 3), 3.4f);
 	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 4), 5.6f);
 	EXPECT_FLOAT_EQ(float_array_val(&arr_test, 5), 3.4f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_double_array_element function to ensure it
+ * properly replace a double values in an array */
+TEST(test_replace_element, replace_double_element) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Array arr_test = init_array(dtype, indices, name);
+    double a[6] = {1.1, 2.2, 3.4, 2.2, 5.6, 2.2};
+	append_array(&arr_test, a, 6);
+	replace_double_array_element(&arr_test, 2.2, 3.4);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 0), 1.1);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 1), 3.4);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 2), 3.4);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 3), 3.4);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 4), 5.6);
+	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 5), 3.4);
 }
 // ================================================================================
 // ================================================================================

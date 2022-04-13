@@ -412,6 +412,20 @@ void replace_float_array_element(Array *array, float old_val, float new_val) {
 	}
 	free_array(&indices_num);
 }
+// --------------------------------------------------------------------------------
+
+void replace_double_array_element(Array *array, double old_val, double new_val) {
+	Array indices;
+	// find the number of indices containing the value
+	Array indices_num = find_double_array_indices(array, old_val);
+	// Remove each appropriate indice
+    for (int i = indices_num.len; i > 0; i--) {
+        indices = find_double_array_indices(array, old_val);
+	    replace_double_array_index(array, int_array_val(&indices, 0), new_val);
+//		free_array(&indices);
+	}
+	free_array(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof
