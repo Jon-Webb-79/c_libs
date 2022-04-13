@@ -13,7 +13,7 @@
 // ================================================================================
 // Include modules here
 
-#include "array.h"
+#include "vector.h"
 
 // Begin code
 void array_mem_alloc(Array *array, size_t num_indices) {

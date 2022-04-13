@@ -13,12 +13,8 @@
 // Include modules here
 
 #include <stdio.h>
-#include "include/array.h"
+#include "include/vector.h"
 // Begin code
-// TODO Change array.h/array.c to vector.h/vector.c
-// TODO Update test.cpp to reflect vector.h
-// TODO Change test.cpp to test_vector.cpp
-// TODO Update vector.c/vector.h and test_vector.cpp in CMakeList files
 // TODO Add replace element functions for each data type
 // TODO Add unique function
 // TODO Add median function
