@@ -121,6 +121,8 @@ Functions</h2></td></tr>
 <tr class="separator:addfc4dd3c59eee136810328c02b38091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab23e56a6f43a6b193fa1b165ec211b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#ab23e56a6f43a6b193fa1b165ec211b45">replace_int_array_element</a> (<a class="el" href="structArray.html">Array</a> *array, int old_val, int new_val)</td></tr>
 <tr class="separator:ab23e56a6f43a6b193fa1b165ec211b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9083dd422ecded7f6f00bedaff2ead0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#ae9083dd422ecded7f6f00bedaff2ead0">replace_float_array_element</a> (<a class="el" href="structArray.html">Array</a> *array, float old_val, float new_val)</td></tr>
+<tr class="separator:ae9083dd422ecded7f6f00bedaff2ead0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2f286165693b57a7e284044174f00282" name="a2f286165693b57a7e284044174f00282"></a>
@@ -1100,6 +1102,57 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae9083dd422ecded7f6f00bedaff2ead0" name="ae9083dd422ecded7f6f00bedaff2ead0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9083dd422ecded7f6f00bedaff2ead0">&#9670;&nbsp;</a></span>replace_float_array_element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void replace_float_array_element </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>old_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>new_val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace float values defined by a user with another float value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">old_val</td><td>The float value to be replaced </td></tr>
+    <tr><td class="paramname">new_val</td><td>The float value to replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="vector_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 3.3, 3.3, 3.3, 5.2, 3.3};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a2f286165693b57a7e284044174f00282">append_array</a>(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#ae9083dd422ecded7f6f00bedaff2ead0">replace_float_array_element</a>(&amp;arr_test, 3.3f, 2.1f);</div>
+<div class="line"><span class="comment">// &gt;&gt; [1, 2.1, 2.1, 2.1, 5, 2.1]</span></div>
+<div class="ttc" id="avector_8c_html_ae9083dd422ecded7f6f00bedaff2ead0"><div class="ttname"><a href="vector_8c.html#ae9083dd422ecded7f6f00bedaff2ead0">replace_float_array_element</a></div><div class="ttdeci">void replace_float_array_element(Array *array, float old_val, float new_val)</div><div class="ttdef"><b>Definition:</b> vector.c:403</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4b90db798f078ddd74e89920a7712c23" name="a4b90db798f078ddd74e89920a7712c23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4b90db798f078ddd74e89920a7712c23">&#9670;&nbsp;</a></span>replace_float_array_index()</h2>
 
@@ -1183,7 +1236,8 @@ Functions</h2></td></tr>
 <p >This function will replace integer values defined by a user with another integer </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">replacement_value</td><td>An integer value that will replace the existing integer value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">old_val</td><td>The integer value to be replaced </td></tr>
+    <tr><td class="paramname">new_val</td><td>An integer value that will replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = <a class="code hl_function" href="vector_8c.html#a741da92429ba5d8accf86b6253cb309a">init_array</a>(dtype, indices, name);</div>

@@ -621,8 +621,8 @@ int replace_char_array_index(Array *array, int index, char replacement_value);
  * This function will replace integer values defined by a user
  * with another integer
  * @param array An array container
- * @param replacement_value An integer value that will replace the existing
- *                          integer value at the index location
+ * @param old_val The integer value to be replaced
+ * @param new_val An integer value that will replace the old_val
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -635,6 +635,26 @@ int replace_char_array_index(Array *array, int index, char replacement_value);
  * @endcode
  */
 void replace_int_array_element(Array *array, int old_val, int new_val);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace float values defined by a user
+ * with another float value
+ * @param array An array container
+ * @param old_val The float value to be replaced
+ * @param new_val The float value to replace the old_val
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.1, 3.3, 3.3, 3.3, 5.2, 3.3};
+ * append_array(&arr_test, a, 6);
+ * replace_float_array_element(&arr_test, 3.3f, 2.1f);
+ * // >> [1, 2.1, 2.1, 2.1, 5, 2.1]
+ * @endcode
+ */
+void replace_float_array_element(Array *array, float old_val, float new_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
