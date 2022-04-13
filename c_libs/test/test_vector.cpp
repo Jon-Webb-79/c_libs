@@ -664,6 +664,24 @@ TEST(test_replace_element, replace_double_element) {
 	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 4), 5.6);
 	EXPECT_DOUBLE_EQ(double_array_val(&arr_test, 5), 3.4);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_char_array_element function to ensure it
+ * properly replace a char values in an array */
+TEST(test_replace_element, replace_char_element) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Array arr_test = init_array(dtype, indices, name);
+    char a[6] = "Hello";
+	append_array(&arr_test, a, 6);
+	replace_char_array_element(&arr_test, 'l', 'q');
+	EXPECT_EQ(char_array_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_array_val(&arr_test, 1), 'e');
+	EXPECT_EQ(char_array_val(&arr_test, 2), 'q');
+	EXPECT_EQ(char_array_val(&arr_test, 3), 'q');
+	EXPECT_EQ(char_array_val(&arr_test, 4), 'o');
+}
 // ================================================================================
 // ================================================================================
 // eof

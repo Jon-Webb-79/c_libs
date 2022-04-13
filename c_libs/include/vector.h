@@ -675,6 +675,26 @@ void replace_float_array_element(Array *array, float old_val, float new_val);
  * @endcode
  */
 void replace_double_array_element(Array *array, double old_val, double new_val);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace char values defined by a user
+ * with another char value
+ * @param array An array container
+ * @param old_val The char value to be replaced
+ * @param new_val The char value to replace the old_val
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[6] = "Hello";
+ * append_array(&arr_test, a, 6);
+ * replace_char_array_element(&arr_test, 'l', 'q');
+ * // >> ['H', 'e', 'q', 'q', 'o']
+ * @endcode
+ */
+void replace_char_array_element(Array *array, char old_val, char new_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
