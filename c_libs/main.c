@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO Add replace element functions for each data type
 // TODO Add unique function
 // TODO Add median function
 // TODO Add average function

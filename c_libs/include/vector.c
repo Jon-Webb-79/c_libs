@@ -16,7 +16,7 @@
 #include "vector.h"
 
 // Begin code
-void array_mem_alloc(Array *array, size_t num_indices) {
+void array_mem_alloc(Vector *array, size_t num_indices) {
 	// Determine the total memory allocation and assign to pointer
 	void *pointer;
 	pointer = malloc(num_indices * array->elem);
@@ -36,7 +36,7 @@ void array_mem_alloc(Array *array, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
-Array init_array(dat_type dat, size_t num_indices, char *name) {
+Vector init_array(dat_type dat, size_t num_indices, char *name) {
 	// Determine memory blocks based on data type
 	int size;
 	switch(dat) {
@@ -59,7 +59,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name) {
 	}
 
 	// Allocate indice size and call array_mem_alloc
-	Array array;
+	Vector array;
 	array.dat = dat;
     array.elem = size;
     array_mem_alloc(&array, num_indices);
@@ -68,7 +68,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name) {
 }
 // --------------------------------------------------------------------------------
 
-int append_array(Array *array, void *elements, size_t count) {
+int append_array(Vector *array, void *elements, size_t count) {
 	// Allocae more memory if necessary
     if (array->len + count > array->size) {
         size_t size = (array->len + count) * 2;
@@ -89,7 +89,7 @@ int append_array(Array *array, void *elements, size_t count) {
 }
 // --------------------------------------------------------------------------------
 
-void free_array(Array *array) {
+void free_array(Vector *array) {
 	// Free all memory in the array
 	free(array->array);
 	// Reset all variables in the struct
@@ -100,7 +100,7 @@ void free_array(Array *array) {
 }
 // --------------------------------------------------------------------------------
 
-int int_array_val(Array *array, int indice) {
+int int_array_val(Vector *array, int indice) {
 	// Ensure array contains integers
 	if (array->dat != INT) {
 		printf("Function can only return integer values, exiting function!\n");
@@ -112,7 +112,7 @@ int int_array_val(Array *array, int indice) {
 }
 // --------------------------------------------------------------------------------
 
-float float_array_val(Array *array, int indice) {
+float float_array_val(Vector *array, int indice) {
 	// Ensure array contains floats
 	if (array->dat != FLOAT) {
 		printf("Function can only return float values, exiting function!\n");
@@ -124,7 +124,7 @@ float float_array_val(Array *array, int indice) {
 }
 // --------------------------------------------------------------------------------
 
-double double_array_val(Array *array, int indice) {
+double double_array_val(Vector *array, int indice) {
 	// Ensure array contains floats
 	if (array->dat != DOUBLE) {
 		printf("Function can only return double values, exiting function!\n");
@@ -136,7 +136,7 @@ double double_array_val(Array *array, int indice) {
 }
 // --------------------------------------------------------------------------------
 
-char char_array_val(Array *array, int indice) {
+char char_array_val(Vector *array, int indice) {
 	// Ensure array contains floats
 	if (array->dat != CHAR) {
 		printf("Function can only return char values, exiting function!\n");
@@ -148,7 +148,7 @@ char char_array_val(Array *array, int indice) {
 }
 // --------------------------------------------------------------------------------
 
-int preappend_array(Array *array, void *elements, size_t count) {
+int preappend_array(Vector *array, void *elements, size_t count) {
 	// Allocae more memory if necessary
     if (array->len + count > array->size) {
         size_t size = (array->len + count) * 2;
@@ -174,7 +174,7 @@ int preappend_array(Array *array, void *elements, size_t count) {
 }
 // --------------------------------------------------------------------------------
 
-int pop_array(Array *array, int indice) {
+int pop_array(Vector *array, int indice) {
 	if (indice >= array->len) {
 		printf("Indice %d out of bounds for pop_array", indice);
 		return 0;
@@ -186,7 +186,7 @@ int pop_array(Array *array, int indice) {
 }
 // --------------------------------------------------------------------------------
 
-Array find_int_array_indices(Array *array, int integer) {
+Vector find_int_array_indices(Vector *array, int integer) {
 	int number = 0;
 	int input;
 	for (int i = 0; i < array->len; i++) {
@@ -196,7 +196,7 @@ Array find_int_array_indices(Array *array, int integer) {
 	}
 	dat_type dtype = INT;
 	char name[9] = "indices";
-	Array indice_arr = init_array(dtype, number, name);
+	Vector indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		input = i;
 		if (integer == int_array_val(array, i)) {
@@ -207,7 +207,7 @@ Array find_int_array_indices(Array *array, int integer) {
 }
 // --------------------------------------------------------------------------------
 
-Array find_float_array_indices(Array *array, float float_val) {
+Vector find_float_array_indices(Vector *array, float float_val) {
 	int number = 0;
 	int input;
 	for (int i = 0; i < array->len; i++) {
@@ -217,7 +217,7 @@ Array find_float_array_indices(Array *array, float float_val) {
 	}
 	dat_type dtype = INT;
 	char name[9] = "indices";
-	Array indice_arr = init_array(dtype, number, name);
+	Vector indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		if (float_val == float_array_val(array, i)) {
 			input = i;
@@ -228,7 +228,7 @@ Array find_float_array_indices(Array *array, float float_val) {
 }
 // --------------------------------------------------------------------------------
 
-Array find_double_array_indices(Array *array, double double_val) {
+Vector find_double_array_indices(Vector *array, double double_val) {
 	int number = 0;
 	int input;
 	for (int i = 0; i < array->len; i++) {
@@ -238,7 +238,7 @@ Array find_double_array_indices(Array *array, double double_val) {
 	}
 	dat_type dtype = INT;
 	char name[9] = "indices";
-	Array indice_arr = init_array(dtype, number, name);
+	Vector indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		if (double_val == double_array_val(array, i)) {
 			input = i;
@@ -249,7 +249,7 @@ Array find_double_array_indices(Array *array, double double_val) {
 }
 // --------------------------------------------------------------------------------
 
-Array find_char_array_indices(Array *array, char char_val) {
+Vector find_char_array_indices(Vector *array, char char_val) {
 	int number = 0;
 	int input;
 	for (int i = 0; i < array->len; i++) {
@@ -259,7 +259,7 @@ Array find_char_array_indices(Array *array, char char_val) {
 	}
 	dat_type dtype = INT;
 	char name[9] = "indices";
-	Array indice_arr = init_array(dtype, number, name);
+	Vector indice_arr = init_array(dtype, number, name);
 	for (int i = 0; i < array->len; i++) {
 		if (char_val == char_array_val(array, i)) {
 			input = i;
@@ -270,10 +270,10 @@ Array find_char_array_indices(Array *array, char char_val) {
 }
 // --------------------------------------------------------------------------------
 
-void delete_int_arr_values(Array *array, int int_value) {
-	Array indices;
+void delete_int_arr_values(Vector *array, int int_value) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_int_array_indices(array, int_value);
+	Vector indices_num = find_int_array_indices(array, int_value);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_int_array_indices(array, int_value);
@@ -284,10 +284,10 @@ void delete_int_arr_values(Array *array, int int_value) {
 }
 // --------------------------------------------------------------------------------
 
-void delete_float_arr_values(Array *array, float float_value) {
-	Array indices;
+void delete_float_arr_values(Vector *array, float float_value) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_float_array_indices(array, float_value);
+	Vector indices_num = find_float_array_indices(array, float_value);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_float_array_indices(array, float_value);
@@ -298,10 +298,10 @@ void delete_float_arr_values(Array *array, float float_value) {
 }
 // --------------------------------------------------------------------------------
 
-void delete_double_arr_values(Array *array, double double_value) {
-	Array indices;
+void delete_double_arr_values(Vector *array, double double_value) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_double_array_indices(array, double_value);
+	Vector indices_num = find_double_array_indices(array, double_value);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_double_array_indices(array, double_value);
@@ -312,10 +312,10 @@ void delete_double_arr_values(Array *array, double double_value) {
 }
 // --------------------------------------------------------------------------------
 
-void delete_char_arr_values(Array *array, char char_value) {
-	Array indices;
+void delete_char_arr_values(Vector *array, char char_value) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_char_array_indices(array, char_value);
+	Vector indices_num = find_char_array_indices(array, char_value);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_char_array_indices(array, char_value);
@@ -326,7 +326,7 @@ void delete_char_arr_values(Array *array, char char_value) {
 }
 // --------------------------------------------------------------------------------
 
-int replace_int_array_index(Array *array, int index, int replacement_value) {
+int replace_int_array_index(Vector *array, int index, int replacement_value) {
 	if (array->dat != INT) {
 		printf("Array data type must be an INT");
 		return 0;
@@ -341,7 +341,7 @@ int replace_int_array_index(Array *array, int index, int replacement_value) {
 }
 // --------------------------------------------------------------------------------
 
-int replace_float_array_index(Array *array, int index, float replacement_value) {
+int replace_float_array_index(Vector *array, int index, float replacement_value) {
 	if (array->dat != FLOAT) {
 		printf("Array data type must be an FLOAT");
 		return 0;
@@ -356,7 +356,7 @@ int replace_float_array_index(Array *array, int index, float replacement_value) 
 }
 // --------------------------------------------------------------------------------
 
-int replace_double_array_index(Array *array, int index, double replacement_value) {
+int replace_double_array_index(Vector *array, int index, double replacement_value) {
 	if (array->dat != DOUBLE) {
 		printf("Array data type must be an DOUBLE");
 		return 0;
@@ -371,7 +371,7 @@ int replace_double_array_index(Array *array, int index, double replacement_value
 }
 // --------------------------------------------------------------------------------
 
-int replace_char_array_index(Array *array, int index, char replacement_value) {
+int replace_char_array_index(Vector *array, int index, char replacement_value) {
 	if (array->dat != CHAR) {
 		printf("Array data type must be an CHAR");
 		return 0;
@@ -386,10 +386,10 @@ int replace_char_array_index(Array *array, int index, char replacement_value) {
 }
 // --------------------------------------------------------------------------------
 
-void replace_int_array_element(Array *array, int old_val, int new_val) {
-	Array indices;
+void replace_int_array_element(Vector *array, int old_val, int new_val) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_int_array_indices(array, old_val);
+	Vector indices_num = find_int_array_indices(array, old_val);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_int_array_indices(array, old_val);
@@ -400,10 +400,10 @@ void replace_int_array_element(Array *array, int old_val, int new_val) {
 }
 // --------------------------------------------------------------------------------
 
-void replace_float_array_element(Array *array, float old_val, float new_val) {
-	Array indices;
+void replace_float_array_element(Vector *array, float old_val, float new_val) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_float_array_indices(array, old_val);
+	Vector indices_num = find_float_array_indices(array, old_val);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_float_array_indices(array, old_val);
@@ -414,10 +414,10 @@ void replace_float_array_element(Array *array, float old_val, float new_val) {
 }
 // --------------------------------------------------------------------------------
 
-void replace_double_array_element(Array *array, double old_val, double new_val) {
-	Array indices;
+void replace_double_array_element(Vector *array, double old_val, double new_val) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_double_array_indices(array, old_val);
+	Vector indices_num = find_double_array_indices(array, old_val);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_double_array_indices(array, old_val);
@@ -428,10 +428,10 @@ void replace_double_array_element(Array *array, double old_val, double new_val) 
 }
 // --------------------------------------------------------------------------------
 
-void replace_char_array_element(Array *array, char old_val, char new_val) {
-	Array indices;
+void replace_char_array_element(Vector *array, char old_val, char new_val) {
+	Vector indices;
 	// find the number of indices containing the value
-	Array indices_num = find_char_array_indices(array, old_val);
+	Vector indices_num = find_char_array_indices(array, old_val);
 	// Remove each appropriate indice
     for (int i = indices_num.len; i > 0; i--) {
         indices = find_char_array_indices(array, old_val);

@@ -52,7 +52,7 @@ typedef struct
 	int elem;     // Memory consumption per indice
 	char name[20];   // The array name
 	dat_type dat;
-} Array;
+} Vector;
 // --------------------------------------------------------------------------------
 
 /**
@@ -62,7 +62,7 @@ typedef struct
  * @param array an Array structure
  * @param num_indices A guess for the number of indices that will be consumed by the array
  */
-void array_mem_alloc(Array *array, size_t num_indices);
+void array_mem_alloc(Vector *array, size_t num_indices);
 // --------------------------------------------------------------------------------
 
 /**
@@ -71,6 +71,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
  *              DOUBLE, CHAR, or INT
  * @param num_indices A guess for the number of indices required by the array
  * @param name The name of the array as a character string
+ * @return a Vector container
  *
  * The following is a code example for how to instantiate the container for
  * an integer;
@@ -81,7 +82,7 @@ void array_mem_alloc(Array *array, size_t num_indices);
  * Array arr_test = init_array(dtype, indices, name);
  * @endcode
  */
-Array init_array(dat_type dat, size_t num_indices, char *name);
+Vector init_array(dat_type dat, size_t num_indices, char *name);
 // --------------------------------------------------------------------------------
 
 /**
@@ -137,7 +138,7 @@ Array init_array(dat_type dat, size_t num_indices, char *name);
  * // >> [0, 1, 2]
  * @endcode
  */
-int append_array(Array *array, void *elements, size_t count);
+int append_array(Vector *array, void *elements, size_t count);
 // --------------------------------------------------------------------------------
 
 /**
@@ -145,7 +146,7 @@ int append_array(Array *array, void *elements, size_t count);
  * struct elements
  * @param array the array container
  */
-void free_array(Array *array);
+void free_array(Vector *array);
 // --------------------------------------------------------------------------------
 
 /**
@@ -176,7 +177,7 @@ void free_array(Array *array);
  *  // >> 0
  * @endcode
  */
-int int_array_val(Array *array, int indice);
+int int_array_val(Vector *array, int indice);
 // --------------------------------------------------------------------------------
 
 /**
@@ -207,7 +208,7 @@ int int_array_val(Array *array, int indice);
  * // >> 1.1
  * @endcode
  */
-float float_array_val(Array *array, int indice);
+float float_array_val(Vector *array, int indice);
 // --------------------------------------------------------------------------------
 
 /**
@@ -238,7 +239,7 @@ float float_array_val(Array *array, int indice);
  * // >> 1.1
  * @endcode
  */
-double double_array_val(Array *array, int indice);
+double double_array_val(Vector *array, int indice);
 // --------------------------------------------------------------------------------
 
 /**
@@ -274,7 +275,7 @@ double double_array_val(Array *array, int indice);
  * // >> H
  * @endcode
  */
-char char_array_val(Array *array, int indice);
+char char_array_val(Vector *array, int indice);
 // --------------------------------------------------------------------------------
 /**
  * This function allows a user to preappend an existing or blank array container
@@ -330,7 +331,7 @@ char char_array_val(Array *array, int indice);
  *
  * @endcode
  */
-int preappend_array(Array *array, void *elements, size_t count);
+int preappend_array(Vector *array, void *elements, size_t count);
 // --------------------------------------------------------------------------------
 
 /**
@@ -355,7 +356,7 @@ int preappend_array(Array *array, void *elements, size_t count);
  * @endcode
  * The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4.
  */
-int pop_array(Array *array, int indice);
+int pop_array(Vector *array, int indice);
 // --------------------------------------------------------------------------------
 
 /**
@@ -364,7 +365,7 @@ int pop_array(Array *array, int indice);
  * if the array does not contain the appropriate value.
  * @param array An array container
  * @param integer the integer the user wishes to find an indice for
- * @return array An array containing all indices associatd with the user
+ * @return Vector A vector containing all indices associatd with the user
  *               specified integer.
  * @code
  *size_t indices = 10;
@@ -380,7 +381,7 @@ int pop_array(Array *array, int indice);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
-Array find_int_array_indices(Array *array, int integer);
+Vector find_int_array_indices(Vector *array, int integer);
 // --------------------------------------------------------------------------------
 
 /**
@@ -405,7 +406,7 @@ Array find_int_array_indices(Array *array, int integer);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
-Array find_float_array_indices(Array *array, float float_val);
+Vector find_float_array_indices(Vector *array, float float_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -430,7 +431,7 @@ Array find_float_array_indices(Array *array, float float_val);
  * @endcode
  * The above code should produce an array with indices 0, 3, and 4.
  */
-Array find_double_array_indices(Array *array, double double_val);
+Vector find_double_array_indices(Vector *array, double double_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -454,7 +455,7 @@ Array find_double_array_indices(Array *array, double double_val);
  * free_array(p);
  * @endcode
  */
-Array find_char_array_indices(Array *array, char char_val);
+Vector find_char_array_indices(Vector *array, char char_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -474,7 +475,7 @@ Array find_char_array_indices(Array *array, char char_val);
  * // >> [1, 3, 4, 5]
  * @endcode
  */
-void delete_int_arr_values(Array *array, int int_value);
+void delete_int_arr_values(Vector *array, int int_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -494,7 +495,7 @@ void delete_int_arr_values(Array *array, int int_value);
  * // >> [1.0, 3.2, 4.1, 5.7]
  * @endcode
  */
-void delete_float_arr_values(Array *array, float float_value);
+void delete_float_arr_values(Vector *array, float float_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -514,7 +515,7 @@ void delete_float_arr_values(Array *array, float float_value);
  * // >> [1.0, 3.2, 4.1, 5.7]
  * @endcode
  */
-void delete_double_arr_values(Array *array, double double_value);
+void delete_double_arr_values(Vector *array, double double_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -534,7 +535,7 @@ void delete_double_arr_values(Array *array, double double_value);
  * // >> ['H', 'e', 'o']
  * @endcode
  */
-void delete_char_arr_values(Array *array, char char_value);
+void delete_char_arr_values(Vector *array, char char_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -554,7 +555,7 @@ void delete_char_arr_values(Array *array, char char_value);
  * // >> [1, 5, 3, 4, 5, 6]
  * @endcode
  */
-int replace_int_array_index(Array *array, int index, int replacement_value);
+int replace_int_array_index(Vector *array, int index, int replacement_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -574,7 +575,7 @@ int replace_int_array_index(Array *array, int index, int replacement_value);
  * // >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]
  * @endcode
  */
-int replace_float_array_index(Array *array, int index, float replacement_value);
+int replace_float_array_index(Vector *array, int index, float replacement_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -594,7 +595,7 @@ int replace_float_array_index(Array *array, int index, float replacement_value);
  * // >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]
  * @endcode
  */
-int replace_double_array_index(Array *array, int index, double replacement_value);
+int replace_double_array_index(Vector *array, int index, double replacement_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -614,7 +615,7 @@ int replace_double_array_index(Array *array, int index, double replacement_value
  * // >> ['H', 'p', 'l', 'l', 'o', '']
  * @endcode
  */
-int replace_char_array_index(Array *array, int index, char replacement_value);
+int replace_char_array_index(Vector *array, int index, char replacement_value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -634,7 +635,7 @@ int replace_char_array_index(Array *array, int index, char replacement_value);
  * // >> [1, 2, 2, 2, 5, 2]
  * @endcode
  */
-void replace_int_array_element(Array *array, int old_val, int new_val);
+void replace_int_array_element(Vector *array, int old_val, int new_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -654,7 +655,7 @@ void replace_int_array_element(Array *array, int old_val, int new_val);
  * // >> [1, 2.1, 2.1, 2.1, 5, 2.1]
  * @endcode
  */
-void replace_float_array_element(Array *array, float old_val, float new_val);
+void replace_float_array_element(Vector *array, float old_val, float new_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -674,7 +675,7 @@ void replace_float_array_element(Array *array, float old_val, float new_val);
  * // >> [1, 2.1, 2.1, 2.1, 5, 2.1]
  * @endcode
  */
-void replace_double_array_element(Array *array, double old_val, double new_val);
+void replace_double_array_element(Vector *array, double old_val, double new_val);
 // --------------------------------------------------------------------------------
 
 /**
@@ -694,7 +695,7 @@ void replace_double_array_element(Array *array, double old_val, double new_val);
  * // >> ['H', 'e', 'q', 'q', 'o']
  * @endcode
  */
-void replace_char_array_element(Array *array, char old_val, char new_val);
+void replace_char_array_element(Vector *array, char old_val, char new_val);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
