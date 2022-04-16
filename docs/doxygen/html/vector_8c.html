@@ -135,6 +135,14 @@ Functions</h2></td></tr>
 <tr class="separator:a122563df58490a6bc9807c7496fc211e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d54e9d1ef0b23566eb5278f42926b6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a7d54e9d1ef0b23566eb5278f42926b6f">delete_char_duplicates_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
 <tr class="separator:a7d54e9d1ef0b23566eb5278f42926b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b9a16e579236fa0add30a4752527421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a8b9a16e579236fa0add30a4752527421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf8c62e47e3d5b07339f8ac1594c6c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#aedf8c62e47e3d5b07339f8ac1594c6c6">unique_float_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:aedf8c62e47e3d5b07339f8ac1594c6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d4ff3374cd29a8f1e604c534f7b583"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a92d4ff3374cd29a8f1e604c534f7b583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57925b38859054812edf2f341225f6cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a57925b38859054812edf2f341225f6cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac09911a1012b6977d3daf15c9eace5f9" name="ac09911a1012b6977d3daf15c9eace5f9"></a>
@@ -1482,6 +1490,137 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_int_array_index(&amp;arr_test, 1, 5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 5, 3, 4, 5, 6]</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a57925b38859054812edf2f341225f6cc" name="a57925b38859054812edf2f341225f6cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57925b38859054812edf2f341225f6cc">&#9670;&nbsp;</a></span>unique_char_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_char_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete all values from a char array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">char</span> a[13] = <span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
+<div class="line">append_array(&amp;arr_test, a, 13);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
+<div class="ttc" id="avector_8c_html_a57925b38859054812edf2f341225f6cc"><div class="ttname"><a href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a></div><div class="ttdeci">void unique_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:557</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92d4ff3374cd29a8f1e604c534f7b583" name="a92d4ff3374cd29a8f1e604c534f7b583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d4ff3374cd29a8f1e604c534f7b583">&#9670;&nbsp;</a></span>unique_double_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_double_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete all values from a double array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};</div>
+<div class="line">append_array(&amp;arr_test, a, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
+<div class="ttc" id="avector_8c_html_a92d4ff3374cd29a8f1e604c534f7b583"><div class="ttname"><a href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a></div><div class="ttdeci">void unique_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:537</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aedf8c62e47e3d5b07339f8ac1594c6c6" name="aedf8c62e47e3d5b07339f8ac1594c6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf8c62e47e3d5b07339f8ac1594c6c6">&#9670;&nbsp;</a></span>unique_float_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_float_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete all values from a float array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = FLAOT;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">float</span> a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};</div>
+<div class="line">append_array(&amp;arr_test, a, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
+<div class="ttc" id="avector_8c_html_a8b9a16e579236fa0add30a4752527421"><div class="ttname"><a href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a></div><div class="ttdeci">void unique_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:497</div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8b9a16e579236fa0add30a4752527421" name="a8b9a16e579236fa0add30a4752527421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9a16e579236fa0add30a4752527421">&#9670;&nbsp;</a></span>unique_int_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_int_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete all values from an integer array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[9] = {1, 1, 2, 3, 4, 4, 6, 6, 7};</div>
+<div class="line">append_array(&amp;arr_test, a, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; [2, 3, 7]</span></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>

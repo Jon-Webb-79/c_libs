@@ -758,4 +758,73 @@ TEST(test_delete_dubplicates, delete_char_duplicates) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the unique_int_vec function to ensure it properly
+ * deletes all values from an array except for the unique values */
+TEST(test_unique_vec, unique_int) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+    int a[9] = {1, 1, 2, 3, 4, 4, 6, 6, 7};
+	append_vector(&arr_test, a, 9);
+	unique_int_vec(&arr_test);
+	EXPECT_EQ(int_vector_val(&arr_test, 0), 2);
+	EXPECT_EQ(int_vector_val(&arr_test, 1), 3);
+	EXPECT_EQ(int_vector_val(&arr_test, 2), 7);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the unique_float_vec function to ensure it properly
+ * deletes all values from an array except for the unique values */
+TEST(test_unique_vec, unique_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+    float a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};
+	append_vector(&arr_test, a, 9);
+	unique_float_vec(&arr_test);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 0), 2.2f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 1), 3.3f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 2), 7.1f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the unique_double_vec function to ensure it properly
+ * deletes all values from an array except for the unique values */
+TEST(test_unique_vec, unique_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+    double a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};
+	append_vector(&arr_test, a, 9);
+	unique_double_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 0), 2.2);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 1), 3.3);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 2), 7.1);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the unique_char_vec function to ensure it properly
+ * deletes all values from an array except for the unique values */
+TEST(test_unique_vec, unique_char) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+    char a[13] = "Hello World!";
+	append_vector(&arr_test, a, 13);
+	unique_char_vec(&arr_test);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'e');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), ' ');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'W');
+	EXPECT_EQ(char_vector_val(&arr_test, 4), 'r');
+	EXPECT_EQ(char_vector_val(&arr_test, 5), 'd');
+	EXPECT_EQ(char_vector_val(&arr_test, 6), '!');
+}
+// ================================================================================
+// ================================================================================
 // eof

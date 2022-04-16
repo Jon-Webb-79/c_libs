@@ -768,7 +768,78 @@ void delete_double_duplicates_vec(Vector *array);
  * @endcode
  */
 void delete_char_duplicates_vec(Vector *array);
+// --------------------------------------------------------------------------------
 
+/**
+ * This function will delete all values from an integer array except for the
+ * unique values.
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[9] = {1, 1, 2, 3, 4, 4, 6, 6, 7};
+ * append_array(&arr_test, a, 9);
+ * unique_int_vec(&arr_test);
+ * // >> [2, 3, 7]
+ * @endcode
+ */
+void unique_int_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all values from a float array except for the
+ * unique values.
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLAOT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};
+ * append_array(&arr_test, a, 9);
+ * unique_int_vec(&arr_test);
+ * // >> [2.2, 3.3, 7.1]
+ * @endcode
+ */
+void unique_float_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all values from a double array except for the
+ * unique values.
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};
+ * append_array(&arr_test, a, 9);
+ * unique_double_vec(&arr_test);
+ * // >> [2.2, 3.3, 7.1]
+ * @endcode
+ */
+void unique_double_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all values from a char array except for the
+ * unique values.
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[13] = "Hello World!";
+ * append_array(&arr_test, a, 13);
+ * unique_char_vec(&arr_test);
+ * // >> ['H', 'e', ' ', 'W', 'r', 'd', '!']
+ * @endcode
+ */
+void unique_char_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

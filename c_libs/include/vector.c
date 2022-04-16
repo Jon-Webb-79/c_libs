@@ -492,6 +492,86 @@ void delete_char_duplicates_vec(Vector *array) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void unique_int_vec(Vector *array) {
+	int length = array->len;
+	int repeat_status = 0;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (int_vector_val(array, i) == int_vector_val(array, j)) {
+				repeat_status = 1;
+				pop_vector(array, j);
+			}
+		}
+		if (repeat_status == 1) {
+			pop_vector(array, i);
+			repeat_status = 0;
+			i -= 1;
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void unique_float_vec(Vector *array) {
+	int length = array->len;
+	int repeat_status = 0;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (float_vector_val(array, i) == float_vector_val(array, j)) {
+				repeat_status = 1;
+				pop_vector(array, j);
+			}
+		}
+		if (repeat_status == 1) {
+			pop_vector(array, i);
+			repeat_status = 0;
+			i -= 1;
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void unique_double_vec(Vector *array) {
+	int length = array->len;
+	int repeat_status = 0;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (double_vector_val(array, i) == double_vector_val(array, j)) {
+				repeat_status = 1;
+				pop_vector(array, j);
+			}
+		}
+		if (repeat_status == 1) {
+			pop_vector(array, i);
+			repeat_status = 0;
+			i -= 1;
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void unique_char_vec(Vector *array) {
+	int length = array->len;
+	int repeat_status = 0;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (char_vector_val(array, i) == char_vector_val(array, j)) {
+				repeat_status = 1;
+				pop_vector(array, j);
+			}
+		}
+		if (repeat_status == 1) {
+			pop_vector(array, i);
+			repeat_status = 0;
+			i -= 1;
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

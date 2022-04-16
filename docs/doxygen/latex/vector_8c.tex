@@ -63,6 +63,14 @@ void \mbox{\hyperlink{vector_8c_a2beab0348c5fc9efa3d9a01b2dc98c06}{delete\+\_\+f
 void \mbox{\hyperlink{vector_8c_a122563df58490a6bc9807c7496fc211e}{delete\+\_\+double\+\_\+duplicates\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
 void \mbox{\hyperlink{vector_8c_a7d54e9d1ef0b23566eb5278f42926b6f}{delete\+\_\+char\+\_\+duplicates\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\+\_\+int\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8c_aedf8c62e47e3d5b07339f8ac1594c6c6}{unique\+\_\+float\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8c_a92d4ff3374cd29a8f1e604c534f7b583}{unique\+\_\+double\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8c_a57925b38859054812edf2f341225f6cc}{unique\+\_\+char\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -919,6 +927,98 @@ This function will replace an integer value at a user defined indice with anothe
 \DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_int\_array\_index(\&arr\_test, 1, 5);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a57925b38859054812edf2f341225f6cc}\label{vector_8c_a57925b38859054812edf2f341225f6cc}} 
+\index{vector.c@{vector.c}!unique\_char\_vec@{unique\_char\_vec}}
+\index{unique\_char\_vec@{unique\_char\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{unique\_char\_vec()}{unique\_char\_vec()}}
+{\footnotesize\ttfamily void unique\+\_\+char\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all values from a char array except for the unique values. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[13] = \textcolor{stringliteral}{"{}Hello World!"{}};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 13);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a57925b38859054812edf2f341225f6cc}{unique\_char\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', ' ', 'W', 'r', 'd', '!']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a92d4ff3374cd29a8f1e604c534f7b583}\label{vector_8c_a92d4ff3374cd29a8f1e604c534f7b583}} 
+\index{vector.c@{vector.c}!unique\_double\_vec@{unique\_double\_vec}}
+\index{unique\_double\_vec@{unique\_double\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{unique\_double\_vec()}{unique\_double\_vec()}}
+{\footnotesize\ttfamily void unique\+\_\+double\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all values from a double array except for the unique values. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92d4ff3374cd29a8f1e604c534f7b583}{unique\_double\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [2.2, 3.3, 7.1]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_aedf8c62e47e3d5b07339f8ac1594c6c6}\label{vector_8c_aedf8c62e47e3d5b07339f8ac1594c6c6}} 
+\index{vector.c@{vector.c}!unique\_float\_vec@{unique\_float\_vec}}
+\index{unique\_float\_vec@{unique\_float\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{unique\_float\_vec()}{unique\_float\_vec()}}
+{\footnotesize\ttfamily void unique\+\_\+float\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all values from a float array except for the unique values. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = FLAOT;}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = \{1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\_int\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [2.2, 3.3, 7.1]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a8b9a16e579236fa0add30a4752527421}\label{vector_8c_a8b9a16e579236fa0add30a4752527421}} 
+\index{vector.c@{vector.c}!unique\_int\_vec@{unique\_int\_vec}}
+\index{unique\_int\_vec@{unique\_int\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{unique\_int\_vec()}{unique\_int\_vec()}}
+{\footnotesize\ttfamily void unique\+\_\+int\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all values from an integer array except for the unique values. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1, 1, 2, 3, 4, 4, 6, 6, 7\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\_int\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [2, 3, 7]}}
 
 \end{DoxyCode}
  \\
