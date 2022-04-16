@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['init_5farray_0',['init_array',['../vector_8c.html#a741da92429ba5d8accf86b6253cb309a',1,'init_array(dat_type dat, size_t num_indices, char *name):&#160;vector.c'],['../vector_8h.html#a741da92429ba5d8accf86b6253cb309a',1,'init_array(dat_type dat, size_t num_indices, char *name):&#160;vector.c']]],
-  ['int_5farray_5fval_1',['int_array_val',['../vector_8c.html#a803955615e694eed4e7306642d96b288',1,'int_array_val(Array *array, int indice):&#160;vector.c'],['../vector_8h.html#a803955615e694eed4e7306642d96b288',1,'int_array_val(Array *array, int indice):&#160;vector.c']]]
+  ['init_5fvector_0',['init_vector',['../vector_8c.html#ae90f4722fce7298fee948bcede74fe7f',1,'init_vector(dat_type dat, size_t num_indices, char *name):&#160;vector.c'],['../vector_8h.html#ae90f4722fce7298fee948bcede74fe7f',1,'init_vector(dat_type dat, size_t num_indices, char *name):&#160;vector.c']]],
+  ['int_5fvector_5fval_1',['int_vector_val',['../vector_8c.html#a675a10c2b809f0411eca4c48d6f7519e',1,'int_vector_val(Vector *array, int indice):&#160;vector.c'],['../vector_8h.html#a675a10c2b809f0411eca4c48d6f7519e',1,'int_vector_val(Vector *array, int indice):&#160;vector.c']]]
 ];

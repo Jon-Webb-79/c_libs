@@ -696,6 +696,26 @@ void replace_double_vector_element(Vector *array, double old_val, double new_val
  * @endcode
  */
 void replace_char_vector_element(Vector *array, char old_val, char new_val);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an array, so
+ * that the final array only contains one instance of each integer
+ * @param array An array container
+ * @param old_val The char value to be replaced
+ * @param new_val The char value to replace the old_val
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[6] = {1, 1, 3, 1, 5, 2, 2, 3};
+ * append_array(&arr_test, a, 6);
+ * delete_int_duplicates_vec(&arr_test);
+ * // >> [1, 3, 5, 2]
+ * @endcode
+ */
+void delete_int_duplicates_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

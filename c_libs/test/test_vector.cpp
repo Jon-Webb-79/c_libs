@@ -684,4 +684,20 @@ TEST(test_replace_element, replace_char_element) {
 }
 // ================================================================================
 // ================================================================================
+
+TEST(test_delete_dubplicates, delete_int_duplicates) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+    int a[8] = {1, 1, 3, 1, 5, 2, 2, 3};
+	append_vector(&arr_test, a, 8);
+	delete_int_duplicates_vec(&arr_test);
+	EXPECT_EQ(int_vector_val(&arr_test, 0), 1);
+	EXPECT_EQ(int_vector_val(&arr_test, 1), 3);
+	EXPECT_EQ(int_vector_val(&arr_test, 2), 5);
+	EXPECT_EQ(int_vector_val(&arr_test, 3), 2);
+}
+// ================================================================================
+// ================================================================================
 // eof

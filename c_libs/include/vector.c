@@ -440,6 +440,19 @@ void replace_char_vector_element(Vector *array, char old_val, char new_val) {
 	}
 	free_vector(&indices_num);
 }
+// --------------------------------------------------------------------------------
+
+void delete_int_duplicates_vec(Vector *array) {
+	int length = array->len;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (int_vector_val(array, i) == int_vector_val(array, j)) {
+				pop_vector(array, j);
+			}
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof
