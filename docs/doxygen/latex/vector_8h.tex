@@ -87,6 +87,10 @@ void \mbox{\hyperlink{vector_8h_aedf8c62e47e3d5b07339f8ac1594c6c6}{unique\+\_\+f
 void \mbox{\hyperlink{vector_8h_a92d4ff3374cd29a8f1e604c534f7b583}{unique\+\_\+double\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
 void \mbox{\hyperlink{vector_8h_a57925b38859054812edf2f341225f6cc}{unique\+\_\+char\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_a3b714e6f1ad388ab3280fcec12b164b2}{delete\+\_\+duplicates\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_afb49fc0563f1493f510a73d645e26e79}{unique\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -319,6 +323,29 @@ This function will find all double values occurances in an array and delete them
 \DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
 \DoxyCodeLine{delete\_double\_arr\_values(\&arr\_test, 6.3);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a3b714e6f1ad388ab3280fcec12b164b2}\label{vector_8h_a3b714e6f1ad388ab3280fcec12b164b2}} 
+\index{vector.h@{vector.h}!delete\_duplicates\_vec@{delete\_duplicates\_vec}}
+\index{delete\_duplicates\_vec@{delete\_duplicates\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{delete\_duplicates\_vec()}{delete\_duplicates\_vec()}}
+{\footnotesize\ttfamily void delete\+\_\+duplicates\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all duplicate values in an array, so that the final array only contains one instance of each variable. This function will work with INT, FLOAT, DOUBLE, or CHAR vector containers 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[8] = \{1, 1, 3, 1, 5, 2, 2, 3\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3b714e6f1ad388ab3280fcec12b164b2}{delete\_duplicates\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 5, 2]}}
 
 \end{DoxyCode}
  \\
@@ -1071,6 +1098,29 @@ This function will delete all values from an integer array except for the unique
 \DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\_int\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [2, 3, 7]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_afb49fc0563f1493f510a73d645e26e79}\label{vector_8h_afb49fc0563f1493f510a73d645e26e79}} 
+\index{vector.h@{vector.h}!unique\_vec@{unique\_vec}}
+\index{unique\_vec@{unique\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{unique\_vec()}{unique\_vec()}}
+{\footnotesize\ttfamily void unique\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all values from an array except for the unique values. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[13] = \textcolor{stringliteral}{"{}Hello World!"{}};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 13);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afb49fc0563f1493f510a73d645e26e79}{unique\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', ' ', 'W', 'r', 'd', '!']}}
 
 \end{DoxyCode}
  \\

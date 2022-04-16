@@ -572,6 +572,34 @@ void unique_char_vec(Vector *array) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void delete_duplicates_vec(Vector *array) {
+	if (array->dat == INT)
+		delete_int_duplicates_vec(array);
+	else if (array->dat == FLOAT)
+		delete_float_duplicates_vec(array);
+	else if (array->dat == DOUBLE)
+		delete_double_duplicates_vec(array);
+	else if (array->dat == CHAR)
+		delete_char_duplicates_vec(array);
+	else
+		printf("WARNING: Vector data type must be INT, FLOAT, DOUBLE, or CHAR");
+}
+// --------------------------------------------------------------------------------
+
+void unique_vec(Vector *array) {
+	if (array->dat == INT)
+		unique_int_vec(array);
+	else if (array->dat == FLOAT)
+		unique_float_vec(array);
+	else if (array->dat == DOUBLE)
+		unique_double_vec(array);
+	else if (array->dat == CHAR)
+		unique_char_vec(array);
+	else
+		printf("WARNING: Vector data type must be INT, FLOAT, DOUBLE, or CHAR");
+}
 // ================================================================================
 // ================================================================================
 // eof

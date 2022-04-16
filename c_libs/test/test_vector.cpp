@@ -625,6 +625,7 @@ TEST(test_replace_element, replace_int_element) {
 	EXPECT_EQ(int_vector_val(&arr_test, 3), 3);
 	EXPECT_EQ(int_vector_val(&arr_test, 4), 5);
 	EXPECT_EQ(int_vector_val(&arr_test, 5), 3);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -644,6 +645,7 @@ TEST(test_replace_element, replace_float_element) {
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 3), 3.4f);
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 4), 5.6f);
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 5), 3.4f);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -663,6 +665,7 @@ TEST(test_replace_element, replace_double_element) {
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 3), 3.4);
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 4), 5.6);
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 5), 3.4);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -681,6 +684,7 @@ TEST(test_replace_element, replace_char_element) {
 	EXPECT_EQ(char_vector_val(&arr_test, 2), 'q');
 	EXPECT_EQ(char_vector_val(&arr_test, 3), 'q');
 	EXPECT_EQ(char_vector_val(&arr_test, 4), 'o');
+	free_vector(&arr_test);
 }
 // ================================================================================
 // ================================================================================
@@ -699,6 +703,7 @@ TEST(test_delete_dubplicates, delete_int_duplicates) {
 	EXPECT_EQ(int_vector_val(&arr_test, 1), 3);
 	EXPECT_EQ(int_vector_val(&arr_test, 2), 5);
 	EXPECT_EQ(int_vector_val(&arr_test, 3), 2);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -716,6 +721,7 @@ TEST(test_delete_dubplicates, delete_float_duplicates) {
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 1), 3.0f);
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 2), 5.2f);
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 3), 2.1f);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -733,6 +739,7 @@ TEST(test_delete_dubplicates, delete_double_duplicates) {
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 1), 3.0);
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 2), 5.2);
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 3), 2.1);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -755,6 +762,30 @@ TEST(test_delete_dubplicates, delete_char_duplicates) {
 	EXPECT_EQ(char_vector_val(&arr_test, 6), 'r');
 	EXPECT_EQ(char_vector_val(&arr_test, 7), 'd');
 	EXPECT_EQ(char_vector_val(&arr_test, 8), '!');
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_duplicates function to ensure it properly
+ * deletes duplicate values from an array */
+TEST(test_delete_dubplicates, delete_duplicates) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+    char a[14] = "Hello WWorld!";
+	append_vector(&arr_test, a, 14);
+	delete_duplicates_vec(&arr_test);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'e');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), 'l');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'o');
+	EXPECT_EQ(char_vector_val(&arr_test, 4), ' ');
+	EXPECT_EQ(char_vector_val(&arr_test, 5), 'W');
+	EXPECT_EQ(char_vector_val(&arr_test, 6), 'r');
+	EXPECT_EQ(char_vector_val(&arr_test, 7), 'd');
+	EXPECT_EQ(char_vector_val(&arr_test, 8), '!');
+	free_vector(&arr_test);
 }
 // ================================================================================
 // ================================================================================
@@ -772,6 +803,7 @@ TEST(test_unique_vec, unique_int) {
 	EXPECT_EQ(int_vector_val(&arr_test, 0), 2);
 	EXPECT_EQ(int_vector_val(&arr_test, 1), 3);
 	EXPECT_EQ(int_vector_val(&arr_test, 2), 7);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -788,6 +820,7 @@ TEST(test_unique_vec, unique_float) {
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 0), 2.2f);
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 1), 3.3f);
 	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 2), 7.1f);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -804,6 +837,7 @@ TEST(test_unique_vec, unique_double) {
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 0), 2.2);
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 1), 3.3);
 	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 2), 7.1);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -824,6 +858,28 @@ TEST(test_unique_vec, unique_char) {
 	EXPECT_EQ(char_vector_val(&arr_test, 4), 'r');
 	EXPECT_EQ(char_vector_val(&arr_test, 5), 'd');
 	EXPECT_EQ(char_vector_val(&arr_test, 6), '!');
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the unique_vec function to ensure it properly
+ * deletes all values from an array except for the unique values */
+TEST(test_unique_vec, unique) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+    char a[13] = "Hello World!";
+	append_vector(&arr_test, a, 13);
+	unique_vec(&arr_test);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'e');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), ' ');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'W');
+	EXPECT_EQ(char_vector_val(&arr_test, 4), 'r');
+	EXPECT_EQ(char_vector_val(&arr_test, 5), 'd');
+	EXPECT_EQ(char_vector_val(&arr_test, 6), '!');
+	free_vector(&arr_test);
 }
 // ================================================================================
 // ================================================================================

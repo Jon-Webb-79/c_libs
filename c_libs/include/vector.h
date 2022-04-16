@@ -840,6 +840,43 @@ void unique_double_vec(Vector *array);
  * @endcode
  */
 void unique_char_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an array, so
+ * that the final array only contains one instance of each variable. This
+ * function will work with INT, FLOAT, DOUBLE, or CHAR vector containers
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[8] = {1, 1, 3, 1, 5, 2, 2, 3};
+ * append_array(&arr_test, a, 8);
+ * delete_duplicates_vec(&arr_test);
+ * // >> [1, 3, 5, 2]
+ * @endcode
+ */
+void delete_duplicates_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all values from an array except for the
+ * unique values.
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[13] = "Hello World!";
+ * append_array(&arr_test, a, 13);
+ * unique_vec(&arr_test);
+ * // >> ['H', 'e', ' ', 'W', 'r', 'd', '!']
+ * @endcode
+ */
+void unique_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
