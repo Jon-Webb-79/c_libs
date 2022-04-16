@@ -685,6 +685,8 @@ TEST(test_replace_element, replace_char_element) {
 // ================================================================================
 // ================================================================================
 
+/* This function tests the delete_int_duplicates function to ensure it properly
+ * deletes duplicate values from an array */
 TEST(test_delete_dubplicates, delete_int_duplicates) {
 	size_t indices = 10;
 	char name[6] = "array";
@@ -697,6 +699,62 @@ TEST(test_delete_dubplicates, delete_int_duplicates) {
 	EXPECT_EQ(int_vector_val(&arr_test, 1), 3);
 	EXPECT_EQ(int_vector_val(&arr_test, 2), 5);
 	EXPECT_EQ(int_vector_val(&arr_test, 3), 2);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_float_duplicates function to ensure it properly
+ * deletes duplicate values from an array */
+TEST(test_delete_dubplicates, delete_float_duplicates) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+    float a[8] = {1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0};
+	append_vector(&arr_test, a, 8);
+	delete_float_duplicates_vec(&arr_test);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 0), 1.1f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 1), 3.0f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 2), 5.2f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 3), 2.1f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_double_duplicates function to ensure it properly
+ * deletes duplicate values from an array */
+TEST(test_delete_dubplicates, delete_double_duplicates) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+    double a[8] = {1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0};
+	append_vector(&arr_test, a, 8);
+	delete_double_duplicates_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 0), 1.1);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 1), 3.0);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 2), 5.2);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 3), 2.1);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_char_duplicates function to ensure it properly
+ * deletes duplicate values from an array */
+TEST(test_delete_dubplicates, delete_char_duplicates) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+    char a[14] = "Hello WWorld!";
+	append_vector(&arr_test, a, 14);
+	delete_char_duplicates_vec(&arr_test);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'H');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'e');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), 'l');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'o');
+	EXPECT_EQ(char_vector_val(&arr_test, 4), ' ');
+	EXPECT_EQ(char_vector_val(&arr_test, 5), 'W');
+	EXPECT_EQ(char_vector_val(&arr_test, 6), 'r');
+	EXPECT_EQ(char_vector_val(&arr_test, 7), 'd');
+	EXPECT_EQ(char_vector_val(&arr_test, 8), '!');
 }
 // ================================================================================
 // ================================================================================

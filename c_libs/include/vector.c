@@ -453,6 +453,45 @@ void delete_int_duplicates_vec(Vector *array) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void delete_float_duplicates_vec(Vector *array) {
+	int length = array->len;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (float_vector_val(array, i) == float_vector_val(array, j)) {
+				pop_vector(array, j);
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_double_duplicates_vec(Vector *array) {
+	int length = array->len;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (double_vector_val(array, i) == double_vector_val(array, j)) {
+				pop_vector(array, j);
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_char_duplicates_vec(Vector *array) {
+	int length = array->len;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (char_vector_val(array, i) == char_vector_val(array, j)) {
+				pop_vector(array, j);
+			}
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof
