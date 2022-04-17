@@ -600,6 +600,196 @@ void unique_vec(Vector *array) {
 	else
 		printf("WARNING: Vector data type must be INT, FLOAT, DOUBLE, or CHAR");
 }
+// --------------------------------------------------------------------------------
+
+void sort_int_ascending_vec(Vector *array) {
+	int i, j, min_idx;
+    int var_one, var_two, temp;
+	for (i = 0; i < array->len - 1; i++) {
+
+		min_idx = i;
+		temp = ((int *)array->array)[min_idx];
+		for (j = i + 1; j < array->len; j++) {
+			var_one = ((int *)array->array)[min_idx];
+			var_two = ((int *)array->array)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((int *)array->array)[min_idx];
+			}
+		}
+		* (int *) ((char *) array->array + min_idx * array->elem) = ((int *)array->array)[i];
+		* (int *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_float_ascending_vec(Vector *array) {
+	int i, j, min_idx;
+    float var_one, var_two, temp;
+	for (i = 0; i < array->len - 1; i++) {
+
+		min_idx = i;
+		temp = ((float *)array->array)[min_idx];
+		for (j = i + 1; j < array->len; j++) {
+			var_one = ((float *)array->array)[min_idx];
+			var_two = ((float *)array->array)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((float *)array->array)[min_idx];
+			}
+		}
+		* (float *) ((char *) array->array + min_idx * array->elem) = ((float *)array->array)[i];
+		* (float *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_double_ascending_vec(Vector *array) {
+	int i, j, min_idx;
+    double var_one, var_two, temp;
+	for (i = 0; i < array->len - 1; i++) {
+
+		min_idx = i;
+		temp = ((double *)array->array)[min_idx];
+		for (j = i + 1; j < array->len; j++) {
+			var_one = ((double *)array->array)[min_idx];
+			var_two = ((double *)array->array)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((double *)array->array)[min_idx];
+			}
+		}
+		* (double *) ((char *) array->array + min_idx * array->elem) = ((double *)array->array)[i];
+		* (double *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_char_ascending_vec(Vector *array) {
+	int i, j, min_idx;
+    char var_one, var_two, temp;
+	for (i = 0; i < array->len - 2; i++) {
+
+		min_idx = i;
+		temp = ((char *)array->array)[min_idx];
+		for (j = i + 1; j < array->len - 1; j++) {
+			var_one = ((char *)array->array)[min_idx];
+			var_two = ((char *)array->array)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((char *)array->array)[min_idx];
+			}
+		}
+		* (char *) ((char *) array->array + min_idx * array->elem) = ((char *)array->array)[i];
+		* (char *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_int_descending_vec(Vector *array) {
+	int i, j, max_idx;
+    int var_one, var_two, temp;
+	for (i = 0; i < array->len - 1; i++) {
+
+		max_idx = i;
+		temp = ((int *)array->array)[max_idx];
+		for (j = i + 1; j < array->len; j++) {
+			var_one = ((int *)array->array)[max_idx];
+			var_two = ((int *)array->array)[j];
+			if (var_two > var_one) {
+				max_idx = j;
+				temp = ((int *)array->array)[max_idx];
+			}
+		}
+		* (int *) ((char *) array->array + max_idx * array->elem) = ((int *)array->array)[i];
+		* (int *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_float_descending_vec(Vector *array) {
+	int i, j, max_idx;
+    float var_one, var_two, temp;
+	for (i = 0; i < array->len - 1; i++) {
+
+		max_idx = i;
+		temp = ((float *)array->array)[max_idx];
+		for (j = i + 1; j < array->len; j++) {
+			var_one = ((float *)array->array)[max_idx];
+			var_two = ((float *)array->array)[j];
+			if (var_two > var_one) {
+				max_idx = j;
+				temp = ((float *)array->array)[max_idx];
+			}
+		}
+		* (float *) ((char *) array->array + max_idx * array->elem) = ((float *)array->array)[i];
+		* (float *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_double_descending_vec(Vector *array) {
+	int i, j, max_idx;
+    double var_one, var_two, temp;
+	for (i = 0; i < array->len - 1; i++) {
+
+		max_idx = i;
+		temp = ((double *)array->array)[max_idx];
+		for (j = i + 1; j < array->len; j++) {
+			var_one = ((double *)array->array)[max_idx];
+			var_two = ((double *)array->array)[j];
+			if (var_two > var_one) {
+				max_idx = j;
+				temp = ((double *)array->array)[max_idx];
+			}
+		}
+		* (double *) ((char *) array->array + max_idx * array->elem) = ((double *)array->array)[i];
+		* (double *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_char_descending_vec(Vector *array) {
+	int i, j, max_idx;
+    char var_one, var_two, temp;
+	for (i = 0; i < array->len - 2; i++) {
+
+		max_idx = i;
+		temp = ((char *)array->array)[max_idx];
+		for (j = i + 1; j < array->len - 1; j++) {
+			var_one = ((char *)array->array)[max_idx];
+			var_two = ((char *)array->array)[j];
+			if (var_two > var_one) {
+				max_idx = j;
+				temp = ((char *)array->array)[max_idx];
+			}
+		}
+		* (char *) ((char *) array->array + max_idx * array->elem) = ((char *)array->array)[i];
+		* (char *) ((char *) array->array + i * array->elem) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_descending_vec(Vector *array, int order) {
+	if (array->dat == INT && order == 0)
+		sort_int_ascending_vec(array);
+	else if (array->dat == FLOAT && order == 0)
+		sort_float_ascending_vec(array);
+	else if (array->dat == DOUBLE && order == 0)
+		sort_double_ascending_vec(array);
+	else if (array->dat == CHAR && order == 0)
+		sort_char_ascending_vec(array);
+	else if(array->dat == INT && order == 1)
+		sort_int_descending_vec(array);
+	else if(array->dat == FLOAT && order == 1)
+		sort_float_descending_vec(array);
+	else if(array->dat == DOUBLE && order == 1)
+		sort_double_descending_vec(array);
+	else if(array->dat == CHAR && order == 1)
+		sort_char_descending_vec(array);
+	else
+		printf("WARNING: Vector data type must be INT, FLOAT, DOUBLE, or CHAR, or order must equal 0 or 1");
+}
 // ================================================================================
 // ================================================================================
 // eof

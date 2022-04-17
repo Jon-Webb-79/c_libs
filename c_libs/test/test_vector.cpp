@@ -883,4 +883,177 @@ TEST(test_unique_vec, unique) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the sort_int_ascending function to ensure that it
+ * properly orders an integer array in ascending order */
+TEST(sort_data_ascending, sort_int) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[6] = {5, -4, 3, 2, 1, 0};	
+	append_vector(&arr_test, a, 6);
+	sort_int_ascending_vec(&arr_test);
+	EXPECT_EQ(int_vector_val(&arr_test, 0), -4);
+	EXPECT_EQ(int_vector_val(&arr_test, 1), 0);
+	EXPECT_EQ(int_vector_val(&arr_test, 2), 1);
+	EXPECT_EQ(int_vector_val(&arr_test, 3), 2);
+	EXPECT_EQ(int_vector_val(&arr_test, 4), 3);
+	EXPECT_EQ(int_vector_val(&arr_test, 5), 5);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_float_ascending function to ensure that it
+ * properly orders a float array in ascending order */
+TEST(sort_data_ascending, sort_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 5.4};
+	append_vector(&arr_test, a, 6);
+	sort_float_ascending_vec(&arr_test);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 0), 1.8f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 1), 3.2f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 2), 3.9f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 3), 4.1f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 4), 5.4f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 5), 5.4f);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_double_ascending function to ensure that it
+ * properly orders a double array in ascending order */
+TEST(sort_data_ascending, sort_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 5.4};
+	append_vector(&arr_test, a, 6);
+	sort_double_ascending_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 0), 1.8);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 1), 3.2);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 2), 3.9);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 3), 4.1);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 4), 5.4);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 5), 5.4);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_char_ascending function to ensure that it
+ * properly orders a character array in ascending order */
+TEST(sort_data_ascending, sort_char) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+	char a[5] = "QDAF";
+	append_vector(&arr_test, a, 5);
+	sort_char_ascending_vec(&arr_test);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'A');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'D');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), 'F');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'Q');
+	free_vector(&arr_test);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the sort_int_descending function to ensure that it
+ * properly orders an integer array in descending order */
+TEST(sort_data_descending, sort_int) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[5] = {1, 2, 3, 5, 4};	
+	append_vector(&arr_test, a, 5);
+	sort_int_descending_vec(&arr_test);
+	EXPECT_EQ(int_vector_val(&arr_test, 0), 5);
+	EXPECT_EQ(int_vector_val(&arr_test, 1), 4);
+	EXPECT_EQ(int_vector_val(&arr_test, 2), 3);
+	EXPECT_EQ(int_vector_val(&arr_test, 3), 2);
+	EXPECT_EQ(int_vector_val(&arr_test, 4), 1);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_float_descending function to ensure that it
+ * properly orders a float array in descending order */
+TEST(sort_data_descending, sort_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[5] = {1.1, 2.2, 3.3, 5.5, 4.4};	
+	append_vector(&arr_test, a, 5);
+	sort_float_descending_vec(&arr_test);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 0), 5.5f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 1), 4.4f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 2), 3.3f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 3), 2.2f);
+	EXPECT_FLOAT_EQ(float_vector_val(&arr_test, 4), 1.1f);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_double_descending function to ensure that it
+ * properly orders a double array in descending order */
+TEST(sort_data_descending, sort_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[5] = {1.1, 2.2, 3.3, 5.5, 4.4};	
+	append_vector(&arr_test, a, 5);
+	sort_double_descending_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 0), 5.5);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 1), 4.4);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 2), 3.3);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 3), 2.2);
+	EXPECT_DOUBLE_EQ(double_vector_val(&arr_test, 4), 1.1);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_char_descending function to ensure that it
+ * properly orders a character array in ascending order */
+TEST(sort_data_descending, sort_char) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+	char a[5] = "QDAF";
+	append_vector(&arr_test, a, 5);
+	sort_char_descending_vec(&arr_test);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'Q');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'F');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), 'D');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'A');
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_descending function to ensure that it
+ * properly orders a character array in ascending order */
+TEST(sort_data_descending, sort) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+	char a[5] = "QDAF";
+	append_vector(&arr_test, a, 5);
+	sort_descending_vec(&arr_test, 1);
+	EXPECT_EQ(char_vector_val(&arr_test, 0), 'Q');
+	EXPECT_EQ(char_vector_val(&arr_test, 1), 'F');
+	EXPECT_EQ(char_vector_val(&arr_test, 2), 'D');
+	EXPECT_EQ(char_vector_val(&arr_test, 3), 'A');
+	free_vector(&arr_test);
+}
+// ================================================================================
+// ================================================================================
 // eof

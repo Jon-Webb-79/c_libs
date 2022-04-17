@@ -877,6 +877,161 @@ void delete_duplicates_vec(Vector *array);
  * @endcode
  */
 void unique_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort an integer array in ascending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {5, 4, 3, 2, 1};
+ * append_array(&arr_test, a, 6);
+ * sort_int_ascending(&arr_test);
+ * // >> [0, 1, 2, 3, 4, 5]
+ * @endcode
+ */
+void sort_int_ascending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a float array in ascending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 1.8};
+ * append_array(&arr_test, a, 6);
+ * sort_float_ascending(&arr_test);
+ * // >> [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]
+ * @endcode
+ */
+void sort_float_ascending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a double array in ascending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 1.8};
+ * append_array(&arr_test, a, 6);
+ * sort_double_ascending(&arr_test);
+ * // >> [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]
+ * @endcode
+ */
+void sort_double_ascending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a char array in ascending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[5] = "QDAF";
+ * append_array(&arr_test, a, 5);
+ * sort_char_ascending(&arr_test);
+ * // >> ['A', 'D', 'F', 'Q']
+ * @endcode
+ */
+void sort_char_ascending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort an integer array in descending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 2, 3, 4, 5, 6};
+ * append_array(&arr_test, a, 6);
+ * sort_int_descending(&arr_test);
+ * // >> [6, 5, 4, 3, 2, 1]
+ * @endcode
+ */
+void sort_int_descending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a float array in descending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);
+ * sort_float_descending(&arr_test);
+ * // >> [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]
+ * @endcode
+ */
+void sort_float_descending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a double array in descending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);
+ * sort_double_descending(&arr_test);
+ * // >> [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]
+ * @endcode
+ */
+void sort_double_descending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a char array in descending order
+ * @param array An array container
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[5] = "QDAF";
+ * append_array(&arr_test, a, 6);
+ * sort_char_descending(&arr_test);
+ * // >> ['Q', 'F', 'D', 'A']
+ * @endcode
+ */
+void sort_char_descending_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort an array in descending order.  This function can
+ * handle INT, FLOAT, DOUBLE, and CHAR data types.
+ * @param array An array container
+ * @param order 1 for ascending, 2 for descending
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[5] = "QDAF";
+ * append_array(&arr_test, a, 6);
+ * sort_descending(&arr_test);
+ * // >> ['Q', 'F', 'D', 'A']
+ * @endcode
+ */
+void sort_descending_vec(Vector *array, int order);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

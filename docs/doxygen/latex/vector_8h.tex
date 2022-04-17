@@ -91,6 +91,24 @@ void \mbox{\hyperlink{vector_8h_a57925b38859054812edf2f341225f6cc}{unique\+\_\+c
 void \mbox{\hyperlink{vector_8h_a3b714e6f1ad388ab3280fcec12b164b2}{delete\+\_\+duplicates\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
 void \mbox{\hyperlink{vector_8h_afb49fc0563f1493f510a73d645e26e79}{unique\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_a26b20866de603d66b1cf77eb932ba6fa}{sort\+\_\+int\+\_\+ascending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_a6089d5916d3d933315b9629c8e283cf6}{sort\+\_\+float\+\_\+ascending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_aa100149dd25f899627f8877c5bee74a5}{sort\+\_\+double\+\_\+ascending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_a5e1e6d31cd18d09f8a8fe860bdd4bdc3}{sort\+\_\+char\+\_\+ascending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_ac11392793d2ac7a3c5a9bfeb8977e30b}{sort\+\_\+int\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_aa00a4a66c9cd3273144a7bb46d7f2240}{sort\+\_\+float\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_a7ee9380817dcb30adc766fbf433f037a}{sort\+\_\+double\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_a77c5077c7de01acfadd59550f2931227}{sort\+\_\+char\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8h_abb7b4f117c79c5486da10368352fbd25}{sort\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, int order)
 \end{DoxyCompactItemize}
 
 
@@ -1006,6 +1024,215 @@ This function will replace an integer value at a user defined indice with anothe
 \DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_int\_array\_index(\&arr\_test, 1, 5);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a5e1e6d31cd18d09f8a8fe860bdd4bdc3}\label{vector_8h_a5e1e6d31cd18d09f8a8fe860bdd4bdc3}} 
+\index{vector.h@{vector.h}!sort\_char\_ascending\_vec@{sort\_char\_ascending\_vec}}
+\index{sort\_char\_ascending\_vec@{sort\_char\_ascending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_char\_ascending\_vec()}{sort\_char\_ascending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+char\+\_\+ascending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort a char array in ascending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 5);}
+\DoxyCodeLine{sort\_char\_ascending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['A', 'D', 'F', 'Q']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a77c5077c7de01acfadd59550f2931227}\label{vector_8h_a77c5077c7de01acfadd59550f2931227}} 
+\index{vector.h@{vector.h}!sort\_char\_descending\_vec@{sort\_char\_descending\_vec}}
+\index{sort\_char\_descending\_vec@{sort\_char\_descending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_char\_descending\_vec()}{sort\_char\_descending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+char\+\_\+descending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort a char array in descending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_char\_descending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['Q', 'F', 'D', 'A']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_abb7b4f117c79c5486da10368352fbd25}\label{vector_8h_abb7b4f117c79c5486da10368352fbd25}} 
+\index{vector.h@{vector.h}!sort\_descending\_vec@{sort\_descending\_vec}}
+\index{sort\_descending\_vec@{sort\_descending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_descending\_vec()}{sort\_descending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+descending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em order} & 1 for ascending, 2 for descending 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_descending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['Q', 'F', 'D', 'A']}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_aa100149dd25f899627f8877c5bee74a5}\label{vector_8h_aa100149dd25f899627f8877c5bee74a5}} 
+\index{vector.h@{vector.h}!sort\_double\_ascending\_vec@{sort\_double\_ascending\_vec}}
+\index{sort\_double\_ascending\_vec@{sort\_double\_ascending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_double\_ascending\_vec()}{sort\_double\_ascending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+double\+\_\+ascending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort a double array in ascending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{3.2, 1.8, 5.4, 3.9, 4.1, 1.8\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_double\_ascending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a7ee9380817dcb30adc766fbf433f037a}\label{vector_8h_a7ee9380817dcb30adc766fbf433f037a}} 
+\index{vector.h@{vector.h}!sort\_double\_descending\_vec@{sort\_double\_descending\_vec}}
+\index{sort\_double\_descending\_vec@{sort\_double\_descending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_double\_descending\_vec()}{sort\_double\_descending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+double\+\_\+descending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort a double array in descending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_double\_descending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a6089d5916d3d933315b9629c8e283cf6}\label{vector_8h_a6089d5916d3d933315b9629c8e283cf6}} 
+\index{vector.h@{vector.h}!sort\_float\_ascending\_vec@{sort\_float\_ascending\_vec}}
+\index{sort\_float\_ascending\_vec@{sort\_float\_ascending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_float\_ascending\_vec()}{sort\_float\_ascending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+float\+\_\+ascending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort a float array in ascending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{3.2, 1.8, 5.4, 3.9, 4.1, 1.8\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_float\_ascending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_aa00a4a66c9cd3273144a7bb46d7f2240}\label{vector_8h_aa00a4a66c9cd3273144a7bb46d7f2240}} 
+\index{vector.h@{vector.h}!sort\_float\_descending\_vec@{sort\_float\_descending\_vec}}
+\index{sort\_float\_descending\_vec@{sort\_float\_descending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_float\_descending\_vec()}{sort\_float\_descending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+float\+\_\+descending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort a float array in descending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_float\_descending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_a26b20866de603d66b1cf77eb932ba6fa}\label{vector_8h_a26b20866de603d66b1cf77eb932ba6fa}} 
+\index{vector.h@{vector.h}!sort\_int\_ascending\_vec@{sort\_int\_ascending\_vec}}
+\index{sort\_int\_ascending\_vec@{sort\_int\_ascending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_int\_ascending\_vec()}{sort\_int\_ascending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+int\+\_\+ascending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort an integer array in ascending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{5, 4, 3, 2, 1\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_int\_ascending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [0, 1, 2, 3, 4, 5]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8h_ac11392793d2ac7a3c5a9bfeb8977e30b}\label{vector_8h_ac11392793d2ac7a3c5a9bfeb8977e30b}} 
+\index{vector.h@{vector.h}!sort\_int\_descending\_vec@{sort\_int\_descending\_vec}}
+\index{sort\_int\_descending\_vec@{sort\_int\_descending\_vec}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_int\_descending\_vec()}{sort\_int\_descending\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+int\+\_\+descending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will sort an integer array in descending order 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_int\_descending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> [6, 5, 4, 3, 2, 1]}}
 
 \end{DoxyCode}
  \\
