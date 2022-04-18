@@ -770,7 +770,7 @@ void sort_char_descending_vec(Vector *array) {
 }
 // --------------------------------------------------------------------------------
 
-void sort_descending_vec(Vector *array, int order) {
+void sort_vec(Vector *array, int order) {
 	if (array->dat == INT && order == 0)
 		sort_int_ascending_vec(array);
 	else if (array->dat == FLOAT && order == 0)
@@ -789,6 +789,66 @@ void sort_descending_vec(Vector *array, int order) {
 		sort_char_descending_vec(array);
 	else
 		printf("WARNING: Vector data type must be INT, FLOAT, DOUBLE, or CHAR, or order must equal 0 or 1");
+}
+// --------------------------------------------------------------------------------
+
+int median_int_vec(Vector *array) {
+	// Sort array in ascending order
+	sort_vec(array, 0);
+	if (array->len % 2 == 0) {
+		int mid = array->len / 2;
+		return int_vector_val(array, mid-1);
+	}
+	else {
+		int mid = ((array->len - 1) / 2) + 1;
+		return int_vector_val(array, mid-1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+float median_float_vec(Vector *array) {
+	// Sort array in ascending order
+	sort_vec(array, 0);
+	if (array->len % 2 == 0) {
+		int mid = array->len / 2;
+		float val_one = float_vector_val(array, mid - 1);
+		float val_two = float_vector_val(array, mid);
+		return (val_one + val_two) / 2.0f;
+	}
+	else {
+		int mid = ((array->len - 1) / 2) + 1;
+		return float_vector_val(array, mid-1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+double median_double_vec(Vector *array) {
+	// Sort array in ascending order
+	sort_vec(array, 0);
+	if (array->len % 2 == 0) {
+		int mid = array->len / 2;
+		double val_one = double_vector_val(array, mid - 1);
+		double val_two = double_vector_val(array, mid);
+		return (val_one + val_two) / 2.0;
+	}
+	else {
+		int mid = ((array->len - 1) / 2) + 1;
+		return double_vector_val(array, mid-1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+char median_char_vec(Vector *array) {
+	// Sort array in ascending order
+	sort_vec(array, 0);
+	if (array->len % 2 == 0) {
+		int mid = array->len / 2;
+		return char_vector_val(array, mid-1);
+	}
+	else {
+		int mid = ((array->len - 1) / 2) + 1;
+		return char_vector_val(array, mid-1);
+	}
 }
 // ================================================================================
 // ================================================================================

@@ -92,7 +92,15 @@ void \mbox{\hyperlink{vector_8c_a7ee9380817dcb30adc766fbf433f037a}{sort\+\_\+dou
 \item 
 void \mbox{\hyperlink{vector_8c_a77c5077c7de01acfadd59550f2931227}{sort\+\_\+char\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
-void \mbox{\hyperlink{vector_8c_abb7b4f117c79c5486da10368352fbd25}{sort\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, int order)
+void \mbox{\hyperlink{vector_8c_a728bdab51bb13e8f43e4d068edcfd7ff}{sort\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, int order)
+\item 
+int \mbox{\hyperlink{vector_8c_a79ca0fa54c042ed750bdc7fc3e381295}{median\+\_\+int\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+float \mbox{\hyperlink{vector_8c_aa27d678c88f4e879b2c499d25e3de84b}{median\+\_\+float\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+double \mbox{\hyperlink{vector_8c_a730794b7bcaf511f1299c92b26c276e0}{median\+\_\+double\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+char \mbox{\hyperlink{vector_8c_a5f3b6ae2d42617c08ddc76b38007c551}{median\+\_\+char\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -681,7 +689,63 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{ \textcolor{comment}{// >> 0}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8c_a7c77ba41b1a3f8f68e4a02d10c729e02}\label{vector_8c_a7c77ba41b1a3f8f68e4a02d10c729e02}} 
+ \mbox{\Hypertarget{vector_8c_a5f3b6ae2d42617c08ddc76b38007c551}\label{vector_8c_a5f3b6ae2d42617c08ddc76b38007c551}} 
+\index{vector.c@{vector.c}!median\_char\_vec@{median\_char\_vec}}
+\index{median\_char\_vec@{median\_char\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_char\_vec()}{median\_char\_vec()}}
+{\footnotesize\ttfamily char median\+\_\+char\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will return the median of a character vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median size\+\_\+t indices = 10; char name\mbox{[}6\mbox{]} = \char`\"{}array\char`\"{}; dat\+\_\+type dtype = CHAR; Array arr\+\_\+test = init\+\_\+array(dtype, indices, name); char a\mbox{[}6\mbox{]} = \char`\"{}hello\char`\"{}; append\+\_\+array(\&arr\+\_\+test, a, 6); char med = median\+\_\+char\+\_\+vec(\&arr\+\_\+test); // \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} \textquotesingle{}l\textquotesingle{}  
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_a730794b7bcaf511f1299c92b26c276e0}\label{vector_8c_a730794b7bcaf511f1299c92b26c276e0}} 
+\index{vector.c@{vector.c}!median\_double\_vec@{median\_double\_vec}}
+\index{median\_double\_vec@{median\_double\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_double\_vec()}{median\_double\_vec()}}
+{\footnotesize\ttfamily double median\+\_\+double\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will return the median of a double vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median size\+\_\+t indices = 10; char name\mbox{[}6\mbox{]} = \char`\"{}array\char`\"{}; dat\+\_\+type dtype = DOUBLE; Array arr\+\_\+test = init\+\_\+array(dtype, indices, name); double a\mbox{[}4\mbox{]} = \{3.\+2, 5.\+1, 3.\+0, 2.\+0, 0.\+5\}; append\+\_\+array(\&arr\+\_\+test, a, 4); double med = median\+\_\+float\+\_\+vec(\&arr\+\_\+test); // \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 2.\+5  
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_aa27d678c88f4e879b2c499d25e3de84b}\label{vector_8c_aa27d678c88f4e879b2c499d25e3de84b}} 
+\index{vector.c@{vector.c}!median\_float\_vec@{median\_float\_vec}}
+\index{median\_float\_vec@{median\_float\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_float\_vec()}{median\_float\_vec()}}
+{\footnotesize\ttfamily float median\+\_\+float\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will return the median of a float vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median size\+\_\+t indices = 10; char name\mbox{[}6\mbox{]} = \char`\"{}array\char`\"{}; dat\+\_\+type dtype = FLOAT; Array arr\+\_\+test = init\+\_\+array(dtype, indices, name); float a\mbox{[}4\mbox{]} = \{3.\+2, 5.\+1, 3.\+0, 2.\+0, 0.\+5\}; append\+\_\+array(\&arr\+\_\+test, a, 4); float med = median\+\_\+float\+\_\+vec(\&arr\+\_\+test); // \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 2.\+5  
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_a79ca0fa54c042ed750bdc7fc3e381295}\label{vector_8c_a79ca0fa54c042ed750bdc7fc3e381295}} 
+\index{vector.c@{vector.c}!median\_int\_vec@{median\_int\_vec}}
+\index{median\_int\_vec@{median\_int\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_int\_vec()}{median\_int\_vec()}}
+{\footnotesize\ttfamily int median\+\_\+int\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will return the median of an integer vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice. 
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median size\+\_\+t indices = 10; char name\mbox{[}6\mbox{]} = \char`\"{}array\char`\"{}; dat\+\_\+type dtype = INT; Array arr\+\_\+test = init\+\_\+array(dtype, indices, name); int a\mbox{[}4\mbox{]} = \{3, 5, 1, 2\}; append\+\_\+array(\&arr\+\_\+test, a, 4); int med = median\+\_\+int\+\_\+vec(\&arr\+\_\+test); // \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 2  
+\end{DoxyReturn}
+\mbox{\Hypertarget{vector_8c_a7c77ba41b1a3f8f68e4a02d10c729e02}\label{vector_8c_a7c77ba41b1a3f8f68e4a02d10c729e02}} 
 \index{vector.c@{vector.c}!pop\_vector@{pop\_vector}}
 \index{pop\_vector@{pop\_vector}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{pop\_vector()}{pop\_vector()}}
@@ -1023,31 +1087,6 @@ This function will sort a char array in descending order
  \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{vector_8c_abb7b4f117c79c5486da10368352fbd25}\label{vector_8c_abb7b4f117c79c5486da10368352fbd25}} 
-\index{vector.c@{vector.c}!sort\_descending\_vec@{sort\_descending\_vec}}
-\index{sort\_descending\_vec@{sort\_descending\_vec}!vector.c@{vector.c}}
-\doxysubsubsection{\texorpdfstring{sort\_descending\_vec()}{sort\_descending\_vec()}}
-{\footnotesize\ttfamily void sort\+\_\+descending\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array,  }\item[{int}]{order }\end{DoxyParamCaption})}
-
-This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types. 
-\begin{DoxyParams}{Parameters}
-{\em array} & An array container \\
-\hline
-{\em order} & 1 for ascending, 2 for descending 
-\begin{DoxyCode}{1}
-\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
-\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
-\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
-\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
-\DoxyCodeLine{sort\_descending(\&arr\_test);}
-\DoxyCodeLine{\textcolor{comment}{// >> ['Q', 'F', 'D', 'A']}}
-
-\end{DoxyCode}
- \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{vector_8c_aa100149dd25f899627f8877c5bee74a5}\label{vector_8c_aa100149dd25f899627f8877c5bee74a5}} 
 \index{vector.c@{vector.c}!sort\_double\_ascending\_vec@{sort\_double\_ascending\_vec}}
 \index{sort\_double\_ascending\_vec@{sort\_double\_ascending\_vec}!vector.c@{vector.c}}
@@ -1181,6 +1220,31 @@ This function will sort an integer array in descending order
 \DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_int\_descending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [6, 5, 4, 3, 2, 1]}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vector_8c_a728bdab51bb13e8f43e4d068edcfd7ff}\label{vector_8c_a728bdab51bb13e8f43e4d068edcfd7ff}} 
+\index{vector.c@{vector.c}!sort\_vec@{sort\_vec}}
+\index{sort\_vec@{sort\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{sort\_vec()}{sort\_vec()}}
+{\footnotesize\ttfamily void sort\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types. 
+\begin{DoxyParams}{Parameters}
+{\em array} & An array container \\
+\hline
+{\em order} & 1 for ascending, 2 for descending 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{sort\_descending(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['Q', 'F', 'D', 'A']}}
 
 \end{DoxyCode}
  \\

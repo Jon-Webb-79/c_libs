@@ -163,8 +163,16 @@ Functions</h2></td></tr>
 <tr class="separator:a7ee9380817dcb30adc766fbf433f037a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77c5077c7de01acfadd59550f2931227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a77c5077c7de01acfadd59550f2931227">sort_char_descending_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
 <tr class="separator:a77c5077c7de01acfadd59550f2931227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb7b4f117c79c5486da10368352fbd25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#abb7b4f117c79c5486da10368352fbd25">sort_descending_vec</a> (<a class="el" href="structVector.html">Vector</a> *array, int order)</td></tr>
-<tr class="separator:abb7b4f117c79c5486da10368352fbd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728bdab51bb13e8f43e4d068edcfd7ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a728bdab51bb13e8f43e4d068edcfd7ff">sort_vec</a> (<a class="el" href="structVector.html">Vector</a> *array, int order)</td></tr>
+<tr class="separator:a728bdab51bb13e8f43e4d068edcfd7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ca0fa54c042ed750bdc7fc3e381295"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a79ca0fa54c042ed750bdc7fc3e381295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27d678c88f4e879b2c499d25e3de84b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:aa27d678c88f4e879b2c499d25e3de84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730794b7bcaf511f1299c92b26c276e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a730794b7bcaf511f1299c92b26c276e0">median_double_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a730794b7bcaf511f1299c92b26c276e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3b6ae2d42617c08ddc76b38007c551"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a5f3b6ae2d42617c08ddc76b38007c551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac09911a1012b6977d3daf15c9eace5f9" name="ac09911a1012b6977d3daf15c9eace5f9"></a>
@@ -1036,6 +1044,106 @@ Functions</h2></td></tr>
 </div><!-- fragment --> 
 </div>
 </div>
+<a id="a5f3b6ae2d42617c08ddc76b38007c551" name="a5f3b6ae2d42617c08ddc76b38007c551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3b6ae2d42617c08ddc76b38007c551">&#9670;&nbsp;</a></span>median_char_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char median_char_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median of a character vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = CHAR; Array arr_test = init_array(dtype, indices, name); char a[6] = "hello"; append_array(&amp;arr_test, a, 6); char med = median_char_vec(&amp;arr_test); // &gt;&gt; 'l'  </dd></dl>
+
+</div>
+</div>
+<a id="a730794b7bcaf511f1299c92b26c276e0" name="a730794b7bcaf511f1299c92b26c276e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730794b7bcaf511f1299c92b26c276e0">&#9670;&nbsp;</a></span>median_double_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double median_double_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median of a double vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = DOUBLE; Array arr_test = init_array(dtype, indices, name); double a[4] = {3.2, 5.1, 3.0, 2.0, 0.5}; append_array(&amp;arr_test, a, 4); double med = median_float_vec(&amp;arr_test); // &gt;&gt; 2.5  </dd></dl>
+
+</div>
+</div>
+<a id="aa27d678c88f4e879b2c499d25e3de84b" name="aa27d678c88f4e879b2c499d25e3de84b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27d678c88f4e879b2c499d25e3de84b">&#9670;&nbsp;</a></span>median_float_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float median_float_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median of a float vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = FLOAT; Array arr_test = init_array(dtype, indices, name); float a[4] = {3.2, 5.1, 3.0, 2.0, 0.5}; append_array(&amp;arr_test, a, 4); float med = median_float_vec(&amp;arr_test); // &gt;&gt; 2.5  </dd></dl>
+
+</div>
+</div>
+<a id="a79ca0fa54c042ed750bdc7fc3e381295" name="a79ca0fa54c042ed750bdc7fc3e381295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ca0fa54c042ed750bdc7fc3e381295">&#9670;&nbsp;</a></span>median_int_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int median_int_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median of an integer vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = INT; Array arr_test = init_array(dtype, indices, name); int a[4] = {3, 5, 1, 2}; append_array(&amp;arr_test, a, 4); int med = median_int_vec(&amp;arr_test); // &gt;&gt; 2  </dd></dl>
+
+</div>
+</div>
 <a id="a7c77ba41b1a3f8f68e4a02d10c729e02" name="a7c77ba41b1a3f8f68e4a02d10c729e02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c77ba41b1a3f8f68e4a02d10c729e02">&#9670;&nbsp;</a></span>pop_vector()</h2>
 
@@ -1616,49 +1724,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abb7b4f117c79c5486da10368352fbd25" name="abb7b4f117c79c5486da10368352fbd25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb7b4f117c79c5486da10368352fbd25">&#9670;&nbsp;</a></span>sort_descending_vec()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void sort_descending_vec </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>order</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">order</td><td>1 for ascending, 2 for descending <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
-<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
-<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
-<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
-<div class="line"><span class="keywordtype">char</span> a[5] = <span class="stringliteral">&quot;QDAF&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
-<div class="line">sort_descending(&amp;arr_test);</div>
-<div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="aa100149dd25f899627f8877c5bee74a5" name="aa100149dd25f899627f8877c5bee74a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa100149dd25f899627f8877c5bee74a5">&#9670;&nbsp;</a></span>sort_double_ascending_vec()</h2>
 
@@ -1844,6 +1909,49 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_int_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [6, 5, 4, 3, 2, 1]</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a728bdab51bb13e8f43e4d068edcfd7ff" name="a728bdab51bb13e8f43e4d068edcfd7ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728bdab51bb13e8f43e4d068edcfd7ff">&#9670;&nbsp;</a></span>sort_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sort_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>order</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">order</td><td>1 for ascending, 2 for descending <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">char</span> a[5] = <span class="stringliteral">&quot;QDAF&quot;</span>;</div>
+<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line">sort_descending(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>

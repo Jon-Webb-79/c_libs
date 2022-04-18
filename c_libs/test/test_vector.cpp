@@ -1047,11 +1047,140 @@ TEST(sort_data_descending, sort) {
 	Vector arr_test = init_vector(dtype, indices, name);
 	char a[5] = "QDAF";
 	append_vector(&arr_test, a, 5);
-	sort_descending_vec(&arr_test, 1);
+	sort_vec(&arr_test, 1);
 	EXPECT_EQ(char_vector_val(&arr_test, 0), 'Q');
 	EXPECT_EQ(char_vector_val(&arr_test, 1), 'F');
 	EXPECT_EQ(char_vector_val(&arr_test, 2), 'D');
 	EXPECT_EQ(char_vector_val(&arr_test, 3), 'A');
+	free_vector(&arr_test);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the median_int_vec function to ensure it properly
+ * returns the median of an integer vector container with an even number
+ * of indices */
+TEST(median, int_even) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[4] = {3, 5, 2, 1};
+	append_vector(&arr_test, a, 4);
+	int med = median_int_vec(&arr_test);
+	EXPECT_EQ(med, 2);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_int_vec function to ensure it properly
+ * returns the median of an integer vector container with an odd number
+ * of indices */
+TEST(median, int_odd) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[5] = {3, 5, 2, 1, 0};
+	append_vector(&arr_test, a, 5);
+	int med = median_int_vec(&arr_test);
+	EXPECT_EQ(med, 2);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_float_vec function to ensure it properly
+ * returns the median of a float vector container with an even number
+ * of indices */
+TEST(median, float_even) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[4] = {3.2, 5.3, 2.8, 1.0};
+	append_vector(&arr_test, a, 4);
+	float med = median_float_vec(&arr_test);
+	EXPECT_FLOAT_EQ(med, 3.0f);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_float_vec function to ensure it properly
+ * returns the median of a float vector container with an odd number
+ * of indices */
+TEST(median, float_odd) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[5] = {3.2, 5.3, 2.8, 1.0, 0.5};
+	append_vector(&arr_test, a, 5);
+	float med = median_float_vec(&arr_test);
+	EXPECT_FLOAT_EQ(med, 2.8f);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_double_vec function to ensure it properly
+ * returns the median of a double vector container with an even number
+ * of indices */
+TEST(median, double_even) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[4] = {3.2, 5.3, 2.8, 1.0};
+	append_vector(&arr_test, a, 4);
+	double med = median_double_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(med, 3.0);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_double_vec function to ensure it properly
+ * returns the median of a double vector container with an odd number
+ * of indices */
+TEST(median, double_odd) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[5] = {3.2, 5.3, 2.8, 1.0, 0.5};
+	append_vector(&arr_test, a, 5);
+	double med = median_double_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(med, 2.8);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_char_vec function to ensure it properly
+ * returns the median of a char vector container with an even number
+ * of indices */
+TEST(median, char_even) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+	char a[6] = "hello";
+	append_vector(&arr_test, a, 6);
+	char med = median_char_vec(&arr_test);
+	EXPECT_EQ(med, 'l');
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_char_vec function to ensure it properly
+ * returns the median of a char vector container with an odd number
+ * of indices */
+TEST(median, char_odd) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = CHAR;
+	Vector arr_test = init_vector(dtype, indices, name);
+	char a[7] = "heowqf";
+	append_vector(&arr_test, a, 7);
+	char med = median_char_vec(&arr_test);
+	EXPECT_EQ(med, 'o');
 	free_vector(&arr_test);
 }
 // ================================================================================

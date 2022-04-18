@@ -1031,7 +1031,87 @@ void sort_char_descending_vec(Vector *array);
  * // >> ['Q', 'F', 'D', 'A']
  * @endcode
  */
-void sort_descending_vec(Vector *array, int order);
+void sort_vec(Vector *array, int order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median of an integer vector container.  If the
+ * container has an even number of values, it will retrun the value present
+ * at the maximum indice divided by 2.  If the container has an odd number of
+ * indices, it will return the value at the mid indice.
+ * @param array A vector container
+ * @return median
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[4] = {3, 5, 1, 2};
+ * append_array(&arr_test, a, 4);
+ * int med = median_int_vec(&arr_test);
+ * // >> 2
+ * @endcode
+ */
+int median_int_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median of a float vector container.  If the
+ * container has an even number of values, it will retrun the average value of
+ * the middle two indices.  If the container has an odd number of
+ * indices, it will return the value at the mid indice.
+ * @param array A vector container
+ * @return median
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[4] = {3.2, 5.1, 3.0, 2.0, 0.5};
+ * append_array(&arr_test, a, 4);
+ * float med = median_float_vec(&arr_test);
+ * // >> 2.5
+ * @endcode
+ */
+float median_float_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median of a double vector container.  If the
+ * container has an even number of values, it will retrun the average value of
+ * the middle two indices.  If the container has an odd number of
+ * indices, it will return the value at the mid indice.
+ * @param array A vector container
+ * @return median
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[4] = {3.2, 5.1, 3.0, 2.0, 0.5};
+ * append_array(&arr_test, a, 4);
+ * double med = median_float_vec(&arr_test);
+ * // >> 2.5
+ * @endcode
+ */
+double median_double_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median of a character vector container.  If the
+ * container has an even number of values, it will retrun the value present
+ * at the maximum indice divided by 2.  If the container has an odd number of
+ * indices, it will return the value at the mid indice.
+ * @param array A vector container
+ * @return median
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = CHAR;
+ * Array arr_test = init_array(dtype, indices, name);
+ * char a[6] = "hello";
+ * append_array(&arr_test, a, 6);
+ * char med = median_char_vec(&arr_test);
+ * // >> 'l'
+ * @endcode
+ */
+char median_char_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================
