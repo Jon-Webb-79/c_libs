@@ -1274,6 +1274,67 @@ float sum_float_vec(Vector *array);
  * // >> 23.1
  */
 double sum_double_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average of all values in a vector
+ * container of integers.  Even though the values in the container are integers,
+ * the average of a group of integers is a real value.
+ *
+ *@param array A vector container
+ @return average The average of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 2, 3, 4, 5, 6};
+ * append_array(&arr_test, a, 6);*
+ * float average = average_int_vec(arr_test);
+ * // >> 3.5
+ */
+float average_int_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average of all values in a vector
+ * container of float values.
+ *
+ *@param array A vector container
+ @return average The average of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);*
+ * float average = average_float_vec(arr_test);
+ * // >> 3.85
+ */
+float average_float_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average of all values in a vector
+ * container of double values.
+ *
+ *@param array A vector container
+ @return average The average of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);*
+ * double average = average_double_vec(arr_test);
+ * // >> 3.85
+ */
+double average_double_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

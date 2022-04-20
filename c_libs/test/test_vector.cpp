@@ -1200,7 +1200,7 @@ TEST(sum, sum_integer) {
 }
 // --------------------------------------------------------------------------------
 
-/* This function tests the sum_int_vec function to ensure it properly returns
+/* This function tests the sum_float_vec function to ensure it properly returns
  * the sum of all values in a float vector container */
 TEST(sum, sum_float) {
 	size_t indices = 10;
@@ -1214,7 +1214,7 @@ TEST(sum, sum_float) {
 }
 // --------------------------------------------------------------------------------
 
-/* This function tests the sum_int_vec function to ensure it properly returns
+/* This function tests the sum_double_vec function to ensure it properly returns
  * the sum of all values in a double vector container */
 TEST(sum, sum_double) {
 	size_t indices = 10;
@@ -1225,6 +1225,49 @@ TEST(sum, sum_double) {
 	append_vector(&arr_test, a, 6);
 	double sum = sum_double_vec(&arr_test);
 	EXPECT_DOUBLE_EQ(sum, 23.1);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the average_int_vec function to ensure it properly returns
+ * the sum of all values in an integer vector container */
+TEST(average, avg_integer) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[6] = {1, 2, 3, 4, 5, 6};
+	append_vector(&arr_test, a, 6);
+	float average = average_int_vec(&arr_test);
+	EXPECT_FLOAT_EQ(average, 3.5f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_float_vec function to ensure it properly returns
+ * the sum of all values in a float vector container */
+TEST(average, avg_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_vector(&arr_test, a, 6);
+	float average = average_float_vec(&arr_test);
+	EXPECT_FLOAT_EQ(average, 3.85f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_double_vec function to ensure it properly returns
+ * the sum of all values in a double vector container */
+TEST(average, avg_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_vector(&arr_test, a, 6);
+	double average = average_double_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(average, 3.85);
 }
 // ================================================================================
 // ================================================================================

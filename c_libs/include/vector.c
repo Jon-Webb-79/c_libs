@@ -877,6 +877,24 @@ double sum_double_vec(Vector *array) {
 	}
 	return sum;
 }
+// --------------------------------------------------------------------------------
+
+float average_int_vec(Vector *array) {
+	int sum = sum_int_vec(array);
+	return sum / (float) array->len;
+}
+// --------------------------------------------------------------------------------
+
+float average_float_vec(Vector *array) {
+	float sum = sum_float_vec(array);
+	return sum / (float) array->len;
+}
+// --------------------------------------------------------------------------------
+
+double average_double_vec(Vector *array) {
+	double sum = sum_double_vec(array);
+	return sum / (double) array->len;
+}
 // ================================================================================
 // ================================================================================
 // eof
