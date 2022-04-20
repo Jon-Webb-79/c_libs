@@ -21,7 +21,8 @@
 #include <string.h>
 
 /**
- * A container to describe different data types
+ * An enum container with variables describing relevant data types
+ *
  * @param FLOAT An integer representing float data types
  * &param DOUBLE An integer representing double data types
  * @param CHAR An integer representing char data types
@@ -38,11 +39,12 @@ typedef enum
 
 /**
  * A container for a dynamically allocated array and related data
+ *
  * @param array a pointer to an array in memory
  * @param len The active length of the array
  * @param size The total number of indices allocated for the array
  * @param elem The memory consumption for each indice
- * @param name The name of the array
+ * @param name The name of the array, constrained to 20 characters
  */
 typedef struct
 {
@@ -59,7 +61,8 @@ typedef struct
  * This function instantiates an Array container and all relevant variables. This
  * function should not be used directly.  Instead the user should invoke the
  * init_array function, which wraps this function.
- * @param array an Array structure
+ *
+ * @param array A vector container
  * @param num_indices A guess for the number of indices that will be consumed by the array
  */
 void vector_mem_alloc(Vector *array, size_t num_indices);
@@ -67,18 +70,20 @@ void vector_mem_alloc(Vector *array, size_t num_indices);
 
 /**
  * This function is the primary user interface to instantiate the Array container.
- * @param dtype An integer representing the data type, can be FLOAT,
- *              DOUBLE, CHAR, or INT
+ *
+ * @param dat An integer representing the data type.  The acceptable data types
+ *            are FLOAT, DOUBLE, CHAR, or INT
  * @param num_indices A guess for the number of indices required by the array
  * @param name The name of the array as a character string
  * @return a Vector container
  *
  * The following is a code example for how to instantiate the container for
  * an integer;
+ *
  * @code
  * size_t indices = 20;
  * char dtype[4] = "int";
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  * @endcode
  */
@@ -86,24 +91,26 @@ Vector init_vector(dat_type dat, size_t num_indices, char *name);
 // --------------------------------------------------------------------------------
 
 /**
- * This function allows a user to append an existing or blank array container
- * with scalars or arrays of any data type except strings.
+ * This function allows a user to append an existing or blank vector container
+ * with scalars or arrays of any data type.
+ *
  * @param array A pointer to the memory location where an array exists
  * @param elements A scalar or an array of variables.  The variables can
  *                 be of any data type, so as long as they are of the same
  *                 data type as the array being appended.
  * @param count The size of the elements data type in number of indices they
  *              will occupy
- * @return integer A 0 or 1 indicating success of the function.
+ * @return integer A 0 if teh function was unsuccesful, 1 if it was succesful
  *
  * The following demonstrates several ways that the append_array function can
  * be uses.  In these instances, the function will be used for an array
- * of integers
+ * of integers.
+ *
  * @code
  * // Instantiate array
  * size_t indices = 20;
  * dat_type dtype INT;
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
  * // Build array from scalar values
@@ -142,26 +149,29 @@ int append_vector(Vector *array, void *elements, size_t count);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will free all memory allocation from an array and associated
+ * This function will free all memory allocation from a vector container
  * struct elements
- * @param array the array container
+ *
+ * @param array A vector container
  */
 void free_vector(Vector *array);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will return the value of an array assigned to a user specified
- * indice, so as long as the data point is an integer.
+ * This function will return the value of a vector container assigned to a user
+ * specified indice, so as long as the data point is an integer.
+ *
  * @param array The array container
- * @param indice The indice the user wishes returned
+ * @param indice A vector indice
  * @return value The integer value associated with an indice
  *
  * When a user instantiates and populates an array they must access the array
  * by casting it prior to retrieving the value.
+ *
  * @code
  * size_t indices = 20;
  * dat_type dtype = INT;
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
  * // Build from an already existing array
@@ -183,16 +193,18 @@ int int_vector_val(Vector *array, int indice);
 /**
  * This function will return the value of an array assigned to a user specified
  * indice, so as long as the data point is a float.
+ *
  * @param array The array container
- * @param indice The indice the user wishes returned
+ * @param indice A vector indice
  * @return value The integer value associated with an indice
  *
  * When a user instantiates and populates an array they must access the array
  * by casting it prior to retrieving the value.
+ *
  * @code
  * size_t indices = 20;
  * dat_type dtype = FLOAT;
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
  * // Build from an already existing array
@@ -214,16 +226,18 @@ float float_vector_val(Vector *array, int indice);
 /**
  * This function will return the value of an array assigned to a user specified
  * indice, so as long as the data point is a double.
+ *
  * @param array The array container
- * @param indice The indice the user wishes returned
+ * @param indice A vector indice
  * @return value The integer value associated with an indice
  *
  * When a user instantiates and populates an array they must access the array
  * by casting it prior to retrieving the value.
+ *
  * @code
  * size_t indices = 20;
  * dat_type dtype = DOUBLE;
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
  * // Build from an already existing array
@@ -245,16 +259,18 @@ double double_vector_val(Vector *array, int indice);
 /**
  * This function will return the value of an array assigned to a user specified
  * indice, so as long as the data point is a char.
+ *
  * @param array The array container
- * @param indice The indice the user wishes returned
+ * @param indice A vector indice
  * @return value The integer value associated with an indice
  *
  * When a user instantiates and populates an array they must access the array
  * by casting it prior to retrieving the value.
+ *
  * @code
  * size_t indices = 20;
  * dat_type dtype = CHAR;
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
  * // Build from an already existing array
@@ -279,7 +295,8 @@ char char_vector_val(Vector *array, int indice);
 // --------------------------------------------------------------------------------
 /**
  * This function allows a user to preappend an existing or blank array container
- * with scalars or arrays of any data type except strings.
+ * with scalars or arrays of any data type.
+ *
  * @param array A pointer to the memory location where an array exists
  * @param elements A scalar or an array of variables.  The variables can
  *                 be of any data type, so as long as they are of the same
@@ -291,11 +308,12 @@ char char_vector_val(Vector *array, int indice);
  * The following demonstrates several ways that the append_array function can
  * be uses.  In these instances, the function will be used for an array
  * of integers
+ *
  * @code
  * // Instantiate array
  * size_t indices = 20;
  * dat_type dtype = INT;
- * char name[5] = "Array";
+ * char name[6] = "Array";
  * Array arr_test = init_array(dtype, indices, name);
  *
  * // Build the base array
@@ -335,15 +353,14 @@ int preappend_vector(Vector *array, void *elements, size_t count);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will delete a user defined indices from the array.  However, the
+ * This function will delete a user defined index from the array.  However, the
  * function must be embedded within an Array container and the container must be
  * passed to the function
  *
  * @param array An Array container
- * @param indice The indices within the array that the user wishes to delete
- *               from the array
+ * @param indice A vector container indice
  * @return integer An error code of 0 if the user defines an indice greater than
- *                 the array length
+ *                 the array length.  1 if the function is executed succesfully.
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -354,6 +371,7 @@ int preappend_vector(Vector *array, void *elements, size_t count);
  * pop_array(&arr_test, 2);
  * // >> [10.1, 9.2, 7.4]
  * @endcode
+ *
  * The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4.
  */
 int pop_vector(Vector *array, int indice);
@@ -363,12 +381,14 @@ int pop_vector(Vector *array, int indice);
  * This function will find the indices that contain a user specified integer.
  * This function allocates array space in heap memory and will return NULL
  * if the array does not contain the appropriate value.
+ *
  * @param array An array container
- * @param integer the integer the user wishes to find an indice for
+ * @param integer A vector container array
  * @return Vector A vector containing all indices associatd with the user
  *               specified integer.
+ *
  * @code
- *size_t indices = 10;
+ * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = INT;
  * Array arr_test = init_array(dtype, indices, name);
@@ -388,16 +408,18 @@ Vector find_int_vector_indices(Vector *array, int integer);
  * This function will find the indices that contain a user specified float value.
  * This function allocates array space in heap memory and will return NULL
  * if the array does not contain the appropriate value.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param float_val the float value the user wishes to find an indice for
- * @return array An array containing all indices associatd with the user
+ * @return Vector A vector containing all indices associatd with the user
  *               specified float value.
+ *
  * @code
- *size_t indices = 10;
+ * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = FLOAT;
  * Array arr_test = init_array(dtype, indices, name);
- * int a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
+ * float a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};
  * append_array(&arr_test, a, 7);
  * Array p = find_float_array_indices(&arr_test, 6.2f);
  * // p allocation
@@ -413,12 +435,14 @@ Vector find_float_vector_indices(Vector *array, float float_val);
  * This function will find the indices that contain a user specified double value.
  * This function allocates array space in heap memory and will return NULL
  * if the array does not contain the appropriate value.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param double_val the double value the user wishes to find an indice for
- * @return array An array containing all indices associatd with the user
- *               specified float value.
+ * @return Vector A vector containing all indices associatd with the user
+ *                specified float value.
+ *
  * @code
- *size_t indices = 10;
+ * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = DOUBLE;
  * Array arr_test = init_array(dtype, indices, name);
@@ -438,14 +462,16 @@ Vector find_double_vector_indices(Vector *array, double double_val);
  * This function will find the indices that contain a user specified char value.
  * This function allocates array space in heap memory and will return NULL
  * if the array does not contain the appropriate value.
- * @param array An array container
- * @param double_val the double value the user wishes to find an indice for
- * @return array An array containing all indices associatd with the user
- *               specified float value.
+ *
+ * @param array A vector container
+ * @param char_val the char value the user wishes to find an indice for
+ * @return vector A vector containing all indices associatd with the user
+ *                specified float value.
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
- * dat_type dtype = DOUBLE
+ * dat_type dtype = CHAR;
  * Array arr_test = init_array(dtype, indices, name);
  * char a[7] = {a, b, b, q, b, a, c};
  * append_array(&arr_test, a, 7);
@@ -461,9 +487,11 @@ Vector find_char_vector_indices(Vector *array, char char_val);
 /**
  * This function will find all integer values occurances in an array
  * and delete them.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param int_value An integer value that the user wishes to delete
  *                  from an array
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -481,9 +509,11 @@ void delete_int_vec_values(Vector *array, int int_value);
 /**
  * This function will find all float values occurances in an array
  * and delete them.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param float_value A float value that the user wishes to delete
  *                    from an array
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -501,9 +531,11 @@ void delete_float_vec_values(Vector *array, float float_value);
 /**
  * This function will find all double values occurances in an array
  * and delete them.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param double_value A double value that the user wishes to delete
- *                    from an array
+ *                     from an array
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -521,9 +553,11 @@ void delete_double_vec_values(Vector *array, double double_value);
 /**
  * This function will find all char values occurances in an array
  * and delete them.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param char_value A char value that the user wishes to delete
  *                   from an array
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -541,9 +575,12 @@ void delete_char_vec_values(Vector *array, char char_value);
 /**
  * This function will replace an integer value at a user defined indice
  * with another integer
- * @param array An array container
+ *
+ * @param array A vector container
+ * @param index The index containing a value to be replaced
  * @param replacement_value An integer value that will replace the existing
  *                          integer value at the index location
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -561,9 +598,12 @@ int replace_int_vector_index(Vector *array, int index, int replacement_value);
 /**
  * This function will replace a float value at a user defined indice
  * with another float value
- * @param array An array container
+ *
+ * @param array A vector container
+ * @param index The index containing a value to be replaced
  * @param replacement_value A float value that will replace the existing
  *                          float value at the index location
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -581,9 +621,12 @@ int replace_float_vector_index(Vector *array, int index, float replacement_value
 /**
  * This function will replace a double value at a user defined indice
  * with another double value
- * @param array An array container
+ *
+ * @param array A vector container
+ * @param index The index containing a value to be replaced
  * @param replacement_value A double value that will replace the existing
  *                          double value at the index location
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -601,9 +644,12 @@ int replace_double_vector_index(Vector *array, int index, double replacement_val
 /**
  * This function will replace a char value at a user defined indice
  * with another char value
- * @param array An array container
+ *
+ * @param array A vector container
+ * @param index The index containing a value to be replaced
  * @param replacement_value A double value that will replace the existing
  *                          double value at the index location
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -621,9 +667,11 @@ int replace_char_vector_index(Vector *array, int index, char replacement_value);
 /**
  * This function will replace integer values defined by a user
  * with another integer
- * @param array An array container
+ *
+ * @param array A vector container
  * @param old_val The integer value to be replaced
  * @param new_val An integer value that will replace the old_val
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -641,9 +689,11 @@ void replace_int_vector_element(Vector *array, int old_val, int new_val);
 /**
  * This function will replace float values defined by a user
  * with another float value
- * @param array An array container
+ *
+ * @param array A vector container
  * @param old_val The float value to be replaced
  * @param new_val The float value to replace the old_val
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -661,9 +711,11 @@ void replace_float_vector_element(Vector *array, float old_val, float new_val);
 /**
  * This function will replace double values defined by a user
  * with another double value
- * @param array An array container
+ *
+ * @param array A vector container
  * @param old_val The double value to be replaced
  * @param new_val The double value to replace the old_val
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -681,9 +733,11 @@ void replace_double_vector_element(Vector *array, double old_val, double new_val
 /**
  * This function will replace char values defined by a user
  * with another char value
- * @param array An array container
+ *
+ * @param array A vector container
  * @param old_val The char value to be replaced
  * @param new_val The char value to replace the old_val
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -701,7 +755,9 @@ void replace_char_vector_element(Vector *array, char old_val, char new_val);
 /**
  * This function will delete all duplicate values in an array, so
  * that the final array only contains one instance of each integer
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -719,7 +775,9 @@ void delete_int_duplicates_vec(Vector *array);
 /**
  * This function will delete all duplicate values in an array, so
  * that the final array only contains one instance of each float value
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -737,7 +795,9 @@ void delete_float_duplicates_vec(Vector *array);
 /**
  * This function will delete all duplicate values in an array, so
  * that the final array only contains one instance of each double value
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -755,7 +815,9 @@ void delete_double_duplicates_vec(Vector *array);
 /**
  * This function will delete all duplicate values in an array, so
  * that the final array only contains one instance of each char value
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -773,7 +835,9 @@ void delete_char_duplicates_vec(Vector *array);
 /**
  * This function will delete all values from an integer array except for the
  * unique values.
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -791,7 +855,9 @@ void unique_int_vec(Vector *array);
 /**
  * This function will delete all values from a float array except for the
  * unique values.
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -809,7 +875,9 @@ void unique_float_vec(Vector *array);
 /**
  * This function will delete all values from a double array except for the
  * unique values.
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -827,7 +895,9 @@ void unique_double_vec(Vector *array);
 /**
  * This function will delete all values from a char array except for the
  * unique values.
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -846,7 +916,9 @@ void unique_char_vec(Vector *array);
  * This function will delete all duplicate values in an array, so
  * that the final array only contains one instance of each variable. This
  * function will work with INT, FLOAT, DOUBLE, or CHAR vector containers
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -864,7 +936,9 @@ void delete_duplicates_vec(Vector *array);
 /**
  * This function will delete all values from an array except for the
  * unique values.
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -881,7 +955,9 @@ void unique_vec(Vector *array);
 
 /**
  * This function will sort an integer array in ascending order
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -898,7 +974,9 @@ void sort_int_ascending_vec(Vector *array);
 
 /**
  * This function will sort a float array in ascending order
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -915,7 +993,9 @@ void sort_float_ascending_vec(Vector *array);
 
 /**
  * This function will sort a double array in ascending order
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -932,7 +1012,8 @@ void sort_double_ascending_vec(Vector *array);
 
 /**
  * This function will sort a char array in ascending order
- * @param array An array container
+ *
+ * @param array A vector container
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -949,7 +1030,9 @@ void sort_char_ascending_vec(Vector *array);
 
 /**
  * This function will sort an integer array in descending order
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -966,7 +1049,9 @@ void sort_int_descending_vec(Vector *array);
 
 /**
  * This function will sort a float array in descending order
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -983,7 +1068,8 @@ void sort_float_descending_vec(Vector *array);
 
 /**
  * This function will sort a double array in descending order
- * @param array An array container
+ *
+ * @param array A vector container
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -1000,7 +1086,9 @@ void sort_double_descending_vec(Vector *array);
 
 /**
  * This function will sort a char array in descending order
- * @param array An array container
+ *
+ * @param array A vector container
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -1018,8 +1106,10 @@ void sort_char_descending_vec(Vector *array);
 /**
  * This function will sort an array in descending order.  This function can
  * handle INT, FLOAT, DOUBLE, and CHAR data types.
- * @param array An array container
+ *
+ * @param array A vector container
  * @param order 1 for ascending, 2 for descending
+ *
  * @code
  * size_t indices = 10;
  * char name[6] = "array";
@@ -1039,8 +1129,11 @@ void sort_vec(Vector *array, int order);
  * container has an even number of values, it will retrun the value present
  * at the maximum indice divided by 2.  If the container has an odd number of
  * indices, it will return the value at the mid indice.
+ *
  * @param array A vector container
  * @return median
+ *
+ * @code
  * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = INT;
@@ -1059,8 +1152,11 @@ int median_int_vec(Vector *array);
  * container has an even number of values, it will retrun the average value of
  * the middle two indices.  If the container has an odd number of
  * indices, it will return the value at the mid indice.
+ *
  * @param array A vector container
  * @return median
+ *
+ * @code
  * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = FLOAT;
@@ -1079,8 +1175,11 @@ float median_float_vec(Vector *array);
  * container has an even number of values, it will retrun the average value of
  * the middle two indices.  If the container has an odd number of
  * indices, it will return the value at the mid indice.
+ *
  * @param array A vector container
  * @return median
+ *
+ * @code
  * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = DOUBLE;
@@ -1099,8 +1198,11 @@ double median_double_vec(Vector *array);
  * container has an even number of values, it will retrun the value present
  * at the maximum indice divided by 2.  If the container has an odd number of
  * indices, it will return the value at the mid indice.
+ *
  * @param array A vector container
  * @return median
+ *
+ * @code
  * size_t indices = 10;
  * char name[6] = "array";
  * dat_type dtype = CHAR;

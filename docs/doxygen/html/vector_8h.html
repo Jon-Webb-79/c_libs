@@ -206,7 +206,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >A container to describe different data types </p><dl class="params"><dt>Parameters</dt><dd>
+<p >An enum container with variables describing relevant data types</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">FLOAT</td><td>An integer representing float data types &amp;param DOUBLE An integer representing double data types </td></tr>
     <tr><td class="paramname">CHAR</td><td>An integer representing char data types </td></tr>
@@ -255,7 +256,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function allows a user to append an existing or blank array container with scalars or arrays of any data type except strings. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function allows a user to append an existing or blank vector container with scalars or arrays of any data type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>A pointer to the memory location where an array exists </td></tr>
     <tr><td class="paramname">elements</td><td>A scalar or an array of variables. The variables can be of any data type, so as long as they are of the same data type as the array being appended. </td></tr>
@@ -263,11 +265,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>integer A 0 or 1 indicating success of the function.</dd></dl>
-<p>The following demonstrates several ways that the append_array function can be uses. In these instances, the function will be used for an array of integers </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
+<dl class="section return"><dt>Returns</dt><dd>integer A 0 if teh function was unsuccesful, 1 if it was succesful</dd></dl>
+<p>The following demonstrates several ways that the append_array function can be uses. In these instances, the function will be used for an array of integers.</p>
+<div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build array from scalar values</span></div>
@@ -281,8 +284,8 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// populated array</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2]</span></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a></div><div class="ttdeci">dat_type</div><div class="ttdef"><b>Definition:</b> vector.h:31</div></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:35</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a></div><div class="ttdeci">dat_type</div><div class="ttdef"><b>Definition:</b> vector.h:32</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:36</div></div>
 </div><!-- fragment --><p> The following code will also have the same effect </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line"> <span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"> <a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
@@ -327,17 +330,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is a char. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is a char.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>The array container </td></tr>
-    <tr><td class="paramname">indice</td><td>The indice the user wishes returned </td></tr>
+    <tr><td class="paramname">indice</td><td>A vector indice </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>value The integer value associated with an indice</dd></dl>
-<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
+<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
@@ -345,7 +350,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 7);</div>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">char</span> *)arr_test.array)[0]);</div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:34</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:35</div></div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, char_array_val(&amp;arr_test, 0));</div>
 <div class="line"><span class="comment">// &gt;&gt; H</span></div>
 </div><!-- fragment --><p> However a character array can also be access the traditionale way with the following command. </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, Array.array);</div>
@@ -368,9 +373,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each char value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each char value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -378,11 +388,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="stringliteral">append_array(&amp;arr_test, a, 14);</span></div>
 <div class="line"><span class="stringliteral">delete_char_duplicates_vec(&amp;arr_test);</span></div>
 <div class="line"><span class="stringliteral">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;o&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a0c193f6d294a6f65b20d2603f282e7c5" name="a0c193f6d294a6f65b20d2603f282e7c5"></a>
@@ -410,10 +416,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find all char values occurances in an array and delete them. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find all char values occurances in an array and delete them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">char_value</td><td>A char value that the user wishes to delete from an array <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">char_value</td><td>A char value that the user wishes to delete from an array</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -421,11 +432,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">delete_char_arr_values(&amp;arr_test, <span class="charliteral">&#39;l&#39;</span>);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;o&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a122563df58490a6bc9807c7496fc211e" name="a122563df58490a6bc9807c7496fc211e"></a>
@@ -443,9 +450,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each double value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each double value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -454,12 +466,8 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
 <div class="ttc" id="avector_8c_html_a122563df58490a6bc9807c7496fc211e"><div class="ttname"><a href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a></div><div class="ttdeci">void delete_double_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:471</div></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:33</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:34</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aab9423b7727b5e1bd4285feb916005e2" name="aab9423b7727b5e1bd4285feb916005e2"></a>
@@ -487,10 +495,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find all double values occurances in an array and delete them. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find all double values occurances in an array and delete them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">double_value</td><td>A double value that the user wishes to delete from an array <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">double_value</td><td>A double value that the user wishes to delete from an array</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -498,11 +511,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 7);</div>
 <div class="line">delete_double_arr_values(&amp;arr_test, 6.3);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.0, 3.2, 4.1, 5.7]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a3b714e6f1ad388ab3280fcec12b164b2" name="a3b714e6f1ad388ab3280fcec12b164b2"></a>
@@ -520,9 +529,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each variable. This function will work with INT, FLOAT, DOUBLE, or CHAR vector containers </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each variable. This function will work with INT, FLOAT, DOUBLE, or CHAR vector containers</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -531,11 +545,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 5, 2]</span></div>
 <div class="ttc" id="avector_8c_html_a3b714e6f1ad388ab3280fcec12b164b2"><div class="ttname"><a href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a></div><div class="ttdeci">void delete_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:577</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a2beab0348c5fc9efa3d9a01b2dc98c06" name="a2beab0348c5fc9efa3d9a01b2dc98c06"></a>
@@ -553,9 +563,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each float value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each float value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -564,12 +579,8 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
 <div class="ttc" id="avector_8c_html_a2beab0348c5fc9efa3d9a01b2dc98c06"><div class="ttname"><a href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a></div><div class="ttdeci">void delete_float_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:458</div></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:32</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:33</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aaad5db3e57cfdb490c8ec05fbe5348db" name="aaad5db3e57cfdb490c8ec05fbe5348db"></a>
@@ -597,10 +608,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find all float values occurances in an array and delete them. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find all float values occurances in an array and delete them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">float_value</td><td>A float value that the user wishes to delete from an array <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">float_value</td><td>A float value that the user wishes to delete from an array</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -608,11 +624,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 7);</div>
 <div class="line">delete_float_arr_values(&amp;arr_test, 6.3f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.0, 3.2, 4.1, 5.7]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="acadf72c8ef6e2a3e6a71ddfb74adcef9" name="acadf72c8ef6e2a3e6a71ddfb74adcef9"></a>
@@ -630,9 +642,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each integer </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all duplicate values in an array, so that the final array only contains one instance of each integer</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -641,11 +658,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 5, 2]</span></div>
 <div class="ttc" id="avector_8c_html_acadf72c8ef6e2a3e6a71ddfb74adcef9"><div class="ttname"><a href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a></div><div class="ttdeci">void delete_int_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:445</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ab0919142d15daf6375ac0d5007855f4a" name="ab0919142d15daf6375ac0d5007855f4a"></a>
@@ -673,10 +686,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find all integer values occurances in an array and delete them. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find all integer values occurances in an array and delete them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">int_value</td><td>An integer value that the user wishes to delete from an array <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">int_value</td><td>An integer value that the user wishes to delete from an array</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -684,11 +702,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 7);</div>
 <div class="line">delete_int_arr_values(&amp;arr_test, 6);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 4, 5]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aeb7b729e4824aaecb27ac6bb2aaa2b65" name="aeb7b729e4824aaecb27ac6bb2aaa2b65"></a>
@@ -716,17 +730,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is a double. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is a double.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>The array container </td></tr>
-    <tr><td class="paramname">indice</td><td>The indice the user wishes returned </td></tr>
+    <tr><td class="paramname">indice</td><td>A vector indice </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>value The integer value associated with an indice</dd></dl>
-<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
+<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
@@ -765,16 +781,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find the indices that contain a user specified char value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find the indices that contain a user specified char value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">double_val</td><td>the double value the user wishes to find an indice for </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">char_val</td><td>the char value the user wishes to find an indice for </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>array An array containing all indices associatd with the user specified float value. <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<dl class="section return"><dt>Returns</dt><dd>vector A vector containing all indices associatd with the user specified float value.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
-<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[7] = {a, b, b, q, b, a, c};</div>
 <div class="line">append_array(&amp;arr_test, a, 7);</div>
@@ -782,8 +800,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// p allocation</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 4]</span></div>
 <div class="line">free_array(p);</div>
-</div><!-- fragment --> </dd></dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a50f5f1ea9abe86660d236e0a8867a962" name="a50f5f1ea9abe86660d236e0a8867a962"></a>
@@ -811,24 +828,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find the indices that contain a user specified double value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find the indices that contain a user specified double value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">double_val</td><td>the double value the user wishes to find an indice for </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>array An array containing all indices associatd with the user specified float value. <div class="fragment"><div class="line">*<span class="keywordtype">size_t</span> indices = 10;</div>
-<div class="line">  <span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
-<div class="line">  <a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
-<div class="line">  Array arr_test = init_array(dtype, indices, name);</div>
-<div class="line">  <span class="keywordtype">double</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
-<div class="line">  append_array(&amp;arr_test, a, 7);</div>
-<div class="line">  Array p = find_double_array_indices(&amp;arr_test, 6.2);</div>
-<div class="line">  <span class="comment">// p allocation</span></div>
-<div class="line">  <span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
-<div class="line">  free_array(p);</div>
-</div><!-- fragment --> The above code should produce an array with indices 0, 3, and 4. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structVector.html">Vector</a> A vector containing all indices associatd with the user specified float value.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
+<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line">Array p = find_double_array_indices(&amp;arr_test, 6.2);</div>
+<div class="line"><span class="comment">// p allocation</span></div>
+<div class="line"><span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
+<div class="line">free_array(p);</div>
+</div><!-- fragment --><p> The above code should produce an array with indices 0, 3, and 4. </p>
 
 </div>
 </div>
@@ -857,24 +876,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find the indices that contain a user specified float value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find the indices that contain a user specified float value. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">float_val</td><td>the float value the user wishes to find an indice for </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>array An array containing all indices associatd with the user specified float value. <div class="fragment"><div class="line">*<span class="keywordtype">size_t</span> indices = 10;</div>
-<div class="line">  <span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
-<div class="line">  <a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
-<div class="line">  Array arr_test = init_array(dtype, indices, name);</div>
-<div class="line">  <span class="keywordtype">int</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
-<div class="line">  append_array(&amp;arr_test, a, 7);</div>
-<div class="line">  Array p = find_float_array_indices(&amp;arr_test, 6.2f);</div>
-<div class="line">  <span class="comment">// p allocation</span></div>
-<div class="line">  <span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
-<div class="line">  free_array(p);</div>
-</div><!-- fragment --> The above code should produce an array with indices 0, 3, and 4. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structVector.html">Vector</a> A vector containing all indices associatd with the user specified float value.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">float</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
+<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line">Array p = find_float_array_indices(&amp;arr_test, 6.2f);</div>
+<div class="line"><span class="comment">// p allocation</span></div>
+<div class="line"><span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
+<div class="line">free_array(p);</div>
+</div><!-- fragment --><p> The above code should produce an array with indices 0, 3, and 4. </p>
 
 </div>
 </div>
@@ -903,24 +924,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will find the indices that contain a user specified integer. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will find the indices that contain a user specified integer. This function allocates array space in heap memory and will return NULL if the array does not contain the appropriate value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">integer</td><td>the integer the user wishes to find an indice for </td></tr>
+    <tr><td class="paramname">integer</td><td>A vector container array </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structVector.html">Vector</a> A vector containing all indices associatd with the user specified integer. <div class="fragment"><div class="line">*<span class="keywordtype">size_t</span> indices = 10;</div>
-<div class="line">  <span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
-<div class="line">  <a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
-<div class="line">  Array arr_test = init_array(dtype, indices, name);</div>
-<div class="line">  <span class="keywordtype">int</span> a[7] = {6, 1, 3, 6, 6, 4, 5};</div>
-<div class="line">  append_array(&amp;arr_test, a, 7);</div>
-<div class="line">  Array p = find_int_array_indices(&amp;arr_test, 6);</div>
-<div class="line">  <span class="comment">// P allocation</span></div>
-<div class="line">  <span class="comment">// [0, 3, 4]</span></div>
-<div class="line">  free_array(p);</div>
-</div><!-- fragment --> The above code should produce an array with indices 0, 3, and 4. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structVector.html">Vector</a> A vector containing all indices associatd with the user specified integer.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">int</span> a[7] = {6, 1, 3, 6, 6, 4, 5};</div>
+<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line">Array p = find_int_array_indices(&amp;arr_test, 6);</div>
+<div class="line"><span class="comment">// P allocation</span></div>
+<div class="line"><span class="comment">// [0, 3, 4]</span></div>
+<div class="line">free_array(p);</div>
+</div><!-- fragment --><p> The above code should produce an array with indices 0, 3, and 4. </p>
 
 </div>
 </div>
@@ -949,17 +972,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is a float. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is a float.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>The array container </td></tr>
-    <tr><td class="paramname">indice</td><td>The indice the user wishes returned </td></tr>
+    <tr><td class="paramname">indice</td><td>A vector indice </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>value The integer value associated with an indice</dd></dl>
-<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
+<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
@@ -988,9 +1013,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will free all memory allocation from an array and associated struct elements </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will free all memory allocation from a vector container struct elements</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>the array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
   </table>
   </dd>
 </dl>
@@ -1028,18 +1054,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function is the primary user interface to instantiate the Array container. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function is the primary user interface to instantiate the Array container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dtype</td><td>An integer representing the data type, can be FLOAT, DOUBLE, CHAR, or INT </td></tr>
+    <tr><td class="paramname">dat</td><td>An integer representing the data type. The acceptable data types are FLOAT, DOUBLE, CHAR, or INT </td></tr>
     <tr><td class="paramname">num_indices</td><td>A guess for the number of indices required by the array </td></tr>
     <tr><td class="paramname">name</td><td>The name of the array as a character string </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="structVector.html">Vector</a> container</dd></dl>
-<p>The following is a code example for how to instantiate the container for an integer; </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
+<p>The following is a code example for how to instantiate the container for an integer;</p>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><span class="keywordtype">char</span> dtype[4] = <span class="stringliteral">&quot;int&quot;</span>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 </div><!-- fragment --> 
 </div>
@@ -1069,17 +1097,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the value of an array assigned to a user specified indice, so as long as the data point is an integer. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the value of a vector container assigned to a user specified indice, so as long as the data point is an integer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>The array container </td></tr>
-    <tr><td class="paramname">indice</td><td>The indice the user wishes returned </td></tr>
+    <tr><td class="paramname">indice</td><td>A vector indice </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>value The integer value associated with an indice</dd></dl>
-<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value. </p><div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
+<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
@@ -1108,14 +1138,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the median of a character vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the median of a character vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>A vector container </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = CHAR; Array arr_test = init_array(dtype, indices, name); char a[6] = "hello"; append_array(&amp;arr_test, a, 6); char med = median_char_vec(&amp;arr_test); // &gt;&gt; 'l'  </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>median</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;hello&quot;</span>;</div>
+<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><span class="keywordtype">char</span> med = <a class="code hl_function" href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; &#39;l&#39;</span></div>
+<div class="ttc" id="avector_8c_html_a5f3b6ae2d42617c08ddc76b38007c551"><div class="ttname"><a href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a></div><div class="ttdeci">char median_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:841</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a730794b7bcaf511f1299c92b26c276e0" name="a730794b7bcaf511f1299c92b26c276e0"></a>
@@ -1133,14 +1173,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the median of a double vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the median of a double vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>A vector container </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = DOUBLE; Array arr_test = init_array(dtype, indices, name); double a[4] = {3.2, 5.1, 3.0, 2.0, 0.5}; append_array(&amp;arr_test, a, 4); double med = median_float_vec(&amp;arr_test); // &gt;&gt; 2.5  </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>median</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">double</span> a[4] = {3.2, 5.1, 3.0, 2.0, 0.5};</div>
+<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><span class="keywordtype">double</span> med = <a class="code hl_function" href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; 2.5</span></div>
+<div class="ttc" id="avector_8c_html_aa27d678c88f4e879b2c499d25e3de84b"><div class="ttname"><a href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a></div><div class="ttdeci">float median_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:809</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aa27d678c88f4e879b2c499d25e3de84b" name="aa27d678c88f4e879b2c499d25e3de84b"></a>
@@ -1158,14 +1208,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the median of a float vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the median of a float vector container. If the container has an even number of values, it will retrun the average value of the middle two indices. If the container has an odd number of indices, it will return the value at the mid indice.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>A vector container </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = FLOAT; Array arr_test = init_array(dtype, indices, name); float a[4] = {3.2, 5.1, 3.0, 2.0, 0.5}; append_array(&amp;arr_test, a, 4); float med = median_float_vec(&amp;arr_test); // &gt;&gt; 2.5  </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>median</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">float</span> a[4] = {3.2, 5.1, 3.0, 2.0, 0.5};</div>
+<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><span class="keywordtype">float</span> med = <a class="code hl_function" href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; 2.5</span></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a79ca0fa54c042ed750bdc7fc3e381295" name="a79ca0fa54c042ed750bdc7fc3e381295"></a>
@@ -1183,14 +1242,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the median of an integer vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will return the median of an integer vector container. If the container has an even number of values, it will retrun the value present at the maximum indice divided by 2. If the container has an odd number of indices, it will return the value at the mid indice.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>A vector container </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>median size_t indices = 10; char name[6] = "array"; dat_type dtype = INT; Array arr_test = init_array(dtype, indices, name); int a[4] = {3, 5, 1, 2}; append_array(&amp;arr_test, a, 4); int med = median_int_vec(&amp;arr_test); // &gt;&gt; 2  </dd></dl>
-
+<dl class="section return"><dt>Returns</dt><dd>median</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
+<div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
+<div class="line">Array arr_test = init_array(dtype, indices, name);</div>
+<div class="line"><span class="keywordtype">int</span> a[4] = {3, 5, 1, 2};</div>
+<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><span class="keywordtype">int</span> med = <a class="code hl_function" href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// &gt;&gt; 2</span></div>
+<div class="ttc" id="avector_8c_html_a79ca0fa54c042ed750bdc7fc3e381295"><div class="ttname"><a href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a></div><div class="ttdeci">int median_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:795</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a7c77ba41b1a3f8f68e4a02d10c729e02" name="a7c77ba41b1a3f8f68e4a02d10c729e02"></a>
@@ -1218,15 +1287,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete a user defined indices from the array. However, the function must be embedded within an Array container and the container must be passed to the function</p>
+<p >This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>An Array container </td></tr>
-    <tr><td class="paramname">indice</td><td>The indices within the array that the user wishes to delete from the array </td></tr>
+    <tr><td class="paramname">indice</td><td>A vector container indice </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>integer An error code of 0 if the user defines an indice greater than the array length <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+<dl class="section return"><dt>Returns</dt><dd>integer An error code of 0 if the user defines an indice greater than the array length. 1 if the function is executed succesfully. <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1234,7 +1303,8 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 4);</div>
 <div class="line">pop_array(&amp;arr_test, 2);</div>
 <div class="line"><span class="comment">// &gt;&gt; [10.1, 9.2, 7.4]</span></div>
-</div><!-- fragment --> The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4. </dd></dl>
+</div><!-- fragment --></dd></dl>
+<p>The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4. </p>
 
 </div>
 </div>
@@ -1269,7 +1339,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function allows a user to preappend an existing or blank array container with scalars or arrays of any data type except strings. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function allows a user to preappend an existing or blank array container with scalars or arrays of any data type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>A pointer to the memory location where an array exists </td></tr>
     <tr><td class="paramname">elements</td><td>A scalar or an array of variables. The variables can be of any data type, so as long as they are of the same data type as the array being appended. </td></tr>
@@ -1278,10 +1349,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>integer A 0 or 1 indicating success of the function.</dd></dl>
-<p>The following demonstrates several ways that the append_array function can be uses. In these instances, the function will be used for an array of integers </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
+<p>The following demonstrates several ways that the append_array function can be uses. In these instances, the function will be used for an array of integers</p>
+<div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line"><span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
-<div class="line"><span class="keywordtype">char</span> name[5] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;Array&quot;</span>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build the base array</span></div>
@@ -1344,11 +1416,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace char values defined by a user with another char value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace char values defined by a user with another char value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">old_val</td><td>The char value to be replaced </td></tr>
-    <tr><td class="paramname">new_val</td><td>The char value to replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">new_val</td><td>The char value to replace the old_val</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1356,11 +1433,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_char_array_element(&amp;arr_test, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;q&#39;</span>);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;q&#39;, &#39;q&#39;, &#39;o&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a8b614ac8cb09d35f4e2ccdf3679a86a9" name="a8b614ac8cb09d35f4e2ccdf3679a86a9"></a>
@@ -1394,10 +1467,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace a char value at a user defined indice with another char value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace a char value at a user defined indice with another char value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">replacement_value</td><td>A double value that will replace the existing double value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">index</td><td>The index containing a value to be replaced </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>A double value that will replace the existing double value at the index location</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1405,11 +1484,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_char_index(&amp;arr_test, 1, <span class="charliteral">&#39;p&#39;</span>);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;p&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ac8bc4a00771c50556a5010d18c90f084" name="ac8bc4a00771c50556a5010d18c90f084"></a>
@@ -1443,11 +1518,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace double values defined by a user with another double value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace double values defined by a user with another double value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">old_val</td><td>The double value to be replaced </td></tr>
-    <tr><td class="paramname">new_val</td><td>The double value to replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">new_val</td><td>The double value to replace the old_val</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1455,11 +1535,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_double_array_element(&amp;arr_test, 3.3, 2.1);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2.1, 2.1, 2.1, 5, 2.1]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a87fef5ac4829fd8511145a78e43da1bc" name="a87fef5ac4829fd8511145a78e43da1bc"></a>
@@ -1493,10 +1569,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace a double value at a user defined indice with another double value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace a double value at a user defined indice with another double value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">replacement_value</td><td>A double value that will replace the existing double value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">index</td><td>The index containing a value to be replaced </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>A double value that will replace the existing double value at the index location</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1504,11 +1586,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_array_index(&amp;arr_test, 1, 5.5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a8abddfc3a79a789060eb5450d74c7f50" name="a8abddfc3a79a789060eb5450d74c7f50"></a>
@@ -1542,11 +1620,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace float values defined by a user with another float value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace float values defined by a user with another float value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">old_val</td><td>The float value to be replaced </td></tr>
-    <tr><td class="paramname">new_val</td><td>The float value to replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">new_val</td><td>The float value to replace the old_val</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1554,11 +1637,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_array_element(&amp;arr_test, 3.3f, 2.1f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2.1, 2.1, 2.1, 5, 2.1]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a4db06f4bafa12aec48f609837d188164" name="a4db06f4bafa12aec48f609837d188164"></a>
@@ -1592,10 +1671,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace a float value at a user defined indice with another float value </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace a float value at a user defined indice with another float value</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">replacement_value</td><td>A float value that will replace the existing float value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">index</td><td>The index containing a value to be replaced </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>A float value that will replace the existing float value at the index location</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1603,11 +1688,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_array_index(&amp;arr_test, 1, 5.5f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="adf0e86d8e607c516c776d7f58c748107" name="adf0e86d8e607c516c776d7f58c748107"></a>
@@ -1641,11 +1722,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace integer values defined by a user with another integer </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace integer values defined by a user with another integer</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">old_val</td><td>The integer value to be replaced </td></tr>
-    <tr><td class="paramname">new_val</td><td>An integer value that will replace the old_val <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">new_val</td><td>An integer value that will replace the old_val</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1653,11 +1739,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_int_array_element(&amp;arr_test, 3, 2);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 2, 2, 5, 2]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a4912c6afe410843d78b074328ac8b4ba" name="a4912c6afe410843d78b074328ac8b4ba"></a>
@@ -1691,10 +1773,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace an integer value at a user defined indice with another integer </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will replace an integer value at a user defined indice with another integer</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">replacement_value</td><td>An integer value that will replace the existing integer value at the index location <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">index</td><td>The index containing a value to be replaced </td></tr>
+    <tr><td class="paramname">replacement_value</td><td>An integer value that will replace the existing integer value at the index location</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1702,11 +1790,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_int_array_index(&amp;arr_test, 1, 5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 5, 3, 4, 5, 6]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a5e1e6d31cd18d09f8a8fe860bdd4bdc3" name="a5e1e6d31cd18d09f8a8fe860bdd4bdc3"></a>
@@ -1724,9 +1808,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a char array in ascending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort a char array in ascending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1756,9 +1841,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a char array in descending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort a char array in descending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1766,11 +1856,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_char_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aa100149dd25f899627f8877c5bee74a5" name="aa100149dd25f899627f8877c5bee74a5"></a>
@@ -1788,9 +1874,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a double array in ascending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort a double array in ascending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1798,11 +1889,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_double_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a7ee9380817dcb30adc766fbf433f037a" name="a7ee9380817dcb30adc766fbf433f037a"></a>
@@ -1820,9 +1907,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a double array in descending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort a double array in descending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1852,9 +1940,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a float array in ascending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort a float array in ascending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1862,11 +1955,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_float_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aa00a4a66c9cd3273144a7bb46d7f2240" name="aa00a4a66c9cd3273144a7bb46d7f2240"></a>
@@ -1884,9 +1973,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a float array in descending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort a float array in descending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1894,11 +1988,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_float_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a26b20866de603d66b1cf77eb932ba6fa" name="a26b20866de603d66b1cf77eb932ba6fa"></a>
@@ -1916,9 +2006,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort an integer array in ascending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort an integer array in ascending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1926,11 +2021,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_int_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2, 3, 4, 5]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ac11392793d2ac7a3c5a9bfeb8977e30b" name="ac11392793d2ac7a3c5a9bfeb8977e30b"></a>
@@ -1948,9 +2039,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort an integer array in descending order </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort an integer array in descending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -1958,11 +2054,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_int_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [6, 5, 4, 3, 2, 1]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a728bdab51bb13e8f43e4d068edcfd7ff" name="a728bdab51bb13e8f43e4d068edcfd7ff"></a>
@@ -1990,10 +2082,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container </td></tr>
-    <tr><td class="paramname">order</td><td>1 for ascending, 2 for descending <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
+    <tr><td class="paramname">order</td><td>1 for ascending, 2 for descending</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -2001,11 +2098,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">sort_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a57925b38859054812edf2f341225f6cc" name="a57925b38859054812edf2f341225f6cc"></a>
@@ -2023,9 +2116,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all values from a char array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all values from a char array except for the unique values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -2034,11 +2132,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
 <div class="ttc" id="avector_8c_html_a57925b38859054812edf2f341225f6cc"><div class="ttname"><a href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a></div><div class="ttdeci">void unique_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:557</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a92d4ff3374cd29a8f1e604c534f7b583" name="a92d4ff3374cd29a8f1e604c534f7b583"></a>
@@ -2056,9 +2150,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all values from a double array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all values from a double array except for the unique values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -2067,11 +2166,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
 <div class="ttc" id="avector_8c_html_a92d4ff3374cd29a8f1e604c534f7b583"><div class="ttname"><a href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a></div><div class="ttdeci">void unique_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:537</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="aedf8c62e47e3d5b07339f8ac1594c6c6" name="aedf8c62e47e3d5b07339f8ac1594c6c6"></a>
@@ -2089,9 +2184,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all values from a float array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all values from a float array except for the unique values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = FLAOT;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -2100,11 +2200,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
 <div class="ttc" id="avector_8c_html_a8b9a16e579236fa0add30a4752527421"><div class="ttname"><a href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a></div><div class="ttdeci">void unique_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:497</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a8b9a16e579236fa0add30a4752527421" name="a8b9a16e579236fa0add30a4752527421"></a>
@@ -2122,9 +2218,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all values from an integer array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all values from an integer array except for the unique values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -2132,11 +2233,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2, 3, 7]</span></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="afb49fc0563f1493f510a73d645e26e79" name="afb49fc0563f1493f510a73d645e26e79"></a>
@@ -2154,9 +2251,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all values from an array except for the unique values. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function will delete all values from an array except for the unique values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>An array container <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
+    <tr><td class="paramname">array</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 10;</div>
 <div class="line"><span class="keywordtype">char</span> name[6] = <span class="stringliteral">&quot;array&quot;</span>;</div>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
@@ -2165,11 +2267,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
 <div class="ttc" id="avector_8c_html_afb49fc0563f1493f510a73d645e26e79"><div class="ttname"><a href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a></div><div class="ttdeci">void unique_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:591</div></div>
-</div><!-- fragment --> </td></tr>
-  </table>
-  </dd>
-</dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a5254f7434c321eba29ba44d44e9c28f6" name="a5254f7434c321eba29ba44d44e9c28f6"></a>
@@ -2197,9 +2295,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function instantiates an Array container and all relevant variables. This function should not be used directly. Instead the user should invoke the init_array function, which wraps this function. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >This function instantiates an Array container and all relevant variables. This function should not be used directly. Instead the user should invoke the init_array function, which wraps this function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>an Array structure </td></tr>
+    <tr><td class="paramname">array</td><td>A vector container </td></tr>
     <tr><td class="paramname">num_indices</td><td>A guess for the number of indices that will be consumed by the array </td></tr>
   </table>
   </dd>
