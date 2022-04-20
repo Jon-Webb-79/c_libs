@@ -16,7 +16,6 @@
 #include "include/vector.h"
 // Begin code
 // TODO Add average function
-// TODO Add sum function
 // TODO Add std_dev function
 // TODO Add cumsum function
 int main(int argc, const char * argv[]) {

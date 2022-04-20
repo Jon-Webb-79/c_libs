@@ -1185,4 +1185,47 @@ TEST(median, char_odd) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the sum_int_vec function to ensure it properly returns
+ * the sum of all values in an integer vector container */
+TEST(sum, sum_integer) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[6] = {1, 2, 3, 4, 5, 6};
+	append_vector(&arr_test, a, 6);
+	int sum = sum_int_vec(&arr_test);
+	EXPECT_EQ(sum, 21);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_int_vec function to ensure it properly returns
+ * the sum of all values in a float vector container */
+TEST(sum, sum_float) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_vector(&arr_test, a, 6);
+	float sum = sum_float_vec(&arr_test);
+	EXPECT_FLOAT_EQ(sum, 23.1f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_int_vec function to ensure it properly returns
+ * the sum of all values in a double vector container */
+TEST(sum, sum_double) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_vector(&arr_test, a, 6);
+	double sum = sum_double_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(sum, 23.1);
+}
+// ================================================================================
+// ================================================================================
 // eof

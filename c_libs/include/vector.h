@@ -1214,6 +1214,66 @@ double median_double_vec(Vector *array);
  * @endcode
  */
 char median_char_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of all values in an integer vector
+ * container.
+ *
+ * @param array A vector container
+ * @return sum The sum of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 2, 3, 4, 5, 6};
+ * append_array(&arr_test, a, 6);*
+ * int sum = sum_int_vec(arr_test);
+ * // >> 21
+ */
+int sum_int_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of all values in a float vector
+ * container.
+ *
+ * @param array A vector container
+ * @return sum The sum of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);*
+ * float sum = sum_float_vec(arr_test);
+ * // >> 23.1
+ */
+float sum_float_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of all values in a double vector
+ * container.
+ *
+ * @param array A vector container
+ * @return sum The sum of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);*
+ * double sum = sum_float_vec(arr_test);
+ * // >> 23.1
+ */
+double sum_double_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

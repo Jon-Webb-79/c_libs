@@ -850,6 +850,33 @@ char median_char_vec(Vector *array) {
 		return char_vector_val(array, mid-1);
 	}
 }
+// --------------------------------------------------------------------------------
+
+int sum_int_vec(Vector *array) {
+	int sum = 0;
+	for (int i = 0; i < array->len; i++) {
+		sum += int_vector_val(array, i);
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+float sum_float_vec(Vector *array) {
+	float sum = 0.0;
+	for (int i = 0; i < array->len; i++) {
+		sum += float_vector_val(array, i);
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+double sum_double_vec(Vector *array) {
+	double sum = 0.0;
+	for (int i = 0; i < array->len; i++) {
+		sum += double_vector_val(array, i);
+	}
+	return sum;
+}
 // ================================================================================
 // ================================================================================
 // eof
