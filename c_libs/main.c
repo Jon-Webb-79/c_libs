@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO Add std_dev function
 // TODO Add cumsum function
 int main(int argc, const char * argv[]) {
 	printf("Hello, World!");

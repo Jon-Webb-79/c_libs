@@ -1197,6 +1197,7 @@ TEST(sum, sum_integer) {
 	append_vector(&arr_test, a, 6);
 	int sum = sum_int_vec(&arr_test);
 	EXPECT_EQ(sum, 21);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1211,6 +1212,7 @@ TEST(sum, sum_float) {
 	append_vector(&arr_test, a, 6);
 	float sum = sum_float_vec(&arr_test);
 	EXPECT_FLOAT_EQ(sum, 23.1f);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1225,6 +1227,7 @@ TEST(sum, sum_double) {
 	append_vector(&arr_test, a, 6);
 	double sum = sum_double_vec(&arr_test);
 	EXPECT_DOUBLE_EQ(sum, 23.1);
+	free_vector(&arr_test);
 }
 // ================================================================================
 // ================================================================================
@@ -1240,6 +1243,7 @@ TEST(average, avg_integer) {
 	append_vector(&arr_test, a, 6);
 	float average = average_int_vec(&arr_test);
 	EXPECT_FLOAT_EQ(average, 3.5f);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1254,6 +1258,7 @@ TEST(average, avg_float) {
 	append_vector(&arr_test, a, 6);
 	float average = average_float_vec(&arr_test);
 	EXPECT_FLOAT_EQ(average, 3.85f);
+	free_vector(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1268,6 +1273,53 @@ TEST(average, avg_double) {
 	append_vector(&arr_test, a, 6);
 	double average = average_double_vec(&arr_test);
 	EXPECT_DOUBLE_EQ(average, 3.85);
+	free_vector(&arr_test);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the stdev_int_vec function to ensure it properly returns
+ * the standard deviation of a vector container of integers */
+TEST(stdev, int_stdev) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[6] = {1, 5, 3, 6, 7, 2};
+	append_vector(&arr_test, a, 6);
+	float stdev = stdev_int_vec(&arr_test);
+	EXPECT_NEAR(stdev, 2.160247f, 0.0001);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_float_vec function to ensure it properly returns
+ * the standard deviation of a vector container of float variables */
+TEST(stdev, float_stdev) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
+	append_vector(&arr_test, a, 6);
+	float stdev = stdev_float_vec(&arr_test);
+	EXPECT_NEAR(stdev, 2.30753f, 0.0001);
+	free_vector(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_double_vec function to ensure it properly returns
+ * the standard deviation of a vector container of double variables */
+TEST(stdev, double_stdev) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
+	append_vector(&arr_test, a, 6);
+	double stdev = stdev_float_vec(&arr_test);
+	EXPECT_NEAR(stdev, 2.30753, 0.0001);
+	free_vector(&arr_test);
 }
 // ================================================================================
 // ================================================================================

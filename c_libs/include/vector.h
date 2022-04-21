@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 /**
  * An enum container with variables describing relevant data types
@@ -1335,6 +1336,66 @@ float average_float_vec(Vector *array);
  * // >> 3.85
  */
 double average_double_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation for a vector container
+ * of integers
+ *
+ *@param array A vector container
+ @return stdev The standard deviation of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 5, 3, 6, 7, 2};
+ * append_array(&arr_test, a, 6);*
+ * float stdev = stdev_int_vec(arr_test);
+ * // >> 2.160247
+ */
+float stdev_int_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation for a vector container
+ * of float variables
+ *
+ *@param array A vector container
+ @return stdev The standard deviation of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
+ * append_array(&arr_test, a, 6);*
+ * float stdev = stdev_int_vec(arr_test);
+ * // >> 2.30754
+ */
+float stdev_float_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation for a vector container
+ * of double variables
+ *
+ *@param array A vector container
+ @return stdev The standard deviation of all values in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
+ * append_array(&arr_test, a, 6);*
+ * double stdev = stdev_int_vec(arr_test);
+ * // >> 2.30754
+ */
+double stdev_double_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

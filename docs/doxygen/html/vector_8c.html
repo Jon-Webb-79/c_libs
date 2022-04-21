@@ -185,6 +185,12 @@ Functions</h2></td></tr>
 <tr class="separator:a8fbb6b2b9616b6dfe5c2e6aa11c527e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19f91645d90e18ba1e0eaf138ebe27c9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a19f91645d90e18ba1e0eaf138ebe27c9">average_double_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
 <tr class="separator:a19f91645d90e18ba1e0eaf138ebe27c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cbc1066e5b8b0684344e7fa8dc1862"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a69cbc1066e5b8b0684344e7fa8dc1862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2225381c9c8cfa40774dcc48ebe7b61d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a2225381c9c8cfa40774dcc48ebe7b61d">stdev_float_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:a2225381c9c8cfa40774dcc48ebe7b61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9484d6d9ced6e1a7d296bd8932439ce"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#ab9484d6d9ced6e1a7d296bd8932439ce">stdev_double_vec</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
+<tr class="separator:ab9484d6d9ced6e1a7d296bd8932439ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac09911a1012b6977d3daf15c9eace5f9" name="ac09911a1012b6977d3daf15c9eace5f9"></a>
@@ -246,8 +252,8 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// populated array</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2]</span></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a></div><div class="ttdeci">dat_type</div><div class="ttdef"><b>Definition:</b> vector.h:32</div></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:36</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a></div><div class="ttdeci">dat_type</div><div class="ttdef"><b>Definition:</b> vector.h:33</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:37</div></div>
 </div><!-- fragment --><p> The following code will also have the same effect </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line"> <span class="keywordtype">size_t</span> indices = 20;</div>
 <div class="line"> <a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
@@ -366,7 +372,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 7);</div>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">char</span> *)arr_test.array)[0]);</div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:35</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:36</div></div>
 </div><!-- fragment --><p> This process can be simplified with this function </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, char_array_val(&amp;arr_test, 0));</div>
 <div class="line"><span class="comment">// &gt;&gt; H</span></div>
 </div><!-- fragment --><p> However a character array can also be access the traditionale way with the following command. </p><div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, Array.array);</div>
@@ -482,7 +488,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
 <div class="ttc" id="avector_8c_html_a122563df58490a6bc9807c7496fc211e"><div class="ttname"><a href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a></div><div class="ttdeci">void delete_double_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:471</div></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:34</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:35</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -595,7 +601,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
 <div class="ttc" id="avector_8c_html_a2beab0348c5fc9efa3d9a01b2dc98c06"><div class="ttname"><a href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a></div><div class="ttdeci">void delete_float_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:458</div></div>
-<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:33</div></div>
+<div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:34</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2115,6 +2121,60 @@ Functions</h2></td></tr>
 <div class="line">sort_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="ab9484d6d9ced6e1a7d296bd8932439ce" name="ab9484d6d9ced6e1a7d296bd8932439ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9484d6d9ced6e1a7d296bd8932439ce">&#9670;&nbsp;</a></span>stdev_double_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double stdev_double_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2225381c9c8cfa40774dcc48ebe7b61d" name="a2225381c9c8cfa40774dcc48ebe7b61d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2225381c9c8cfa40774dcc48ebe7b61d">&#9670;&nbsp;</a></span>stdev_float_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stdev_float_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69cbc1066e5b8b0684344e7fa8dc1862" name="a69cbc1066e5b8b0684344e7fa8dc1862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69cbc1066e5b8b0684344e7fa8dc1862">&#9670;&nbsp;</a></span>stdev_int_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stdev_int_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="a787405e24b5f8e63d7c0ff355bbac646" name="a787405e24b5f8e63d7c0ff355bbac646"></a>

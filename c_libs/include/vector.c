@@ -895,6 +895,42 @@ double average_double_vec(Vector *array) {
 	double sum = sum_double_vec(array);
 	return sum / (double) array->len;
 }
+// --------------------------------------------------------------------------------
+
+float stdev_int_vec(Vector *array) {
+	float sum, convert;
+	float avg = average_int_vec(array);
+	for (int i = 0; i < array->len; i++) {
+		convert = (float) int_vector_val(array, i);
+		sum += powf((convert - avg), 2.0f);
+	}
+	float sigma = sqrtf(sum / (float)array->len);
+	return sigma;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_float_vec(Vector *array) {
+	float sum, convert;
+	float avg = average_float_vec(array);
+	for (int i = 0; i < array->len; i++) {
+		convert = float_vector_val(array, i);
+		sum += powf((convert - avg), 2.0f);
+	}
+	float sigma = sqrtf(sum / (float)array->len);
+	return sigma;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_double_vec(Vector *array) {
+	double sum, convert;
+	double avg = average_double_vec(array);
+	for (int i = 0; i < array->len; i++) {
+		convert = double_vector_val(array, i);
+		sum += pow((convert - avg), 2.0);
+	}
+	double sigma = sqrtf(sum / (double)array->len);
+	return sigma;
+}
 // ================================================================================
 // ================================================================================
 // eof
