@@ -1282,8 +1282,8 @@ double sum_double_vec(Vector *array);
  * container of integers.  Even though the values in the container are integers,
  * the average of a group of integers is a real value.
  *
- *@param array A vector container
- @return average The average of all values in a vector container
+ * @param array A vector container
+ * @return average The average of all values in a vector container
  *
  * @code
  * size_t indices = 10;
@@ -1302,8 +1302,8 @@ float average_int_vec(Vector *array);
  * This function will determine the average of all values in a vector
  * container of float values.
  *
- *@param array A vector container
- @return average The average of all values in a vector container
+ * @param array A vector container
+ * @return average The average of all values in a vector container
  *
  * @code
  * size_t indices = 10;
@@ -1322,8 +1322,8 @@ float average_float_vec(Vector *array);
  * This function will determine the average of all values in a vector
  * container of double values.
  *
- *@param array A vector container
- @return average The average of all values in a vector container
+ * @param array A vector container
+ * @return average The average of all values in a vector container
  *
  * @code
  * size_t indices = 10;
@@ -1342,8 +1342,8 @@ double average_double_vec(Vector *array);
  * This function will determine the standard deviation for a vector container
  * of integers
  *
- *@param array A vector container
- @return stdev The standard deviation of all values in a vector container
+ * @param array A vector container
+ * @return stdev The standard deviation of all values in a vector container
  *
  * @code
  * size_t indices = 10;
@@ -1362,8 +1362,8 @@ float stdev_int_vec(Vector *array);
  * This function will determine the standard deviation for a vector container
  * of float variables
  *
- *@param array A vector container
- @return stdev The standard deviation of all values in a vector container
+ * @param array A vector container
+ * @return stdev The standard deviation of all values in a vector container
  *
  * @code
  * size_t indices = 10;
@@ -1382,8 +1382,8 @@ float stdev_float_vec(Vector *array);
  * This function will determine the standard deviation for a vector container
  * of double variables
  *
- *@param array A vector container
- @return stdev The standard deviation of all values in a vector container
+ * @param array A vector container
+ * @return stdev The standard deviation of all values in a vector container
  *
  * @code
  * size_t indices = 10;
@@ -1396,6 +1396,69 @@ float stdev_float_vec(Vector *array);
  * // >> 2.30754
  */
 double stdev_double_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create an array containing the running cummulative sum
+ * of data in a vector container
+ *
+ * @param array A vector container
+ * @return cumsum An array containing the running cummulative sum of the values
+ *                in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = INT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * int a[6] = {1, 2, 3, 4, 5, 6};
+ * append_array(&arr_test, a, 6);
+ * int *cumsum = cumsum_int_vec(arr_test);
+ * // >> cumsum = [1, 3, 6, 10, 15, 21]
+ */
+int* cumsum_int_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create an integer array containing the running cummulative
+ * sum of data in a vector container
+ *
+ * @param array A vector container
+ * @return cumsum An array containing the running cummulative sum of the values
+ *                in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = FLOAT;
+ * Array arr_test = init_array(dtype, indices, name);
+ * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);
+ * float *cumsum = cumsum_float_vec(arr_test);
+ * // >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]
+ */
+float* cumsum_float_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create an integer array containing the running cummulative
+ * sum of data in a vector container
+ *
+ * @param array A vector container
+ * @return cumsum An array containing the running cummulative sum of the values
+ *                in a vector container
+ *
+ * @code
+ * size_t indices = 10;
+ * char name[6] = "array";
+ * dat_type dtype = DOUBLE;
+ * Array arr_test = init_array(dtype, indices, name);
+ * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * append_array(&arr_test, a, 6);
+ * double *cumsum = cumsum_float_vec(arr_test);
+ * // >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]
+ */
+double* cumsum_double_vec(Vector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

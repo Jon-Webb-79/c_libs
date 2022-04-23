@@ -931,6 +931,45 @@ double stdev_double_vec(Vector *array) {
 	double sigma = sqrtf(sum / (double)array->len);
 	return sigma;
 }
+// --------------------------------------------------------------------------------
+
+int* cumsum_int_vec(Vector *array) {
+	int *vec = malloc(array->len * sizeof(int));
+	int sum, value;
+	sum = 0;
+	for (int i = 0; i < array->len; i++) {
+		value = int_vector_val(array, i);
+		sum += value;
+		vec[i] = sum;
+	}
+	return vec;
+}
+// --------------------------------------------------------------------------------
+
+float* cumsum_float_vec(Vector *array) {
+	float *vec = malloc(array->len * sizeof(float));
+	float sum, value;
+	sum = 0.0;
+	for (int i = 0; i < array->len; i++) {
+		value = float_vector_val(array, i);
+		sum += value;
+		vec[i] = sum;
+	}
+	return vec;
+}
+// --------------------------------------------------------------------------------
+
+double* cumsum_double_vec(Vector *array) {
+	double *vec = malloc(array->len * sizeof(double));
+	double sum, value;
+	sum = 0.0;
+	for (int i = 0; i < array->len; i++) {
+		value = double_vector_val(array, i);
+		sum += value;
+		vec[i] = sum;
+	}
+	return vec;
+}
 // ================================================================================
 // ================================================================================
 // eof

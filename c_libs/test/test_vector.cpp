@@ -1317,9 +1317,73 @@ TEST(stdev, double_stdev) {
 	Vector arr_test = init_vector(dtype, indices, name);
 	double a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
 	append_vector(&arr_test, a, 6);
-	double stdev = stdev_float_vec(&arr_test);
+	double stdev = stdev_double_vec(&arr_test);
 	EXPECT_NEAR(stdev, 2.30753, 0.0001);
 	free_vector(&arr_test);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the cumsum_int_vec function to ensure it properly
+ * returns an array containing the running cummulative sum of the input array */
+TEST(cumsum, int_cumsum) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = INT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	int a[6] = {1, 2, 3, 4, 5, 6};
+	append_vector(&arr_test, a, 6);
+	int *vec;
+	vec = cumsum_int_vec(&arr_test);
+	EXPECT_EQ(1, vec[0]);
+	EXPECT_EQ(3, vec[1]);
+	EXPECT_EQ(6, vec[2]);
+	EXPECT_EQ(10, vec[3]);
+	EXPECT_EQ(15, vec[4]);
+	EXPECT_EQ(21, vec[5]);
+	free(vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_float_vec function to ensure it properly
+ * returns an array containing the running cummulative sum of the input array */
+TEST(cumsum, float_cumsum) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = FLOAT;
+	Vector arr_test = init_vector(dtype, indices, name);
+	float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_vector(&arr_test, a, 6);
+	float *vec;
+	vec = cumsum_float_vec(&arr_test);
+	EXPECT_FLOAT_EQ(1.1f, vec[0]);
+	EXPECT_FLOAT_EQ(3.3f, vec[1]);
+	EXPECT_FLOAT_EQ(6.6f, vec[2]);
+	EXPECT_FLOAT_EQ(11.0f, vec[3]);
+	EXPECT_FLOAT_EQ(16.5f, vec[4]);
+	EXPECT_FLOAT_EQ(23.1f, vec[5]);
+	free(vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_double_vec function to ensure it properly
+ * returns an array containing the running cummulative sum of the input array */
+TEST(cumsum, double_cumsum) {
+	size_t indices = 10;
+	char name[6] = "array";
+	dat_type dtype = DOUBLE;
+	Vector arr_test = init_vector(dtype, indices, name);
+	double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	append_vector(&arr_test, a, 6);
+	double *vec;
+	vec = cumsum_double_vec(&arr_test);
+	EXPECT_DOUBLE_EQ(1.1, vec[0]);
+	EXPECT_DOUBLE_EQ(3.3, vec[1]);
+	EXPECT_DOUBLE_EQ(6.6, vec[2]);
+	EXPECT_DOUBLE_EQ(11.0, vec[3]);
+	EXPECT_DOUBLE_EQ(16.5, vec[4]);
+	EXPECT_DOUBLE_EQ(23.1, vec[5]);
+	free(vec);
 }
 // ================================================================================
 // ================================================================================
