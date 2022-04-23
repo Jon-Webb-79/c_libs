@@ -1047,7 +1047,7 @@ TEST(sort_data_descending, sort) {
 	Vector arr_test = init_vector(dtype, indices, name);
 	char a[5] = "QDAF";
 	append_vector(&arr_test, a, 5);
-	sort_vec(&arr_test, 1);
+	sort_vec(&arr_test, REVERSE);
 	EXPECT_EQ(char_vector_val(&arr_test, 0), 'Q');
 	EXPECT_EQ(char_vector_val(&arr_test, 1), 'F');
 	EXPECT_EQ(char_vector_val(&arr_test, 2), 'D');

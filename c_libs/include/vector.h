@@ -38,6 +38,13 @@ typedef enum
 } dat_type;
 // --------------------------------------------------------------------------------
 
+typedef enum
+{
+	FORWARD,
+	REVERSE
+} order;
+// --------------------------------------------------------------------------------
+
 /**
  * A container for a dynamically allocated array and related data
  *
@@ -1109,7 +1116,7 @@ void sort_char_descending_vec(Vector *array);
  * handle INT, FLOAT, DOUBLE, and CHAR data types.
  *
  * @param array A vector container
- * @param order 1 for ascending, 2 for descending
+ * @param sort_order FORWARD for ascending, REVERSE for descending
  *
  * @code
  * size_t indices = 10;
@@ -1122,7 +1129,7 @@ void sort_char_descending_vec(Vector *array);
  * // >> ['Q', 'F', 'D', 'A']
  * @endcode
  */
-void sort_vec(Vector *array, int order);
+void sort_vec(Vector *array, order sort_order);
 // --------------------------------------------------------------------------------
 
 /**
@@ -1233,6 +1240,7 @@ char median_char_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * int sum = sum_int_vec(arr_test);
  * // >> 21
+ * @endcode
  */
 int sum_int_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1253,6 +1261,7 @@ int sum_int_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * float sum = sum_float_vec(arr_test);
  * // >> 23.1
+ * @endcode
  */
 float sum_float_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1273,6 +1282,7 @@ float sum_float_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * double sum = sum_float_vec(arr_test);
  * // >> 23.1
+ * @endcode
  */
 double sum_double_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1294,6 +1304,7 @@ double sum_double_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * float average = average_int_vec(arr_test);
  * // >> 3.5
+ * @endcode
  */
 float average_int_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1314,6 +1325,7 @@ float average_int_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * float average = average_float_vec(arr_test);
  * // >> 3.85
+ * @endcode
  */
 float average_float_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1334,6 +1346,7 @@ float average_float_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * double average = average_double_vec(arr_test);
  * // >> 3.85
+ * @endcode
  */
 double average_double_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1354,6 +1367,7 @@ double average_double_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * float stdev = stdev_int_vec(arr_test);
  * // >> 2.160247
+ * @endcode
  */
 float stdev_int_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1374,6 +1388,7 @@ float stdev_int_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * float stdev = stdev_int_vec(arr_test);
  * // >> 2.30754
+ * @endcode
  */
 float stdev_float_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1394,6 +1409,7 @@ float stdev_float_vec(Vector *array);
  * append_array(&arr_test, a, 6);*
  * double stdev = stdev_int_vec(arr_test);
  * // >> 2.30754
+ * @endcode
  */
 double stdev_double_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1415,6 +1431,7 @@ double stdev_double_vec(Vector *array);
  * append_array(&arr_test, a, 6);
  * int *cumsum = cumsum_int_vec(arr_test);
  * // >> cumsum = [1, 3, 6, 10, 15, 21]
+ * @endcode
  */
 int* cumsum_int_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1436,6 +1453,7 @@ int* cumsum_int_vec(Vector *array);
  * append_array(&arr_test, a, 6);
  * float *cumsum = cumsum_float_vec(arr_test);
  * // >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]
+ * @endcode
  */
 float* cumsum_float_vec(Vector *array);
 // --------------------------------------------------------------------------------
@@ -1457,6 +1475,7 @@ float* cumsum_float_vec(Vector *array);
  * append_array(&arr_test, a, 6);
  * double *cumsum = cumsum_float_vec(arr_test);
  * // >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]
+ * @endcode
  */
 double* cumsum_double_vec(Vector *array);
 #endif /* ARRAY_H */

@@ -6,5 +6,6 @@ var searchData=
   ['find_5fint_5fvector_5findices_3',['find_int_vector_indices',['../vector_8c.html#a6b929ba2544155af93233f30fc787963',1,'find_int_vector_indices(Vector *array, int integer):&#160;vector.c'],['../vector_8h.html#a6b929ba2544155af93233f30fc787963',1,'find_int_vector_indices(Vector *array, int integer):&#160;vector.c']]],
   ['float_4',['FLOAT',['../vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c',1,'vector.h']]],
   ['float_5fvector_5fval_5',['float_vector_val',['../vector_8c.html#a917d3c61929f64d66c1ce85a0833bb8f',1,'float_vector_val(Vector *array, int indice):&#160;vector.c'],['../vector_8h.html#a917d3c61929f64d66c1ce85a0833bb8f',1,'float_vector_val(Vector *array, int indice):&#160;vector.c']]],
-  ['free_5fvector_6',['free_vector',['../vector_8c.html#a6401d4762af55553c2badac04c3b9184',1,'free_vector(Vector *array):&#160;vector.c'],['../vector_8h.html#a6401d4762af55553c2badac04c3b9184',1,'free_vector(Vector *array):&#160;vector.c']]]
+  ['forward_6',['FORWARD',['../vector_8h.html#a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1',1,'vector.h']]],
+  ['free_5fvector_7',['free_vector',['../vector_8c.html#a6401d4762af55553c2badac04c3b9184',1,'free_vector(Vector *array):&#160;vector.c'],['../vector_8h.html#a6401d4762af55553c2badac04c3b9184',1,'free_vector(Vector *array):&#160;vector.c']]]
 ];

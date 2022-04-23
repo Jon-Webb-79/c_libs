@@ -770,22 +770,22 @@ void sort_char_descending_vec(Vector *array) {
 }
 // --------------------------------------------------------------------------------
 
-void sort_vec(Vector *array, int order) {
-	if (array->dat == INT && order == 0)
+void sort_vec(Vector *array, order sort_order) {
+	if (array->dat == INT && sort_order == FORWARD)
 		sort_int_ascending_vec(array);
-	else if (array->dat == FLOAT && order == 0)
+	else if (array->dat == FLOAT && sort_order == FORWARD)
 		sort_float_ascending_vec(array);
-	else if (array->dat == DOUBLE && order == 0)
+	else if (array->dat == DOUBLE && sort_order == FORWARD)
 		sort_double_ascending_vec(array);
-	else if (array->dat == CHAR && order == 0)
+	else if (array->dat == CHAR && sort_order == FORWARD)
 		sort_char_ascending_vec(array);
-	else if(array->dat == INT && order == 1)
+	else if(array->dat == INT && sort_order == REVERSE)
 		sort_int_descending_vec(array);
-	else if(array->dat == FLOAT && order == 1)
+	else if(array->dat == FLOAT && sort_order == REVERSE)
 		sort_float_descending_vec(array);
-	else if(array->dat == DOUBLE && order == 1)
+	else if(array->dat == DOUBLE && sort_order == REVERSE)
 		sort_double_descending_vec(array);
-	else if(array->dat == CHAR && order == 1)
+	else if(array->dat == CHAR && sort_order == REVERSE)
 		sort_char_descending_vec(array);
 	else
 		printf("WARNING: Vector data type must be INT, FLOAT, DOUBLE, or CHAR, or order must equal 0 or 1");

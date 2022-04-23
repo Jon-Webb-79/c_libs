@@ -92,7 +92,7 @@ void \mbox{\hyperlink{vector_8c_a7ee9380817dcb30adc766fbf433f037a}{sort\+\_\+dou
 \item 
 void \mbox{\hyperlink{vector_8c_a77c5077c7de01acfadd59550f2931227}{sort\+\_\+char\+\_\+descending\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
-void \mbox{\hyperlink{vector_8c_a728bdab51bb13e8f43e4d068edcfd7ff}{sort\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, int order)
+void \mbox{\hyperlink{vector_8c_a093548d37b30f5992c21d45fd97ef0e0}{sort\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} sort\+\_\+order)
 \item 
 int \mbox{\hyperlink{vector_8c_a79ca0fa54c042ed750bdc7fc3e381295}{median\+\_\+int\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
@@ -119,6 +119,12 @@ float \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\+\_\+i
 float \mbox{\hyperlink{vector_8c_a2225381c9c8cfa40774dcc48ebe7b61d}{stdev\+\_\+float\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
 double \mbox{\hyperlink{vector_8c_ab9484d6d9ced6e1a7d296bd8932439ce}{stdev\+\_\+double\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+int $\ast$ \mbox{\hyperlink{vector_8c_ac8471d832e42571fe1346e5e3ddd8e91}{cumsum\+\_\+int\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+float $\ast$ \mbox{\hyperlink{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}{cumsum\+\_\+float\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
+\item 
+double $\ast$ \mbox{\hyperlink{vector_8c_ab1ee8804bba3f3fad1262a99c3a365a6}{cumsum\+\_\+double\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -192,19 +198,85 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \doxysubsubsection{\texorpdfstring{average\_double\_vec()}{average\_double\_vec()}}
 {\footnotesize\ttfamily double average\+\_\+double\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a8fbb6b2b9616b6dfe5c2e6aa11c527e0}\label{vector_8c_a8fbb6b2b9616b6dfe5c2e6aa11c527e0}} 
+This function will determine the average of all values in a vector container of double values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+average The average of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_a19f91645d90e18ba1e0eaf138ebe27c9}{average\_double\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.85}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a8fbb6b2b9616b6dfe5c2e6aa11c527e0}\label{vector_8c_a8fbb6b2b9616b6dfe5c2e6aa11c527e0}} 
 \index{vector.c@{vector.c}!average\_float\_vec@{average\_float\_vec}}
 \index{average\_float\_vec@{average\_float\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{average\_float\_vec()}{average\_float\_vec()}}
 {\footnotesize\ttfamily float average\+\_\+float\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_aee398cb0a16437dc0c6d2c86a38012c6}\label{vector_8c_aee398cb0a16437dc0c6d2c86a38012c6}} 
+This function will determine the average of all values in a vector container of float values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+average The average of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a8fbb6b2b9616b6dfe5c2e6aa11c527e0}{average\_float\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.85}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_aee398cb0a16437dc0c6d2c86a38012c6}\label{vector_8c_aee398cb0a16437dc0c6d2c86a38012c6}} 
 \index{vector.c@{vector.c}!average\_int\_vec@{average\_int\_vec}}
 \index{average\_int\_vec@{average\_int\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{average\_int\_vec()}{average\_int\_vec()}}
 {\footnotesize\ttfamily float average\+\_\+int\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_af98b0d5e7e1eef627eb6d79322e2b9e5}\label{vector_8c_af98b0d5e7e1eef627eb6d79322e2b9e5}} 
+This function will determine the average of all values in a vector container of integers. Even though the values in the container are integers, the average of a group of integers is a real value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+average The average of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_aee398cb0a16437dc0c6d2c86a38012c6}{average\_int\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_af98b0d5e7e1eef627eb6d79322e2b9e5}\label{vector_8c_af98b0d5e7e1eef627eb6d79322e2b9e5}} 
 \index{vector.c@{vector.c}!char\_vector\_val@{char\_vector\_val}}
 \index{char\_vector\_val@{char\_vector\_val}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{char\_vector\_val()}{char\_vector\_val()}}
@@ -248,6 +320,90 @@ When a user instantiates and populates an array they must access the array by ca
 \begin{DoxyCode}{0}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, Array.array);}
 \DoxyCodeLine{\textcolor{comment}{// >> H}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_ab1ee8804bba3f3fad1262a99c3a365a6}\label{vector_8c_ab1ee8804bba3f3fad1262a99c3a365a6}} 
+\index{vector.c@{vector.c}!cumsum\_double\_vec@{cumsum\_double\_vec}}
+\index{cumsum\_double\_vec@{cumsum\_double\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_double\_vec()}{cumsum\_double\_vec()}}
+{\footnotesize\ttfamily double $\ast$ cumsum\+\_\+double\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will create an integer array containing the running cummulative sum of data in a vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cumsum An array containing the running cummulative sum of the values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} *cumsum = \mbox{\hyperlink{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}{cumsum\_float\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}\label{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}} 
+\index{vector.c@{vector.c}!cumsum\_float\_vec@{cumsum\_float\_vec}}
+\index{cumsum\_float\_vec@{cumsum\_float\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_float\_vec()}{cumsum\_float\_vec()}}
+{\footnotesize\ttfamily float $\ast$ cumsum\+\_\+float\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will create an integer array containing the running cummulative sum of data in a vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cumsum An array containing the running cummulative sum of the values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} *cumsum = \mbox{\hyperlink{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}{cumsum\_float\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_ac8471d832e42571fe1346e5e3ddd8e91}\label{vector_8c_ac8471d832e42571fe1346e5e3ddd8e91}} 
+\index{vector.c@{vector.c}!cumsum\_int\_vec@{cumsum\_int\_vec}}
+\index{cumsum\_int\_vec@{cumsum\_int\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_int\_vec()}{cumsum\_int\_vec()}}
+{\footnotesize\ttfamily int $\ast$ cumsum\+\_\+int\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will create an array containing the running cummulative sum of data in a vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cumsum An array containing the running cummulative sum of the values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} *cumsum = \mbox{\hyperlink{vector_8c_ac8471d832e42571fe1346e5e3ddd8e91}{cumsum\_int\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> cumsum = [1, 3, 6, 10, 15, 21]}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8c_a7d54e9d1ef0b23566eb5278f42926b6f}\label{vector_8c_a7d54e9d1ef0b23566eb5278f42926b6f}} 
@@ -1413,11 +1569,11 @@ This function will sort an integer array in descending order
 \DoxyCodeLine{\textcolor{comment}{// >> [6, 5, 4, 3, 2, 1]}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8c_a728bdab51bb13e8f43e4d068edcfd7ff}\label{vector_8c_a728bdab51bb13e8f43e4d068edcfd7ff}} 
+ \mbox{\Hypertarget{vector_8c_a093548d37b30f5992c21d45fd97ef0e0}\label{vector_8c_a093548d37b30f5992c21d45fd97ef0e0}} 
 \index{vector.c@{vector.c}!sort\_vec@{sort\_vec}}
 \index{sort\_vec@{sort\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{sort\_vec()}{sort\_vec()}}
-{\footnotesize\ttfamily void sort\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array,  }\item[{int}]{order }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void sort\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{sort\+\_\+order }\end{DoxyParamCaption})}
 
 This function will sort an array in descending order. This function can handle INT, FLOAT, DOUBLE, and CHAR data types.
 
@@ -1425,7 +1581,7 @@ This function will sort an array in descending order. This function can handle I
 \begin{DoxyParams}{Parameters}
 {\em array} & A vector container \\
 \hline
-{\em order} & 1 for ascending, 2 for descending\\
+{\em sort\+\_\+order} & FORWARD for ascending, REVERSE for descending\\
 \hline
 \end{DoxyParams}
 
@@ -1446,37 +1602,169 @@ This function will sort an array in descending order. This function can handle I
 \doxysubsubsection{\texorpdfstring{stdev\_double\_vec()}{stdev\_double\_vec()}}
 {\footnotesize\ttfamily double stdev\+\_\+double\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a2225381c9c8cfa40774dcc48ebe7b61d}\label{vector_8c_a2225381c9c8cfa40774dcc48ebe7b61d}} 
+This function will determine the standard deviation for a vector container of double variables
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdev The standard deviation of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.5, 5.3, 3.2, 6.8, 7.6, 2.1\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\_int\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 2.30754}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a2225381c9c8cfa40774dcc48ebe7b61d}\label{vector_8c_a2225381c9c8cfa40774dcc48ebe7b61d}} 
 \index{vector.c@{vector.c}!stdev\_float\_vec@{stdev\_float\_vec}}
 \index{stdev\_float\_vec@{stdev\_float\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{stdev\_float\_vec()}{stdev\_float\_vec()}}
 {\footnotesize\ttfamily float stdev\+\_\+float\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}\label{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}} 
+This function will determine the standard deviation for a vector container of float variables
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdev The standard deviation of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.5, 5.3, 3.2, 6.8, 7.6, 2.1\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\_int\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 2.30754}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}\label{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}} 
 \index{vector.c@{vector.c}!stdev\_int\_vec@{stdev\_int\_vec}}
 \index{stdev\_int\_vec@{stdev\_int\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{stdev\_int\_vec()}{stdev\_int\_vec()}}
 {\footnotesize\ttfamily float stdev\+\_\+int\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a787405e24b5f8e63d7c0ff355bbac646}\label{vector_8c_a787405e24b5f8e63d7c0ff355bbac646}} 
+This function will determine the standard deviation for a vector container of integers
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdev The standard deviation of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 5, 3, 6, 7, 2\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\_int\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 2.160247}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a787405e24b5f8e63d7c0ff355bbac646}\label{vector_8c_a787405e24b5f8e63d7c0ff355bbac646}} 
 \index{vector.c@{vector.c}!sum\_double\_vec@{sum\_double\_vec}}
 \index{sum\_double\_vec@{sum\_double\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{sum\_double\_vec()}{sum\_double\_vec()}}
 {\footnotesize\ttfamily double sum\+\_\+double\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}\label{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}} 
+This function will determine the sum of all values in a double vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{double} sum = \mbox{\hyperlink{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}{sum\_float\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 23.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}\label{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}} 
 \index{vector.c@{vector.c}!sum\_float\_vec@{sum\_float\_vec}}
 \index{sum\_float\_vec@{sum\_float\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{sum\_float\_vec()}{sum\_float\_vec()}}
 {\footnotesize\ttfamily float sum\+\_\+float\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a3d193ae2c47940a0421e604f239cdce9}\label{vector_8c_a3d193ae2c47940a0421e604f239cdce9}} 
+This function will determine the sum of all values in a float vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{float} sum = \mbox{\hyperlink{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}{sum\_float\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 23.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a3d193ae2c47940a0421e604f239cdce9}\label{vector_8c_a3d193ae2c47940a0421e604f239cdce9}} 
 \index{vector.c@{vector.c}!sum\_int\_vec@{sum\_int\_vec}}
 \index{sum\_int\_vec@{sum\_int\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{sum\_int\_vec()}{sum\_int\_vec()}}
 {\footnotesize\ttfamily int sum\+\_\+int\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{vector_8c_a57925b38859054812edf2f341225f6cc}\label{vector_8c_a57925b38859054812edf2f341225f6cc}} 
+This function will determine the sum of all values in an integer vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A vector container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of all values in a vector container
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 10;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} name[6] = \textcolor{stringliteral}{"{}array"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
+\DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a3d193ae2c47940a0421e604f239cdce9}{sum\_int\_vec}}(arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// >> 21}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a57925b38859054812edf2f341225f6cc}\label{vector_8c_a57925b38859054812edf2f341225f6cc}} 
 \index{vector.c@{vector.c}!unique\_char\_vec@{unique\_char\_vec}}
 \index{unique\_char\_vec@{unique\_char\_vec}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{unique\_char\_vec()}{unique\_char\_vec()}}
