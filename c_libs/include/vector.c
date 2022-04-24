@@ -36,7 +36,7 @@ void vector_mem_alloc(Vector *array, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
-Vector init_vector(dat_type dat, size_t num_indices, char *name) {
+Vector init_vector(dat_type dat, size_t num_indices) {
 	// Determine memory blocks based on data type
 	int size;
 	switch(dat) {
@@ -63,7 +63,6 @@ Vector init_vector(dat_type dat, size_t num_indices, char *name) {
 	array.dat = dat;
     array.elem = size;
     vector_mem_alloc(&array, num_indices);
-	strncpy(array.name, name, sizeof(array.name));
 	return array;
 }
 // --------------------------------------------------------------------------------
@@ -195,8 +194,7 @@ Vector find_int_vector_indices(Vector *array, int integer) {
 		}
 	}
 	dat_type dtype = INT;
-	char name[9] = "indices";
-	Vector indice_arr = init_vector(dtype, number, name);
+	Vector indice_arr = init_vector(dtype, number);
 	for (int i = 0; i < array->len; i++) {
 		input = i;
 		if (integer == int_vector_val(array, i)) {
@@ -216,8 +214,7 @@ Vector find_float_vector_indices(Vector *array, float float_val) {
 		}
 	}
 	dat_type dtype = INT;
-	char name[9] = "indices";
-	Vector indice_arr = init_vector(dtype, number, name);
+	Vector indice_arr = init_vector(dtype, number);
 	for (int i = 0; i < array->len; i++) {
 		if (float_val == float_vector_val(array, i)) {
 			input = i;
@@ -237,8 +234,7 @@ Vector find_double_vector_indices(Vector *array, double double_val) {
 		}
 	}
 	dat_type dtype = INT;
-	char name[9] = "indices";
-	Vector indice_arr = init_vector(dtype, number, name);
+	Vector indice_arr = init_vector(dtype, number);
 	for (int i = 0; i < array->len; i++) {
 		if (double_val == double_vector_val(array, i)) {
 			input = i;
@@ -258,8 +254,7 @@ Vector find_char_vector_indices(Vector *array, char char_val) {
 		}
 	}
 	dat_type dtype = INT;
-	char name[9] = "indices";
-	Vector indice_arr = init_vector(dtype, number, name);
+	Vector indice_arr = init_vector(dtype, number);
 	for (int i = 0; i < array->len; i++) {
 		if (char_val == char_vector_val(array, i)) {
 			input = i;

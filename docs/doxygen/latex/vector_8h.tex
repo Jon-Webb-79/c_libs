@@ -27,7 +27,7 @@ enum \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} \{ \m
 \item 
 void \mbox{\hyperlink{vector_8h_a5254f7434c321eba29ba44d44e9c28f6}{vector\+\_\+mem\+\_\+alloc}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, size\+\_\+t num\+\_\+indices)
 \item 
-\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vector_8h_ae90f4722fce7298fee948bcede74fe7f}{init\+\_\+vector}} (\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} dat, size\+\_\+t num\+\_\+indices, char $\ast$name)
+\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vector_8h_a099812047231c3edff12b68a4d1d0e61}{init\+\_\+vector}} (\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} dat, size\+\_\+t num\+\_\+indices)
 \item 
 int \mbox{\hyperlink{vector_8h_ac09911a1012b6977d3daf15c9eace5f9}{append\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, void $\ast$elements, size\+\_\+t count)
 \item 
@@ -191,6 +191,13 @@ INT&\\
 \doxysubsubsection{\texorpdfstring{order}{order}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}
 
+An enum container describing sorting order 
+\begin{DoxyParams}{Parameters}
+{\em FORWARD} & An integer representing a FORWARD sorting algorithm \\
+\hline
+{\em REVERSE} & An integer representing a REVERSE sorting algorithm \\
+\hline
+\end{DoxyParams}
 \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FORWARD@{FORWARD}!vector.h@{vector.h}}\index{vector.h@{vector.h}!FORWARD@{FORWARD}}}\mbox{\Hypertarget{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}\label{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}} 
 FORWARD&\\
@@ -937,11 +944,11 @@ This function will free all memory allocation from a vector container struct ele
 {\em array} & A vector container \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{vector_8h_ae90f4722fce7298fee948bcede74fe7f}\label{vector_8h_ae90f4722fce7298fee948bcede74fe7f}} 
+\mbox{\Hypertarget{vector_8h_a099812047231c3edff12b68a4d1d0e61}\label{vector_8h_a099812047231c3edff12b68a4d1d0e61}} 
 \index{vector.h@{vector.h}!init\_vector@{init\_vector}}
 \index{init\_vector@{init\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{init\_vector()}{init\_vector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} init\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}}}]{dat,  }\item[{size\+\_\+t}]{num\+\_\+indices,  }\item[{char $\ast$}]{name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} init\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}}}]{dat,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
 
 This function is the primary user interface to instantiate the Array container.
 
@@ -950,8 +957,6 @@ This function is the primary user interface to instantiate the Array container.
 {\em dat} & An integer representing the data type. The acceptable data types are FLOAT, DOUBLE, CHAR, or INT \\
 \hline
 {\em num\+\_\+indices} & A guess for the number of indices required by the array \\
-\hline
-{\em name} & The name of the array as a character string \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

@@ -38,6 +38,11 @@ typedef enum
 } dat_type;
 // --------------------------------------------------------------------------------
 
+/**
+ * An enum container describing sorting order
+ * @param FORWARD An integer representing a FORWARD sorting algorithm
+ * @param REVERSE An integer representing a REVERSE sorting algorithm
+ */
 typedef enum
 {
 	FORWARD,
@@ -60,7 +65,6 @@ typedef struct
 	size_t len;   // Active length of array
 	size_t size;  // Number of allocated indizes
 	int elem;     // Memory consumption per indice
-	char name[20];   // The array name
 	dat_type dat;
 } Vector;
 // --------------------------------------------------------------------------------
@@ -82,7 +86,6 @@ void vector_mem_alloc(Vector *array, size_t num_indices);
  * @param dat An integer representing the data type.  The acceptable data types
  *            are FLOAT, DOUBLE, CHAR, or INT
  * @param num_indices A guess for the number of indices required by the array
- * @param name The name of the array as a character string
  * @return a Vector container
  *
  * The following is a code example for how to instantiate the container for
@@ -95,7 +98,7 @@ void vector_mem_alloc(Vector *array, size_t num_indices);
  * Array arr_test = init_array(dtype, indices, name);
  * @endcode
  */
-Vector init_vector(dat_type dat, size_t num_indices, char *name);
+Vector init_vector(dat_type dat, size_t num_indices);
 // --------------------------------------------------------------------------------
 
 /**

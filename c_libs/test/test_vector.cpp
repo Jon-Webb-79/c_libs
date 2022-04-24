@@ -25,8 +25,7 @@ extern "C" {
 TEST(test_initialize_array, init_data) {
 	size_t indices = 20;
 	dat_type dtype = INT;
-	char name[6] = "array";
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	// Verify array -> size is 20
 	EXPECT_EQ(20, arr_test.size);
 	// Verify array -> len is 0
@@ -47,9 +46,8 @@ TEST(test_initialize_array, init_data) {
   */
 TEST(test_append_array, one_scalar_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a = 5;
     append_vector(&arr_test, &a, 1);
 	int b = ((int *) arr_test.array)[0];
@@ -69,9 +67,8 @@ TEST(test_append_array, one_scalar_int) {
  */
 TEST(test_append_array, array_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[3] = {10, 9, 8};
     append_vector(&arr_test, &a, 3);
 	int b = ((int *) arr_test.array)[0];
@@ -95,9 +92,8 @@ TEST(test_append_array, array_int) {
  * float variables */
 TEST(test_append_array, array_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[3] = {10.5, 9.4, 8.3};
     append_vector(&arr_test, &a, 3);
 	float b = ((float *) arr_test.array)[0];
@@ -119,9 +115,8 @@ TEST(test_append_array, array_float) {
  */
 TEST(test_append_array, array_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[3] = {10.5, 9.4, 8.3};
     append_vector(&arr_test, &a, 3);
 	double b = ((double *) arr_test.array)[0];
@@ -143,9 +138,8 @@ TEST(test_append_array, array_double) {
  */
 TEST(test_append_array, array_char){
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[7] = "Hello!";
     append_vector(&arr_test, &a, 3);
 	EXPECT_STREQ(a, ((char *)arr_test.array));
@@ -162,9 +156,8 @@ TEST(test_append_array, array_char){
  */
 TEST(test_append_array, memory_rollover) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	
 	for (int i = 0; i < 11; i++) {
 		append_vector(&arr_test, &i, 1);
@@ -187,9 +180,8 @@ TEST(test_append_array, memory_rollover) {
 TEST(test_free_memory, free_memory) {
 	// Allocate and implement memory
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[3] = {10.5, 9.4, 8.3};
     append_vector(&arr_test, &a, 3);
 
@@ -208,9 +200,8 @@ TEST(test_free_memory, free_memory) {
  */
 TEST(test_retrieve_indice, int_indice) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[3] = {10, 9, 8};
     append_vector(&arr_test, &a, 3);
 
@@ -226,9 +217,8 @@ TEST(test_retrieve_indice, int_indice) {
  */
 TEST(test_retrieve_indice, float_indice) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[3] = {10.3, 9.5, 8.4};
     append_vector(&arr_test, &a, 3);
 
@@ -244,9 +234,8 @@ TEST(test_retrieve_indice, float_indice) {
  */
 TEST(test_retrieve_indice, double_indice) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[3] = {10.3, 9.5, 8.4};
     append_vector(&arr_test, &a, 3);
 
@@ -262,9 +251,8 @@ TEST(test_retrieve_indice, double_indice) {
  */
 TEST(test_retrieve_indice, char_indice) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[7] = "Hello!";
     append_vector(&arr_test, &a, 3);
     char b = 'H';
@@ -283,9 +271,8 @@ TEST(test_retrieve_indice, char_indice) {
  */
 TEST(test_preappend_array, preappend_scalar) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[3] = {10, 9, 8};
     append_vector(&arr_test, &a, 3);
 	int b = 3;
@@ -304,9 +291,8 @@ TEST(test_preappend_array, preappend_scalar) {
  */
 TEST(test_preappend_array, preappend_array) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[3] = {10, 9, 8};
     append_vector(&arr_test, &a, 3);
 	int b[3] = {1, 2, 3};
@@ -328,9 +314,8 @@ TEST(test_preappend_array, preappend_array) {
 */
 TEST(test_pop_array, pop_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[4] = {10, 9, 8, 7};
 	append_vector(&arr_test, a, 4);
 	pop_vector(&arr_test, 2);
@@ -346,9 +331,8 @@ TEST(test_pop_array, pop_int) {
  */
 TEST(test_pop_array, pop_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[4] = {10.1, 9.2, 8.3, 7.4};
 	append_vector(&arr_test, a, 4);
 	pop_vector(&arr_test, 2);
@@ -364,9 +348,8 @@ TEST(test_pop_array, pop_float) {
  * finds the indices associated with specific values in an integer array.*/
 TEST(test_find_indices, find_integer_indices) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[7] = {6, 1, 3, 6, 6, 4, 5};
 	append_vector(&arr_test, a, 7);
 	Vector p = find_int_vector_indices(&arr_test, 6);
@@ -382,9 +365,8 @@ TEST(test_find_indices, find_integer_indices) {
  * finds the indices associated with specific values in an integer array.*/
 TEST(test_find_indices, find_float_indices) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[7] = {6.2, 1.0, 3.2, 6.2, 6.2, 4.5, 5.7};
 	append_vector(&arr_test, a, 7);
 	float value = 6.2;
@@ -401,9 +383,8 @@ TEST(test_find_indices, find_float_indices) {
  * finds the indices associated with specific values in an integer array.*/
 TEST(test_find_indices, find_double_indices) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     double a[7] = {6.2, 1.0, 3.2, 6.2, 6.2, 4.5, 5.7};
 	append_vector(&arr_test, a, 7);
 	double value = 6.2;
@@ -420,9 +401,8 @@ TEST(test_find_indices, find_double_indices) {
  * finds the indices associated with specific values in an integer array.*/
 TEST(test_find_indices, find_char_indices) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[7] = {'a', 'b', 'b', 'b', 'd', 'e', 'b'};
 	append_vector(&arr_test, a, 7);
 	char value = 'b';
@@ -441,9 +421,8 @@ TEST(test_find_indices, find_char_indices) {
  * properly deletes a value from an array */
 TEST(test_delete_array_value, delete_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[7] = {6, 1, 3, 6, 6, 4, 5};
 	append_vector(&arr_test, a, 7);
 	delete_int_vec_values(&arr_test, 6);
@@ -459,9 +438,8 @@ TEST(test_delete_array_value, delete_int) {
  * executes if the expected value is not in the target array*/
 TEST(test_delete_array_value, no_delete) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[4] = {6, 1, 3, 6};
 	append_vector(&arr_test, a, 4);
 	delete_int_vec_values(&arr_test, 5);
@@ -477,9 +455,8 @@ TEST(test_delete_array_value, no_delete) {
  * properly deletes a value from an array */
 TEST(test_delete_array_value, delete_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[7] = {6.1, 1.2, 3.4, 6.1, 6.1, 4.5, 5.7};
 	append_vector(&arr_test, a, 7);
 	float b = 6.1;
@@ -496,9 +473,8 @@ TEST(test_delete_array_value, delete_float) {
  * properly deletes a value from an array */
 TEST(test_delete_array_value, delete_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     double a[7] = {6.1, 1.2, 3.4, 6.1, 6.1, 4.5, 5.7};
 	append_vector(&arr_test, a, 7);
 	delete_double_vec_values(&arr_test, 6.1);
@@ -514,9 +490,8 @@ TEST(test_delete_array_value, delete_double) {
  * properly deletes a value from an array */
 TEST(test_delete_array_value, delete_char) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[6] = "Hello";
 	append_vector(&arr_test, a, 6);
 	delete_char_vec_values(&arr_test, 'l');
@@ -532,9 +507,8 @@ TEST(test_delete_array_value, delete_char) {
  * it properly replaces an integer value at an index*/
 TEST(test_replace_index, replace_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[6] = {1, 2, 3, 4, 5, 6};
 	append_vector(&arr_test, a, 6);
 	replace_int_vector_index(&arr_test, 1, 5);
@@ -552,9 +526,8 @@ TEST(test_replace_index, replace_int) {
  * it properly replaces a float value at an index*/
 TEST(test_replace_index, replace_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	replace_float_vector_index(&arr_test, 1, 5.5f);
@@ -572,9 +545,8 @@ TEST(test_replace_index, replace_float) {
  * it properly replaces a double value at an index*/
 TEST(test_replace_index, replace_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	replace_double_vector_index(&arr_test, 1, 5.5);
@@ -592,9 +564,8 @@ TEST(test_replace_index, replace_double) {
  * it properly replaces a char value at an index*/
 TEST(test_replace_index, replace_char) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[7] = "Hello ";
 	append_vector(&arr_test, a, 6);
 	replace_char_vector_index(&arr_test, 1, 'p');
@@ -613,9 +584,8 @@ TEST(test_replace_index, replace_char) {
  * properly replace int values in an array */
 TEST(test_replace_element, replace_int_element) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[6] = {1, 2, 3, 2, 5, 2};
 	append_vector(&arr_test, a, 6);
 	replace_int_vector_element(&arr_test, 2, 3);
@@ -633,9 +603,8 @@ TEST(test_replace_element, replace_int_element) {
  * properly replace a float values in an array */
 TEST(test_replace_element, replace_float_element) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[6] = {1.1, 2.2, 3.4, 2.2, 5.6, 2.2};
 	append_vector(&arr_test, a, 6);
 	replace_float_vector_element(&arr_test, 2.2f, 3.4f);
@@ -653,9 +622,8 @@ TEST(test_replace_element, replace_float_element) {
  * properly replace a double values in an array */
 TEST(test_replace_element, replace_double_element) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     double a[6] = {1.1, 2.2, 3.4, 2.2, 5.6, 2.2};
 	append_vector(&arr_test, a, 6);
 	replace_double_vector_element(&arr_test, 2.2, 3.4);
@@ -673,9 +641,8 @@ TEST(test_replace_element, replace_double_element) {
  * properly replace a char values in an array */
 TEST(test_replace_element, replace_char_element) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[6] = "Hello";
 	append_vector(&arr_test, a, 6);
 	replace_char_vector_element(&arr_test, 'l', 'q');
@@ -693,9 +660,8 @@ TEST(test_replace_element, replace_char_element) {
  * deletes duplicate values from an array */
 TEST(test_delete_dubplicates, delete_int_duplicates) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[8] = {1, 1, 3, 1, 5, 2, 2, 3};
 	append_vector(&arr_test, a, 8);
 	delete_int_duplicates_vec(&arr_test);
@@ -711,9 +677,8 @@ TEST(test_delete_dubplicates, delete_int_duplicates) {
  * deletes duplicate values from an array */
 TEST(test_delete_dubplicates, delete_float_duplicates) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[8] = {1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0};
 	append_vector(&arr_test, a, 8);
 	delete_float_duplicates_vec(&arr_test);
@@ -729,9 +694,8 @@ TEST(test_delete_dubplicates, delete_float_duplicates) {
  * deletes duplicate values from an array */
 TEST(test_delete_dubplicates, delete_double_duplicates) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     double a[8] = {1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0};
 	append_vector(&arr_test, a, 8);
 	delete_double_duplicates_vec(&arr_test);
@@ -747,9 +711,8 @@ TEST(test_delete_dubplicates, delete_double_duplicates) {
  * deletes duplicate values from an array */
 TEST(test_delete_dubplicates, delete_char_duplicates) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[14] = "Hello WWorld!";
 	append_vector(&arr_test, a, 14);
 	delete_char_duplicates_vec(&arr_test);
@@ -770,9 +733,8 @@ TEST(test_delete_dubplicates, delete_char_duplicates) {
  * deletes duplicate values from an array */
 TEST(test_delete_dubplicates, delete_duplicates) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[14] = "Hello WWorld!";
 	append_vector(&arr_test, a, 14);
 	delete_duplicates_vec(&arr_test);
@@ -794,9 +756,8 @@ TEST(test_delete_dubplicates, delete_duplicates) {
  * deletes all values from an array except for the unique values */
 TEST(test_unique_vec, unique_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     int a[9] = {1, 1, 2, 3, 4, 4, 6, 6, 7};
 	append_vector(&arr_test, a, 9);
 	unique_int_vec(&arr_test);
@@ -811,9 +772,8 @@ TEST(test_unique_vec, unique_int) {
  * deletes all values from an array except for the unique values */
 TEST(test_unique_vec, unique_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     float a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};
 	append_vector(&arr_test, a, 9);
 	unique_float_vec(&arr_test);
@@ -828,9 +788,8 @@ TEST(test_unique_vec, unique_float) {
  * deletes all values from an array except for the unique values */
 TEST(test_unique_vec, unique_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     double a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};
 	append_vector(&arr_test, a, 9);
 	unique_double_vec(&arr_test);
@@ -845,9 +804,8 @@ TEST(test_unique_vec, unique_double) {
  * deletes all values from an array except for the unique values */
 TEST(test_unique_vec, unique_char) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[13] = "Hello World!";
 	append_vector(&arr_test, a, 13);
 	unique_char_vec(&arr_test);
@@ -866,9 +824,8 @@ TEST(test_unique_vec, unique_char) {
  * deletes all values from an array except for the unique values */
 TEST(test_unique_vec, unique) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
     char a[13] = "Hello World!";
 	append_vector(&arr_test, a, 13);
 	unique_vec(&arr_test);
@@ -888,9 +845,8 @@ TEST(test_unique_vec, unique) {
  * properly orders an integer array in ascending order */
 TEST(sort_data_ascending, sort_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[6] = {5, -4, 3, 2, 1, 0};	
 	append_vector(&arr_test, a, 6);
 	sort_int_ascending_vec(&arr_test);
@@ -908,9 +864,8 @@ TEST(sort_data_ascending, sort_int) {
  * properly orders a float array in ascending order */
 TEST(sort_data_ascending, sort_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 5.4};
 	append_vector(&arr_test, a, 6);
 	sort_float_ascending_vec(&arr_test);
@@ -928,9 +883,8 @@ TEST(sort_data_ascending, sort_float) {
  * properly orders a double array in ascending order */
 TEST(sort_data_ascending, sort_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 5.4};
 	append_vector(&arr_test, a, 6);
 	sort_double_ascending_vec(&arr_test);
@@ -948,9 +902,8 @@ TEST(sort_data_ascending, sort_double) {
  * properly orders a character array in ascending order */
 TEST(sort_data_ascending, sort_char) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[5] = "QDAF";
 	append_vector(&arr_test, a, 5);
 	sort_char_ascending_vec(&arr_test);
@@ -967,9 +920,8 @@ TEST(sort_data_ascending, sort_char) {
  * properly orders an integer array in descending order */
 TEST(sort_data_descending, sort_int) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[5] = {1, 2, 3, 5, 4};	
 	append_vector(&arr_test, a, 5);
 	sort_int_descending_vec(&arr_test);
@@ -986,9 +938,8 @@ TEST(sort_data_descending, sort_int) {
  * properly orders a float array in descending order */
 TEST(sort_data_descending, sort_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[5] = {1.1, 2.2, 3.3, 5.5, 4.4};	
 	append_vector(&arr_test, a, 5);
 	sort_float_descending_vec(&arr_test);
@@ -1005,9 +956,8 @@ TEST(sort_data_descending, sort_float) {
  * properly orders a double array in descending order */
 TEST(sort_data_descending, sort_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[5] = {1.1, 2.2, 3.3, 5.5, 4.4};	
 	append_vector(&arr_test, a, 5);
 	sort_double_descending_vec(&arr_test);
@@ -1024,9 +974,8 @@ TEST(sort_data_descending, sort_double) {
  * properly orders a character array in ascending order */
 TEST(sort_data_descending, sort_char) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[5] = "QDAF";
 	append_vector(&arr_test, a, 5);
 	sort_char_descending_vec(&arr_test);
@@ -1042,9 +991,8 @@ TEST(sort_data_descending, sort_char) {
  * properly orders a character array in ascending order */
 TEST(sort_data_descending, sort) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[5] = "QDAF";
 	append_vector(&arr_test, a, 5);
 	sort_vec(&arr_test, REVERSE);
@@ -1062,9 +1010,8 @@ TEST(sort_data_descending, sort) {
  * of indices */
 TEST(median, int_even) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[4] = {3, 5, 2, 1};
 	append_vector(&arr_test, a, 4);
 	int med = median_int_vec(&arr_test);
@@ -1078,9 +1025,8 @@ TEST(median, int_even) {
  * of indices */
 TEST(median, int_odd) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[5] = {3, 5, 2, 1, 0};
 	append_vector(&arr_test, a, 5);
 	int med = median_int_vec(&arr_test);
@@ -1094,9 +1040,8 @@ TEST(median, int_odd) {
  * of indices */
 TEST(median, float_even) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[4] = {3.2, 5.3, 2.8, 1.0};
 	append_vector(&arr_test, a, 4);
 	float med = median_float_vec(&arr_test);
@@ -1110,9 +1055,8 @@ TEST(median, float_even) {
  * of indices */
 TEST(median, float_odd) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[5] = {3.2, 5.3, 2.8, 1.0, 0.5};
 	append_vector(&arr_test, a, 5);
 	float med = median_float_vec(&arr_test);
@@ -1126,9 +1070,8 @@ TEST(median, float_odd) {
  * of indices */
 TEST(median, double_even) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[4] = {3.2, 5.3, 2.8, 1.0};
 	append_vector(&arr_test, a, 4);
 	double med = median_double_vec(&arr_test);
@@ -1142,9 +1085,8 @@ TEST(median, double_even) {
  * of indices */
 TEST(median, double_odd) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[5] = {3.2, 5.3, 2.8, 1.0, 0.5};
 	append_vector(&arr_test, a, 5);
 	double med = median_double_vec(&arr_test);
@@ -1158,9 +1100,8 @@ TEST(median, double_odd) {
  * of indices */
 TEST(median, char_even) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[6] = "hello";
 	append_vector(&arr_test, a, 6);
 	char med = median_char_vec(&arr_test);
@@ -1174,9 +1115,8 @@ TEST(median, char_even) {
  * of indices */
 TEST(median, char_odd) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = CHAR;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	char a[7] = "heowqf";
 	append_vector(&arr_test, a, 7);
 	char med = median_char_vec(&arr_test);
@@ -1190,9 +1130,8 @@ TEST(median, char_odd) {
  * the sum of all values in an integer vector container */
 TEST(sum, sum_integer) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[6] = {1, 2, 3, 4, 5, 6};
 	append_vector(&arr_test, a, 6);
 	int sum = sum_int_vec(&arr_test);
@@ -1205,9 +1144,8 @@ TEST(sum, sum_integer) {
  * the sum of all values in a float vector container */
 TEST(sum, sum_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	float sum = sum_float_vec(&arr_test);
@@ -1220,9 +1158,8 @@ TEST(sum, sum_float) {
  * the sum of all values in a double vector container */
 TEST(sum, sum_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	double sum = sum_double_vec(&arr_test);
@@ -1236,9 +1173,8 @@ TEST(sum, sum_double) {
  * the sum of all values in an integer vector container */
 TEST(average, avg_integer) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[6] = {1, 2, 3, 4, 5, 6};
 	append_vector(&arr_test, a, 6);
 	float average = average_int_vec(&arr_test);
@@ -1251,9 +1187,8 @@ TEST(average, avg_integer) {
  * the sum of all values in a float vector container */
 TEST(average, avg_float) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	float average = average_float_vec(&arr_test);
@@ -1266,9 +1201,8 @@ TEST(average, avg_float) {
  * the sum of all values in a double vector container */
 TEST(average, avg_double) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	double average = average_double_vec(&arr_test);
@@ -1282,9 +1216,8 @@ TEST(average, avg_double) {
  * the standard deviation of a vector container of integers */
 TEST(stdev, int_stdev) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[6] = {1, 5, 3, 6, 7, 2};
 	append_vector(&arr_test, a, 6);
 	float stdev = stdev_int_vec(&arr_test);
@@ -1297,9 +1230,8 @@ TEST(stdev, int_stdev) {
  * the standard deviation of a vector container of float variables */
 TEST(stdev, float_stdev) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
 	append_vector(&arr_test, a, 6);
 	float stdev = stdev_float_vec(&arr_test);
@@ -1312,9 +1244,8 @@ TEST(stdev, float_stdev) {
  * the standard deviation of a vector container of double variables */
 TEST(stdev, double_stdev) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};
 	append_vector(&arr_test, a, 6);
 	double stdev = stdev_double_vec(&arr_test);
@@ -1328,9 +1259,8 @@ TEST(stdev, double_stdev) {
  * returns an array containing the running cummulative sum of the input array */
 TEST(cumsum, int_cumsum) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = INT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	int a[6] = {1, 2, 3, 4, 5, 6};
 	append_vector(&arr_test, a, 6);
 	int *vec;
@@ -1349,9 +1279,8 @@ TEST(cumsum, int_cumsum) {
  * returns an array containing the running cummulative sum of the input array */
 TEST(cumsum, float_cumsum) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = FLOAT;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	float *vec;
@@ -1370,9 +1299,8 @@ TEST(cumsum, float_cumsum) {
  * returns an array containing the running cummulative sum of the input array */
 TEST(cumsum, double_cumsum) {
 	size_t indices = 10;
-	char name[6] = "array";
 	dat_type dtype = DOUBLE;
-	Vector arr_test = init_vector(dtype, indices, name);
+	Vector arr_test = init_vector(dtype, indices);
 	double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
 	append_vector(&arr_test, a, 6);
 	double *vec;
