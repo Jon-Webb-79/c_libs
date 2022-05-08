@@ -15,6 +15,16 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
+// TODO preappend_string_vector
+// TODO pop_string
+// TODO find_string_vector_indices
+// TODO delete_string_vec_values
+// TODO replace_string_vector_index
+// TODO delete_string_duplicates
+// TODO unique_string_vec
+// TODO sort_string_ascending_vev
+// TODO sort_string_descending_vec
+// TODO sort_string
 int main(int argc, const char * argv[]) {
 	printf("Hello, World!");
 }

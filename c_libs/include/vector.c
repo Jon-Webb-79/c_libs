@@ -36,6 +36,26 @@ void vector_mem_alloc(Vector *array, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
+int string_vector_mem_alloc(StringVector *array, size_t num_indices) {
+	// Determine the total memory allocation and assign to pointer
+	void *pointer;
+	pointer = malloc(num_indices * array->elem);
+
+	// If memory is full fail gracefully
+	if (pointer == NULL) {
+		printf("Unable to allocate memory, exiting.\n");
+		free(pointer);
+		return 0;
+	}
+	// Allocate resources and instantiate Array
+	else {
+		array->array = pointer;
+		array->len = 0;
+		return 1;
+	}
+}
+// --------------------------------------------------------------------------------
+
 Vector init_vector(dat_type dat, size_t num_indices) {
 	// Determine memory blocks based on data type
 	int size;
@@ -67,6 +87,15 @@ Vector init_vector(dat_type dat, size_t num_indices) {
 }
 // --------------------------------------------------------------------------------
 
+StringVector init_string_vector() {
+	StringVector array;
+	array.dat = STRING;
+	array.elem = sizeof(char);
+	string_vector_mem_alloc(&array, array.elem);
+	return array;
+}
+// --------------------------------------------------------------------------------
+
 int append_vector(Vector *array, void *elements, size_t count) {
 	// Allocae more memory if necessary
     if (array->len + count > array->size) {
@@ -85,6 +114,23 @@ int append_vector(Vector *array, void *elements, size_t count) {
     memcpy((char *)array->array + array->len * array->elem, elements, count * array->elem);
     array->len += count;
     return 1;
+}
+// --------------------------------------------------------------------------------
+
+int append_string(StringVector *s, char *value) {
+	value = strdup(value);
+	if (!value) {
+		return -1;
+	}
+	s->len++;
+	char **resized = realloc(s->array, sizeof(char *)*s->len);
+	if (!resized) {
+		free(value);
+		return -1;
+	}
+	resized[s->len-1] = value;
+	s->array = resized;
+	return 0;
 }
 // --------------------------------------------------------------------------------
 
@@ -964,6 +1010,30 @@ double* cumsum_double_vec(Vector *array) {
 		vec[i] = sum;
 	}
 	return vec;
+}
+// --------------------------------------------------------------------------------
+
+char* string_vector_val(StringVector *array, int indice) {
+	// Ensure array contains strings
+	if (array->dat != STRING) {
+		printf("Function can only return string values, exiting function!\n");
+		exit(0);
+	}
+	// Cast value to an integer and return
+	char* a = array->array[indice];
+	return a;
+}
+// --------------------------------------------------------------------------------
+
+void free_string_array(StringVector *array) {
+	for (int i = 0; i < array->len; i++) {
+		free(array->array[i]);
+	}
+	free(array->array);
+	// Reset all variables in the struct
+	array->array = NULL;
+    array->len = 0;
+	array->elem = 0;
 }
 // ================================================================================
 // ================================================================================

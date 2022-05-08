@@ -28,13 +28,15 @@
  * &param DOUBLE An integer representing double data types
  * @param CHAR An integer representing char data types
  * @param INT An integer representing int data types
+ * @param STRING An integer representing a string data type
  */
 typedef enum
 {
 	FLOAT,
 	DOUBLE,
 	CHAR,
-	INT
+	INT,
+	STRING
 } dat_type;
 // --------------------------------------------------------------------------------
 
@@ -57,16 +59,31 @@ typedef enum
  * @param len The active length of the array
  * @param size The total number of indices allocated for the array
  * @param elem The memory consumption for each indice
- * @param name The name of the array, constrained to 20 characters
  */
 typedef struct
 {
 	void *array;  // Pointer to array
 	size_t len;   // Active length of array
-	size_t size;  // Number of allocated indizes
+	size_t size;  // Number of allocated indices
 	int elem;     // Memory consumption per indice
 	dat_type dat;
 } Vector;
+// --------------------------------------------------------------------------------
+
+/**
+ * A container for a dynamically allocated String array and related data
+ *
+ * @param array A pointer to a multi array in memory
+ * @param len The active length of the multi array
+ * @param elen The memory consumption for each row indice
+ */
+typedef struct
+{
+	char **array;
+	size_t len;
+	int elem;
+	dat_type dat;
+} StringVector;
 // --------------------------------------------------------------------------------
 
 /**
@@ -78,6 +95,17 @@ typedef struct
  * @param num_indices A guess for the number of indices that will be consumed by the array
  */
 void vector_mem_alloc(Vector *array, size_t num_indices);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function instantiates an Array container and all relevant variables. This
+ * function should not be used directly.  Instead the user should invoke the
+ * init_array function, which wraps this function.
+ *
+ * @param array A string vector container
+ * @param num_indices A guess for the number of indices that will be consumed by the array
+ */
+int string_vector_mem_alloc(StringVector *array, size_t num_indices);
 // --------------------------------------------------------------------------------
 
 /**
@@ -94,8 +122,7 @@ void vector_mem_alloc(Vector *array, size_t num_indices);
  * @code
  * size_t indices = 20;
  * char dtype[4] = "int";
- * char name[6] = "Array";
- * Array arr_test = init_array(dtype, indices, name);
+ * Array arr_test = init_array(dtype, indices);
  * @endcode
  */
 Vector init_vector(dat_type dat, size_t num_indices);
@@ -121,8 +148,7 @@ Vector init_vector(dat_type dat, size_t num_indices);
  * // Instantiate array
  * size_t indices = 20;
  * dat_type dtype INT;
- * char name[6] = "Array";
- * Array arr_test = init_array(dtype, indices, name);
+ * Array arr_test = init_array(dtype, indices);
  *
  * // Build array from scalar values
  * for (int = 0; i < 3; i++) {
@@ -141,8 +167,7 @@ Vector init_vector(dat_type dat, size_t num_indices);
 * // Instantiate array
  * size_t indices = 20;
  * dat_type dtype = INT;
- * char name[5] = "Array";
- * Array arr_test = init_array(dtype, indices, name);
+ * Array arr_test = init_array(dtype, indices);
  *
  * // Build from an already existing array
  * int a[3] = {0, 1, 2};
@@ -160,12 +185,58 @@ int append_vector(Vector *array, void *elements, size_t count);
 // --------------------------------------------------------------------------------
 
 /**
+ * This function allows a user to append an existing or blank string vector container
+ * with scalars or arrays of any data type.
+ *
+ * @param s A pointer to the memory location where an array exists
+ * @param value The string value to be appended
+ * @return integer A 0 if the function was unsuccesful, 1 if it was succesful
+ *
+ * The following demonstrates several ways that the append_array function can
+ * be uses.  In these instances, the function will be used for an array
+ * of integers.
+ *
+ * @code
+ * // Instantiate array
+ * Array arr_test = string_init_array();
+ * append_string(&arr_test, "First Value");
+ * printf("%s\n", arr_test[0])'
+ * >> ['F', 'i', 'r', 's', 't', ' ', 'V', 'a', 'l', 'u', 'e']
+ * @endcode
+ */
+int append_string(StringVector *s, char *value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function is the primary user interface to instantiate the StringArray container.
+ *
+ * @return a Vector container
+ *
+ * The following is a code example for how to instantiate the container for
+ * an integer;
+ *
+ * @code
+ * Array arr_test = init_string_array();
+ * @endcode
+ */
+StringVector init_string_vector();
+// --------------------------------------------------------------------------------
+
+/**
  * This function will free all memory allocation from a vector container
  * struct elements
  *
  * @param array A vector container
  */
 void free_vector(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory allocation from a String Vector container
+ *
+ * @param array A StringVector container
+ */
+void free_string_array(StringVector *array);
 // --------------------------------------------------------------------------------
 
 /**
@@ -1481,6 +1552,29 @@ float* cumsum_float_vec(Vector *array);
  * @endcode
  */
 double* cumsum_double_vec(Vector *array);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the value of a vector container assigned to a user
+ * specified indice, so as long as the data point is an integer.
+ *
+ * @param array The string array container
+ * @param indice A vector indice
+ * @return value The integer value associated with an indice
+ *
+ * When a user instantiates and populates an array they must access the array
+ * by casting it prior to retrieving the value.
+ *
+ * @code
+ * StringVector arr_test = init_string_vector();
+ * char value[] = "First Value";
+ * append_string(&arr_test, value);
+ * char* val = string_vector_val(&arr_test, 0);
+ * printf("%s\n", val);
+ * // >> ['F', 'i', 'r', 's', 't', ' ', 'V', 'a', 'l', 'u', 'e', '\0']
+ * @endcode
+ */
+char* string_vector_val(StringVector *array, int indice);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

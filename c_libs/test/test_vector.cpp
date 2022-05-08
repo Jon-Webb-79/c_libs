@@ -1315,4 +1315,29 @@ TEST(cumsum, double_cumsum) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the append_string function to ensure it properly
+ * appends a string to a string vector */
+TEST(string, append_string) {
+	StringVector arr_test = init_string_vector();
+	char value[] = "First Value";
+    append_string(&arr_test, value);
+	int result = strcmp(value, arr_test.array[0]);
+	EXPECT_EQ(result, 0);
+	free_string_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the append_string function to ensure it properly
+ * appends a string to a string vector */
+TEST(string, string_val) {
+	StringVector arr_test = init_string_vector();
+	char value[] = "First Value";
+    append_string(&arr_test, value);
+	int result = strcmp(value, string_vector_val(&arr_test, 0));
+	EXPECT_EQ(result, 0);
+	free_string_array(&arr_test);
+}
+// ================================================================================
+// ================================================================================
 // eof

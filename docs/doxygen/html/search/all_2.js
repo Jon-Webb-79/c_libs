@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['dat_0',['dat',['../structVector.html#ae57a2b2fbc1fd0c432eda3e7063c0601',1,'Vector']]],
+  ['dat_0',['dat',['../structStringVector.html#a42f12c2ffa5233607750f2536aab80ae',1,'StringVector::dat()'],['../structVector.html#ae57a2b2fbc1fd0c432eda3e7063c0601',1,'Vector::dat()']]],
   ['dat_5ftype_1',['dat_type',['../vector_8h.html#a1abd8bcc329e46eb9463a815548d6686',1,'vector.h']]],
   ['delete_5fchar_5fduplicates_5fvec_2',['delete_char_duplicates_vec',['../vector_8c.html#a7d54e9d1ef0b23566eb5278f42926b6f',1,'delete_char_duplicates_vec(Vector *array):&#160;vector.c'],['../vector_8h.html#a7d54e9d1ef0b23566eb5278f42926b6f',1,'delete_char_duplicates_vec(Vector *array):&#160;vector.c']]],
   ['delete_5fchar_5fvec_5fvalues_3',['delete_char_vec_values',['../vector_8c.html#a0c193f6d294a6f65b20d2603f282e7c5',1,'delete_char_vec_values(Vector *array, char char_value):&#160;vector.c'],['../vector_8h.html#a0c193f6d294a6f65b20d2603f282e7c5',1,'delete_char_vec_values(Vector *array, char char_value):&#160;vector.c']]],
