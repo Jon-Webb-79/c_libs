@@ -1321,7 +1321,7 @@ TEST(cumsum, double_cumsum) {
 TEST(string, append_string) {
 	StringVector arr_test = init_string_vector();
 	char value[] = "First Value";
-    append_string(&arr_test, value);
+    append_string_vector(&arr_test, value);
 	int result = strcmp(value, arr_test.array[0]);
 	EXPECT_EQ(result, 0);
 	free_string_array(&arr_test);
@@ -1333,9 +1333,25 @@ TEST(string, append_string) {
 TEST(string, string_val) {
 	StringVector arr_test = init_string_vector();
 	char value[] = "First Value";
-    append_string(&arr_test, value);
+    append_string_vector(&arr_test, value);
 	int result = strcmp(value, string_vector_val(&arr_test, 0));
 	EXPECT_EQ(result, 0);
+	free_string_array(&arr_test);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the preappend_string function to ensure it properly
+ * appends a string to a string vector */
+TEST(string, preappend_string) {
+	StringVector arr_test = init_string_vector();
+	char value[] = "First Value";
+	char new_value[] = "Second Value";
+    append_string_vector(&arr_test, value);
+	preappend_string_vector(&arr_test, new_value);
+	int result1 = strcmp(value, string_vector_val(&arr_test, 1));
+	int result2 = strcmp(new_value, string_vector_val(&arr_test, 0));
+	EXPECT_EQ(result1, 0);
+	EXPECT_EQ(result2, 0);
 	free_string_array(&arr_test);
 }
 // ================================================================================

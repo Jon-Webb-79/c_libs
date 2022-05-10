@@ -117,19 +117,38 @@ int append_vector(Vector *array, void *elements, size_t count) {
 }
 // --------------------------------------------------------------------------------
 
-int append_string(StringVector *s, char *value) {
+int append_string_vector(StringVector *array, char *value) {
 	value = strdup(value);
 	if (!value) {
 		return -1;
 	}
-	s->len++;
-	char **resized = realloc(s->array, sizeof(char *)*s->len);
+	array->len++;
+	char **resized = realloc(array->array, sizeof(char *)*array->len + 1);
 	if (!resized) {
 		free(value);
 		return -1;
 	}
-	resized[s->len-1] = value;
-	s->array = resized;
+	resized[array->len-1] = value;
+	array->array = resized;
+	return 0;
+}
+// --------------------------------------------------------------------------------
+
+int preappend_string_vector(StringVector *array, const char *value) {
+	char *str;
+	if (!value || !(str = strdup(value)))
+		return -1;
+
+	char **resized = realloc(array->array, sizeof(char *)*array->len + 1);
+	if (!resized) {
+		free(str);
+		return -1;
+	}
+	array->array = resized;
+	// memmove is not moving the array of pointers one to the right???
+	memmove(array->array + 1, array->array, sizeof *array->array * array->len);
+	array->array[0] = str;
+	array->len++;
 	return 0;
 }
 // --------------------------------------------------------------------------------
@@ -1026,8 +1045,10 @@ char* string_vector_val(StringVector *array, int indice) {
 // --------------------------------------------------------------------------------
 
 void free_string_array(StringVector *array) {
-	for (int i = 0; i < array->len; i++) {
-		free(array->array[i]);
+	if (array != NULL) {
+		for (int i = 0; i < array->len; i++) {
+			free(array->array[i]);
+		}
 	}
 	free(array->array);
 	// Reset all variables in the struct

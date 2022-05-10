@@ -204,7 +204,7 @@ int append_vector(Vector *array, void *elements, size_t count);
  * >> ['F', 'i', 'r', 's', 't', ' ', 'V', 'a', 'l', 'u', 'e']
  * @endcode
  */
-int append_string(StringVector *s, char *value);
+int append_string_vector(StringVector *s, char *value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -1562,9 +1562,6 @@ double* cumsum_double_vec(Vector *array);
  * @param indice A vector indice
  * @return value The integer value associated with an indice
  *
- * When a user instantiates and populates an array they must access the array
- * by casting it prior to retrieving the value.
- *
  * @code
  * StringVector arr_test = init_string_vector();
  * char value[] = "First Value";
@@ -1575,6 +1572,26 @@ double* cumsum_double_vec(Vector *array);
  * @endcode
  */
 char* string_vector_val(StringVector *array, int indice);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will pre-append an array of strings with another string
+ *
+ * @param array The string array container
+ * @param value A string to be pre-appended onto an array of strings
+ *
+ * @code
+ * StringVector arr_test = init_string_vector();
+ * char value[] = "First Value";
+ * char new_value[] = "Second Value";
+ * append_string_vector(&arr_test, value);
+ * preappend_string_vector(&arr_test,new_value);
+ * char* val = string_vector_val(&arr_test, 0);
+ * printf("%s\n", val);
+ * // >> ['S', 'e', 'c', 'o', 'n', 'd', ' ', 'V', 'a', 'l', 'u', 'e', '\0']
+ * @endcode
+ */
+int preappend_string_vector(StringVector *array, const char *value);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

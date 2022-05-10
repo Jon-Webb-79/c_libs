@@ -114,8 +114,8 @@ Functions</h2></td></tr>
 <tr class="separator:a099812047231c3edff12b68a4d1d0e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac09911a1012b6977d3daf15c9eace5f9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ac09911a1012b6977d3daf15c9eace5f9">append_vector</a> (<a class="el" href="structVector.html">Vector</a> *array, void *elements, size_t count)</td></tr>
 <tr class="separator:ac09911a1012b6977d3daf15c9eace5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac14576b075fc9cad4ec2d9359e390d29"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ac14576b075fc9cad4ec2d9359e390d29">append_string</a> (<a class="el" href="structStringVector.html">StringVector</a> *s, char *value)</td></tr>
-<tr class="separator:ac14576b075fc9cad4ec2d9359e390d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206667fdad67436132ab0c3dfaf687fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a206667fdad67436132ab0c3dfaf687fd">append_string_vector</a> (<a class="el" href="structStringVector.html">StringVector</a> *s, char *value)</td></tr>
+<tr class="separator:a206667fdad67436132ab0c3dfaf687fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bf46c0d706d37c8d00900b1ba5c0cea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structStringVector.html">StringVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a> ()</td></tr>
 <tr class="separator:a6bf46c0d706d37c8d00900b1ba5c0cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6401d4762af55553c2badac04c3b9184"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a6401d4762af55553c2badac04c3b9184">free_vector</a> (<a class="el" href="structVector.html">Vector</a> *array)</td></tr>
@@ -238,6 +238,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab1ee8804bba3f3fad1262a99c3a365a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a739669abfb7d797c688f14c2b24730b6"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a739669abfb7d797c688f14c2b24730b6">string_vector_val</a> (<a class="el" href="structStringVector.html">StringVector</a> *array, int indice)</td></tr>
 <tr class="separator:a739669abfb7d797c688f14c2b24730b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8188993915bf396d55688bed3efc174a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a8188993915bf396d55688bed3efc174a">preappend_string_vector</a> (<a class="el" href="structStringVector.html">StringVector</a> *array, const char *value)</td></tr>
+<tr class="separator:a8188993915bf396d55688bed3efc174a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a1abd8bcc329e46eb9463a815548d6686" name="a1abd8bcc329e46eb9463a815548d6686"></a>
@@ -297,14 +299,14 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac14576b075fc9cad4ec2d9359e390d29" name="ac14576b075fc9cad4ec2d9359e390d29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac14576b075fc9cad4ec2d9359e390d29">&#9670;&nbsp;</a></span>append_string()</h2>
+<a id="a206667fdad67436132ab0c3dfaf687fd" name="a206667fdad67436132ab0c3dfaf687fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206667fdad67436132ab0c3dfaf687fd">&#9670;&nbsp;</a></span>append_string_vector()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int append_string </td>
+          <td class="memname">int append_string_vector </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structStringVector.html">StringVector</a> *&#160;</td>
           <td class="paramname"><em>s</em>, </td>
@@ -334,10 +336,9 @@ Functions</h2></td></tr>
 <p>The following demonstrates several ways that the append_array function can be uses. In these instances, the function will be used for an array of integers.</p>
 <div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
 <div class="line">Array arr_test = string_init_array();</div>
-<div class="line"><a class="code hl_function" href="vector_8c.html#ac14576b075fc9cad4ec2d9359e390d29">append_string</a>(&amp;arr_test, <span class="stringliteral">&quot;First Value&quot;</span>);</div>
+<div class="line">append_string(&amp;arr_test, <span class="stringliteral">&quot;First Value&quot;</span>);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, arr_test[0])<span class="stringliteral">&#39;</span></div>
 <div class="line"><span class="stringliteral">&gt;&gt; [&#39;</span>F<span class="stringliteral">&#39;, &#39;</span>i<span class="stringliteral">&#39;, &#39;</span>r<span class="stringliteral">&#39;, &#39;</span>s<span class="stringliteral">&#39;, &#39;</span>t<span class="stringliteral">&#39;, &#39;</span> <span class="stringliteral">&#39;, &#39;</span>V<span class="stringliteral">&#39;, &#39;</span>a<span class="stringliteral">&#39;, &#39;</span>l<span class="stringliteral">&#39;, &#39;</span>u<span class="stringliteral">&#39;, &#39;</span>e<span class="stringliteral">&#39;]</span></div>
-<div class="ttc" id="avector_8c_html_ac14576b075fc9cad4ec2d9359e390d29"><div class="ttname"><a href="vector_8c.html#ac14576b075fc9cad4ec2d9359e390d29">append_string</a></div><div class="ttdeci">int append_string(StringVector *s, char *value)</div><div class="ttdef"><b>Definition:</b> vector.c:120</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -450,7 +451,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">double</span> average = <a class="code hl_function" href="vector_8c.html#a19f91645d90e18ba1e0eaf138ebe27c9">average_double_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.85</span></div>
-<div class="ttc" id="avector_8c_html_a19f91645d90e18ba1e0eaf138ebe27c9"><div class="ttname"><a href="vector_8c.html#a19f91645d90e18ba1e0eaf138ebe27c9">average_double_vec</a></div><div class="ttdeci">double average_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:935</div></div>
+<div class="ttc" id="avector_8c_html_a19f91645d90e18ba1e0eaf138ebe27c9"><div class="ttname"><a href="vector_8c.html#a19f91645d90e18ba1e0eaf138ebe27c9">average_double_vec</a></div><div class="ttdeci">double average_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:954</div></div>
 <div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:36</div></div>
 </div><!-- fragment --> 
 </div>
@@ -486,7 +487,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> average = <a class="code hl_function" href="vector_8c.html#a8fbb6b2b9616b6dfe5c2e6aa11c527e0">average_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.85</span></div>
-<div class="ttc" id="avector_8c_html_a8fbb6b2b9616b6dfe5c2e6aa11c527e0"><div class="ttname"><a href="vector_8c.html#a8fbb6b2b9616b6dfe5c2e6aa11c527e0">average_float_vec</a></div><div class="ttdeci">float average_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:929</div></div>
+<div class="ttc" id="avector_8c_html_a8fbb6b2b9616b6dfe5c2e6aa11c527e0"><div class="ttname"><a href="vector_8c.html#a8fbb6b2b9616b6dfe5c2e6aa11c527e0">average_float_vec</a></div><div class="ttdeci">float average_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:948</div></div>
 <div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:35</div></div>
 </div><!-- fragment --> 
 </div>
@@ -522,7 +523,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> average = <a class="code hl_function" href="vector_8c.html#aee398cb0a16437dc0c6d2c86a38012c6">average_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.5</span></div>
-<div class="ttc" id="avector_8c_html_aee398cb0a16437dc0c6d2c86a38012c6"><div class="ttname"><a href="vector_8c.html#aee398cb0a16437dc0c6d2c86a38012c6">average_int_vec</a></div><div class="ttdeci">float average_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:923</div></div>
+<div class="ttc" id="avector_8c_html_aee398cb0a16437dc0c6d2c86a38012c6"><div class="ttname"><a href="vector_8c.html#aee398cb0a16437dc0c6d2c86a38012c6">average_int_vec</a></div><div class="ttdeci">float average_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:942</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -610,7 +611,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">double</span> *cumsum = <a class="code hl_function" href="vector_8c.html#a7b0a73a6ce02f60c25ab2603f0133102">cumsum_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]</span></div>
-<div class="ttc" id="avector_8c_html_a7b0a73a6ce02f60c25ab2603f0133102"><div class="ttname"><a href="vector_8c.html#a7b0a73a6ce02f60c25ab2603f0133102">cumsum_float_vec</a></div><div class="ttdeci">float * cumsum_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:990</div></div>
+<div class="ttc" id="avector_8c_html_a7b0a73a6ce02f60c25ab2603f0133102"><div class="ttname"><a href="vector_8c.html#a7b0a73a6ce02f60c25ab2603f0133102">cumsum_float_vec</a></div><div class="ttdeci">float * cumsum_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:1009</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -679,7 +680,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">int</span> *cumsum = <a class="code hl_function" href="vector_8c.html#ac8471d832e42571fe1346e5e3ddd8e91">cumsum_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; cumsum = [1, 3, 6, 10, 15, 21]</span></div>
-<div class="ttc" id="avector_8c_html_ac8471d832e42571fe1346e5e3ddd8e91"><div class="ttname"><a href="vector_8c.html#ac8471d832e42571fe1346e5e3ddd8e91">cumsum_int_vec</a></div><div class="ttdeci">int * cumsum_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:977</div></div>
+<div class="ttc" id="avector_8c_html_ac8471d832e42571fe1346e5e3ddd8e91"><div class="ttname"><a href="vector_8c.html#ac8471d832e42571fe1346e5e3ddd8e91">cumsum_int_vec</a></div><div class="ttdeci">int * cumsum_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:996</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -790,7 +791,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
-<div class="ttc" id="avector_8c_html_a122563df58490a6bc9807c7496fc211e"><div class="ttname"><a href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a></div><div class="ttdeci">void delete_double_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:512</div></div>
+<div class="ttc" id="avector_8c_html_a122563df58490a6bc9807c7496fc211e"><div class="ttname"><a href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a></div><div class="ttdeci">void delete_double_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:531</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -868,7 +869,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 5, 2]</span></div>
-<div class="ttc" id="avector_8c_html_a3b714e6f1ad388ab3280fcec12b164b2"><div class="ttname"><a href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a></div><div class="ttdeci">void delete_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:618</div></div>
+<div class="ttc" id="avector_8c_html_a3b714e6f1ad388ab3280fcec12b164b2"><div class="ttname"><a href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a></div><div class="ttdeci">void delete_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:637</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -902,7 +903,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
-<div class="ttc" id="avector_8c_html_a2beab0348c5fc9efa3d9a01b2dc98c06"><div class="ttname"><a href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a></div><div class="ttdeci">void delete_float_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:499</div></div>
+<div class="ttc" id="avector_8c_html_a2beab0348c5fc9efa3d9a01b2dc98c06"><div class="ttname"><a href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a></div><div class="ttdeci">void delete_float_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:518</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -980,7 +981,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 5, 2]</span></div>
-<div class="ttc" id="avector_8c_html_acadf72c8ef6e2a3e6a71ddfb74adcef9"><div class="ttname"><a href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a></div><div class="ttdeci">void delete_int_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:486</div></div>
+<div class="ttc" id="avector_8c_html_acadf72c8ef6e2a3e6a71ddfb74adcef9"><div class="ttname"><a href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a></div><div class="ttdeci">void delete_int_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:505</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1515,7 +1516,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">char</span> med = <a class="code hl_function" href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; &#39;l&#39;</span></div>
-<div class="ttc" id="avector_8c_html_a5f3b6ae2d42617c08ddc76b38007c551"><div class="ttname"><a href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a></div><div class="ttdeci">char median_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:882</div></div>
+<div class="ttc" id="avector_8c_html_a5f3b6ae2d42617c08ddc76b38007c551"><div class="ttname"><a href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a></div><div class="ttdeci">char median_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:901</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1550,7 +1551,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">double</span> med = <a class="code hl_function" href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.5</span></div>
-<div class="ttc" id="avector_8c_html_aa27d678c88f4e879b2c499d25e3de84b"><div class="ttname"><a href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a></div><div class="ttdeci">float median_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:850</div></div>
+<div class="ttc" id="avector_8c_html_aa27d678c88f4e879b2c499d25e3de84b"><div class="ttname"><a href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a></div><div class="ttdeci">float median_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:869</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1619,7 +1620,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">int</span> med = <a class="code hl_function" href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2</span></div>
-<div class="ttc" id="avector_8c_html_a79ca0fa54c042ed750bdc7fc3e381295"><div class="ttname"><a href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a></div><div class="ttdeci">int median_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:836</div></div>
+<div class="ttc" id="avector_8c_html_a79ca0fa54c042ed750bdc7fc3e381295"><div class="ttname"><a href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a></div><div class="ttdeci">int median_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:855</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1667,6 +1668,55 @@ Functions</h2></td></tr>
 </div><!-- fragment --></dd></dl>
 <p>The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4. </p>
 
+</div>
+</div>
+<a id="a8188993915bf396d55688bed3efc174a" name="a8188993915bf396d55688bed3efc174a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8188993915bf396d55688bed3efc174a">&#9670;&nbsp;</a></span>preappend_string_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int preappend_string_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structStringVector.html">StringVector</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will pre-append an array of strings with another string</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>The string array container </td></tr>
+    <tr><td class="paramname">value</td><td>A string to be pre-appended onto an array of strings</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structStringVector.html">StringVector</a> arr_test = <a class="code hl_function" href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a>();</div>
+<div class="line"><span class="keywordtype">char</span> value[] = <span class="stringliteral">&quot;First Value&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> new_value[] = <span class="stringliteral">&quot;Second Value&quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, value);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a8188993915bf396d55688bed3efc174a">preappend_string_vector</a>(&amp;arr_test,new_value);</div>
+<div class="line"><span class="keywordtype">char</span>* val = <a class="code hl_function" href="vector_8c.html#a739669abfb7d797c688f14c2b24730b6">string_vector_val</a>(&amp;arr_test, 0);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, val);</div>
+<div class="line"><span class="comment">// &gt;&gt; [&#39;S&#39;, &#39;e&#39;, &#39;c&#39;, &#39;o&#39;, &#39;n&#39;, &#39;d&#39;, &#39; &#39;, &#39;V&#39;, &#39;a&#39;, &#39;l&#39;, &#39;u&#39;, &#39;e&#39;, &#39;\0&#39;]</span></div>
+<div class="ttc" id="astructStringVector_html"><div class="ttname"><a href="structStringVector.html">StringVector</a></div><div class="ttdef"><b>Definition:</b> vector.h:81</div></div>
+<div class="ttc" id="avector_8c_html_a6bf46c0d706d37c8d00900b1ba5c0cea"><div class="ttname"><a href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a></div><div class="ttdeci">StringVector init_string_vector()</div><div class="ttdef"><b>Definition:</b> vector.c:90</div></div>
+<div class="ttc" id="avector_8c_html_a739669abfb7d797c688f14c2b24730b6"><div class="ttname"><a href="vector_8c.html#a739669abfb7d797c688f14c2b24730b6">string_vector_val</a></div><div class="ttdeci">char * string_vector_val(StringVector *array, int indice)</div><div class="ttdef"><b>Definition:</b> vector.c:1035</div></div>
+<div class="ttc" id="avector_8c_html_a7aca0e7792d5d243bfaf85ff5c252e9a"><div class="ttname"><a href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a></div><div class="ttdeci">int append_string_vector(StringVector *array, char *value)</div><div class="ttdef"><b>Definition:</b> vector.c:120</div></div>
+<div class="ttc" id="avector_8c_html_a8188993915bf396d55688bed3efc174a"><div class="ttname"><a href="vector_8c.html#a8188993915bf396d55688bed3efc174a">preappend_string_vector</a></div><div class="ttdeci">int preappend_string_vector(StringVector *array, const char *value)</div><div class="ttdef"><b>Definition:</b> vector.c:137</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a3ab43bfdeb92a7316d237bf448374725" name="a3ab43bfdeb92a7316d237bf448374725"></a>
@@ -2493,7 +2543,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">double</span> stdev = <a class="code hl_function" href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.30754</span></div>
-<div class="ttc" id="avector_8c_html_a69cbc1066e5b8b0684344e7fa8dc1862"><div class="ttname"><a href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a></div><div class="ttdeci">float stdev_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:941</div></div>
+<div class="ttc" id="avector_8c_html_a69cbc1066e5b8b0684344e7fa8dc1862"><div class="ttname"><a href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a></div><div class="ttdeci">float stdev_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:960</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2635,16 +2685,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>value The integer value associated with an indice</dd></dl>
-<p>When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value.</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structStringVector.html">StringVector</a> arr_test = <a class="code hl_function" href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a>();</div>
 <div class="line"><span class="keywordtype">char</span> value[] = <span class="stringliteral">&quot;First Value&quot;</span>;</div>
-<div class="line"><a class="code hl_function" href="vector_8c.html#ac14576b075fc9cad4ec2d9359e390d29">append_string</a>(&amp;arr_test, value);</div>
+<div class="line">append_string(&amp;arr_test, value);</div>
 <div class="line"><span class="keywordtype">char</span>* val = <a class="code hl_function" href="vector_8c.html#a739669abfb7d797c688f14c2b24730b6">string_vector_val</a>(&amp;arr_test, 0);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%s\n&quot;</span>, val);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;F&#39;, &#39;i&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39; &#39;, &#39;V&#39;, &#39;a&#39;, &#39;l&#39;, &#39;u&#39;, &#39;e&#39;, &#39;\0&#39;]</span></div>
-<div class="ttc" id="astructStringVector_html"><div class="ttname"><a href="structStringVector.html">StringVector</a></div><div class="ttdef"><b>Definition:</b> vector.h:81</div></div>
-<div class="ttc" id="avector_8c_html_a6bf46c0d706d37c8d00900b1ba5c0cea"><div class="ttname"><a href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a></div><div class="ttdeci">StringVector init_string_vector()</div><div class="ttdef"><b>Definition:</b> vector.c:90</div></div>
-<div class="ttc" id="avector_8c_html_a739669abfb7d797c688f14c2b24730b6"><div class="ttname"><a href="vector_8c.html#a739669abfb7d797c688f14c2b24730b6">string_vector_val</a></div><div class="ttdeci">char * string_vector_val(StringVector *array, int indice)</div><div class="ttdef"><b>Definition:</b> vector.c:1016</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2679,7 +2725,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">double</span> sum = <a class="code hl_function" href="vector_8c.html#a8f0f348483a9cb07cdd71bb078c9dd57">sum_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 23.1</span></div>
-<div class="ttc" id="avector_8c_html_a8f0f348483a9cb07cdd71bb078c9dd57"><div class="ttname"><a href="vector_8c.html#a8f0f348483a9cb07cdd71bb078c9dd57">sum_float_vec</a></div><div class="ttdeci">float sum_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:905</div></div>
+<div class="ttc" id="avector_8c_html_a8f0f348483a9cb07cdd71bb078c9dd57"><div class="ttname"><a href="vector_8c.html#a8f0f348483a9cb07cdd71bb078c9dd57">sum_float_vec</a></div><div class="ttdeci">float sum_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:924</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2748,7 +2794,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">int</span> sum = <a class="code hl_function" href="vector_8c.html#a3d193ae2c47940a0421e604f239cdce9">sum_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 21</span></div>
-<div class="ttc" id="avector_8c_html_a3d193ae2c47940a0421e604f239cdce9"><div class="ttname"><a href="vector_8c.html#a3d193ae2c47940a0421e604f239cdce9">sum_int_vec</a></div><div class="ttdeci">int sum_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:896</div></div>
+<div class="ttc" id="avector_8c_html_a3d193ae2c47940a0421e604f239cdce9"><div class="ttname"><a href="vector_8c.html#a3d193ae2c47940a0421e604f239cdce9">sum_int_vec</a></div><div class="ttdeci">int sum_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:915</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2782,7 +2828,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 13);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
-<div class="ttc" id="avector_8c_html_a57925b38859054812edf2f341225f6cc"><div class="ttname"><a href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a></div><div class="ttdeci">void unique_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:598</div></div>
+<div class="ttc" id="avector_8c_html_a57925b38859054812edf2f341225f6cc"><div class="ttname"><a href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a></div><div class="ttdeci">void unique_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:617</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2816,7 +2862,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
-<div class="ttc" id="avector_8c_html_a92d4ff3374cd29a8f1e604c534f7b583"><div class="ttname"><a href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a></div><div class="ttdeci">void unique_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:578</div></div>
+<div class="ttc" id="avector_8c_html_a92d4ff3374cd29a8f1e604c534f7b583"><div class="ttname"><a href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a></div><div class="ttdeci">void unique_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:597</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2850,7 +2896,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
-<div class="ttc" id="avector_8c_html_a8b9a16e579236fa0add30a4752527421"><div class="ttname"><a href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a></div><div class="ttdeci">void unique_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:538</div></div>
+<div class="ttc" id="avector_8c_html_a8b9a16e579236fa0add30a4752527421"><div class="ttname"><a href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a></div><div class="ttdeci">void unique_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:557</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2917,7 +2963,7 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 13);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
-<div class="ttc" id="avector_8c_html_afb49fc0563f1493f510a73d645e26e79"><div class="ttname"><a href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a></div><div class="ttdeci">void unique_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:632</div></div>
+<div class="ttc" id="avector_8c_html_afb49fc0563f1493f510a73d645e26e79"><div class="ttname"><a href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a></div><div class="ttdeci">void unique_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:651</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

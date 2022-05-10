@@ -38,7 +38,7 @@ int \mbox{\hyperlink{vector_8h_a12c09a3a89fa8ab06a7f8db8eb6299d3}{string\+\_\+ve
 \item 
 int \mbox{\hyperlink{vector_8h_ac09911a1012b6977d3daf15c9eace5f9}{append\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array, void $\ast$elements, size\+\_\+t count)
 \item 
-int \mbox{\hyperlink{vector_8h_ac14576b075fc9cad4ec2d9359e390d29}{append\+\_\+string}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$s, char $\ast$value)
+int \mbox{\hyperlink{vector_8h_a206667fdad67436132ab0c3dfaf687fd}{append\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$s, char $\ast$value)
 \item 
 \mbox{\hyperlink{structStringVector}{String\+Vector}} \mbox{\hyperlink{vector_8h_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\+\_\+string\+\_\+vector}} ()
 \item 
@@ -161,6 +161,8 @@ float $\ast$ \mbox{\hyperlink{vector_8h_a7b0a73a6ce02f60c25ab2603f0133102}{cumsu
 double $\ast$ \mbox{\hyperlink{vector_8h_ab1ee8804bba3f3fad1262a99c3a365a6}{cumsum\+\_\+double\+\_\+vec}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$array)
 \item 
 char $\ast$ \mbox{\hyperlink{vector_8h_a739669abfb7d797c688f14c2b24730b6}{string\+\_\+vector\+\_\+val}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, int indice)
+\item 
+int \mbox{\hyperlink{vector_8h_a8188993915bf396d55688bed3efc174a}{preappend\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, const char $\ast$value)
 \end{DoxyCompactItemize}
 
 
@@ -232,11 +234,11 @@ REVERSE&\\
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{vector_8h_ac14576b075fc9cad4ec2d9359e390d29}\label{vector_8h_ac14576b075fc9cad4ec2d9359e390d29}} 
-\index{vector.h@{vector.h}!append\_string@{append\_string}}
-\index{append\_string@{append\_string}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{append\_string()}{append\_string()}}
-{\footnotesize\ttfamily int append\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{s,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{vector_8h_a206667fdad67436132ab0c3dfaf687fd}\label{vector_8h_a206667fdad67436132ab0c3dfaf687fd}} 
+\index{vector.h@{vector.h}!append\_string\_vector@{append\_string\_vector}}
+\index{append\_string\_vector@{append\_string\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{append\_string\_vector()}{append\_string\_vector()}}
+{\footnotesize\ttfamily int append\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{s,  }\item[{char $\ast$}]{value }\end{DoxyParamCaption})}
 
 This function allows a user to append an existing or blank string vector container with scalars or arrays of any data type.
 
@@ -256,7 +258,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// Instantiate array}}
 \DoxyCodeLine{Array arr\_test = string\_init\_array();}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac14576b075fc9cad4ec2d9359e390d29}{append\_string}}(\&arr\_test, \textcolor{stringliteral}{"{}First Value"{}});}
+\DoxyCodeLine{append\_string(\&arr\_test, \textcolor{stringliteral}{"{}First Value"{}});}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, arr\_test[0])\textcolor{stringliteral}{'}}
 \DoxyCodeLine{\textcolor{stringliteral}{>> ['}F\textcolor{stringliteral}{', '}i\textcolor{stringliteral}{', '}r\textcolor{stringliteral}{', '}s\textcolor{stringliteral}{', '}t\textcolor{stringliteral}{', '} \textcolor{stringliteral}{', '}V\textcolor{stringliteral}{', '}a\textcolor{stringliteral}{', '}l\textcolor{stringliteral}{', '}u\textcolor{stringliteral}{', '}e\textcolor{stringliteral}{']}}
 
@@ -1233,7 +1235,34 @@ integer An error code of 0 if the user defines an indice greater than the array 
 \end{DoxyCode}
 
 \end{DoxyReturn}
-The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.\+2, and 7.\+4. \mbox{\Hypertarget{vector_8h_a3ab43bfdeb92a7316d237bf448374725}\label{vector_8h_a3ab43bfdeb92a7316d237bf448374725}} 
+The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.\+2, and 7.\+4. \mbox{\Hypertarget{vector_8h_a8188993915bf396d55688bed3efc174a}\label{vector_8h_a8188993915bf396d55688bed3efc174a}} 
+\index{vector.h@{vector.h}!preappend\_string\_vector@{preappend\_string\_vector}}
+\index{preappend\_string\_vector@{preappend\_string\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{preappend\_string\_vector()}{preappend\_string\_vector()}}
+{\footnotesize\ttfamily int preappend\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{array,  }\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+This function will pre-\/append an array of strings with another string
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The string array container \\
+\hline
+{\em value} & A string to be pre-\/appended onto an array of strings\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();}
+\DoxyCodeLine{\textcolor{keywordtype}{char} value[] = \textcolor{stringliteral}{"{}First Value"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} new\_value[] = \textcolor{stringliteral}{"{}Second Value"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, value);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8188993915bf396d55688bed3efc174a}{preappend\_string\_vector}}(\&arr\_test,new\_value);}
+\DoxyCodeLine{\textcolor{keywordtype}{char}* val = \mbox{\hyperlink{vector_8c_a739669abfb7d797c688f14c2b24730b6}{string\_vector\_val}}(\&arr\_test, 0);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, val);}
+\DoxyCodeLine{\textcolor{comment}{// >> ['S', 'e', 'c', 'o', 'n', 'd', ' ', 'V', 'a', 'l', 'u', 'e', '\(\backslash\)0']}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a3ab43bfdeb92a7316d237bf448374725}\label{vector_8h_a3ab43bfdeb92a7316d237bf448374725}} 
 \index{vector.h@{vector.h}!preappend\_vector@{preappend\_vector}}
 \index{preappend\_vector@{preappend\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{preappend\_vector()}{preappend\_vector()}}
@@ -1871,13 +1900,11 @@ This function will return the value of a vector container assigned to a user spe
 \begin{DoxyReturn}{Returns}
 value The integer value associated with an indice
 \end{DoxyReturn}
-When a user instantiates and populates an array they must access the array by casting it prior to retrieving the value.
-
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();}
 \DoxyCodeLine{\textcolor{keywordtype}{char} value[] = \textcolor{stringliteral}{"{}First Value"{}};}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac14576b075fc9cad4ec2d9359e390d29}{append\_string}}(\&arr\_test, value);}
+\DoxyCodeLine{append\_string(\&arr\_test, value);}
 \DoxyCodeLine{\textcolor{keywordtype}{char}* val = \mbox{\hyperlink{vector_8c_a739669abfb7d797c688f14c2b24730b6}{string\_vector\_val}}(\&arr\_test, 0);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, val);}
 \DoxyCodeLine{\textcolor{comment}{// >> ['F', 'i', 'r', 's', 't', ' ', 'V', 'a', 'l', 'u', 'e', '\(\backslash\)0']}}
