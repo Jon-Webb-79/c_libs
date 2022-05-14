@@ -1592,6 +1592,30 @@ char* string_vector_val(StringVector *array, int indice);
  * @endcode
  */
 int preappend_string_vector(StringVector *array, const char *value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will remove a string element from a string vector at the
+ * user defined index
+ *
+ * @param array A string array container
+ * @param index The integer value of the index where a user wishes to remove
+ *              a string element
+ *
+ * @code
+ * StringVector arr_test = init_string_vector();
+ * char one[] = "Hello";
+ * char two[] = "World";
+ * char three[] = "Goodbye";
+ * append_string_vector(&arr_test, one);
+ * append_string_vector(&arr_test, two);
+ * append_string_vector(&arr_test, three);
+ * pop_string_vector(&arr_test, 1);
+ * // The resulting array is
+ * // >> ["Hello", "Goodbye"]
+ * @endcode
+ */
+void pop_string_vector(StringVector *array, int index);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

@@ -1354,6 +1354,25 @@ TEST(string, preappend_string) {
 	EXPECT_EQ(result2, 0);
 	free_string_array(&arr_test);
 }
+// --------------------------------------------------------------------------------
+
+/* THis function tests the pop_string_vector function to ensure it adequately
+ * removes an array indice */
+TEST(string, pop_string) {
+	StringVector arr_test = init_string_vector();
+	char one[] = "Hello";
+	char two[] = "World";
+	char three[] = "Goodbye";
+	append_string_vector(&arr_test, one);
+	append_string_vector(&arr_test, two);
+	append_string_vector(&arr_test, three);
+	pop_string_vector(&arr_test, 1);
+	int result1 = strcmp(one, arr_test.array[0]);
+	int result2 = strcmp(three, arr_test.array[1]);
+	EXPECT_EQ(arr_test.len, 2);
+	EXPECT_EQ(result1, 0);
+	EXPECT_EQ(result2, 0);
+}
 // ================================================================================
 // ================================================================================
 // eof

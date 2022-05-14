@@ -1056,6 +1056,17 @@ void free_string_array(StringVector *array) {
     array->len = 0;
 	array->elem = 0;
 }
+// --------------------------------------------------------------------------------
+
+void pop_string_vector(StringVector *array, int index) {
+	if (index >= array->len) {
+		printf("Index %d out of bounds for pop_string_vector\n", index);
+	}
+	unsigned char *dst = (unsigned char*)array->array + index * array->elem;
+	memmove(array->array + index, array->array + index + 1,  \
+			sizeof *array->array * array->len -1);
+	array->len -= 1;
+}
 // ================================================================================
 // ================================================================================
 // eof
