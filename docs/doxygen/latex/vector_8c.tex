@@ -145,6 +145,8 @@ void \mbox{\hyperlink{vector_8c_af2b50378ec8af13627769d308a594b6e}{pop\+\_\+stri
 void \mbox{\hyperlink{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}{delete\+\_\+string\+\_\+vec\+\_\+values}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char string\mbox{[}$\,$\mbox{]})
 \item 
 int \mbox{\hyperlink{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}{replace\+\_\+string\+\_\+vector\+\_\+index}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, int index, char string\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}{replace\+\_\+string\+\_\+vector\+\_\+element}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char old\+\_\+val\mbox{[}$\,$\mbox{]}, char new\+\_\+val\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -1565,6 +1567,39 @@ This function will replace an integer value at a user defined indice with anothe
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
 
 \end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}\label{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}} 
+\index{vector.c@{vector.c}!replace\_string\_vector\_element@{replace\_string\_vector\_element}}
+\index{replace\_string\_vector\_element@{replace\_string\_vector\_element}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_string\_vector\_element()}{replace\_string\_vector\_element()}}
+{\footnotesize\ttfamily void replace\+\_\+string\+\_\+vector\+\_\+element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{array,  }\item[{char}]{old\+\_\+val\mbox{[}$\,$\mbox{]},  }\item[{char}]{new\+\_\+val\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This function will replace the string value at a specifi index with another string value
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A string array container \\
+\hline
+{\em old\+\_\+val} & The string to be replaced \\
+\hline
+{\em new\+\_\+val} & The string that will replace the old string\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();}
+\DoxyCodeLine{\textcolor{keywordtype}{char} one[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} two[] = \textcolor{stringliteral}{"{}World"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} three[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} four[] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, one);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}{replace\_string\_vector\_element}}(arr\_test, one, two);}
+\DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
+\DoxyCodeLine{ \textcolor{comment}{// >> ["{}World"{}, "{}World"{}, "{}World"{}, "{}Goodbye"{}]}}
+
+\end{DoxyCode}
  \mbox{\Hypertarget{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}\label{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}} 
 \index{vector.c@{vector.c}!replace\_string\_vector\_index@{replace\_string\_vector\_index}}
 \index{replace\_string\_vector\_index@{replace\_string\_vector\_index}!vector.c@{vector.c}}
@@ -1577,7 +1612,9 @@ This function will replace the string value at a specifi index with another stri
 \begin{DoxyParams}{Parameters}
 {\em array} & A string array container \\
 \hline
-{\em string} & A user defined string\\
+{\em index} & The index containing a string that will be replaced \\
+\hline
+{\em string} & A user defined string to replace the value at index\\
 \hline
 \end{DoxyParams}
 

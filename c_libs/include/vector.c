@@ -1114,6 +1114,20 @@ int replace_string_vector_index(StringVector *array, int index, char string[]) {
 	* (char **) ((char **)array->array + index * array->elem) = string;
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+void replace_string_vector_element(StringVector *array, char old_val[], char new_val[]) {
+	Vector indices;
+	// find the number of indices containg the value
+	Vector indices_num = find_string_vector_indices(array, old_val);
+	// Replace each appropriate indice
+	for (int i = indices_num.len; i > 0; i--) {
+		indices = find_string_vector_indices(array, old_val);
+		replace_string_vector_index(array, int_vector_val(&indices, 0), new_val);
+		free_vector(&indices);
+	}
+	free_vector(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof
