@@ -1622,10 +1622,13 @@ void pop_string_vector(StringVector *array, int index);
  * This function will determine the indices where a specific string value
  * exists.
  *
- * @param array a String array container
+ * @param array A String array container
  * @param string A user defined string
+ * @return vec An integer vector container that stores the indice
+ *             locations where a string exists in the input array
  *
  * @code
+ * StringVector arr_test = init_string_vector();*
  * char one[] = "Hello";
  * char two[] = "World";
  * char three[] = "Hello";
@@ -1640,6 +1643,31 @@ void pop_string_vector(StringVector *array, int index);
  * @endcode
  */
 Vector find_string_vector_indices(StringVector *array, char string[]);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will find all instances of a string within an array and
+ * delete them from the array
+ *
+ * @param array A string array container
+ * @param string A user defined string
+ *
+ * @code
+ * StringVector arr_test = init_string_vector();
+ * char one[] = "Hello";
+ * char two[] = "World";
+ * char three[] = "Hello";
+ * char four[] = "Goodbye";
+ * append_string_vector(&arr_test, one);
+ * append_string_vector(&arr_test, two);
+ * append_string_vector(&arr_test, three);
+ * append_string_vector(&arr_test,four);
+ * delete_string_vec_values(&arr_test, one);
+ * // The resulting vector values in vec are;
+ *  // >> ["World", "Goodbye"]
+ * @endcode
+ */
+void delete_string_vec_values(StringVector *array, char string[]);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

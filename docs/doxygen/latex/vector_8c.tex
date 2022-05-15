@@ -141,6 +141,8 @@ void \mbox{\hyperlink{vector_8c_a51e72c85c9def4bd7a4485b2dcc15f12}{free\+\_\+str
 void \mbox{\hyperlink{vector_8c_af2b50378ec8af13627769d308a594b6e}{pop\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, int index)
 \item 
 \mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vector_8c_a35b20f670dfda451959d8308683628e6}{find\+\_\+string\+\_\+vector\+\_\+indices}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char string\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}{delete\+\_\+string\+\_\+vec\+\_\+values}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char string\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -682,6 +684,37 @@ This function will find all integer values occurances in an array and delete the
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 4, 5]}}
 
 \end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}\label{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}} 
+\index{vector.c@{vector.c}!delete\_string\_vec\_values@{delete\_string\_vec\_values}}
+\index{delete\_string\_vec\_values@{delete\_string\_vec\_values}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{delete\_string\_vec\_values()}{delete\_string\_vec\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+string\+\_\+vec\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{array,  }\item[{char}]{string\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This function will find all instances of a string within an array and delete them from the array
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A string array container \\
+\hline
+{\em string} & A user defined string\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();}
+\DoxyCodeLine{\textcolor{keywordtype}{char} one[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} two[] = \textcolor{stringliteral}{"{}World"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} three[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} four[] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, one);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}{delete\_string\_vec\_values}}(\&arr\_test, one);}
+\DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
+\DoxyCodeLine{ \textcolor{comment}{// >> ["{}World"{}, "{}Goodbye"{}]}}
+
+\end{DoxyCode}
  \mbox{\Hypertarget{vector_8c_aeb7b729e4824aaecb27ac6bb2aaa2b65}\label{vector_8c_aeb7b729e4824aaecb27ac6bb2aaa2b65}} 
 \index{vector.c@{vector.c}!double\_vector\_val@{double\_vector\_val}}
 \index{double\_vector\_val@{double\_vector\_val}!vector.c@{vector.c}}
@@ -861,13 +894,17 @@ This function will determine the indices where a specific string value exists.
 
 
 \begin{DoxyParams}{Parameters}
-{\em array} & a String array container \\
+{\em array} & A String array container \\
 \hline
-{\em string} & A user defined string\\
+{\em string} & A user defined string \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vec An integer vector container that stores the indice locations where a string exists in the input array
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();*}
 \DoxyCodeLine{\textcolor{keywordtype}{char} one[] = \textcolor{stringliteral}{"{}Hello"{}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} two[] = \textcolor{stringliteral}{"{}World"{}};}
 \DoxyCodeLine{\textcolor{keywordtype}{char} three[] = \textcolor{stringliteral}{"{}Hello"{}};}

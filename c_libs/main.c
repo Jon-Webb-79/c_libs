@@ -8,14 +8,13 @@
 // - Date:    March 26, 2022
 // - Version: 1.0
 // - Copyright: Copyright 2022, Jon Webb Inc.
-// ================================================================================
+// ===============================================================================
 // ================================================================================
 // Include modules here
 
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO delete_string_vec_values
 // TODO replace_string_vector_index
 // TODO delete_string_duplicates
 // TODO unique_string_vec

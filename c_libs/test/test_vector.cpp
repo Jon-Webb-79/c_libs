@@ -1393,6 +1393,28 @@ TEST(string, find_indices) {
 	EXPECT_EQ(int_vector_val(&vec, 0), 0);
 	EXPECT_EQ(int_vector_val(&vec, 1), 2);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_string_vec_values function to ensure
+ * it properly deletes all instances of a user defined string in an array.
+ */
+TEST(string, delete_string_values) {
+	StringVector arr_test = init_string_vector();
+	char one[] = "Hello";
+	char two[] = "World";
+	char three[] = "Hello";
+	char four[] = "Goodbye";
+	append_string_vector(&arr_test, one);
+	append_string_vector(&arr_test, two);
+	append_string_vector(&arr_test, three);
+	append_string_vector(&arr_test, four);
+	delete_string_vec_values(&arr_test, one);
+	EXPECT_EQ(arr_test.len, 2);
+	int result1 = strcmp(two, arr_test.array[0]);
+	int result2 = strcmp(four, arr_test.array[1]);
+	EXPECT_EQ(result1, 0);
+	EXPECT_EQ(result2, 0);
+}
 // ================================================================================
 // ================================================================================
 // eof

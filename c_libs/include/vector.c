@@ -1087,6 +1087,19 @@ Vector find_string_vector_indices(StringVector *array, char string[]) {
 	}
 	return indice_arr;
 }
+// --------------------------------------------------------------------------------
+
+void delete_string_vec_values(StringVector *array, char string[]) {
+	Vector indices;
+	// find the number of indices containing the value
+	Vector indices_num = find_string_vector_indices(array, string);
+	for (int i = indices_num.len; i > 0; i--) {
+		indices = find_string_vector_indices(array, string);
+		pop_string_vector(array, int_vector_val(&indices, 0));
+		free_vector(&indices);
+	}
+	free_vector(&indices_num);
+}
 // ================================================================================
 // ================================================================================
 // eof
