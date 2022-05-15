@@ -1616,6 +1616,30 @@ int preappend_string_vector(StringVector *array, const char *value);
  * @endcode
  */
 void pop_string_vector(StringVector *array, int index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the indices where a specific string value
+ * exists.
+ *
+ * @param array a String array container
+ * @param string A user defined string
+ *
+ * @code
+ * char one[] = "Hello";
+ * char two[] = "World";
+ * char three[] = "Hello";
+ * char four[] = "Goodbye";
+ * append_string_vector(&arr_test, one);
+ * append_string_vector(&arr_test, two);
+ * append_string_vector(&arr_test, three);
+ * append_string_vector(&arr_test,four);
+ * Vector vec = find_string_vector_indices(&arr_test, one);
+ * // The resulting vector values in vec are;
+ * // >> [0, 2]
+ * @endcode
+ */
+Vector find_string_vector_indices(StringVector *array, char string[]);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

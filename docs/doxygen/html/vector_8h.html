@@ -242,6 +242,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8188993915bf396d55688bed3efc174a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2b50378ec8af13627769d308a594b6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#af2b50378ec8af13627769d308a594b6e">pop_string_vector</a> (<a class="el" href="structStringVector.html">StringVector</a> *array, int index)</td></tr>
 <tr class="separator:af2b50378ec8af13627769d308a594b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b20f670dfda451959d8308683628e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a35b20f670dfda451959d8308683628e6">find_string_vector_indices</a> (<a class="el" href="structStringVector.html">StringVector</a> *array, char string[])</td></tr>
+<tr class="separator:a35b20f670dfda451959d8308683628e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a1abd8bcc329e46eb9463a815548d6686" name="a1abd8bcc329e46eb9463a815548d6686"></a>
@@ -1273,6 +1275,56 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a35b20f670dfda451959d8308683628e6" name="a35b20f670dfda451959d8308683628e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b20f670dfda451959d8308683628e6">&#9670;&nbsp;</a></span>find_string_vector_indices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structVector.html">Vector</a> find_string_vector_indices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structStringVector.html">StringVector</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>string</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the indices where a specific string value exists.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>a String array container </td></tr>
+    <tr><td class="paramname">string</td><td>A user defined string</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">char</span> one[] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> two[] = <span class="stringliteral">&quot;World&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> three[] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> four[] = <span class="stringliteral">&quot;Goodbye&quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, one);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, two);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, three);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test,four);</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#a35b20f670dfda451959d8308683628e6">find_string_vector_indices</a>(&amp;arr_test, one);</div>
+<div class="line"><span class="comment">// The resulting vector values in vec are;</span></div>
+<div class="line"><span class="comment">// &gt;&gt; [0, 2]</span></div>
+<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:64</div></div>
+<div class="ttc" id="avector_8c_html_a35b20f670dfda451959d8308683628e6"><div class="ttname"><a href="vector_8c.html#a35b20f670dfda451959d8308683628e6">find_string_vector_indices</a></div><div class="ttdeci">Vector find_string_vector_indices(StringVector *array, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1072</div></div>
+<div class="ttc" id="avector_8c_html_a7aca0e7792d5d243bfaf85ff5c252e9a"><div class="ttname"><a href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a></div><div class="ttdeci">int append_string_vector(StringVector *array, char *value)</div><div class="ttdef"><b>Definition:</b> vector.c:120</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a917d3c61929f64d66c1ce85a0833bb8f" name="a917d3c61929f64d66c1ce85a0833bb8f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a917d3c61929f64d66c1ce85a0833bb8f">&#9670;&nbsp;</a></span>float_vector_val()</h2>
 
@@ -1671,7 +1723,6 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// &gt;&gt; [&quot;Hello&quot;, &quot;Goodbye&quot;]</span></div>
 <div class="ttc" id="astructStringVector_html"><div class="ttname"><a href="structStringVector.html">StringVector</a></div><div class="ttdef"><b>Definition:</b> vector.h:81</div></div>
 <div class="ttc" id="avector_8c_html_a6bf46c0d706d37c8d00900b1ba5c0cea"><div class="ttname"><a href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a></div><div class="ttdeci">StringVector init_string_vector()</div><div class="ttdef"><b>Definition:</b> vector.c:90</div></div>
-<div class="ttc" id="avector_8c_html_a7aca0e7792d5d243bfaf85ff5c252e9a"><div class="ttname"><a href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a></div><div class="ttdeci">int append_string_vector(StringVector *array, char *value)</div><div class="ttdef"><b>Definition:</b> vector.c:120</div></div>
 <div class="ttc" id="avector_8c_html_af2b50378ec8af13627769d308a594b6e"><div class="ttname"><a href="vector_8c.html#af2b50378ec8af13627769d308a594b6e">pop_string_vector</a></div><div class="ttdeci">void pop_string_vector(StringVector *array, int index)</div><div class="ttdef"><b>Definition:</b> vector.c:1061</div></div>
 </div><!-- fragment --> 
 </div>

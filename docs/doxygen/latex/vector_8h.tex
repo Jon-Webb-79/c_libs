@@ -165,6 +165,8 @@ char $\ast$ \mbox{\hyperlink{vector_8h_a739669abfb7d797c688f14c2b24730b6}{string
 int \mbox{\hyperlink{vector_8h_a8188993915bf396d55688bed3efc174a}{preappend\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, const char $\ast$value)
 \item 
 void \mbox{\hyperlink{vector_8h_af2b50378ec8af13627769d308a594b6e}{pop\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, int index)
+\item 
+\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vector_8h_a35b20f670dfda451959d8308683628e6}{find\+\_\+string\+\_\+vector\+\_\+indices}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char string\mbox{[}$\,$\mbox{]})
 \end{DoxyCompactItemize}
 
 
@@ -942,7 +944,37 @@ This function will find the indices that contain a user specified integer. This 
 \DoxyCodeLine{free\_array(p);}
 
 \end{DoxyCode}
- The above code should produce an array with indices 0, 3, and 4. \mbox{\Hypertarget{vector_8h_a917d3c61929f64d66c1ce85a0833bb8f}\label{vector_8h_a917d3c61929f64d66c1ce85a0833bb8f}} 
+ The above code should produce an array with indices 0, 3, and 4. \mbox{\Hypertarget{vector_8h_a35b20f670dfda451959d8308683628e6}\label{vector_8h_a35b20f670dfda451959d8308683628e6}} 
+\index{vector.h@{vector.h}!find\_string\_vector\_indices@{find\_string\_vector\_indices}}
+\index{find\_string\_vector\_indices@{find\_string\_vector\_indices}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{find\_string\_vector\_indices()}{find\_string\_vector\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+string\+\_\+vector\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{array,  }\item[{char}]{string\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This function will determine the indices where a specific string value exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & a String array container \\
+\hline
+{\em string} & A user defined string\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} one[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} two[] = \textcolor{stringliteral}{"{}World"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} three[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} four[] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, one);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_a35b20f670dfda451959d8308683628e6}{find\_string\_vector\_indices}}(\&arr\_test, one);}
+\DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
+\DoxyCodeLine{\textcolor{comment}{// >> [0, 2]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a917d3c61929f64d66c1ce85a0833bb8f}\label{vector_8h_a917d3c61929f64d66c1ce85a0833bb8f}} 
 \index{vector.h@{vector.h}!float\_vector\_val@{float\_vector\_val}}
 \index{float\_vector\_val@{float\_vector\_val}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{float\_vector\_val()}{float\_vector\_val()}}

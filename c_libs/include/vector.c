@@ -1067,6 +1067,26 @@ void pop_string_vector(StringVector *array, int index) {
 			sizeof *array->array * array->len -1);
 	array->len -= 1;
 }
+// --------------------------------------------------------------------------------
+
+Vector find_string_vector_indices(StringVector *array, char string[]) {
+	int number = 0;
+	int input;
+	for (int i = 0; i < array->len; i++) {
+		if (strcmp(string, array->array[i]) == 0) {
+			number++;
+		}
+	}
+	dat_type dtype = INT;
+	Vector indice_arr = init_vector(dtype, number);
+	for (int i = 0; i < array->len; i++) {
+		input = i;
+		if (strcmp(string, array->array[i]) == 0) {
+			append_vector(&indice_arr, &input, 1);
+		}
+	}
+	return indice_arr;
+}
 // ================================================================================
 // ================================================================================
 // eof

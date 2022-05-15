@@ -1373,6 +1373,26 @@ TEST(string, pop_string) {
 	EXPECT_EQ(result1, 0);
 	EXPECT_EQ(result2, 0);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the find_string_vector_indices function to ensure
+ * it properly returns the indices where a specific value exists.
+ */
+TEST(string, find_indices) {
+	StringVector arr_test = init_string_vector();
+	char one[] = "Hello";
+	char two[] = "World";
+	char three[] = "Hello";
+	char four[] = "Goodbye";
+	append_string_vector(&arr_test, one);
+	append_string_vector(&arr_test, two);
+	append_string_vector(&arr_test, three);
+	append_string_vector(&arr_test, four);
+	Vector vec = find_string_vector_indices(&arr_test, one);
+	EXPECT_EQ(vec.len, 2);
+	EXPECT_EQ(int_vector_val(&vec, 0), 0);
+	EXPECT_EQ(int_vector_val(&vec, 1), 2);
+}
 // ================================================================================
 // ================================================================================
 // eof
