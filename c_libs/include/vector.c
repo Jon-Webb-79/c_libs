@@ -1128,6 +1128,17 @@ void replace_string_vector_element(StringVector *array, char old_val[], char new
 	}
 	free_vector(&indices_num);
 }
+// --------------------------------------------------------------------------------
+
+void delete_string_duplicates_vec(StringVector *array) {
+	int length = array->len;
+	for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; j < array->len; j++) {
+			if (strcmp(array->array[i], array->array[j]) == 0) pop_string_vector(array, j);
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

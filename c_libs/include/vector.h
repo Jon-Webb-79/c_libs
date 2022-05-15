@@ -1688,7 +1688,7 @@ void delete_string_vec_values(StringVector *array, char string[]);
  * append_string_vector(&arr_test, two);
  * append_string_vector(&arr_test, three);
  * append_string_vector(&arr_test,four);
- * replace_string_vector_index(arr_test, 1, one);
+ * replace_string_vector_index(&arr_test, 1, one);
  * // The resulting vector values in vec are;
  *  // >> ["World", "Hello", "Hello", "Goodbye"]
  * @endcode
@@ -1714,12 +1714,35 @@ int replace_string_vector_index(StringVector *array, int index, char string[]);
  * append_string_vector(&arr_test, two);
  * append_string_vector(&arr_test, three);
  * append_string_vector(&arr_test,four);
- * replace_string_vector_element(arr_test, one, two);
+ * replace_string_vector_element(&arr_test, one, two);
  * // The resulting vector values in vec are;
  *  // >> ["World", "World", "World", "Goodbye"]
  * @endcode
  */
 void replace_string_vector_element(StringVector *array, char old_val[], char new_val[]);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all repeated values from a string array container
+ *
+ * @param array A string array container
+ *
+ * @code
+ * StringVector arr_test = init_string_vector();
+ * char one[] = "Hello";
+ * char two[] = "World";
+ * char three[] = "Hello";
+ * char four[] = "Goodbye";
+ * append_string_vector(&arr_test, one);
+ * append_string_vector(&arr_test, two);
+ * append_string_vector(&arr_test, three);
+ * append_string_vector(&arr_test,four);
+ * delete_string_duplicates_vec(&arr_test);
+ * // The resulting vector values in vec are;
+ *  // >> ["Hellow", "World", "Goodbye"]
+ * @endcode
+ */
+void delete_string_duplicates_vec(StringVector *array);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

@@ -1469,7 +1469,31 @@ TEST(string, replace_string_elements) {
 	EXPECT_EQ(result3, 0);
 	EXPECT_EQ(result4, 0);
 }
+// --------------------------------------------------------------------------------
 
+/* This function tests the delete_string_duplicates_vec function to ensure
+ * it properly deletes all duplicated values in a string array container
+ */
+TEST(string, delete_string_duplicates) {
+	StringVector arr_test = init_string_vector();
+	char one[] = "Hello";
+	char two[] = "World";
+	char three[] = "Hello";
+	char four[] = "Goodbye";
+	append_string_vector(&arr_test, one);
+	append_string_vector(&arr_test, two);
+	append_string_vector(&arr_test, three);
+	append_string_vector(&arr_test, four);
+	delete_string_duplicates_vec(&arr_test);
+	EXPECT_EQ(arr_test.len, 3);
+	int result1 = strcmp(one, arr_test.array[0]);
+	int result2 = strcmp(two, arr_test.array[1]);
+	int result3 = strcmp(four, arr_test.array[2]);
+
+	EXPECT_EQ(result1, 0);
+	EXPECT_EQ(result2, 0);
+	EXPECT_EQ(result3, 0);
+}
 // ================================================================================
 // ================================================================================
 // eof

@@ -147,6 +147,8 @@ void \mbox{\hyperlink{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}{delete\+\_\+s
 int \mbox{\hyperlink{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}{replace\+\_\+string\+\_\+vector\+\_\+index}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, int index, char string\mbox{[}$\,$\mbox{]})
 \item 
 void \mbox{\hyperlink{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}{replace\+\_\+string\+\_\+vector\+\_\+element}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char old\+\_\+val\mbox{[}$\,$\mbox{]}, char new\+\_\+val\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{vector_8c_a66ad8bf82ae2f2ea6a5a8a635c23581b}{delete\+\_\+string\+\_\+duplicates\+\_\+vec}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -686,6 +688,35 @@ This function will find all integer values occurances in an array and delete the
 \DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
 \DoxyCodeLine{delete\_int\_arr\_values(\&arr\_test, 6);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 4, 5]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a66ad8bf82ae2f2ea6a5a8a635c23581b}\label{vector_8c_a66ad8bf82ae2f2ea6a5a8a635c23581b}} 
+\index{vector.c@{vector.c}!delete\_string\_duplicates\_vec@{delete\_string\_duplicates\_vec}}
+\index{delete\_string\_duplicates\_vec@{delete\_string\_duplicates\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{delete\_string\_duplicates\_vec()}{delete\_string\_duplicates\_vec()}}
+{\footnotesize\ttfamily void delete\+\_\+string\+\_\+duplicates\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all repeated values from a string array container
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A string array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();}
+\DoxyCodeLine{\textcolor{keywordtype}{char} one[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} two[] = \textcolor{stringliteral}{"{}World"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} three[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} four[] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, one);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a66ad8bf82ae2f2ea6a5a8a635c23581b}{delete\_string\_duplicates\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
+\DoxyCodeLine{ \textcolor{comment}{// >> ["{}Hellow"{}, "{}World"{}, "{}Goodbye"{}]}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}\label{vector_8c_ac09cd9506eaa0af42840d2fb12bfa342}} 
@@ -1595,7 +1626,7 @@ This function will replace the string value at a specifi index with another stri
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}{replace\_string\_vector\_element}}(arr\_test, one, two);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}{replace\_string\_vector\_element}}(\&arr\_test, one, two);}
 \DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
 \DoxyCodeLine{ \textcolor{comment}{// >> ["{}World"{}, "{}World"{}, "{}World"{}, "{}Goodbye"{}]}}
 
@@ -1628,7 +1659,7 @@ This function will replace the string value at a specifi index with another stri
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}{replace\_string\_vector\_index}}(arr\_test, 1, one);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}{replace\_string\_vector\_index}}(\&arr\_test, 1, one);}
 \DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
 \DoxyCodeLine{ \textcolor{comment}{// >> ["{}World"{}, "{}Hello"{}, "{}Hello"{}, "{}Goodbye"{}]}}
 
