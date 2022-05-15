@@ -1668,6 +1668,31 @@ Vector find_string_vector_indices(StringVector *array, char string[]);
  * @endcode
  */
 void delete_string_vec_values(StringVector *array, char string[]);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the string value at a specifi index with
+ * another string value
+ *
+ * @param array A string array container
+ * @param string A user defined string
+ *
+ * @code
+ * StringVector arr_test = init_string_vector();
+ * char one[] = "Hello";
+ * char two[] = "World";
+ * char three[] = "Hello";
+ * char four[] = "Goodbye";
+ * append_string_vector(&arr_test, one);
+ * append_string_vector(&arr_test, two);
+ * append_string_vector(&arr_test, three);
+ * append_string_vector(&arr_test,four);
+ * replace_string_vector_index(arr_test, 1, one);
+ * // The resulting vector values in vec are;
+ *  // >> ["World", "Hello", "Hello", "Goodbye"]
+ * @endcode
+ */
+int replace_string_vector_index(StringVector *array, int index, char string[]);
 #endif /* ARRAY_H */
 // ================================================================================
 // ================================================================================

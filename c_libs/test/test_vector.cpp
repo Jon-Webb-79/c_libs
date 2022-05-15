@@ -1415,6 +1415,33 @@ TEST(string, delete_string_values) {
 	EXPECT_EQ(result1, 0);
 	EXPECT_EQ(result2, 0);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_string_vector_index function to ensure
+ * it properly replaces a string at a user defined index with another string
+ */
+TEST(string, replace_string_index) {
+	StringVector arr_test = init_string_vector();
+	char one[] = "Hello";
+	char two[] = "World";
+	char three[] = "Hello";
+	char four[] = "Goodbye";
+	append_string_vector(&arr_test, one);
+	append_string_vector(&arr_test, two);
+	append_string_vector(&arr_test, three);
+	append_string_vector(&arr_test, four);
+	replace_string_vector_index(&arr_test, 1, one);
+
+	EXPECT_EQ(arr_test.len, 4);
+	int result1 = strcmp(one, arr_test.array[0]);
+	int result2 = strcmp(one, arr_test.array[1]);
+	int result3 = strcmp(three, arr_test.array[2]);
+	int result4 = strcmp(four, arr_test.array[3]);
+	EXPECT_EQ(result1, 0);
+	EXPECT_EQ(result2, 0);
+	EXPECT_EQ(result3, 0);
+	EXPECT_EQ(result4, 0);
+}
 // ================================================================================
 // ================================================================================
 // eof

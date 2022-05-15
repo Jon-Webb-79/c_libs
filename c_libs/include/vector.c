@@ -1100,6 +1100,20 @@ void delete_string_vec_values(StringVector *array, char string[]) {
 	}
 	free_vector(&indices_num);
 }
+// --------------------------------------------------------------------------------
+
+int replace_string_vector_index(StringVector *array, int index, char string[]) {
+	if (array->dat != STRING) {
+		printf("Array data type must be a STRING");
+		return 0;
+	}
+	if (index > array->len) {
+		printf("Index is greater than array length");
+		return 0;
+	}
+	* (char **) ((char **)array->array + index * array->elem) = string;
+	return 1;
+}
 // ================================================================================
 // ================================================================================
 // eof

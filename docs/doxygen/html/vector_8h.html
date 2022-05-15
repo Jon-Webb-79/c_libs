@@ -246,6 +246,8 @@ Functions</h2></td></tr>
 <tr class="separator:a35b20f670dfda451959d8308683628e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac09cd9506eaa0af42840d2fb12bfa342"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ac09cd9506eaa0af42840d2fb12bfa342">delete_string_vec_values</a> (<a class="el" href="structStringVector.html">StringVector</a> *array, char string[])</td></tr>
 <tr class="separator:ac09cd9506eaa0af42840d2fb12bfa342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2571bc10157c899bb9810fc5df5c86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a3f2571bc10157c899bb9810fc5df5c86">replace_string_vector_index</a> (<a class="el" href="structStringVector.html">StringVector</a> *array, int index, char string[])</td></tr>
+<tr class="separator:a3f2571bc10157c899bb9810fc5df5c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a1abd8bcc329e46eb9463a815548d6686" name="a1abd8bcc329e46eb9463a815548d6686"></a>
@@ -2354,6 +2356,61 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 6);</div>
 <div class="line">replace_int_array_index(&amp;arr_test, 1, 5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 5, 3, 4, 5, 6]</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a3f2571bc10157c899bb9810fc5df5c86" name="a3f2571bc10157c899bb9810fc5df5c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2571bc10157c899bb9810fc5df5c86">&#9670;&nbsp;</a></span>replace_string_vector_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replace_string_vector_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structStringVector.html">StringVector</a> *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>string</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will replace the string value at a specifi index with another string value</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A string array container </td></tr>
+    <tr><td class="paramname">string</td><td>A user defined string</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structStringVector.html">StringVector</a> arr_test = <a class="code hl_function" href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a>();</div>
+<div class="line"><span class="keywordtype">char</span> one[] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> two[] = <span class="stringliteral">&quot;World&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> three[] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> four[] = <span class="stringliteral">&quot;Goodbye&quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, one);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, two);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, three);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test,four);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a3f2571bc10157c899bb9810fc5df5c86">replace_string_vector_index</a>(arr_test, 1, one);</div>
+<div class="line"><span class="comment">// The resulting vector values in vec are;</span></div>
+<div class="line"> <span class="comment">// &gt;&gt; [&quot;World&quot;, &quot;Hello&quot;, &quot;Hello&quot;, &quot;Goodbye&quot;]</span></div>
+<div class="ttc" id="avector_8c_html_a3f2571bc10157c899bb9810fc5df5c86"><div class="ttname"><a href="vector_8c.html#a3f2571bc10157c899bb9810fc5df5c86">replace_string_vector_index</a></div><div class="ttdeci">int replace_string_vector_index(StringVector *array, int index, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1105</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
