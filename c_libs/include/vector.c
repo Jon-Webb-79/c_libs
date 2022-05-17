@@ -90,7 +90,7 @@ Vector init_vector(dat_type dat, size_t num_indices) {
 StringVector init_string_vector() {
 	StringVector array;
 	array.dat = STRING;
-	array.elem = sizeof(char);
+	array.elem = sizeof(char *);
 	string_vector_mem_alloc(&array, array.elem);
 	return array;
 }
@@ -1062,9 +1062,8 @@ void pop_string_vector(StringVector *array, int index) {
 	if (index >= array->len) {
 		printf("Index %d out of bounds for pop_string_vector\n", index);
 	}
-	unsigned char *dst = (unsigned char*)array->array + index * array->elem;
-	memmove(array->array + index, array->array + index + 1,  \
-			sizeof *array->array * array->len -1);
+	unsigned char *dst = (unsigned char *)array->array + index * array->elem;
+	memmove(dst, dst + array->elem, array->elem * (array->len - index - 1));
 	array->len -= 1;
 }
 // --------------------------------------------------------------------------------
@@ -1111,7 +1110,8 @@ int replace_string_vector_index(StringVector *array, int index, char string[]) {
 		printf("Index is greater than array length");
 		return 0;
 	}
-	* (char **) ((char **)array->array + index * array->elem) = string;
+	free(array->array[index]);
+	array->array[index] = strdup(string);
 	return 1;
 }
 // --------------------------------------------------------------------------------
@@ -1136,6 +1136,26 @@ void delete_string_duplicates_vec(StringVector *array) {
 		if (i >= array->len) break;
 		for (int j = i + 1; j < array->len; j++) {
 			if (strcmp(array->array[i], array->array[j]) == 0) pop_string_vector(array, j);
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void unique_string_vec(StringVector *array) {
+	int repeat_status = 0;
+    for (int i = 0; ; i++) {
+		if (i >= array->len) break;
+		for (int j = i + 1; ; j++) {
+			if (j >= array->len) break;
+			if (strcmp(array->array[i], array->array[j]) == 0){
+				repeat_status = 1;
+				pop_string_vector(array, j);
+			}
+		}
+		if (repeat_status == 1) {
+			pop_string_vector(array, i);
+			repeat_status = 0;
+			i -= 1;
 		}
 	}
 }

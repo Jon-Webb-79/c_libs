@@ -1372,6 +1372,7 @@ TEST(string, pop_string) {
 	EXPECT_EQ(arr_test.len, 2);
 	EXPECT_EQ(result1, 0);
 	EXPECT_EQ(result2, 0);
+	free_string_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1392,6 +1393,7 @@ TEST(string, find_indices) {
 	EXPECT_EQ(vec.len, 2);
 	EXPECT_EQ(int_vector_val(&vec, 0), 0);
 	EXPECT_EQ(int_vector_val(&vec, 1), 2);
+	free_string_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1414,6 +1416,7 @@ TEST(string, delete_string_values) {
 	int result2 = strcmp(four, arr_test.array[1]);
 	EXPECT_EQ(result1, 0);
 	EXPECT_EQ(result2, 0);
+	free_string_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1441,13 +1444,42 @@ TEST(string, replace_string_index) {
 	EXPECT_EQ(result2, 0);
 	EXPECT_EQ(result3, 0);
 	EXPECT_EQ(result4, 0);
+	free_string_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
 /* This function tests the replace_string_vector_index function to ensure
  * it properly replaces a string at a user defined index with another string
  */
-TEST(string, replace_string_elements) {
+ TEST(string, replace_string_elements) { 
+ 	StringVector arr_test = init_string_vector(); 
+ 	char one[] = "Hello";
+ 	char two[] = "World";
+ 	char three[] = "Hello";
+ 	char four[] = "Goodbye";
+ 	append_string_vector(&arr_test, one);
+ 	append_string_vector(&arr_test, two);
+ 	append_string_vector(&arr_test, three);
+ 	append_string_vector(&arr_test, four);
+ 	replace_string_vector_element(&arr_test, one, two);
+
+ 	EXPECT_EQ(arr_test.len, 4);
+ 	int result1 = strcmp(two, arr_test.array[0]);
+ 	int result2 = strcmp(two, arr_test.array[1]);
+ 	int result3 = strcmp(two, arr_test.array[2]);
+ 	int result4 = strcmp(four, arr_test.array[3]);
+ 	EXPECT_EQ(result1, 0);
+ 	EXPECT_EQ(result2, 0);
+ 	EXPECT_EQ(result3, 0);
+ 	EXPECT_EQ(result4, 0);
+	free_string_array(&arr_test);
+} 
+// --------------------------------------------------------------------------------
+
+/* This function tests the unique_strings_vec function to ensure
+ * it properly deletes all duplicated values in a string array container
+ */
+TEST(string, unique_string_vec) {
 	StringVector arr_test = init_string_vector();
 	char one[] = "Hello";
 	char two[] = "World";
@@ -1457,17 +1489,14 @@ TEST(string, replace_string_elements) {
 	append_string_vector(&arr_test, two);
 	append_string_vector(&arr_test, three);
 	append_string_vector(&arr_test, four);
-	replace_string_vector_element(&arr_test, one, two);
-
-	EXPECT_EQ(arr_test.len, 4);
+	unique_string_vec(&arr_test);
+	EXPECT_EQ(arr_test.len, 2);
 	int result1 = strcmp(two, arr_test.array[0]);
-	int result2 = strcmp(two, arr_test.array[1]);
-	int result3 = strcmp(two, arr_test.array[2]);
-	int result4 = strcmp(four, arr_test.array[3]);
+	int result2 = strcmp(four, arr_test.array[1]);
+
 	EXPECT_EQ(result1, 0);
 	EXPECT_EQ(result2, 0);
-	EXPECT_EQ(result3, 0);
-	EXPECT_EQ(result4, 0);
+	free_string_array(&arr_test);
 }
 // --------------------------------------------------------------------------------
 
@@ -1493,6 +1522,7 @@ TEST(string, delete_string_duplicates) {
 	EXPECT_EQ(result1, 0);
 	EXPECT_EQ(result2, 0);
 	EXPECT_EQ(result3, 0);
+	free_string_array(&arr_test);
 }
 // ================================================================================
 // ================================================================================

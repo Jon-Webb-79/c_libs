@@ -221,6 +221,8 @@ Functions</h2></td></tr>
 <tr class="separator:a829c2f3e3a0167e1e7d869316bdca679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66ad8bf82ae2f2ea6a5a8a635c23581b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a66ad8bf82ae2f2ea6a5a8a635c23581b">delete_string_duplicates_vec</a> (<a class="el" href="structStringVector.html">StringVector</a> *array)</td></tr>
 <tr class="separator:a66ad8bf82ae2f2ea6a5a8a635c23581b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab73cda7b38c32e3c023a6f264097b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a4ab73cda7b38c32e3c023a6f264097b7">unique_string_vec</a> (<a class="el" href="structStringVector.html">StringVector</a> *array)</td></tr>
+<tr class="separator:a4ab73cda7b38c32e3c023a6f264097b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7aca0e7792d5d243bfaf85ff5c252e9a" name="a7aca0e7792d5d243bfaf85ff5c252e9a"></a>
@@ -1039,7 +1041,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ac09cd9506eaa0af42840d2fb12bfa342">delete_string_vec_values</a>(&amp;arr_test, one);</div>
 <div class="line"><span class="comment">// The resulting vector values in vec are;</span></div>
 <div class="line"> <span class="comment">// &gt;&gt; [&quot;World&quot;, &quot;Goodbye&quot;]</span></div>
-<div class="ttc" id="avector_8c_html_ac09cd9506eaa0af42840d2fb12bfa342"><div class="ttname"><a href="vector_8c.html#ac09cd9506eaa0af42840d2fb12bfa342">delete_string_vec_values</a></div><div class="ttdeci">void delete_string_vec_values(StringVector *array, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1092</div></div>
+<div class="ttc" id="avector_8c_html_ac09cd9506eaa0af42840d2fb12bfa342"><div class="ttname"><a href="vector_8c.html#ac09cd9506eaa0af42840d2fb12bfa342">delete_string_vec_values</a></div><div class="ttdeci">void delete_string_vec_values(StringVector *array, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1091</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1332,7 +1334,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// The resulting vector values in vec are;</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 2]</span></div>
 <div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:64</div></div>
-<div class="ttc" id="avector_8c_html_a35b20f670dfda451959d8308683628e6"><div class="ttname"><a href="vector_8c.html#a35b20f670dfda451959d8308683628e6">find_string_vector_indices</a></div><div class="ttdeci">Vector find_string_vector_indices(StringVector *array, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1072</div></div>
+<div class="ttc" id="avector_8c_html_a35b20f670dfda451959d8308683628e6"><div class="ttname"><a href="vector_8c.html#a35b20f670dfda451959d8308683628e6">find_string_vector_indices</a></div><div class="ttdeci">Vector find_string_vector_indices(StringVector *array, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1071</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -2421,7 +2423,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3f2571bc10157c899bb9810fc5df5c86">replace_string_vector_index</a>(&amp;arr_test, 1, one);</div>
 <div class="line"><span class="comment">// The resulting vector values in vec are;</span></div>
 <div class="line"> <span class="comment">// &gt;&gt; [&quot;World&quot;, &quot;Hello&quot;, &quot;Hello&quot;, &quot;Goodbye&quot;]</span></div>
-<div class="ttc" id="avector_8c_html_a3f2571bc10157c899bb9810fc5df5c86"><div class="ttname"><a href="vector_8c.html#a3f2571bc10157c899bb9810fc5df5c86">replace_string_vector_index</a></div><div class="ttdeci">int replace_string_vector_index(StringVector *array, int index, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1105</div></div>
+<div class="ttc" id="avector_8c_html_a3f2571bc10157c899bb9810fc5df5c86"><div class="ttname"><a href="vector_8c.html#a3f2571bc10157c899bb9810fc5df5c86">replace_string_vector_index</a></div><div class="ttdeci">int replace_string_vector_index(StringVector *array, int index, char string[])</div><div class="ttdef"><b>Definition:</b> vector.c:1104</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -3151,6 +3153,43 @@ Functions</h2></td></tr>
 <div class="line">append_array(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2, 3, 7]</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a4ab73cda7b38c32e3c023a6f264097b7" name="a4ab73cda7b38c32e3c023a6f264097b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab73cda7b38c32e3c023a6f264097b7">&#9670;&nbsp;</a></span>unique_string_vec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_string_vec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structStringVector.html">StringVector</a> *&#160;</td>
+          <td class="paramname"><em>array</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete all repeated values from a string array container</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A string array container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structStringVector.html">StringVector</a> arr_test = <a class="code hl_function" href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a>();</div>
+<div class="line"><span class="keywordtype">char</span> one[] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> two[] = <span class="stringliteral">&quot;World&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> three[] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> four[] = <span class="stringliteral">&quot;Goodbye&quot;</span>;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, one);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, two);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test, three);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a7aca0e7792d5d243bfaf85ff5c252e9a">append_string_vector</a>(&amp;arr_test,four);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a66ad8bf82ae2f2ea6a5a8a635c23581b">delete_string_duplicates_vec</a>(&amp;arr_test);</div>
+<div class="line"><span class="comment">// The resulting vector values in vec are;</span></div>
+<div class="line"> <span class="comment">// &gt;&gt; [&quot;Hellow&quot;, &quot;World&quot;, &quot;Goodbye&quot;]</span></div>
 </div><!-- fragment --> 
 </div>
 </div>

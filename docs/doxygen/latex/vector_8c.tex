@@ -149,6 +149,8 @@ int \mbox{\hyperlink{vector_8c_a3f2571bc10157c899bb9810fc5df5c86}{replace\+\_\+s
 void \mbox{\hyperlink{vector_8c_a829c2f3e3a0167e1e7d869316bdca679}{replace\+\_\+string\+\_\+vector\+\_\+element}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array, char old\+\_\+val\mbox{[}$\,$\mbox{]}, char new\+\_\+val\mbox{[}$\,$\mbox{]})
 \item 
 void \mbox{\hyperlink{vector_8c_a66ad8bf82ae2f2ea6a5a8a635c23581b}{delete\+\_\+string\+\_\+duplicates\+\_\+vec}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array)
+\item 
+void \mbox{\hyperlink{vector_8c_a4ab73cda7b38c32e3c023a6f264097b7}{unique\+\_\+string\+\_\+vec}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$array)
 \end{DoxyCompactItemize}
 
 
@@ -2200,6 +2202,35 @@ This function will delete all values from an integer array except for the unique
 \DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\_int\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [2, 3, 7]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a4ab73cda7b38c32e3c023a6f264097b7}\label{vector_8c_a4ab73cda7b38c32e3c023a6f264097b7}} 
+\index{vector.c@{vector.c}!unique\_string\_vec@{unique\_string\_vec}}
+\index{unique\_string\_vec@{unique\_string\_vec}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{unique\_string\_vec()}{unique\_string\_vec()}}
+{\footnotesize\ttfamily void unique\+\_\+string\+\_\+vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{array }\end{DoxyParamCaption})}
+
+This function will delete all repeated values from a string array container
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A string array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} arr\_test = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}();}
+\DoxyCodeLine{\textcolor{keywordtype}{char} one[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} two[] = \textcolor{stringliteral}{"{}World"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} three[] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} four[] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, one);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, two);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test, three);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7aca0e7792d5d243bfaf85ff5c252e9a}{append\_string\_vector}}(\&arr\_test,four);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a66ad8bf82ae2f2ea6a5a8a635c23581b}{delete\_string\_duplicates\_vec}}(\&arr\_test);}
+\DoxyCodeLine{\textcolor{comment}{// The resulting vector values in vec are;}}
+\DoxyCodeLine{ \textcolor{comment}{// >> ["{}Hellow"{}, "{}World"{}, "{}Goodbye"{}]}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8c_afb49fc0563f1493f510a73d645e26e79}\label{vector_8c_afb49fc0563f1493f510a73d645e26e79}} 
