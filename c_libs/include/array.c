@@ -1,0 +1,50 @@
+// ================================================================================
+// ================================================================================
+// - File:    array.c
+// - Purpose: Describe the file purpose here
+//
+// Source Metadata
+// - Author:  Jonathan A. Webb
+// - Date:    May 17, 2022
+// - Version: 1.0
+// - Copyright: Copyright 2022, Jon Webb Inc.
+// ================================================================================
+// ================================================================================
+// Include modules here
+
+#include "array.h"
+
+// Begin code
+int pop_int_array(int *array, int index, int size) {
+	if (index >= size) return 0;
+	unsigned char *dst = (unsigned char*)array + index * sizeof(int);
+	memmove(dst, dst + sizeof(int), sizeof(int) * (size - index - 1));
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_float_array(float *array, int index, int size) {
+	if (index >= size) return 0;
+	unsigned char *dst = (unsigned char*)array + index * sizeof(float);
+	memmove(dst, dst + sizeof(float), sizeof(float) * (size - index - 1));
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_double_array(double *array, int index, int size) {
+	if (index >= size) return 0;
+	unsigned char *dst = (unsigned char*)array + index * sizeof(double);
+	memmove(dst, dst + sizeof(double), sizeof(double) * (size - index - 1));
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_char_array(char *array, int index, int size) {
+	if (index >= size) return 0;
+	unsigned char *dst = (unsigned char*)array + index * sizeof(char);
+	memmove(dst, dst + sizeof(char), sizeof(char) * (size - index - 1));
+	return 1;
+}
+// ================================================================================
+// ================================================================================
+// eof

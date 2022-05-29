@@ -22,7 +22,7 @@ extern "C" {
 /* This function tests the init_array function to ensure that it correctly
  * prepares the Array container for data addition
  */
-TEST(test_initialize_array, init_data) {
+TEST(test_initialize_vector, init_data) {
 	size_t indices = 20;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -44,7 +44,7 @@ TEST(test_initialize_array, init_data) {
 /* This function tests to ensure that append_array can append a single*/
 /*  * integer scalar
   */
-TEST(test_append_array, one_scalar_int) {
+TEST(test_append_vector, one_scalar_int) {
 	size_t indices = 10;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -65,7 +65,7 @@ TEST(test_append_array, one_scalar_int) {
 
 /* This function tests to ensure that append_array can append an array
  */
-TEST(test_append_array, array_int) {
+TEST(test_append_vector, array_int) {
 	size_t indices = 10;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -90,7 +90,7 @@ TEST(test_append_array, array_int) {
 
 /* This function tests the append_array function to ensure it proprly appends
  * float variables */
-TEST(test_append_array, array_float) {
+TEST(test_append_vector, array_float) {
 	size_t indices = 10;
 	dat_type dtype = FLOAT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -113,7 +113,7 @@ TEST(test_append_array, array_float) {
 /* This function tests the append_array function to ensure it proprly appends
  * double variables
  */
-TEST(test_append_array, array_double) {
+TEST(test_append_vector, array_double) {
 	size_t indices = 10;
 	dat_type dtype = DOUBLE;
 	Vector arr_test = init_vector(dtype, indices);
@@ -136,7 +136,7 @@ TEST(test_append_array, array_double) {
 /* This function tests the append_array function to ensure it proprly appends
  * double variables
  */
-TEST(test_append_array, array_char){
+TEST(test_append_vector, array_char){
 	size_t indices = 10;
 	dat_type dtype = DOUBLE;
 	Vector arr_test = init_vector(dtype, indices);
@@ -154,7 +154,7 @@ TEST(test_append_array, array_char){
 /* This function tests the append_array function to ensure it properly adds
  * memory allocatio when required
  */
-TEST(test_append_array, memory_rollover) {
+TEST(test_append_vector, memory_rollover) {
 	size_t indices = 10;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -269,7 +269,7 @@ TEST(test_retrieve_indice, char_indice) {
 /* This function tests the preappend_array function to ensure it can incorporate
  * a scalar value
  */
-TEST(test_preappend_array, preappend_scalar) {
+TEST(test_preappend_vector, preappend_scalar) {
 	size_t indices = 10;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -289,7 +289,7 @@ TEST(test_preappend_array, preappend_scalar) {
 /* This function tests the preappend_array function to incorporate an array
  * value
  */
-TEST(test_preappend_array, preappend_array) {
+TEST(test_preappend_vector, preappend_array) {
 	size_t indices = 10;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -312,7 +312,7 @@ TEST(test_preappend_array, preappend_array) {
 /* This function tests the pop_array function to ensure it proprly deletes an
 * ainteger rray element
 */
-TEST(test_pop_array, pop_int) {
+TEST(test_pop_vector, pop_int) {
 	size_t indices = 10;
 	dat_type dtype = INT;
 	Vector arr_test = init_vector(dtype, indices);
@@ -329,7 +329,7 @@ TEST(test_pop_array, pop_int) {
 /* This function tests the pop_array function to ensure it proprly deletes an
  * float array element
  */
-TEST(test_pop_array, pop_float) {
+TEST(test_pop_vector, pop_float) {
 	size_t indices = 10;
 	dat_type dtype = FLOAT;
 	Vector arr_test = init_vector(dtype, indices);

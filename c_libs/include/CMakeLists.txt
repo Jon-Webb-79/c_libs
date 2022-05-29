@@ -14,6 +14,8 @@
 add_library(include
     vector.c
 	vector.h
+	array.c
+	array.h
 )
 
 target_include_directories(include PUBLIC .)

@@ -15,9 +15,19 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO sort_string_ascending_vev
-// TODO sort_string_descending_vec
-// TODO sort_string
+// TODO pre_append_array
+// TODO find_xxx_array_indices
+// TODO delete_xxx_array_values
+// TODO replace_xxx_array_index
+// TODO replace_xxx_array_element
+// TODO delete_xxx_array_duplicates
+// TODO unique_xxx_array
+// TODO sort_xxx_array
+// TODO median_xxx_array
+// TODO sum_xxx_array
+// TODO average_xxx_array
+// TODO stdv_xxx_array
+// TODO cumsum_xxx_array
 int main(int argc, const char * argv[]) {
 	printf("Hello, World!");
 }

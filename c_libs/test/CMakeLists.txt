@@ -18,6 +18,7 @@ enable_testing()
 add_executable(
   unit_tests
   test_vector.cpp
+  test_array.cpp
 )
 target_link_libraries(
   unit_tests
