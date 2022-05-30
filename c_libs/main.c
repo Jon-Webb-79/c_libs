@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO pre_append_array
 // TODO find_xxx_array_indices
 // TODO delete_xxx_array_values
 // TODO replace_xxx_array_index
