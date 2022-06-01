@@ -20,22 +20,6 @@
 #include <string.h>
 
 /**
- * An enum container with variables describing relevant data types
- *
- * @param FLOAT An integer representing float data types
- * @param DOUBLE An integer representing double data types
- * @param CHAR An integer representing character data types
- * @param INT An integer representing integer data types
- */
-typedef enum
-{
-	FLOAT,
-	DOUBLE,
-	CHAR,
-	INT
-} data_type;
-// --------------------------------------------------------------------------------
-/**
  * This function will remove a data entry from a user specified index
  * within an aray
  *
