@@ -308,7 +308,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Build array from scalar values}}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < 3; i++) \{}
-\DoxyCodeLine{    append\_array(\&arr\_test, \&i, 1);}
+\DoxyCodeLine{    \mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, \&i, 1);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Print the array values}}
@@ -328,7 +328,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{}
 \DoxyCodeLine{ \textcolor{comment}{// Build from an already existing array}}
 \DoxyCodeLine{ \textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
-\DoxyCodeLine{ append\_array(\&arr\_test, a, 3);}
+\DoxyCodeLine{ \mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 3);}
 \DoxyCodeLine{}
 \DoxyCodeLine{ \textcolor{comment}{// Print the array values}}
 \DoxyCodeLine{ \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 3; i ++) \{}
@@ -361,7 +361,7 @@ average The average of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_a19f91645d90e18ba1e0eaf138ebe27c9}{average\_double\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.85}}
 
@@ -389,7 +389,7 @@ average The average of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a8fbb6b2b9616b6dfe5c2e6aa11c527e0}{average\_float\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.85}}
 
@@ -417,7 +417,7 @@ average The average of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_aee398cb0a16437dc0c6d2c86a38012c6}{average\_int\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.5}}
 
@@ -451,7 +451,7 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[7] = \textcolor{stringliteral}{"{}Hello!"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{char} *)arr\_test.array)[0]);}
 
@@ -491,7 +491,7 @@ cumsum An array containing the running cummulative sum of the values in a vector
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} *cumsum = \mbox{\hyperlink{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}{cumsum\_float\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]}}
 
@@ -519,7 +519,7 @@ cumsum An array containing the running cummulative sum of the values in a vector
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} *cumsum = \mbox{\hyperlink{vector_8c_a7b0a73a6ce02f60c25ab2603f0133102}{cumsum\_float\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]}}
 
@@ -547,7 +547,7 @@ cumsum An array containing the running cummulative sum of the values in a vector
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} *cumsum = \mbox{\hyperlink{vector_8c_ac8471d832e42571fe1346e5e3ddd8e91}{cumsum\_int\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> cumsum = [1, 3, 6, 10, 15, 21]}}
 
@@ -599,7 +599,7 @@ This function will find all char values occurances in an array and delete them.
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{delete\_char\_arr\_values(\&arr\_test, \textcolor{charliteral}{'l'});}
 \DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', 'o']}}
 
@@ -624,7 +624,7 @@ This function will delete all duplicate values in an array, so that the final ar
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[8] = \{1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 8);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a122563df58490a6bc9807c7496fc211e}{delete\_double\_duplicates\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.1, 3.0, 5.2, 2.]}}
 
@@ -651,7 +651,7 @@ This function will find all double values occurances in an array and delete them
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{delete\_double\_arr\_values(\&arr\_test, 6.3);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
 
@@ -676,7 +676,7 @@ This function will delete all duplicate values in an array, so that the final ar
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[8] = \{1, 1, 3, 1, 5, 2, 2, 3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 8);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3b714e6f1ad388ab3280fcec12b164b2}{delete\_duplicates\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 5, 2]}}
 
@@ -701,7 +701,7 @@ This function will delete all duplicate values in an array, so that the final ar
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[8] = \{1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 8);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2beab0348c5fc9efa3d9a01b2dc98c06}{delete\_float\_duplicates\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.1, 3.0, 5.2, 2.]}}
 
@@ -728,7 +728,7 @@ This function will find all float values occurances in an array and delete them.
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{delete\_float\_arr\_values(\&arr\_test, 6.3f);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.0, 3.2, 4.1, 5.7]}}
 
@@ -753,7 +753,7 @@ This function will delete all duplicate values in an array, so that the final ar
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[8] = \{1, 1, 3, 1, 5, 2, 2, 3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 8);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_acadf72c8ef6e2a3e6a71ddfb74adcef9}{delete\_int\_duplicates\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 5, 2]}}
 
@@ -780,7 +780,7 @@ This function will find all integer values occurances in an array and delete the
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{delete\_int\_arr\_values(\&arr\_test, 6);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 3, 4, 5]}}
 
@@ -874,7 +874,7 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[3] = \{1.1, 2.1, 3.1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 3);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 3);}
 \DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, ((\textcolor{keywordtype}{double} *)arr\_test.array)[0]);}
 \DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
@@ -911,7 +911,7 @@ vector A vector containing all indices associatd with the user specified float v
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[7] = \{a, b, b, q, b, a, c\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{Array p = find\_char\_array\_indices(\&arr\_test, \textcolor{charliteral}{'b'});}
 \DoxyCodeLine{\textcolor{comment}{// p allocation}}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 4]}}
@@ -943,7 +943,7 @@ This function will find the indices that contain a user specified double value. 
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{Array p = find\_double\_array\_indices(\&arr\_test, 6.2);}
 \DoxyCodeLine{\textcolor{comment}{// p allocation}}
 \DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 4]}}
@@ -975,7 +975,7 @@ This function will find the indices that contain a user specified float value. T
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{Array p = find\_float\_array\_indices(\&arr\_test, 6.2f);}
 \DoxyCodeLine{\textcolor{comment}{// p allocation}}
 \DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 4]}}
@@ -1007,7 +1007,7 @@ This function will find the indices that contain a user specified integer. This 
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
 \DoxyCodeLine{Array p = find\_int\_array\_indices(\&arr\_test, 6);}
 \DoxyCodeLine{\textcolor{comment}{// P allocation}}
 \DoxyCodeLine{\textcolor{comment}{// [0, 3, 4]}}
@@ -1077,7 +1077,7 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[3] = \{1.1, 2.1, 3.1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 3);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 3);}
 \DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)arr\_test.array)[0]);}
 \DoxyCodeLine{\textcolor{comment}{// >> 1.1}}
@@ -1189,7 +1189,7 @@ When a user instantiates and populates an array they must access the array by ca
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Build from an already existing array}}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 3);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 3);}
 \DoxyCodeLine{\textcolor{comment}{// recover array indice value 0 by casting}}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr\_test.array)[0]);}
 \DoxyCodeLine{\textcolor{comment}{// >> 0}}
@@ -1224,7 +1224,7 @@ median
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}hello"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} med = \mbox{\hyperlink{vector_8c_a5f3b6ae2d42617c08ddc76b38007c551}{median\_char\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 'l'}}
 
@@ -1252,7 +1252,7 @@ median
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[4] = \{3.2, 5.1, 3.0, 2.0, 0.5\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 4);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} med = \mbox{\hyperlink{vector_8c_aa27d678c88f4e879b2c499d25e3de84b}{median\_float\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2.5}}
 
@@ -1280,7 +1280,7 @@ median
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{3.2, 5.1, 3.0, 2.0, 0.5\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 4);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} med = \mbox{\hyperlink{vector_8c_aa27d678c88f4e879b2c499d25e3de84b}{median\_float\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2.5}}
 
@@ -1308,7 +1308,7 @@ median
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[4] = \{3, 5, 1, 2\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 4);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} med = \mbox{\hyperlink{vector_8c_a79ca0fa54c042ed750bdc7fc3e381295}{median\_int\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2}}
 
@@ -1365,7 +1365,7 @@ integer An error code of 0 if the user defines an indice greater than the array 
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 4);}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_ade257c4734ef94d47aea5f0424b8fdf9}{pop\_array}}(\&arr\_test, 2);}
 \DoxyCodeLine{\textcolor{comment}{// >> [10.1, 9.2, 7.4]}}
 
@@ -1431,7 +1431,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{comment}{// Build the base array}}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 3);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 3);}
 \DoxyCodeLine{\textcolor{comment}{// Original array}}
 \DoxyCodeLine{\textcolor{comment}{// >> [0, 1, 2]}}
 \DoxyCodeLine{}
@@ -1453,7 +1453,7 @@ The following demonstrates several ways that the append\+\_\+array function can 
 \DoxyCodeLine{}
 \DoxyCodeLine{ \textcolor{comment}{// Build from an already existing array}}
 \DoxyCodeLine{ \textcolor{keywordtype}{int} a[3] = \{0, 1, 2\};}
-\DoxyCodeLine{ append\_array(\&arr\_test, 3);}
+\DoxyCodeLine{ \mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, 3);}
 \DoxyCodeLine{ \textcolor{comment}{// >> [0, 1, 22]}}
 \DoxyCodeLine{}
 \DoxyCodeLine{ \textcolor{keywordtype}{int} b[3] = \{3, 4, 5\};}
@@ -1485,7 +1485,7 @@ This function will replace char values defined by a user with another char value
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_char\_array\_element(\&arr\_test, \textcolor{charliteral}{'l'}, \textcolor{charliteral}{'q'});}
 \DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', 'q', 'q', 'o']}}
 
@@ -1514,7 +1514,7 @@ This function will replace a char value at a user defined indice with another ch
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \textcolor{stringliteral}{"{}Hello "{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_float\_char\_index(\&arr\_test, 1, \textcolor{charliteral}{'p'});}
 \DoxyCodeLine{\textcolor{comment}{// >> ['H', 'p', 'l', 'l', 'o', '']}}
 
@@ -1543,7 +1543,7 @@ This function will replace double values defined by a user with another double v
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 3.3, 3.3, 3.3, 5.2, 3.3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_double\_array\_element(\&arr\_test, 3.3, 2.1);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2.1, 2.1, 2.1, 5, 2.1]}}
 
@@ -1572,7 +1572,7 @@ This function will replace a double value at a user defined indice with another 
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_float\_array\_index(\&arr\_test, 1, 5.5);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]}}
 
@@ -1601,7 +1601,7 @@ This function will replace float values defined by a user with another float val
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 3.3, 3.3, 3.3, 5.2, 3.3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_float\_array\_element(\&arr\_test, 3.3f, 2.1f);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2.1, 2.1, 2.1, 5, 2.1]}}
 
@@ -1630,7 +1630,7 @@ This function will replace a float value at a user defined indice with another f
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_float\_array\_index(\&arr\_test, 1, 5.5f);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]}}
 
@@ -1659,7 +1659,7 @@ This function will replace integer values defined by a user with another integer
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 3, 3, 3, 5, 3\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_int\_array\_element(\&arr\_test, 3, 2);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 2, 2, 5, 2]}}
 
@@ -1688,7 +1688,7 @@ This function will replace an integer value at a user defined indice with anothe
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{replace\_int\_array\_index(\&arr\_test, 1, 5);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 5, 3, 4, 5, 6]}}
 
@@ -1776,7 +1776,7 @@ This function will sort a char array in ascending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 5);}
 \DoxyCodeLine{sort\_char\_ascending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> ['A', 'D', 'F', 'Q']}}
 
@@ -1804,7 +1804,7 @@ This function will sort a char array in descending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_char\_descending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> ['Q', 'F', 'D', 'A']}}
 
@@ -1829,7 +1829,7 @@ This function will sort a double array in ascending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{3.2, 1.8, 5.4, 3.9, 4.1, 1.8\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_double\_ascending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]}}
 
@@ -1851,7 +1851,7 @@ This function will sort a double array in descending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_double\_descending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]}}
 
@@ -1879,7 +1879,7 @@ This function will sort a float array in ascending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{3.2, 1.8, 5.4, 3.9, 4.1, 1.8\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_float\_ascending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]}}
 
@@ -1904,7 +1904,7 @@ This function will sort a float array in descending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_float\_descending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]}}
 
@@ -1929,7 +1929,7 @@ This function will sort an integer array in ascending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{5, 4, 3, 2, 1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_int\_ascending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [0, 1, 2, 3, 4, 5]}}
 
@@ -1954,7 +1954,7 @@ This function will sort an integer array in descending order
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_int\_descending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [6, 5, 4, 3, 2, 1]}}
 
@@ -1981,7 +1981,7 @@ This function will sort an array in descending order. This function can handle I
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \textcolor{stringliteral}{"{}QDAF"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);}
 \DoxyCodeLine{sort\_descending(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> ['Q', 'F', 'D', 'A']}}
 
@@ -2009,7 +2009,7 @@ stdev The standard deviation of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.5, 5.3, 3.2, 6.8, 7.6, 2.1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\_int\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2.30754}}
 
@@ -2037,7 +2037,7 @@ stdev The standard deviation of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.5, 5.3, 3.2, 6.8, 7.6, 2.1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\_int\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2.30754}}
 
@@ -2065,7 +2065,7 @@ stdev The standard deviation of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 5, 3, 6, 7, 2\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a69cbc1066e5b8b0684344e7fa8dc1862}{stdev\_int\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2.160247}}
 
@@ -2136,7 +2136,7 @@ sum The sum of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{double} sum = \mbox{\hyperlink{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}{sum\_float\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 23.1}}
 
@@ -2164,7 +2164,7 @@ sum The sum of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{float} sum = \mbox{\hyperlink{vector_8c_a8f0f348483a9cb07cdd71bb078c9dd57}{sum\_float\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 23.1}}
 
@@ -2192,7 +2192,7 @@ sum The sum of all values in a vector container
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 3, 4, 5, 6\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 6);*}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 6);*}
 \DoxyCodeLine{\textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a3d193ae2c47940a0421e604f239cdce9}{sum\_int\_vec}}(arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> 21}}
 
@@ -2217,7 +2217,7 @@ This function will delete all values from a char array except for the unique val
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[13] = \textcolor{stringliteral}{"{}Hello World!"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 13);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 13);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a57925b38859054812edf2f341225f6cc}{unique\_char\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', ' ', 'W', 'r', 'd', '!']}}
 
@@ -2242,7 +2242,7 @@ This function will delete all values from a double array except for the unique v
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 9);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92d4ff3374cd29a8f1e604c534f7b583}{unique\_double\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [2.2, 3.3, 7.1]}}
 
@@ -2267,7 +2267,7 @@ This function will delete all values from a float array except for the unique va
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = FLAOT;}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = \{1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 9);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\_int\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [2.2, 3.3, 7.1]}}
 
@@ -2292,7 +2292,7 @@ This function will delete all values from an integer array except for the unique
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1, 1, 2, 3, 4, 4, 6, 6, 7\};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 9);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 9);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8b9a16e579236fa0add30a4752527421}{unique\_int\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> [2, 3, 7]}}
 
@@ -2346,7 +2346,7 @@ This function will delete all values from an array except for the unique values.
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}} dtype = \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}};}
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[13] = \textcolor{stringliteral}{"{}Hello World!"{}};}
-\DoxyCodeLine{append\_array(\&arr\_test, a, 13);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 13);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_afb49fc0563f1493f510a73d645e26e79}{unique\_vec}}(\&arr\_test);}
 \DoxyCodeLine{\textcolor{comment}{// >> ['H', 'e', ' ', 'W', 'r', 'd', '!']}}
 

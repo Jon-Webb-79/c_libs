@@ -93,7 +93,7 @@ TEST(test_pop_array, pop_char) {
 TEST(test_append_array, append_int_one) {
 	int a[9] = {1, 2, 3};
 	int b[6] = {4, 5, 6, 7, 8, 9};
-	append_int_array(a, 3, b, 6);
+	append_array((void *)a, 3, (void *)b, 6, sizeof(int));
 	EXPECT_EQ(a[0], 1);
 	EXPECT_EQ(a[1], 2);
 	EXPECT_EQ(a[2], 3);
@@ -112,7 +112,7 @@ TEST(test_append_array, append_int_one) {
 TEST(test_append_array, append_int_two) {
 	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8};
 	int b = 9;
-	append_int_array(a, 8, &b, 1);
+	append_array((void *)a, 8, &b, 1, sizeof(int));
 	EXPECT_EQ(a[0], 1);
 	EXPECT_EQ(a[1], 2);
 	EXPECT_EQ(a[2], 3);
@@ -131,7 +131,7 @@ TEST(test_append_array, append_int_two) {
 TEST(test_append_array, append_float) {
 	float a[9] = {1.1, 2.2, 3.3};
 	float b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	append_float_array(a, 3, b, 6);
+	append_array((void *)a, 3, (void *)b, 6, sizeof(float));
 	EXPECT_FLOAT_EQ(a[0], 1.1f);
 	EXPECT_FLOAT_EQ(a[1], 2.2f);
 	EXPECT_FLOAT_EQ(a[2], 3.3f);
@@ -150,7 +150,7 @@ TEST(test_append_array, append_float) {
 TEST(test_append_array, append_double) {
 	double a[9] = {1.1, 2.2, 3.3};
 	double b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	append_double_array(a, 3, b, 6);
+	append_array((void *)a, 3, (void *)b, 6, sizeof(double));
 	EXPECT_DOUBLE_EQ(a[0], 1.1);
 	EXPECT_DOUBLE_EQ(a[1], 2.2);
 	EXPECT_DOUBLE_EQ(a[2], 3.3);
@@ -169,7 +169,7 @@ TEST(test_append_array, append_double) {
 TEST(test_append_array, append_char) {
 	char a[10] = "abcdefgh";
 	char b = 'i';
-	append_char_array(a, 8, &b, 1);
+	append_array((void *)a, 8, &b, 1, sizeof(char));
 	EXPECT_EQ(a[0], 'a');
 	EXPECT_EQ(a[1], 'b');
 	EXPECT_EQ(a[2], 'c');

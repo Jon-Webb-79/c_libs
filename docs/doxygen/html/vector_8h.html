@@ -405,7 +405,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build array from scalar values</span></div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; 3; i++) {</div>
-<div class="line">    append_array(&amp;arr_test, &amp;i, 1);</div>
+<div class="line">    <a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, &amp;i, 1);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Print the array values</span></div>
@@ -414,6 +414,7 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// populated array</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2]</span></div>
+<div class="ttc" id="aarray_8c_html_a71a34401951bb5d5736c60f52dda532d"><div class="ttname"><a href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a></div><div class="ttdeci">void append_array(void *parent_array, int len, void *child_array, size_t count, int type)</div><div class="ttdef"><b>Definition:</b> array.c:27</div></div>
 <div class="ttc" id="aarray_8h_html_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> array.h:35</div></div>
 <div class="ttc" id="avector_8h_html_a1abd8bcc329e46eb9463a815548d6686"><div class="ttname"><a href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a></div><div class="ttdeci">dat_type</div><div class="ttdef"><b>Definition:</b> vector.h:34</div></div>
 </div><!-- fragment --><p> The following code will also have the same effect </p><div class="fragment"><div class="line"><span class="comment">// Instantiate array</span></div>
@@ -423,7 +424,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"> <span class="comment">// Build from an already existing array</span></div>
 <div class="line"> <span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
-<div class="line"> append_array(&amp;arr_test, a, 3);</div>
+<div class="line"> <a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 3);</div>
 <div class="line"> </div>
 <div class="line"> <span class="comment">// Print the array values</span></div>
 <div class="line"> <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i ++) {</div>
@@ -462,7 +463,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">double</span> average = <a class="code hl_function" href="vector_8c.html#a19f91645d90e18ba1e0eaf138ebe27c9">average_double_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.85</span></div>
 <div class="ttc" id="aarray_8h_html_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> array.h:33</div></div>
@@ -498,7 +499,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> average = <a class="code hl_function" href="vector_8c.html#a8fbb6b2b9616b6dfe5c2e6aa11c527e0">average_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.85</span></div>
 <div class="ttc" id="aarray_8h_html_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> array.h:32</div></div>
@@ -534,7 +535,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> average = <a class="code hl_function" href="vector_8c.html#aee398cb0a16437dc0c6d2c86a38012c6">average_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.5</span></div>
 <div class="ttc" id="avector_8c_html_aee398cb0a16437dc0c6d2c86a38012c6"><div class="ttname"><a href="vector_8c.html#aee398cb0a16437dc0c6d2c86a38012c6">average_int_vec</a></div><div class="ttdeci">float average_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:942</div></div>
@@ -583,7 +584,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">char</span> a[7] = <span class="stringliteral">&quot;Hello!&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">char</span> *)arr_test.array)[0]);</div>
 <div class="ttc" id="aarray_8h_html_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> array.h:34</div></div>
@@ -622,7 +623,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">double</span> *cumsum = <a class="code hl_function" href="vector_8c.html#a7b0a73a6ce02f60c25ab2603f0133102">cumsum_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]</span></div>
 <div class="ttc" id="avector_8c_html_a7b0a73a6ce02f60c25ab2603f0133102"><div class="ttname"><a href="vector_8c.html#a7b0a73a6ce02f60c25ab2603f0133102">cumsum_float_vec</a></div><div class="ttdeci">float * cumsum_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:1009</div></div>
@@ -657,7 +658,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">float</span> *cumsum = <a class="code hl_function" href="vector_8c.html#a7b0a73a6ce02f60c25ab2603f0133102">cumsum_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; cumsum = [1.1, 3.3, 6.6, 11.0, 16.5, 23.1]</span></div>
 </div><!-- fragment --> 
@@ -691,7 +692,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">int</span> *cumsum = <a class="code hl_function" href="vector_8c.html#ac8471d832e42571fe1346e5e3ddd8e91">cumsum_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; cumsum = [1, 3, 6, 10, 15, 21]</span></div>
 <div class="ttc" id="avector_8c_html_ac8471d832e42571fe1346e5e3ddd8e91"><div class="ttname"><a href="vector_8c.html#ac8471d832e42571fe1346e5e3ddd8e91">cumsum_int_vec</a></div><div class="ttdeci">int * cumsum_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:996</div></div>
@@ -769,7 +770,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">delete_char_arr_values(&amp;arr_test, <span class="charliteral">&#39;l&#39;</span>);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;o&#39;]</span></div>
 </div><!-- fragment --> 
@@ -802,7 +803,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[8] = {1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0};</div>
-<div class="line">append_array(&amp;arr_test, a, 8);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
 <div class="ttc" id="avector_8c_html_a122563df58490a6bc9807c7496fc211e"><div class="ttname"><a href="vector_8c.html#a122563df58490a6bc9807c7496fc211e">delete_double_duplicates_vec</a></div><div class="ttdeci">void delete_double_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:531</div></div>
@@ -847,7 +848,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">delete_double_arr_values(&amp;arr_test, 6.3);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.0, 3.2, 4.1, 5.7]</span></div>
 </div><!-- fragment --> 
@@ -880,7 +881,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[8] = {1, 1, 3, 1, 5, 2, 2, 3};</div>
-<div class="line">append_array(&amp;arr_test, a, 8);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 5, 2]</span></div>
 <div class="ttc" id="avector_8c_html_a3b714e6f1ad388ab3280fcec12b164b2"><div class="ttname"><a href="vector_8c.html#a3b714e6f1ad388ab3280fcec12b164b2">delete_duplicates_vec</a></div><div class="ttdeci">void delete_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:637</div></div>
@@ -914,7 +915,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[8] = {1.1, 1.1, 3.0, 1.1, 5.2, 2.1, 2.1, 3.0};</div>
-<div class="line">append_array(&amp;arr_test, a, 8);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 3.0, 5.2, 2.]</span></div>
 <div class="ttc" id="avector_8c_html_a2beab0348c5fc9efa3d9a01b2dc98c06"><div class="ttname"><a href="vector_8c.html#a2beab0348c5fc9efa3d9a01b2dc98c06">delete_float_duplicates_vec</a></div><div class="ttdeci">void delete_float_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:518</div></div>
@@ -959,7 +960,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[7] = {6.3, 1.0, 3.2, 6.3, 6.3, 4.1, 5.7};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">delete_float_arr_values(&amp;arr_test, 6.3f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.0, 3.2, 4.1, 5.7]</span></div>
 </div><!-- fragment --> 
@@ -992,7 +993,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[8] = {1, 1, 3, 1, 5, 2, 2, 3};</div>
-<div class="line">append_array(&amp;arr_test, a, 8);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 8);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 5, 2]</span></div>
 <div class="ttc" id="avector_8c_html_acadf72c8ef6e2a3e6a71ddfb74adcef9"><div class="ttname"><a href="vector_8c.html#acadf72c8ef6e2a3e6a71ddfb74adcef9">delete_int_duplicates_vec</a></div><div class="ttdeci">void delete_int_duplicates_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:505</div></div>
@@ -1037,7 +1038,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[7] = {6, 1, 3, 6, 6, 4, 5};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">delete_int_arr_values(&amp;arr_test, 6);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 3, 4, 5]</span></div>
 </div><!-- fragment --> 
@@ -1175,7 +1176,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">double</span> a[3] = {1.1, 2.1, 3.1};</div>
-<div class="line">append_array(&amp;arr_test, a, 3);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 3);</div>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, ((<span class="keywordtype">double</span> *)arr_test.array)[0]);</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
@@ -1223,7 +1224,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[7] = {a, b, b, q, b, a, c};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">Array p = find_char_array_indices(&amp;arr_test, <span class="charliteral">&#39;b&#39;</span>);</div>
 <div class="line"><span class="comment">// p allocation</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 4]</span></div>
@@ -1270,7 +1271,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">Array p = find_double_array_indices(&amp;arr_test, 6.2);</div>
 <div class="line"><span class="comment">// p allocation</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
@@ -1318,7 +1319,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[7] = {6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">Array p = find_float_array_indices(&amp;arr_test, 6.2f);</div>
 <div class="line"><span class="comment">// p allocation</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 3, 4]</span></div>
@@ -1366,7 +1367,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[7] = {6, 1, 3, 6, 6, 4, 5};</div>
-<div class="line">append_array(&amp;arr_test, a, 7);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 7);</div>
 <div class="line">Array p = find_int_array_indices(&amp;arr_test, 6);</div>
 <div class="line"><span class="comment">// P allocation</span></div>
 <div class="line"><span class="comment">// [0, 3, 4]</span></div>
@@ -1468,7 +1469,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">float</span> a[3] = {1.1, 2.1, 3.1};</div>
-<div class="line">append_array(&amp;arr_test, a, 3);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 3);</div>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, ((<span class="keywordtype">float</span> *)arr_test.array)[0]);</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1</span></div>
@@ -1631,7 +1632,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build from an already existing array</span></div>
 <div class="line"><span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
-<div class="line">append_array(&amp;arr_test, a, 3);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 3);</div>
 <div class="line"><span class="comment">// recover array indice value 0 by casting</span></div>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *)arr_test.array)[0]);</div>
 <div class="line"><span class="comment">// &gt;&gt; 0</span></div>
@@ -1668,7 +1669,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;hello&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line"><span class="keywordtype">char</span> med = <a class="code hl_function" href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; &#39;l&#39;</span></div>
 <div class="ttc" id="avector_8c_html_a5f3b6ae2d42617c08ddc76b38007c551"><div class="ttname"><a href="vector_8c.html#a5f3b6ae2d42617c08ddc76b38007c551">median_char_vec</a></div><div class="ttdeci">char median_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:901</div></div>
@@ -1703,7 +1704,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[4] = {3.2, 5.1, 3.0, 2.0, 0.5};</div>
-<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">double</span> med = <a class="code hl_function" href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.5</span></div>
 <div class="ttc" id="avector_8c_html_aa27d678c88f4e879b2c499d25e3de84b"><div class="ttname"><a href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a></div><div class="ttdeci">float median_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:869</div></div>
@@ -1738,7 +1739,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[4] = {3.2, 5.1, 3.0, 2.0, 0.5};</div>
-<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">float</span> med = <a class="code hl_function" href="vector_8c.html#aa27d678c88f4e879b2c499d25e3de84b">median_float_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.5</span></div>
 </div><!-- fragment --> 
@@ -1772,7 +1773,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[4] = {3, 5, 1, 2};</div>
-<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">int</span> med = <a class="code hl_function" href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2</span></div>
 <div class="ttc" id="avector_8c_html_a79ca0fa54c042ed750bdc7fc3e381295"><div class="ttname"><a href="vector_8c.html#a79ca0fa54c042ed750bdc7fc3e381295">median_int_vec</a></div><div class="ttdeci">int median_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:855</div></div>
@@ -1864,7 +1865,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[4] = {10.1, 9.2, 8.3, 7.4};</div>
-<div class="line">append_array(&amp;arr_test, a, 4);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><a class="code hl_function" href="array_8c.html#ade257c4734ef94d47aea5f0424b8fdf9">pop_array</a>(&amp;arr_test, 2);</div>
 <div class="line"><span class="comment">// &gt;&gt; [10.1, 9.2, 7.4]</span></div>
 <div class="ttc" id="aarray_8c_html_ade257c4734ef94d47aea5f0424b8fdf9"><div class="ttname"><a href="array_8c.html#ade257c4734ef94d47aea5f0424b8fdf9">pop_array</a></div><div class="ttdeci">int pop_array(void *array, int index, int size, int type)</div><div class="ttdef"><b>Definition:</b> array.c:19</div></div>
@@ -1969,7 +1970,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Build the base array</span></div>
 <div class="line"><span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
-<div class="line">append_array(&amp;arr_test, a, 3);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 3);</div>
 <div class="line"><span class="comment">// Original array</span></div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2]</span></div>
 <div class="line"> </div>
@@ -1987,7 +1988,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"> <span class="comment">// Build from an already existing array</span></div>
 <div class="line"> <span class="keywordtype">int</span> a[3] = {0, 1, 2};</div>
-<div class="line"> append_array(&amp;arr_test, 3);</div>
+<div class="line"> <a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, 3);</div>
 <div class="line"> <span class="comment">// &gt;&gt; [0, 1, 22]</span></div>
 <div class="line"> </div>
 <div class="line"> <span class="keywordtype">int</span> b[3] = {3, 4, 5};</div>
@@ -2041,7 +2042,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_char_array_element(&amp;arr_test, <span class="charliteral">&#39;l&#39;</span>, <span class="charliteral">&#39;q&#39;</span>);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39;q&#39;, &#39;q&#39;, &#39;o&#39;]</span></div>
 </div><!-- fragment --> 
@@ -2092,7 +2093,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = <span class="stringliteral">&quot;Hello &quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_char_index(&amp;arr_test, 1, <span class="charliteral">&#39;p&#39;</span>);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;p&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;&#39;]</span></div>
 </div><!-- fragment --> 
@@ -2143,7 +2144,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 3.3, 3.3, 3.3, 5.2, 3.3};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_double_array_element(&amp;arr_test, 3.3, 2.1);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2.1, 2.1, 2.1, 5, 2.1]</span></div>
 </div><!-- fragment --> 
@@ -2194,7 +2195,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_array_index(&amp;arr_test, 1, 5.5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]</span></div>
 </div><!-- fragment --> 
@@ -2245,7 +2246,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 3.3, 3.3, 3.3, 5.2, 3.3};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_array_element(&amp;arr_test, 3.3f, 2.1f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2.1, 2.1, 2.1, 5, 2.1]</span></div>
 </div><!-- fragment --> 
@@ -2296,7 +2297,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_float_array_index(&amp;arr_test, 1, 5.5f);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 5.5, 3.3, 4.4, 5.5, 6.6]</span></div>
 </div><!-- fragment --> 
@@ -2347,7 +2348,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 3, 3, 3, 5, 3};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_int_array_element(&amp;arr_test, 3, 2);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 2, 2, 5, 2]</span></div>
 </div><!-- fragment --> 
@@ -2398,7 +2399,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">replace_int_array_index(&amp;arr_test, 1, 5);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 5, 3, 4, 5, 6]</span></div>
 </div><!-- fragment --> 
@@ -2539,7 +2540,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[5] = <span class="stringliteral">&quot;QDAF&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 5);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 5);</div>
 <div class="line">sort_char_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;A&#39;, &#39;D&#39;, &#39;F&#39;, &#39;Q&#39;]</span></div>
 </div><!-- fragment --> </td></tr>
@@ -2576,7 +2577,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[5] = <span class="stringliteral">&quot;QDAF&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_char_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
 </div><!-- fragment --> 
@@ -2609,7 +2610,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 1.8};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_double_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]</span></div>
 </div><!-- fragment --> 
@@ -2638,7 +2639,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_double_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]</span></div>
 </div><!-- fragment --> </td></tr>
@@ -2675,7 +2676,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {3.2, 1.8, 5.4, 3.9, 4.1, 1.8};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_float_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.8, 1.8, 3.2, 3.9, 4.1, 5.4]</span></div>
 </div><!-- fragment --> 
@@ -2708,7 +2709,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_float_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [6.6, 5.5, 4.4, 3.3, 2.2, 1.1]</span></div>
 </div><!-- fragment --> 
@@ -2741,7 +2742,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {5, 4, 3, 2, 1};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_int_ascending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [0, 1, 2, 3, 4, 5]</span></div>
 </div><!-- fragment --> 
@@ -2774,7 +2775,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_int_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [6, 5, 4, 3, 2, 1]</span></div>
 </div><!-- fragment --> 
@@ -2818,7 +2819,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[5] = <span class="stringliteral">&quot;QDAF&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 6);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);</div>
 <div class="line">sort_descending(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;Q&#39;, &#39;F&#39;, &#39;D&#39;, &#39;A&#39;]</span></div>
 </div><!-- fragment --> 
@@ -2852,7 +2853,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">double</span> stdev = <a class="code hl_function" href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.30754</span></div>
 <div class="ttc" id="avector_8c_html_a69cbc1066e5b8b0684344e7fa8dc1862"><div class="ttname"><a href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a></div><div class="ttdeci">float stdev_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:960</div></div>
@@ -2887,7 +2888,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.5, 5.3, 3.2, 6.8, 7.6, 2.1};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> stdev = <a class="code hl_function" href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.30754</span></div>
 </div><!-- fragment --> 
@@ -2921,7 +2922,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 5, 3, 6, 7, 2};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> stdev = <a class="code hl_function" href="vector_8c.html#a69cbc1066e5b8b0684344e7fa8dc1862">stdev_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.160247</span></div>
 </div><!-- fragment --> 
@@ -3034,7 +3035,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">double</span> sum = <a class="code hl_function" href="vector_8c.html#a8f0f348483a9cb07cdd71bb078c9dd57">sum_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 23.1</span></div>
 <div class="ttc" id="avector_8c_html_a8f0f348483a9cb07cdd71bb078c9dd57"><div class="ttname"><a href="vector_8c.html#a8f0f348483a9cb07cdd71bb078c9dd57">sum_float_vec</a></div><div class="ttdeci">float sum_float_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:924</div></div>
@@ -3069,7 +3070,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">float</span> sum = <a class="code hl_function" href="vector_8c.html#a8f0f348483a9cb07cdd71bb078c9dd57">sum_float_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 23.1</span></div>
 </div><!-- fragment --> 
@@ -3103,7 +3104,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 3, 4, 5, 6};</div>
-<div class="line">append_array(&amp;arr_test, a, 6);*</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 6);*</div>
 <div class="line"><span class="keywordtype">int</span> sum = <a class="code hl_function" href="vector_8c.html#a3d193ae2c47940a0421e604f239cdce9">sum_int_vec</a>(arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; 21</span></div>
 <div class="ttc" id="avector_8c_html_a3d193ae2c47940a0421e604f239cdce9"><div class="ttname"><a href="vector_8c.html#a3d193ae2c47940a0421e604f239cdce9">sum_int_vec</a></div><div class="ttdeci">int sum_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:915</div></div>
@@ -3137,7 +3138,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[13] = <span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 13);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 13);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
 <div class="ttc" id="avector_8c_html_a57925b38859054812edf2f341225f6cc"><div class="ttname"><a href="vector_8c.html#a57925b38859054812edf2f341225f6cc">unique_char_vec</a></div><div class="ttdeci">void unique_char_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:617</div></div>
@@ -3171,7 +3172,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};</div>
-<div class="line">append_array(&amp;arr_test, a, 9);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
 <div class="ttc" id="avector_8c_html_a92d4ff3374cd29a8f1e604c534f7b583"><div class="ttname"><a href="vector_8c.html#a92d4ff3374cd29a8f1e604c534f7b583">unique_double_vec</a></div><div class="ttdeci">void unique_double_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:597</div></div>
@@ -3205,7 +3206,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = FLAOT;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">float</span> a[9] = {1.1, 1.1, 2.2, 3.3, 4.4, 4.4, 6.6, 6.6, 7.1};</div>
-<div class="line">append_array(&amp;arr_test, a, 9);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2.2, 3.3, 7.1]</span></div>
 <div class="ttc" id="avector_8c_html_a8b9a16e579236fa0add30a4752527421"><div class="ttname"><a href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a></div><div class="ttdeci">void unique_int_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:557</div></div>
@@ -3239,7 +3240,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">double</span> a[9] = {1, 1, 2, 3, 4, 4, 6, 6, 7};</div>
-<div class="line">append_array(&amp;arr_test, a, 9);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 9);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8b9a16e579236fa0add30a4752527421">unique_int_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [2, 3, 7]</span></div>
 </div><!-- fragment --> 
@@ -3309,7 +3310,7 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_enumeration" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> dtype = <a class="code hl_enumvalue" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>;</div>
 <div class="line">Array arr_test = init_array(dtype, indices, name);</div>
 <div class="line"><span class="keywordtype">char</span> a[13] = <span class="stringliteral">&quot;Hello World!&quot;</span>;</div>
-<div class="line">append_array(&amp;arr_test, a, 13);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 13);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a>(&amp;arr_test);</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;H&#39;, &#39;e&#39;, &#39; &#39;, &#39;W&#39;, &#39;r&#39;, &#39;d&#39;, &#39;!&#39;]</span></div>
 <div class="ttc" id="avector_8c_html_afb49fc0563f1493f510a73d645e26e79"><div class="ttname"><a href="vector_8c.html#afb49fc0563f1493f510a73d645e26e79">unique_vec</a></div><div class="ttdeci">void unique_vec(Vector *array)</div><div class="ttdef"><b>Definition:</b> vector.c:651</div></div>

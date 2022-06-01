@@ -70,11 +70,13 @@ int pop_array(void *array, int index, int size, int type);
  *                    to the parent_array
  * @param count The total number of indices to be added to the parent_array
  *              from the child_array
+ * @param type An integer representing the amount of memory consumed by
+ *             a single data type
  *
  * @code
  * int a[9] = {1, 2, 3};
  * int b[6] = [4, 5, 6, 7, 8, 9];
- * append_int_array(a, 3, b, 6);
+ * append_int_array((void *)a, 3, (void *)b, 6);
  * for (int i = 0; i < 9; i++) {
  *     printf("%d\n"i, a[i]);
  * }
@@ -82,14 +84,15 @@ int pop_array(void *array, int index, int size, int type);
  *
  * int a[9] = {1, 2, 3, 4, 5, 6, 7, 8};
  * int b = 9;
- * append_int_array(a, 8, &b, 1);
+ * append_int_array((void *)a, 8, &b, 1);
  * for (int i = 0; i < 9; i++) {
  * printf("%d\n", a[i]);
  * }
  * // >> [1, 2, 3, 4, 5, 6, 7, 8, 9]
  * @endcode
  */
-void append_int_array(int *parent_array, int len, int *child_array, size_t count);
+void append_array(void *parent_array, int len, void *child_array,
+		          size_t count, int type);
 // --------------------------------------------------------------------------------
 
 /**

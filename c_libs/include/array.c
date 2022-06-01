@@ -24,23 +24,9 @@ int pop_array(void *array, int index, int size, int type) {
 }
 // --------------------------------------------------------------------------------
 
-void append_int_array(int *parent_array, int len, int *child_array, size_t count) {
-	memcpy((char *)parent_array + len * sizeof(int), child_array, count * sizeof(int));
-}
-// --------------------------------------------------------------------------------
-
-void append_float_array(float *parent_array, int len, float *child_array, size_t count) {
-	memcpy((char *)parent_array + len * sizeof(float), child_array, count * sizeof(float));
-}
-// --------------------------------------------------------------------------------
-
-void append_double_array(double *parent_array, int len, double *child_array, size_t count) {
-	memcpy((char *)parent_array + len * sizeof(double), child_array, count * sizeof(double));
-}
-// --------------------------------------------------------------------------------
-
-void append_char_array(char *parent_array, int len, char *child_array, size_t count) {
-	memcpy((char *)parent_array + len * sizeof(char), child_array, count * sizeof(char));
+void append_array(void *parent_array, int len, void *child_array,
+		          size_t count, int type) {
+	memcpy((char *)parent_array + len * type, child_array, count * type);
 }
 // --------------------------------------------------------------------------------
 
