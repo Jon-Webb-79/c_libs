@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">array.h File Reference</div></div>
 </div><!--header-->
@@ -76,16 +77,19 @@ $(function() {
 </div>
 <p><a href="array_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac2ad7f431e3446fddcd9b6b9f93c4c14"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14">data_type</a> { <a class="el" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>
+, <a class="el" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92">DOUBLE</a>
+, <a class="el" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8">CHAR</a>
+, <a class="el" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>
+ }</td></tr>
+<tr class="separator:ac2ad7f431e3446fddcd9b6b9f93c4c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a63b49c1a3ac78bbd9c8e55314a5a3db4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a63b49c1a3ac78bbd9c8e55314a5a3db4">pop_int_array</a> (int *array, int index, int size)</td></tr>
-<tr class="separator:a63b49c1a3ac78bbd9c8e55314a5a3db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3c89be1394ec8ed4c85df0c87169a6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#ab3c89be1394ec8ed4c85df0c87169a6b">pop_float_array</a> (float *array, int index, int size)</td></tr>
-<tr class="separator:ab3c89be1394ec8ed4c85df0c87169a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f72ebf072af65f7c4a639ce5887626f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a2f72ebf072af65f7c4a639ce5887626f">pop_double_array</a> (double *array, int index, int size)</td></tr>
-<tr class="separator:a2f72ebf072af65f7c4a639ce5887626f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e3ee39ee9dc2b2b3ba7ef2289e16866"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a4e3ee39ee9dc2b2b3ba7ef2289e16866">pop_char_array</a> (char *array, int index, int size)</td></tr>
-<tr class="separator:a4e3ee39ee9dc2b2b3ba7ef2289e16866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade257c4734ef94d47aea5f0424b8fdf9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#ade257c4734ef94d47aea5f0424b8fdf9">pop_array</a> (void *array, int index, int size, int type)</td></tr>
+<tr class="separator:ade257c4734ef94d47aea5f0424b8fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0498a07881c56037a6982e7554f12390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a0498a07881c56037a6982e7554f12390">append_int_array</a> (int *parent_array, int len, int *child_array, size_t count)</td></tr>
 <tr class="separator:a0498a07881c56037a6982e7554f12390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe2413cb13788aec235fca99300408bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#abe2413cb13788aec235fca99300408bc">append_float_array</a> (float *parent_array, int len, float *child_array, size_t count)</td></tr>
@@ -103,6 +107,37 @@ Functions</h2></td></tr>
 <tr class="memitem:a901871ff00788a16c9d72d78cdcbfa61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a901871ff00788a16c9d72d78cdcbfa61">preappend_char_array</a> (char *parent_array, int len, char *child_array, size_t count)</td></tr>
 <tr class="separator:a901871ff00788a16c9d72d78cdcbfa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ac2ad7f431e3446fddcd9b6b9f93c4c14" name="ac2ad7f431e3446fddcd9b6b9f93c4c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ad7f431e3446fddcd9b6b9f93c4c14">&#9670;&nbsp;</a></span>data_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="array_8h.html#ac2ad7f431e3446fddcd9b6b9f93c4c14">data_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >An enum container with variables describing relevant data types</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FLOAT</td><td>An integer representing float data types </td></tr>
+    <tr><td class="paramname">DOUBLE</td><td>An integer representing double data types </td></tr>
+    <tr><td class="paramname">CHAR</td><td>An integer representing character data types </td></tr>
+    <tr><td class="paramname">INT</td><td>An integer representing integer data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c" name="ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92" name="ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92"></a>DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8" name="ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8"></a>CHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a" name="ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a"></a>INT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2d79b533e752e5f6b87b1aee4edf1659" name="a2d79b533e752e5f6b87b1aee4edf1659"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d79b533e752e5f6b87b1aee4edf1659">&#9670;&nbsp;</a></span>append_char_array()</h2>
@@ -166,7 +201,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;]</span></div>
-<div class="ttc" id="aarray_8c_html_a2d79b533e752e5f6b87b1aee4edf1659"><div class="ttname"><a href="array_8c.html#a2d79b533e752e5f6b87b1aee4edf1659">append_char_array</a></div><div class="ttdeci">void append_char_array(char *parent_array, int len, char *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:65</div></div>
+<div class="ttc" id="aarray_8c_html_a2d79b533e752e5f6b87b1aee4edf1659"><div class="ttname"><a href="array_8c.html#a2d79b533e752e5f6b87b1aee4edf1659">append_char_array</a></div><div class="ttdeci">void append_char_array(char *parent_array, int len, char *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:42</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -232,7 +267,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]</span></div>
-<div class="ttc" id="aarray_8c_html_adeadb5b0481d71fe536ca928046aec73"><div class="ttname"><a href="array_8c.html#adeadb5b0481d71fe536ca928046aec73">append_double_array</a></div><div class="ttdeci">void append_double_array(double *parent_array, int len, double *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:60</div></div>
+<div class="ttc" id="aarray_8c_html_adeadb5b0481d71fe536ca928046aec73"><div class="ttname"><a href="array_8c.html#adeadb5b0481d71fe536ca928046aec73">append_double_array</a></div><div class="ttdeci">void append_double_array(double *parent_array, int len, double *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:37</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -298,7 +333,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%f\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]</span></div>
-<div class="ttc" id="aarray_8c_html_abe2413cb13788aec235fca99300408bc"><div class="ttname"><a href="array_8c.html#abe2413cb13788aec235fca99300408bc">append_float_array</a></div><div class="ttdeci">void append_float_array(float *parent_array, int len, float *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:55</div></div>
+<div class="ttc" id="aarray_8c_html_abe2413cb13788aec235fca99300408bc"><div class="ttname"><a href="array_8c.html#abe2413cb13788aec235fca99300408bc">append_float_array</a></div><div class="ttdeci">void append_float_array(float *parent_array, int len, float *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:32</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -364,20 +399,20 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></div>
-<div class="ttc" id="aarray_8c_html_a0498a07881c56037a6982e7554f12390"><div class="ttname"><a href="array_8c.html#a0498a07881c56037a6982e7554f12390">append_int_array</a></div><div class="ttdeci">void append_int_array(int *parent_array, int len, int *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:50</div></div>
+<div class="ttc" id="aarray_8c_html_a0498a07881c56037a6982e7554f12390"><div class="ttname"><a href="array_8c.html#a0498a07881c56037a6982e7554f12390">append_int_array</a></div><div class="ttdeci">void append_int_array(int *parent_array, int len, int *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:27</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a4e3ee39ee9dc2b2b3ba7ef2289e16866" name="a4e3ee39ee9dc2b2b3ba7ef2289e16866"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e3ee39ee9dc2b2b3ba7ef2289e16866">&#9670;&nbsp;</a></span>pop_char_array()</h2>
+<a id="ade257c4734ef94d47aea5f0424b8fdf9" name="ade257c4734ef94d47aea5f0424b8fdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade257c4734ef94d47aea5f0424b8fdf9">&#9670;&nbsp;</a></span>pop_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int pop_char_array </td>
+          <td class="memname">int pop_array </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>array</em>, </td>
         </tr>
         <tr>
@@ -390,7 +425,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -399,171 +440,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will remove the char entry from a user specified index within an aray</p>
+<p >This function will remove a data entry from a user specified index within an aray</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>A char array </td></tr>
+    <tr><td class="paramname">array</td><td>A data rray of any type </td></tr>
     <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line"><span class="keywordtype">char</span> a[9] = <span class="stringliteral">&quot;abcdefghi&quot;</span>;</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a4e3ee39ee9dc2b2b3ba7ef2289e16866">pop_char_array</a>(a, 3, 9);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%c\n&quot;</span>i, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;]</span></div>
-<div class="ttc" id="aarray_8c_html_a4e3ee39ee9dc2b2b3ba7ef2289e16866"><div class="ttname"><a href="array_8c.html#a4e3ee39ee9dc2b2b3ba7ef2289e16866">pop_char_array</a></div><div class="ttdeci">int pop_char_array(char *array, int index, int size)</div><div class="ttdef"><b>Definition:</b> array.c:42</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a2f72ebf072af65f7c4a639ce5887626f" name="a2f72ebf072af65f7c4a639ce5887626f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f72ebf072af65f7c4a639ce5887626f">&#9670;&nbsp;</a></span>pop_double_array()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int pop_double_array </td>
-          <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will remove the double entry from a user specified index within an aray</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>A double array </td></tr>
-    <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#ab3c89be1394ec8ed4c85df0c87169a6b">pop_float_array</a>(a, 3, 9);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%lf\n&quot;</span>i, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1.1, 2.2, 3.3, 5.5, 6.6, 7.7, 8.8, 9.9]</span></div>
-<div class="ttc" id="aarray_8c_html_ab3c89be1394ec8ed4c85df0c87169a6b"><div class="ttname"><a href="array_8c.html#ab3c89be1394ec8ed4c85df0c87169a6b">pop_float_array</a></div><div class="ttdeci">int pop_float_array(float *array, int index, int size)</div><div class="ttdef"><b>Definition:</b> array.c:26</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="ab3c89be1394ec8ed4c85df0c87169a6b" name="ab3c89be1394ec8ed4c85df0c87169a6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3c89be1394ec8ed4c85df0c87169a6b">&#9670;&nbsp;</a></span>pop_float_array()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int pop_float_array </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will remove the float entry from a user specified index within an aray</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An float array </td></tr>
-    <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#ab3c89be1394ec8ed4c85df0c87169a6b">pop_float_array</a>(a, 3, 9);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%f\n&quot;</span>, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1.1, 2.2, 3.3, 5.5, 6.6, 7.7, 8.8, 9.9]</span></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a63b49c1a3ac78bbd9c8e55314a5a3db4" name="a63b49c1a3ac78bbd9c8e55314a5a3db4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63b49c1a3ac78bbd9c8e55314a5a3db4">&#9670;&nbsp;</a></span>pop_int_array()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int pop_int_array </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will remove the integer entry from a user specified index within an aray</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An integer array </td></tr>
-    <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array</td></tr>
+    <tr><td class="paramname">size</td><td>The size of the array </td></tr>
+    <tr><td class="paramname">type</td><td>An integer representing the memory allocation assigned to the user defined data type</td></tr>
   </table>
   </dd>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a63b49c1a3ac78bbd9c8e55314a5a3db4">pop_int_array</a>(a, 3, 9);</div>
+<div class="line">pop_int_array((<span class="keywordtype">void</span> *)a, 3, 9, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 5, 6, 7, 8, 9]</span></div>
-<div class="ttc" id="aarray_8c_html_a63b49c1a3ac78bbd9c8e55314a5a3db4"><div class="ttname"><a href="array_8c.html#a63b49c1a3ac78bbd9c8e55314a5a3db4">pop_int_array</a></div><div class="ttdeci">int pop_int_array(int *array, int index, int size)</div><div class="ttdef"><b>Definition:</b> array.c:18</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -629,7 +521,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [&#39;i&#39;, &#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;]</span></div>
-<div class="ttc" id="aarray_8c_html_a901871ff00788a16c9d72d78cdcbfa61"><div class="ttname"><a href="array_8c.html#a901871ff00788a16c9d72d78cdcbfa61">preappend_char_array</a></div><div class="ttdeci">void preappend_char_array(char *parent_array, int len, char *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:94</div></div>
+<div class="ttc" id="aarray_8c_html_a901871ff00788a16c9d72d78cdcbfa61"><div class="ttname"><a href="array_8c.html#a901871ff00788a16c9d72d78cdcbfa61">preappend_char_array</a></div><div class="ttdeci">void preappend_char_array(char *parent_array, int len, char *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:71</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -695,7 +587,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [9.9, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8]</span></div>
-<div class="ttc" id="aarray_8c_html_ac1ea1b5258f86f196352e24b8a597bdf"><div class="ttname"><a href="array_8c.html#ac1ea1b5258f86f196352e24b8a597bdf">preappend_double_array</a></div><div class="ttdeci">void preappend_double_array(double *parent_array, int len, double *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:86</div></div>
+<div class="ttc" id="aarray_8c_html_ac1ea1b5258f86f196352e24b8a597bdf"><div class="ttname"><a href="array_8c.html#ac1ea1b5258f86f196352e24b8a597bdf">preappend_double_array</a></div><div class="ttdeci">void preappend_double_array(double *parent_array, int len, double *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:63</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -761,7 +653,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%f\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [9.9, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8]</span></div>
-<div class="ttc" id="aarray_8c_html_a3268c0ef6886555d03df305c1faeef1b"><div class="ttname"><a href="array_8c.html#a3268c0ef6886555d03df305c1faeef1b">preappend_float_array</a></div><div class="ttdeci">void preappend_float_array(float *parent_array, int len, float *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:78</div></div>
+<div class="ttc" id="aarray_8c_html_a3268c0ef6886555d03df305c1faeef1b"><div class="ttname"><a href="array_8c.html#a3268c0ef6886555d03df305c1faeef1b">preappend_float_array</a></div><div class="ttdeci">void preappend_float_array(float *parent_array, int len, float *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:55</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -827,7 +719,7 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%c\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [9, 1, 2, 3, 4, 5, 6, 7, 8]</span></div>
-<div class="ttc" id="aarray_8c_html_ac028bc32322591450702897bea2a5b0c"><div class="ttname"><a href="array_8c.html#ac028bc32322591450702897bea2a5b0c">preappend_int_array</a></div><div class="ttdeci">void preappend_int_array(int *parent_array, int len, int *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:70</div></div>
+<div class="ttc" id="aarray_8c_html_ac028bc32322591450702897bea2a5b0c"><div class="ttname"><a href="array_8c.html#ac028bc32322591450702897bea2a5b0c">preappend_int_array</a></div><div class="ttdeci">void preappend_int_array(int *parent_array, int len, int *child_array, size_t count)</div><div class="ttdef"><b>Definition:</b> array.c:47</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

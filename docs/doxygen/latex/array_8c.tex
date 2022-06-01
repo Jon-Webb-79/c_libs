@@ -4,13 +4,7 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{array_8c_a63b49c1a3ac78bbd9c8e55314a5a3db4}{pop\+\_\+int\+\_\+array}} (int $\ast$array, int index, int size)
-\item 
-int \mbox{\hyperlink{array_8c_ab3c89be1394ec8ed4c85df0c87169a6b}{pop\+\_\+float\+\_\+array}} (float $\ast$array, int index, int size)
-\item 
-int \mbox{\hyperlink{array_8c_a2f72ebf072af65f7c4a639ce5887626f}{pop\+\_\+double\+\_\+array}} (double $\ast$array, int index, int size)
-\item 
-int \mbox{\hyperlink{array_8c_a4e3ee39ee9dc2b2b3ba7ef2289e16866}{pop\+\_\+char\+\_\+array}} (char $\ast$array, int index, int size)
+int \mbox{\hyperlink{array_8c_ade257c4734ef94d47aea5f0424b8fdf9}{pop\+\_\+array}} (void $\ast$array, int index, int size, int type)
 \item 
 void \mbox{\hyperlink{array_8c_a0498a07881c56037a6982e7554f12390}{append\+\_\+int\+\_\+array}} (int $\ast$parent\+\_\+array, int len, int $\ast$child\+\_\+array, size\+\_\+t count)
 \item 
@@ -183,108 +177,29 @@ This function will append an existing array with a scalar value or another array
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 4, 5, 6, 7, 8, 9]}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8c_a4e3ee39ee9dc2b2b3ba7ef2289e16866}\label{array_8c_a4e3ee39ee9dc2b2b3ba7ef2289e16866}} 
-\index{array.c@{array.c}!pop\_char\_array@{pop\_char\_array}}
-\index{pop\_char\_array@{pop\_char\_array}!array.c@{array.c}}
-\doxysubsubsection{\texorpdfstring{pop\_char\_array()}{pop\_char\_array()}}
-{\footnotesize\ttfamily int pop\+\_\+char\+\_\+array (\begin{DoxyParamCaption}\item[{char $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{size }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{array_8c_ade257c4734ef94d47aea5f0424b8fdf9}\label{array_8c_ade257c4734ef94d47aea5f0424b8fdf9}} 
+\index{array.c@{array.c}!pop\_array@{pop\_array}}
+\index{pop\_array@{pop\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
+{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{size,  }\item[{int}]{type }\end{DoxyParamCaption})}
 
-This function will remove the char entry from a user specified index within an aray
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & A char array \\
-\hline
-{\em index} & The index containing data to be removed from the array \\
-\hline
-{\em size} & The size of the array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{char} a[9] = \textcolor{stringliteral}{"{}abcdefghi"{}};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a4e3ee39ee9dc2b2b3ba7ef2289e16866}{pop\_char\_array}}(a, 3, 9);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> ['a', 'b', 'c', 'e', 'f', 'g', 'h', 'i']}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8c_a2f72ebf072af65f7c4a639ce5887626f}\label{array_8c_a2f72ebf072af65f7c4a639ce5887626f}} 
-\index{array.c@{array.c}!pop\_double\_array@{pop\_double\_array}}
-\index{pop\_double\_array@{pop\_double\_array}!array.c@{array.c}}
-\doxysubsubsection{\texorpdfstring{pop\_double\_array()}{pop\_double\_array()}}
-{\footnotesize\ttfamily int pop\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{double $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{size }\end{DoxyParamCaption})}
-
-This function will remove the double entry from a user specified index within an aray
+This function will remove a data entry from a user specified index within an aray
 
 
 \begin{DoxyParams}{Parameters}
-{\em array} & A double array \\
+{\em array} & A data rray of any type \\
 \hline
 {\em index} & The index containing data to be removed from the array \\
 \hline
-{\em size} & The size of the array\\
+{\em size} & The size of the array \\
 \hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ab3c89be1394ec8ed4c85df0c87169a6b}{pop\_float\_array}}(a, 3, 9);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 2.2, 3.3, 5.5, 6.6, 7.7, 8.8, 9.9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8c_ab3c89be1394ec8ed4c85df0c87169a6b}\label{array_8c_ab3c89be1394ec8ed4c85df0c87169a6b}} 
-\index{array.c@{array.c}!pop\_float\_array@{pop\_float\_array}}
-\index{pop\_float\_array@{pop\_float\_array}!array.c@{array.c}}
-\doxysubsubsection{\texorpdfstring{pop\_float\_array()}{pop\_float\_array()}}
-{\footnotesize\ttfamily int pop\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{size }\end{DoxyParamCaption})}
-
-This function will remove the float entry from a user specified index within an aray
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & An float array \\
-\hline
-{\em index} & The index containing data to be removed from the array \\
-\hline
-{\em size} & The size of the array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ab3c89be1394ec8ed4c85df0c87169a6b}{pop\_float\_array}}(a, 3, 9);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 2.2, 3.3, 5.5, 6.6, 7.7, 8.8, 9.9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8c_a63b49c1a3ac78bbd9c8e55314a5a3db4}\label{array_8c_a63b49c1a3ac78bbd9c8e55314a5a3db4}} 
-\index{array.c@{array.c}!pop\_int\_array@{pop\_int\_array}}
-\index{pop\_int\_array@{pop\_int\_array}!array.c@{array.c}}
-\doxysubsubsection{\texorpdfstring{pop\_int\_array()}{pop\_int\_array()}}
-{\footnotesize\ttfamily int pop\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{size }\end{DoxyParamCaption})}
-
-This function will remove the integer entry from a user specified index within an aray
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & An integer array \\
-\hline
-{\em index} & The index containing data to be removed from the array \\
-\hline
-{\em size} & The size of the array\\
+{\em type} & An integer representing the memory allocation assigned to the user defined data type\\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8, 9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a63b49c1a3ac78bbd9c8e55314a5a3db4}{pop\_int\_array}}(a, 3, 9);}
+\DoxyCodeLine{pop\_int\_array((\textcolor{keywordtype}{void} *)a, 3, 9, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}

@@ -1,7 +1,7 @@
 // ================================================================================
 // ================================================================================
 // - File:    array.c
-// - Purpose: Describe the file purpose here
+// - Purpose: THis file contains all functions necessary to manipulate C arrays
 //
 // Source Metadata
 // - Author:  Jonathan A. Webb
@@ -15,34 +15,11 @@
 #include "array.h"
 
 // Begin code
-int pop_int_array(int *array, int index, int size) {
-	if (index >= size) return 0;
-	unsigned char *dst = (unsigned char*)array + index * sizeof(int);
-	memmove(dst, dst + sizeof(int), sizeof(int) * (size - index - 1));
-	return 1;
-}
-// --------------------------------------------------------------------------------
 
-int pop_float_array(float *array, int index, int size) {
+int pop_array(void *array, int index, int size, int type) {
 	if (index >= size) return 0;
-	unsigned char *dst = (unsigned char*)array + index * sizeof(float);
-	memmove(dst, dst + sizeof(float), sizeof(float) * (size - index - 1));
-	return 1;
-}
-// --------------------------------------------------------------------------------
-
-int pop_double_array(double *array, int index, int size) {
-	if (index >= size) return 0;
-	unsigned char *dst = (unsigned char*)array + index * sizeof(double);
-	memmove(dst, dst + sizeof(double), sizeof(double) * (size - index - 1));
-	return 1;
-}
-// --------------------------------------------------------------------------------
-
-int pop_char_array(char *array, int index, int size) {
-	if (index >= size) return 0;
-	unsigned char *dst = (unsigned char*)array + index * sizeof(char);
-	memmove(dst, dst + sizeof(char), sizeof(char) * (size - index - 1));
+	unsigned char *dst = (unsigned char*)array + index * type;
+	memmove(dst, dst + type, type * (size - index - 1));
 	return 1;
 }
 // --------------------------------------------------------------------------------

@@ -24,7 +24,7 @@ extern "C" {
  */
 TEST(test_pop_array, pop_integer) {
 	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-	pop_int_array(a, 3, 9);
+	pop_array((void *)a, 3, 9, sizeof(int));
 	EXPECT_EQ(a[0], 1);
 	EXPECT_EQ(a[1], 2);
 	EXPECT_EQ(a[2], 3);
@@ -41,7 +41,7 @@ TEST(test_pop_array, pop_integer) {
  */
 TEST(test_pop_array, pop_float) {
 	float a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	pop_float_array(a, 3, 9);
+	pop_array((void *)a, 3, 9, sizeof(float));
 	EXPECT_FLOAT_EQ(a[0], 1.1f);
 	EXPECT_FLOAT_EQ(a[1], 2.2f);
 	EXPECT_FLOAT_EQ(a[2], 3.3f);
@@ -58,7 +58,7 @@ TEST(test_pop_array, pop_float) {
  */
 TEST(test_pop_array, pop_double) {
 	double a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	pop_double_array(a, 3, 9);
+	pop_array((void *)a, 3, 9, sizeof(double));
 	EXPECT_DOUBLE_EQ(a[0], 1.1);
 	EXPECT_DOUBLE_EQ(a[1], 2.2);
 	EXPECT_DOUBLE_EQ(a[2], 3.3);
@@ -75,7 +75,7 @@ TEST(test_pop_array, pop_double) {
  */
 TEST(test_pop_array, pop_char) {
 	char a[10] = "abcdefghi";
-	pop_char_array(a, 3, 9);
+	pop_array((void *)a, 3, 9, sizeof(char));
 	EXPECT_EQ(a[0], 'a');
 	EXPECT_EQ(a[1], 'b');
 	EXPECT_EQ(a[2], 'c');

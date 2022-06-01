@@ -5,60 +5,60 @@
 \DoxyCodeLine{1 \textcolor{comment}{// ================================================================================}}
 \DoxyCodeLine{2 \textcolor{comment}{// ================================================================================}}
 \DoxyCodeLine{3 \textcolor{comment}{// -\/ File:    array.h}}
-\DoxyCodeLine{4 \textcolor{comment}{// -\/ Purpose: Describe the file purpose here}}
-\DoxyCodeLine{5 \textcolor{comment}{//}}
-\DoxyCodeLine{6 \textcolor{comment}{// Source Metadata}}
-\DoxyCodeLine{7 \textcolor{comment}{// -\/ Author:  Jonathan A. Webb}}
-\DoxyCodeLine{8 \textcolor{comment}{// -\/ Date:    May 17, 2022}}
-\DoxyCodeLine{9 \textcolor{comment}{// -\/ Version: 1.0}}
-\DoxyCodeLine{10 \textcolor{comment}{// -\/ Copyright: Copyright 2022, Jon Webb Inc.}}
-\DoxyCodeLine{11 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{4 \textcolor{comment}{// -\/ Purpose: This file contains all of the prototypes for functions in the}}
+\DoxyCodeLine{5 \textcolor{comment}{//            array.c file}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 \textcolor{comment}{// Source Metadata}}
+\DoxyCodeLine{8 \textcolor{comment}{// -\/ Author:  Jonathan A. Webb}}
+\DoxyCodeLine{9 \textcolor{comment}{// -\/ Date:    May 17, 2022}}
+\DoxyCodeLine{10 \textcolor{comment}{// -\/ Version: 1.0}}
+\DoxyCodeLine{11 \textcolor{comment}{// -\/ Copyright: Copyright 2022, Jon Webb Inc.}}
 \DoxyCodeLine{12 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{13 \textcolor{comment}{// Include modules here}}
-\DoxyCodeLine{14 }
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#ifndef array\_H}}
-\DoxyCodeLine{16 \textcolor{preprocessor}{\#define array\_H}}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <stdio.h>}}
-\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <string.h>}}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{38 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_a63b49c1a3ac78bbd9c8e55314a5a3db4}{pop\_int\_array}}(\textcolor{keywordtype}{int} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{39 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{40 }
-\DoxyCodeLine{58 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_ab3c89be1394ec8ed4c85df0c87169a6b}{pop\_float\_array}}(\textcolor{keywordtype}{float} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{59 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{78 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_a2f72ebf072af65f7c4a639ce5887626f}{pop\_double\_array}}(\textcolor{keywordtype}{double} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{79 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{80 }
-\DoxyCodeLine{98 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_a4e3ee39ee9dc2b2b3ba7ef2289e16866}{pop\_char\_array}}(\textcolor{keywordtype}{char} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size);}
-\DoxyCodeLine{99 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{100 }
-\DoxyCodeLine{133 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a0498a07881c56037a6982e7554f12390}{append\_int\_array}}(\textcolor{keywordtype}{int} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{int} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{134 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{135 }
-\DoxyCodeLine{168 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_abe2413cb13788aec235fca99300408bc}{append\_float\_array}}(\textcolor{keywordtype}{float} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{float} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{169 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{170 }
-\DoxyCodeLine{203 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_adeadb5b0481d71fe536ca928046aec73}{append\_double\_array}}(\textcolor{keywordtype}{double} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{double} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{204 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{205 }
-\DoxyCodeLine{238 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}{append\_char\_array}}(\textcolor{keywordtype}{char} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{char} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{239 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{240 }
-\DoxyCodeLine{273 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ac028bc32322591450702897bea2a5b0c}{preappend\_int\_array}}(\textcolor{keywordtype}{int} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{int} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{274 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{275 }
-\DoxyCodeLine{308 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a3268c0ef6886555d03df305c1faeef1b}{preappend\_float\_array}}(\textcolor{keywordtype}{float} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{float} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{309 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{310 }
-\DoxyCodeLine{343 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ac1ea1b5258f86f196352e24b8a597bdf}{preappend\_double\_array}}(\textcolor{keywordtype}{double} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{double} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{344 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{345 }
-\DoxyCodeLine{378 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a901871ff00788a16c9d72d78cdcbfa61}{preappend\_char\_array}}(\textcolor{keywordtype}{char} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{char} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{379 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* array\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{380 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{381 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{382 \textcolor{comment}{// eof}}
+\DoxyCodeLine{13 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{14 \textcolor{comment}{// Include modules here}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef array\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define array\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}},}
+\DoxyCodeLine{33     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}},}
+\DoxyCodeLine{34     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}},}
+\DoxyCodeLine{35     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}}
+\DoxyCodeLine{36 \} \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14}{data\_type}};}
+\DoxyCodeLine{37 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{57 \textcolor{comment}{}\textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}{pop\_array}}(\textcolor{keywordtype}{void} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{58 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{92 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a0498a07881c56037a6982e7554f12390}{append\_int\_array}}(\textcolor{keywordtype}{int} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{int} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{93 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{127 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_abe2413cb13788aec235fca99300408bc}{append\_float\_array}}(\textcolor{keywordtype}{float} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{float} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{128 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{162 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_adeadb5b0481d71fe536ca928046aec73}{append\_double\_array}}(\textcolor{keywordtype}{double} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{double} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{163 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{197 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}{append\_char\_array}}(\textcolor{keywordtype}{char} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{char} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{198 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{232 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ac028bc32322591450702897bea2a5b0c}{preappend\_int\_array}}(\textcolor{keywordtype}{int} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{int} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{233 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{267 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a3268c0ef6886555d03df305c1faeef1b}{preappend\_float\_array}}(\textcolor{keywordtype}{float} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{float} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{268 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{302 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ac1ea1b5258f86f196352e24b8a597bdf}{preappend\_double\_array}}(\textcolor{keywordtype}{double} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{double} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{303 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{337 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a901871ff00788a16c9d72d78cdcbfa61}{preappend\_char\_array}}(\textcolor{keywordtype}{char} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{char} *child\_array, \textcolor{keywordtype}{size\_t} count);}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* array\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{339 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{340 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{341 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}
