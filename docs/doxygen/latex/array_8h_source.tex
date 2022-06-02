@@ -23,43 +23,18 @@
 \DoxyCodeLine{19 \textcolor{preprocessor}{\#include <stdio.h>}}
 \DoxyCodeLine{20 \textcolor{preprocessor}{\#include <string.h>}}
 \DoxyCodeLine{21 }
-\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
-\DoxyCodeLine{31 \{}
-\DoxyCodeLine{32     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}},}
-\DoxyCodeLine{33     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}},}
-\DoxyCodeLine{34     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}},}
-\DoxyCodeLine{35     \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}}
-\DoxyCodeLine{36 \} \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14}{data\_type}};}
-\DoxyCodeLine{37 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{57 \textcolor{comment}{}\textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}{pop\_array}}(\textcolor{keywordtype}{void} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{int} type);}
-\DoxyCodeLine{58 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{94 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\textcolor{keywordtype}{void} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{void} *child\_array,}
-\DoxyCodeLine{95                   \textcolor{keywordtype}{size\_t} count, \textcolor{keywordtype}{int} type);}
-\DoxyCodeLine{96 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{97 }
-\DoxyCodeLine{130 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_abe2413cb13788aec235fca99300408bc}{append\_float\_array}}(\textcolor{keywordtype}{float} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{float} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{131 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{132 }
-\DoxyCodeLine{165 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_adeadb5b0481d71fe536ca928046aec73}{append\_double\_array}}(\textcolor{keywordtype}{double} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{double} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{166 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{167 }
-\DoxyCodeLine{200 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}{append\_char\_array}}(\textcolor{keywordtype}{char} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{char} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{201 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{202 }
-\DoxyCodeLine{235 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ac028bc32322591450702897bea2a5b0c}{preappend\_int\_array}}(\textcolor{keywordtype}{int} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{int} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{236 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{237 }
-\DoxyCodeLine{270 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a3268c0ef6886555d03df305c1faeef1b}{preappend\_float\_array}}(\textcolor{keywordtype}{float} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{float} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{271 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{272 }
-\DoxyCodeLine{305 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ac1ea1b5258f86f196352e24b8a597bdf}{preappend\_double\_array}}(\textcolor{keywordtype}{double} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{double} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{306 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{307 }
-\DoxyCodeLine{340 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a901871ff00788a16c9d72d78cdcbfa61}{preappend\_char\_array}}(\textcolor{keywordtype}{char} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{char} *child\_array, \textcolor{keywordtype}{size\_t} count);}
-\DoxyCodeLine{341 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* array\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{342 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{343 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{344 \textcolor{comment}{// eof}}
+\DoxyCodeLine{41 \textcolor{keywordtype}{int} \mbox{\hyperlink{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}{pop\_array}}(\textcolor{keywordtype}{void} *array, \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{42 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{78 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\textcolor{keywordtype}{void} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{void} *child\_array,}
+\DoxyCodeLine{79                   \textcolor{keywordtype}{size\_t} count, \textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{80 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{115 \textcolor{keywordtype}{void} \mbox{\hyperlink{array_8h_ad9b354d1add686cf59b0705521d4db6c}{preappend\_array}}(\textcolor{keywordtype}{void} *parent\_array, \textcolor{keywordtype}{int} len, \textcolor{keywordtype}{void} *child\_array,}
+\DoxyCodeLine{116                      \textcolor{keywordtype}{size\_t} count, \textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* array\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{119 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{120 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

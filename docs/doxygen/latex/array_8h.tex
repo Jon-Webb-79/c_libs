@@ -2,15 +2,6 @@
 \label{array_8h}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-\doxysubsection*{Enumerations}
-\begin{DoxyCompactItemize}
-\item 
-enum \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14}{data\+\_\+type}} \{ \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}
-, \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}{DOUBLE}}
-, \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}{CHAR}}
-, \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}
- \}
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,60 +9,8 @@ int \mbox{\hyperlink{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}{pop\+\_\+array}
 \item 
 void \mbox{\hyperlink{array_8h_a71a34401951bb5d5736c60f52dda532d}{append\+\_\+array}} (void $\ast$parent\+\_\+array, int len, void $\ast$child\+\_\+array, size\+\_\+t count, int type)
 \item 
-void \mbox{\hyperlink{array_8h_abe2413cb13788aec235fca99300408bc}{append\+\_\+float\+\_\+array}} (float $\ast$parent\+\_\+array, int len, float $\ast$child\+\_\+array, size\+\_\+t count)
-\item 
-void \mbox{\hyperlink{array_8h_adeadb5b0481d71fe536ca928046aec73}{append\+\_\+double\+\_\+array}} (double $\ast$parent\+\_\+array, int len, double $\ast$child\+\_\+array, size\+\_\+t count)
-\item 
-void \mbox{\hyperlink{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}{append\+\_\+char\+\_\+array}} (char $\ast$parent\+\_\+array, int len, char $\ast$child\+\_\+array, size\+\_\+t count)
-\item 
-void \mbox{\hyperlink{array_8h_ac028bc32322591450702897bea2a5b0c}{preappend\+\_\+int\+\_\+array}} (int $\ast$parent\+\_\+array, int len, int $\ast$child\+\_\+array, size\+\_\+t count)
-\item 
-void \mbox{\hyperlink{array_8h_a3268c0ef6886555d03df305c1faeef1b}{preappend\+\_\+float\+\_\+array}} (float $\ast$parent\+\_\+array, int len, float $\ast$child\+\_\+array, size\+\_\+t count)
-\item 
-void \mbox{\hyperlink{array_8h_ac1ea1b5258f86f196352e24b8a597bdf}{preappend\+\_\+double\+\_\+array}} (double $\ast$parent\+\_\+array, int len, double $\ast$child\+\_\+array, size\+\_\+t count)
-\item 
-void \mbox{\hyperlink{array_8h_a901871ff00788a16c9d72d78cdcbfa61}{preappend\+\_\+char\+\_\+array}} (char $\ast$parent\+\_\+array, int len, char $\ast$child\+\_\+array, size\+\_\+t count)
+void \mbox{\hyperlink{array_8h_ad9b354d1add686cf59b0705521d4db6c}{preappend\+\_\+array}} (void $\ast$parent\+\_\+array, int len, void $\ast$child\+\_\+array, size\+\_\+t count, int type)
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Enumeration Type Documentation}
-\mbox{\Hypertarget{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14}\label{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14}} 
-\index{array.h@{array.h}!data\_type@{data\_type}}
-\index{data\_type@{data\_type}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{data\_type}{data\_type}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14}{data\+\_\+type}}}
-
-An enum container with variables describing relevant data types
-
-
-\begin{DoxyParams}{Parameters}
-{\em FLOAT} & An integer representing float data types \\
-\hline
-{\em DOUBLE} & An integer representing double data types \\
-\hline
-{\em CHAR} & An integer representing character data types \\
-\hline
-{\em INT} & An integer representing integer data types \\
-\hline
-\end{DoxyParams}
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FLOAT@{FLOAT}!array.h@{array.h}}\index{array.h@{array.h}!FLOAT@{FLOAT}}}\mbox{\Hypertarget{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}\label{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a9cf4a0866224b0bb4a7a895da27c9c4c}} 
-FLOAT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{DOUBLE@{DOUBLE}!array.h@{array.h}}\index{array.h@{array.h}!DOUBLE@{DOUBLE}}}\mbox{\Hypertarget{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}\label{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a33465d1d419b1074fb259ef444609e92}} 
-DOUBLE&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{CHAR@{CHAR}!array.h@{array.h}}\index{array.h@{array.h}!CHAR@{CHAR}}}\mbox{\Hypertarget{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}\label{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14a4618cf21306b3c647741afa7ebefcab8}} 
-CHAR&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{INT@{INT}!array.h@{array.h}}\index{array.h@{array.h}!INT@{INT}}}\mbox{\Hypertarget{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}\label{array_8h_ac2ad7f431e3446fddcd9b6b9f93c4c14afd5a5f51ce25953f3db2c7e93eb7864a}} 
-INT&\\
-\hline
-
-\end{DoxyEnumFields}
 
 
 \doxysubsection{Function Documentation}
@@ -100,7 +39,7 @@ This function will append an existing array with a scalar value or another array
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = [4, 5, 6, 7, 8, 9];}
-\DoxyCodeLine{append\_int\_array((\textcolor{keywordtype}{void} *)a, 3, (\textcolor{keywordtype}{void} *)b, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(a, 3, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}i, a[i]);}
 \DoxyCodeLine{\}}
@@ -108,125 +47,11 @@ This function will append an existing array with a scalar value or another array
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b = 9;}
-\DoxyCodeLine{append\_int\_array((\textcolor{keywordtype}{void} *)a, 8, \&b, 1);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(a, 8, \&b, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 4, 5, 6, 7, 8, 9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}\label{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}} 
-\index{array.h@{array.h}!append\_char\_array@{append\_char\_array}}
-\index{append\_char\_array@{append\_char\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{append\_char\_array()}{append\_char\_array()}}
-{\footnotesize\ttfamily void append\+\_\+char\+\_\+array (\begin{DoxyParamCaption}\item[{char $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{char $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
-
-This function will append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The char array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A char scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{char} a[10] = \textcolor{stringliteral}{"{}abc"{}};}
-\DoxyCodeLine{\textcolor{keywordtype}{char} b[7] = \textcolor{stringliteral}{"{}defghi"{}}}
-\DoxyCodeLine{\mbox{\hyperlink{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}{append\_char\_array}}(a, 3, b, 6);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{char} a[10] = \textcolor{stringliteral}{"{}abcdefgh"{}};}
-\DoxyCodeLine{\textcolor{keywordtype}{char} b = \textcolor{charliteral}{'i'}}
-\DoxyCodeLine{\mbox{\hyperlink{array_8h_a2d79b533e752e5f6b87b1aee4edf1659}{append\_char\_array}}(a, 9, \&b 1);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_adeadb5b0481d71fe536ca928046aec73}\label{array_8h_adeadb5b0481d71fe536ca928046aec73}} 
-\index{array.h@{array.h}!append\_double\_array@{append\_double\_array}}
-\index{append\_double\_array@{append\_double\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{append\_double\_array()}{append\_double\_array()}}
-{\footnotesize\ttfamily void append\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{double $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{double $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
-
-This function will append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The double array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A double scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1.1, 2.2, 3.3\};}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b[6] = [4.4, 5.5, 6.6, 7.7, 8.8, 9.9];}
-\DoxyCodeLine{\mbox{\hyperlink{array_8h_adeadb5b0481d71fe536ca928046aec73}{append\_double\_array}}(a, 3, b, 6);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8\};}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b = 9.9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8h_adeadb5b0481d71fe536ca928046aec73}{append\_double\_array}}(a, 8, \&b 1);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_abe2413cb13788aec235fca99300408bc}\label{array_8h_abe2413cb13788aec235fca99300408bc}} 
-\index{array.h@{array.h}!append\_float\_array@{append\_float\_array}}
-\index{append\_float\_array@{append\_float\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{append\_float\_array()}{append\_float\_array()}}
-{\footnotesize\ttfamily void append\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{float $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
-
-This function will append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The float array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A float scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = \{1.1, 2.2, 3.3\};}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b[6] = [4.4, 5.5, 6.6, 7.7, 8.8, 9.9];}
-\DoxyCodeLine{\mbox{\hyperlink{array_8h_abe2413cb13788aec235fca99300408bc}{append\_float\_array}}(a, 3, b, 6);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8\};}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = 9.9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8h_abe2413cb13788aec235fca99300408bc}{append\_float\_array}}(a, 8, \&b 1);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9]}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}\label{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}} 
@@ -258,144 +83,32 @@ This function will remove a data entry from a user specified index within an ara
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 5, 6, 7, 8, 9]}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a901871ff00788a16c9d72d78cdcbfa61}\label{array_8h_a901871ff00788a16c9d72d78cdcbfa61}} 
-\index{array.h@{array.h}!preappend\_char\_array@{preappend\_char\_array}}
-\index{preappend\_char\_array@{preappend\_char\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{preappend\_char\_array()}{preappend\_char\_array()}}
-{\footnotesize\ttfamily void preappend\+\_\+char\+\_\+array (\begin{DoxyParamCaption}\item[{char $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{char $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{array_8h_ad9b354d1add686cf59b0705521d4db6c}\label{array_8h_ad9b354d1add686cf59b0705521d4db6c}} 
+\index{array.h@{array.h}!preappend\_array@{preappend\_array}}
+\index{preappend\_array@{preappend\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{preappend\_array()}{preappend\_array()}}
+{\footnotesize\ttfamily void preappend\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{void $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count,  }\item[{int}]{type }\end{DoxyParamCaption})}
 
 This function will pre-\/append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
 
 
 \begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The char array to which more data will be added \\
+{\em parent\+\_\+array} & The array to which more data will be added \\
 \hline
 {\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
 \hline
-{\em child\+\_\+array} & A char scalar or integer array of data to be added to the parent\+\_\+array \\
+{\em child\+\_\+array} & A scalar or array of data to be added to the parent\+\_\+array \\
 \hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
+{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array \\
 \hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{char} a[10] = \textcolor{stringliteral}{"{}abc"{}};}
-\DoxyCodeLine{\textcolor{keywordtype}{char} b[6] = \textcolor{stringliteral}{"{}defghi"{}};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a901871ff00788a16c9d72d78cdcbfa61}{preappend\_char\_array}}(a, 3, b, 6);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> ['d', 'e', 'f', 'g', 'h', 'i', 'a', 'b', 'c']}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{char} a[9] = \textcolor{stringliteral}{"{}abcdefgh"{}};}
-\DoxyCodeLine{\textcolor{keywordtype}{char} b = i;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a901871ff00788a16c9d72d78cdcbfa61}{preappend\_char\_array}}(a, 9, \&b 1);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> ['i', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_ac1ea1b5258f86f196352e24b8a597bdf}\label{array_8h_ac1ea1b5258f86f196352e24b8a597bdf}} 
-\index{array.h@{array.h}!preappend\_double\_array@{preappend\_double\_array}}
-\index{preappend\_double\_array@{preappend\_double\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{preappend\_double\_array()}{preappend\_double\_array()}}
-{\footnotesize\ttfamily void preappend\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{double $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{double $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
-
-This function will pre-\/append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The double array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A double scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = [1.1, 2.2, 3.3];}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b[6] = \{4.4, 5.5, 6.6, 7.7, 8.8, 9.9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac1ea1b5258f86f196352e24b8a597bdf}{preappend\_double\_array}}(a, 3, b, 6);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 1.1, 2.2, 3.3]}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{double} a[9] = [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8];}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b = 9.9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac1ea1b5258f86f196352e24b8a597bdf}{preappend\_double\_array}}(a, 9, \&b 1);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [9.9, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a3268c0ef6886555d03df305c1faeef1b}\label{array_8h_a3268c0ef6886555d03df305c1faeef1b}} 
-\index{array.h@{array.h}!preappend\_float\_array@{preappend\_float\_array}}
-\index{preappend\_float\_array@{preappend\_float\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{preappend\_float\_array()}{preappend\_float\_array()}}
-{\footnotesize\ttfamily void preappend\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{float $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{float $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
-
-This function will pre-\/append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The float array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A float scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = [1.1, 2.2, 3.3];}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b[6] = \{4.4, 5.5, 6.6, 7.7, 8.8, 9.9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a3268c0ef6886555d03df305c1faeef1b}{preappend\_float\_array}}(a, 3, b, 6);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 1.1, 2.2, 3.3]}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{float} a[9] = [1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8];}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = 9.9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a3268c0ef6886555d03df305c1faeef1b}{preappend\_float\_array}}(a, 9, \&b 1);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [9.9, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_ac028bc32322591450702897bea2a5b0c}\label{array_8h_ac028bc32322591450702897bea2a5b0c}} 
-\index{array.h@{array.h}!preappend\_int\_array@{preappend\_int\_array}}
-\index{preappend\_int\_array@{preappend\_int\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{preappend\_int\_array()}{preappend\_int\_array()}}
-{\footnotesize\ttfamily void preappend\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{int $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count }\end{DoxyParamCaption})}
-
-This function will pre-\/append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The int array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A int scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array\\
+{\em type} & The number of bytes occupied by the array datatype\\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = [1, 2, 3];}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = \{4, 5, 6, 7, 8, 9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac028bc32322591450702897bea2a5b0c}{preappend\_int\_array}}(a, 3, b, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ad9b354d1add686cf59b0705521d4db6c}{preappend\_array}}(a, 3, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}i, a[i]);}
 \DoxyCodeLine{\}}
@@ -403,7 +116,7 @@ This function will pre-\/append an existing array with a scalar value or another
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = [1, 2, 3, 4, 5, 6, 7, 8];}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b = 9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac028bc32322591450702897bea2a5b0c}{preappend\_int\_array}}(a, 9, \&b 1);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ad9b354d1add686cf59b0705521d4db6c}{preappend\_array}}(a, 9, \&b 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
