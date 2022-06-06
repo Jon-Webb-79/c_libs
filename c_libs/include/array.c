@@ -37,6 +37,78 @@ void preappend_array(void *parent_array, int len, void *child_array,
     ((char *) parent_array) + count * type, parent_array, len * type);
     memcpy(parent_array, child_array, count * type);
 }
+// --------------------------------------------------------------------------------
+
+Vector find_int_array_indices(int *array, int value, int len) {
+	int number = 0;
+	int input;
+	for (int i = 0; i < len; i++) {
+		if (value == array[i]) number++;
+	}
+
+	dat_type dtype = INT;
+	Vector indice_arr = init_vector(dtype, number);
+	int j = 0;
+	for (int i = 0; i < len; i++) {
+		input = i;
+		if(value == array[i]) append_vector(&indice_arr, &input, 1);
+	}
+	return indice_arr;
+}
+// --------------------------------------------------------------------------------
+
+Vector find_float_array_indices(float *array, float value, int len) {
+	int number = 0;
+	int input;
+	for (int i = 0; i < len; i++) {
+		if (value == array[i]) number++;
+	}
+
+	dat_type dtype = INT;
+	Vector indice_arr = init_vector(dtype, number);
+	int j = 0;
+	for (int i = 0; i < len; i++) {
+		input = i;
+		if(value == array[i]) append_vector(&indice_arr, &input, 1);
+	}
+	return indice_arr;
+}
+// --------------------------------------------------------------------------------
+
+Vector find_double_array_indices(double *array, double value, int len) {
+	int number = 0;
+	int input;
+	for (int i = 0; i < len; i++) {
+		if (value == array[i]) number++;
+	}
+
+	dat_type dtype = INT;
+	Vector indice_arr = init_vector(dtype, number);
+	int j = 0;
+	for (int i = 0; i < len; i++) {
+		input = i;
+		if(value == array[i]) append_vector(&indice_arr, &input, 1);
+	}
+	return indice_arr;
+}
+// --------------------------------------------------------------------------------
+
+Vector find_char_array_indices(char *array, char value, int len) {
+	int number = 0;
+	int input;
+	for (int i = 0; i < len; i++) {
+		if (value == array[i]) number++;
+	}
+
+	dat_type dtype = INT;
+	Vector indice_arr = init_vector(dtype, number);
+	int j = 0;
+	for (int i = 0; i < len; i++) {
+		input = i;
+		if(value == array[i]) append_vector(&indice_arr, &input, 1);
+	}
+	return indice_arr;
+}
 // ================================================================================
 // ================================================================================
 // eof

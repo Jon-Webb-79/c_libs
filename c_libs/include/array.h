@@ -18,6 +18,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "vector.h"
 
 /**
  * This function will remove a data entry from a user specified index
@@ -114,6 +115,94 @@ void append_array(void *parent_array, int len, void *child_array,
  */
 void preappend_array(void *parent_array, int len, void *child_array,
 		             size_t count, int type);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the indices where a specific integer value exists
+ * within an array.
+ *
+ * @param array An array of integer values
+ * @param value An integer value
+ * @param len The active length of array
+ * @return indice_arr A Vector containing the index points where the integer
+ *                    value exists within array.
+ *
+ * @code
+ * int a[7] = {1, 3, 5, 1, 2, 1, 6};
+ * Vector indeces = find_int_array_indices(a, 1, 7);
+ * for (int = 0; i < array.len; i++) {
+ *     printf("%d\n", int_vector_val(&indices, &i));
+ * }
+ * // >> [0, 3, 5]
+ * @endcode
+ */
+Vector find_int_array_indices(int *array, int value, int len);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the indices where a specific float value exists
+ * within an array.
+ *
+ * @param array An array of float values
+ * @param value A float value
+ * @param len The active length of array
+ * @return indice_arr A Vector containing the index points where the integer
+ *                    value exists within array.
+ *
+ * @code
+ * float a[7] = {1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1};
+ * Vector indeces = find_float_array_indices(a, 1.1f, 7);
+ * for (int = 0; i < array.len; i++) {
+ *     printf("%d\n", int_vector_val(&indices, &i));
+ * }
+ * // >> [0, 3, 5]
+ * @endcode
+ */
+Vector find_float_array_indices(float *array, float value, int len);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the indices where a specific double value exists
+ * within an array.
+ *
+ * @param array An array of double values
+ * @param value A double value
+ * @param len The active length of array
+ * @return indice_arr A Vector containing the index points where the integer
+ *                    value exists within array.
+ *
+ * @code
+ * double a[7] = {1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1};
+ * Vector indeces = find_double_array_indices(a, 1.1, 7);
+ * for (int = 0; i < array.len; i++) {
+ *     printf("%d\n", int_vector_val(&indices, &i));
+ * }
+ * // >> [0, 3, 5]
+ * @endcode
+ */
+Vector find_double_array_indices(double *array, double value, int len);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the indices where a specific char value exists
+ * within an array.
+ *
+ * @param array An array of char values
+ * @param value A char value
+ * @param len The active length of array
+ * @return indice_arr A Vector containing the index points where the integer
+ *                    value exists within array.
+ *
+ * @code
+ * char[12] = "Hello World"
+ * Vector indeces = find_char_array_indices(a, 'l', 11);
+ * for (int = 0; i < array.len; i++) {
+ *     printf("%d\n", int_vector_val(&indices, &i));
+ * }
+ * // >> [2, 3, 9]
+ * @endcode
+ */
+Vector find_char_array_indices(char *array, char value, int len);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

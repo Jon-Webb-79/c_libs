@@ -912,7 +912,7 @@ vector A vector containing all indices associatd with the user specified float v
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[7] = \{a, b, b, q, b, a, c\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{Array p = find\_char\_array\_indices(\&arr\_test, \textcolor{charliteral}{'b'});}
+\DoxyCodeLine{Array p = \mbox{\hyperlink{array_8c_a0643a93a759aab607b795d01be273c9a}{find\_char\_array\_indices}}(\&arr\_test, \textcolor{charliteral}{'b'});}
 \DoxyCodeLine{\textcolor{comment}{// p allocation}}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 4]}}
 \DoxyCodeLine{free\_array(p);}
@@ -944,7 +944,7 @@ This function will find the indices that contain a user specified double value. 
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{Array p = find\_double\_array\_indices(\&arr\_test, 6.2);}
+\DoxyCodeLine{Array p = \mbox{\hyperlink{array_8c_ab7e6483a50eb27bc2eb0ad606d103084}{find\_double\_array\_indices}}(\&arr\_test, 6.2);}
 \DoxyCodeLine{\textcolor{comment}{// p allocation}}
 \DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 4]}}
 \DoxyCodeLine{free\_array(p);}
@@ -976,7 +976,7 @@ This function will find the indices that contain a user specified float value. T
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{6.2, 1.0, 3.0, 6.2, 6.2, 4.5, 5.3\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{Array p = find\_float\_array\_indices(\&arr\_test, 6.2f);}
+\DoxyCodeLine{Array p = \mbox{\hyperlink{array_8c_a1597eedcaeb3b901b96410777061e095}{find\_float\_array\_indices}}(\&arr\_test, 6.2f);}
 \DoxyCodeLine{\textcolor{comment}{// p allocation}}
 \DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 4]}}
 \DoxyCodeLine{free\_array(p);}
@@ -1008,7 +1008,7 @@ This function will find the indices that contain a user specified integer. This 
 \DoxyCodeLine{Array arr\_test = init\_array(dtype, indices, name);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{6, 1, 3, 6, 6, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 7);}
-\DoxyCodeLine{Array p = find\_int\_array\_indices(\&arr\_test, 6);}
+\DoxyCodeLine{Array p = \mbox{\hyperlink{array_8c_a010f79b46568099d9ae30ca3aaa344e5}{find\_int\_array\_indices}}(\&arr\_test, 6);}
 \DoxyCodeLine{\textcolor{comment}{// P allocation}}
 \DoxyCodeLine{\textcolor{comment}{// [0, 3, 4]}}
 \DoxyCodeLine{free\_array(p);}

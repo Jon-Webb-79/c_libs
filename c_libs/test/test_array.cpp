@@ -276,5 +276,57 @@ TEST(test_preappend_array, preappend_char) {
 	EXPECT_EQ(a[8], 'c');
 }
 // ================================================================================
+
+/* This function will test the find_int_array_indices function to ensure it
+ * correctly determines all indeces where the integer 1 resides.
+ */
+TEST(find_array_indices, int_indices) {
+	int a[7] = {1, 3, 5, 1, 2, 1, 6};
+	Vector indices = find_int_array_indices(a, 1, 7);
+	EXPECT_EQ(0, int_vector_val(&indices, 0));
+	EXPECT_EQ(3, int_vector_val(&indices, 1));
+	EXPECT_EQ(5, int_vector_val(&indices, 2));
+	free_vector(&indices);
+}
+// --------------------------------------------------------------------------------
+
+/* This function will test the find_float_array_indices function to ensure it
+ * correctly determines all indeces where the float 1.1 resides.
+ */
+TEST(find_array_indices, float_indices) {
+	float a[7] = {1.1, 3.3, 5.5, 1.1, 2.2, 1.1, 6.6};
+	Vector indices = find_float_array_indices(a, 1.1f, 7);
+	EXPECT_EQ(0, int_vector_val(&indices, 0));
+	EXPECT_EQ(3, int_vector_val(&indices, 1));
+	EXPECT_EQ(5, int_vector_val(&indices, 2));
+	free_vector(&indices);
+}
+// --------------------------------------------------------------------------------
+
+/* This function will test the find_double_array_indices function to ensure it
+ * correctly determines all indeces where the float 1.1 resides.
+ */
+TEST(find_array_indices, double_indices) {
+	double a[7] = {1.1, 3.3, 5.5, 1.1, 2.2, 1.1, 6.6};
+	Vector indices = find_double_array_indices(a, 1.1, 7);
+	EXPECT_EQ(0, int_vector_val(&indices, 0));
+	EXPECT_EQ(3, int_vector_val(&indices, 1));
+	EXPECT_EQ(5, int_vector_val(&indices, 2));
+	free_vector(&indices);
+}
+// --------------------------------------------------------------------------------
+
+/* This function will test the find_char_array_indices function to ensure it
+ * correctly determines all indeces where the float 1.1 resides.
+ */
+TEST(find_array_indices, char_indices) {
+	char a[12] = "Hello World";
+	Vector indices = find_char_array_indices(a, 'l', 11);
+	EXPECT_EQ(2, int_vector_val(&indices, 0));
+	EXPECT_EQ(3, int_vector_val(&indices, 1));
+	EXPECT_EQ(9, int_vector_val(&indices, 2));
+	free_vector(&indices);
+}
+// ================================================================================
 // ================================================================================
 // eof
