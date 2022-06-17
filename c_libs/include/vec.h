@@ -223,6 +223,11 @@ int pop_vector(Vector *vec, size_t index);
  * In addition, this function is predicated on the vector container having
  * the appropriate value of `num_bytes` for the data type.
  *
+ * @param vec A vector container
+ * @param value A scalar value of the same data type as the value in vec
+ * @return indices An integer vector of value cooresponding to the location
+ *                 of the scalar value in the vev Vector.
+ *
  * @code
  * size_t indices = 5;
  * int a[5] = {1, 2, 1, 4, 1};
@@ -236,6 +241,29 @@ int pop_vector(Vector *vec, size_t index);
  * @endcode
  */
 Vector find_vector_indices(Vector *vec, void *value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will deleted all elements from an array that match a user
+ * defined scalar
+ *
+ * @param vev A Vector array
+ * @param a scalar value of the same data type as the value in vev
+ *
+ * @code
+ * size_t indices = 5;
+ * int a[5] = {1, 3, 1, 2, 1};
+ * int b = 1;
+ * Vector vec = init_type_vector(INT, 5};
+ * append_vector(&vec, a, 5);
+ * delete_vector_values(&vec, &b);
+ * for(size_t i = 0; i < vec.active_length; i++) {
+ *     printf("%d\n ", ((int *)vec.vector)[i]);
+ * }
+ * // >> 3, 2
+ * @endcode
+ */
+void delete_vector_values(Vector *vec, void *value);
 #endif /* vec_H */
 // ================================================================================
 // ================================================================================

@@ -217,6 +217,8 @@ TEST(test_find_vector_indices, find_int) {
 	Vector indices = find_vector_indices(&vec, &b);
 	EXPECT_EQ(0, ((int *)indices.vector)[0]);
 	EXPECT_EQ(2, ((int *)indices.vector)[1]);
+	free_vector(&indices);
+	free_vector(&vec);
 }
 // --------------------------------------------------------------------------------
 
@@ -233,6 +235,23 @@ TEST(test_find_vector_indices, find_double) {
 	EXPECT_EQ(0, ((int *)indices.vector)[0]);
 	EXPECT_EQ(2, ((int *)indices.vector)[1]);
 	EXPECT_EQ(4, ((int *)indices.vector)[2]);
+	free_vector(&vec);
+	free_vector(&indices);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the delete_vector_values function to ensure it properly
+ * deletes all elements in a Vector of a specific value */
+TEST(test_delete_elements, delete_int) {
+	int a[5] = {1, 2, 1, 3, 1};
+	Vector vec = init_type_vector(INT, 5);
+	append_vector(&vec, a, 5);
+	int b = 1;
+	delete_vector_values(&vec, &b);
+	EXPECT_EQ(2, ((int *)vec.vector)[0]);
+	EXPECT_EQ(3, ((int *)vec.vector)[1]);
+	free_vector(&vec);
 }
 // ================================================================================
 // ================================================================================

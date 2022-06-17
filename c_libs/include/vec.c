@@ -153,7 +153,7 @@ int pop_vector(Vector *vec, size_t index) {
 	}
 	unsigned char *dst = (unsigned char *)vec->vector + index * vec->num_bytes;
 	memmove(dst, dst + vec->num_bytes, vec->num_bytes * (vec->allocated_length - index - 1));
-	vec->allocated_length -= 1;
+	vec->active_length -= 1;
 	return 1;
 }
 // --------------------------------------------------------------------------------
@@ -171,6 +171,26 @@ Vector find_vector_indices(Vector *vec, void *value) {
 		if (compare == 0) append_vector(&indices, &i, 1);
 	}
 	return indices;
+}
+// --------------------------------------------------------------------------------
+
+void delete_vector_values(Vector *vec, void *value) {
+	int compare;
+	char *val = (char *)value;
+	char *dst;
+	Vector indices = init_type_vector(INT, 10);
+	// TODO Try getting rid of the conversion to char
+	// Instantiate vector container with an estimated size of 10
+	for (size_t i = 0; ; i++) {
+		if (i >= vec->active_length) break;
+		dst = (char *) vec->vector + (i * vec->num_bytes);
+		compare = memcmp(dst, val, vec->num_bytes);
+		if (compare == 0) {
+			pop_vector(vec, i);
+			i -= 1;
+		}
+		if (compare == 0) append_vector(&indices, &i, 1);
+	}
 }
 // ================================================================================
 // ================================================================================
