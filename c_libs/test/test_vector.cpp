@@ -16,7 +16,7 @@
 #include <gtest/gtest.h>
 
 extern "C" {
-#include "vector.h"
+	#include "vector.h"
 }
 
 /* This function tests the init_array function to ensure that it correctly

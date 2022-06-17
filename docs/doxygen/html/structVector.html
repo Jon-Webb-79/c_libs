@@ -69,10 +69,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="vector_8h_source.html">vector.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="vec_8h_source.html">vec.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a2ed69ccf5252684aeec041b3d36e0289"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a></td></tr>
+<tr class="separator:a2ed69ccf5252684aeec041b3d36e0289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7bc85dcb16ebc2e4879b74a30167533"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a></td></tr>
+<tr class="separator:ab7bc85dcb16ebc2e4879b74a30167533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab907c9fd798246105a8c54a80697f91a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#ab907c9fd798246105a8c54a80697f91a">allocated_length</a></td></tr>
+<tr class="separator:ab907c9fd798246105a8c54a80697f91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2e44fd5525a105e7dc19f39408b0f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#aca2e44fd5525a105e7dc19f39408b0f3">num_bytes</a></td></tr>
+<tr class="separator:aca2e44fd5525a105e7dc19f39408b0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb604532e7f41a38e0f73fe4815d687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="vec_8h.html#acfe99d230e216901bd782cc580e4e815">dtype</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#abbb604532e7f41a38e0f73fe4815d687">dat_type</a></td></tr>
+<tr class="separator:abbb604532e7f41a38e0f73fe4815d687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab959ab99b79bc9634edab7a2013c28f9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#ab959ab99b79bc9634edab7a2013c28f9">array</a></td></tr>
 <tr class="separator:ab959ab99b79bc9634edab7a2013c28f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6d6b43a537b8e7222224c00c58e79f5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVector.html#aa6d6b43a537b8e7222224c00c58e79f5">len</a></td></tr>
@@ -88,6 +98,17 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p >A container for a dynamically allocated array and related data</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">vector</td><td>A pointer to an array in heap memory </td></tr>
+    <tr><td class="paramname">active_length</td><td>The number of indices with assigned data </td></tr>
+    <tr><td class="paramname">allocated_length</td><td>The total number of allocated indices in memory </td></tr>
+    <tr><td class="paramname">num_bytes</td><td>The number of bytes consumed by a single indice </td></tr>
+    <tr><td class="paramname">dat_type</td><td>The data type. Must use data types allocated in dtype enum</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>A container for a dynamically allocated array and related data</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
     <tr><td class="paramname">array</td><td>a pointer to an array in memory </td></tr>
     <tr><td class="paramname">len</td><td>The active length of the array </td></tr>
     <tr><td class="paramname">size</td><td>The total number of indices allocated for the array </td></tr>
@@ -96,6 +117,34 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab7bc85dcb16ebc2e4879b74a30167533" name="ab7bc85dcb16ebc2e4879b74a30167533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7bc85dcb16ebc2e4879b74a30167533">&#9670;&nbsp;</a></span>active_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Vector::active_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab907c9fd798246105a8c54a80697f91a" name="ab907c9fd798246105a8c54a80697f91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab907c9fd798246105a8c54a80697f91a">&#9670;&nbsp;</a></span>allocated_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Vector::allocated_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab959ab99b79bc9634edab7a2013c28f9" name="ab959ab99b79bc9634edab7a2013c28f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab959ab99b79bc9634edab7a2013c28f9">&#9670;&nbsp;</a></span>array</h2>
 
@@ -118,6 +167,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="vector_8h.html#a1abd8bcc329e46eb9463a815548d6686">dat_type</a> Vector::dat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbb604532e7f41a38e0f73fe4815d687" name="abbb604532e7f41a38e0f73fe4815d687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb604532e7f41a38e0f73fe4815d687">&#9670;&nbsp;</a></span>dat_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="vec_8h.html#acfe99d230e216901bd782cc580e4e815">dtype</a> Vector::dat_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -152,6 +215,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aca2e44fd5525a105e7dc19f39408b0f3" name="aca2e44fd5525a105e7dc19f39408b0f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2e44fd5525a105e7dc19f39408b0f3">&#9670;&nbsp;</a></span>num_bytes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Vector::num_bytes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae4665570b1b91f783645fa0e2eb884af" name="ae4665570b1b91f783645fa0e2eb884af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4665570b1b91f783645fa0e2eb884af">&#9670;&nbsp;</a></span>size</h2>
 
@@ -166,7 +243,22 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a id="a2ed69ccf5252684aeec041b3d36e0289" name="a2ed69ccf5252684aeec041b3d36e0289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ed69ccf5252684aeec041b3d36e0289">&#9670;&nbsp;</a></span>vector</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Vector::vector</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/<a class="el" href="vec_8h_source.html">vec.h</a></li>
 <li>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/<a class="el" href="vector_8h_source.html">vector.h</a></li>
 </ul>
 </div><!-- contents -->

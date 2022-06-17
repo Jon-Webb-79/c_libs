@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dat_0',['dat',['../structStringVector.html#a42f12c2ffa5233607750f2536aab80ae',1,'StringVector::dat()'],['../structVector.html#ae57a2b2fbc1fd0c432eda3e7063c0601',1,'Vector::dat()']]],
-  ['dat_5ftype_1',['dat_type',['../vector_8h.html#a1abd8bcc329e46eb9463a815548d6686',1,'vector.h']]],
+  ['dat_5ftype_1',['dat_type',['../structVector.html#abbb604532e7f41a38e0f73fe4815d687',1,'Vector::dat_type()'],['../vector_8h.html#a1abd8bcc329e46eb9463a815548d6686',1,'dat_type():&#160;vector.h']]],
   ['delete_5fchar_5fduplicates_5fvec_2',['delete_char_duplicates_vec',['../vector_8c.html#a7d54e9d1ef0b23566eb5278f42926b6f',1,'delete_char_duplicates_vec(Vector *array):&#160;vector.c'],['../vector_8h.html#a7d54e9d1ef0b23566eb5278f42926b6f',1,'delete_char_duplicates_vec(Vector *array):&#160;vector.c']]],
   ['delete_5fchar_5fvec_5fvalues_3',['delete_char_vec_values',['../vector_8c.html#a0c193f6d294a6f65b20d2603f282e7c5',1,'delete_char_vec_values(Vector *array, char char_value):&#160;vector.c'],['../vector_8h.html#a0c193f6d294a6f65b20d2603f282e7c5',1,'delete_char_vec_values(Vector *array, char char_value):&#160;vector.c']]],
   ['delete_5fdouble_5fduplicates_5fvec_4',['delete_double_duplicates_vec',['../vector_8c.html#a122563df58490a6bc9807c7496fc211e',1,'delete_double_duplicates_vec(Vector *array):&#160;vector.c'],['../vector_8h.html#a122563df58490a6bc9807c7496fc211e',1,'delete_double_duplicates_vec(Vector *array):&#160;vector.c']]],
@@ -13,6 +13,7 @@ var searchData=
   ['delete_5fint_5fvec_5fvalues_10',['delete_int_vec_values',['../vector_8c.html#ab0919142d15daf6375ac0d5007855f4a',1,'delete_int_vec_values(Vector *array, int int_value):&#160;vector.c'],['../vector_8h.html#ab0919142d15daf6375ac0d5007855f4a',1,'delete_int_vec_values(Vector *array, int int_value):&#160;vector.c']]],
   ['delete_5fstring_5fduplicates_5fvec_11',['delete_string_duplicates_vec',['../vector_8c.html#a66ad8bf82ae2f2ea6a5a8a635c23581b',1,'delete_string_duplicates_vec(StringVector *array):&#160;vector.c'],['../vector_8h.html#a66ad8bf82ae2f2ea6a5a8a635c23581b',1,'delete_string_duplicates_vec(StringVector *array):&#160;vector.c']]],
   ['delete_5fstring_5fvec_5fvalues_12',['delete_string_vec_values',['../vector_8c.html#ac09cd9506eaa0af42840d2fb12bfa342',1,'delete_string_vec_values(StringVector *array, char string[]):&#160;vector.c'],['../vector_8h.html#ac09cd9506eaa0af42840d2fb12bfa342',1,'delete_string_vec_values(StringVector *array, char string[]):&#160;vector.c']]],
-  ['double_13',['DOUBLE',['../vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92',1,'vector.h']]],
-  ['double_5fvector_5fval_14',['double_vector_val',['../vector_8c.html#aeb7b729e4824aaecb27ac6bb2aaa2b65',1,'double_vector_val(Vector *array, int indice):&#160;vector.c'],['../vector_8h.html#aeb7b729e4824aaecb27ac6bb2aaa2b65',1,'double_vector_val(Vector *array, int indice):&#160;vector.c']]]
+  ['double_13',['DOUBLE',['../vec_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92',1,'DOUBLE():&#160;vec.h'],['../vector_8h.html#a1abd8bcc329e46eb9463a815548d6686a33465d1d419b1074fb259ef444609e92',1,'DOUBLE():&#160;vector.h']]],
+  ['double_5fvector_5fval_14',['double_vector_val',['../vector_8c.html#aeb7b729e4824aaecb27ac6bb2aaa2b65',1,'double_vector_val(Vector *array, int indice):&#160;vector.c'],['../vector_8h.html#aeb7b729e4824aaecb27ac6bb2aaa2b65',1,'double_vector_val(Vector *array, int indice):&#160;vector.c']]],
+  ['dtype_15',['dtype',['../vec_8h.html#acfe99d230e216901bd782cc580e4e815',1,'vec.h']]]
 ];

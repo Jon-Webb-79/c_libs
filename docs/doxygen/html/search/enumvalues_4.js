@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['reverse_0',['REVERSE',['../vector_8h.html#a9f4e8630516f3da89537313b4c828759a906b7cc20b42994dda4da492767c1de9',1,'vector.h']]]
+  ['long_0',['LONG',['../vec_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea',1,'vec.h']]],
+  ['longlong_1',['LONGLONG',['../vec_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df',1,'vec.h']]]
 ];

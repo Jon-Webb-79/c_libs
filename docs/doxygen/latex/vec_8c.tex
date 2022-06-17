@@ -1,0 +1,217 @@
+\hypertarget{vec_8c}{}\doxysection{/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/vec.c File Reference}
+\label{vec_8c}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vec.c@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vec.c}}
+{\ttfamily \#include \char`\"{}vec.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vec_8c_affc9eba1b68ea79daa1f0b67cd4387b9}{init\+\_\+vector}} (size\+\_\+t num\+\_\+bytes, size\+\_\+t num\+\_\+indices)
+\item 
+\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vec_8c_aebfff769c9c952425c106d67726fdae8}{init\+\_\+type\+\_\+vector}} (\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}}, size\+\_\+t num\+\_\+indices)
+\item 
+int \mbox{\hyperlink{vec_8c_ac4d4cc9d3f75a06b10111f6c19baa12c}{append\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, void $\ast$elements, size\+\_\+t num\+\_\+indices)
+\item 
+void \mbox{\hyperlink{vec_8c_a198417967ef24ada410abbb475e6966d}{free\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+int \mbox{\hyperlink{vec_8c_a268e1b9e120002db8a5e0565c745dec3}{preappend\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, void $\ast$elements, size\+\_\+t num\+\_\+indices)
+\item 
+int \mbox{\hyperlink{vec_8c_aa1be14eba03cd835f46a96a0b1bea6cd}{pop\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, size\+\_\+t index)
+\item 
+\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vec_8c_a60ae2577c16e2f397650d35641d80808}{find\+\_\+vector\+\_\+indices}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, void $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vec_8c_ac4d4cc9d3f75a06b10111f6c19baa12c}\label{vec_8c_ac4d4cc9d3f75a06b10111f6c19baa12c}} 
+\index{vec.c@{vec.c}!append\_vector@{append\_vector}}
+\index{append\_vector@{append\_vector}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{append\_vector()}{append\_vector()}}
+{\footnotesize\ttfamily int append\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+This function appends a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data appended to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the appended array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The \mbox{\hyperlink{structVector}{Vector}} container \\
+\hline
+{\em elements} & The scalar or array that will be appended to vec \\
+\hline
+{\em num\+\_\+indices} & The number of variables to be appended \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+num Returns 0 if the function executes successfully, or returns a 1 if the function cannot allocate the necessary memory$\ast$
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// -\/ Append an array of length 3 with another array of length 3}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vec_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{a[3] = \{1, 2, 3\};}
+\DoxyCodeLine{b[3] = \{4, 5, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{vec_8c_ac4d4cc9d3f75a06b10111f6c19baa12c}{append\_vector}}(\&vec, a, 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{vec_8c_ac4d4cc9d3f75a06b10111f6c19baa12c}{append\_vector}}(\&vec, b, 3\};}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}[ "{}});}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d, "{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{} ]\(\backslash\)n"{}});}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 3, 4, 5, 6 ]}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// append a vector with a scalar value}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec2 = \mbox{\hyperlink{vec_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 1);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} c = 1;}
+\DoxyCodeLine{\mbox{\hyperlink{vec_8c_ac4d4cc9d3f75a06b10111f6c19baa12c}{append\_vector}}(\&vec2, \&c, 1);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[0]);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1}}
+
+\end{DoxyCode}
+ free\+\_\+vector(\&vec); free\+\_\+vector(\&vec2); \mbox{\Hypertarget{vec_8c_a60ae2577c16e2f397650d35641d80808}\label{vec_8c_a60ae2577c16e2f397650d35641d80808}} 
+\index{vec.c@{vec.c}!find\_vector\_indices@{find\_vector\_indices}}
+\index{find\_vector\_indices@{find\_vector\_indices}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{find\_vector\_indices()}{find\_vector\_indices()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+vector\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+This function will compare each index of a vector container with a sclar value and return an integer vector containing the index of each match in the original vector. NOTE\+: This function is sign sensitive and will not recognize -\/0.\+0 as being equal to 0.\+0. In addition, if the user passes data of different data types, this function will have undefined behavior. In addition, this function is predicated on the vector container having the appropriate value of {\ttfamily num\+\_\+bytes} for the data type.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 5;}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 1, 4, 1\};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} b = 1;}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vec_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} indices = \mbox{\hyperlink{vec_8c_a60ae2577c16e2f397650d35641d80808}{find\_vector\_indices}}(\&vec, \&b);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} = 0; i < indices.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d "{}}, ((\textcolor{keywordtype}{int} *)indices-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 0, 1, 3}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vec_8c_a198417967ef24ada410abbb475e6966d}\label{vec_8c_a198417967ef24ada410abbb475e6966d}} 
+\index{vec.c@{vec.c}!free\_vector@{free\_vector}}
+\index{free\_vector@{free\_vector}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{free\_vector()}{free\_vector()}}
+{\footnotesize\ttfamily void free\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will free all memory allocation from a vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A vector container \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{vec_8c_aebfff769c9c952425c106d67726fdae8}\label{vec_8c_aebfff769c9c952425c106d67726fdae8}} 
+\index{vec.c@{vec.c}!init\_type\_vector@{init\_type\_vector}}
+\index{init\_type\_vector@{init\_type\_vector}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{init\_type\_vector()}{init\_type\_vector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} init\+\_\+type\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}}}]{dat\+\_\+type,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+Instantiates a \mbox{\hyperlink{structVector}{Vector}} container with a specified data type. This function allocates the vector in heap memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dat\+\_\+type} & The data type. Must use a specified from the dtype enum. \\
+\hline
+{\em num\+\_\+indices} & The users guess for the total number of required indices in the vector\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
+\DoxyCodeLine{\textcolor{comment}{//   memory for 5 indices}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = init\_notype(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vec_8c_affc9eba1b68ea79daa1f0b67cd4387b9}\label{vec_8c_affc9eba1b68ea79daa1f0b67cd4387b9}} 
+\index{vec.c@{vec.c}!init\_vector@{init\_vector}}
+\index{init\_vector@{init\_vector}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{init\_vector()}{init\_vector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} init\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+bytes,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+Instantiates a \mbox{\hyperlink{structVector}{Vector}} container where the user can determine the number of bytes allocated to each vector indice. This function allocates the vector in heap memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+bytes} & The number of bytes consumed by each index in the array \\
+\hline
+{\em num\+\_\+indices} & The users guess for the total number of required indices in the vector\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
+\DoxyCodeLine{\textcolor{comment}{//   memory for 5 indices}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = init\_notype(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 5);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vec_8c_aa1be14eba03cd835f46a96a0b1bea6cd}\label{vec_8c_aa1be14eba03cd835f46a96a0b1bea6cd}} 
+\index{vec.c@{vec.c}!pop\_vector@{pop\_vector}}
+\index{pop\_vector@{pop\_vector}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{pop\_vector()}{pop\_vector()}}
+{\footnotesize\ttfamily int pop\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container \\
+\hline
+{\em index} & The vector index containing the value to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An error code of 0 if the user defines an indice greater than the array length. 1 if the function is executed succesfully. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 4}
+\DoxyCodeLine{Array arr\_test = init\_typ\_vecot(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, indices);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 4);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = 8.3;}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ade257c4734ef94d47aea5f0424b8fdf9}{pop\_array}}(\&arr\_test, \&b);}
+\DoxyCodeLine{\textcolor{comment}{// >> [10.1, 9.2, 7.4]}}
+
+\end{DoxyCode}
+
+\end{DoxyReturn}
+The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.\+2, and 7.\+4. \mbox{\Hypertarget{vec_8c_a268e1b9e120002db8a5e0565c745dec3}\label{vec_8c_a268e1b9e120002db8a5e0565c745dec3}} 
+\index{vec.c@{vec.c}!preappend\_vector@{preappend\_vector}}
+\index{preappend\_vector@{preappend\_vector}!vec.c@{vec.c}}
+\doxysubsubsection{\texorpdfstring{preappend\_vector()}{preappend\_vector()}}
+{\footnotesize\ttfamily int preappend\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
+
+This function pre-\/appends a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data pre-\/appended to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the pre-\/appended array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The \mbox{\hyperlink{structVector}{Vector}} container \\
+\hline
+{\em elements} & The scalar or array that will be appended to vec \\
+\hline
+{\em num\+\_\+indices} & The number of variables to be appended \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+num Returns 0 if the function executes successfully, or returns a 1 if the function cannot allocate the necessary memory
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// -\/ Append an array of length 3 with another array of length 3}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vec_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{a[3] = \{1, 2, 3\};}
+\DoxyCodeLine{b[3] = \{4, 5, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{vec_8c_a268e1b9e120002db8a5e0565c745dec3}{preappend\_vector}}(\&vec, a, 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{vec_8c_a268e1b9e120002db8a5e0565c745dec3}{preappend\_vector}}(\&vec, b, 3\};}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}[ "{}});}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d, "{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{} ]\(\backslash\)n"{}});}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 4, 5, 6, 1, 2, 3 ]}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// append a vector with a scalar value}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec2 = \mbox{\hyperlink{vec_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 1);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} c = 1;}
+\DoxyCodeLine{\mbox{\hyperlink{vec_8c_a268e1b9e120002db8a5e0565c745dec3}{preappend\_vector}}(\&vec2, \&c, 1);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[0]);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1}}
+
+\end{DoxyCode}
+ free\+\_\+vector(\&vec); free\+\_\+vector(\&vec2); 

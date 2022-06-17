@@ -1,0 +1,75 @@
+\hypertarget{vec_8h_source}{}\doxysection{vec.\+h}
+\label{vec_8h_source}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vec.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vec.h}}
+\mbox{\hyperlink{vec_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{2 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{3 \textcolor{comment}{// -\/ File:    vector.h}}
+\DoxyCodeLine{4 \textcolor{comment}{// -\/ Purpose: This file contains the prototypes, structures, and enums used}}
+\DoxyCodeLine{5 \textcolor{comment}{//            in vector.c}}
+\DoxyCodeLine{6 \textcolor{comment}{//}}
+\DoxyCodeLine{7 \textcolor{comment}{// Source Metadata}}
+\DoxyCodeLine{8 \textcolor{comment}{// -\/ Author:  Jonathan A. Webb}}
+\DoxyCodeLine{9 \textcolor{comment}{// -\/ Date:    June 06, 2022}}
+\DoxyCodeLine{10 \textcolor{comment}{// -\/ Version: 1.0}}
+\DoxyCodeLine{11 \textcolor{comment}{// -\/ Copyright: Copyright 2022, Jon Webb Inc.}}
+\DoxyCodeLine{12 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{13 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{14 \textcolor{comment}{// Include modules here}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef vec\_H}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define vec\_H}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{39 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}},}
+\DoxyCodeLine{42     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}},}
+\DoxyCodeLine{43     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}},}
+\DoxyCodeLine{44     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}},}
+\DoxyCodeLine{45     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815aee847e634a4297b274316de8a8ca9921}{STRING}},}
+\DoxyCodeLine{46     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}},}
+\DoxyCodeLine{47     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}},}
+\DoxyCodeLine{48     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}},}
+\DoxyCodeLine{49     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}}
+\DoxyCodeLine{50 \} \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}};}
+\DoxyCodeLine{51 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keywordtype}{char} *\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}};}
+\DoxyCodeLine{65     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}};}
+\DoxyCodeLine{66     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structVector_ab907c9fd798246105a8c54a80697f91a}{allocated\_length}};}
+\DoxyCodeLine{67     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structVector_aca2e44fd5525a105e7dc19f39408b0f3}{num\_bytes}};}
+\DoxyCodeLine{68     \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{structVector_abbb604532e7f41a38e0f73fe4815d687}{dat\_type}};}
+\DoxyCodeLine{69 \} \mbox{\hyperlink{structVector}{Vector}};}
+\DoxyCodeLine{70 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{87 \mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vec_8h_affc9eba1b68ea79daa1f0b67cd4387b9}{init\_vector}}(\textcolor{keywordtype}{size\_t} num\_bytes, \textcolor{keywordtype}{size\_t} num\_indices);}
+\DoxyCodeLine{88 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{104 \mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vec_8h_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\_type}}, \textcolor{keywordtype}{size\_t} num\_indices);}
+\DoxyCodeLine{105 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{143 \textcolor{keywordtype}{int} \mbox{\hyperlink{vec_8h_ac4d4cc9d3f75a06b10111f6c19baa12c}{append\_vector}}(\mbox{\hyperlink{structVector}{Vector}} *vec, \textcolor{keywordtype}{void} *elements, \textcolor{keywordtype}{size\_t} num\_indices);}
+\DoxyCodeLine{144 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{151 \textcolor{keywordtype}{void} \mbox{\hyperlink{vec_8h_a198417967ef24ada410abbb475e6966d}{free\_vector}}(\mbox{\hyperlink{structVector}{Vector}} *vec);}
+\DoxyCodeLine{152 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{190 \textcolor{keywordtype}{int} \mbox{\hyperlink{vec_8h_a268e1b9e120002db8a5e0565c745dec3}{preappend\_vector}}(\mbox{\hyperlink{structVector}{Vector}} *vec, \textcolor{keywordtype}{void} *elements, \textcolor{keywordtype}{size\_t} num\_indices);}
+\DoxyCodeLine{191 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{214 \textcolor{keywordtype}{int} \mbox{\hyperlink{vec_8h_aa1be14eba03cd835f46a96a0b1bea6cd}{pop\_vector}}(\mbox{\hyperlink{structVector}{Vector}} *vec, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{215 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{238 \mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vec_8h_a60ae2577c16e2f397650d35641d80808}{find\_vector\_indices}}(\mbox{\hyperlink{structVector}{Vector}} *vec, \textcolor{keywordtype}{void} *value);}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vec\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{240 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{241 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{242 \textcolor{comment}{// eof}}
+
+\end{DoxyCode}

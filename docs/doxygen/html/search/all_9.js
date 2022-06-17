@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['pop_5farray_0',['pop_array',['../array_8c.html#ade257c4734ef94d47aea5f0424b8fdf9',1,'pop_array(void *array, int index, int size, int type):&#160;array.c'],['../array_8h.html#ade257c4734ef94d47aea5f0424b8fdf9',1,'pop_array(void *array, int index, int size, int type):&#160;array.c']]],
-  ['pop_5fstring_5fvector_1',['pop_string_vector',['../vector_8c.html#af2b50378ec8af13627769d308a594b6e',1,'pop_string_vector(StringVector *array, int index):&#160;vector.c'],['../vector_8h.html#af2b50378ec8af13627769d308a594b6e',1,'pop_string_vector(StringVector *array, int index):&#160;vector.c']]],
-  ['pop_5fvector_2',['pop_vector',['../vector_8c.html#a7c77ba41b1a3f8f68e4a02d10c729e02',1,'pop_vector(Vector *array, int indice):&#160;vector.c'],['../vector_8h.html#a7c77ba41b1a3f8f68e4a02d10c729e02',1,'pop_vector(Vector *array, int indice):&#160;vector.c']]],
-  ['preappend_5farray_3',['preappend_array',['../array_8c.html#ad9b354d1add686cf59b0705521d4db6c',1,'preappend_array(void *parent_array, int len, void *child_array, size_t count, int type):&#160;array.c'],['../array_8h.html#ad9b354d1add686cf59b0705521d4db6c',1,'preappend_array(void *parent_array, int len, void *child_array, size_t count, int type):&#160;array.c']]],
-  ['preappend_5fstring_5fvector_4',['preappend_string_vector',['../vector_8c.html#a8188993915bf396d55688bed3efc174a',1,'preappend_string_vector(StringVector *array, const char *value):&#160;vector.c'],['../vector_8h.html#a8188993915bf396d55688bed3efc174a',1,'preappend_string_vector(StringVector *array, const char *value):&#160;vector.c']]],
-  ['preappend_5fvector_5',['preappend_vector',['../vector_8c.html#a3ab43bfdeb92a7316d237bf448374725',1,'preappend_vector(Vector *array, void *elements, size_t count):&#160;vector.c'],['../vector_8h.html#a3ab43bfdeb92a7316d237bf448374725',1,'preappend_vector(Vector *array, void *elements, size_t count):&#160;vector.c']]]
+  ['order_0',['order',['../vector_8h.html#a9f4e8630516f3da89537313b4c828759',1,'vector.h']]]
 ];
