@@ -288,6 +288,32 @@ void delete_vector_values(Vector *vec, void *value);
  * @endcode
  */
 int replace_vector_index(Vector *vec, size_t index, void *replacement_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace any values in an array that match the user
+ * description with another user defined value.  WARNING: The value
+ * replacing the initial value must be of the same type as the initial
+ * value, otherwise the function will lead to undefined behavior.
+ *
+ * @param vec A vector container
+ * @param old_value The value to be replaced
+ * @param new_value The value that will replace the old value
+ *
+ * @code
+ * int a[6] = { 1, 2, 3, 2, 4, 5};
+ * int old_value = 2;
+ * int new_value = 4;
+ * Vector vec = init_type_vector(INT, 6);
+ * append_vector(&vec, a, 6);
+ * replace_vector_element(&vec, &old_value, &new_value);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%d \n", ((int *)vec.vector)[i]);
+ * }
+ * // >> 1, 4, 3, 4, 4, 5
+ * @endcode
+ */
+void replace_vector_element(Vector *vec, void *old_value, void *new_value);
 #endif /* vec_H */
 // ================================================================================
 // ================================================================================

@@ -163,7 +163,6 @@ Vector find_vector_indices(Vector *vec, void *value) {
 	char *val = (char *)value;
 	char *dst;
 	Vector indices = init_type_vector(INT, 10);
-	// TODO Try getting rid of the conversion to char
 	// Instantiate vector container with an estimated size of 10
 	for (size_t i = 0; i < vec->active_length; i++) {
 		dst = (char *) vec->vector + (i * vec->num_bytes);
@@ -178,8 +177,6 @@ void delete_vector_values(Vector *vec, void *value) {
 	int compare;
 	char *val = (char *)value;
 	char *dst;
-	Vector indices = init_type_vector(INT, 10);
-	// TODO Try getting rid of the conversion to char
 	// Instantiate vector container with an estimated size of 10
 	for (size_t i = 0; ; i++) {
 		if (i >= vec->active_length) break;
@@ -189,7 +186,6 @@ void delete_vector_values(Vector *vec, void *value) {
 			pop_vector(vec, i);
 			i -= 1;
 		}
-		if (compare == 0) append_vector(&indices, &i, 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -202,6 +198,23 @@ int replace_vector_index(Vector *vec, size_t index, void *replacement_value) {
 	memmove((char *)vec->vector + (index * vec->num_bytes), replacement_value,
 			vec->num_bytes);
 	return 1;
+}
+// --------------------------------------------------------------------------------
+
+void replace_vector_element(Vector *vec, void *old_value, void *new_value) {
+	int compare;
+	char *val = (char *)old_value;
+	char *dst;
+	Vector indices = init_type_vector(INT, 10);
+	// Instantiate vector container with an estimated size of 10
+	for (size_t i = 0; i < vec->active_length; i++) {
+		dst = (char *) vec->vector + (i * vec->num_bytes);
+		compare = memcmp(dst, val, vec->num_bytes);
+		if (compare == 0) {
+			memmove(dst, new_value, vec->num_bytes);
+		}
+		if (compare == 0) append_vector(&indices, &i, 1);
+	}
 }
 // ================================================================================
 // ================================================================================

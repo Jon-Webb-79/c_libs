@@ -272,4 +272,22 @@ TEST(replace_vector_index, replace_float) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the replace_vector_element function to ensure it 
+ * properly replaces multiple elements with the correct float value
+ */
+TEST(replace_vector_elements, replace_float) {
+	float a[4] = {1.1, 2.2, 1.1, 4.5};
+	float b = 1.1;
+	float c = 9.4;
+	Vector vec = init_type_vector(FLOAT, 4);
+	append_vector(&vec, a, 4);
+	replace_vector_element(&vec, &b, &c);
+	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[0]);
+	EXPECT_FLOAT_EQ(2.2f, ((float *)vec.vector)[1]);
+	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[2]);
+	EXPECT_FLOAT_EQ(4.5f, ((float *)vec.vector)[3]);	
+}
+// ================================================================================
+// ================================================================================
 // eof
