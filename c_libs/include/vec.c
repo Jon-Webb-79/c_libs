@@ -192,6 +192,17 @@ void delete_vector_values(Vector *vec, void *value) {
 		if (compare == 0) append_vector(&indices, &i, 1);
 	}
 }
+// --------------------------------------------------------------------------------
+
+int replace_vector_index(Vector *vec, size_t index, void *replacement_value) {
+	if (index > vec->active_length || index < 0) {
+		printf("Index out of bounds\n");
+		return 0;
+	}
+	memmove((char *)vec->vector + (index * vec->num_bytes), replacement_value,
+			vec->num_bytes);
+	return 1;
+}
 // ================================================================================
 // ================================================================================
 // eof

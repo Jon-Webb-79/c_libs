@@ -264,6 +264,30 @@ Vector find_vector_indices(Vector *vec, void *value);
  * @endcode
  */
 void delete_vector_values(Vector *vec, void *value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the data in a Vector element with another value.
+ * WARNING: The value replacing the initial value should be of the same type.
+ * If the data types are different it will lead to undefined behavior.
+ *
+ * @param vec A vector container
+ * @param index The index containing the value to be replaced
+ * @param replacement_value The value that will replace the original
+ *
+ * @code
+ * int a[6] = {1, 2, 1, 3, 1, 5};
+ * int new_value = 6;
+ * Vector vec = init_type_vector(INT, 6);
+ * append_vector(&vec, a, 6);
+ * replace_vector_index(&vec, 1, new_value);
+ * for (size_t i = 0; vev->active_length; i++){
+ *     printf("%d \n", ((int *)vec->vector)[i]);
+ * }
+ * // >> 1, 6, 1, 3, 1, 5
+ * @endcode
+ */
+int replace_vector_index(Vector *vec, size_t index, void *replacement_value);
 #endif /* vec_H */
 // ================================================================================
 // ================================================================================
