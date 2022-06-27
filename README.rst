@@ -47,3 +47,21 @@ memory and a double type consumes 8 bytes of memory.
 
    // Double vector
    Vector double_vec = init_vector(8, 20);
+
+However, it is better to use the ``init_type_vector(dtype data_type, size_t num_indices)`` function
+where the user passes an enum value to represent the ``data_type``.  The enum types can be
+``INT``, ``FLOAT``, ``DOUBLE``, ``CHAR``, ``STRING``, ``SHORTINT``, ``LONG``, ``LONGLONG``,
+and ``NONE``.  The enum types guide the software to automatically determine the number
+of bytes consumed by a single vector indices, and does not care about signed versus
+unsigned data types.  The ``NONE`` data type is automatically used for the ``init_vector``
+function.  The user can use it for the ``init_type_vector`` function; however, it will
+be degraded to an ``INT`` data type.  The code example below demonstrates the instantiation
+of an integer and double vector with the ``init_type_vector`` function.
+
+.. code-block:: c
+
+   // Integer vector with 20 indices
+   Vector int_vec = init_vector(INT, 20);
+
+   // Double vector with 20 indices
+   Vector double_vec = init_type_vector(DOUBLE, 20);
