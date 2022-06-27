@@ -1,7 +1,9 @@
 ******
 c_libs
 ******
-This repository contains libraries for the c programming language
+This repository contains libraries for the c programming language.  The library is divided into different
+header files that execute different functionality.  This library contains a `vector.h` library, and an
+`array.h` library.
 
 Contributing
 ############
@@ -25,3 +27,12 @@ In order to download this repository from github, follow these instructions
 2. At your desired location create a directory titled ``c_libs``
 3. Open a terminal (Bash, zsh, Linux, or DOS) and cd to the ``c_libs`` directory and type
    ``clone https://github.com/Jon-Webb-79/Project_Name.git c_libs``
+
+Vector
+######
+The `vector.h` library contains functions that enable to user to create and operate on a dynamically
+allocated vector that is allocated in heap memory.
+
+.. code-block:: C
+   /** This code creates a dynamically allocated integer and float array */
+   Vector vec = init_vector(20, INT);
