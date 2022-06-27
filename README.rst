@@ -31,10 +31,19 @@ In order to download this repository from github, follow these instructions
 Vector
 ######
 The ``vector.h`` library contains functions that enable to user to create and operate on a dynamically
-allocated vector that is allocated in heap memory.
+allocated vector that is allocated in heap memory.  The most basic function in the ``vector.h`` 
+library is the ``init_vector(size_t num_bytes, size_t num_indices)`` function, which takes as
+arguements ``num_bytes`` which represents the number of bytes consumed by a single indice, and
+``num_indices``, which is a user define number of indices that the vector is expected to require.
+The ``init_vector`` returns a ``Vector`` data type, which represents a ``struct`` containing
+vector parameters.  THe following code snippet shows how a user can instantiate an integer
+and double vector that may require 20 indices.  An integer data point consumes 4 bytes of
+memory and a double type consumes 8 bytes of memory.
 
 .. code-block:: c
 
-   /** This code creates a dynamically allocated integer and float array. */
+   // Integer vector
+   Vector int_vec = init_vector(4, 20);
 
-   Vector vec = init_vector(20, INT);
+   // Double vector
+   Vector double_vec = init_vector(8, 20);
