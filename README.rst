@@ -35,5 +35,6 @@ allocated vector that is allocated in heap memory.
 
 .. code-block:: c
 
-   /** This code creates a dynamically allocated integer and float array */
+   /** This code creates a dynamically allocated integer and float array. */
+
    Vector vec = init_vector(20, INT);
