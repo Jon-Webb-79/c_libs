@@ -256,7 +256,7 @@ TEST(replace_vector_index, replace_float) {
 /* This function tests the replace_vector_element function to ensure it 
  * properly replaces multiple elements with the correct float value
  */
-TEST(replace_vector_elements, replace_float) {
+TEST(replace_vector_values, replace_float) {
 	float a[4] = {1.1, 2.2, 1.1, 4.5};
 	float b = 1.1;
 	float c = 9.4;

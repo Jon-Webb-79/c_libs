@@ -116,6 +116,11 @@ void free_vector(Vector *vec) {
 // --------------------------------------------------------------------------------
 
 int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice) {
+	// Check data for size
+	if (indice > vec->active_length) {
+		printf("WARNING: The selected indice is larger than the active array length\n");
+		return 0;
+	}
 	// Re-allocate memory if necessary
 	if (vec->active_length + num_indices > vec->allocated_length) {
 		size_t size = (vec->active_length + num_indices) * 2;
@@ -142,9 +147,6 @@ int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice
 		((char *)vec->vector) + indice * vec->num_bytes,
 		 elements,
 		 num_indices * vec->num_bytes);
-	//memcpy(((char *)vec->vector) + (indice * vec->num_bytes),
-//			elements, num_indices * vec->num_bytes);
-	//memcpy(vec->vector, elements, num_indices * vec->num_bytes);
 
 	// increment number of elements
 	vec->active_length += num_indices;
@@ -221,6 +223,11 @@ void replace_vector_values(Vector *vec, void *old_value, void *new_value) {
 		}
 		if (compare == 0) push_vector(&indices, &i, 1);
 	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_duplicate_vector(Vector *vec) {
+
 }
 // ================================================================================
 // ================================================================================

@@ -139,3 +139,80 @@ wishes to insert data.  An example is shown below.
    insert_vector(&float, c, 3, 3);
    // Leads to the vector [1.1, 2.2, 1.2, 10.0, 11.0, 12.0, 3.3]
 
+==========
+pop_vector
+==========
+A user can delete a vector element using the ``pop_vector(Vector *vec, size_t indice)`` function, where
+``indice`` represents the indice to be deleted.  An example is provided below.
+
+.. code-block:: c
+
+   Vector int_vec = init_type_vector(INT, 4);
+   int a[4] = {1, 2, 3, 4}
+   push_vector(&int_vec, a, 4);
+   pop_vector(&int_vec, 2);
+   // [1, 2, 4]
+
+==================
+find_vector_indice
+==================
+This function can be used to determine every indice where a user defined value exist.  The function has
+the form ``find_vector_indices(Vector *vec, void *value)`` where value is the data to be compared 
+at each index.  The function returns another vector container of integer values.
+
+.. code-block:: c
+
+   Vector int_vec = init_type_vector(INT, 6);
+   int a[6] = {1, 2, 1, 3, 4, 1);
+   push_vector(&int_vec, a, 6);
+   Vector indice_vec = find_vector_indices(&int_vec, 1);
+   for (size_t i = 0; i <  indice_vec.active_length; i++) {
+       printf("%d, ", ((int *)indice_vec.vector)[0]);
+   }
+   // [0, 2, 5]
+
+====================
+delete_vector_values
+====================
+The function ``delete_vector_values(Vector *vec, void *value)`` can be used to delete all occurances
+of a value from a vector container.
+
+.. code-block:: c
+   Vector int_vec = init_type_vector(INT, 6);
+   int a[6] = {1, 2, 1, 3, 4, 1);
+   push_vector(&int_vec, a, 6);
+   // deletes all instances of 1 from the vector.
+   // This works for any data type
+   delete_vector_values(&int_vec, 1);
+   // [2, 3, 4]
+
+=====================
+replace_vector_indice
+=====================
+The function ``replace_vector_indice(Vector *vec, size_t index, void *replacement_value)`` function allows a user to pass
+the function an index containing data that should be replaced with ``replacement_value``.
+
+.. code-block:: c
+   Vector double_vec = init_type_vector(DOUBLE, 3);
+   double a[3] = {1.1, 2.2, 3.3};
+   double b = 4.4;
+   push_vector(&double_vec, a, 3);
+   replace_vector_indice(&double_vec, 1, &b);
+   // [1.1, 4.4, 3.3]
+
+=====================
+replace_vector_values
+=====================
+THe function ``replace_vector_values(Vector *vec, void *old_value, void *new_value)``
+allows a user to enter an ``old_value``.  The function will search the vector container.
+If the value exists at one or multiple places in the vector it will be replaced
+with ``new_value``.
+
+.. code-block:: c
+   Vector double_vec = init_type_vector(DOUBLE, 3);
+   double a[3] = {1.1, 2.2, 3.3};
+   double b = 3.3;
+   double c = 6.6;
+   push_vector(&double_vec, a, 3);
+   replace_vector_values(&double_vec, &b, &c);
+   // [1.1, 2.2, 6.6]
