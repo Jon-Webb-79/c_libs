@@ -1,26 +1,30 @@
-******
+######
 c_libs
-******
+######
 This repository contains libraries for the c programming language.  The library is divided into different
 header files that execute different functionality.  This library contains a ``vector.h`` library, and an
 ``array.h`` library.
 
+************
 Contributing
-############
+************
 Pull requests are welcome.  For major changes, please open an issue first to discuss
 what you would like to change.  Please make sure to include and update tests
 as well as relevant doc-string and doxygen updates.
 
+*******
 License
-#######
+*******
 The License is included in the **c_libs** package
 
+************
 Requirements
-############
+************
 C11 or greater
 
+************
 Installation
-############
+************
 In order to download this repository from github, follow these instructions
 
 1. Ensure you have .git installed on your computer
@@ -28,10 +32,16 @@ In order to download this repository from github, follow these instructions
 3. Open a terminal (Bash, zsh, Linux, or DOS) and cd to the ``c_libs`` directory and type
    ``clone https://github.com/Jon-Webb-79/Project_Name.git c_libs``
 
+******
 Vector
-######
+******
 The ``vector.h`` library contains functions that enable to user to create and operate on a dynamically
-allocated vector that is allocated in heap memory.  The most basic function in the ``vector.h`` 
+allocated vector that is allocated in heap memory.  
+
+===========
+init_vector
+===========
+The most basic function in the ``vector.h`` 
 library is the ``init_vector(size_t num_bytes, size_t num_indices)`` function, which takes as
 arguements ``num_bytes`` which represents the number of bytes consumed by a single indice, and
 ``num_indices``, which is a user define number of indices that the vector is expected to require.
@@ -67,9 +77,15 @@ of an integer and double vector with the ``init_type_vector`` function.
    // Double vector with 20 indices
    Vector double_vec = init_type_type_vector(DOUBLE, 20);
 
-Once a vector has been initialized the user can push scalar and array data to the vector as 
+===========
+push_vector
+===========
+Once a vector has been initialized the user can push scalar and array data to the end of a vector as 
 shown below with the ``push_vector(Vector *vec, void *elements, size_t size)`` function
-where ``vec`` is the dynamically allocated vector container
+where ``vec`` is the dynamically allocated vector container. WARNING: Notice that this
+code snippet ends with the function ``free_vector``.  If the user does not use
+this function then the memory will remain allocated, which can cause unintended
+behavior over prolonged code operation.
 
 .. code-block:: c
 
@@ -93,9 +109,33 @@ where ``vec`` is the dynamically allocated vector container
    }
    // Prints 1.1, 2.2, 3.3, 4.4, 5.5
 
+   // Free memory
+   free_vector(float_vec);
+
 If the total number of required indices exceeds the user defined guess when the ``init_type_vector``
 was called, then the library will automatically resize the vector to fit the number of indices
 required.  If the total number of indices required exceeds the available memory, the function
 will return a warning to the user and also return from the function without failing.
 
+=============
+insert_vector
+=============
+A user can also use the ``insert_vector(Vector *vec, void *elements size_t num_indices, size_t indice)`` function
+to insert a scalar value or an array of data into an array.  The variables in hte prototype are the same
+as that of ``push_vector`` with the exception of ``indice`` which represents the indice where the user
+wishes to insert data.  An example is shown below.
+
+.. code-block:: c
+
+   Vector float_vec = init_type_vector(FLOAT, 6);
+   float a[3] = {1.1, 2.2, 3.3};
+   push_vector(&float_vec, a, 3);
+
+   float b = 1.2;
+   insert_vector(&float_vec, &b, 1, 2);
+   // Leads to the vector [1.1, 2.2, 1.2, 3.3]
+
+   float c[3] = {10.0, 11.0 ,12.0};
+   insert_vector(&float, c, 3, 3);
+   // Leads to the vector [1.1, 2.2, 1.2, 10.0, 11.0, 12.0, 3.3]
 

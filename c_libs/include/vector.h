@@ -152,42 +152,43 @@ void free_vector(Vector *vec);
 // --------------------------------------------------------------------------------
 
 /**
- * This function pre-appends a Vector container with a scalar or an array of data.
- * The data pre-appended to the Vector container must be of the same type as
+ * This function inserts a Vector container with a scalar or an array of data.
+ * The data inserted to the Vector container must be of the same type as
  * the pre-appended array.
  *
  * @param vec The Vector container
- * @param elements The scalar or array that will be appended to vec
- * @param num_indices The number of variables to be appended
- * @return num Returns 0 if the function executes successfully, or
- *             returns a 1 if the function cannot allocate the
- *             necessary memory
+ * @param elements The scalar or array that will be inserted to vec
+ * @param num_indices The number of variables to be inserted
+ * @param indice The indice in the Vector container where the data
+ *               is to be inserted
  *
  * @code
  * // - Append an array of length 3 with another array of length 3
  * Vector vec = init_type_vector(INT, 5);
  * a[3] = {1, 2, 3};
  * b[3] = {4, 5, 6};
- * preappend_vector(&vec, a, 3};
- * preappend_vector(&vec, b, 3};
+ * push_vector(&vec, a, 3};
+ * insert_vector(&vec, b, 3, 2};
  * for (int i = 0; i < 6; i++) {
  *     printf("[ ");
  *     printf("%d, ", ((int *)vec->vector)[i]);
  *     printf(" ]\n");
  * }
- * // >> [ 4, 5, 6, 1, 2, 3 ]
+ * // >> [ 1, 2, 4, 5, 6, 3 ]
  *
  * // append a vector with a scalar value
  * Vector vec2 = init_type_vector(INT, 1);
  * int c = 1;
- * preappend_vector(&vec2, &c, 1);
- * printf("%d\n", ((int *)vec->vector)[0]);
- * // >> 1
+ * a[3] = {1, 2, 3};
+ * push_vector(&vec2, a, 3);
+ * insert_vector(&vec2, c, 1, 1);
+ * printf("%d, ", ((int *)vec->vector)[0]);
+ * // >> 1, 1, 2, 3
  * @endcode
 	* free_vector(&vec);
 	* free_vector(&vec2);
  */
-int preappend_vector(Vector *vec, void *elements, size_t num_indices);
+int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice);
 // --------------------------------------------------------------------------------
 
 /**

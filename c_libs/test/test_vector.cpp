@@ -48,11 +48,11 @@ TEST(test_initialize_vector, type_vec) {
 
 /* This function will test the append_vector function to ensure it can correctly
  * append a scalar value to a recently initialized vector container */
-TEST(test_append_vector, scalar_int) {
+TEST(test_push_vector, scalar_int) {
 	size_t length = 3;
 	Vector vec = init_type_vector(INT, length);
 	int a = 3;
-	append_vector(&vec, &a, 1);
+	push_vector(&vec, &a, 1);
 	EXPECT_EQ(3, ((int *) vec.vector)[0]);
 	EXPECT_EQ(1, vec.active_length);
 	EXPECT_EQ(3, vec.allocated_length);
@@ -103,61 +103,44 @@ TEST(test_push_vector, array_float) {
 }
 // ================================================================================
 // ================================================================================
-// TEST PREAPPEND_VECTOR FUNCTION
 
-/* This function will test the preappend_vector function to ensure it can correctly
- * preappend a scalar value to a recently initialized vector container */
-TEST(test_preappend_vector, scalar_int) {
-	size_t length = 3;
-	Vector vec = init_type_vector(INT, length);
-	int a = 3;
-	preappend_vector(&vec, &a, 1);
-	EXPECT_EQ(3, ((int *) vec.vector)[0]);
-	EXPECT_EQ(1, vec.active_length);
-	EXPECT_EQ(3, vec.allocated_length);
+/* This function will test the insert_vector function to ensure it can correctly
+ * insert a scalar variable into an array. Based on previous testing there
+ * is no need to test this for other data types */
+TEST(test_insert_vector, scalar_int) {
+	Vector vec = init_type_vector(INT, 6);
+	int a[5] = {1, 2, 3, 4, 5};
+	push_vector(&vec, a, 5);
+
+	int b = 9;;
+	insert_vector(&vec, &b, 1, 3);
+	EXPECT_EQ(1, ((int *)vec.vector)[0]);
+    EXPECT_EQ(2, ((int *)vec.vector)[1]);
+	EXPECT_EQ(3, ((int *)vec.vector)[2]);
+	EXPECT_EQ(9, ((int *)vec.vector)[3]);
+	EXPECT_EQ(4, ((int *)vec.vector)[4]);
+	EXPECT_EQ(5, ((int *)vec.vector)[5]);
 	free_vector(&vec);
 }
 // --------------------------------------------------------------------------------
 
-/* This function will test the preappend_vector function to ensure it can correctly
- * preappend an array to a vector and correctly re-allocate memory */
-TEST(test_preappend_vector, array_int) {
-	size_t length = 3;
-	Vector vec = init_type_vector(INT, length);
-	int a[3] = {1, 2, 3};
-	int b[3] = {4, 5, 6};
-	preappend_vector(&vec, a, 3);
-	preappend_vector(&vec, b, 3);
-	EXPECT_EQ(4, ((int *) vec.vector)[0]);
-	EXPECT_EQ(5, ((int *) vec.vector)[1]);
-	EXPECT_EQ(6, ((int *) vec.vector)[2]);
-	EXPECT_EQ(1, ((int *) vec.vector)[3]);
-	EXPECT_EQ(2, ((int *) vec.vector)[4]);
-	EXPECT_EQ(3, ((int *) vec.vector)[5]);
-	EXPECT_EQ(6, vec.active_length);
-	EXPECT_EQ(12, vec.allocated_length);
-	free(vec.vector);
-}
-// --------------------------------------------------------------------------------
+/* This function will test the insert_vector function to ensure it can correctly
+ * insert an array variable into an array. Based on previous testing there
+ * is no need to test this for other data types */
+TEST(test_insert_vector, array_int) {
+	Vector vec = init_type_vector(INT, 6);
+	int a[5] = {1, 2, 3, 4, 5};
+	push_vector(&vec, a, 5);
 
-/* This function will test the preappend_vector function to ensure it can correctly
- * preappend a float vector.  This combined with the previous tests ensures
- * that the function can properly preappend multiple data types. */
-TEST(test_preappend_vector, array_float) {
-	size_t length = 3;
-	Vector vec = init_type_vector(FLOAT, length);
-	float a[3] = {1.1, 2.2, 3.3};
-	float b[3] = {4.4, 5.5, 6.6};
-	preappend_vector(&vec, a, 3);
-	preappend_vector(&vec, b, 3);
-	EXPECT_EQ(4.4f, ((float *) vec.vector)[0]);
-	EXPECT_EQ(5.5f, ((float *) vec.vector)[1]);
-	EXPECT_EQ(6.6f, ((float *) vec.vector)[2]);
-	EXPECT_EQ(1.1f, ((float *) vec.vector)[3]);
-	EXPECT_EQ(2.2f, ((float *) vec.vector)[4]);
-	EXPECT_EQ(3.3f, ((float *) vec.vector)[5]);
-	EXPECT_EQ(6, vec.active_length);
-	EXPECT_EQ(12, vec.allocated_length);
+	int b[2] = {9, 10};
+	insert_vector(&vec, b, 2, 3);
+	EXPECT_EQ(1, ((int *)vec.vector)[0]);
+    EXPECT_EQ(2, ((int *)vec.vector)[1]);
+	EXPECT_EQ(3, ((int *)vec.vector)[2]);
+	EXPECT_EQ(9, ((int *)vec.vector)[3]);
+	EXPECT_EQ(10, ((int *)vec.vector)[4]);
+	EXPECT_EQ(4, ((int *)vec.vector)[5]);
+	EXPECT_EQ(5, ((int *)vec.vector)[6]);
 	free_vector(&vec);
 }
 // ================================================================================
@@ -172,7 +155,7 @@ TEST(test_free_memory, free_memory) {
 	size_t indices = 10;
 	Vector arr_test = init_type_vector(DOUBLE, indices);
 	double a[3] = {10.5, 9.4, 8.3};
-    append_vector(&arr_test, &a, 3);
+    push_vector(&arr_test, &a, 3);
 
 	// free memory
 	free_vector(&arr_test);
@@ -193,7 +176,7 @@ TEST(test_pop_vector, pop_int) {
 	size_t indices = 10;
 	Vector vec = init_type_vector(INT, indices);
     int a[4] = {10, 9, 8, 7};
-	append_vector(&vec, a, 4);
+	push_vector(&vec, a, 4);
 	pop_vector(&vec, 2);
 	EXPECT_EQ(10, ((int *)vec.vector)[0]);
 	EXPECT_EQ(9, ((int *)vec.vector)[1]);
@@ -209,7 +192,7 @@ TEST(test_pop_vector, pop_int) {
 TEST(test_find_vector_indices, find_int) {
 	int a[3] = {3, 2, 3};
 	Vector vec = init_type_vector(INT, 3);
-	append_vector(&vec, a, 3);
+	push_vector(&vec, a, 3);
 	int b = 3;
 	Vector indices = find_vector_indices(&vec, &b);
 	EXPECT_EQ(0, ((int *)indices.vector)[0]);
@@ -226,7 +209,7 @@ TEST(test_find_vector_indices, find_int) {
 TEST(test_find_vector_indices, find_double) {
 	double a[5] = {3.1, 2.2, 3.1, 3.2, 3.1};
 	Vector vec = init_type_vector(DOUBLE, 5);
-	append_vector(&vec, a, 5);
+	push_vector(&vec, a, 5);
 	double b = 3.1;
 	Vector indices = find_vector_indices(&vec, &b);
 	EXPECT_EQ(0, ((int *)indices.vector)[0]);
@@ -243,7 +226,7 @@ TEST(test_find_vector_indices, find_double) {
 TEST(test_delete_elements, delete_int) {
 	int a[5] = {1, 2, 1, 3, 1};
 	Vector vec = init_type_vector(INT, 5);
-	append_vector(&vec, a, 5);
+	push_vector(&vec, a, 5);
 	int b = 1;
 	delete_vector_values(&vec, &b);
 	EXPECT_EQ(2, ((int *)vec.vector)[0]);
@@ -260,7 +243,7 @@ TEST(replace_vector_index, replace_float) {
 	size_t b = 1;
 	float c = 9.4;
 	Vector vec = init_type_vector(FLOAT, 4);
-	append_vector(&vec, a, 4);
+	push_vector(&vec, a, 4);
 	replace_vector_index(&vec, b, &c);
 	EXPECT_FLOAT_EQ(1.1f, ((float *)vec.vector)[0]);
 	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[1]);
@@ -278,7 +261,7 @@ TEST(replace_vector_elements, replace_float) {
 	float b = 1.1;
 	float c = 9.4;
 	Vector vec = init_type_vector(FLOAT, 4);
-	append_vector(&vec, a, 4);
+	push_vector(&vec, a, 4);
 	replace_vector_values(&vec, &b, &c);
 	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[0]);
 	EXPECT_FLOAT_EQ(2.2f, ((float *)vec.vector)[1]);

@@ -115,7 +115,7 @@ void free_vector(Vector *vec) {
 }
 // --------------------------------------------------------------------------------
 
-int preappend_vector(Vector *vec, void *elements, size_t num_indices) {
+int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice) {
 	// Re-allocate memory if necessary
 	if (vec->active_length + num_indices > vec->allocated_length) {
 		size_t size = (vec->active_length + num_indices) * 2;
@@ -129,16 +129,22 @@ int preappend_vector(Vector *vec, void *elements, size_t num_indices) {
 		vec->vector = pointer;
 		vec->allocated_length = size;
 	}
+	size_t mem = vec->active_length - indice;
 	// - Move vector to the left num_indices to the right to make room
 	//   for elements
 	memmove(
-	((char *) vec->vector) + num_indices * vec->num_bytes,
-	vec->vector,
-	vec->active_length * vec->num_bytes);
+		((char *)vec->vector) + (num_indices + indice) * vec->num_bytes,
+		 ((char *)vec->vector) + indice * vec->num_bytes,
+		 mem * vec->num_bytes);
 
 	// Copy elements to the correct vecto indices
-
-	memcpy(vec->vector, elements, num_indices * vec->num_bytes);
+	memcpy(
+		((char *)vec->vector) + indice * vec->num_bytes,
+		 elements,
+		 num_indices * vec->num_bytes);
+	//memcpy(((char *)vec->vector) + (indice * vec->num_bytes),
+//			elements, num_indices * vec->num_bytes);
+	//memcpy(vec->vector, elements, num_indices * vec->num_bytes);
 
 	// increment number of elements
 	vec->active_length += num_indices;
@@ -167,7 +173,7 @@ Vector find_vector_indices(Vector *vec, void *value) {
 	for (size_t i = 0; i < vec->active_length; i++) {
 		dst = (char *) vec->vector + (i * vec->num_bytes);
 		compare = memcmp(dst, val, vec->num_bytes);
-		if (compare == 0) append_vector(&indices, &i, 1);
+		if (compare == 0) push_vector(&indices, &i, 1);
 	}
 	return indices;
 }
