@@ -178,6 +178,7 @@ The function ``delete_vector_values(Vector *vec, void *value)`` can be used to d
 of a value from a vector container.
 
 .. code-block:: c
+
    Vector int_vec = init_type_vector(INT, 6);
    int a[6] = {1, 2, 1, 3, 4, 1);
    push_vector(&int_vec, a, 6);
@@ -193,6 +194,7 @@ The function ``replace_vector_indice(Vector *vec, size_t index, void *replacemen
 the function an index containing data that should be replaced with ``replacement_value``.
 
 .. code-block:: c
+
    Vector double_vec = init_type_vector(DOUBLE, 3);
    double a[3] = {1.1, 2.2, 3.3};
    double b = 4.4;
@@ -209,6 +211,7 @@ If the value exists at one or multiple places in the vector it will be replaced
 with ``new_value``.
 
 .. code-block:: c
+
    Vector double_vec = init_type_vector(DOUBLE, 3);
    double a[3] = {1.1, 2.2, 3.3};
    double b = 3.3;
