@@ -248,8 +248,8 @@ Vector find_vector_indices(Vector *vec, void *value);
  * This function will deleted all elements from an array that match a user
  * defined scalar
  *
- * @param vev A Vector array
- * @param a scalar value of the same data type as the value in vev
+ * @param vec A Vector array
+ * @param value a scalar value of the same data type as the value in vev
  *
  * @code
  * size_t indices = 5;
@@ -317,7 +317,23 @@ int replace_vector_index(Vector *vec, size_t index, void *replacement_value);
 void replace_vector_values(Vector *vec, void *old_value, void *new_value);
 // --------------------------------------------------------------------------------
 
-void delete_duplicate_vector(Vector *vec);
+/**
+ * This function will delete all duplicate values in a vector container
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
+ * Vector vec = init_type_vector(FLOAT, 7);
+ * append_vector(&vec, a, 7);
+ * delete_vector_duplicates(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%f \n", ((float *)vec.vector)[i]);
+ * }
+ * // >> 1.1, 2.2, 4.5, 2.3
+ * @endcode
+ */
+void delete_vector_duplicates(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

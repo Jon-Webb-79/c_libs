@@ -220,6 +220,7 @@ TEST(test_find_vector_indices, find_double) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_DELETE_ELEMENTS
 
 /* This function tests the delete_vector_values function to ensure it properly
  * deletes all elements in a Vector of a specific value */
@@ -235,6 +236,7 @@ TEST(test_delete_elements, delete_int) {
 }
 // ================================================================================
 // ================================================================================
+// TEST REPLACE_VECTOR_INDEX
 
 /* This function tests the replace_vector_index function to ensure it properly
  * replaces the value at a vector index with a user defined value */
@@ -249,9 +251,11 @@ TEST(replace_vector_index, replace_float) {
 	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[1]);
 	EXPECT_FLOAT_EQ(3.3f, ((float *)vec.vector)[2]);
 	EXPECT_FLOAT_EQ(4.5f, ((float *)vec.vector)[3]);
+	free_vector(&vec);
 }
 // ================================================================================
 // ================================================================================
+// TEST REPLACE_VECTOR_VALUES
 
 /* This function tests the replace_vector_element function to ensure it 
  * properly replaces multiple elements with the correct float value
@@ -266,7 +270,24 @@ TEST(replace_vector_values, replace_float) {
 	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[0]);
 	EXPECT_FLOAT_EQ(2.2f, ((float *)vec.vector)[1]);
 	EXPECT_FLOAT_EQ(9.4f, ((float *)vec.vector)[2]);
-	EXPECT_FLOAT_EQ(4.5f, ((float *)vec.vector)[3]);	
+	EXPECT_FLOAT_EQ(4.5f, ((float *)vec.vector)[3]);
+	free_vector(&vec);
+}
+// ================================================================================
+// ================================================================================
+// TEST DELETE_DUPLICATES_VECTOR
+
+TEST(test_delete_duplicates, delete_float) {
+	float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
+	float c[4] = {1.1, 2.2, 4.5, 2.3};
+	float b = 1.1;
+	Vector vec = init_type_vector(FLOAT, 7);
+	push_vector(&vec, a, 7);
+	delete_vector_duplicates(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(c[i], ((float *)vec.vector)[i]);
+	}
+	free_vector(&vec);
 }
 // ================================================================================
 // ================================================================================

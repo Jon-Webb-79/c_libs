@@ -211,23 +211,29 @@ int replace_vector_index(Vector *vec, size_t index, void *replacement_value) {
 
 void replace_vector_values(Vector *vec, void *old_value, void *new_value) {
 	int compare;
-	char *val = (char *)old_value;
-	char *dst;
-	Vector indices = init_type_vector(INT, 10);
 	// Instantiate vector container with an estimated size of 10
 	for (size_t i = 0; i < vec->active_length; i++) {
-		dst = (char *) vec->vector + (i * vec->num_bytes);
-		compare = memcmp(dst, val, vec->num_bytes);
+		compare = memcmp(vec->vector + (i * vec->num_bytes), old_value, vec->num_bytes);
 		if (compare == 0) {
-			memmove(dst, new_value, vec->num_bytes);
+			memmove((char *)vec->vector + (i * vec->num_bytes), new_value, vec->num_bytes);
 		}
-		if (compare == 0) push_vector(&indices, &i, 1);
 	}
 }
 // --------------------------------------------------------------------------------
 
-void delete_duplicate_vector(Vector *vec) {
-
+void delete_vector_duplicates(Vector *vec) {
+	int compare;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			compare = memcmp(vec->vector + (i * vec->num_bytes),
+							 vec->vector + (j * vec->num_bytes),
+							 vec->num_bytes);
+			if (compare == 0) {
+				pop_vector(vec, j);
+				j -= 1;
+			}
+		}
+	}
 }
 // ================================================================================
 // ================================================================================

@@ -136,7 +136,7 @@ wishes to insert data.  An example is shown below.
    // Leads to the vector [1.1, 2.2, 1.2, 3.3]
 
    float c[3] = {10.0, 11.0 ,12.0};
-   insert_vector(&float, c, 3, 3);
+   insert_vector(&float_vec, c, 3, 3);
    // Leads to the vector [1.1, 2.2, 1.2, 10.0, 11.0, 12.0, 3.3]
 
 ==========
@@ -219,3 +219,19 @@ with ``new_value``.
    push_vector(&double_vec, a, 3);
    replace_vector_values(&double_vec, &b, &c);
    // [1.1, 2.2, 6.6]
+
+========================
+delete_vector_duplicates
+========================
+The functin ``delete_vector_duplicates(Vector *vec)`` will delete all duplicate values
+in a vector container
+
+.. code-block:: c
+
+   float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
+   float c[4] = {1.1, 2.2, 4.5, 2.3};
+   float b = 1.1;
+   Vector vec = init_type_vector(FLOAT, 7);
+   push_vector(&vec, a, 7);
+   delete_vector_duplicates(&vec);
+   // [1.1, 2.2, 4.5, 2.3]

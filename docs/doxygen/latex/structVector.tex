@@ -2,7 +2,7 @@
 \label{structVector}\index{Vector@{Vector}}
 
 
-{\ttfamily \#include $<$vec.\+h$>$}
+{\ttfamily \#include $<$vector.\+h$>$}
 
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -15,17 +15,7 @@ size\+\_\+t \mbox{\hyperlink{structVector_ab907c9fd798246105a8c54a80697f91a}{all
 \item 
 size\+\_\+t \mbox{\hyperlink{structVector_aca2e44fd5525a105e7dc19f39408b0f3}{num\+\_\+bytes}}
 \item 
-\mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{structVector_abbb604532e7f41a38e0f73fe4815d687}{dat\+\_\+type}}
-\item 
-void $\ast$ \mbox{\hyperlink{structVector_ab959ab99b79bc9634edab7a2013c28f9}{array}}
-\item 
-size\+\_\+t \mbox{\hyperlink{structVector_aa6d6b43a537b8e7222224c00c58e79f5}{len}}
-\item 
-size\+\_\+t \mbox{\hyperlink{structVector_ae4665570b1b91f783645fa0e2eb884af}{size}}
-\item 
-int \mbox{\hyperlink{structVector_a7a43730b4f1a279d937d399610a8f875}{elem}}
-\item 
-\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} \mbox{\hyperlink{structVector_ae57a2b2fbc1fd0c432eda3e7063c0601}{dat}}
+\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{structVector_abbb604532e7f41a38e0f73fe4815d687}{dat\+\_\+type}}
 \end{DoxyCompactItemize}
 
 
@@ -42,20 +32,7 @@ A container for a dynamically allocated array and related data
 \hline
 {\em num\+\_\+bytes} & The number of bytes consumed by a single indice \\
 \hline
-{\em dat\+\_\+type} & The data type. Must use data types allocated in dtype enum\\
-\hline
-\end{DoxyParams}
-A container for a dynamically allocated array and related data
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & a pointer to an array in memory \\
-\hline
-{\em len} & The active length of the array \\
-\hline
-{\em size} & The total number of indices allocated for the array \\
-\hline
-{\em elem} & The memory consumption for each indice \\
+{\em dat\+\_\+type} & The data type. Must use data types allocated in dtype enum \\
 \hline
 \end{DoxyParams}
 
@@ -73,47 +50,17 @@ A container for a dynamically allocated array and related data
 \doxysubsubsection{\texorpdfstring{allocated\_length}{allocated\_length}}
 {\footnotesize\ttfamily size\+\_\+t Vector\+::allocated\+\_\+length}
 
-\mbox{\Hypertarget{structVector_ab959ab99b79bc9634edab7a2013c28f9}\label{structVector_ab959ab99b79bc9634edab7a2013c28f9}} 
-\index{Vector@{Vector}!array@{array}}
-\index{array@{array}!Vector@{Vector}}
-\doxysubsubsection{\texorpdfstring{array}{array}}
-{\footnotesize\ttfamily void$\ast$ Vector\+::array}
-
-\mbox{\Hypertarget{structVector_ae57a2b2fbc1fd0c432eda3e7063c0601}\label{structVector_ae57a2b2fbc1fd0c432eda3e7063c0601}} 
-\index{Vector@{Vector}!dat@{dat}}
-\index{dat@{dat}!Vector@{Vector}}
-\doxysubsubsection{\texorpdfstring{dat}{dat}}
-{\footnotesize\ttfamily \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} Vector\+::dat}
-
 \mbox{\Hypertarget{structVector_abbb604532e7f41a38e0f73fe4815d687}\label{structVector_abbb604532e7f41a38e0f73fe4815d687}} 
 \index{Vector@{Vector}!dat\_type@{dat\_type}}
 \index{dat\_type@{dat\_type}!Vector@{Vector}}
 \doxysubsubsection{\texorpdfstring{dat\_type}{dat\_type}}
-{\footnotesize\ttfamily \mbox{\hyperlink{vec_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} Vector\+::dat\+\_\+type}
-
-\mbox{\Hypertarget{structVector_a7a43730b4f1a279d937d399610a8f875}\label{structVector_a7a43730b4f1a279d937d399610a8f875}} 
-\index{Vector@{Vector}!elem@{elem}}
-\index{elem@{elem}!Vector@{Vector}}
-\doxysubsubsection{\texorpdfstring{elem}{elem}}
-{\footnotesize\ttfamily int Vector\+::elem}
-
-\mbox{\Hypertarget{structVector_aa6d6b43a537b8e7222224c00c58e79f5}\label{structVector_aa6d6b43a537b8e7222224c00c58e79f5}} 
-\index{Vector@{Vector}!len@{len}}
-\index{len@{len}!Vector@{Vector}}
-\doxysubsubsection{\texorpdfstring{len}{len}}
-{\footnotesize\ttfamily size\+\_\+t Vector\+::len}
+{\footnotesize\ttfamily \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} Vector\+::dat\+\_\+type}
 
 \mbox{\Hypertarget{structVector_aca2e44fd5525a105e7dc19f39408b0f3}\label{structVector_aca2e44fd5525a105e7dc19f39408b0f3}} 
 \index{Vector@{Vector}!num\_bytes@{num\_bytes}}
 \index{num\_bytes@{num\_bytes}!Vector@{Vector}}
 \doxysubsubsection{\texorpdfstring{num\_bytes}{num\_bytes}}
 {\footnotesize\ttfamily size\+\_\+t Vector\+::num\+\_\+bytes}
-
-\mbox{\Hypertarget{structVector_ae4665570b1b91f783645fa0e2eb884af}\label{structVector_ae4665570b1b91f783645fa0e2eb884af}} 
-\index{Vector@{Vector}!size@{size}}
-\index{size@{size}!Vector@{Vector}}
-\doxysubsubsection{\texorpdfstring{size}{size}}
-{\footnotesize\ttfamily size\+\_\+t Vector\+::size}
 
 \mbox{\Hypertarget{structVector_a2ed69ccf5252684aeec041b3d36e0289}\label{structVector_a2ed69ccf5252684aeec041b3d36e0289}} 
 \index{Vector@{Vector}!vector@{vector}}
@@ -123,7 +70,6 @@ A container for a dynamically allocated array and related data
 
 
 
-The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/\mbox{\hyperlink{vec_8h}{vec.\+h}}\item 
 /home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/\mbox{\hyperlink{vector_8h}{vector.\+h}}\end{DoxyCompactItemize}
