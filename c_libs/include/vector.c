@@ -258,6 +258,27 @@ void unique_vector_values(Vector *vec) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void sort_int_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    int var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+
+		min_idx = i;
+		temp = ((int *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((int *)vec->vector)[min_idx];
+			var_two = ((int *)vec->vector)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((int *)vec->vector)[min_idx];
+			}
+		}
+		* (int *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((int *)vec->vector)[i];
+		* (int *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

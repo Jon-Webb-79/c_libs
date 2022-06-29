@@ -128,6 +128,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2da99bf125e878741ca4979a784db7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1835f04af3be7ac9e07b9f334d49703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ac1835f04af3be7ac9e07b9f334d49703">unique_vector_values</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:ac1835f04af3be7ac9e07b9f334d49703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c38c56dc3ce68d24e42141bb2722884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a1c38c56dc3ce68d24e42141bb2722884">sort_int_vector_ascending</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a1c38c56dc3ce68d24e42141bb2722884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="acfe99d230e216901bd782cc580e4e815" name="acfe99d230e216901bd782cc580e4e815"></a>
@@ -695,6 +697,40 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 4, 3, 4, 4, 5</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a1c38c56dc3ce68d24e42141bb2722884" name="a1c38c56dc3ce68d24e42141bb2722884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c38c56dc3ce68d24e42141bb2722884">&#9670;&nbsp;</a></span>sort_int_vector_ascending()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sort_int_vector_ascending </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will sort the data in an integer vector container in ascending order</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {3, 1, 5, 2, 6};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
+<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a1c38c56dc3ce68d24e42141bb2722884">sort_int_vector_ascending</a>(&amp;vec);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
+<div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6</span></div>
+<div class="ttc" id="avector_8c_html_a1c38c56dc3ce68d24e42141bb2722884"><div class="ttname"><a href="vector_8c.html#a1c38c56dc3ce68d24e42141bb2722884">sort_int_vector_ascending</a></div><div class="ttdeci">void sort_int_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:263</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

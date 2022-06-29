@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unique_5fvector_5fvalues_0',['unique_vector_values',['../vector_8c.html#ac1835f04af3be7ac9e07b9f334d49703',1,'unique_vector_values(Vector *vec):&#160;vector.c'],['../vector_8h.html#ac1835f04af3be7ac9e07b9f334d49703',1,'unique_vector_values(Vector *vec):&#160;vector.c']]]
+  ['sort_5fint_5fvector_5fascending_0',['sort_int_vector_ascending',['../vector_8c.html#a1c38c56dc3ce68d24e42141bb2722884',1,'sort_int_vector_ascending(Vector *vec):&#160;vector.c'],['../vector_8h.html#a1c38c56dc3ce68d24e42141bb2722884',1,'sort_int_vector_ascending(Vector *vec):&#160;vector.c']]]
 ];

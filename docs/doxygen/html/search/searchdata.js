@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "acdfilnprsuv",
   1: "v",
   2: "av",
-  3: "adfipru",
+  3: "adfiprsu",
   4: "adnv",
   5: "d",
   6: "cdfilns"

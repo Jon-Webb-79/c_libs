@@ -305,7 +305,19 @@ TEST(test_unique_vector, unique_float) {
 	}
 	free_vector(&vec);
 }
+// --------------------------------------------------------------------------------
+// TEST SORT_ASCENDING_ORDER
 
+TEST(test_sort_ascending, sort_int_ascending) {
+	int a[5] = {3, 6, 2, 1, 5};
+	int b[5] = {1, 2, 3, 5, 6};
+	Vector vec = init_type_vector(INT, 5);
+	push_vector(&vec, a, 5);
+	sort_int_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

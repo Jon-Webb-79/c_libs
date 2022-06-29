@@ -352,8 +352,28 @@ void delete_vector_duplicates(Vector *vec);
  * // >> 4.5, 2.3
  * @endcode
  */
-
 void unique_vector_values(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort the data in an integer vector container in ascending
+ * order
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * int a[5] = {3, 1, 5, 2, 6};
+ * Vector vec = init_type_vector(INT, 5);
+ * append_vector(&vec, a, 5);
+ * sort_int_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%d \n", ((int *)vec.vector)[i]);
+ * }
+ * // >> 1, 2, 3, 5, 6
+ * @endcode
+ */
+void sort_int_vector_ascending(Vector *vec);
+
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================
