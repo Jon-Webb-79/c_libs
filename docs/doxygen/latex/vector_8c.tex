@@ -25,6 +25,8 @@ int \mbox{\hyperlink{vector_8c_acdbd40da89542d36b350d4efae7a50bf}{replace\+\_\+v
 void \mbox{\hyperlink{vector_8c_a3ecab6860245be928915ae67510fad59}{replace\+\_\+vector\+\_\+values}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, void $\ast$old\+\_\+value, void $\ast$new\+\_\+value)
 \item 
 void \mbox{\hyperlink{vector_8c_a2da99bf125e878741ca4979a784db7e6}{delete\+\_\+vector\+\_\+duplicates}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_ac1835f04af3be7ac9e07b9f334d49703}{unique\+\_\+vector\+\_\+values}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -346,6 +348,31 @@ This function will replace any values in an array that match the user descriptio
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 4, 3, 4, 4, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_ac1835f04af3be7ac9e07b9f334d49703}\label{vector_8c_ac1835f04af3be7ac9e07b9f334d49703}} 
+\index{vector.c@{vector.c}!unique\_vector\_values@{unique\_vector\_values}}
+\index{unique\_vector\_values@{unique\_vector\_values}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{unique\_vector\_values()}{unique\_vector\_values()}}
+{\footnotesize\ttfamily void unique\+\_\+vector\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will delete all non unique values in a vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A vector container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 7);}
+\DoxyCodeLine{append\_vector(\&vec, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac1835f04af3be7ac9e07b9f334d49703}{unique\_vector\_values}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 4.5, 2.3}}
 
 \end{DoxyCode}
  

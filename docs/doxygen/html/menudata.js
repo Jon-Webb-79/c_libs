@@ -43,13 +43,15 @@ var menudata={children:[
 {text:"n",url:"globals.html#index_n"},
 {text:"p",url:"globals.html#index_p"},
 {text:"r",url:"globals.html#index_r"},
-{text:"s",url:"globals.html#index_s"}]},
+{text:"s",url:"globals.html#index_s"},
+{text:"u",url:"globals.html#index_u"}]},
 {text:"Functions",url:"globals_func.html",children:[
 {text:"a",url:"globals_func.html#index_a"},
 {text:"d",url:"globals_func.html#index_d"},
 {text:"f",url:"globals_func.html#index_f"},
 {text:"i",url:"globals_func.html#index_i"},
 {text:"p",url:"globals_func.html#index_p"},
-{text:"r",url:"globals_func.html#index_r"}]},
+{text:"r",url:"globals_func.html#index_r"},
+{text:"u",url:"globals_func.html#index_u"}]},
 {text:"Enumerations",url:"globals_enum.html"},
 {text:"Enumerator",url:"globals_eval.html"}]}]}]}

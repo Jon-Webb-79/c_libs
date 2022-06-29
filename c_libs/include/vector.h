@@ -334,6 +334,26 @@ void replace_vector_values(Vector *vec, void *old_value, void *new_value);
  * @endcode
  */
 void delete_vector_duplicates(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all non unique values in a vector container
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
+ * Vector vec = init_type_vector(FLOAT, 7);
+ * append_vector(&vec, a, 7);
+ * unique_vector_values(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%f \n", ((float *)vec.vector)[i]);
+ * }
+ * // >> 4.5, 2.3
+ * @endcode
+ */
+
+void unique_vector_values(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

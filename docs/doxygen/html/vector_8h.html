@@ -126,6 +126,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3ecab6860245be928915ae67510fad59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da99bf125e878741ca4979a784db7e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a2da99bf125e878741ca4979a784db7e6">delete_vector_duplicates</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:a2da99bf125e878741ca4979a784db7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1835f04af3be7ac9e07b9f334d49703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ac1835f04af3be7ac9e07b9f334d49703">unique_vector_values</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:ac1835f04af3be7ac9e07b9f334d49703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="acfe99d230e216901bd782cc580e4e815" name="acfe99d230e216901bd782cc580e4e815"></a>
@@ -693,6 +695,40 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 4, 3, 4, 4, 5</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ac1835f04af3be7ac9e07b9f334d49703" name="ac1835f04af3be7ac9e07b9f334d49703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1835f04af3be7ac9e07b9f334d49703">&#9670;&nbsp;</a></span>unique_vector_values()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unique_vector_values </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will delete all non unique values in a vector container</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A vector container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 7);</div>
+<div class="line">append_vector(&amp;vec, a, 7);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#ac1835f04af3be7ac9e07b9f334d49703">unique_vector_values</a>(&amp;vec);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
+<div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// &gt;&gt; 4.5, 2.3</span></div>
+<div class="ttc" id="avector_8c_html_ac1835f04af3be7ac9e07b9f334d49703"><div class="ttname"><a href="vector_8c.html#ac1835f04af3be7ac9e07b9f334d49703">unique_vector_values</a></div><div class="ttdeci">void unique_vector_values(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:240</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

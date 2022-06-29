@@ -235,6 +235,29 @@ void delete_vector_duplicates(Vector *vec) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void unique_vector_values(Vector *vec) {
+	int compare;
+	int flag = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			compare = memcmp(vec->vector + (i * vec->num_bytes),
+							 vec->vector + (j * vec->num_bytes),
+							 vec->num_bytes);
+			if (compare == 0) {
+				pop_vector(vec, j);
+				flag = 1;
+				j -= 1;
+			}
+		}
+		if (flag == 1) {
+			pop_vector(vec, i);
+			flag = 0;
+			i -= 1;
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

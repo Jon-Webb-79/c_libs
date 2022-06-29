@@ -291,4 +291,21 @@ TEST(test_delete_duplicates, delete_float) {
 }
 // ================================================================================
 // ================================================================================
+// TEST UNIQUE_VECTOR_VALUES
+
+TEST(test_unique_vector, unique_float) {
+	float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
+	float c[4] = {4.5, 2.3};
+	float b = 1.1;
+	Vector vec = init_type_vector(FLOAT, 7);
+	push_vector(&vec, a, 7);
+	unique_vector_values(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(c[i], ((float *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+
+// ================================================================================
+// ================================================================================
 // eof

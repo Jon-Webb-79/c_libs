@@ -205,7 +205,7 @@ the function an index containing data that should be replaced with ``replacement
 =====================
 replace_vector_values
 =====================
-THe function ``replace_vector_values(Vector *vec, void *old_value, void *new_value)``
+The function ``replace_vector_values(Vector *vec, void *old_value, void *new_value)``
 allows a user to enter an ``old_value``.  The function will search the vector container.
 If the value exists at one or multiple places in the vector it will be replaced
 with ``new_value``.
@@ -223,15 +223,28 @@ with ``new_value``.
 ========================
 delete_vector_duplicates
 ========================
-The functin ``delete_vector_duplicates(Vector *vec)`` will delete all duplicate values
+The function ``delete_vector_duplicates(Vector *vec)`` will delete all duplicate values
 in a vector container
 
 .. code-block:: c
 
    float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
-   float c[4] = {1.1, 2.2, 4.5, 2.3};
-   float b = 1.1;
    Vector vec = init_type_vector(FLOAT, 7);
    push_vector(&vec, a, 7);
    delete_vector_duplicates(&vec);
    // [1.1, 2.2, 4.5, 2.3]
+
+====================
+unique_vector_values
+====================
+The function ``unique_vector_values(Vector *vec)`` will delete all non unique values
+in a vector container.
+
+.. code-block:: c
+
+   float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
+   Vector vec = init_type_vector(FLOAT, 7);
+   push_vector(&vec, a, 7);
+   unique_vector_values(&vec);
+   // [4.5, 2.3]
+
