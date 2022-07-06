@@ -317,6 +317,85 @@ TEST(test_sort_ascending, sort_int_ascending) {
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
 	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_sort_ascending, sort_float_ascending) {
+	float a[5] = {3.4, 6.8, 2.1, 1.6, 5.0};
+	float b[5] = {1.6, 2.1, 3.4, 5.0, 6.8};
+	Vector vec = init_type_vector(FLOAT, 5);
+	push_vector(&vec, a, 5);
+	sort_float_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((float *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_sort_ascending, sort_double_ascending) {
+	double a[5] = {3.4, 6.8, 2.1, 1.6, 5.0};
+	double b[5] = {1.6, 2.1, 3.4, 5.0, 6.8};
+	Vector vec = init_type_vector(DOUBLE, 5);
+	push_vector(&vec, a, 5);
+	sort_double_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((double *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_sort_ascending, sort_char_ascending) {
+	char a[6] = "dzCba";
+	char b[6] = "Cabdz";
+	Vector vec = init_type_vector(CHAR, 6);
+	push_vector(&vec, a, 6);
+	sort_char_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_sort_ascending, sort_short_ascending) {
+	short a[5] = {3, 6, 2, 1, 5};
+	short b[5] = {1, 2, 3, 5, 6};
+	Vector vec = init_type_vector(SHORTINT, 5);
+	push_vector(&vec, a, 5);
+	sort_short_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((short *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_sort_ascending, sort_long_ascending) {
+	long a[5] = {3, 6, 2, 1, 5};
+	long b[5] = {1, 2, 3, 5, 6};
+	Vector vec = init_type_vector(LONG, 5);
+	push_vector(&vec, a, 5);
+	sort_long_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST(test_sort_ascending, sort_longlong_ascending) {
+	long long a[5] = {3, 6, 2, 1, 5};
+	long long b[5] = {1, 2, 3, 5, 6};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	sort_longlong_vector_ascending(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
 }
 // ================================================================================
 // ================================================================================

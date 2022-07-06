@@ -30,7 +30,7 @@ In order to download this repository from github, follow these instructions
 1. Ensure you have .git installed on your computer
 2. At your desired location create a directory titled ``c_libs``
 3. Open a terminal (Bash, zsh, Linux, or DOS) and cd to the ``c_libs`` directory and type
-   ``clone https://github.com/Jon-Webb-79/Project_Name.git c_libs``
+   ``clone https://github.com/Jon-Webb-79/c_libs.git c_libs``
 
 ******
 Vector

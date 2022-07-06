@@ -264,7 +264,6 @@ void sort_int_vector_ascending(Vector *vec) {
 	int i, j, min_idx;
     int var_one, var_two, temp;
 	for (i = 0; i < vec->active_length - 1; i++) {
-
 		min_idx = i;
 		temp = ((int *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
@@ -277,6 +276,131 @@ void sort_int_vector_ascending(Vector *vec) {
 		}
 		* (int *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((int *)vec->vector)[i];
 		* (int *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_float_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    float var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((float *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((float *)vec->vector)[min_idx];
+			var_two = ((float *)vec->vector)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((float *)vec->vector)[min_idx];
+			}
+		}
+		* (float *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((float *)vec->vector)[i];
+		* (float *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_double_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    double var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((double *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((double *)vec->vector)[min_idx];
+			var_two = ((double *)vec->vector)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((double *)vec->vector)[min_idx];
+			}
+		}
+		* (double *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((double *)vec->vector)[i];
+		* (double *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_char_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    char var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((char *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((char *)vec->vector)[min_idx];
+			var_two = ((char *)vec->vector)[j];
+			if(strcmp(&var_two, &var_one) < 0) {
+				min_idx = j;
+				temp = ((char *)vec->vector)[min_idx];
+			}
+		}
+		* (char *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((char *)vec->vector)[i];
+		* (char *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+	if (((char *)vec->vector)[vec->active_length] == '\0') {
+		char delimeter = '\0';
+		push_vector(vec, &delimeter, 1);
+		pop_vector(vec, 0);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_short_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    short var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((short *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((short *)vec->vector)[min_idx];
+			var_two = ((short *)vec->vector)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((short *)vec->vector)[min_idx];
+			}
+		}
+		* (short *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((short *)vec->vector)[i];
+		* (short *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_long_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    long var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((long *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((long *)vec->vector)[min_idx];
+			var_two = ((long *)vec->vector)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((long *)vec->vector)[min_idx];
+			}
+		}
+		* (long *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((long *)vec->vector)[i];
+		* (long *) ((char *) vec->vector + i * vec->num_bytes) = temp;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_longlong_vector_ascending(Vector *vec) {
+	int i, j, min_idx;
+    long long var_one, var_two, temp;
+	for (i = 0; i < vec->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((long long *)vec->vector)[min_idx];
+		for (j = i + 1; j < vec->active_length; j++) {
+			var_one = ((long long *)vec->vector)[min_idx];
+			var_two = ((long long *)vec->vector)[j];
+			if (var_two < var_one) {
+				min_idx = j;
+				temp = ((long long *)vec->vector)[min_idx];
+			}
+		}
+		* (long long *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((long long *)vec->vector)[i];
+		* (long long *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
 }
 // ================================================================================

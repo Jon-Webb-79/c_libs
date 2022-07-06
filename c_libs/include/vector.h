@@ -24,7 +24,7 @@
  * An enum container with variables describing relevant data types
  *
  * @param FLOAT An integer representing 4 byte float data types
- * &param DOUBLE An integer representing 8 byte double data types
+ * @param DOUBLE An integer representing 8 byte double data types
  * @param CHAR An integer representing 1 byte char data types
  * @param INT An integer representing 4 byte int data types
  * @param STRING An integer representing a string data type as an array
@@ -373,7 +373,128 @@ void unique_vector_values(Vector *vec);
  * @endcode
  */
 void sort_int_vector_ascending(Vector *vec);
+// --------------------------------------------------------------------------------
 
+/**
+ * This function will sort the data in a float vector container in ascending
+ * order
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * float a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};
+ * Vector vec = init_type_vector(FLOAT, 5);
+ * append_vector(&vec, a, 5);
+ * sort_float_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%f \n", ((float *)vec.vector)[i]);
+ * }
+ * // >> 1.4, 2.1, 3.2, 5.0, 6.8
+ * @endcode
+ */
+void sort_float_vector_ascending(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort the data in a double vector container in ascending
+ * order
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * double a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};
+ * Vector vec = init_type_vector(DOUBLE, 5);
+ * append_vector(&vec, a, 5);
+ * sort_double_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%lf \n", ((double *)vec.vector)[i]);
+ * }
+ * // >> 1.4, 2.1, 3.2, 5.0, 6.8
+ * @endcode
+ */
+void sort_double_vector_ascending(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort the data in a char vector container in ascending
+ * order. WARNING: This function sorts capital and lower case letters, with
+ * capital letter being sorted first
+ * seperately
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * char a[6] = "eCdba";
+ * Vector vec = init_type_vector(CHAR, 6);
+ * append_vector(&vec, a, 6);
+ * sort_char_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%c \n", ((char *)vec.vector)[i]);
+ * }
+ * // >> 'C', 'a', 'b', 'd', 'e'
+ * @endcode
+ */
+void sort_char_vector_ascending(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector container with short integer data in
+ * ascending order
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * short a[6] = {3, 5, 2, 1, 8, 6}
+ * Vector vec = init_type_vector(SHORTINT, 6);
+ * append_vector(&vec, a, 6);
+ * sort_short_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%d \n", ((short *)vec.vector)[i]);
+ * }
+ * // >> 1, 2, 3, 5, 6, 8
+ * @endcode
+ */
+void sort_short_vector_ascending(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector container with long integer data in
+ * ascending order
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * long a[6] = {3, 5, 2, 1, 8, 6}
+ * Vector vec = init_type_vector(LONG, 6);
+ * append_vector(&vec, a, 6);
+ * sort_long_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%d \n", ((long *)vec.vector)[i]);
+ * }
+ * // >> 1, 2, 3, 5, 6, 8
+ * @endcode
+ */
+void sort_long_vector_ascending(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector container with long long integer data in
+ * ascending order
+ *
+ * @param vec A vector container
+ *
+ * @code
+ * long long a[6] = {3, 5, 2, 1, 8, 6}
+ * Vector vec = init_type_vector(LONGLONG, 6);
+ * append_vector(&vec, a, 6);
+ * sort_longlong_vector_ascending(&vec);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%d \n", ((long long *)vec.vector)[i]);
+ * }
+ * // >> 1, 2, 3, 5, 6, 8
+ * @endcode
+ */
+void sort_longlong_vector_ascending(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================
