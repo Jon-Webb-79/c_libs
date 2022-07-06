@@ -77,6 +77,7 @@ typedef struct
  * @param num_bytes The number of bytes consumed by each index in the array
  * @param num_indices The users guess for the total number of required indices
  *                    in the vector
+ * @return vec A Vector container
  *
  * @code
  * // - Create a dynamically allocated array container for integers, with allocated
@@ -94,6 +95,7 @@ Vector init_vector(size_t num_bytes, size_t num_indices);
  * @param dat_type The data type.  Must use a specified from the dtype enum.
  * @param num_indices The users guess for the total number of required indices
  *                    in the vector
+ * @return vec A Vector container
  *
  * @code
  * // - Create a dynamically allocated array container for integers, with allocated
