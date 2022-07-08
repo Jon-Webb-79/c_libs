@@ -3,6 +3,7 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
 \doxysubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,7 +53,7 @@ void \mbox{\hyperlink{vector_8h_a2da99bf125e878741ca4979a784db7e6}{delete\+\_\+v
 \item 
 void \mbox{\hyperlink{vector_8h_ac1835f04af3be7ac9e07b9f334d49703}{unique\+\_\+vector\+\_\+values}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \item 
-void \mbox{\hyperlink{vector_8h_a1c38c56dc3ce68d24e42141bb2722884}{sort\+\_\+int\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_a9913f641dd90f7461031ecc49be7b2b9}{sort\+\_\+int\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
 void \mbox{\hyperlink{vector_8h_a4cb4240a18cb06160837a7ae65bcc0bb}{sort\+\_\+float\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \item 
@@ -145,7 +146,7 @@ NONE&\\
 \doxysubsubsection{\texorpdfstring{delete\_vector\_duplicates()}{delete\_vector\_duplicates()}}
 {\footnotesize\ttfamily void delete\+\_\+vector\+\_\+duplicates (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will delete all duplicate values in a vector container
+This function will delete all duplicate values in a vector container. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -170,7 +171,7 @@ This function will delete all duplicate values in a vector container
 \doxysubsubsection{\texorpdfstring{delete\_vector\_values()}{delete\_vector\_values()}}
 {\footnotesize\ttfamily void delete\+\_\+vector\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
 
-This function will deleted all elements from an array that match a user defined scalar
+This function will deleted all elements from an array that match a user defined scalar. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -199,7 +200,7 @@ This function will deleted all elements from an array that match a user defined 
 \doxysubsubsection{\texorpdfstring{find\_vector\_indices()}{find\_vector\_indices()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+vector\+\_\+indices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
 
-This function will compare each index of a vector container with a sclar value and return an integer vector containing the index of each match in the original vector. NOTE\+: This function is sign sensitive and will not recognize -\/0.\+0 as being equal to 0.\+0. In addition, if the user passes data of different data types, this function will have undefined behavior. In addition, this function is predicated on the vector container having the appropriate value of {\ttfamily num\+\_\+bytes} for the data type.
+This function will compare each index of a vector container with a sclar value and return an integer vector containing the index of each match in the original vector. NOTE\+: This function is sign sensitive and will not recognize -\/0.\+0 as being equal to 0.\+0. In addition, if the user passes data of different data types, this function will have undefined behavior. In addition, this function is predicated on the vector container having the appropriate value of {\ttfamily num\+\_\+bytes} for the data type. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -249,9 +250,12 @@ Instantiates a \mbox{\hyperlink{structVector}{Vector}} container with a specifie
 \begin{DoxyParams}{Parameters}
 {\em dat\+\_\+type} & The data type. Must use a specified from the dtype enum. \\
 \hline
-{\em num\+\_\+indices} & The users guess for the total number of required indices in the vector\\
+{\em num\+\_\+indices} & The users guess for the total number of required indices in the vector \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vec A \mbox{\hyperlink{structVector}{Vector}} container
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
@@ -271,9 +275,12 @@ Instantiates a \mbox{\hyperlink{structVector}{Vector}} container where the user 
 \begin{DoxyParams}{Parameters}
 {\em num\+\_\+bytes} & The number of bytes consumed by each index in the array \\
 \hline
-{\em num\+\_\+indices} & The users guess for the total number of required indices in the vector\\
+{\em num\+\_\+indices} & The users guess for the total number of required indices in the vector \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vec A \mbox{\hyperlink{structVector}{Vector}} container
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
@@ -287,7 +294,7 @@ Instantiates a \mbox{\hyperlink{structVector}{Vector}} container where the user 
 \doxysubsubsection{\texorpdfstring{insert\_vector()}{insert\_vector()}}
 {\footnotesize\ttfamily int insert\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{num\+\_\+indices,  }\item[{size\+\_\+t}]{indice }\end{DoxyParamCaption})}
 
-This function inserts a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data inserted to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the pre-\/appended array.
+This function inserts a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data inserted to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the pre-\/appended array. This function is of time order 1.
 
 
 \begin{DoxyParams}{Parameters}
@@ -331,7 +338,7 @@ This function inserts a \mbox{\hyperlink{structVector}{Vector}} container with a
 \doxysubsubsection{\texorpdfstring{pop\_vector()}{pop\_vector()}}
 {\footnotesize\ttfamily int pop\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
 
-This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function
+This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function. This function is of time order 1.
 
 
 \begin{DoxyParams}{Parameters}
@@ -360,7 +367,7 @@ The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.
 \doxysubsubsection{\texorpdfstring{push\_vector()}{push\_vector()}}
 {\footnotesize\ttfamily int push\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
 
-This function appends a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data appended to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the appended array.
+This function appends a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data appended to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the appended array. This function is of time order 1.
 
 
 \begin{DoxyParams}{Parameters}
@@ -403,7 +410,7 @@ num Returns 0 if the function executes successfully, or returns a 1 if the funct
 \doxysubsubsection{\texorpdfstring{replace\_vector\_index()}{replace\_vector\_index()}}
 {\footnotesize\ttfamily int replace\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index,  }\item[{void $\ast$}]{replacement\+\_\+value }\end{DoxyParamCaption})}
 
-This function will replace the data in a \mbox{\hyperlink{structVector}{Vector}} element with another value. WARNING\+: The value replacing the initial value should be of the same type. If the data types are different it will lead to undefined behavior.
+This function will replace the data in a \mbox{\hyperlink{structVector}{Vector}} element with another value. WARNING\+: The value replacing the initial value should be of the same type. If the data types are different it will lead to undefined behavior. This function is of time order 1.
 
 
 \begin{DoxyParams}{Parameters}
@@ -433,7 +440,7 @@ This function will replace the data in a \mbox{\hyperlink{structVector}{Vector}}
 \doxysubsubsection{\texorpdfstring{replace\_vector\_values()}{replace\_vector\_values()}}
 {\footnotesize\ttfamily void replace\+\_\+vector\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{old\+\_\+value,  }\item[{void $\ast$}]{new\+\_\+value }\end{DoxyParamCaption})}
 
-This function will replace any values in an array that match the user description with another user defined value. WARNING\+: The value replacing the initial value must be of the same type as the initial value, otherwise the function will lead to undefined behavior.
+This function will replace any values in an array that match the user description with another user defined value. WARNING\+: The value replacing the initial value must be of the same type as the initial value, otherwise the function will lead to undefined behavior. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -464,7 +471,7 @@ This function will replace any values in an array that match the user descriptio
 \doxysubsubsection{\texorpdfstring{sort\_char\_vector\_ascending()}{sort\_char\_vector\_ascending()}}
 {\footnotesize\ttfamily void sort\+\_\+char\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort the data in a char vector container in ascending order. WARNING\+: This function sorts capital and lower case letters, with capital letter being sorted first seperately
+This function will sort the data in a char vector container in ascending order. WARNING\+: This function sorts capital and lower case letters, with capital letter being sorted first seperately. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -489,7 +496,7 @@ This function will sort the data in a char vector container in ascending order. 
 \doxysubsubsection{\texorpdfstring{sort\_double\_vector\_ascending()}{sort\_double\_vector\_ascending()}}
 {\footnotesize\ttfamily void sort\+\_\+double\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort the data in a double vector container in ascending order
+This function will sort the data in a double vector container in ascending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -514,7 +521,7 @@ This function will sort the data in a double vector container in ascending order
 \doxysubsubsection{\texorpdfstring{sort\_float\_vector\_ascending()}{sort\_float\_vector\_ascending()}}
 {\footnotesize\ttfamily void sort\+\_\+float\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort the data in a float vector container in ascending order
+This function will sort the data in a float vector container in ascending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -533,13 +540,13 @@ This function will sort the data in a float vector container in ascending order
 \DoxyCodeLine{\textcolor{comment}{// >> 1.4, 2.1, 3.2, 5.0, 6.8}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a1c38c56dc3ce68d24e42141bb2722884}\label{vector_8h_a1c38c56dc3ce68d24e42141bb2722884}} 
+ \mbox{\Hypertarget{vector_8h_a9913f641dd90f7461031ecc49be7b2b9}\label{vector_8h_a9913f641dd90f7461031ecc49be7b2b9}} 
 \index{vector.h@{vector.h}!sort\_int\_vector\_ascending@{sort\_int\_vector\_ascending}}
 \index{sort\_int\_vector\_ascending@{sort\_int\_vector\_ascending}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{sort\_int\_vector\_ascending()}{sort\_int\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+int\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int sort\+\_\+int\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort the data in an integer vector container in ascending order
+This function will sort the data in an integer vector container in ascending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -551,7 +558,7 @@ This function will sort the data in an integer vector container in ascending ord
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{3, 1, 5, 2, 6\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
 \DoxyCodeLine{append\_vector(\&vec, a, 5);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a1c38c56dc3ce68d24e42141bb2722884}{sort\_int\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9913f641dd90f7461031ecc49be7b2b9}{sort\_int\_vector\_ascending}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
@@ -564,7 +571,7 @@ This function will sort the data in an integer vector container in ascending ord
 \doxysubsubsection{\texorpdfstring{sort\_long\_vector\_ascending()}{sort\_long\_vector\_ascending()}}
 {\footnotesize\ttfamily void sort\+\_\+long\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort a vector container with long integer data in ascending order
+This function will sort a vector container with long integer data in ascending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -589,7 +596,7 @@ This function will sort a vector container with long integer data in ascending o
 \doxysubsubsection{\texorpdfstring{sort\_longlong\_vector\_ascending()}{sort\_longlong\_vector\_ascending()}}
 {\footnotesize\ttfamily void sort\+\_\+longlong\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort a vector container with long long integer data in ascending order
+This function will sort a vector container with long long integer data in ascending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -614,7 +621,7 @@ This function will sort a vector container with long long integer data in ascend
 \doxysubsubsection{\texorpdfstring{sort\_short\_vector\_ascending()}{sort\_short\_vector\_ascending()}}
 {\footnotesize\ttfamily void sort\+\_\+short\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort a vector container with short integer data in ascending order
+This function will sort a vector container with short integer data in ascending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
@@ -639,7 +646,7 @@ This function will sort a vector container with short integer data in ascending 
 \doxysubsubsection{\texorpdfstring{unique\_vector\_values()}{unique\_vector\_values()}}
 {\footnotesize\ttfamily void unique\+\_\+vector\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will delete all non unique values in a vector container
+This function will delete all non unique values in a vector container. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}

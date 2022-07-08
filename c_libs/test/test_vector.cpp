@@ -101,6 +101,20 @@ TEST(test_push_vector, array_float) {
 	EXPECT_EQ(12, vec.allocated_length);
 	free_vector(&vec);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests to see if the push_vector function correctly erases the
+ * \0 passing in a string / character array */
+TEST(test_push_vector, array_char) {
+	Vector vec = init_type_vector(CHAR, 6);
+	char a[6] = "Hello";
+	push_vector(&vec, a, 6);
+	ASSERT_EQ(5, vec.active_length);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		ASSERT_EQ(a[i], ((char *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
 // ================================================================================
 // ================================================================================
 
@@ -141,6 +155,21 @@ TEST(test_insert_vector, array_int) {
 	EXPECT_EQ(10, ((int *)vec.vector)[4]);
 	EXPECT_EQ(4, ((int *)vec.vector)[5]);
 	EXPECT_EQ(5, ((int *)vec.vector)[6]);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function ensures that the insert_vector function does not insert a
+ * null padding into the vector */
+TEST(test_insert_vector, array_char) {
+	Vector vec = init_type_vector(CHAR, 6);
+	char a[6] = "Hello";
+	char b[11] = "HelHellolo";
+	push_vector(&vec, a, 6);
+	insert_vector(&vec, a, 6, 3);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
+	}
 	free_vector(&vec);
 }
 // ================================================================================
@@ -277,6 +306,8 @@ TEST(replace_vector_values, replace_float) {
 // ================================================================================
 // TEST DELETE_DUPLICATES_VECTOR
 
+/* THis function tests delete_vector_duplicates To ensure it correctly identifies
+ * and deletes all duplicate values */
 TEST(test_delete_duplicates, delete_float) {
 	float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
 	float c[4] = {1.1, 2.2, 4.5, 2.3};
@@ -293,6 +324,8 @@ TEST(test_delete_duplicates, delete_float) {
 // ================================================================================
 // TEST UNIQUE_VECTOR_VALUES
 
+/* This function tests the unique_vector_values function to ensure it correctly
+ * deletes all values except for the unique values */
 TEST(test_unique_vector, unique_float) {
 	float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
 	float c[4] = {4.5, 2.3};
@@ -305,15 +338,18 @@ TEST(test_unique_vector, unique_float) {
 	}
 	free_vector(&vec);
 }
-// --------------------------------------------------------------------------------
+// ================================================================================
+// ================================================================================
 // TEST SORT_ASCENDING_ORDER
 
-TEST(test_sort_ascending, sort_int_ascending) {
+/* This function tests the sort_int_vector function to ensure it correctly
+ * sorts an integer array in ascending order */
+TEST(test_sort, sort_int_ascending) {
 	int a[5] = {3, 6, 2, 1, 5};
 	int b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(INT, 5);
 	push_vector(&vec, a, 5);
-	sort_int_vector_ascending(&vec);
+	sort_int_vector(&vec, 0);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
 	}
@@ -321,12 +357,14 @@ TEST(test_sort_ascending, sort_int_ascending) {
 }
 // --------------------------------------------------------------------------------
 
-TEST(test_sort_ascending, sort_float_ascending) {
+/* This function tests the sort_float_vector function to ensure it correctly
+ * sorts a float array in ascending order */
+TEST(test_sort, sort_float_ascending) {
 	float a[5] = {3.4, 6.8, 2.1, 1.6, 5.0};
 	float b[5] = {1.6, 2.1, 3.4, 5.0, 6.8};
 	Vector vec = init_type_vector(FLOAT, 5);
 	push_vector(&vec, a, 5);
-	sort_float_vector_ascending(&vec);
+	sort_float_vector(&vec, 0);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((float *)vec.vector)[i]);
 	}
@@ -334,12 +372,14 @@ TEST(test_sort_ascending, sort_float_ascending) {
 }
 // --------------------------------------------------------------------------------
 
-TEST(test_sort_ascending, sort_double_ascending) {
+/* This function tests the sort_double_vector function to ensure it correctly
+ * sorts a double array in ascending order */
+TEST(test_sort, sort_double_ascending) {
 	double a[5] = {3.4, 6.8, 2.1, 1.6, 5.0};
 	double b[5] = {1.6, 2.1, 3.4, 5.0, 6.8};
 	Vector vec = init_type_vector(DOUBLE, 5);
 	push_vector(&vec, a, 5);
-	sort_double_vector_ascending(&vec);
+	sort_double_vector(&vec, 0);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((double *)vec.vector)[i]);
 	}
@@ -347,12 +387,14 @@ TEST(test_sort_ascending, sort_double_ascending) {
 }
 // --------------------------------------------------------------------------------
 
-TEST(test_sort_ascending, sort_char_ascending) {
+/* This function tests the sort_char_vector function to ensure it correctly
+ * sorts a char array in ascending order */
+TEST(test_sort, sort_char_ascending) {
 	char a[6] = "dzCba";
 	char b[6] = "Cabdz";
 	Vector vec = init_type_vector(CHAR, 6);
 	push_vector(&vec, a, 6);
-	sort_char_vector_ascending(&vec);
+	sort_char_vector(&vec, 0);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
 	}
@@ -360,12 +402,14 @@ TEST(test_sort_ascending, sort_char_ascending) {
 }
 // --------------------------------------------------------------------------------
 
-TEST(test_sort_ascending, sort_short_ascending) {
+/* This function tests the sort_short_vector function to ensure it correctly
+ * sorts a short integer array in ascending order */
+TEST(test_sort, sort_short_ascending) {
 	short a[5] = {3, 6, 2, 1, 5};
 	short b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(SHORTINT, 5);
 	push_vector(&vec, a, 5);
-	sort_short_vector_ascending(&vec);
+	sort_short_vector(&vec, 0);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((short *)vec.vector)[i]);
 	}
@@ -373,12 +417,14 @@ TEST(test_sort_ascending, sort_short_ascending) {
 }
 // --------------------------------------------------------------------------------
 
-TEST(test_sort_ascending, sort_long_ascending) {
+/* This function tests the sort_long_vector function to ensure it correctly
+ * sorts a long integer array in ascending order */
+TEST(test_sort, sort_long_ascending) {
 	long a[5] = {3, 6, 2, 1, 5};
 	long b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(LONG, 5);
 	push_vector(&vec, a, 5);
-	sort_long_vector_ascending(&vec);
+	sort_long_vector(&vec, 0);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long *)vec.vector)[i]);
 	}
@@ -386,12 +432,104 @@ TEST(test_sort_ascending, sort_long_ascending) {
 }
 // --------------------------------------------------------------------------------
 
-TEST(test_sort_ascending, sort_longlong_ascending) {
+/* This function tests the sort_longlong_vector function to ensure it correctly
+ * sorts a long long integer in ascending order */
+TEST(test_sort, sort_longlong_ascending) {
 	long long a[5] = {3, 6, 2, 1, 5};
 	long long b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(LONGLONG, 5);
 	push_vector(&vec, a, 5);
-	sort_longlong_vector_ascending(&vec);
+	sort_longlong_vector(&vec, 0);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_int_vector function to ensure it correctly
+ * sorts an integer array in descending order */
+TEST(test_sort, sort_int_descending) {
+	int a[5] = {3, 6, 2, 1, 5};
+	int b[5] = {6, 5, 3, 2, 1};
+	Vector vec = init_type_vector(INT, 5);
+	push_vector(&vec, a, 5);
+	sort_int_vector(&vec, 1);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_float_vector function to ensure it correctly
+ * sorts a float array in descending order */
+TEST(test_sort, sort_float_descending) {
+	float a[5] = {3.4, 6.8, 2.1, 1.6, 5.0};
+	float b[5] = {6.8, 5.0, 3.4, 2.1, 1.6};
+	Vector vec = init_type_vector(FLOAT, 5);
+	push_vector(&vec, a, 5);
+	sort_float_vector(&vec, 1);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((float *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_double_vector function to ensure it correctly
+ * sorts a double array in descending order */
+TEST(test_sort, sort_double_descending) {
+	double a[5] = {3.4, 6.8, 2.1, 1.6, 5.0};
+	double b[5] = {6.8, 5.0, 3.4, 2.1, 1.6};
+	Vector vec = init_type_vector(DOUBLE, 5);
+	push_vector(&vec, a, 5);
+	sort_double_vector(&vec, 1);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((double *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_char_vector function to ensure it correctly
+ * sorts a char array in ascending order */
+TEST(test_sort, sort_char_descending) {
+	char a[6] = "dzCba";
+	char b[6] = "zdbaC";
+	Vector vec = init_type_vector(CHAR, 6);
+	push_vector(&vec, a, 6);
+	sort_char_vector(&vec, 1);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_long_vector function to ensure it correctly
+ * sorts a long integer array in descending order */
+TEST(test_sort, sort_long_descending) {
+	long a[5] = {3, 6, 2, 1, 5};
+	long b[5] = {6, 5, 3, 2, 1};
+	Vector vec = init_type_vector(LONG, 5);
+	push_vector(&vec, a, 5);
+	sort_long_vector(&vec, 1);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_longlong_vector function to ensure it correctly
+ * sorts a long long integer in descending order */
+TEST(test_sort, sort_longlong_descending) {
+	long long a[5] = {3, 6, 2, 1, 5};
+	long long b[5] = {6, 5, 3, 2, 1};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	sort_longlong_vector(&vec, 1);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
 	}

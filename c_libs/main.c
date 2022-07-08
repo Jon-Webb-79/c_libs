@@ -15,8 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO sort_vector_ascending_order
-// TODO sort_vector_descending_order
 // TODO reverse_vector
 // TODO median_vector
 // TODO sum_vector

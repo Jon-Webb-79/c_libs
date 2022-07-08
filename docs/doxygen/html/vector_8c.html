@@ -99,8 +99,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2da99bf125e878741ca4979a784db7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1835f04af3be7ac9e07b9f334d49703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#ac1835f04af3be7ac9e07b9f334d49703">unique_vector_values</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:ac1835f04af3be7ac9e07b9f334d49703"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c38c56dc3ce68d24e42141bb2722884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a1c38c56dc3ce68d24e42141bb2722884">sort_int_vector_ascending</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
-<tr class="separator:a1c38c56dc3ce68d24e42141bb2722884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9913f641dd90f7461031ecc49be7b2b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a9913f641dd90f7461031ecc49be7b2b9">sort_int_vector_ascending</a> (<a class="el" href="structVector.html">Vector</a> *vec, uint8_t method)</td></tr>
+<tr class="separator:a9913f641dd90f7461031ecc49be7b2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cb4240a18cb06160837a7ae65bcc0bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a4cb4240a18cb06160837a7ae65bcc0bb">sort_float_vector_ascending</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:a4cb4240a18cb06160837a7ae65bcc0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0744bffcc3112ead27469780f5825a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a0744bffcc3112ead27469780f5825a67">sort_double_vector_ascending</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
@@ -130,7 +130,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all duplicate values in a vector container</p>
+<p >This function will delete all duplicate values in a vector container. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -145,12 +145,12 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1, 2.2, 4.5, 2.3</span></div>
-<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:63</div></div>
-<div class="ttc" id="astructVector_html_a2ed69ccf5252684aeec041b3d36e0289"><div class="ttname"><a href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">Vector::vector</a></div><div class="ttdeci">char * vector</div><div class="ttdef"><b>Definition:</b> vector.h:64</div></div>
-<div class="ttc" id="astructVector_html_ab7bc85dcb16ebc2e4879b74a30167533"><div class="ttname"><a href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">Vector::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> vector.h:65</div></div>
+<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:72</div></div>
+<div class="ttc" id="astructVector_html_a2ed69ccf5252684aeec041b3d36e0289"><div class="ttname"><a href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">Vector::vector</a></div><div class="ttdeci">char * vector</div><div class="ttdef"><b>Definition:</b> vector.h:73</div></div>
+<div class="ttc" id="astructVector_html_ab7bc85dcb16ebc2e4879b74a30167533"><div class="ttname"><a href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">Vector::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> vector.h:74</div></div>
 <div class="ttc" id="avector_8c_html_a2da99bf125e878741ca4979a784db7e6"><div class="ttname"><a href="vector_8c.html#a2da99bf125e878741ca4979a784db7e6">delete_vector_duplicates</a></div><div class="ttdeci">void delete_vector_duplicates(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:224</div></div>
 <div class="ttc" id="avector_8c_html_aebfff769c9c952425c106d67726fdae8"><div class="ttname"><a href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a></div><div class="ttdeci">Vector init_type_vector(dtype dat_type, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:38</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:41</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -179,7 +179,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will deleted all elements from an array that match a user defined scalar</p>
+<p >This function will deleted all elements from an array that match a user defined scalar. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> array </td></tr>
@@ -198,7 +198,7 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 3, 2</span></div>
 <div class="ttc" id="avector_8c_html_ad54d5a00414e9ccc53ebd6432a9e5f1c"><div class="ttname"><a href="vector_8c.html#ad54d5a00414e9ccc53ebd6432a9e5f1c">delete_vector_values</a></div><div class="ttdeci">void delete_vector_values(Vector *vec, void *value)</div><div class="ttdef"><b>Definition:</b> vector.c:184</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:44</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -227,7 +227,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will compare each index of a vector container with a sclar value and return an integer vector containing the index of each match in the original vector. NOTE: This function is sign sensitive and will not recognize -0.0 as being equal to 0.0. In addition, if the user passes data of different data types, this function will have undefined behavior. In addition, this function is predicated on the vector container having the appropriate value of <code>num_bytes</code> for the data type.</p>
+<p >This function will compare each index of a vector container with a sclar value and return an integer vector containing the index of each match in the original vector. NOTE: This function is sign sensitive and will not recognize -0.0 as being equal to 0.0. In addition, if the user passes data of different data types, this function will have undefined behavior. In addition, this function is predicated on the vector container having the appropriate value of <code>num_bytes</code> for the data type. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container </td></tr>
@@ -303,10 +303,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dat_type</td><td>The data type. Must use a specified from the dtype enum. </td></tr>
-    <tr><td class="paramname">num_indices</td><td>The users guess for the total number of required indices in the vector</td></tr>
+    <tr><td class="paramname">num_indices</td><td>The users guess for the total number of required indices in the vector </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>vec A <a class="el" href="structVector.html">Vector</a> container</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// - Create a dynamically allocated array container for integers, with allocated</span></div>
 <div class="line"><span class="comment">//   memory for 5 indices</span></div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = init_notype(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
@@ -342,10 +343,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_bytes</td><td>The number of bytes consumed by each index in the array </td></tr>
-    <tr><td class="paramname">num_indices</td><td>The users guess for the total number of required indices in the vector</td></tr>
+    <tr><td class="paramname">num_indices</td><td>The users guess for the total number of required indices in the vector </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>vec A <a class="el" href="structVector.html">Vector</a> container</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// - Create a dynamically allocated array container for integers, with allocated</span></div>
 <div class="line"><span class="comment">//   memory for 5 indices</span></div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = init_notype(<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>), 5);</div>
@@ -389,7 +391,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function inserts a <a class="el" href="structVector.html">Vector</a> container with a scalar or an array of data. The data inserted to the <a class="el" href="structVector.html">Vector</a> container must be of the same type as the pre-appended array.</p>
+<p >This function inserts a <a class="el" href="structVector.html">Vector</a> container with a scalar or an array of data. The data inserted to the <a class="el" href="structVector.html">Vector</a> container must be of the same type as the pre-appended array. This function is of time order 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>The <a class="el" href="structVector.html">Vector</a> container </td></tr>
@@ -451,7 +453,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function</p>
+<p >This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function. This function is of time order 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container </td></tr>
@@ -504,7 +506,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function appends a <a class="el" href="structVector.html">Vector</a> container with a scalar or an array of data. The data appended to the <a class="el" href="structVector.html">Vector</a> container must be of the same type as the appended array.</p>
+<p >This function appends a <a class="el" href="structVector.html">Vector</a> container with a scalar or an array of data. The data appended to the <a class="el" href="structVector.html">Vector</a> container must be of the same type as the appended array. This function is of time order 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>The <a class="el" href="structVector.html">Vector</a> container </td></tr>
@@ -568,7 +570,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace the data in a <a class="el" href="structVector.html">Vector</a> element with another value. WARNING: The value replacing the initial value should be of the same type. If the data types are different it will lead to undefined behavior.</p>
+<p >This function will replace the data in a <a class="el" href="structVector.html">Vector</a> element with another value. WARNING: The value replacing the initial value should be of the same type. If the data types are different it will lead to undefined behavior. This function is of time order 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container </td></tr>
@@ -621,7 +623,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will replace any values in an array that match the user description with another user defined value. WARNING: The value replacing the initial value must be of the same type as the initial value, otherwise the function will lead to undefined behavior.</p>
+<p >This function will replace any values in an array that match the user description with another user defined value. WARNING: The value replacing the initial value must be of the same type as the initial value, otherwise the function will lead to undefined behavior. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container </td></tr>
@@ -658,7 +660,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort the data in a char vector container in ascending order. WARNING: This function sorts capital and lower case letters, with capital letter being sorted first seperately</p>
+<p >This function will sort the data in a char vector container in ascending order. WARNING: This function sorts capital and lower case letters, with capital letter being sorted first seperately. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -673,8 +675,8 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%c \n&quot;</span>, ((<span class="keywordtype">char</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; &#39;C&#39;, &#39;a&#39;, &#39;b&#39;, &#39;d&#39;, &#39;e&#39;</span></div>
-<div class="ttc" id="avector_8c_html_a8a5ab4c4f98fdea0dc9167e4d0da5a19"><div class="ttname"><a href="vector_8c.html#a8a5ab4c4f98fdea0dc9167e4d0da5a19">sort_char_vector_ascending</a></div><div class="ttdeci">void sort_char_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:323</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
+<div class="ttc" id="avector_8c_html_a8a5ab4c4f98fdea0dc9167e4d0da5a19"><div class="ttname"><a href="vector_8c.html#a8a5ab4c4f98fdea0dc9167e4d0da5a19">sort_char_vector_ascending</a></div><div class="ttdeci">void sort_char_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:332</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:44</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -693,7 +695,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort the data in a double vector container in ascending order</p>
+<p >This function will sort the data in a double vector container in ascending order. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -708,8 +710,8 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%lf \n&quot;</span>, ((<span class="keywordtype">double</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.4, 2.1, 3.2, 5.0, 6.8</span></div>
-<div class="ttc" id="avector_8c_html_a0744bffcc3112ead27469780f5825a67"><div class="ttname"><a href="vector_8c.html#a0744bffcc3112ead27469780f5825a67">sort_double_vector_ascending</a></div><div class="ttdeci">void sort_double_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:303</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
+<div class="ttc" id="avector_8c_html_a0744bffcc3112ead27469780f5825a67"><div class="ttname"><a href="vector_8c.html#a0744bffcc3112ead27469780f5825a67">sort_double_vector_ascending</a></div><div class="ttdeci">void sort_double_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:312</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -728,7 +730,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort the data in a float vector container in ascending order</p>
+<p >This function will sort the data in a float vector container in ascending order. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -743,26 +745,36 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.4, 2.1, 3.2, 5.0, 6.8</span></div>
-<div class="ttc" id="avector_8c_html_a4cb4240a18cb06160837a7ae65bcc0bb"><div class="ttname"><a href="vector_8c.html#a4cb4240a18cb06160837a7ae65bcc0bb">sort_float_vector_ascending</a></div><div class="ttdeci">void sort_float_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:283</div></div>
+<div class="ttc" id="avector_8c_html_a4cb4240a18cb06160837a7ae65bcc0bb"><div class="ttname"><a href="vector_8c.html#a4cb4240a18cb06160837a7ae65bcc0bb">sort_float_vector_ascending</a></div><div class="ttdeci">void sort_float_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:292</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a1c38c56dc3ce68d24e42141bb2722884" name="a1c38c56dc3ce68d24e42141bb2722884"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c38c56dc3ce68d24e42141bb2722884">&#9670;&nbsp;</a></span>sort_int_vector_ascending()</h2>
+<a id="a9913f641dd90f7461031ecc49be7b2b9" name="a9913f641dd90f7461031ecc49be7b2b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9913f641dd90f7461031ecc49be7b2b9">&#9670;&nbsp;</a></span>sort_int_vector_ascending()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sort_int_vector_ascending </td>
+          <td class="memname">int sort_int_vector_ascending </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
-          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort the data in an integer vector container in ascending order</p>
+<p >This function will sort the data in an integer vector container in ascending order. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -772,12 +784,12 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {3, 1, 5, 2, 6};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
 <div class="line">append_vector(&amp;vec, a, 5);</div>
-<div class="line"><a class="code hl_function" href="vector_8c.html#a1c38c56dc3ce68d24e42141bb2722884">sort_int_vector_ascending</a>(&amp;vec);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9913f641dd90f7461031ecc49be7b2b9">sort_int_vector_ascending</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6</span></div>
-<div class="ttc" id="avector_8c_html_a1c38c56dc3ce68d24e42141bb2722884"><div class="ttname"><a href="vector_8c.html#a1c38c56dc3ce68d24e42141bb2722884">sort_int_vector_ascending</a></div><div class="ttdeci">void sort_int_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:263</div></div>
+<div class="ttc" id="avector_8c_html_a9913f641dd90f7461031ecc49be7b2b9"><div class="ttname"><a href="vector_8c.html#a9913f641dd90f7461031ecc49be7b2b9">sort_int_vector_ascending</a></div><div class="ttdeci">int sort_int_vector_ascending(Vector *vec, uint8_t method)</div><div class="ttdef"><b>Definition:</b> vector.c:263</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -796,7 +808,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a vector container with long integer data in ascending order</p>
+<p >This function will sort a vector container with long integer data in ascending order. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -811,8 +823,8 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6, 8</span></div>
-<div class="ttc" id="avector_8c_html_af9383fc98af85248a14bc0749f7ab3bf"><div class="ttname"><a href="vector_8c.html#af9383fc98af85248a14bc0749f7ab3bf">sort_long_vector_ascending</a></div><div class="ttdeci">void sort_long_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:368</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:47</div></div>
+<div class="ttc" id="avector_8c_html_af9383fc98af85248a14bc0749f7ab3bf"><div class="ttname"><a href="vector_8c.html#af9383fc98af85248a14bc0749f7ab3bf">sort_long_vector_ascending</a></div><div class="ttdeci">void sort_long_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:377</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -831,7 +843,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a vector container with long long integer data in ascending order</p>
+<p >This function will sort a vector container with long long integer data in ascending order. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -846,8 +858,8 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> <span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6, 8</span></div>
-<div class="ttc" id="avector_8c_html_a0d72bcc558c52e3ce9b57dc74ce7949c"><div class="ttname"><a href="vector_8c.html#a0d72bcc558c52e3ce9b57dc74ce7949c">sort_longlong_vector_ascending</a></div><div class="ttdeci">void sort_longlong_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:388</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a></div><div class="ttdeci">@ LONGLONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
+<div class="ttc" id="avector_8c_html_a0d72bcc558c52e3ce9b57dc74ce7949c"><div class="ttname"><a href="vector_8c.html#a0d72bcc558c52e3ce9b57dc74ce7949c">sort_longlong_vector_ascending</a></div><div class="ttdeci">void sort_longlong_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:397</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a></div><div class="ttdeci">@ LONGLONG</div><div class="ttdef"><b>Definition:</b> vector.h:49</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -866,7 +878,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will sort a vector container with short integer data in ascending order</p>
+<p >This function will sort a vector container with short integer data in ascending order. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>
@@ -881,8 +893,8 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">short</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6, 8</span></div>
-<div class="ttc" id="avector_8c_html_a9d7b9b93ca62b793975442d42c2b19dd"><div class="ttname"><a href="vector_8c.html#a9d7b9b93ca62b793975442d42c2b19dd">sort_short_vector_ascending</a></div><div class="ttdeci">void sort_short_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:348</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a></div><div class="ttdeci">@ SHORTINT</div><div class="ttdef"><b>Definition:</b> vector.h:46</div></div>
+<div class="ttc" id="avector_8c_html_a9d7b9b93ca62b793975442d42c2b19dd"><div class="ttname"><a href="vector_8c.html#a9d7b9b93ca62b793975442d42c2b19dd">sort_short_vector_ascending</a></div><div class="ttdeci">void sort_short_vector_ascending(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:357</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a></div><div class="ttdeci">@ SHORTINT</div><div class="ttdef"><b>Definition:</b> vector.h:47</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -901,7 +913,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete all non unique values in a vector container</p>
+<p >This function will delete all non unique values in a vector container. This function is of time order N.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A vector container</td></tr>

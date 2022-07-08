@@ -100,6 +100,12 @@ int push_vector(Vector *vec, void *elements, size_t num_indices) {
 	memcpy((char *)vec->vector + vec->active_length * vec->num_bytes, elements,
 			num_indices * vec->num_bytes);
 	vec->active_length += num_indices;
+
+	// Ensure char vector has no null padding
+	if (vec->dat_type == CHAR) {
+		char value = ((char *)vec->vector)[vec->active_length - 1];
+		if (value == '\0') pop_vector(vec, vec->active_length - 1);
+	}
 	return 1;
 }
 // --------------------------------------------------------------------------------
@@ -121,6 +127,8 @@ int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice
 		printf("WARNING: The selected indice is larger than the active array length\n");
 		return 0;
 	}
+	// Do not allow function to read in a null padding
+	if (vec->dat_type == CHAR && num_indices > 1) num_indices -= 1;
 	// Re-allocate memory if necessary
 	if (vec->active_length + num_indices > vec->allocated_length) {
 		size_t size = (vec->active_length + num_indices) * 2;
@@ -260,16 +268,24 @@ void unique_vector_values(Vector *vec) {
 }
 // --------------------------------------------------------------------------------
 
-void sort_int_vector_ascending(Vector *vec) {
+int sort_int_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     int var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((int *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((int *)vec->vector)[min_idx];
 			var_two = ((int *)vec->vector)[j];
-			if (var_two < var_one) {
+			if (var_two < var_one && method == 0) {
+				min_idx = j;
+				temp = ((int *)vec->vector)[min_idx];
+			}
+			else if (var_two > var_one && method == 1) {
 				min_idx = j;
 				temp = ((int *)vec->vector)[min_idx];
 			}
@@ -277,19 +293,28 @@ void sort_int_vector_ascending(Vector *vec) {
 		* (int *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((int *)vec->vector)[i];
 		* (int *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
+	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void sort_float_vector_ascending(Vector *vec) {
+int sort_float_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     float var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((float *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((float *)vec->vector)[min_idx];
 			var_two = ((float *)vec->vector)[j];
-			if (var_two < var_one) {
+			if (var_two < var_one && method == 0) {
+				min_idx = j;
+				temp = ((float *)vec->vector)[min_idx];
+			}
+			else if (var_two > var_one && method == 1) {
 				min_idx = j;
 				temp = ((float *)vec->vector)[min_idx];
 			}
@@ -297,19 +322,28 @@ void sort_float_vector_ascending(Vector *vec) {
 		* (float *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((float *)vec->vector)[i];
 		* (float *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
+	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void sort_double_vector_ascending(Vector *vec) {
+int sort_double_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     double var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((double *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((double *)vec->vector)[min_idx];
 			var_two = ((double *)vec->vector)[j];
-			if (var_two < var_one) {
+			if (var_two < var_one && method == 0) {
+				min_idx = j;
+				temp = ((double *)vec->vector)[min_idx];
+			}
+			else if (var_two > var_one && method == 1) {
 				min_idx = j;
 				temp = ((double *)vec->vector)[min_idx];
 			}
@@ -317,19 +351,28 @@ void sort_double_vector_ascending(Vector *vec) {
 		* (double *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((double *)vec->vector)[i];
 		* (double *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
+	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void sort_char_vector_ascending(Vector *vec) {
+int sort_char_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     char var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((char *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((char *)vec->vector)[min_idx];
 			var_two = ((char *)vec->vector)[j];
-			if(strcmp(&var_two, &var_one) < 0) {
+			if(strcmp(&var_two, &var_one) < 0 && method == 0) {
+				min_idx = j;
+				temp = ((char *)vec->vector)[min_idx];
+			}
+			else if (strcmp(&var_two, &var_one) > 0 && method == 1) {
 				min_idx = j;
 				temp = ((char *)vec->vector)[min_idx];
 			}
@@ -337,24 +380,28 @@ void sort_char_vector_ascending(Vector *vec) {
 		* (char *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((char *)vec->vector)[i];
 		* (char *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
-	if (((char *)vec->vector)[vec->active_length] == '\0') {
-		char delimeter = '\0';
-		push_vector(vec, &delimeter, 1);
-		pop_vector(vec, 0);
-	}
+	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void sort_short_vector_ascending(Vector *vec) {
+int sort_short_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     short var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((short *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((short *)vec->vector)[min_idx];
 			var_two = ((short *)vec->vector)[j];
-			if (var_two < var_one) {
+			if (var_two < var_one && method == 0) {
+				min_idx = j;
+				temp = ((short *)vec->vector)[min_idx];
+			}
+			else if (var_two > var_one && method == 1) {
 				min_idx = j;
 				temp = ((short *)vec->vector)[min_idx];
 			}
@@ -362,19 +409,28 @@ void sort_short_vector_ascending(Vector *vec) {
 		* (short *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((short *)vec->vector)[i];
 		* (short *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
+	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void sort_long_vector_ascending(Vector *vec) {
+int sort_long_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     long var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((long *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((long *)vec->vector)[min_idx];
 			var_two = ((long *)vec->vector)[j];
-			if (var_two < var_one) {
+			if (var_two < var_one && method == 0) {
+				min_idx = j;
+				temp = ((long *)vec->vector)[min_idx];
+			}
+			else if (var_two > var_one && method == 1) {
 				min_idx = j;
 				temp = ((long *)vec->vector)[min_idx];
 			}
@@ -382,19 +438,28 @@ void sort_long_vector_ascending(Vector *vec) {
 		* (long *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((long *)vec->vector)[i];
 		* (long *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
+	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void sort_longlong_vector_ascending(Vector *vec) {
+int sort_longlong_vector(Vector *vec, uint8_t method) {
 	int i, j, min_idx;
     long long var_one, var_two, temp;
+	if(method < 0 || method > 1) {
+		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+		return 0;
+	}
 	for (i = 0; i < vec->active_length - 1; i++) {
 		min_idx = i;
 		temp = ((long long *)vec->vector)[min_idx];
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((long long *)vec->vector)[min_idx];
 			var_two = ((long long *)vec->vector)[j];
-			if (var_two < var_one) {
+			if (var_two < var_one && method == 0) {
+				min_idx = j;
+				temp = ((long long *)vec->vector)[min_idx];
+			}
+			else if (var_two > var_one && method == 1) {
 				min_idx = j;
 				temp = ((long long *)vec->vector)[min_idx];
 			}
@@ -402,6 +467,7 @@ void sort_longlong_vector_ascending(Vector *vec) {
 		* (long long *) ((char *) vec->vector + min_idx * vec->num_bytes) = ((long long *)vec->vector)[i];
 		* (long long *) ((char *) vec->vector + i * vec->num_bytes) = temp;
 	}
+	return 1;
 }
 // ================================================================================
 // ================================================================================
