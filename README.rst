@@ -248,3 +248,31 @@ in a vector container.
    unique_vector_values(&vec);
    // [4.5, 2.3]
 
+===============
+sort_xxx_vector
+===============
+This library contains several ``sort_xxx_vector(Vector *vec, uint8_t method)`` functions where
+``xxx`` represents ``int``, ``float``, ``double``, ``char``, ``short``, ``long``, or ``longlong``.
+Each function is set up specifically for the data types described by ``xxx``.  The term ``method``
+is an unsigned short integer that can be 0 or 1.  If 0 is selected, it will sort the vector in
+ascending order.  If 1 is selected it will sort the array in descending order.
+
+.. code-block:: c
+
+   float a[5] = {1.1, 3.3, 2.1, 4.5, 1.8};
+   Vector vec = init_type_vector(FLOAT, 5);
+   push_vector(&vec, a, 5);
+   sort_float_vector(&vec, 0);
+   for (size_t i = 0; i < vec.active_length; i++) {
+       printf("%f\n", ((float *)vec.vector)[i]);
+   }
+   // [1.1, 1.8, 2.1, 3.3, 4.5]
+
+   float a[5] = {1.1, 3.3, 2.1, 4.5, 1.8};
+   Vector vec = init_type_vector(FLOAT, 5);
+   push_vector(&vec, a, 5);
+   sort_float_vector(&vec, 1);
+   for (size_t i = 0; i < vec.active_length; i++) {
+       printf("%f\n", ((float *)vec.vector)[i]);
+   }
+   // [4.5, 3.3, 2.1, 1.8, 1.1]
