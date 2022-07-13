@@ -255,7 +255,9 @@ This library contains several ``sort_xxx_vector(Vector *vec, uint8_t method)`` f
 ``xxx`` represents ``int``, ``float``, ``double``, ``char``, ``short``, ``long``, or ``longlong``.
 Each function is set up specifically for the data types described by ``xxx``.  The term ``method``
 is an unsigned short integer that can be 0 or 1.  If 0 is selected, it will sort the vector in
-ascending order.  If 1 is selected it will sort the array in descending order.
+ascending order.  If 1 is selected it will sort the array in descending order.  In addition,
+the user can implement the ``sort_vector(Vector *vec)`` function will will autonomously
+determine the correct data type to implement.
 
 .. code-block:: c
 
@@ -280,16 +282,17 @@ ascending order.  If 1 is selected it will sort the array in descending order.
 ==================
 reverse_xxx_vector
 ==================
-The function ``reverse_xxx_vector(Vector *vec)`` function where ``xxx`` represents ``int``, ``float``,
+The function ``reverse_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
 ``double``, ``char``, ``short``, ``long``, or ``longlong``.  Each function is set up specifically
-for the data types described by ``xxx``.
+for the data types described by ``xxx``. In addition, the user can implement the 
+``reverse_vector(Vector *vec)`` function will will autonomously determine the correct data type to implement.
 
 .. code-block:: c
 
    float a[5] = {1.1, 3.3, 2.1, 4.5, 1.8};
    Vector vec = init_type_vector(FLOAT, 5);
    push_vector(&vec, a, 5);
-   reverse_float_vector(&vec, 0);
+   reverse_float_vector(&vec);
    for (size_t i = 0; i < vec.active_length; i++) {
        printf("%f\n", ((float *)vec.vector)[i]);
    }
@@ -298,8 +301,35 @@ for the data types described by ``xxx``.
    float a[5] = {1.1, 3.3, 2.1, 4.5, 1.8};
    Vector vec = init_type_vector(FLOAT, 5);
    push_vector(&vec, a, 5);
-   reverse_vector(&vec, 1);
+   reverse_vector(&vec);
    for (size_t i = 0; i < vec.active_length; i++) {
        printf("%f\n", ((float *)vec.vector)[i]);
    }
    // [1.8, 4.5, 2.1, 3.3, 1.1]
+
+=================
+median_xxx_vector
+=================
+The function ``median_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
+``double``, or ``long`` can be used to determine the median value of a vector containing the data
+type corresponding to ``xxx``.  If a vector contains an odd number of variables, the function
+will return the true median value.  If a vector contains an even number of variables, the
+function will return the average of the two median values.  As a result, the returned
+value will always be read (i.e. ``float`` or ``double``).
+
+.. code-block:: c
+
+   int a[6] = {1, 2, 3, 4, 5, 6};
+   Vector vec = init_type_vector(INT, 6);
+   push_vector(&vec, a, 6);
+   float median = median_int_vector(&vec);
+   printf("%f\n", median);
+   // 3.5
+
+   long a[5] = {1, 2, 3, 4, 5};
+   Vector vec = init_type_vector(LONG, 5);
+   push_vector(&vec, a, 5);
+   double median = median_long_vector(&vec);
+   printf("%ld\n", median);
+   // 3.0
+
