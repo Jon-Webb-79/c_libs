@@ -53,19 +53,37 @@ void \mbox{\hyperlink{vector_8h_a2da99bf125e878741ca4979a784db7e6}{delete\+\_\+v
 \item 
 void \mbox{\hyperlink{vector_8h_ac1835f04af3be7ac9e07b9f334d49703}{unique\+\_\+vector\+\_\+values}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \item 
-int \mbox{\hyperlink{vector_8h_a9913f641dd90f7461031ecc49be7b2b9}{sort\+\_\+int\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
+int \mbox{\hyperlink{vector_8h_ad115228b4b014e0cb684f59b91310ed4}{sort\+\_\+int\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
-void \mbox{\hyperlink{vector_8h_a4cb4240a18cb06160837a7ae65bcc0bb}{sort\+\_\+float\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_a8ee1799ceadb2847c30ca4a30692ac49}{sort\+\_\+float\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
-void \mbox{\hyperlink{vector_8h_a0744bffcc3112ead27469780f5825a67}{sort\+\_\+double\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_ae5ab6a019cf527754be5195994a96079}{sort\+\_\+double\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
-void \mbox{\hyperlink{vector_8h_a8a5ab4c4f98fdea0dc9167e4d0da5a19}{sort\+\_\+char\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_abaa5d118b25d054dcca1ff2c16c3dade}{sort\+\_\+char\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
-void \mbox{\hyperlink{vector_8h_a9d7b9b93ca62b793975442d42c2b19dd}{sort\+\_\+short\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_a3eb159f16b6cf88e962beae7d0023f00}{sort\+\_\+short\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
-void \mbox{\hyperlink{vector_8h_af9383fc98af85248a14bc0749f7ab3bf}{sort\+\_\+long\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_aa1dfabdd7aa6816b5d7605cd9ff4c13b}{sort\+\_\+long\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
 \item 
-void \mbox{\hyperlink{vector_8h_a0d72bcc558c52e3ce9b57dc74ce7949c}{sort\+\_\+longlong\+\_\+vector\+\_\+ascending}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+int \mbox{\hyperlink{vector_8h_a7291416baaab166da36df4d84df7c24a}{sort\+\_\+longlong\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
+\item 
+int \mbox{\hyperlink{vector_8h_ab42ca7cd37c2fd2d8d001a13c48c444b}{sort\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec, uint8\+\_\+t method)
+\item 
+void \mbox{\hyperlink{vector_8h_ae43973885fd550f1aa9eeb43e467f3c6}{reverse\+\_\+int\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8h_ae3018c8afd0c0af1d14b3440d8d13f91}{reverse\+\_\+float\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8h_a3e9d1171ce4e00f73e6e91f911917663}{reverse\+\_\+double\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8h_a6c9055bf5c6e285d512c0dd1a71ea414}{reverse\+\_\+char\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8h_a5b3c9512d2f56a11e252b2c597b93bc6}{reverse\+\_\+short\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8h_a4bb1f2674e5ba08f0b7a6284d9b6d407}{reverse\+\_\+long\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8h_ab99bc039ca0b011cb414b332763f3105}{reverse\+\_\+longlong\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+int \mbox{\hyperlink{vector_8h_a996ea0933de7aa349885f9bea2a155c7}{reverse\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -367,7 +385,7 @@ The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.
 \doxysubsubsection{\texorpdfstring{push\_vector()}{push\_vector()}}
 {\footnotesize\ttfamily int push\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{void $\ast$}]{elements,  }\item[{size\+\_\+t}]{num\+\_\+indices }\end{DoxyParamCaption})}
 
-This function appends a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data appended to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the appended array. This function is of time order 1.
+This function appends a \mbox{\hyperlink{structVector}{Vector}} container with a scalar or an array of data. The data appended to the \mbox{\hyperlink{structVector}{Vector}} container must be of the same type as the appended array. This function is of time order 1. It should also be noted, that unlike character arrays, a character vector does not need a null padding (i.\+e \textquotesingle{}\textbackslash{}0\textquotesingle{}) at the end of the vector. In fact if a null terminator exists, the push\+\_\+vector function will delete it.
 
 
 \begin{DoxyParams}{Parameters}
@@ -465,177 +483,445 @@ This function will replace any values in an array that match the user descriptio
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 4, 3, 4, 4, 5}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a8a5ab4c4f98fdea0dc9167e4d0da5a19}\label{vector_8h_a8a5ab4c4f98fdea0dc9167e4d0da5a19}} 
-\index{vector.h@{vector.h}!sort\_char\_vector\_ascending@{sort\_char\_vector\_ascending}}
-\index{sort\_char\_vector\_ascending@{sort\_char\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_char\_vector\_ascending()}{sort\_char\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+char\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_a6c9055bf5c6e285d512c0dd1a71ea414}\label{vector_8h_a6c9055bf5c6e285d512c0dd1a71ea414}} 
+\index{vector.h@{vector.h}!reverse\_char\_vector@{reverse\_char\_vector}}
+\index{reverse\_char\_vector@{reverse\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_char\_vector()}{reverse\_char\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
 
-This function will sort the data in a char vector container in ascending order. WARNING\+: This function sorts capital and lower case letters, with capital letter being sorted first seperately. This function is of time order N.
+This function will reverse the order of a char vector container
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of a double type\\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c9055bf5c6e285d512c0dd1a71ea414}{reverse\_char\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c \(\backslash\)n"{}}, ((\textcolor{keywordtype}{char} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 'o', 'l', 'l', 'e', 'H'}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a3e9d1171ce4e00f73e6e91f911917663}\label{vector_8h_a3e9d1171ce4e00f73e6e91f911917663}} 
+\index{vector.h@{vector.h}!reverse\_double\_vector@{reverse\_double\_vector}}
+\index{reverse\_double\_vector@{reverse\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_double\_vector()}{reverse\_double\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of a double vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of a double type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 6);}
+\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3e9d1171ce4e00f73e6e91f911917663}{reverse\_double\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf \(\backslash\)n"{}}, ((\textcolor{keywordtype}{double} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 6.6, 5.5, 4.4, 3.3, 2.2, 1.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ae3018c8afd0c0af1d14b3440d8d13f91}\label{vector_8h_ae3018c8afd0c0af1d14b3440d8d13f91}} 
+\index{vector.h@{vector.h}!reverse\_float\_vector@{reverse\_float\_vector}}
+\index{reverse\_float\_vector@{reverse\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_float\_vector()}{reverse\_float\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of a float vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of a float type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 6);}
+\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae3018c8afd0c0af1d14b3440d8d13f91}{reverse\_float\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 6.6, 5.5, 4.4, 3.3, 2.2, 1.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ae43973885fd550f1aa9eeb43e467f3c6}\label{vector_8h_ae43973885fd550f1aa9eeb43e467f3c6}} 
+\index{vector.h@{vector.h}!reverse\_int\_vector@{reverse\_int\_vector}}
+\index{reverse\_int\_vector@{reverse\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_int\_vector()}{reverse\_int\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of an integer vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of an integer type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{ 1, 2, 3, 4, 5, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 6);}
+\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae43973885fd550f1aa9eeb43e467f3c6}{reverse\_int\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 6, 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a4bb1f2674e5ba08f0b7a6284d9b6d407}\label{vector_8h_a4bb1f2674e5ba08f0b7a6284d9b6d407}} 
+\index{vector.h@{vector.h}!reverse\_long\_vector@{reverse\_long\_vector}}
+\index{reverse\_long\_vector@{reverse\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_long\_vector()}{reverse\_long\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of a long integer vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of a long integer type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a4bb1f2674e5ba08f0b7a6284d9b6d407}{reverse\_long\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ab99bc039ca0b011cb414b332763f3105}\label{vector_8h_ab99bc039ca0b011cb414b332763f3105}} 
+\index{vector.h@{vector.h}!reverse\_longlong\_vector@{reverse\_longlong\_vector}}
+\index{reverse\_longlong\_vector@{reverse\_longlong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_longlong\_vector()}{reverse\_longlong\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+longlong\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of a long long integer vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of a long integer type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab99bc039ca0b011cb414b332763f3105}{reverse\_longlong\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a5b3c9512d2f56a11e252b2c597b93bc6}\label{vector_8h_a5b3c9512d2f56a11e252b2c597b93bc6}} 
+\index{vector.h@{vector.h}!reverse\_short\_vector@{reverse\_short\_vector}}
+\index{reverse\_short\_vector@{reverse\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_short\_vector()}{reverse\_short\_vector()}}
+{\footnotesize\ttfamily void reverse\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of a short integer vector container
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of a short integer type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5b3c9512d2f56a11e252b2c597b93bc6}{reverse\_short\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{short} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a996ea0933de7aa349885f9bea2a155c7}\label{vector_8h_a996ea0933de7aa349885f9bea2a155c7}} 
+\index{vector.h@{vector.h}!reverse\_vector@{reverse\_vector}}
+\index{reverse\_vector@{reverse\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_vector()}{reverse\_vector()}}
+{\footnotesize\ttfamily int reverse\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will reverse the order of a vector container of any type
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container of any data type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing failure (0) or sucess (1)
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a996ea0933de7aa349885f9bea2a155c7}{reverse\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_abaa5d118b25d054dcca1ff2c16c3dade}\label{vector_8h_abaa5d118b25d054dcca1ff2c16c3dade}} 
+\index{vector.h@{vector.h}!sort\_char\_vector@{sort\_char\_vector}}
+\index{sort\_char\_vector@{sort\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_char\_vector()}{sort\_char\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
+
+This function will sort the data in a char vector container in ascending or descending order. WARNING\+: This function sorts capital and lower case letters, with capital letter being sorted first seperately. This function is of time order N.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}eCdba"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}}, 6);}
 \DoxyCodeLine{append\_vector(\&vec, a, 6);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a5ab4c4f98fdea0dc9167e4d0da5a19}{sort\_char\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abaa5d118b25d054dcca1ff2c16c3dade}{sort\_char\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%c \(\backslash\)n"{}}, ((\textcolor{keywordtype}{char} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 'C', 'a', 'b', 'd', 'e'}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a0744bffcc3112ead27469780f5825a67}\label{vector_8h_a0744bffcc3112ead27469780f5825a67}} 
-\index{vector.h@{vector.h}!sort\_double\_vector\_ascending@{sort\_double\_vector\_ascending}}
-\index{sort\_double\_vector\_ascending@{sort\_double\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_double\_vector\_ascending()}{sort\_double\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+double\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_ae5ab6a019cf527754be5195994a96079}\label{vector_8h_ae5ab6a019cf527754be5195994a96079}} 
+\index{vector.h@{vector.h}!sort\_double\_vector@{sort\_double\_vector}}
+\index{sort\_double\_vector@{sort\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_double\_vector()}{sort\_double\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort the data in a double vector container in ascending order. This function is of time order N.
+This function will sort the data in a double vector container in ascending or descending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.2, 1.4, 5.0, 2.1, 6.8\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 5);}
 \DoxyCodeLine{append\_vector(\&vec, a, 5);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0744bffcc3112ead27469780f5825a67}{sort\_double\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5ab6a019cf527754be5195994a96079}{sort\_double\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%lf \(\backslash\)n"{}}, ((\textcolor{keywordtype}{double} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1.4, 2.1, 3.2, 5.0, 6.8}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a4cb4240a18cb06160837a7ae65bcc0bb}\label{vector_8h_a4cb4240a18cb06160837a7ae65bcc0bb}} 
-\index{vector.h@{vector.h}!sort\_float\_vector\_ascending@{sort\_float\_vector\_ascending}}
-\index{sort\_float\_vector\_ascending@{sort\_float\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_float\_vector\_ascending()}{sort\_float\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+float\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_a8ee1799ceadb2847c30ca4a30692ac49}\label{vector_8h_a8ee1799ceadb2847c30ca4a30692ac49}} 
+\index{vector.h@{vector.h}!sort\_float\_vector@{sort\_float\_vector}}
+\index{sort\_float\_vector@{sort\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_float\_vector()}{sort\_float\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort the data in a float vector container in ascending order. This function is of time order N.
+This function will sort the data in a float vector container in ascending or descending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{3.2, 1.4, 5.0, 2.1, 6.8\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 5);}
 \DoxyCodeLine{append\_vector(\&vec, a, 5);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a4cb4240a18cb06160837a7ae65bcc0bb}{sort\_float\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8ee1799ceadb2847c30ca4a30692ac49}{sort\_float\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1.4, 2.1, 3.2, 5.0, 6.8}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a9913f641dd90f7461031ecc49be7b2b9}\label{vector_8h_a9913f641dd90f7461031ecc49be7b2b9}} 
-\index{vector.h@{vector.h}!sort\_int\_vector\_ascending@{sort\_int\_vector\_ascending}}
-\index{sort\_int\_vector\_ascending@{sort\_int\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_int\_vector\_ascending()}{sort\_int\_vector\_ascending()}}
-{\footnotesize\ttfamily int sort\+\_\+int\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_ad115228b4b014e0cb684f59b91310ed4}\label{vector_8h_ad115228b4b014e0cb684f59b91310ed4}} 
+\index{vector.h@{vector.h}!sort\_int\_vector@{sort\_int\_vector}}
+\index{sort\_int\_vector@{sort\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_int\_vector()}{sort\_int\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort the data in an integer vector container in ascending order. This function is of time order N.
+This function will sort the data in an integer vector container in ascending or descending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{3, 1, 5, 2, 6\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
 \DoxyCodeLine{append\_vector(\&vec, a, 5);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9913f641dd90f7461031ecc49be7b2b9}{sort\_int\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{sort\_int\_vector\_ascending(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 5, 6}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_af9383fc98af85248a14bc0749f7ab3bf}\label{vector_8h_af9383fc98af85248a14bc0749f7ab3bf}} 
-\index{vector.h@{vector.h}!sort\_long\_vector\_ascending@{sort\_long\_vector\_ascending}}
-\index{sort\_long\_vector\_ascending@{sort\_long\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_long\_vector\_ascending()}{sort\_long\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+long\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_aa1dfabdd7aa6816b5d7605cd9ff4c13b}\label{vector_8h_aa1dfabdd7aa6816b5d7605cd9ff4c13b}} 
+\index{vector.h@{vector.h}!sort\_long\_vector@{sort\_long\_vector}}
+\index{sort\_long\_vector@{sort\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_long\_vector()}{sort\_long\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort a vector container with long integer data in ascending order. This function is of time order N.
+This function will sort a vector container with long integer data in ascending or descending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}}, 6);}
 \DoxyCodeLine{append\_vector(\&vec, a, 6);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af9383fc98af85248a14bc0749f7ab3bf}{sort\_long\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa1dfabdd7aa6816b5d7605cd9ff4c13b}{sort\_long\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 5, 6, 8}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a0d72bcc558c52e3ce9b57dc74ce7949c}\label{vector_8h_a0d72bcc558c52e3ce9b57dc74ce7949c}} 
-\index{vector.h@{vector.h}!sort\_longlong\_vector\_ascending@{sort\_longlong\_vector\_ascending}}
-\index{sort\_longlong\_vector\_ascending@{sort\_longlong\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_longlong\_vector\_ascending()}{sort\_longlong\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+longlong\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_a7291416baaab166da36df4d84df7c24a}\label{vector_8h_a7291416baaab166da36df4d84df7c24a}} 
+\index{vector.h@{vector.h}!sort\_longlong\_vector@{sort\_longlong\_vector}}
+\index{sort\_longlong\_vector@{sort\_longlong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_longlong\_vector()}{sort\_longlong\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+longlong\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort a vector container with long long integer data in ascending order. This function is of time order N.
+This function will sort a vector container with long long integer data in ascending or descending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 6);}
 \DoxyCodeLine{append\_vector(\&vec, a, 6);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d72bcc558c52e3ce9b57dc74ce7949c}{sort\_longlong\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7291416baaab166da36df4d84df7c24a}{sort\_longlong\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 5, 6, 8}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a9d7b9b93ca62b793975442d42c2b19dd}\label{vector_8h_a9d7b9b93ca62b793975442d42c2b19dd}} 
-\index{vector.h@{vector.h}!sort\_short\_vector\_ascending@{sort\_short\_vector\_ascending}}
-\index{sort\_short\_vector\_ascending@{sort\_short\_vector\_ascending}!vector.h@{vector.h}}
-\doxysubsubsection{\texorpdfstring{sort\_short\_vector\_ascending()}{sort\_short\_vector\_ascending()}}
-{\footnotesize\ttfamily void sort\+\_\+short\+\_\+vector\+\_\+ascending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+ \mbox{\Hypertarget{vector_8h_a3eb159f16b6cf88e962beae7d0023f00}\label{vector_8h_a3eb159f16b6cf88e962beae7d0023f00}} 
+\index{vector.h@{vector.h}!sort\_short\_vector@{sort\_short\_vector}}
+\index{sort\_short\_vector@{sort\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_short\_vector()}{sort\_short\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
 
-This function will sort a vector container with short integer data in ascending order. This function is of time order N.
+This function will sort a vector container with short integer data in ascending or descending order. This function is of time order N.
 
 
 \begin{DoxyParams}{Parameters}
-{\em vec} & A vector container\\
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{short} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}}, 6);}
 \DoxyCodeLine{append\_vector(\&vec, a, 6);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d7b9b93ca62b793975442d42c2b19dd}{sort\_short\_vector\_ascending}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3eb159f16b6cf88e962beae7d0023f00}{sort\_short\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{short} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 5, 6, 8}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ab42ca7cd37c2fd2d8d001a13c48c444b}\label{vector_8h_ab42ca7cd37c2fd2d8d001a13c48c444b}} 
+\index{vector.h@{vector.h}!sort\_vector@{sort\_vector}}
+\index{sort\_vector@{sort\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sort\_vector()}{sort\_vector()}}
+{\footnotesize\ttfamily int sort\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{uint8\+\_\+t}]{method }\end{DoxyParamCaption})}
+
+This function will sort a vector container of any data type in ascending or descending order. This function is of time order N.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A vector container \\
+\hline
+{\em method} & 0 for ascending sort, 1 for descending sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function.
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[6] = \{3, 5, 2, 1, 8, 6\}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 6);}
+\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab42ca7cd37c2fd2d8d001a13c48c444b}{sort\_vector}}(\&vec, 0);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
+\DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 5, 6, 8}}
 

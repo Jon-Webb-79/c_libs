@@ -469,6 +469,123 @@ int sort_longlong_vector(Vector *vec, uint8_t method) {
 	}
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+int sort_vector(Vector *vec, uint8_t method) {
+
+	if (vec->dat_type == FLOAT) sort_float_vector(vec, method);
+	else if (vec->dat_type == DOUBLE) sort_double_vector(vec, method);
+	else if (vec->dat_type == CHAR) sort_char_vector(vec, method);
+	else if (vec->dat_type == INT) sort_int_vector(vec, method);
+	else if (vec->dat_type == SHORTINT) sort_short_vector(vec, method);
+	else if (vec->dat_type == LONG) sort_long_vector(vec, method);
+	else if (vec->dat_type == LONGLONG) sort_longlong_vector(vec, method);
+	else {
+		printf("WARNING: Cannot sort vector type\n");
+		return 0;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_int_vector(Vector *vec) {
+	int value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((int *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_float_vector(Vector *vec) {
+	float value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((float *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_double_vector(Vector *vec) {
+	double value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((double *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_char_vector(Vector *vec) {
+	char value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((char *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_short_vector(Vector *vec) {
+	short value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((short *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_long_vector(Vector *vec) {
+	long value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((long *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_longlong_vector(Vector *vec) {
+	long long value;
+	int num = 0;
+	for (size_t i = vec->active_length - 1; i > 0; i--) {
+		value = ((long long *)vec->vector)[vec->active_length - 1];
+		insert_vector(vec, &value, 1, num);
+		num++;
+		pop_vector(vec, vec->active_length - 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+int reverse_vector(Vector *vec) {
+	if (vec->dat_type == INT) reverse_int_vector(vec);
+	else if (vec->dat_type == FLOAT) reverse_float_vector(vec);
+	else if (vec->dat_type == DOUBLE) reverse_double_vector(vec);
+	else if (vec->dat_type == CHAR) reverse_char_vector(vec);
+	else if (vec->dat_type == SHORTINT) reverse_short_vector(vec);
+	else if (vec->dat_type == LONG) reverse_long_vector(vec);
+	else if (vec->dat_type == LONGLONG) reverse_longlong_vector(vec);
+	else {
+		printf("Incorrect data type, cannot reverse vector\n");
+		return 0;
+	}
+	return 1;
+}
 // ================================================================================
 // ================================================================================
 // eof

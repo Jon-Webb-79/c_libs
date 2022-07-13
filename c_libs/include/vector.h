@@ -537,6 +537,180 @@ int sort_long_vector(Vector *vec, uint8_t method);
 int sort_longlong_vector(Vector *vec, uint8_t method);
 // --------------------------------------------------------------------------------
 
+/**
+ * This function will sort a vector container of any data type in
+ * ascending or descending order.  This function is of time order N.
+ *
+ * @param vec A vector container
+ * @param method 0 for ascending sort, 1 for descending sort
+ * @return integer An integer representing success (1) or failure
+ *                 (0) of the function.
+ *
+ * @code
+ * long long a[6] = {3, 5, 2, 1, 8, 6}
+ * Vector vec = init_type_vector(LONGLONG, 6);
+ * append_vector(&vec, a, 6);
+ * sort_vector(&vec, 0);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *    printf("%d \n", ((long long *)vec.vector)[i]);
+ * }
+ * // >> 1, 2, 3, 5, 6, 8
+ * @endcode
+ */
+int sort_vector(Vector *vec, uint8_t method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of an integer vector container
+ *
+ * @param vec A Vector container of an integer type
+ *
+ * @code
+ * int a[6] = { 1, 2, 3, 4, 5, 6};
+ * Vector vec = init_type_vector(INT, 6);
+ * append_vector(&vec, a, 6);
+ * reverse_int_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%d \n", ((int *)vec.vector)[i]);
+ * }
+ * // >> 6, 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_int_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a float vector container
+ *
+ * @param vec A Vector container of a float type
+ *
+ * @code
+ * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * Vector vec = init_type_vector(FLOAT, 6);
+ * append_vector(&vec, a, 6);
+ * reverse_float_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%f \n", ((float *)vec.vector)[i]);
+ * }
+ * // >> 6.6, 5.5, 4.4, 3.3, 2.2, 1.1
+ * @endcode
+ */
+void reverse_float_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a double vector container
+ *
+ * @param vec A Vector container of a double type
+ *
+ * @code
+ * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+ * Vector vec = init_type_vector(DOUBLE, 6);
+ * append_vector(&vec, a, 6);
+ * reverse_double_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%lf \n", ((double *)vec.vector)[i]);
+ * }
+ * // >> 6.6, 5.5, 4.4, 3.3, 2.2, 1.1
+ * @endcode
+ */
+void reverse_double_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a char vector container
+ *
+ * @param vec A Vector container of a double type
+ *
+ * @code
+ * char a[6] = "Hello";
+ * Vector vec = init_type_vector(CHAR, 5);
+ * append_vector(&vec, a, 5);
+ * reverse_char_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%c \n", ((char *)vec.vector)[i]);
+ * }
+ * // >> 'o', 'l', 'l', 'e', 'H'
+ * @endcode
+ */
+void reverse_char_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a short integer vector container
+ *
+ * @param vec A Vector container of a short integer type
+ *
+ * @code
+ * char a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(SHORTINT, 5);
+ * append_vector(&vec, a, 5);
+ * reverse_short_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%d \n", ((short *)vec.vector)[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_short_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a long integer vector container
+ *
+ * @param vec A Vector container of a long integer type
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONG, 5);
+ * append_vector(&vec, a, 5);
+ * reverse_long_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%d \n", ((long *)vec.vector)[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_long_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a long long integer vector container
+ *
+ * @param vec A Vector container of a long integer type
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONGLONG, 5);
+ * append_vector(&vec, a, 5);
+ * reverse_longlong_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%d \n", ((long long *)vec.vector)[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_longlong_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a vector container of any type
+ *
+ * @param vec A Vector container of any data type
+ * @return integer An integer representing failure (0) or sucess (1)
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONGLONG, 5);
+ * append_vector(&vec, a, 5);
+ * reverse_vector(&vec);
+ * for (size_t i = 0; vec.active_length; i++) {
+ *     printf("%d \n", ((long long *)vec.vector)[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+int reverse_vector(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

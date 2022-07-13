@@ -535,6 +535,142 @@ TEST(test_sort, sort_longlong_descending) {
 	}
 	free_vector(&vec);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_longlong_vector function to ensure it correctly
+ * sorts a long long integer in descending order */
+TEST(test_sort, sort_descending) {
+	long long a[5] = {3, 6, 2, 1, 5};
+	long long b[5] = {6, 5, 3, 2, 1};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	sort_vector(&vec, 1);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the reverse_int_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	int b[5] = {5, 4, 3, 2, 1};
+	Vector vec = init_type_vector(INT, 5);
+	push_vector(&vec, a, 5);
+	reverse_int_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_float_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_float) {
+	float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	float b[5] = {5.5, 4.4, 3.3, 2.2, 1.1};
+	Vector vec = init_type_vector(FLOAT, 5);
+	push_vector(&vec, a, 5);
+	reverse_float_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], ((float *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_double_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_double) {
+	double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	double b[5] = {5.5, 4.4, 3.3, 2.2, 1.1};
+	Vector vec = init_type_vector(DOUBLE, 5);
+	push_vector(&vec, a, 5);
+	reverse_double_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_DOUBLE_EQ(b[i], ((double *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_char_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_char) {
+	char a[6] = "Hello";
+	char b[6] = "olleH";
+	Vector vec = init_type_vector(CHAR, 5);
+	push_vector(&vec, a, 5);
+	reverse_char_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_short_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_short) {
+	short a[5] = {1, 2, 3, 4, 5};
+	short b[5] = {5, 4, 3, 2, 1};
+	Vector vec = init_type_vector(SHORTINT, 5);
+	push_vector(&vec, a, 5);
+	reverse_short_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((short *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_long_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_long) {
+	long a[5] = {1, 2, 3, 4, 5};
+	long b[5] = {5, 4, 3, 2, 1};
+	Vector vec = init_type_vector(LONG, 5);
+	push_vector(&vec, a, 5);
+	reverse_long_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_longlong_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse_longlong) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	long long b[5] = {5, 4, 3, 2, 1};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	reverse_longlong_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_vector function to ensure it properly
+ * reverses a vector */
+TEST(test_reverse, reverse) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	long long b[5] = {5, 4, 3, 2, 1};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	reverse_vector(&vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
+	}
+	free_vector(&vec);
+}
 // ================================================================================
 // ================================================================================
 // eof

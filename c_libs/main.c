@@ -15,16 +15,11 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO reverse_vector
 // TODO median_vector
 // TODO sum_vector
 // TODO average_vector
 // TODO std_vector
 // TODO cumsum_vector
-// TODO add_vectors
-// TODO multiple_vectors
-// TODO subtract_vectors
-// TODO divide_vectors
 // TODO init_string_vector
 // TODO append_string_vector
 // TODO preappend_string_vector
