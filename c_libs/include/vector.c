@@ -586,6 +586,57 @@ int reverse_vector(Vector *vec) {
 	}
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+float median_int_vector(Vector *vec) {
+	if (vec->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (vec->active_length / 2) -1;
+		indice2 = ((vec->active_length + 2) - 1) / 2;
+		int value_one = ((int *)vec->vector)[indice1];
+		int value_two = ((int *)vec->vector)[indice2];
+		return ((float)value_one + (float)value_two) / 2.0f;
+	}
+	else {
+		size_t indice = ((vec->active_length + 1) / 2) - 1;
+		int value = ((int *)vec->vector)[indice];
+		return (float)value;
+	}
+}
+// --------------------------------------------------------------------------------
+
+float median_float_vector(Vector *vec) {
+	if (vec->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (vec->active_length / 2) -1;
+		indice2 = ((vec->active_length + 2) - 1) / 2;
+		float value_one = ((float *)vec->vector)[indice1];
+		float value_two = ((float *)vec->vector)[indice2];
+		return ((float)value_one + (float)value_two) / 2.0f;
+	}
+	else {
+		size_t indice = ((vec->active_length + 1) / 2) - 1;
+		float value = ((float *)vec->vector)[indice];
+		return value;
+	}
+}
+// --------------------------------------------------------------------------------
+
+double median_double_vector(Vector *vec) {
+	if (vec->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (vec->active_length / 2) -1;
+		indice2 = ((vec->active_length + 2) - 1) / 2;
+		double value_one = ((double *)vec->vector)[indice1];
+		double value_two = ((double *)vec->vector)[indice2];
+		return (value_one + value_two) / 2.0f;
+	}
+	else {
+		size_t indice = ((vec->active_length + 1) / 2) - 1;
+		double value = ((double *)vec->vector)[indice];
+		return value;
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

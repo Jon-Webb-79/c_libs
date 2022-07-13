@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['none_0',['NONE',['../vector_8h.html#acfe99d230e216901bd782cc580e4e815ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'vector.h']]],
-  ['num_5fbytes_1',['num_bytes',['../structVector.html#aca2e44fd5525a105e7dc19f39408b0f3',1,'Vector']]]
+  ['median_5fdouble_5fvector_0',['median_double_vector',['../vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a',1,'median_double_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#a9108270e786dcdfeee4ed5ed8a05f18a',1,'median_double_vector(Vector *vec):&#160;vector.c']]],
+  ['median_5ffloat_5fvector_1',['median_float_vector',['../vector_8c.html#acc8fc45817872e3634a392e9e2fda263',1,'median_float_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#acc8fc45817872e3634a392e9e2fda263',1,'median_float_vector(Vector *vec):&#160;vector.c']]],
+  ['median_5fint_5fvector_2',['median_int_vector',['../vector_8c.html#a0d502710149813436a9b68900fa26490',1,'median_int_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#a0d502710149813436a9b68900fa26490',1,'median_int_vector(Vector *vec):&#160;vector.c']]]
 ];

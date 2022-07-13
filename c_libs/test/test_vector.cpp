@@ -673,4 +673,53 @@ TEST(test_reverse, reverse) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the median_int_vector function to ensure it correctly
+ * determines the median value of an integer vector of odd length */
+TEST(test_median, int_median_odd) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Vector vec= init_type_vector(INT, 5);
+	push_vector(&vec, a,  5);
+	float median = median_int_vector(&vec);
+	EXPECT_FLOAT_EQ(3.0f, median);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_int_vector function to ensure it correctly
+ * determines the median value of an integer vector of even length */
+TEST(test_median, int_median_even) {
+	int a[6] = {1, 2, 3, 4, 5, 6};
+	Vector vec= init_type_vector(INT, 6);
+	push_vector(&vec, a,  6);
+	float median = median_int_vector(&vec);
+	EXPECT_FLOAT_EQ(3.5f, median);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_float_vector function to ensure it correctly
+ * determines the median value of an integer vector of even length */
+TEST(test_median, float_median_even) {
+	float a[6] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
+	Vector vec= init_type_vector(FLOAT, 6);
+	push_vector(&vec, a,  6);
+	float median = median_float_vector(&vec);
+	EXPECT_FLOAT_EQ(3.5f, median);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_double_vector function to ensure it correctly
+ * determines the median value of an integer vector of even length */
+TEST(test_median, double_median_even) {
+	double a[6] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
+	Vector vec= init_type_vector(DOUBLE, 6);
+	push_vector(&vec, a,  6);
+	double median = median_double_vector(&vec);
+	EXPECT_DOUBLE_EQ(3.5, median);
+	free_vector(&vec);
+}
+// ================================================================================
+// ================================================================================
 // eof

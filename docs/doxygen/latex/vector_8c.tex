@@ -59,6 +59,12 @@ void \mbox{\hyperlink{vector_8c_a4bb1f2674e5ba08f0b7a6284d9b6d407}{reverse\+\_\+
 void \mbox{\hyperlink{vector_8c_ab99bc039ca0b011cb414b332763f3105}{reverse\+\_\+longlong\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \item 
 int \mbox{\hyperlink{vector_8c_a996ea0933de7aa349885f9bea2a155c7}{reverse\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8c_a0d502710149813436a9b68900fa26490}{median\+\_\+int\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8c_acc8fc45817872e3634a392e9e2fda263}{median\+\_\+float\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8c_a9108270e786dcdfeee4ed5ed8a05f18a}{median\+\_\+double\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -255,7 +261,85 @@ This function inserts a \mbox{\hyperlink{structVector}{Vector}} container with a
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 1, 2, 3}}
 
 \end{DoxyCode}
- free\+\_\+vector(\&vec); free\+\_\+vector(\&vec2); \mbox{\Hypertarget{vector_8c_aa1be14eba03cd835f46a96a0b1bea6cd}\label{vector_8c_aa1be14eba03cd835f46a96a0b1bea6cd}} 
+ free\+\_\+vector(\&vec); free\+\_\+vector(\&vec2); \mbox{\Hypertarget{vector_8c_a9108270e786dcdfeee4ed5ed8a05f18a}\label{vector_8c_a9108270e786dcdfeee4ed5ed8a05f18a}} 
+\index{vector.c@{vector.c}!median\_double\_vector@{median\_double\_vector}}
+\index{median\_double\_vector@{median\_double\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_double\_vector()}{median\_double\_vector()}}
+{\footnotesize\ttfamily double median\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the median value of an double vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a float value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for double data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The median value of a float vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} median = \mbox{\hyperlink{vector_8c_a9108270e786dcdfeee4ed5ed8a05f18a}{median\_double\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_acc8fc45817872e3634a392e9e2fda263}\label{vector_8c_acc8fc45817872e3634a392e9e2fda263}} 
+\index{vector.c@{vector.c}!median\_float\_vector@{median\_float\_vector}}
+\index{median\_float\_vector@{median\_float\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_float\_vector()}{median\_float\_vector()}}
+{\footnotesize\ttfamily float median\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the median value of an float vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a float value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for float data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The median value of a float vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} median = \mbox{\hyperlink{vector_8c_acc8fc45817872e3634a392e9e2fda263}{median\_float\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_a0d502710149813436a9b68900fa26490}\label{vector_8c_a0d502710149813436a9b68900fa26490}} 
+\index{vector.c@{vector.c}!median\_int\_vector@{median\_int\_vector}}
+\index{median\_int\_vector@{median\_int\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{median\_int\_vector()}{median\_int\_vector()}}
+{\footnotesize\ttfamily float median\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the median value of an integer vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a float value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for integer data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The median value of an integer vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\}}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} median = \mbox{\hyperlink{vector_8c_a0d502710149813436a9b68900fa26490}{median\_int\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8c_aa1be14eba03cd835f46a96a0b1bea6cd}\label{vector_8c_aa1be14eba03cd835f46a96a0b1bea6cd}} 
 \index{vector.c@{vector.c}!pop\_vector@{pop\_vector}}
 \index{pop\_vector@{pop\_vector}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{pop\_vector()}{pop\_vector()}}

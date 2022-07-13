@@ -711,6 +711,72 @@ void reverse_longlong_vector(Vector *vec);
  * @endcode
  */
 int reverse_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of an integer vector.  If the
+ * vector contains an odd number of values this function will return the
+ * value of (N / 2) + 1.  If the vector contains an even number of variables
+ * it will return the average of (N/2) and (N+2)/2.  The resulting variable
+ * is a float value.
+ *
+ * @param vec A Vector container for integer data types
+ * @return The median value of an integer vector
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5}
+ * Vector vec = init_type_vector(INT, 5);
+ * append_vector(&vec);
+ * float median = median_int_vector(&vec);
+ * printf("%f\n", median);
+ * // >> 3.0
+ * @endcode
+ */
+float median_int_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of an float vector.  If the
+ * vector contains an odd number of values this function will return the
+ * value of (N / 2) + 1.  If the vector contains an even number of variables
+ * it will return the average of (N/2) and (N+2)/2.  The resulting variable
+ * is a float value.
+ *
+ * @param vec A Vector container for float data types
+ * @return The median value of a float vector
+ *
+ * @code
+ * float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}
+ * Vector vec = init_type_vector(FLOAT, 5);
+ * append_vector(&vec);
+ * float median = median_float_vector(&vec);
+ * printf("%f\n", median);
+ * // >> 3.0
+ * @endcode
+ */
+float median_float_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of an double vector.  If the
+ * vector contains an odd number of values this function will return the
+ * value of (N / 2) + 1.  If the vector contains an even number of variables
+ * it will return the average of (N/2) and (N+2)/2.  The resulting variable
+ * is a float value.
+ *
+ * @param vec A Vector container for double data types
+ * @return The median value of a float vector
+ *
+ * @code
+ * double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}
+ * Vector vec = init_type_vector(DOUBLE, 5);
+ * append_vector(&vec);
+ * double median = median_double_vector(&vec);
+ * printf("%f\n", median);
+ * // >> 3.0
+ * @endcode
+ */
+double median_double_vector(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

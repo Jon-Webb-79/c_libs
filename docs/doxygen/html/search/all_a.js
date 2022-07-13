@@ -1,4 +1,13 @@
 var searchData=
 [
-  ['unique_5fvector_5fvalues_0',['unique_vector_values',['../vector_8c.html#ac1835f04af3be7ac9e07b9f334d49703',1,'unique_vector_values(Vector *vec):&#160;vector.c'],['../vector_8h.html#ac1835f04af3be7ac9e07b9f334d49703',1,'unique_vector_values(Vector *vec):&#160;vector.c']]]
+  ['shortint_0',['SHORTINT',['../vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187',1,'vector.h']]],
+  ['sort_5fchar_5fvector_1',['sort_char_vector',['../vector_8c.html#abaa5d118b25d054dcca1ff2c16c3dade',1,'sort_char_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#abaa5d118b25d054dcca1ff2c16c3dade',1,'sort_char_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5fdouble_5fvector_2',['sort_double_vector',['../vector_8c.html#ae5ab6a019cf527754be5195994a96079',1,'sort_double_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#ae5ab6a019cf527754be5195994a96079',1,'sort_double_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5ffloat_5fvector_3',['sort_float_vector',['../vector_8c.html#a8ee1799ceadb2847c30ca4a30692ac49',1,'sort_float_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#a8ee1799ceadb2847c30ca4a30692ac49',1,'sort_float_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5fint_5fvector_4',['sort_int_vector',['../vector_8c.html#ad115228b4b014e0cb684f59b91310ed4',1,'sort_int_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#ad115228b4b014e0cb684f59b91310ed4',1,'sort_int_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5flong_5fvector_5',['sort_long_vector',['../vector_8c.html#aa1dfabdd7aa6816b5d7605cd9ff4c13b',1,'sort_long_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#aa1dfabdd7aa6816b5d7605cd9ff4c13b',1,'sort_long_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5flonglong_5fvector_6',['sort_longlong_vector',['../vector_8c.html#a7291416baaab166da36df4d84df7c24a',1,'sort_longlong_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#a7291416baaab166da36df4d84df7c24a',1,'sort_longlong_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5fshort_5fvector_7',['sort_short_vector',['../vector_8c.html#a3eb159f16b6cf88e962beae7d0023f00',1,'sort_short_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#a3eb159f16b6cf88e962beae7d0023f00',1,'sort_short_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['sort_5fvector_8',['sort_vector',['../vector_8c.html#ab42ca7cd37c2fd2d8d001a13c48c444b',1,'sort_vector(Vector *vec, uint8_t method):&#160;vector.c'],['../vector_8h.html#ab42ca7cd37c2fd2d8d001a13c48c444b',1,'sort_vector(Vector *vec, uint8_t method):&#160;vector.c']]],
+  ['string_9',['STRING',['../vector_8h.html#acfe99d230e216901bd782cc580e4e815aee847e634a4297b274316de8a8ca9921',1,'vector.h']]]
 ];
