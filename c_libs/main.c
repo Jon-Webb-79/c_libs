@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO median_vector
 // TODO sum_vector
 // TODO average_vector
 // TODO std_vector

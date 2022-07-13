@@ -137,6 +137,8 @@ Functions</h2></td></tr>
 <tr class="separator:acc8fc45817872e3634a392e9e2fda263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9108270e786dcdfeee4ed5ed8a05f18a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a">median_double_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:a9108270e786dcdfeee4ed5ed8a05f18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6165f429ccd4b4182ca00f94e965980"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:ae6165f429ccd4b4182ca00f94e965980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a2da99bf125e878741ca4979a784db7e6" name="a2da99bf125e878741ca4979a784db7e6"></a>
@@ -467,19 +469,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the median value of an double vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a float value.</p>
+<p >This function will return the median value of a double vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a double value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for double data types </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The median value of a float vector</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The median value of a double vector</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 5);</div>
 <div class="line">append_vector(&amp;vec);</div>
 <div class="line"><span class="keywordtype">double</span> median = <a class="code hl_function" href="vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a">median_double_vector</a>(&amp;vec);</div>
-<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, median);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
 <div class="ttc" id="avector_8c_html_a9108270e786dcdfeee4ed5ed8a05f18a"><div class="ttname"><a href="vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a">median_double_vector</a></div><div class="ttdeci">double median_double_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:625</div></div>
 <div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
@@ -501,7 +503,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will return the median value of an float vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a float value.</p>
+<p >This function will return the median value of a float vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a float value.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for float data types </td></tr>
@@ -549,6 +551,40 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
 <div class="ttc" id="avector_8c_html_a0d502710149813436a9b68900fa26490"><div class="ttname"><a href="vector_8c.html#a0d502710149813436a9b68900fa26490">median_int_vector</a></div><div class="ttdeci">float median_int_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:591</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ae6165f429ccd4b4182ca00f94e965980" name="ae6165f429ccd4b4182ca00f94e965980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6165f429ccd4b4182ca00f94e965980">&#9670;&nbsp;</a></span>median_long_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double median_long_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median value of a long vector. If the vector contains an odd number of values this function will return the value of (N / 2) + 1. If the vector contains an even number of variables it will return the average of (N/2) and (N+2)/2. The resulting variable is a double value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for double data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The median value of a long vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5}</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 5);</div>
+<div class="line">append_vector(&amp;vec);</div>
+<div class="line"><span class="keywordtype">double</span> median = <a class="code hl_function" href="vector_8c.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
+<div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
+<div class="ttc" id="avector_8c_html_ae6165f429ccd4b4182ca00f94e965980"><div class="ttname"><a href="vector_8c.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a></div><div class="ttdeci">double median_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:642</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -937,7 +973,6 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 5, 4, 3, 2, 1</span></div>
 <div class="ttc" id="avector_8c_html_a4bb1f2674e5ba08f0b7a6284d9b6d407"><div class="ttname"><a href="vector_8c.html#a4bb1f2674e5ba08f0b7a6284d9b6d407">reverse_long_vector</a></div><div class="ttdeci">void reverse_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:551</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

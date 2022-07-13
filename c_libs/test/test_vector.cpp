@@ -720,6 +720,18 @@ TEST(test_median, double_median_even) {
 	EXPECT_DOUBLE_EQ(3.5, median);
 	free_vector(&vec);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_long_vector function to ensure it correctly
+ * determines the median value of an integer vector of even length */
+TEST(test_median, long_median_even) {
+	long a[6] = {1, 2, 3, 4, 5, 6};
+	Vector vec= init_type_vector(LONG, 6);
+	push_vector(&vec, a,  6);
+	double median = median_long_vector(&vec);
+	EXPECT_DOUBLE_EQ(3.5, median);
+	free_vector(&vec);
+}
 // ================================================================================
 // ================================================================================
 // eof

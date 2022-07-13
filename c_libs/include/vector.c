@@ -629,12 +629,29 @@ double median_double_vector(Vector *vec) {
 		indice2 = ((vec->active_length + 2) - 1) / 2;
 		double value_one = ((double *)vec->vector)[indice1];
 		double value_two = ((double *)vec->vector)[indice2];
-		return (value_one + value_two) / 2.0f;
+		return (value_one + value_two) / 2.0;
 	}
 	else {
 		size_t indice = ((vec->active_length + 1) / 2) - 1;
 		double value = ((double *)vec->vector)[indice];
 		return value;
+	}
+}
+// --------------------------------------------------------------------------------
+
+double median_long_vector(Vector *vec) {
+	if (vec->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (vec->active_length / 2) -1;
+		indice2 = ((vec->active_length + 2) - 1) / 2;
+		long value_one = ((long *)vec->vector)[indice1];
+		long value_two = ((long *)vec->vector)[indice2];
+		return ((double)value_one + (double)value_two) / 2.0;
+	}
+	else {
+		size_t indice = ((vec->active_length + 1) / 2) - 1;
+		long value = ((long *)vec->vector)[indice];
+		return (double)value;
 	}
 }
 // ================================================================================
