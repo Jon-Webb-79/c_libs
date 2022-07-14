@@ -807,4 +807,49 @@ TEST(test_sum, longlong_sum) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the average_int_vector function to ensure it properly
+ * determines the average value for an integer Vector container */
+TEST(test_avg, int_avg) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Vector vec = init_type_vector(INT, 5);
+	push_vector(&vec, a, 5);
+	float avg = average_int_vector(&vec);
+	EXPECT_FLOAT_EQ(avg, 3.0f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_float_vector function to ensure it properly
+ * determines the average value for a float Vector container */
+TEST(test_avg, float_avg) {
+	float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	Vector vec = init_type_vector(FLOAT, 5);
+	push_vector(&vec, a, 5);
+	float avg = average_float_vector(&vec);
+	EXPECT_FLOAT_EQ(avg, 3.3f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_double_vector function to ensure it properly
+ * determines the average value for a double Vector container */
+TEST(test_avg, double_avg) {
+	double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	Vector vec = init_type_vector(DOUBLE, 5);
+	push_vector(&vec, a, 5);
+	double avg = average_double_vector(&vec);
+	EXPECT_DOUBLE_EQ(avg, 3.3);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_long_vector function to ensure it properly
+ * determines the average value for a long Vector container */
+TEST(test_avg, long_avg) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Vector vec = init_type_vector(LONG, 5);
+	push_vector(&vec, a, 5);
+	double avg = average_long_vector(&vec);
+	EXPECT_DOUBLE_EQ(avg, 3.0);
+}
+// ================================================================================
+// ================================================================================
 // eof

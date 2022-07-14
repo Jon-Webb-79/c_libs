@@ -708,6 +708,34 @@ long long sum_longlong_vector(Vector *vec) {
 	}
 	return sum;
 }
+// --------------------------------------------------------------------------------
+
+float average_int_vector(Vector *vec) {
+	int sum = sum_int_vector(vec);
+	float num = (float)vec->active_length;
+	return (float)sum / num;
+}
+// --------------------------------------------------------------------------------
+
+float average_float_vector(Vector *vec) {
+	float sum = sum_float_vector(vec);
+	float num = (float)vec->active_length;
+	return sum / num;
+}
+// --------------------------------------------------------------------------------
+
+double average_double_vector(Vector *vec) {
+	double sum = sum_double_vector(vec);
+	double num = (double)vec->active_length;
+	return sum / num;
+}
+// --------------------------------------------------------------------------------
+
+double average_long_vector(Vector *vec) {
+	long sum = sum_long_vector(vec);
+	double num = (double)vec->active_length;
+	return (double)sum / num;
+}
 // ================================================================================
 // ================================================================================
 // eof

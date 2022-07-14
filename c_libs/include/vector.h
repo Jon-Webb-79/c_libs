@@ -914,6 +914,83 @@ long sum_long_vector(Vector *vec);
  * @endcode
  */
 long long sum_longlong_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average value of the contents of an integer
+ * Vector container
+ *
+ * @param vec A Vector container for integer data types
+ * @return avg The average value of an integer Vector container.  The result
+ *             is returned as a float value.
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(INT, 5);
+ * push_vector(&vec, a, 5);
+ * float avg = average_int_vector(&vec);
+ * printf("%f\n", avg);
+ * // 3.0
+ * @endcode
+ */
+float average_int_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average value of the contents of a float
+ * Vector container
+ *
+ * @param vec A Vector container for float data types
+ * @return avg The average value of a float Vector container.
+ *
+ * @code
+ * float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Vector vec = init_type_vector(FLOAT, 5);
+ * push_vector(&vec, a, 5);
+ * float avg = average_float_vector(&vec);
+ * printf("%f\n", avg);
+ * // 3.3
+ * @endcode
+ */
+float average_float_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average value of the contents of a double
+ * Vector container
+ *
+ * @param vec A Vector container for double data types
+ * @return avg The average value of a douuble Vector container.
+ *
+ * @code
+ * double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Vector vec = init_type_vector(DOUBLE, 5);
+ * push_vector(&vec, a, 5);
+ * double avg = average_double_vector(&vec);
+ * printf("%lf\n", avg);
+ * // 3.3
+ * @endcode
+ */
+double average_double_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the average value of the contents of a long
+ * Vector container
+ *
+ * @param vec A Vector container for long data types
+ * @return avg The average value of a long Vector container.
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONG, 5);
+ * push_vector(&vec, a, 5);
+ * double avg = average_long_vector(&vec);
+ * printf("%ld\n", avg);
+ * // 3.0
+ * @endcode
+ */
+double average_long_vector(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

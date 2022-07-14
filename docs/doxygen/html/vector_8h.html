@@ -181,6 +181,14 @@ Functions</h2></td></tr>
 <tr class="separator:ad1253990e852bf31f6acb5c005459f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f5703bcb7cccb949f26668e7a1a517d"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a3f5703bcb7cccb949f26668e7a1a517d">sum_longlong_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:a3f5703bcb7cccb949f26668e7a1a517d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a56ce87511019647191ac1ff5b188b2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a2a56ce87511019647191ac1ff5b188b2">average_int_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a2a56ce87511019647191ac1ff5b188b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51c8010b63eba773775cf34c9adc61e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a51c8010b63eba773775cf34c9adc61e6">average_float_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a51c8010b63eba773775cf34c9adc61e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31d891c0d195b49b61fb9cc746a4fdb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ab31d891c0d195b49b61fb9cc746a4fdb">average_double_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:ab31d891c0d195b49b61fb9cc746a4fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4ded25852018f711d6d30fa9549e2f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a9d4ded25852018f711d6d30fa9549e2f">average_long_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a9d4ded25852018f711d6d30fa9549e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="acfe99d230e216901bd782cc580e4e815" name="acfe99d230e216901bd782cc580e4e815"></a>
@@ -224,6 +232,145 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ab31d891c0d195b49b61fb9cc746a4fdb" name="ab31d891c0d195b49b61fb9cc746a4fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31d891c0d195b49b61fb9cc746a4fdb">&#9670;&nbsp;</a></span>average_double_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double average_double_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the average value of the contents of a double <a class="el" href="structVector.html">Vector</a> container</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for double data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of a douuble <a class="el" href="structVector.html">Vector</a> container.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_function" href="vector_8c.html#ab31d891c0d195b49b61fb9cc746a4fdb">average_double_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.3</span></div>
+<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:72</div></div>
+<div class="ttc" id="avector_8c_html_ab31d891c0d195b49b61fb9cc746a4fdb"><div class="ttname"><a href="vector_8c.html#ab31d891c0d195b49b61fb9cc746a4fdb">average_double_vector</a></div><div class="ttdeci">double average_double_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:727</div></div>
+<div class="ttc" id="avector_8c_html_abd491da9e3521e9be05a17d8f72d04d7"><div class="ttname"><a href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a></div><div class="ttdeci">int push_vector(Vector *vec, void *elements, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:86</div></div>
+<div class="ttc" id="avector_8c_html_aebfff769c9c952425c106d67726fdae8"><div class="ttname"><a href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a></div><div class="ttdeci">Vector init_type_vector(dtype dat_type, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:38</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a51c8010b63eba773775cf34c9adc61e6" name="a51c8010b63eba773775cf34c9adc61e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c8010b63eba773775cf34c9adc61e6">&#9670;&nbsp;</a></span>average_float_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float average_float_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the average value of the contents of a float <a class="el" href="structVector.html">Vector</a> container</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for float data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of a float <a class="el" href="structVector.html">Vector</a> container.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">float</span> avg = <a class="code hl_function" href="vector_8c.html#a51c8010b63eba773775cf34c9adc61e6">average_float_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.3</span></div>
+<div class="ttc" id="avector_8c_html_a51c8010b63eba773775cf34c9adc61e6"><div class="ttname"><a href="vector_8c.html#a51c8010b63eba773775cf34c9adc61e6">average_float_vector</a></div><div class="ttdeci">float average_float_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:720</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a2a56ce87511019647191ac1ff5b188b2" name="a2a56ce87511019647191ac1ff5b188b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a56ce87511019647191ac1ff5b188b2">&#9670;&nbsp;</a></span>average_int_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float average_int_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the average value of the contents of an integer <a class="el" href="structVector.html">Vector</a> container</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for integer data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of an integer <a class="el" href="structVector.html">Vector</a> container. The result is returned as a float value.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">float</span> avg = <a class="code hl_function" href="vector_8c.html#a2a56ce87511019647191ac1ff5b188b2">average_int_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.0</span></div>
+<div class="ttc" id="avector_8c_html_a2a56ce87511019647191ac1ff5b188b2"><div class="ttname"><a href="vector_8c.html#a2a56ce87511019647191ac1ff5b188b2">average_int_vector</a></div><div class="ttdeci">float average_int_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:713</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9d4ded25852018f711d6d30fa9549e2f" name="a9d4ded25852018f711d6d30fa9549e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4ded25852018f711d6d30fa9549e2f">&#9670;&nbsp;</a></span>average_long_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double average_long_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the average value of the contents of a long <a class="el" href="structVector.html">Vector</a> container</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for long data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of a long <a class="el" href="structVector.html">Vector</a> container.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_function" href="vector_8c.html#a9d4ded25852018f711d6d30fa9549e2f">average_long_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.0</span></div>
+<div class="ttc" id="avector_8c_html_a9d4ded25852018f711d6d30fa9549e2f"><div class="ttname"><a href="vector_8c.html#a9d4ded25852018f711d6d30fa9549e2f">average_long_vector</a></div><div class="ttdeci">double average_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:734</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a2da99bf125e878741ca4979a784db7e6" name="a2da99bf125e878741ca4979a784db7e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2da99bf125e878741ca4979a784db7e6">&#9670;&nbsp;</a></span>delete_vector_duplicates()</h2>
 
@@ -254,13 +401,9 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1, 2.2, 4.5, 2.3</span></div>
-<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:72</div></div>
 <div class="ttc" id="astructVector_html_a2ed69ccf5252684aeec041b3d36e0289"><div class="ttname"><a href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">Vector::vector</a></div><div class="ttdeci">char * vector</div><div class="ttdef"><b>Definition:</b> vector.h:73</div></div>
 <div class="ttc" id="astructVector_html_ab7bc85dcb16ebc2e4879b74a30167533"><div class="ttname"><a href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">Vector::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> vector.h:74</div></div>
 <div class="ttc" id="avector_8c_html_a2da99bf125e878741ca4979a784db7e6"><div class="ttname"><a href="vector_8c.html#a2da99bf125e878741ca4979a784db7e6">delete_vector_duplicates</a></div><div class="ttdeci">void delete_vector_duplicates(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:232</div></div>
-<div class="ttc" id="avector_8c_html_abd491da9e3521e9be05a17d8f72d04d7"><div class="ttname"><a href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a></div><div class="ttdeci">int push_vector(Vector *vec, void *elements, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:86</div></div>
-<div class="ttc" id="avector_8c_html_aebfff769c9c952425c106d67726fdae8"><div class="ttname"><a href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a></div><div class="ttdeci">Vector init_type_vector(dtype dat_type, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:38</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -308,7 +451,6 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 3, 2</span></div>
 <div class="ttc" id="avector_8c_html_ad54d5a00414e9ccc53ebd6432a9e5f1c"><div class="ttname"><a href="vector_8c.html#ad54d5a00414e9ccc53ebd6432a9e5f1c">delete_vector_values</a></div><div class="ttdeci">void delete_vector_values(Vector *vec, void *value)</div><div class="ttdef"><b>Definition:</b> vector.c:192</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -568,7 +710,6 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
 <div class="ttc" id="avector_8c_html_a9108270e786dcdfeee4ed5ed8a05f18a"><div class="ttname"><a href="vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a">median_double_vector</a></div><div class="ttdeci">double median_double_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:625</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -668,7 +809,6 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
 <div class="ttc" id="avector_8c_html_ae6165f429ccd4b4182ca00f94e965980"><div class="ttname"><a href="vector_8c.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a></div><div class="ttdeci">double median_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:642</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
