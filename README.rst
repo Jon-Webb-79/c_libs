@@ -349,3 +349,20 @@ contents of a Vector container.
    int sum = sum_int_vector(&vec);
    printf("%f\n", sum);
    // 15
+
+==================
+average_xxx_vector
+==================
+The function ``average_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
+``double``, and ``long`` can be used to determine the sum of the 
+contents of a Vector container.  The function ``average_int_vector()`` returns a float
+value and ``average_long_vector()`` returns a double value.
+
+.. code-block:: c
+
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   Vector vec = init_type_vector(FLOAT, 6);
+   push_vector(&vec, a, 6);
+   float sum = sum_float_vector(&vec);
+   printf("%f\n", sum);
+   // 3.3
