@@ -92,6 +92,18 @@ float \mbox{\hyperlink{vector_8h_acc8fc45817872e3634a392e9e2fda263}{median\+\_\+
 double \mbox{\hyperlink{vector_8h_a9108270e786dcdfeee4ed5ed8a05f18a}{median\+\_\+double\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \item 
 double \mbox{\hyperlink{vector_8h_ae6165f429ccd4b4182ca00f94e965980}{median\+\_\+long\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+int \mbox{\hyperlink{vector_8h_a45b2ede9b03ec42d706557055364bf7f}{sum\+\_\+int\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a25fad94b08223aefc1f9993fc9c00f80}{sum\+\_\+float\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_a318a4097ce728828b14d11147e252693}{sum\+\_\+double\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+short \mbox{\hyperlink{vector_8h_a070eda61ba1b032022a63f8514666dc3}{sum\+\_\+short\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+long \mbox{\hyperlink{vector_8h_ad1253990e852bf31f6acb5c005459f8b}{sum\+\_\+long\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
+\item 
+long long \mbox{\hyperlink{vector_8h_a3f5703bcb7cccb949f26668e7a1a517d}{sum\+\_\+longlong\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -183,7 +195,7 @@ This function will delete all duplicate values in a vector container. This funct
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 7);}
-\DoxyCodeLine{append\_vector(\&vec, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 7);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2da99bf125e878741ca4979a784db7e6}{delete\_vector\_duplicates}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -212,7 +224,7 @@ This function will deleted all elements from an array that match a user defined 
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 3, 1, 2, 1\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b = 1;}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5\};}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad54d5a00414e9ccc53ebd6432a9e5f1c}{delete\_vector\_values}}(\&vec, \&b);}
 \DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n "{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -244,6 +256,7 @@ indices An integer vector of value cooresponding to the location of the scalar v
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 1, 4, 1\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b = 1;}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} indices = \mbox{\hyperlink{vector_8c_a60ae2577c16e2f397650d35641d80808}{find\_vector\_indices}}(\&vec, \&b);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} = 0; i < indices.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d "{}}, ((\textcolor{keywordtype}{int} *)indices-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -378,7 +391,7 @@ The median value of a double vector
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} median = \mbox{\hyperlink{vector_8c_a9108270e786dcdfeee4ed5ed8a05f18a}{median\_double\_vector}}(\&vec);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, median);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
@@ -404,7 +417,7 @@ The median value of a float vector
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} median = \mbox{\hyperlink{vector_8c_acc8fc45817872e3634a392e9e2fda263}{median\_float\_vector}}(\&vec);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, median);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
@@ -430,7 +443,7 @@ The median value of an integer vector
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} median = \mbox{\hyperlink{vector_8c_a0d502710149813436a9b68900fa26490}{median\_int\_vector}}(\&vec);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, median);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
@@ -456,7 +469,7 @@ The median value of a long vector
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} median = \mbox{\hyperlink{vector_8c_ae6165f429ccd4b4182ca00f94e965980}{median\_long\_vector}}(\&vec);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, median);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
@@ -483,7 +496,7 @@ integer An error code of 0 if the user defines an indice greater than the array 
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 4}
 \DoxyCodeLine{Array arr\_test = init\_typ\_vecot(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, indices);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(\&arr\_test, a, 4);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&arr\_test, a, 4);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} b = 8.3;}
 \DoxyCodeLine{\mbox{\hyperlink{array_8c_ade257c4734ef94d47aea5f0424b8fdf9}{pop\_array}}(\&arr\_test, \&b);}
 \DoxyCodeLine{\textcolor{comment}{// >> [10.1, 9.2, 7.4]}}
@@ -517,8 +530,8 @@ num Returns 0 if the function executes successfully, or returns a 1 if the funct
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
 \DoxyCodeLine{a[3] = \{1, 2, 3\};}
 \DoxyCodeLine{b[3] = \{4, 5, 6\};}
-\DoxyCodeLine{append\_vector(\&vec, a, 3\};}
-\DoxyCodeLine{append\_vector(\&vec, b, 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, b, 3\};}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}[ "{}});}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d, "{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -529,7 +542,7 @@ num Returns 0 if the function executes successfully, or returns a 1 if the funct
 \DoxyCodeLine{\textcolor{comment}{// append a vector with a scalar value}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec2 = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 1);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} c = 1;}
-\DoxyCodeLine{append\_vector(\&vec2, \&c, 1);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec2, \&c, 1);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[0]);}
 \DoxyCodeLine{\textcolor{comment}{// >> 1}}
 
@@ -556,7 +569,7 @@ This function will replace the data in a \mbox{\hyperlink{structVector}{Vector}}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{1, 2, 1, 3, 1, 5\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} new\_value = 6;}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_acdbd40da89542d36b350d4efae7a50bf}{replace\_vector\_index}}(\&vec, 1, new\_value);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vev-\/>active\_length; i++)\{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec-\/>\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -587,7 +600,7 @@ This function will replace any values in an array that match the user descriptio
 \DoxyCodeLine{\textcolor{keywordtype}{int} old\_value = 2;}
 \DoxyCodeLine{\textcolor{keywordtype}{int} new\_value = 4;}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{replace\_vector\_element(\&vec, \&old\_value, \&new\_value);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -612,7 +625,7 @@ This function will reverse the order of a char vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c9055bf5c6e285d512c0dd1a71ea414}{reverse\_char\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c \(\backslash\)n"{}}, ((\textcolor{keywordtype}{char} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -637,7 +650,7 @@ This function will reverse the order of a double vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3e9d1171ce4e00f73e6e91f911917663}{reverse\_double\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf \(\backslash\)n"{}}, ((\textcolor{keywordtype}{double} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -662,7 +675,7 @@ This function will reverse the order of a float vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{1.1, 2.2, 3.3, 4.4, 5.5, 6.6\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae3018c8afd0c0af1d14b3440d8d13f91}{reverse\_float\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -687,7 +700,7 @@ This function will reverse the order of an integer vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{ 1, 2, 3, 4, 5, 6\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae43973885fd550f1aa9eeb43e467f3c6}{reverse\_int\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -712,7 +725,7 @@ This function will reverse the order of a long integer vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a4bb1f2674e5ba08f0b7a6284d9b6d407}{reverse\_long\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -737,7 +750,7 @@ This function will reverse the order of a long long integer vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab99bc039ca0b011cb414b332763f3105}{reverse\_longlong\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -762,7 +775,7 @@ This function will reverse the order of a short integer vector container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5b3c9512d2f56a11e252b2c597b93bc6}{reverse\_short\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{short} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -790,7 +803,7 @@ integer An integer representing failure (0) or sucess (1)
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a996ea0933de7aa349885f9bea2a155c7}{reverse\_vector}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -820,7 +833,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}eCdba"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_abaa5d118b25d054dcca1ff2c16c3dade}{sort\_char\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%c \(\backslash\)n"{}}, ((\textcolor{keywordtype}{char} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -850,7 +863,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.2, 1.4, 5.0, 2.1, 6.8\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5ab6a019cf527754be5195994a96079}{sort\_double\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%lf \(\backslash\)n"{}}, ((\textcolor{keywordtype}{double} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -880,7 +893,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{3.2, 1.4, 5.0, 2.1, 6.8\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8ee1799ceadb2847c30ca4a30692ac49}{sort\_float\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -910,7 +923,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{3, 1, 5, 2, 6\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
-\DoxyCodeLine{append\_vector(\&vec, a, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
 \DoxyCodeLine{sort\_int\_vector\_ascending(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -940,7 +953,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa1dfabdd7aa6816b5d7605cd9ff4c13b}{sort\_long\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -970,7 +983,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7291416baaab166da36df4d84df7c24a}{sort\_longlong\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -1000,7 +1013,7 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{short} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3eb159f16b6cf88e962beae7d0023f00}{sort\_short\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{short} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
@@ -1030,12 +1043,168 @@ integer An integer representing success (1) or failure (0) of the function.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[6] = \{3, 5, 2, 1, 8, 6\}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 6);}
-\DoxyCodeLine{append\_vector(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab42ca7cd37c2fd2d8d001a13c48c444b}{sort\_vector}}(\&vec, 0);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%d \(\backslash\)n"{}}, ((\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 5, 6, 8}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a318a4097ce728828b14d11147e252693}\label{vector_8h_a318a4097ce728828b14d11147e252693}} 
+\index{vector.h@{vector.h}!sum\_double\_vector@{sum\_double\_vector}}
+\index{sum\_double\_vector@{sum\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_double\_vector()}{sum\_double\_vector()}}
+{\footnotesize\ttfamily double sum\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will determine the sum of the contents of a double vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for double data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of the contents of a double vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.1, 2.2, 3.3, 4.4, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} = \mbox{\hyperlink{vector_8c_a318a4097ce728828b14d11147e252693}{sum\_double\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 16.5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a25fad94b08223aefc1f9993fc9c00f80}\label{vector_8h_a25fad94b08223aefc1f9993fc9c00f80}} 
+\index{vector.h@{vector.h}!sum\_float\_vector@{sum\_float\_vector}}
+\index{sum\_float\_vector@{sum\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_float\_vector()}{sum\_float\_vector()}}
+{\footnotesize\ttfamily float sum\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will determine the sum of the contents of a float vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for float data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of the contents of a float vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.1, 2.2, 3.3, 4.4, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} = \mbox{\hyperlink{vector_8c_a25fad94b08223aefc1f9993fc9c00f80}{sum\_float\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 16.5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a45b2ede9b03ec42d706557055364bf7f}\label{vector_8h_a45b2ede9b03ec42d706557055364bf7f}} 
+\index{vector.h@{vector.h}!sum\_int\_vector@{sum\_int\_vector}}
+\index{sum\_int\_vector@{sum\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_int\_vector()}{sum\_int\_vector()}}
+{\footnotesize\ttfamily int sum\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will determine the sum of the contents of an integer vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for integer data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of the contents of an integer vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a45b2ede9b03ec42d706557055364bf7f}{sum\_int\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ad1253990e852bf31f6acb5c005459f8b}\label{vector_8h_ad1253990e852bf31f6acb5c005459f8b}} 
+\index{vector.h@{vector.h}!sum\_long\_vector@{sum\_long\_vector}}
+\index{sum\_long\_vector@{sum\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_long\_vector()}{sum\_long\_vector()}}
+{\footnotesize\ttfamily long sum\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will determine the sum of the contents of a long integer vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for long data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of the contents of a long vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} = \mbox{\hyperlink{vector_8c_ad1253990e852bf31f6acb5c005459f8b}{sum\_long\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a3f5703bcb7cccb949f26668e7a1a517d}\label{vector_8h_a3f5703bcb7cccb949f26668e7a1a517d}} 
+\index{vector.h@{vector.h}!sum\_longlong\_vector@{sum\_longlong\_vector}}
+\index{sum\_longlong\_vector@{sum\_longlong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_longlong\_vector()}{sum\_longlong\_vector()}}
+{\footnotesize\ttfamily long long sum\+\_\+longlong\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will determine the sum of the contents of a long long integer vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for long long data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of the contents of a long long vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} = \mbox{\hyperlink{vector_8c_a3f5703bcb7cccb949f26668e7a1a517d}{sum\_longlong\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a070eda61ba1b032022a63f8514666dc3}\label{vector_8h_a070eda61ba1b032022a63f8514666dc3}} 
+\index{vector.h@{vector.h}!sum\_short\_vector@{sum\_short\_vector}}
+\index{sum\_short\_vector@{sum\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_short\_vector()}{sum\_short\_vector()}}
+{\footnotesize\ttfamily short sum\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will determine the sum of the contents of a short integer vector container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A \mbox{\hyperlink{structVector}{Vector}} container for short data types \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum of the contents of a short vector
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{short} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{short} = \mbox{\hyperlink{vector_8c_a070eda61ba1b032022a63f8514666dc3}{sum\_short\_vector}}(\&vec);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8h_ac1835f04af3be7ac9e07b9f334d49703}\label{vector_8h_ac1835f04af3be7ac9e07b9f334d49703}} 
@@ -1055,7 +1224,7 @@ This function will delete all non unique values in a vector container. This func
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2\};}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_aebfff769c9c952425c106d67726fdae8}{init\_type\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, 7);}
-\DoxyCodeLine{append\_vector(\&vec, a, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&vec, a, 7);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac1835f04af3be7ac9e07b9f334d49703}{unique\_vector\_values}}(\&vec);}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structVector_ab7bc85dcb16ebc2e4879b74a30167533}{active\_length}}; i++) \{}
 \DoxyCodeLine{   printf(\textcolor{stringliteral}{"{}\%f \(\backslash\)n"{}}, ((\textcolor{keywordtype}{float} *)vec.\mbox{\hyperlink{structVector_a2ed69ccf5252684aeec041b3d36e0289}{vector}})[i]);}

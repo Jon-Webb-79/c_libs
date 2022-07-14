@@ -734,4 +734,77 @@ TEST(test_median, long_median_even) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the sum_int_vector function to ensure it properly
+ * determines the sum of an integer Vector container */
+TEST(test_sum, int_sum) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Vector vec = init_type_vector(INT, 5);
+	push_vector(&vec, a, 5);
+	int sum = sum_int_vector(&vec);
+	EXPECT_EQ(sum, 15);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_float_vector function to ensure it properly
+ * determines the sum of a float Vector container */
+TEST(test_sum, float_sum) {
+	float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	Vector vec = init_type_vector(FLOAT, 5);
+	push_vector(&vec, a, 5);
+	float sum = sum_float_vector(&vec);
+	EXPECT_FLOAT_EQ(sum, 16.5f);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_double_vector function to ensure it properly
+ * determines the sum of a float Vector container */
+TEST(test_sum, double_sum) {
+	double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	Vector vec = init_type_vector(DOUBLE, 5);
+	push_vector(&vec, a, 5);
+	double sum = sum_double_vector(&vec);
+	EXPECT_DOUBLE_EQ(sum, 16.5);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_short_vector function to ensure it properly
+ * determines the sum of a short Vector container */
+TEST(test_sum, short_sum) {
+	short a[5] = {1, 2, 3, 4, 5};
+	Vector vec = init_type_vector(SHORTINT, 5);
+	push_vector(&vec, a, 5);
+	short sum = sum_short_vector(&vec);
+	EXPECT_EQ(sum, 15);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_long_vector function to ensure it properly
+ * determines the sum of a long Vector container */
+TEST(test_sum, long_sum) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Vector vec = init_type_vector(LONG, 5);
+	push_vector(&vec, a, 5);
+	long sum = sum_long_vector(&vec);
+	EXPECT_EQ(sum, 15);
+	free_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_longlong_vector function to ensure it properly
+ * determines the sum of a long long Vector container */
+TEST(test_sum, longlong_sum) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	long long sum = sum_longlong_vector(&vec);
+	EXPECT_EQ(sum, 15);
+	free_vector(&vec);
+}
+// ================================================================================
+// ================================================================================
 // eof

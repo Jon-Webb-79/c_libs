@@ -654,6 +654,60 @@ double median_long_vector(Vector *vec) {
 		return (double)value;
 	}
 }
+// --------------------------------------------------------------------------------
+
+int sum_int_vector(Vector *vec) {
+	int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((int *)vec->vector)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+float sum_float_vector(Vector *vec) {
+	float sum = 0.0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((float *)vec->vector)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+double sum_double_vector(Vector *vec) {
+	double sum = 0.0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((double *)vec->vector)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+short sum_short_vector(Vector *vec) {
+	short sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((short *)vec->vector)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long sum_long_vector(Vector *vec) {
+	long sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((long *)vec->vector)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long long sum_longlong_vector(Vector *vec) {
+	long long sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((long long *)vec->vector)[i];
+	}
+	return sum;
+}
 // ================================================================================
 // ================================================================================
 // eof

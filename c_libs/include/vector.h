@@ -135,8 +135,8 @@ Vector init_type_vector(dtype dat_type, size_t num_indices);
  * Vector vec = init_type_vector(INT, 5);
  * a[3] = {1, 2, 3};
  * b[3] = {4, 5, 6};
- * append_vector(&vec, a, 3};
- * append_vector(&vec, b, 3};
+ * push_vector(&vec, a, 3};
+ * push_vector(&vec, b, 3};
  * for (int i = 0; i < 6; i++) {
  *     printf("[ ");
  *     printf("%d, ", ((int *)vec->vector)[i]);
@@ -147,7 +147,7 @@ Vector init_type_vector(dtype dat_type, size_t num_indices);
  * // append a vector with a scalar value
  * Vector vec2 = init_type_vector(INT, 1);
  * int c = 1;
- * append_vector(&vec2, &c, 1);
+ * push_vector(&vec2, &c, 1);
  * printf("%d\n", ((int *)vec->vector)[0]);
  * // >> 1
  * @endcode
@@ -218,7 +218,7 @@ int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice
  * size_t indices = 4
  * Array arr_test = init_typ_vecot(FLOAT, indices);
  * float a[4] = {10.1, 9.2, 8.3, 7.4};
- * append_array(&arr_test, a, 4);
+ * push_vector(&arr_test, a, 4);
  * float b = 8.3;
  * pop_array(&arr_test, &b);
  * // >> [10.1, 9.2, 7.4]
@@ -249,6 +249,7 @@ int pop_vector(Vector *vec, size_t index);
  * int a[5] = {1, 2, 1, 4, 1};
  * int b = 1;
  * Vector vec = init_type_vector(INT, 5);
+ * push_vector(&vec, a, 5);
  * Vector indices = find_vector_indices(&vec, &b);
  * for (size_t = 0; i < indices.active_length; i++) {
  *     printf("%d ", ((int *)indices->vector)[i]);
@@ -271,7 +272,7 @@ Vector find_vector_indices(Vector *vec, void *value);
  * int a[5] = {1, 3, 1, 2, 1};
  * int b = 1;
  * Vector vec = init_type_vector(INT, 5};
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * delete_vector_values(&vec, &b);
  * for(size_t i = 0; i < vec.active_length; i++) {
  *     printf("%d\n ", ((int *)vec.vector)[i]);
@@ -296,7 +297,7 @@ void delete_vector_values(Vector *vec, void *value);
  * int a[6] = {1, 2, 1, 3, 1, 5};
  * int new_value = 6;
  * Vector vec = init_type_vector(INT, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * replace_vector_index(&vec, 1, new_value);
  * for (size_t i = 0; vev->active_length; i++){
  *     printf("%d \n", ((int *)vec->vector)[i]);
@@ -323,7 +324,7 @@ int replace_vector_index(Vector *vec, size_t index, void *replacement_value);
  * int old_value = 2;
  * int new_value = 4;
  * Vector vec = init_type_vector(INT, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * replace_vector_element(&vec, &old_value, &new_value);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((int *)vec.vector)[i]);
@@ -343,7 +344,7 @@ void replace_vector_values(Vector *vec, void *old_value, void *new_value);
  * @code
  * float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
  * Vector vec = init_type_vector(FLOAT, 7);
- * append_vector(&vec, a, 7);
+ * push_vector(&vec, a, 7);
  * delete_vector_duplicates(&vec);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%f \n", ((float *)vec.vector)[i]);
@@ -363,7 +364,7 @@ void delete_vector_duplicates(Vector *vec);
  * @code
  * float a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};
  * Vector vec = init_type_vector(FLOAT, 7);
- * append_vector(&vec, a, 7);
+ * push_vector(&vec, a, 7);
  * unique_vector_values(&vec);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%f \n", ((float *)vec.vector)[i]);
@@ -386,7 +387,7 @@ void unique_vector_values(Vector *vec);
  * @code
  * int a[5] = {3, 1, 5, 2, 6};
  * Vector vec = init_type_vector(INT, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * sort_int_vector_ascending(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((int *)vec.vector)[i]);
@@ -409,7 +410,7 @@ int sort_int_vector(Vector *vec, uint8_t method);
  * @code
  * float a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};
  * Vector vec = init_type_vector(FLOAT, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * sort_float_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%f \n", ((float *)vec.vector)[i]);
@@ -432,7 +433,7 @@ int sort_float_vector(Vector *vec, uint8_t method);
  * @code
  * double a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};
  * Vector vec = init_type_vector(DOUBLE, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * sort_double_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%lf \n", ((double *)vec.vector)[i]);
@@ -457,7 +458,7 @@ int sort_double_vector(Vector *vec, uint8_t method);
  * @code
  * char a[6] = "eCdba";
  * Vector vec = init_type_vector(CHAR, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * sort_char_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%c \n", ((char *)vec.vector)[i]);
@@ -480,7 +481,7 @@ int sort_char_vector(Vector *vec, uint8_t method);
  * @code
  * short a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(SHORTINT, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * sort_short_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((short *)vec.vector)[i]);
@@ -503,7 +504,7 @@ int sort_short_vector(Vector *vec, uint8_t method);
  * @code
  * long a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(LONG, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * sort_long_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((long *)vec.vector)[i]);
@@ -526,7 +527,7 @@ int sort_long_vector(Vector *vec, uint8_t method);
  * @code
  * long long a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(LONGLONG, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * sort_longlong_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((long long *)vec.vector)[i]);
@@ -549,7 +550,7 @@ int sort_longlong_vector(Vector *vec, uint8_t method);
  * @code
  * long long a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(LONGLONG, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * sort_vector(&vec, 0);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((long long *)vec.vector)[i]);
@@ -568,7 +569,7 @@ int sort_vector(Vector *vec, uint8_t method);
  * @code
  * int a[6] = { 1, 2, 3, 4, 5, 6};
  * Vector vec = init_type_vector(INT, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * reverse_int_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%d \n", ((int *)vec.vector)[i]);
@@ -587,7 +588,7 @@ void reverse_int_vector(Vector *vec);
  * @code
  * float a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
  * Vector vec = init_type_vector(FLOAT, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * reverse_float_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%f \n", ((float *)vec.vector)[i]);
@@ -606,7 +607,7 @@ void reverse_float_vector(Vector *vec);
  * @code
  * double a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
  * Vector vec = init_type_vector(DOUBLE, 6);
- * append_vector(&vec, a, 6);
+ * push_vector(&vec, a, 6);
  * reverse_double_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%lf \n", ((double *)vec.vector)[i]);
@@ -625,7 +626,7 @@ void reverse_double_vector(Vector *vec);
  * @code
  * char a[6] = "Hello";
  * Vector vec = init_type_vector(CHAR, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * reverse_char_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%c \n", ((char *)vec.vector)[i]);
@@ -644,7 +645,7 @@ void reverse_char_vector(Vector *vec);
  * @code
  * char a[5] = {1, 2, 3, 4, 5};
  * Vector vec = init_type_vector(SHORTINT, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * reverse_short_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%d \n", ((short *)vec.vector)[i]);
@@ -663,7 +664,7 @@ void reverse_short_vector(Vector *vec);
  * @code
  * long a[5] = {1, 2, 3, 4, 5};
  * Vector vec = init_type_vector(LONG, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * reverse_long_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%d \n", ((long *)vec.vector)[i]);
@@ -682,7 +683,7 @@ void reverse_long_vector(Vector *vec);
  * @code
  * long long a[5] = {1, 2, 3, 4, 5};
  * Vector vec = init_type_vector(LONGLONG, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * reverse_longlong_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%d \n", ((long long *)vec.vector)[i]);
@@ -702,7 +703,7 @@ void reverse_longlong_vector(Vector *vec);
  * @code
  * long long a[5] = {1, 2, 3, 4, 5};
  * Vector vec = init_type_vector(LONGLONG, 5);
- * append_vector(&vec, a, 5);
+ * push_vector(&vec, a, 5);
  * reverse_vector(&vec);
  * for (size_t i = 0; vec.active_length; i++) {
  *     printf("%d \n", ((long long *)vec.vector)[i]);
@@ -726,7 +727,7 @@ int reverse_vector(Vector *vec);
  * @code
  * int a[5] = {1, 2, 3, 4, 5}
  * Vector vec = init_type_vector(INT, 5);
- * append_vector(&vec);
+ * push_vector(&vec);
  * float median = median_int_vector(&vec);
  * printf("%f\n", median);
  * // >> 3.0
@@ -748,7 +749,7 @@ float median_int_vector(Vector *vec);
  * @code
  * float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}
  * Vector vec = init_type_vector(FLOAT, 5);
- * append_vector(&vec);
+ * push_vector(&vec);
  * float median = median_float_vector(&vec);
  * printf("%f\n", median);
  * // >> 3.0
@@ -770,7 +771,7 @@ float median_float_vector(Vector *vec);
  * @code
  * double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}
  * Vector vec = init_type_vector(DOUBLE, 5);
- * append_vector(&vec);
+ * push_vector(&vec);
  * double median = median_double_vector(&vec);
  * printf("%lf\n", median);
  * // >> 3.0
@@ -792,14 +793,127 @@ double median_double_vector(Vector *vec);
  * @code
  * long a[5] = {1, 2, 3, 4, 5}
  * Vector vec = init_type_vector(LONG, 5);
- * append_vector(&vec);
+ * push_vector(&vec);
  * double median = median_long_vector(&vec);
  * printf("%lf\n", median);
  * // >> 3.0
  * @endcode
  */
 double median_long_vector(Vector *vec);
+// --------------------------------------------------------------------------------
 
+/**
+ * This function will determine the sum of the contents of an integer vector
+ * container.
+ *
+ * @param vec A Vector container for integer data types
+ * @return sum The sum of the contents of an integer vector
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(INT, 5);
+ * push_vector(&vec, a, 5);
+ * int sum = sum_int_vector(&vec);
+ * printf("%d\n", sum);
+ * // >> 15
+ * @endcode
+ */
+int sum_int_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of the contents of a float vector
+ * container.
+ *
+ * @param vec A Vector container for float data types
+ * @return sum The sum of the contents of a float vector
+ *
+ * @code
+ * float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Vector vec = init_type_vector(FLOAT, 5);
+ * push_vector(&vec, a, 5);
+ * float = sum_float_vector(&vec);
+ * printf("%f\n", sum);
+ * // >> 16.5
+ * @endcode
+ */
+float sum_float_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of the contents of a double vector
+ * container.
+ *
+ * @param vec A Vector container for double data types
+ * @return sum The sum of the contents of a double vector
+ *
+ * @code
+ * double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Vector vec = init_type_vector(DOUBLE, 5);
+ * push_vector(&vec, a, 5);
+ * double = sum_double_vector(&vec);
+ * printf("%lf\n", sum);
+ * // >> 16.5
+ * @endcode
+ */
+double sum_double_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of the contents of a short integer vector
+ * container.
+ *
+ * @param vec A Vector container for short data types
+ * @return sum The sum of the contents of a short vector
+ *
+ * @code
+ * short a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(SHORTINT, 5);
+ * push_vector(&vec, a, 5);
+ * short = sum_short_vector(&vec);
+ * printf("%ld\n", sum);
+ * // >> 15
+ * @endcode
+ */
+short sum_short_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of the contents of a long integer vector
+ * container.
+ *
+ * @param vec A Vector container for long data types
+ * @return sum The sum of the contents of a long vector
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONG, 5);
+ * push_vector(&vec, a, 5);
+ * long = sum_long_vector(&vec);
+ * printf("%ld\n", sum);
+ * // >> 15
+ * @endcode
+ */
+long sum_long_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the sum of the contents of a long long integer vector
+ * container.
+ *
+ * @param vec A Vector container for long long data types
+ * @return sum The sum of the contents of a long long vector
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONGLONG, 5);
+ * push_vector(&vec, a, 5);
+ * long long = sum_longlong_vector(&vec);
+ * printf("%ld\n", sum);
+ * // >> 15
+ * @endcode
+ */
+long long sum_longlong_vector(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

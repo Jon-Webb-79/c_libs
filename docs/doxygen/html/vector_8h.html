@@ -169,6 +169,18 @@ Functions</h2></td></tr>
 <tr class="separator:a9108270e786dcdfeee4ed5ed8a05f18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6165f429ccd4b4182ca00f94e965980"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:ae6165f429ccd4b4182ca00f94e965980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b2ede9b03ec42d706557055364bf7f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a45b2ede9b03ec42d706557055364bf7f">sum_int_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a45b2ede9b03ec42d706557055364bf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fad94b08223aefc1f9993fc9c00f80"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a25fad94b08223aefc1f9993fc9c00f80">sum_float_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a25fad94b08223aefc1f9993fc9c00f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318a4097ce728828b14d11147e252693"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a318a4097ce728828b14d11147e252693">sum_double_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a318a4097ce728828b14d11147e252693"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070eda61ba1b032022a63f8514666dc3"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a070eda61ba1b032022a63f8514666dc3">sum_short_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a070eda61ba1b032022a63f8514666dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1253990e852bf31f6acb5c005459f8b"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ad1253990e852bf31f6acb5c005459f8b">sum_long_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:ad1253990e852bf31f6acb5c005459f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5703bcb7cccb949f26668e7a1a517d"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a3f5703bcb7cccb949f26668e7a1a517d">sum_longlong_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a3f5703bcb7cccb949f26668e7a1a517d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="acfe99d230e216901bd782cc580e4e815" name="acfe99d230e216901bd782cc580e4e815"></a>
@@ -236,7 +248,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 7);</div>
-<div class="line">append_vector(&amp;vec, a, 7);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 7);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a2da99bf125e878741ca4979a784db7e6">delete_vector_duplicates</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -246,6 +258,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructVector_html_a2ed69ccf5252684aeec041b3d36e0289"><div class="ttname"><a href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">Vector::vector</a></div><div class="ttdeci">char * vector</div><div class="ttdef"><b>Definition:</b> vector.h:73</div></div>
 <div class="ttc" id="astructVector_html_ab7bc85dcb16ebc2e4879b74a30167533"><div class="ttname"><a href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">Vector::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> vector.h:74</div></div>
 <div class="ttc" id="avector_8c_html_a2da99bf125e878741ca4979a784db7e6"><div class="ttname"><a href="vector_8c.html#a2da99bf125e878741ca4979a784db7e6">delete_vector_duplicates</a></div><div class="ttdeci">void delete_vector_duplicates(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:232</div></div>
+<div class="ttc" id="avector_8c_html_abd491da9e3521e9be05a17d8f72d04d7"><div class="ttname"><a href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a></div><div class="ttdeci">int push_vector(Vector *vec, void *elements, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:86</div></div>
 <div class="ttc" id="avector_8c_html_aebfff769c9c952425c106d67726fdae8"><div class="ttname"><a href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a></div><div class="ttdeci">Vector init_type_vector(dtype dat_type, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:38</div></div>
 <div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
 </div><!-- fragment --> 
@@ -288,7 +301,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> a[5] = {1, 3, 1, 2, 1};</div>
 <div class="line"><span class="keywordtype">int</span> b = 1;</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5};</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ad54d5a00414e9ccc53ebd6432a9e5f1c">delete_vector_values</a>(&amp;vec, &amp;b);</div>
 <div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d\n &quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -337,6 +350,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 1, 4, 1};</div>
 <div class="line"><span class="keywordtype">int</span> b = 1;</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> indices = <a class="code hl_function" href="vector_8c.html#a60ae2577c16e2f397650d35641d80808">find_vector_indices</a>(&amp;vec, &amp;b);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> = 0; i &lt; indices.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d &quot;</span>, ((<span class="keywordtype">int</span> *)indices-&gt;<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -519,7 +533,6 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#aeca8d3ee442704cda8225e60c7306709">insert_vector</a>(&amp;vec2, c, 1, 1);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%d, &quot;</span>, ((<span class="keywordtype">int</span> *)vec-&gt;<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[0]);</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 1, 2, 3</span></div>
-<div class="ttc" id="avector_8c_html_abd491da9e3521e9be05a17d8f72d04d7"><div class="ttname"><a href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a></div><div class="ttdeci">int push_vector(Vector *vec, void *elements, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:86</div></div>
 <div class="ttc" id="avector_8c_html_aeca8d3ee442704cda8225e60c7306709"><div class="ttname"><a href="vector_8c.html#aeca8d3ee442704cda8225e60c7306709">insert_vector</a></div><div class="ttdeci">int insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice)</div><div class="ttdef"><b>Definition:</b> vector.c:124</div></div>
 </div><!-- fragment --><p> free_vector(&amp;vec); free_vector(&amp;vec2); </p>
 
@@ -550,7 +563,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The median value of a double vector</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 5);</div>
-<div class="line">append_vector(&amp;vec);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordtype">double</span> median = <a class="code hl_function" href="vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a">median_double_vector</a>(&amp;vec);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
@@ -584,7 +597,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The median value of a float vector</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 5);</div>
-<div class="line">append_vector(&amp;vec);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordtype">float</span> median = <a class="code hl_function" href="vector_8c.html#acc8fc45817872e3634a392e9e2fda263">median_float_vector</a>(&amp;vec);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
@@ -617,7 +630,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The median value of an integer vector</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
-<div class="line">append_vector(&amp;vec);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordtype">float</span> median = <a class="code hl_function" href="vector_8c.html#a0d502710149813436a9b68900fa26490">median_int_vector</a>(&amp;vec);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
@@ -650,7 +663,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The median value of a long vector</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 5);</div>
-<div class="line">append_vector(&amp;vec);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordtype">double</span> median = <a class="code hl_function" href="vector_8c.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a>(&amp;vec);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
@@ -695,11 +708,10 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An error code of 0 if the user defines an indice greater than the array length. 1 if the function is executed succesfully. <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 4</div>
 <div class="line">Array arr_test = init_typ_vecot(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, indices);</div>
 <div class="line"><span class="keywordtype">float</span> a[4] = {10.1, 9.2, 8.3, 7.4};</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(&amp;arr_test, a, 4);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">float</span> b = 8.3;</div>
 <div class="line"><a class="code hl_function" href="array_8c.html#ade257c4734ef94d47aea5f0424b8fdf9">pop_array</a>(&amp;arr_test, &amp;b);</div>
 <div class="line"><span class="comment">// &gt;&gt; [10.1, 9.2, 7.4]</span></div>
-<div class="ttc" id="aarray_8c_html_a71a34401951bb5d5736c60f52dda532d"><div class="ttname"><a href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a></div><div class="ttdeci">void append_array(void *parent_array, int len, void *child_array, size_t count, int type)</div><div class="ttdef"><b>Definition:</b> array.c:27</div></div>
 <div class="ttc" id="aarray_8c_html_ade257c4734ef94d47aea5f0424b8fdf9"><div class="ttname"><a href="array_8c.html#ade257c4734ef94d47aea5f0424b8fdf9">pop_array</a></div><div class="ttdeci">int pop_array(void *array, int index, int size, int type)</div><div class="ttdef"><b>Definition:</b> array.c:19</div></div>
 </div><!-- fragment --></dd></dl>
 <p>The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4. </p>
@@ -751,8 +763,8 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
 <div class="line">a[3] = {1, 2, 3};</div>
 <div class="line">b[3] = {4, 5, 6};</div>
-<div class="line">append_vector(&amp;vec, a, 3};</div>
-<div class="line">append_vector(&amp;vec, b, 3};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 3};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, b, 3};</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 6; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;[ &quot;</span>);</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d, &quot;</span>, ((<span class="keywordtype">int</span> *)vec-&gt;<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -763,7 +775,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// append a vector with a scalar value</span></div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec2 = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 1);</div>
 <div class="line"><span class="keywordtype">int</span> c = 1;</div>
-<div class="line">append_vector(&amp;vec2, &amp;c, 1);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec2, &amp;c, 1);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *)vec-&gt;<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[0]);</div>
 <div class="line"><span class="comment">// &gt;&gt; 1</span></div>
 </div><!-- fragment --><p> free_vector(&amp;vec); free_vector(&amp;vec2); </p>
@@ -813,7 +825,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[6] = {1, 2, 1, 3, 1, 5};</div>
 <div class="line"><span class="keywordtype">int</span> new_value = 6;</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#acdbd40da89542d36b350d4efae7a50bf">replace_vector_index</a>(&amp;vec, 1, new_value);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vev-&gt;active_length; i++){</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec-&gt;<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -867,7 +879,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> old_value = 2;</div>
 <div class="line"><span class="keywordtype">int</span> new_value = 4;</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line">replace_vector_element(&amp;vec, &amp;old_value, &amp;new_value);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -900,7 +912,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8">CHAR</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a6c9055bf5c6e285d512c0dd1a71ea414">reverse_char_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%c \n&quot;</span>, ((<span class="keywordtype">char</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -935,7 +947,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3e9d1171ce4e00f73e6e91f911917663">reverse_double_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%lf \n&quot;</span>, ((<span class="keywordtype">double</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -969,7 +981,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> a[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ae3018c8afd0c0af1d14b3440d8d13f91">reverse_float_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1003,7 +1015,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[6] = { 1, 2, 3, 4, 5, 6};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ae43973885fd550f1aa9eeb43e467f3c6">reverse_int_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1037,7 +1049,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a4bb1f2674e5ba08f0b7a6284d9b6d407">reverse_long_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1071,7 +1083,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ab99bc039ca0b011cb414b332763f3105">reverse_longlong_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> <span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1106,7 +1118,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a5b3c9512d2f56a11e252b2c597b93bc6">reverse_short_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">short</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1142,7 +1154,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing failure (0) or sucess (1)</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a996ea0933de7aa349885f9bea2a155c7">reverse_vector</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> <span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1188,7 +1200,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;eCdba&quot;</span>;</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8">CHAR</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#abaa5d118b25d054dcca1ff2c16c3dade">sort_char_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%c \n&quot;</span>, ((<span class="keywordtype">char</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1234,7 +1246,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ae5ab6a019cf527754be5195994a96079">sort_double_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%lf \n&quot;</span>, ((<span class="keywordtype">double</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1280,7 +1292,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8ee1799ceadb2847c30ca4a30692ac49">sort_float_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1326,7 +1338,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {3, 1, 5, 2, 6};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
-<div class="line">append_vector(&amp;vec, a, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
 <div class="line">sort_int_vector_ascending(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">int</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1371,7 +1383,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> a[6] = {3, 5, 2, 1, 8, 6}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#aa1dfabdd7aa6816b5d7605cd9ff4c13b">sort_long_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1417,7 +1429,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> a[6] = {3, 5, 2, 1, 8, 6}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a7291416baaab166da36df4d84df7c24a">sort_longlong_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> <span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1463,7 +1475,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">short</span> a[6] = {3, 5, 2, 1, 8, 6}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3eb159f16b6cf88e962beae7d0023f00">sort_short_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">short</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
@@ -1509,13 +1521,211 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>integer An integer representing success (1) or failure (0) of the function.</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> a[6] = {3, 5, 2, 1, 8, 6}</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a>, 6);</div>
-<div class="line">append_vector(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ab42ca7cd37c2fd2d8d001a13c48c444b">sort_vector</a>(&amp;vec, 0);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%d \n&quot;</span>, ((<span class="keywordtype">long</span> <span class="keywordtype">long</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6, 8</span></div>
 <div class="ttc" id="avector_8c_html_ab42ca7cd37c2fd2d8d001a13c48c444b"><div class="ttname"><a href="vector_8c.html#ab42ca7cd37c2fd2d8d001a13c48c444b">sort_vector</a></div><div class="ttdeci">int sort_vector(Vector *vec, uint8_t method)</div><div class="ttdef"><b>Definition:</b> vector.c:474</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a318a4097ce728828b14d11147e252693" name="a318a4097ce728828b14d11147e252693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318a4097ce728828b14d11147e252693">&#9670;&nbsp;</a></span>sum_double_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double sum_double_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the sum of the contents of a double vector container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for double data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum The sum of the contents of a double vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">double</span> = <a class="code hl_function" href="vector_8c.html#a318a4097ce728828b14d11147e252693">sum_double_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, sum);</div>
+<div class="line"><span class="comment">// &gt;&gt; 16.5</span></div>
+<div class="ttc" id="avector_8c_html_a318a4097ce728828b14d11147e252693"><div class="ttname"><a href="vector_8c.html#a318a4097ce728828b14d11147e252693">sum_double_vector</a></div><div class="ttdeci">double sum_double_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:677</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a25fad94b08223aefc1f9993fc9c00f80" name="a25fad94b08223aefc1f9993fc9c00f80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fad94b08223aefc1f9993fc9c00f80">&#9670;&nbsp;</a></span>sum_float_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sum_float_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the sum of the contents of a float vector container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for float data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum The sum of the contents of a float vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">float</span> = <a class="code hl_function" href="vector_8c.html#a25fad94b08223aefc1f9993fc9c00f80">sum_float_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, sum);</div>
+<div class="line"><span class="comment">// &gt;&gt; 16.5</span></div>
+<div class="ttc" id="avector_8c_html_a25fad94b08223aefc1f9993fc9c00f80"><div class="ttname"><a href="vector_8c.html#a25fad94b08223aefc1f9993fc9c00f80">sum_float_vector</a></div><div class="ttdeci">float sum_float_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:668</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a45b2ede9b03ec42d706557055364bf7f" name="a45b2ede9b03ec42d706557055364bf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45b2ede9b03ec42d706557055364bf7f">&#9670;&nbsp;</a></span>sum_int_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sum_int_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the sum of the contents of an integer vector container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for integer data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum The sum of the contents of an integer vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">int</span> sum = <a class="code hl_function" href="vector_8c.html#a45b2ede9b03ec42d706557055364bf7f">sum_int_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, sum);</div>
+<div class="line"><span class="comment">// &gt;&gt; 15</span></div>
+<div class="ttc" id="avector_8c_html_a45b2ede9b03ec42d706557055364bf7f"><div class="ttname"><a href="vector_8c.html#a45b2ede9b03ec42d706557055364bf7f">sum_int_vector</a></div><div class="ttdeci">int sum_int_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:659</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad1253990e852bf31f6acb5c005459f8b" name="ad1253990e852bf31f6acb5c005459f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1253990e852bf31f6acb5c005459f8b">&#9670;&nbsp;</a></span>sum_long_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long sum_long_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the sum of the contents of a long integer vector container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for long data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum The sum of the contents of a long vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">long</span> = <a class="code hl_function" href="vector_8c.html#ad1253990e852bf31f6acb5c005459f8b">sum_long_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, sum);</div>
+<div class="line"><span class="comment">// &gt;&gt; 15</span></div>
+<div class="ttc" id="avector_8c_html_ad1253990e852bf31f6acb5c005459f8b"><div class="ttname"><a href="vector_8c.html#ad1253990e852bf31f6acb5c005459f8b">sum_long_vector</a></div><div class="ttdeci">long sum_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:695</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a3f5703bcb7cccb949f26668e7a1a517d" name="a3f5703bcb7cccb949f26668e7a1a517d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5703bcb7cccb949f26668e7a1a517d">&#9670;&nbsp;</a></span>sum_longlong_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long sum_longlong_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the sum of the contents of a long long integer vector container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for long long data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum The sum of the contents of a long long vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">long</span> <span class="keywordtype">long</span> = <a class="code hl_function" href="vector_8c.html#a3f5703bcb7cccb949f26668e7a1a517d">sum_longlong_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, sum);</div>
+<div class="line"><span class="comment">// &gt;&gt; 15</span></div>
+<div class="ttc" id="avector_8c_html_a3f5703bcb7cccb949f26668e7a1a517d"><div class="ttname"><a href="vector_8c.html#a3f5703bcb7cccb949f26668e7a1a517d">sum_longlong_vector</a></div><div class="ttdeci">long long sum_longlong_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:704</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a070eda61ba1b032022a63f8514666dc3" name="a070eda61ba1b032022a63f8514666dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070eda61ba1b032022a63f8514666dc3">&#9670;&nbsp;</a></span>sum_short_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short sum_short_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the sum of the contents of a short integer vector container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for short data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sum The sum of the contents of a short vector</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">short</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a>, 5);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 5);</div>
+<div class="line"><span class="keywordtype">short</span> = <a class="code hl_function" href="vector_8c.html#a070eda61ba1b032022a63f8514666dc3">sum_short_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, sum);</div>
+<div class="line"><span class="comment">// &gt;&gt; 15</span></div>
+<div class="ttc" id="avector_8c_html_a070eda61ba1b032022a63f8514666dc3"><div class="ttname"><a href="vector_8c.html#a070eda61ba1b032022a63f8514666dc3">sum_short_vector</a></div><div class="ttdeci">short sum_short_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:686</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1543,7 +1753,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> a[7] = {1.1, 2.2, 1.1, 4.5, 1.1, 2.3, 2.2};</div>
 <div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 7);</div>
-<div class="line">append_vector(&amp;vec, a, 7);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 7);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ac1835f04af3be7ac9e07b9f334d49703">unique_vector_values</a>(&amp;vec);</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">active_length</a>; i++) {</div>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
