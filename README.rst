@@ -322,7 +322,7 @@ value will always be read (i.e. ``float`` or ``double``).
    int a[6] = {1, 2, 3, 4, 5, 6};
    Vector vec = init_type_vector(INT, 6);
    push_vector(&vec, a, 6);
-   float median = median_int_vector(&vec);
+   float median = median_float_vector(&vec);
    printf("%f\n", median);
    // 3.5
 
@@ -333,3 +333,19 @@ value will always be read (i.e. ``float`` or ``double``).
    printf("%ld\n", median);
    // 3.0
 
+==============
+sum_xxx_vector
+==============
+
+The function ``sum_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
+``double``, ``short``, ``long`` and ``longlong`` can be used to determine the sum of the 
+contents of a Vector container.
+
+.. code-block:: c
+
+   int a[5] = {1, 2, 3, 4, 5};
+   Vector vec = init_type_vector(INT, 6);
+   push_vector(&vec, a, 6);
+   int sum = sum_int_vector(&vec);
+   printf("%f\n", sum);
+   // 15
