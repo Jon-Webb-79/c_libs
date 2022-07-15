@@ -159,6 +159,14 @@ Functions</h2></td></tr>
 <tr class="separator:ab31d891c0d195b49b61fb9cc746a4fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4ded25852018f711d6d30fa9549e2f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a9d4ded25852018f711d6d30fa9549e2f">average_long_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
 <tr class="separator:a9d4ded25852018f711d6d30fa9549e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6816c3acef32946590fe433d1ab71e0b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a6816c3acef32946590fe433d1ab71e0b">stdev_int_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a6816c3acef32946590fe433d1ab71e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5d05d81a93d38692a654301178f869"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a1a5d05d81a93d38692a654301178f869">stdev_float_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a1a5d05d81a93d38692a654301178f869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed74ede74c0f96a1e7157ee8b5fa5ebf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#aed74ede74c0f96a1e7157ee8b5fa5ebf">stdev_double_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:aed74ede74c0f96a1e7157ee8b5fa5ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3bf0faea0f532c595adeaabcbf35bf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a7d3bf0faea0f532c595adeaabcbf35bf">stdev_long_vector</a> (<a class="el" href="structVector.html">Vector</a> *vec)</td></tr>
+<tr class="separator:a7d3bf0faea0f532c595adeaabcbf35bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab31d891c0d195b49b61fb9cc746a4fdb" name="ab31d891c0d195b49b61fb9cc746a4fdb"></a>
@@ -190,11 +198,11 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_function" href="vector_8c.html#ab31d891c0d195b49b61fb9cc746a4fdb">average_double_vector</a>(&amp;vec);</div>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, avg);</div>
 <div class="line"><span class="comment">// 3.3</span></div>
-<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:72</div></div>
+<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:73</div></div>
 <div class="ttc" id="avector_8c_html_ab31d891c0d195b49b61fb9cc746a4fdb"><div class="ttname"><a href="vector_8c.html#ab31d891c0d195b49b61fb9cc746a4fdb">average_double_vector</a></div><div class="ttdeci">double average_double_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:727</div></div>
 <div class="ttc" id="avector_8c_html_abd491da9e3521e9be05a17d8f72d04d7"><div class="ttname"><a href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a></div><div class="ttdeci">int push_vector(Vector *vec, void *elements, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:86</div></div>
 <div class="ttc" id="avector_8c_html_aebfff769c9c952425c106d67726fdae8"><div class="ttname"><a href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a></div><div class="ttdeci">Vector init_type_vector(dtype dat_type, size_t num_indices)</div><div class="ttdef"><b>Definition:</b> vector.c:38</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:44</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -228,7 +236,7 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, avg);</div>
 <div class="line"><span class="comment">// 3.3</span></div>
 <div class="ttc" id="avector_8c_html_a51c8010b63eba773775cf34c9adc61e6"><div class="ttname"><a href="vector_8c.html#a51c8010b63eba773775cf34c9adc61e6">average_float_vector</a></div><div class="ttdeci">float average_float_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:720</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -262,7 +270,7 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, avg);</div>
 <div class="line"><span class="comment">// 3.0</span></div>
 <div class="ttc" id="avector_8c_html_a2a56ce87511019647191ac1ff5b188b2"><div class="ttname"><a href="vector_8c.html#a2a56ce87511019647191ac1ff5b188b2">average_int_vector</a></div><div class="ttdeci">float average_int_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:713</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:46</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -296,7 +304,7 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, avg);</div>
 <div class="line"><span class="comment">// 3.0</span></div>
 <div class="ttc" id="avector_8c_html_a9d4ded25852018f711d6d30fa9549e2f"><div class="ttname"><a href="vector_8c.html#a9d4ded25852018f711d6d30fa9549e2f">average_long_vector</a></div><div class="ttdeci">double average_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:734</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:49</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -330,8 +338,8 @@ Functions</h2></td></tr>
 <div class="line">   printf(<span class="stringliteral">&quot;%f \n&quot;</span>, ((<span class="keywordtype">float</span> *)vec.<a class="code hl_variable" href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">vector</a>)[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1.1, 2.2, 4.5, 2.3</span></div>
-<div class="ttc" id="astructVector_html_a2ed69ccf5252684aeec041b3d36e0289"><div class="ttname"><a href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">Vector::vector</a></div><div class="ttdeci">char * vector</div><div class="ttdef"><b>Definition:</b> vector.h:73</div></div>
-<div class="ttc" id="astructVector_html_ab7bc85dcb16ebc2e4879b74a30167533"><div class="ttname"><a href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">Vector::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> vector.h:74</div></div>
+<div class="ttc" id="astructVector_html_a2ed69ccf5252684aeec041b3d36e0289"><div class="ttname"><a href="structVector.html#a2ed69ccf5252684aeec041b3d36e0289">Vector::vector</a></div><div class="ttdeci">char * vector</div><div class="ttdef"><b>Definition:</b> vector.h:74</div></div>
+<div class="ttc" id="astructVector_html_ab7bc85dcb16ebc2e4879b74a30167533"><div class="ttname"><a href="structVector.html#ab7bc85dcb16ebc2e4879b74a30167533">Vector::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> vector.h:75</div></div>
 <div class="ttc" id="avector_8c_html_a2da99bf125e878741ca4979a784db7e6"><div class="ttname"><a href="vector_8c.html#a2da99bf125e878741ca4979a784db7e6">delete_vector_duplicates</a></div><div class="ttdeci">void delete_vector_duplicates(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:232</div></div>
 </div><!-- fragment --> 
 </div>
@@ -988,7 +996,7 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; &#39;o&#39;, &#39;l&#39;, &#39;l&#39;, &#39;e&#39;, &#39;H&#39;</span></div>
 <div class="ttc" id="avector_8c_html_a6c9055bf5c6e285d512c0dd1a71ea414"><div class="ttname"><a href="vector_8c.html#a6c9055bf5c6e285d512c0dd1a71ea414">reverse_char_vector</a></div><div class="ttdeci">void reverse_char_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:527</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:44</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8">CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1159,7 +1167,7 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 5, 4, 3, 2, 1</span></div>
 <div class="ttc" id="avector_8c_html_ab99bc039ca0b011cb414b332763f3105"><div class="ttname"><a href="vector_8c.html#ab99bc039ca0b011cb414b332763f3105">reverse_longlong_vector</a></div><div class="ttdeci">void reverse_longlong_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:563</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a></div><div class="ttdeci">@ LONGLONG</div><div class="ttdef"><b>Definition:</b> vector.h:49</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df">LONGLONG</a></div><div class="ttdeci">@ LONGLONG</div><div class="ttdef"><b>Definition:</b> vector.h:50</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1194,7 +1202,7 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 5, 4, 3, 2, 1</span></div>
 <div class="ttc" id="avector_8c_html_a5b3c9512d2f56a11e252b2c597b93bc6"><div class="ttname"><a href="vector_8c.html#a5b3c9512d2f56a11e252b2c597b93bc6">reverse_short_vector</a></div><div class="ttdeci">void reverse_short_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:539</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a></div><div class="ttdeci">@ SHORTINT</div><div class="ttdef"><b>Definition:</b> vector.h:47</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a></div><div class="ttdeci">@ SHORTINT</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1597,6 +1605,138 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 5, 6, 8</span></div>
 <div class="ttc" id="avector_8c_html_ab42ca7cd37c2fd2d8d001a13c48c444b"><div class="ttname"><a href="vector_8c.html#ab42ca7cd37c2fd2d8d001a13c48c444b">sort_vector</a></div><div class="ttdeci">int sort_vector(Vector *vec, uint8_t method)</div><div class="ttdef"><b>Definition:</b> vector.c:474</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aed74ede74c0f96a1e7157ee8b5fa5ebf" name="aed74ede74c0f96a1e7157ee8b5fa5ebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed74ede74c0f96a1e7157ee8b5fa5ebf">&#9670;&nbsp;</a></span>stdev_double_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double stdev_double_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the standard deviation of the contents of a double <a class="el" href="structVector.html">Vector</a> container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for double data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdev The standard deviation of an double container</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9}</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 9);</div>
+<div class="line"><span class="keywordtype">double</span> stdev = <a class="code hl_function" href="vector_8c.html#aed74ede74c0f96a1e7157ee8b5fa5ebf">stdev_double_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, stdev);</div>
+<div class="line"><span class="comment">// 3.012</span></div>
+<div class="ttc" id="avector_8c_html_aed74ede74c0f96a1e7157ee8b5fa5ebf"><div class="ttname"><a href="vector_8c.html#aed74ede74c0f96a1e7157ee8b5fa5ebf">stdev_double_vector</a></div><div class="ttdeci">double stdev_double_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:769</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a1a5d05d81a93d38692a654301178f869" name="a1a5d05d81a93d38692a654301178f869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5d05d81a93d38692a654301178f869">&#9670;&nbsp;</a></span>stdev_float_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stdev_float_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the standard deviation of the contents of a float <a class="el" href="structVector.html">Vector</a> container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for float data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdev The standard deviation of an float container</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9}</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 9);</div>
+<div class="line"><span class="keywordtype">float</span> stdev = <a class="code hl_function" href="vector_8c.html#a1a5d05d81a93d38692a654301178f869">stdev_float_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, stdev);</div>
+<div class="line"><span class="comment">// 3.012</span></div>
+<div class="ttc" id="avector_8c_html_a1a5d05d81a93d38692a654301178f869"><div class="ttname"><a href="vector_8c.html#a1a5d05d81a93d38692a654301178f869">stdev_float_vector</a></div><div class="ttdeci">float stdev_float_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:755</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6816c3acef32946590fe433d1ab71e0b" name="a6816c3acef32946590fe433d1ab71e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6816c3acef32946590fe433d1ab71e0b">&#9670;&nbsp;</a></span>stdev_int_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stdev_int_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the standard deviation of the contents of an integer <a class="el" href="structVector.html">Vector</a> container. The return value is a float variable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for integer data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdev The standard deviation of an integer container</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9}</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 9);</div>
+<div class="line"><span class="keywordtype">float</span> stdev = <a class="code hl_function" href="vector_8c.html#a6816c3acef32946590fe433d1ab71e0b">stdev_int_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, stdev);</div>
+<div class="line"><span class="comment">// 2.738</span></div>
+<div class="ttc" id="avector_8c_html_a6816c3acef32946590fe433d1ab71e0b"><div class="ttname"><a href="vector_8c.html#a6816c3acef32946590fe433d1ab71e0b">stdev_int_vector</a></div><div class="ttdeci">float stdev_int_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:741</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a7d3bf0faea0f532c595adeaabcbf35bf" name="a7d3bf0faea0f532c595adeaabcbf35bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3bf0faea0f532c595adeaabcbf35bf">&#9670;&nbsp;</a></span>stdev_long_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double stdev_long_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structVector.html">Vector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will determine the standard deviation of the contents of a long <a class="el" href="structVector.html">Vector</a> container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container for long data types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdev The standard deviation of an long container</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9}</div>
+<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> vec = <a class="code hl_function" href="vector_8c.html#aebfff769c9c952425c106d67726fdae8">init_type_vector</a>(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>, 9);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;vec, a, 9);</div>
+<div class="line"><span class="keywordtype">double</span> stdev = <a class="code hl_function" href="vector_8c.html#a7d3bf0faea0f532c595adeaabcbf35bf">stdev_long_vector</a>(&amp;vec);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%ld\n&quot;</span>, stdev);</div>
+<div class="line"><span class="comment">// 2.738</span></div>
+<div class="ttc" id="avector_8c_html_a7d3bf0faea0f532c595adeaabcbf35bf"><div class="ttname"><a href="vector_8c.html#a7d3bf0faea0f532c595adeaabcbf35bf">stdev_long_vector</a></div><div class="ttdeci">double stdev_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:783</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

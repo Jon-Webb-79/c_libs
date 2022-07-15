@@ -363,6 +363,6 @@ value and ``average_long_vector()`` returns a double value.
    float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
    Vector vec = init_type_vector(FLOAT, 6);
    push_vector(&vec, a, 6);
-   float sum = sum_float_vector(&vec);
-   printf("%f\n", sum);
+   float avg = average_float_vector(&vec);
+   printf("%f\n", avg);
    // 3.3

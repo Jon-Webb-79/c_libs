@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO std_vector
 // TODO cumsum_vector
 // TODO init_string_vector
 // TODO append_string_vector

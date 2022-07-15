@@ -852,4 +852,49 @@ TEST(test_avg, long_avg) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the stdev_int_vector function to ensure it properly
+ * calculates the standard deviation of an integer vector */
+TEST(test_stdev, int_stdev) {
+	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+	Vector vec = init_type_vector(INT, 9);
+	push_vector(&vec, a, 9);
+	float stdev = stdev_int_vector(&vec);
+	EXPECT_NEAR(stdev, 2.738613f, 0.0001f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_float_vector function to ensure it properly
+ * calculates the standard deviation of a float vector */
+TEST(test_stdev, float_stdev) {
+	float a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
+	Vector vec = init_type_vector(FLOAT, 9);
+	push_vector(&vec, a, 9);
+	float stdev = stdev_float_vector(&vec);
+	EXPECT_NEAR(stdev, 3.012f, 0.001f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_double_vector function to ensure it properly
+ * calculates the standard deviation of a double vector */
+TEST(test_stdev, double_stdev) {
+	double a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
+	Vector vec = init_type_vector(DOUBLE, 9);
+	push_vector(&vec, a, 9);
+	double stdev = stdev_double_vector(&vec);
+	EXPECT_NEAR(stdev, 3.012, 0.001);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_long_vector function to ensure it properly
+ * calculates the standard deviation of a long vector */
+TEST(test_stdev, long_stdev) {
+	long a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+	Vector vec = init_type_vector(LONG, 9);
+	push_vector(&vec, a, 9);
+	double stdev = stdev_long_vector(&vec);
+	EXPECT_NEAR(stdev, 2.738613, 0.0001);
+}
+// ================================================================================
+// ================================================================================
 // eof

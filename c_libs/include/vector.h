@@ -20,6 +20,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+#include <math.h>
 
 /**
  * An enum container with variables describing relevant data types
@@ -991,6 +992,82 @@ double average_double_vector(Vector *vec);
  * @endcode
  */
 double average_long_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation of the contents of
+ * an integer Vector container. The return value is a float variable.
+ *
+ * @param vec A Vector container for integer data types
+ * @return stdev The standard deviation of an integer container
+ *
+ * @code
+ * int a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+ * Vector vec = init_type_vector(INT, 9);
+ * push_vector(&vec, a, 9);
+ * float stdev = stdev_int_vector(&vec);
+ * printf("%f\n", stdev);
+ * // 2.738
+ * @endcode
+ */
+float stdev_int_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation of the contents of
+ * a float Vector container.
+ *
+ * @param vec A Vector container for float data types
+ * @return stdev The standard deviation of an float container
+ *
+ * @code
+ * float a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9}
+ * Vector vec = init_type_vector(FLOAT, 9);
+ * push_vector(&vec, a, 9);
+ * float stdev = stdev_float_vector(&vec);
+ * printf("%f\n", stdev);
+ * // 3.012
+ * @endcode
+ */
+float stdev_float_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation of the contents of
+ * a double Vector container.
+ *
+ * @param vec A Vector container for double data types
+ * @return stdev The standard deviation of an double container
+ *
+ * @code
+ * double a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9}
+ * Vector vec = init_type_vector(DOUBLE, 9);
+ * push_vector(&vec, a, 9);
+ * double stdev = stdev_double_vector(&vec);
+ * printf("%lf\n", stdev);
+ * // 3.012
+ * @endcode
+ */
+double stdev_double_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the standard deviation of the contents of
+ * a long Vector container.
+ *
+ * @param vec A Vector container for long data types
+ * @return stdev The standard deviation of an long container
+ *
+ * @code
+ * long a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+ * Vector vec = init_type_vector(LONG, 9);
+ * push_vector(&vec, a, 9);
+ * double stdev = stdev_long_vector(&vec);
+ * printf("%ld\n", stdev);
+ * // 2.738
+ * @endcode
+ */
+double stdev_long_vector(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================
