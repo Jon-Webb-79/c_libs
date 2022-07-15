@@ -366,3 +366,20 @@ value and ``average_long_vector()`` returns a double value.
    float avg = average_float_vector(&vec);
    printf("%f\n", avg);
    // 3.3
+
+================
+stdev_xxx_vector
+================
+The function ``stdev_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
+``double``, and ``long`` can be used to determine the sum of the 
+contents of a Vector container.  The function ``stdev_int_vector()`` returns a float
+value and ``stdev_long_vector()`` returns a double value.
+
+.. code-block:: c
+
+   float a[9] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
+   Vector vec = init_type_vector(FLOAT, 9);
+   push_vector(&vec, a, 9);
+   float stdev = stdev_float_vector(&vec);
+   printf("%f\n", stdev);
+   // 3.012
