@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['median_5fdouble_5fvector_0',['median_double_vector',['../vector_8c.html#a9108270e786dcdfeee4ed5ed8a05f18a',1,'median_double_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#a9108270e786dcdfeee4ed5ed8a05f18a',1,'median_double_vector(Vector *vec):&#160;vector.c']]],
-  ['median_5ffloat_5fvector_1',['median_float_vector',['../vector_8c.html#acc8fc45817872e3634a392e9e2fda263',1,'median_float_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#acc8fc45817872e3634a392e9e2fda263',1,'median_float_vector(Vector *vec):&#160;vector.c']]],
-  ['median_5fint_5fvector_2',['median_int_vector',['../vector_8c.html#a0d502710149813436a9b68900fa26490',1,'median_int_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#a0d502710149813436a9b68900fa26490',1,'median_int_vector(Vector *vec):&#160;vector.c']]],
-  ['median_5flong_5fvector_3',['median_long_vector',['../vector_8c.html#ae6165f429ccd4b4182ca00f94e965980',1,'median_long_vector(Vector *vec):&#160;vector.c'],['../vector_8h.html#ae6165f429ccd4b4182ca00f94e965980',1,'median_long_vector(Vector *vec):&#160;vector.c']]]
+  ['init_5ftype_5fvector_0',['init_type_vector',['../vector_8c.html#aebfff769c9c952425c106d67726fdae8',1,'init_type_vector(dtype dat_type, size_t num_indices):&#160;vector.c'],['../vector_8h.html#aebfff769c9c952425c106d67726fdae8',1,'init_type_vector(dtype dat_type, size_t num_indices):&#160;vector.c']]],
+  ['init_5fvector_1',['init_vector',['../vector_8c.html#affc9eba1b68ea79daa1f0b67cd4387b9',1,'init_vector(size_t num_bytes, size_t num_indices):&#160;vector.c'],['../vector_8h.html#affc9eba1b68ea79daa1f0b67cd4387b9',1,'init_vector(size_t num_bytes, size_t num_indices):&#160;vector.c']]],
+  ['insert_5fvector_2',['insert_vector',['../vector_8c.html#aeca8d3ee442704cda8225e60c7306709',1,'insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice):&#160;vector.c'],['../vector_8h.html#aeca8d3ee442704cda8225e60c7306709',1,'insert_vector(Vector *vec, void *elements, size_t num_indices, size_t indice):&#160;vector.c']]]
 ];

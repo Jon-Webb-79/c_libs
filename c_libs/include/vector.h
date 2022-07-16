@@ -1068,6 +1068,138 @@ double stdev_double_vector(Vector *vec);
  * @endcode
  */
 double stdev_long_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function produces an integer vector containing the cumulative sum of
+ * the input vector
+ *
+ * @param vec A Vector container for integer data types
+ * @return csum An integer vector container the cumulative sum of the
+ *              input vector
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(INT, 5);
+ * push_vector(@vec, a, 5);
+ * Vector csum = cumsum_int_vector(&vec);
+ * for (size_t i = 0; i < csum->active_length; i++) {
+ *     printf("%d\n", ((int *)csum->vector)[i]);
+ * }
+ * // 1, 3, 6, 10, 15
+ * @endcode
+ */
+Vector cumsum_int_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function produces a float vector containing the cumulative sum of
+ * the input vector
+ *
+ * @param vec A Vector container for float data types
+ * @return csum A float vector container the cumulative sum of the
+ *              input vector
+ *
+ * @code
+ * float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Vector vec = init_type_vector(FLOAT, 5);
+ * push_vector(@vec, a, 5);
+ * Vector csum = cumsum_float_vector(&vec);
+ * for (size_t i = 0; i < csum->active_length; i++) {
+ *     printf("%f\n", ((float *)csum->vector)[i]);
+ * }
+ * // 1.1, 4.4, 6.6, 11, 16.5
+ * @endcode
+ */
+Vector cumsum_float_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function produces a double vector containing the cumulative sum of
+ * the input vector
+ *
+ * @param vec A Vector container for double data types
+ * @return csum A double vector container the cumulative sum of the
+ *              input vector
+ *
+ * @code
+ * double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Vector vec = init_type_vector(DOUBLE, 5);
+ * push_vector(@vec, a, 5);
+ * Vector csum = cumsum_double_vector(&vec);
+ * for (size_t i = 0; i < csum->active_length; i++) {
+ *     printf("%lf\n", ((double *)csum->vector)[i]);
+ * }
+ * // 1.1, 4.4, 6.6, 11, 16.5
+ * @endcode
+ */
+Vector cumsum_double_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function produces a short integer vector containing the cumulative sum of
+ * the input vector
+ *
+ * @param vec A Vector container for short data types
+ * @return csum A short vector container the cumulative sum of the
+ *              input vector
+ *
+ * @code
+ * short a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(DOUBLE, 5);
+ * push_vector(@vec, a, 5);
+ * Vector csum = cumsum_short_vector(&vec);
+ * for (size_t i = 0; i < csum->active_length; i++) {
+ *     printf("%ld\n", ((short *)csum->vector)[i]);
+ * }
+ * // 1, 3, 6, 10, 15
+ * @endcode
+ */
+Vector cumsum_short_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function produces a long integer vector containing the cumulative sum of
+ * the input vector
+ *
+ * @param vec A Vector container for long data types
+ * @return csum A long vector container the cumulative sum of the
+ *              input vector
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONG, 5);
+ * push_vector(@vec, a, 5);
+ * Vector csum = cumsum_long_vector(&vec);
+ * for (size_t i = 0; i < csum->active_length; i++) {
+ *     printf("%ld\n", ((long *)csum->vector)[i]);
+ * }
+ * // 1, 3, 6, 10, 15
+ * @endcode
+ */
+Vector cumsum_long_vector(Vector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function produces a long long integer vector containing the cumulative sum of
+ * the input vector
+ *
+ * @param vec A Vector container for long long data types
+ * @return csum A long long vector container the cumulative sum of the
+ *              input vector
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Vector vec = init_type_vector(LONGLONG, 5);
+ * push_vector(@vec, a, 5);
+ * Vector csum = cumsum_longlong_vector(&vec);
+ * for (size_t i = 0; i < csum->active_length; i++) {
+ *     printf("%ld\n", ((long long *)csum->vector)[i]);
+ * }
+ * // 1, 3, 6, 10, 15
+ * @endcode
+ */
+Vector cumsum_longlong_vector(Vector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

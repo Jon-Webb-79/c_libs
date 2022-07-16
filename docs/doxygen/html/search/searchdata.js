@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "acdfilmnprsuv",
   1: "v",
   2: "av",
-  3: "adfimprsu",
+  3: "acdfimprsu",
   4: "adnv",
   5: "d",
   6: "cdfilns"

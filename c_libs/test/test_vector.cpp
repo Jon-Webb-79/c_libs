@@ -895,6 +895,90 @@ TEST(test_stdev, long_stdev) {
 	double stdev = stdev_long_vector(&vec);
 	EXPECT_NEAR(stdev, 2.738613, 0.0001);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_int_vector function to it ensure that it
+ * properly returns the cumulative sum of the input vector */
+TEST(test_cumsum, int_csum) {
+	int a[5] = {1, 2, 3, 4, 5};
+	int result[5] = {1, 3, 6, 10, 15};
+	Vector vec = init_type_vector(INT, 5);
+	push_vector(&vec, a, 5);
+	Vector csum = cumsum_int_vector(&vec);
+	for (size_t i = 0; i < csum.active_length; i++) {
+		EXPECT_EQ(result[i], ((int *)csum.vector)[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_float_vector function to it ensure that it
+ * properly returns the cumulative sum of the input vector */
+TEST(test_cumsum, float_csum) {
+	float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	float result[5] = {1.1, 3.3, 6.6, 11, 16.5};
+	Vector vec = init_type_vector(FLOAT, 5);
+	push_vector(&vec, a, 5);
+	Vector csum = cumsum_float_vector(&vec);
+	for (size_t i = 0; i < csum.active_length; i++) {
+		EXPECT_FLOAT_EQ(result[i], ((float *)csum.vector)[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_double_vector function to it ensure that it
+ * properly returns the cumulative sum of the input vector */
+TEST(test_cumsum, double_csum) {
+	double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	double result[5] = {1.1, 3.3, 6.6, 11, 16.5};
+	Vector vec = init_type_vector(DOUBLE, 5);
+	push_vector(&vec, a, 5);
+	Vector csum = cumsum_double_vector(&vec);
+	for (size_t i = 0; i < csum.active_length; i++) {
+		EXPECT_DOUBLE_EQ(result[i], ((double *)csum.vector)[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_short_vector function to it ensure that it
+ * properly returns the cumulative sum of the input vector */
+TEST(test_cumsum, short_csum) {
+	short a[5] = {1, 2, 3, 4, 5};
+	short result[5] = {1, 3, 6, 10, 15};
+	Vector vec = init_type_vector(SHORTINT, 5);
+	push_vector(&vec, a, 5);
+	Vector csum = cumsum_short_vector(&vec);
+	for (size_t i = 0; i < csum.active_length; i++) {
+		EXPECT_EQ(result[i], ((short *)csum.vector)[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_long_vector function to it ensure that it
+ * properly returns the cumulative sum of the input vector */
+TEST(test_cumsum, long_csum) {
+	long a[5] = {1, 2, 3, 4, 5};
+	long result[5] = {1, 3, 6, 10, 15};
+	Vector vec = init_type_vector(LONG, 5);
+	push_vector(&vec, a, 5);
+	Vector csum = cumsum_long_vector(&vec);
+	for (size_t i = 0; i < csum.active_length; i++) {
+		EXPECT_EQ(result[i], ((long *)csum.vector)[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the cumsum_longlong_vector function to it ensure that it
+ * properly returns the cumulative sum of the input vector */
+TEST(test_cumsum, longlong_csum) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	long long result[5] = {1, 3, 6, 10, 15};
+	Vector vec = init_type_vector(LONGLONG, 5);
+	push_vector(&vec, a, 5);
+	Vector csum = cumsum_longlong_vector(&vec);
+	for (size_t i = 0; i < csum.active_length; i++) {
+		EXPECT_EQ(result[i], ((long long *)csum.vector)[i]);
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

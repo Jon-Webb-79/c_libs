@@ -792,6 +792,72 @@ double stdev_long_vector(Vector *vec) {
 	double stddev = sqrt(interm);
 	return stddev;
 }
+// --------------------------------------------------------------------------------
+
+Vector cumsum_int_vector(Vector *vec) {
+	int sum = 0;
+	Vector csum = init_type_vector(INT, vec->active_length);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((int *)vec->vector)[i];
+		push_vector(&csum, &sum, 1);
+	}
+	return csum;
+}
+// --------------------------------------------------------------------------------
+
+Vector cumsum_float_vector(Vector *vec) {
+	float sum = 0.0;
+	Vector csum = init_type_vector(FLOAT, vec->active_length);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((float *)vec->vector)[i];
+		push_vector(&csum, &sum, 1);
+	}
+	return csum;
+}
+// --------------------------------------------------------------------------------
+
+Vector cumsum_double_vector(Vector *vec) {
+	double sum = 0.0;
+	Vector csum = init_type_vector(DOUBLE, vec->active_length);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((double *)vec->vector)[i];
+		push_vector(&csum, &sum, 1);
+	}
+	return csum;
+}
+// --------------------------------------------------------------------------------
+
+Vector cumsum_short_vector(Vector *vec) {
+	short sum = 0;
+	Vector csum = init_type_vector(SHORTINT, vec->active_length);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((short *)vec->vector)[i];
+		push_vector(&csum, &sum, 1);
+	}
+	return csum;
+}
+// --------------------------------------------------------------------------------
+
+Vector cumsum_long_vector(Vector *vec) {
+	long sum = 0;
+	Vector csum = init_type_vector(LONG, vec->active_length);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((long *)vec->vector)[i];
+		push_vector(&csum, &sum, 1);
+	}
+	return csum;
+}
+// --------------------------------------------------------------------------------
+
+Vector cumsum_longlong_vector(Vector *vec) {
+	long long sum = 0;
+	Vector csum = init_type_vector(LONGLONG, vec->active_length);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += ((long long *)vec->vector)[i];
+		push_vector(&csum, &sum, 1);
+	}
+	return csum;
+}
 // ================================================================================
 // ================================================================================
 // eof
