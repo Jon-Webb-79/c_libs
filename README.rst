@@ -355,7 +355,8 @@ average_xxx_vector
 ==================
 The function ``average_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
 ``double``, and ``long`` can be used to determine the sum of the 
-contents of a Vector container.  The function ``average_int_vector()`` returns a float
+contents of a Vector container and returns the average of the Vector contents.  
+The function ``average_int_vector()`` returns a float
 value and ``average_long_vector()`` returns a double value.
 
 .. code-block:: c
@@ -372,7 +373,8 @@ stdev_xxx_vector
 ================
 The function ``stdev_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
 ``double``, and ``long`` can be used to determine the sum of the 
-contents of a Vector container.  The function ``stdev_int_vector()`` returns a float
+contents of a Vector container.  This function returns the standard deviation of the 
+Vector.  The function ``stdev_int_vector()`` returns a float
 value and ``stdev_long_vector()`` returns a double value.
 
 .. code-block:: c
@@ -383,3 +385,20 @@ value and ``stdev_long_vector()`` returns a double value.
    float stdev = stdev_float_vector(&vec);
    printf("%f\n", stdev);
    // 3.012
+
+================
+cumsum_xxx_vector
+================
+The function ``cumsum_xxx_vector(Vector *vec)`` where ``xxx`` represents ``int``, ``float``,
+``double``, ``short``, ``long`` and ``longlong`` can be used to determine the sum of the 
+contents of a Vector container.  The function returns a Vector container of the same
+type with the cumulative sum of the input vector.
+
+.. code-block:: c
+
+   int a[9] = {1, 2, 3, 4, 5};
+   Vector vec = init_type_vector(INT, 5);
+   push_vector(&vec, a, 5);
+   float csum = cumusm_int_vector(&vec);
+   printf("%d\n", ((int *)csum->vector)[i]);
+   // 1, 3, 6, 10, 15
