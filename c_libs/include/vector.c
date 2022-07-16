@@ -268,7 +268,7 @@ void unique_vector_values(Vector *vec) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_int_vector(Vector *vec, uint8_t method) {
+int sort_int_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     int var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -281,11 +281,11 @@ int sort_int_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((int *)vec->vector)[min_idx];
 			var_two = ((int *)vec->vector)[j];
-			if (var_two < var_one && method == 0) {
+			if (var_two < var_one && method == FORWARD) {
 				min_idx = j;
 				temp = ((int *)vec->vector)[min_idx];
 			}
-			else if (var_two > var_one && method == 1) {
+			else if (var_two > var_one && method == REVERSE) {
 				min_idx = j;
 				temp = ((int *)vec->vector)[min_idx];
 			}
@@ -297,7 +297,7 @@ int sort_int_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_float_vector(Vector *vec, uint8_t method) {
+int sort_float_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     float var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -310,11 +310,11 @@ int sort_float_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((float *)vec->vector)[min_idx];
 			var_two = ((float *)vec->vector)[j];
-			if (var_two < var_one && method == 0) {
+			if (var_two < var_one && method == FORWARD) {
 				min_idx = j;
 				temp = ((float *)vec->vector)[min_idx];
 			}
-			else if (var_two > var_one && method == 1) {
+			else if (var_two > var_one && method == REVERSE) {
 				min_idx = j;
 				temp = ((float *)vec->vector)[min_idx];
 			}
@@ -326,7 +326,7 @@ int sort_float_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_double_vector(Vector *vec, uint8_t method) {
+int sort_double_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     double var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -339,11 +339,11 @@ int sort_double_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((double *)vec->vector)[min_idx];
 			var_two = ((double *)vec->vector)[j];
-			if (var_two < var_one && method == 0) {
+			if (var_two < var_one && method == FORWARD) {
 				min_idx = j;
 				temp = ((double *)vec->vector)[min_idx];
 			}
-			else if (var_two > var_one && method == 1) {
+			else if (var_two > var_one && method == REVERSE) {
 				min_idx = j;
 				temp = ((double *)vec->vector)[min_idx];
 			}
@@ -355,7 +355,7 @@ int sort_double_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_char_vector(Vector *vec, uint8_t method) {
+int sort_char_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     char var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -368,11 +368,11 @@ int sort_char_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((char *)vec->vector)[min_idx];
 			var_two = ((char *)vec->vector)[j];
-			if(strcmp(&var_two, &var_one) < 0 && method == 0) {
+			if(strcmp(&var_two, &var_one) < 0 && method == FORWARD) {
 				min_idx = j;
 				temp = ((char *)vec->vector)[min_idx];
 			}
-			else if (strcmp(&var_two, &var_one) > 0 && method == 1) {
+			else if (strcmp(&var_two, &var_one) > 0 && method == REVERSE) {
 				min_idx = j;
 				temp = ((char *)vec->vector)[min_idx];
 			}
@@ -384,7 +384,7 @@ int sort_char_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_short_vector(Vector *vec, uint8_t method) {
+int sort_short_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     short var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -397,11 +397,11 @@ int sort_short_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((short *)vec->vector)[min_idx];
 			var_two = ((short *)vec->vector)[j];
-			if (var_two < var_one && method == 0) {
+			if (var_two < var_one && method == FORWARD) {
 				min_idx = j;
 				temp = ((short *)vec->vector)[min_idx];
 			}
-			else if (var_two > var_one && method == 1) {
+			else if (var_two > var_one && method == REVERSE) {
 				min_idx = j;
 				temp = ((short *)vec->vector)[min_idx];
 			}
@@ -413,7 +413,7 @@ int sort_short_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_long_vector(Vector *vec, uint8_t method) {
+int sort_long_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     long var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -426,11 +426,11 @@ int sort_long_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((long *)vec->vector)[min_idx];
 			var_two = ((long *)vec->vector)[j];
-			if (var_two < var_one && method == 0) {
+			if (var_two < var_one && method == FORWARD) {
 				min_idx = j;
 				temp = ((long *)vec->vector)[min_idx];
 			}
-			else if (var_two > var_one && method == 1) {
+			else if (var_two > var_one && method == REVERSE) {
 				min_idx = j;
 				temp = ((long *)vec->vector)[min_idx];
 			}
@@ -442,7 +442,7 @@ int sort_long_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_longlong_vector(Vector *vec, uint8_t method) {
+int sort_longlong_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     long long var_one, var_two, temp;
 	if(method < 0 || method > 1) {
@@ -455,11 +455,11 @@ int sort_longlong_vector(Vector *vec, uint8_t method) {
 		for (j = i + 1; j < vec->active_length; j++) {
 			var_one = ((long long *)vec->vector)[min_idx];
 			var_two = ((long long *)vec->vector)[j];
-			if (var_two < var_one && method == 0) {
+			if (var_two < var_one && method == FORWARD) {
 				min_idx = j;
 				temp = ((long long *)vec->vector)[min_idx];
 			}
-			else if (var_two > var_one && method == 1) {
+			else if (var_two > var_one && method == REVERSE) {
 				min_idx = j;
 				temp = ((long long *)vec->vector)[min_idx];
 			}
@@ -471,7 +471,7 @@ int sort_longlong_vector(Vector *vec, uint8_t method) {
 }
 // --------------------------------------------------------------------------------
 
-int sort_vector(Vector *vec, uint8_t method) {
+int sort_vector(Vector *vec, order method) {
 
 	if (vec->dat_type == FLOAT) sort_float_vector(vec, method);
 	else if (vec->dat_type == DOUBLE) sort_double_vector(vec, method);

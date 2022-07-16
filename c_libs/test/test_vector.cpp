@@ -349,7 +349,7 @@ TEST(test_sort, sort_int_ascending) {
 	int b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(INT, 5);
 	push_vector(&vec, a, 5);
-	sort_int_vector(&vec, 0);
+	sort_int_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
 	}
@@ -364,7 +364,7 @@ TEST(test_sort, sort_float_ascending) {
 	float b[5] = {1.6, 2.1, 3.4, 5.0, 6.8};
 	Vector vec = init_type_vector(FLOAT, 5);
 	push_vector(&vec, a, 5);
-	sort_float_vector(&vec, 0);
+	sort_float_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((float *)vec.vector)[i]);
 	}
@@ -379,7 +379,7 @@ TEST(test_sort, sort_double_ascending) {
 	double b[5] = {1.6, 2.1, 3.4, 5.0, 6.8};
 	Vector vec = init_type_vector(DOUBLE, 5);
 	push_vector(&vec, a, 5);
-	sort_double_vector(&vec, 0);
+	sort_double_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((double *)vec.vector)[i]);
 	}
@@ -394,7 +394,7 @@ TEST(test_sort, sort_char_ascending) {
 	char b[6] = "Cabdz";
 	Vector vec = init_type_vector(CHAR, 6);
 	push_vector(&vec, a, 6);
-	sort_char_vector(&vec, 0);
+	sort_char_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
 	}
@@ -409,7 +409,7 @@ TEST(test_sort, sort_short_ascending) {
 	short b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(SHORTINT, 5);
 	push_vector(&vec, a, 5);
-	sort_short_vector(&vec, 0);
+	sort_short_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((short *)vec.vector)[i]);
 	}
@@ -424,7 +424,7 @@ TEST(test_sort, sort_long_ascending) {
 	long b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(LONG, 5);
 	push_vector(&vec, a, 5);
-	sort_long_vector(&vec, 0);
+	sort_long_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long *)vec.vector)[i]);
 	}
@@ -439,7 +439,7 @@ TEST(test_sort, sort_longlong_ascending) {
 	long long b[5] = {1, 2, 3, 5, 6};
 	Vector vec = init_type_vector(LONGLONG, 5);
 	push_vector(&vec, a, 5);
-	sort_longlong_vector(&vec, 0);
+	sort_longlong_vector(&vec, FORWARD);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
 	}
@@ -454,7 +454,7 @@ TEST(test_sort, sort_int_descending) {
 	int b[5] = {6, 5, 3, 2, 1};
 	Vector vec = init_type_vector(INT, 5);
 	push_vector(&vec, a, 5);
-	sort_int_vector(&vec, 1);
+	sort_int_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((int *)vec.vector)[i]);
 	}
@@ -469,7 +469,7 @@ TEST(test_sort, sort_float_descending) {
 	float b[5] = {6.8, 5.0, 3.4, 2.1, 1.6};
 	Vector vec = init_type_vector(FLOAT, 5);
 	push_vector(&vec, a, 5);
-	sort_float_vector(&vec, 1);
+	sort_float_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((float *)vec.vector)[i]);
 	}
@@ -484,7 +484,7 @@ TEST(test_sort, sort_double_descending) {
 	double b[5] = {6.8, 5.0, 3.4, 2.1, 1.6};
 	Vector vec = init_type_vector(DOUBLE, 5);
 	push_vector(&vec, a, 5);
-	sort_double_vector(&vec, 1);
+	sort_double_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((double *)vec.vector)[i]);
 	}
@@ -499,7 +499,7 @@ TEST(test_sort, sort_char_descending) {
 	char b[6] = "zdbaC";
 	Vector vec = init_type_vector(CHAR, 6);
 	push_vector(&vec, a, 6);
-	sort_char_vector(&vec, 1);
+	sort_char_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((char *)vec.vector)[i]);
 	}
@@ -514,7 +514,7 @@ TEST(test_sort, sort_long_descending) {
 	long b[5] = {6, 5, 3, 2, 1};
 	Vector vec = init_type_vector(LONG, 5);
 	push_vector(&vec, a, 5);
-	sort_long_vector(&vec, 1);
+	sort_long_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long *)vec.vector)[i]);
 	}
@@ -529,7 +529,7 @@ TEST(test_sort, sort_longlong_descending) {
 	long long b[5] = {6, 5, 3, 2, 1};
 	Vector vec = init_type_vector(LONGLONG, 5);
 	push_vector(&vec, a, 5);
-	sort_longlong_vector(&vec, 1);
+	sort_longlong_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
 	}
@@ -544,7 +544,7 @@ TEST(test_sort, sort_descending) {
 	long long b[5] = {6, 5, 3, 2, 1};
 	Vector vec = init_type_vector(LONGLONG, 5);
 	push_vector(&vec, a, 5);
-	sort_vector(&vec, 1);
+	sort_vector(&vec, REVERSE);
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(b[i], ((long long *)vec.vector)[i]);
 	}

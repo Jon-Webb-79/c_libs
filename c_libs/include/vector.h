@@ -19,7 +19,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdint.h>
 #include <math.h>
 
 /**
@@ -50,6 +49,20 @@ typedef enum
 	LONGLONG,
 	NONE
 } dtype;
+// --------------------------------------------------------------------------------
+
+/**
+ * An enum container with variables describing relevant data types
+ * for sort functions.
+ *
+ * @param REVERSE An integer representing a forward sorting method
+ * @param REVERSE An integer representing a reverse sorting method
+ */
+typedef enum
+{
+	FORWARD,
+	REVERSE
+} order;
 // --------------------------------------------------------------------------------
 
 /**
@@ -381,7 +394,7 @@ void unique_vector_values(Vector *vec);
  * or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERSE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -389,14 +402,14 @@ void unique_vector_values(Vector *vec);
  * int a[5] = {3, 1, 5, 2, 6};
  * Vector vec = init_type_vector(INT, 5);
  * push_vector(&vec, a, 5);
- * sort_int_vector_ascending(&vec, 0);
+ * sort_int_vector_ascending(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((int *)vec.vector)[i]);
  * }
  * // >> 1, 2, 3, 5, 6
  * @endcode
  */
-int sort_int_vector(Vector *vec, uint8_t method);
+int sort_int_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -404,7 +417,7 @@ int sort_int_vector(Vector *vec, uint8_t method);
  * or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERSE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -412,14 +425,14 @@ int sort_int_vector(Vector *vec, uint8_t method);
  * float a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};
  * Vector vec = init_type_vector(FLOAT, 5);
  * push_vector(&vec, a, 5);
- * sort_float_vector(&vec, 0);
+ * sort_float_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%f \n", ((float *)vec.vector)[i]);
  * }
  * // >> 1.4, 2.1, 3.2, 5.0, 6.8
  * @endcode
  */
-int sort_float_vector(Vector *vec, uint8_t method);
+int sort_float_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -427,7 +440,7 @@ int sort_float_vector(Vector *vec, uint8_t method);
  * or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERSE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -435,14 +448,14 @@ int sort_float_vector(Vector *vec, uint8_t method);
  * double a[5] = {3.2, 1.4, 5.0, 2.1, 6.8};
  * Vector vec = init_type_vector(DOUBLE, 5);
  * push_vector(&vec, a, 5);
- * sort_double_vector(&vec, 0);
+ * sort_double_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%lf \n", ((double *)vec.vector)[i]);
  * }
  * // >> 1.4, 2.1, 3.2, 5.0, 6.8
  * @endcode
  */
-int sort_double_vector(Vector *vec, uint8_t method);
+int sort_double_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -452,7 +465,7 @@ int sort_double_vector(Vector *vec, uint8_t method);
  * is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERSE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -460,14 +473,14 @@ int sort_double_vector(Vector *vec, uint8_t method);
  * char a[6] = "eCdba";
  * Vector vec = init_type_vector(CHAR, 6);
  * push_vector(&vec, a, 6);
- * sort_char_vector(&vec, 0);
+ * sort_char_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%c \n", ((char *)vec.vector)[i]);
  * }
  * // >> 'C', 'a', 'b', 'd', 'e'
  * @endcode
  */
-int sort_char_vector(Vector *vec, uint8_t method);
+int sort_char_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -475,7 +488,7 @@ int sort_char_vector(Vector *vec, uint8_t method);
  * ascending or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERSE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -483,14 +496,14 @@ int sort_char_vector(Vector *vec, uint8_t method);
  * short a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(SHORTINT, 6);
  * push_vector(&vec, a, 6);
- * sort_short_vector(&vec, 0);
+ * sort_short_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((short *)vec.vector)[i]);
  * }
  * // >> 1, 2, 3, 5, 6, 8
  * @endcode
  */
-int sort_short_vector(Vector *vec, uint8_t method);
+int sort_short_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -498,7 +511,7 @@ int sort_short_vector(Vector *vec, uint8_t method);
  * ascending or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERESE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -506,14 +519,14 @@ int sort_short_vector(Vector *vec, uint8_t method);
  * long a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(LONG, 6);
  * push_vector(&vec, a, 6);
- * sort_long_vector(&vec, 0);
+ * sort_long_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((long *)vec.vector)[i]);
  * }
  * // >> 1, 2, 3, 5, 6, 8
  * @endcode
  */
-int sort_long_vector(Vector *vec, uint8_t method);
+int sort_long_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -521,7 +534,7 @@ int sort_long_vector(Vector *vec, uint8_t method);
  * ascending or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, ORDER for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -529,14 +542,14 @@ int sort_long_vector(Vector *vec, uint8_t method);
  * long long a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(LONGLONG, 6);
  * push_vector(&vec, a, 6);
- * sort_longlong_vector(&vec, 0);
+ * sort_longlong_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((long long *)vec.vector)[i]);
  * }
  * // >> 1, 2, 3, 5, 6, 8
  * @endcode
  */
-int sort_longlong_vector(Vector *vec, uint8_t method);
+int sort_longlong_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**
@@ -544,7 +557,7 @@ int sort_longlong_vector(Vector *vec, uint8_t method);
  * ascending or descending order.  This function is of time order N.
  *
  * @param vec A vector container
- * @param method 0 for ascending sort, 1 for descending sort
+ * @param method FORWARD for ascending sort, REVERSE for descending sort
  * @return integer An integer representing success (1) or failure
  *                 (0) of the function.
  *
@@ -552,14 +565,14 @@ int sort_longlong_vector(Vector *vec, uint8_t method);
  * long long a[6] = {3, 5, 2, 1, 8, 6}
  * Vector vec = init_type_vector(LONGLONG, 6);
  * push_vector(&vec, a, 6);
- * sort_vector(&vec, 0);
+ * sort_vector(&vec, FORWARD);
  * for (size_t i = 0; i < vec.active_length; i++) {
  *    printf("%d \n", ((long long *)vec.vector)[i]);
  * }
  * // >> 1, 2, 3, 5, 6, 8
  * @endcode
  */
-int sort_vector(Vector *vec, uint8_t method);
+int sort_vector(Vector *vec, order method);
 // --------------------------------------------------------------------------------
 
 /**

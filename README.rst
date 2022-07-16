@@ -251,11 +251,11 @@ in a vector container.
 ===============
 sort_xxx_vector
 ===============
-This library contains several ``sort_xxx_vector(Vector *vec, uint8_t method)`` functions where
+This library contains several ``sort_xxx_vector(Vector *vec, order method)`` functions where
 ``xxx`` represents ``int``, ``float``, ``double``, ``char``, ``short``, ``long``, or ``longlong``.
 Each function is set up specifically for the data types described by ``xxx``.  The term ``method``
-is an unsigned short integer that can be 0 or 1.  If 0 is selected, it will sort the vector in
-ascending order.  If 1 is selected it will sort the array in descending order.  In addition,
+is an ``enum`` that can be ``FORWARD`` or ``REVERSE``.  If ``FORWARD`` is selected, it will sort the vector in
+ascending order.  If ``REVERSE`` is selected it will sort the array in descending order.  In addition,
 the user can implement the ``sort_vector(Vector *vec)`` function will will autonomously
 determine the correct data type to implement.
 
