@@ -981,4 +981,22 @@ TEST(test_cumsum, longlong_csum) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the init_string_vector, push_string_vector, and
+ * the free_string_vector functions */
+TEST(test_push_vector, vector) {
+	char a[6] = "Hello";
+	StringVector vec = init_string_vector(2);
+	push_string_vector(&vec, a, 6);
+	char b[7] = "World!";
+	push_string_vector(&vec, b, 7);
+	char c[5] = "Goof";
+	push_string_vector(&vec, c, 6);
+	EXPECT_STREQ(a, vec.vector[0]);
+	EXPECT_STREQ(b, vec.vector[1]);
+	EXPECT_STREQ(c, vec.vector[2]);
+	free_string_vector(&vec);
+}
+// ================================================================================
+// ================================================================================
 // eof

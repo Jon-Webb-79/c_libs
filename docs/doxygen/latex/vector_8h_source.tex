@@ -15,7 +15,7 @@
 \DoxyCodeLine{11 \textcolor{comment}{// -\/ Copyright: Copyright 2022, Jon Webb Inc.}}
 \DoxyCodeLine{12 \textcolor{comment}{// ================================================================================}}
 \DoxyCodeLine{13 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{14 \textcolor{comment}{// Include modules here}}
+\DoxyCodeLine{14 \textcolor{comment}{// VECTOR IMPLEMENTATION}}
 \DoxyCodeLine{15 }
 \DoxyCodeLine{16 \textcolor{preprocessor}{\#ifndef vector\_H}}
 \DoxyCodeLine{17 \textcolor{preprocessor}{\#define vector\_H}}
@@ -210,9 +210,30 @@
 \DoxyCodeLine{1194 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{1195 }
 \DoxyCodeLine{1215 \mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vector_8h_a2842346a8318f470a9a81dcfe5d0f4fa}{cumsum\_longlong\_vector}}(\mbox{\hyperlink{structVector}{Vector}} *vec);}
-\DoxyCodeLine{1216 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1216 \textcolor{comment}{// ================================================================================}}
 \DoxyCodeLine{1217 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{1218 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{1219 \textcolor{comment}{// eof}}
+\DoxyCodeLine{1218 \textcolor{comment}{// STRING VECTOR IMPLEMENTATION}}
+\DoxyCodeLine{1219 }
+\DoxyCodeLine{1237 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{1238 \{}
+\DoxyCodeLine{1239     \textcolor{keywordtype}{char} **\mbox{\hyperlink{structStringVector_a87e7b9214d3905000866130379a4ca0a}{vector}};}
+\DoxyCodeLine{1240     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structStringVector_ad519aca8b425ec4712cbe2b86aa3e339}{active\_length}};}
+\DoxyCodeLine{1241     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structStringVector_a3942651782b9ce3c297e399f7e32aa0c}{allocated\_length}};}
+\DoxyCodeLine{1242     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structStringVector_adfaf534e7e13ca2aabb9c728fdca8a70}{num\_bytes}};}
+\DoxyCodeLine{1243     \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{structStringVector_ae7c3b83aabcfb3de841d777d43703ebd}{dat\_type}};}
+\DoxyCodeLine{1244 \} \mbox{\hyperlink{structStringVector}{StringVector}};}
+\DoxyCodeLine{1245 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{1246 }
+\DoxyCodeLine{1260 \mbox{\hyperlink{structStringVector}{StringVector}} \mbox{\hyperlink{vector_8h_ace3b434b5d8341e6ead5ca258aa3678e}{init\_string\_vector}}(\textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{1261 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{1262 }
+\DoxyCodeLine{1286 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\mbox{\hyperlink{structStringVector}{StringVector}} *vec, \textcolor{keywordtype}{char} *value, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{1287 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{1288 }
+\DoxyCodeLine{1294 \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8h_aadac51d68818d990fceaba6d488d75a6}{free\_string\_vector}}(\mbox{\hyperlink{structStringVector}{StringVector}} *vec);}
+\DoxyCodeLine{1295 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1296 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{1297 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{1298 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

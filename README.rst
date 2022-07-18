@@ -138,6 +138,7 @@ wishes to insert data.  An example is shown below.
    float c[3] = {10.0, 11.0 ,12.0};
    insert_vector(&float_vec, c, 3, 3);
    // Leads to the vector [1.1, 2.2, 1.2, 10.0, 11.0, 12.0, 3.3]
+   free_vector(&vec);
 
 ==========
 pop_vector
@@ -152,6 +153,7 @@ A user can delete a vector element using the ``pop_vector(Vector *vec, size_t in
    push_vector(&int_vec, a, 4);
    pop_vector(&int_vec, 2);
    // [1, 2, 4]
+   free_vector(&vec);
 
 ==================
 find_vector_indice
@@ -170,6 +172,7 @@ at each index.  The function returns another vector container of integer values.
        printf("%d, ", ((int *)indice_vec.vector)[0]);
    }
    // [0, 2, 5]
+   free_vector(&vec);
 
 ====================
 delete_vector_values
@@ -186,6 +189,7 @@ of a value from a vector container.
    // This works for any data type
    delete_vector_values(&int_vec, 1);
    // [2, 3, 4]
+   free_vector(&vec);
 
 =====================
 replace_vector_indice
@@ -201,6 +205,7 @@ the function an index containing data that should be replaced with ``replacement
    push_vector(&double_vec, a, 3);
    replace_vector_indice(&double_vec, 1, &b);
    // [1.1, 4.4, 3.3]
+   free_vector(&vec);
 
 =====================
 replace_vector_values
@@ -219,6 +224,7 @@ with ``new_value``.
    push_vector(&double_vec, a, 3);
    replace_vector_values(&double_vec, &b, &c);
    // [1.1, 2.2, 6.6]
+   free_vector(&vec);
 
 ========================
 delete_vector_duplicates
@@ -233,6 +239,7 @@ in a vector container
    push_vector(&vec, a, 7);
    delete_vector_duplicates(&vec);
    // [1.1, 2.2, 4.5, 2.3]
+   free_vector(&vec);
 
 ====================
 unique_vector_values
@@ -247,6 +254,7 @@ in a vector container.
    push_vector(&vec, a, 7);
    unique_vector_values(&vec);
    // [4.5, 2.3]
+   free_vector(&vec);
 
 ===============
 sort_xxx_vector
@@ -269,6 +277,7 @@ determine the correct data type to implement.
        printf("%f\n", ((float *)vec.vector)[i]);
    }
    // [1.1, 1.8, 2.1, 3.3, 4.5]
+   free_vector(&vec);
 
    float a[5] = {1.1, 3.3, 2.1, 4.5, 1.8};
    Vector vec = init_type_vector(FLOAT, 5);
@@ -278,6 +287,7 @@ determine the correct data type to implement.
        printf("%f\n", ((float *)vec.vector)[i]);
    }
    // [4.5, 3.3, 2.1, 1.8, 1.1]
+   free_vector(&vec);
 
 ==================
 reverse_xxx_vector
@@ -297,6 +307,7 @@ for the data types described by ``xxx``. In addition, the user can implement the
        printf("%f\n", ((float *)vec.vector)[i]);
    }
    // [1.8, 4.5, 2.1, 3.3, 1.1]
+   free_vector(&vec);
 
    float a[5] = {1.1, 3.3, 2.1, 4.5, 1.8};
    Vector vec = init_type_vector(FLOAT, 5);
@@ -306,6 +317,7 @@ for the data types described by ``xxx``. In addition, the user can implement the
        printf("%f\n", ((float *)vec.vector)[i]);
    }
    // [1.8, 4.5, 2.1, 3.3, 1.1]
+   free_vector(&vec);
 
 =================
 median_xxx_vector
@@ -325,6 +337,7 @@ value will always be read (i.e. ``float`` or ``double``).
    float median = median_float_vector(&vec);
    printf("%f\n", median);
    // 3.5
+   free_vector(&vec);
 
    long a[5] = {1, 2, 3, 4, 5};
    Vector vec = init_type_vector(LONG, 5);
@@ -332,6 +345,7 @@ value will always be read (i.e. ``float`` or ``double``).
    double median = median_long_vector(&vec);
    printf("%ld\n", median);
    // 3.0
+   free_vector(&vec);
 
 ==============
 sum_xxx_vector
@@ -349,6 +363,7 @@ contents of a Vector container.
    int sum = sum_int_vector(&vec);
    printf("%f\n", sum);
    // 15
+   free_vector(&vec);
 
 ==================
 average_xxx_vector
@@ -367,6 +382,7 @@ value and ``average_long_vector()`` returns a double value.
    float avg = average_float_vector(&vec);
    printf("%f\n", avg);
    // 3.3
+   free_vector(&vec);
 
 ================
 stdev_xxx_vector
@@ -385,6 +401,7 @@ value and ``stdev_long_vector()`` returns a double value.
    float stdev = stdev_float_vector(&vec);
    printf("%f\n", stdev);
    // 3.012
+   free_vector(vec);
 
 ================
 cumsum_xxx_vector
@@ -402,3 +419,38 @@ type with the cumulative sum of the input vector.
    float csum = cumusm_int_vector(&vec);
    printf("%d\n", ((int *)csum->vector)[i]);
    // 1, 3, 6, 10, 15
+   free_vector(&vec);
+
+==================
+init_string_vector
+==================
+The function ``init_string_vector(size_t size)`` is used to initialize a string vector and requires
+the user to input ``size`` which represents the number of indices that the user estimates the function
+will require.  This functin returns a ``StringVector`` container.
+
+.. code-block:: c
+
+   StringVector vec = init_string_vector(5);
+
+==================
+push_string_vector
+==================
+The function ``push_string_vector(StingVector *vec, char *value, size_t length)`` can be used to push
+strings to a string vector container.  The variable ``vec`` represents a String Vector container,
+``value`` represents a string and ``length`` represents the length of the string.  The function
+will check the last indice at position ``length`` to determine if the string is accompanied with
+a NULL terminator.  If the string does not have a NULL terminator, the last character will
+be replaced with the value ``"\0"``.
+
+.. code-block:: c
+
+   char a[6] = "Hello";
+   StringVector vec = init_string_vector(6);
+   push_string_vector(&vec, a, 6);
+   char b[7] = "World!";
+   push_string_vector(&vec, b, 7);
+   for (size_t i = 0; i < vec.active_length; i++) {
+       printf("%s\n", vec.vector[i]);
+   }
+   // "Hello ", "World "
+   free_string_vector(&vec);

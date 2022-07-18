@@ -11,7 +11,7 @@
 // - Copyright: Copyright 2022, Jon Webb Inc.
 // ================================================================================
 // ================================================================================
-// Include modules here
+// VECTOR IMPLEMENTATION
 
 #ifndef vector_H
 #define vector_H
@@ -105,7 +105,7 @@ typedef struct
  * @code
  * // - Create a dynamically allocated array container for integers, with allocated
  * //   memory for 5 indices
- * Vector vec = init_notype(sizeof(int), 5);
+ * Vector vec = init_vector(sizeof(int), 5);
  * @endcode
  */
 Vector init_vector(size_t num_bytes, size_t num_indices);
@@ -123,7 +123,7 @@ Vector init_vector(size_t num_bytes, size_t num_indices);
  * @code
  * // - Create a dynamically allocated array container for integers, with allocated
  * //   memory for 5 indices
- * Vector vec = init_notype(INT, 5);
+ * Vector vec = init_string_vector(INT, 5);
  * @endcode
  */
 Vector init_type_vector(dtype dat_type, size_t num_indices);
@@ -1213,6 +1213,85 @@ Vector cumsum_long_vector(Vector *vec);
  * @endcode
  */
 Vector cumsum_longlong_vector(Vector *vec);
+// ================================================================================
+// ================================================================================
+// STRING VECTOR IMPLEMENTATION
+
+/**
+ * A container for a dynamically allocated array and related data
+ *
+ * @struct Vector
+ * A container for a dynamic array and metadata
+ *
+ * @param Vector::vector
+ *    A double pointer to an array in heap memory
+ * @param Vector::active_length
+ *    The number of indices with assigned data
+ * @param Vector::allocated_length
+ *    The total number of allocated indices in memory
+ * @param Vector::num_bytes
+ *    The number of bytes consumed by a single indice
+ * @param Vector::dat_type
+ *    The data type. Must use data types allocated in dtype enum
+ */
+typedef struct
+{
+	char **vector;
+	size_t active_length;
+	size_t allocated_length;
+	size_t num_bytes;
+	dtype dat_type;
+} StringVector;
+// --------------------------------------------------------------------------------
+
+/**
+ * Instantiates a StringVector container.  This function allocates the vector
+ * in heap memory.
+ *
+ * @param length The estimated length of the string Vector container
+ * @return vec A Vector container
+ *
+ * @code
+ * // - Create a dynamically allocated array container for integers, with allocated
+ * //   memory for 5 indices
+ * StringVector vec = init_string_vector(5);
+ * @endcode
+ */
+StringVector init_string_vector(size_t length);
+// --------------------------------------------------------------------------------
+
+/**
+ * This functions allows a user to push a character string to the StringVector.
+ * If the user forgets to include the NULL character in the last indice space,
+ * this function will add it.  However, if the NULL terminator is not included
+ * this function will overwrite the last character with the terminator.
+ *
+ * @param vec A String Vector container
+ * @param value A character string
+ * @param length The length of the string, not including the null terminator.
+ *               If the user enters a length greater than the actual length
+ *               it can cause undefined behavior.
+ *
+ * @code
+ * char a[6] = Hello";
+ * char b[7] = "World!";
+ * StringVector vec = init_string_vector();
+ * push_string_vector(&vec, a, 6);
+ * push_string_vector(&vec, a, 7);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *     printf("%s\n", ((char **)vec->vector)[i]);
+ * }
+ * @endcode
+ */
+int push_string_vector(StringVector *vec, char *value, size_t length);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory used by a StringVector container
+ *
+ * @param vec A String Vector container
+ */
+void free_string_vector(StringVector *vec);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

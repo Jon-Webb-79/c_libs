@@ -4,57 +4,51 @@
 
 {\ttfamily \#include $<$vector.\+h$>$}
 
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$$\ast$ \mbox{\hyperlink{structStringVector_aa3900bc3194bf9cfb58dfd06761b4088}{array}}
+char $\ast$$\ast$ \mbox{\hyperlink{structStringVector_a87e7b9214d3905000866130379a4ca0a}{vector}}
 \item 
-size\+\_\+t \mbox{\hyperlink{structStringVector_a9f2dd7daef3dcee3a1201f93223bae2c}{len}}
+size\+\_\+t \mbox{\hyperlink{structStringVector_ad519aca8b425ec4712cbe2b86aa3e339}{active\+\_\+length}}
 \item 
-int \mbox{\hyperlink{structStringVector_afa01fa5fa98b176f1fda6fd96683d61b}{elem}}
+size\+\_\+t \mbox{\hyperlink{structStringVector_a3942651782b9ce3c297e399f7e32aa0c}{allocated\+\_\+length}}
 \item 
-\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} \mbox{\hyperlink{structStringVector_a42f12c2ffa5233607750f2536aab80ae}{dat}}
+size\+\_\+t \mbox{\hyperlink{structStringVector_adfaf534e7e13ca2aabb9c728fdca8a70}{num\+\_\+bytes}}
+\item 
+\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{structStringVector_ae7c3b83aabcfb3de841d777d43703ebd}{dat\+\_\+type}}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-A container for a dynamically allocated String array and related data
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structStringVector_ad519aca8b425ec4712cbe2b86aa3e339}\label{structStringVector_ad519aca8b425ec4712cbe2b86aa3e339}} 
+\index{StringVector@{StringVector}!active\_length@{active\_length}}
+\index{active\_length@{active\_length}!StringVector@{StringVector}}
+\doxysubsubsection{\texorpdfstring{active\_length}{active\_length}}
+{\footnotesize\ttfamily size\+\_\+t String\+Vector\+::active\+\_\+length}
 
+\mbox{\Hypertarget{structStringVector_a3942651782b9ce3c297e399f7e32aa0c}\label{structStringVector_a3942651782b9ce3c297e399f7e32aa0c}} 
+\index{StringVector@{StringVector}!allocated\_length@{allocated\_length}}
+\index{allocated\_length@{allocated\_length}!StringVector@{StringVector}}
+\doxysubsubsection{\texorpdfstring{allocated\_length}{allocated\_length}}
+{\footnotesize\ttfamily size\+\_\+t String\+Vector\+::allocated\+\_\+length}
 
-\begin{DoxyParams}{Parameters}
-{\em array} & A pointer to a multi array in memory \\
-\hline
-{\em len} & The active length of the multi array \\
-\hline
-{\em elen} & The memory consumption for each row indice \\
-\hline
-\end{DoxyParams}
+\mbox{\Hypertarget{structStringVector_ae7c3b83aabcfb3de841d777d43703ebd}\label{structStringVector_ae7c3b83aabcfb3de841d777d43703ebd}} 
+\index{StringVector@{StringVector}!dat\_type@{dat\_type}}
+\index{dat\_type@{dat\_type}!StringVector@{StringVector}}
+\doxysubsubsection{\texorpdfstring{dat\_type}{dat\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} String\+Vector\+::dat\+\_\+type}
 
+\mbox{\Hypertarget{structStringVector_adfaf534e7e13ca2aabb9c728fdca8a70}\label{structStringVector_adfaf534e7e13ca2aabb9c728fdca8a70}} 
+\index{StringVector@{StringVector}!num\_bytes@{num\_bytes}}
+\index{num\_bytes@{num\_bytes}!StringVector@{StringVector}}
+\doxysubsubsection{\texorpdfstring{num\_bytes}{num\_bytes}}
+{\footnotesize\ttfamily size\+\_\+t String\+Vector\+::num\+\_\+bytes}
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{structStringVector_aa3900bc3194bf9cfb58dfd06761b4088}\label{structStringVector_aa3900bc3194bf9cfb58dfd06761b4088}} 
-\index{StringVector@{StringVector}!array@{array}}
-\index{array@{array}!StringVector@{StringVector}}
-\doxysubsubsection{\texorpdfstring{array}{array}}
-{\footnotesize\ttfamily char$\ast$$\ast$ String\+Vector\+::array}
-
-\mbox{\Hypertarget{structStringVector_a42f12c2ffa5233607750f2536aab80ae}\label{structStringVector_a42f12c2ffa5233607750f2536aab80ae}} 
-\index{StringVector@{StringVector}!dat@{dat}}
-\index{dat@{dat}!StringVector@{StringVector}}
-\doxysubsubsection{\texorpdfstring{dat}{dat}}
-{\footnotesize\ttfamily \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} String\+Vector\+::dat}
-
-\mbox{\Hypertarget{structStringVector_afa01fa5fa98b176f1fda6fd96683d61b}\label{structStringVector_afa01fa5fa98b176f1fda6fd96683d61b}} 
-\index{StringVector@{StringVector}!elem@{elem}}
-\index{elem@{elem}!StringVector@{StringVector}}
-\doxysubsubsection{\texorpdfstring{elem}{elem}}
-{\footnotesize\ttfamily int String\+Vector\+::elem}
-
-\mbox{\Hypertarget{structStringVector_a9f2dd7daef3dcee3a1201f93223bae2c}\label{structStringVector_a9f2dd7daef3dcee3a1201f93223bae2c}} 
-\index{StringVector@{StringVector}!len@{len}}
-\index{len@{len}!StringVector@{StringVector}}
-\doxysubsubsection{\texorpdfstring{len}{len}}
-{\footnotesize\ttfamily size\+\_\+t String\+Vector\+::len}
+\mbox{\Hypertarget{structStringVector_a87e7b9214d3905000866130379a4ca0a}\label{structStringVector_a87e7b9214d3905000866130379a4ca0a}} 
+\index{StringVector@{StringVector}!vector@{vector}}
+\index{vector@{vector}!StringVector@{StringVector}}
+\doxysubsubsection{\texorpdfstring{vector}{vector}}
+{\footnotesize\ttfamily char$\ast$$\ast$ String\+Vector\+::vector}
 
 
 

@@ -21,7 +21,7 @@ Vector init_vector(size_t num_bytes, size_t num_indices) {
 	Vector vec;
 	if (pointer == NULL) {
 		printf("Unable to allocate memory, exiting.\n");
-		free(vec.vector);
+		free(pointer);
 		exit(0);
 	}
 	else {
@@ -857,6 +857,78 @@ Vector cumsum_longlong_vector(Vector *vec) {
 		push_vector(&csum, &sum, 1);
 	}
 	return csum;
+}
+// ================================================================================
+// ================================================================================
+// STRING VECTOR IMPLMENTATION
+
+StringVector init_string_vector(size_t length) {
+
+	StringVector vec;
+
+	char **ptr = (char **)malloc(length * sizeof(char *));
+	if (ptr == NULL) {
+		printf("WARNING: Not enough available memory, exiting!\n");
+		free(ptr);
+		exit(0);
+	}
+
+	vec.dat_type = STRING;
+	vec.num_bytes = sizeof(char *);
+	vec.active_length = 0;
+	vec.allocated_length = length;
+	vec.vector = ptr;
+	return vec;
+}
+// --------------------------------------------------------------------------------
+
+int push_string_vector(StringVector *vec, char *value, size_t length) {
+	// Verify all values have null terminator
+	char new_value[length];
+	const char *test = ((char *)value) + length;
+	int cmp = strcmp(test, "\0");
+	if (cmp != 0) {
+		memcpy(new_value, value, length + 1);
+		memcpy(new_value + length, "\0", 1);
+	}
+	else memcpy(new_value, value, length);
+
+	// Begin push
+	value = strdup(new_value);
+	if (!value) return 0;
+
+	if (vec->active_length >= vec->allocated_length) {
+		size_t size = 2 * (sizeof(char *) * (vec->allocated_length));
+		char **resized = (char**)realloc(vec->vector, size);
+		//char **resized = (char**)realloc(vec->vector, sizeof(char *) * (vec->active_length + 1));
+		if (resized == NULL) {
+			free(value);
+			return 0;
+		}
+		resized[vec->active_length] = value;
+		vec->vector = resized;
+		vec->allocated_length *= 2;
+	}
+	else {
+		vec->vector[vec->active_length] = value;
+	}
+	vec->active_length += 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+void free_string_vector(StringVector *vec) {
+	if (vec != NULL) {
+		for (size_t i = 0; i < vec->allocated_length; i++) {
+			free(vec->vector[i]);
+		}
+		free(vec->vector);
+		vec->vector = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+		vec->dat_type = 0;
+		vec->num_bytes = 0;
+	}
 }
 // ================================================================================
 // ================================================================================
