@@ -1229,6 +1229,8 @@ Vector cumsum_longlong_vector(Vector *vec);
  *    The total number of allocated indices in memory
  * @param Vector::num_bytes
  *    The number of bytes consumed by a single indice
+ *  @param Vector::num_indices The total number of indices consumed
+ *                             by the multi-array
  * @param Vector::dat_type
  *    The data type. Must use data types allocated in dtype enum
  */
@@ -1260,8 +1262,7 @@ StringVector init_string_vector(void);
 /**
  * This functions allows a user to push a character string to the StringVector.
  * If the user forgets to include the NULL character in the last indice space,
- * this function will add it.  However, if the NULL terminator is not included
- * this function will overwrite the last character with the terminator.
+ * this function will provide a warning to the user
  *
  * @param vec A String Vector container
  * @param value A character string
@@ -1293,7 +1294,9 @@ void free_string_vector(StringVector *vec);
 
 /**
  * This function allows a user to inser a character string into a String Vector
- * container at an index of the users choosing.
+ * container at an index of the users choosing.  If the user forgets to add
+ * a null character to the end of a string, the function will provide the user
+ * with a warning.
  *
  * @param vec A String Vector container
  * @param value A character string

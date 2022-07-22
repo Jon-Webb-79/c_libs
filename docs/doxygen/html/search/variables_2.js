@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['num_5fbytes_0',['num_bytes',['../structVector.html#aca2e44fd5525a105e7dc19f39408b0f3',1,'Vector::num_bytes()'],['../structStringVector.html#adfaf534e7e13ca2aabb9c728fdca8a70',1,'StringVector::num_bytes()']]]
+  ['length_0',['length',['../structStringVector.html#ab3dd187db187387508375a820856cc7a',1,'StringVector']]]
 ];

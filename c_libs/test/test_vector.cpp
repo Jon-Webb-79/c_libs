@@ -984,14 +984,14 @@ TEST(test_cumsum, longlong_csum) {
 
 /* This function tests the init_string_vector, push_string_vector, and
  * the free_string_vector functions */
-TEST(test_push_vector, vector) {
+TEST(test_push_vector, test_push_data) {
 	char a[6] = "Hello";
 	StringVector vec = init_string_vector();
 	push_string_vector(&vec, a, 6);
 	char b[7] = "World!";
 	push_string_vector(&vec, b, 7);
 	char c[5] = "Goof";
-	push_string_vector(&vec, c, 6);
+	push_string_vector(&vec, c, 5);
 	EXPECT_STREQ(a, vec.vector[0]);
 	EXPECT_STREQ(b, vec.vector[1]);
 	EXPECT_STREQ(c, vec.vector[2]);
@@ -1000,20 +1000,22 @@ TEST(test_push_vector, vector) {
 // ================================================================================
 // ================================================================================
 
-/* TEST(test_insert_vector, vector) { */
-/* 	char a[6] = "Hello"; */
-/* 	StringVector vec = init_string_vector(7); */
-/* 	push_string_vector(&vec, a, 6); */
-/* 	char b[7] = "World!"; */
-/* 	push_string_vector(&vec, b, 7); */
-/* 	char c[5] = "Goof"; */	
-/* 	push_string_vector(&vec, c, 5); */
-/* 	char d[8] = "Goodbye"; */
-/* 	insert_string_vector(&vec, d, 8, 1); */
-/* 	for (size_t i = 0; i < vec.active_length; i++) { */
-/* 		printf("%s\n", vec.vector[i]); */
-/* 	} */
-/* } */
+TEST(test_insert_vector, vector) {
+	char a[6] = "Hello";
+	StringVector vec = init_string_vector();
+	push_string_vector(&vec, a, 6);
+	char b[7] = "World!";
+	push_string_vector(&vec, b, 7);
+	char c[5] = "Goof";	
+	push_string_vector(&vec, c, 5);
+	char d[8] = "Goodbye";
+	insert_string_vector(&vec, d, 8, 1);
+	EXPECT_STREQ(a, vec.vector[0]);
+	EXPECT_STREQ(d, vec.vector[1]);
+	EXPECT_STREQ(b, vec.vector[2]);
+	EXPECT_STREQ(c, vec.vector[3]);
+	EXPECT_EQ(4, vec.length);
+}
 // ================================================================================
 // ================================================================================
 // eof

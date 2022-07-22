@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO insert_string_vector
 // TODO pop_string_vector
 // TODO find_string_vector_indices
 // TODO delete_string_vec_values

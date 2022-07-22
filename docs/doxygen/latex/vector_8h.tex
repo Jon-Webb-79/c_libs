@@ -139,11 +139,13 @@ double \mbox{\hyperlink{vector_8h_a7d3bf0faea0f532c595adeaabcbf35bf}{stdev\+\_\+
 \item 
 \mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{vector_8h_a2842346a8318f470a9a81dcfe5d0f4fa}{cumsum\+\_\+longlong\+\_\+vector}} (\mbox{\hyperlink{structVector}{Vector}} $\ast$vec)
 \item 
-\mbox{\hyperlink{structStringVector}{String\+Vector}} \mbox{\hyperlink{vector_8h_ace3b434b5d8341e6ead5ca258aa3678e}{init\+\_\+string\+\_\+vector}} (size\+\_\+t length)
+\mbox{\hyperlink{structStringVector}{String\+Vector}} \mbox{\hyperlink{vector_8h_ab71c5f9ac4c5f52dde3a4a69a2227959}{init\+\_\+string\+\_\+vector}} (void)
 \item 
 int \mbox{\hyperlink{vector_8h_a6c589d27ef6c35c4ef2d743b325609ce}{push\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$vec, char $\ast$value, size\+\_\+t length)
 \item 
 void \mbox{\hyperlink{vector_8h_aadac51d68818d990fceaba6d488d75a6}{free\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$vec)
+\item 
+int \mbox{\hyperlink{vector_8h_a87e771a0179db8ba8e6526d339e7e7ff}{insert\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$vec, char $\ast$value, size\+\_\+t length, size\+\_\+t index)
 \end{DoxyCompactItemize}
 
 
@@ -627,19 +629,14 @@ This function will free all memory allocation from a vector container.
 {\em vec} & A vector container \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{vector_8h_ace3b434b5d8341e6ead5ca258aa3678e}\label{vector_8h_ace3b434b5d8341e6ead5ca258aa3678e}} 
+\mbox{\Hypertarget{vector_8h_ab71c5f9ac4c5f52dde3a4a69a2227959}\label{vector_8h_ab71c5f9ac4c5f52dde3a4a69a2227959}} 
 \index{vector.h@{vector.h}!init\_string\_vector@{init\_string\_vector}}
 \index{init\_string\_vector@{init\_string\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{init\_string\_vector()}{init\_string\_vector()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structStringVector}{String\+Vector}} init\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structStringVector}{String\+Vector}} init\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 Instantiates a \mbox{\hyperlink{structStringVector}{String\+Vector}} container. This function allocates the vector in heap memory.
 
-
-\begin{DoxyParams}{Parameters}
-{\em length} & The estimated length of the string \mbox{\hyperlink{structVector}{Vector}} container \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 vec A \mbox{\hyperlink{structVector}{Vector}} container
 \end{DoxyReturn}
@@ -647,7 +644,7 @@ vec A \mbox{\hyperlink{structVector}{Vector}} container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
 \DoxyCodeLine{\textcolor{comment}{//   memory for 5 indices}}
-\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} vec = \mbox{\hyperlink{vector_8c_ace3b434b5d8341e6ead5ca258aa3678e}{init\_string\_vector}}(5);}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} vec = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}(5);}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8h_aebfff769c9c952425c106d67726fdae8}\label{vector_8h_aebfff769c9c952425c106d67726fdae8}} 
@@ -672,7 +669,7 @@ vec A \mbox{\hyperlink{structVector}{Vector}} container
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
 \DoxyCodeLine{\textcolor{comment}{//   memory for 5 indices}}
-\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_ace3b434b5d8341e6ead5ca258aa3678e}{init\_string\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}}, 5);}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8h_affc9eba1b68ea79daa1f0b67cd4387b9}\label{vector_8h_affc9eba1b68ea79daa1f0b67cd4387b9}} 
@@ -698,6 +695,47 @@ vec A \mbox{\hyperlink{structVector}{Vector}} container
 \DoxyCodeLine{\textcolor{comment}{// -\/ Create a dynamically allocated array container for integers, with allocated}}
 \DoxyCodeLine{\textcolor{comment}{//   memory for 5 indices}}
 \DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} vec = \mbox{\hyperlink{vector_8c_affc9eba1b68ea79daa1f0b67cd4387b9}{init\_vector}}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}), 5);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a87e771a0179db8ba8e6526d339e7e7ff}\label{vector_8h_a87e771a0179db8ba8e6526d339e7e7ff}} 
+\index{vector.h@{vector.h}!insert\_string\_vector@{insert\_string\_vector}}
+\index{insert\_string\_vector@{insert\_string\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{insert\_string\_vector()}{insert\_string\_vector()}}
+{\footnotesize\ttfamily int insert\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{vec,  }\item[{char $\ast$}]{value,  }\item[{size\+\_\+t}]{length,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function allows a user to inser a character string into a String \mbox{\hyperlink{structVector}{Vector}} container at an index of the users choosing. If the user forgets to add a null character to the end of a string, the function will provide the user with a warning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A String \mbox{\hyperlink{structVector}{Vector}} container \\
+\hline
+{\em value} & A character string \\
+\hline
+{\em length} & The length of the value character string \\
+\hline
+{\em index} & The index within the String \mbox{\hyperlink{structVector}{Vector}} container where the value will be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer An integer representing success (1) or failure (0) of the function
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} b[7] = \textcolor{stringliteral}{"{}World!"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} c[6] = \textcolor{stringliteral}{"{}Goofy"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} d[8] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} vec = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}(4);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, b, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, c, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}})\&vec, d, 8);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} e[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a87e771a0179db8ba8e6526d339e7e7ff}{insert\_string\_vector}}(\&vec, e, 6, 2);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, vec.\mbox{\hyperlink{structStringVector_a87e7b9214d3905000866130379a4ca0a}{vector}}[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> "{}Hello"{}, "{}World!"{}, "{}Hello"{}, "{}Goofy"{}, "{}Goodbye"{}}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8h_aeca8d3ee442704cda8225e60c7306709}\label{vector_8h_aeca8d3ee442704cda8225e60c7306709}} 
@@ -883,7 +921,7 @@ The above code should yield an arr\+\_\+test array with the values of 10.\+1, 9.
 \doxysubsubsection{\texorpdfstring{push\_string\_vector()}{push\_string\_vector()}}
 {\footnotesize\ttfamily int push\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{vec,  }\item[{char $\ast$}]{value,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
 
-This functions allows a user to push a character string to the \mbox{\hyperlink{structStringVector}{String\+Vector}}. If the user forgets to include the NULL character in the last indice space, this function will add it. However, if the NULL terminator is not included this function will overwrite the last character with the terminator.
+This functions allows a user to push a character string to the \mbox{\hyperlink{structStringVector}{String\+Vector}}. If the user forgets to include the NULL character in the last indice space, this function will provide a warning to the user
 
 
 \begin{DoxyParams}{Parameters}
