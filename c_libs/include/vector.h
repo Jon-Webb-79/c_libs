@@ -1237,6 +1237,7 @@ typedef struct
 	char **vector;
 	size_t length;
 	size_t num_bytes;
+	size_t num_indices;
 	dtype dat_type;
 } StringVector;
 // --------------------------------------------------------------------------------
@@ -1320,7 +1321,7 @@ void free_string_vector(StringVector *vec);
  * // >> "Hello", "World!", "Hello", "Goofy", "Goodbye"
  * @endcode
  */
-//int insert_string_vector(StringVector *vec, char *value, size_t length, size_t index);
+int insert_string_vector(StringVector *vec, char *value, size_t length, size_t index);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================
