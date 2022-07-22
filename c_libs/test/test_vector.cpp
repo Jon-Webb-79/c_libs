@@ -986,7 +986,7 @@ TEST(test_cumsum, longlong_csum) {
  * the free_string_vector functions */
 TEST(test_push_vector, vector) {
 	char a[6] = "Hello";
-	StringVector vec = init_string_vector(2);
+	StringVector vec = init_string_vector();
 	push_string_vector(&vec, a, 6);
 	char b[7] = "World!";
 	push_string_vector(&vec, b, 7);
@@ -1000,20 +1000,20 @@ TEST(test_push_vector, vector) {
 // ================================================================================
 // ================================================================================
 
-TEST(test_insert_vector, vector) {
-	char a[6] = "Hello";
-	StringVector vec = init_string_vector(7);
-	push_string_vector(&vec, a, 6);
-	char b[7] = "World!";
-	push_string_vector(&vec, b, 7);
-	char c[5] = "Goof";	
-	push_string_vector(&vec, c, 5);
-	char d[8] = "Goodbye";
-	insert_string_vector(&vec, d, 8, 1);
-	for (size_t i = 0; i < vec.active_length; i++) {
-		printf("%s\n", vec.vector[i]);
-	}
-}
+/* TEST(test_insert_vector, vector) { */
+/* 	char a[6] = "Hello"; */
+/* 	StringVector vec = init_string_vector(7); */
+/* 	push_string_vector(&vec, a, 6); */
+/* 	char b[7] = "World!"; */
+/* 	push_string_vector(&vec, b, 7); */
+/* 	char c[5] = "Goof"; */	
+/* 	push_string_vector(&vec, c, 5); */
+/* 	char d[8] = "Goodbye"; */
+/* 	insert_string_vector(&vec, d, 8, 1); */
+/* 	for (size_t i = 0; i < vec.active_length; i++) { */
+/* 		printf("%s\n", vec.vector[i]); */
+/* 	} */
+/* } */
 // ================================================================================
 // ================================================================================
 // eof

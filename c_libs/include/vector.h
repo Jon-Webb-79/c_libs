@@ -1279,7 +1279,7 @@ StringVector init_string_vector(void);
  * }
  * @endcode
  */
-//int push_string_vector(StringVector *vec, char *value, size_t length);
+int push_string_vector(StringVector *vec, char *value, size_t length);
 // --------------------------------------------------------------------------------
 
 /**

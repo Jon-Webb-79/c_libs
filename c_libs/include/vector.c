@@ -882,38 +882,33 @@ StringVector init_string_vector() {
 }
 // --------------------------------------------------------------------------------
 
-/* int push_string_vector(StringVector *vec, char *value, size_t length) { */
-/* 	// Verify all values have null terminator */
-/* 	char new_value[length]; */
-/* 	const char *test = ((char *)value) + length; */
-/* 	int cmp = strcmp(test, "\0"); */
-/* 	if (cmp != 0) { */
-/* 		memcpy(new_value, value, length + 1); */
-/* 		memcpy(new_value + length, "\0", 1); */
-/* 	} */
-/* 	else memcpy(new_value, value, length); */
+int push_string_vector(StringVector *vec, char *value, size_t length) {
+	// Verify all values have null terminator
+	char new_value[length];
+	const char *test = ((char *)value) + length;
+	int cmp = strcmp(test, "\0");
+	if (cmp != 0) {
+		memcpy(new_value, value, length + 1);
+		memcpy(new_value + length, "\0", 1);
+	}
+	else memcpy(new_value, value, length);
 
-/* 	// Begin push */
-/* 	value = strdup(new_value); */
-/* 	if (!value) return 0; */
+	// Begin push
+	value = strdup(new_value);
+	if (!value) return 0;
 
-/* 	if (vec->active_length + length >= vec->allocated_length) { */
-/* 		size_t size = 2 * (sizeof(char *) * (vec->allocated_length + length)); */
-/* 		char **resized = (char**)realloc(vec->vector, size); */
-/* 		if (resized == NULL) { */
-/* 			free(value); */
-/* 			return 0; */
-/* 		} */
-/* 		resized[vec->active_length] = value; */
-/* 		vec->vector = resized; */
-/* 		vec->allocated_length *= 2; */
-/* 	} */
-/* 	else { */
-/* 		vec->vector[vec->active_length] = value; */
-/* 	} */
-/* 	vec->active_length += 1; */
-/* 	return 1; */
-/* } */
+	// Allocate enough memory for new char vector
+	size_t size = sizeof(char *) * length;
+	char **resized = (char **)realloc(vec->vector, size);
+	if (resized == NULL) {
+		free(resized);
+		return 0;
+	}
+	resized[vec->length] = value;
+	vec->vector = resized;
+	vec->length += 1;
+	return 1;
+}
 // --------------------------------------------------------------------------------
 
 void free_string_vector(StringVector *vec) {
