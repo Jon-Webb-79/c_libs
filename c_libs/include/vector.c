@@ -884,12 +884,13 @@ StringVector init_string_vector() {
 
 int push_string_vector(StringVector *vec, char *value, size_t length) {
 	// Verify all values have null terminator
-	char new_value[length];
+	char new_value[length + 1];
 	const char *test = ((char *)value) + length;
 	int cmp = strcmp(test, "\0");
 	if (cmp != 0) {
 		memcpy(new_value, value, length + 1);
 		memcpy(new_value + length, "\0", 1);
+		length += 1;
 	}
 	else memcpy(new_value, value, length);
 
