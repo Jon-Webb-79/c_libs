@@ -437,10 +437,8 @@ push_string_vector
 ==================
 The function ``push_string_vector(StingVector *vec, char *value, size_t length)`` can be used to push
 strings to a string vector container.  The variable ``vec`` represents a String Vector container,
-``value`` represents a string and ``length`` represents the length of the string.  The function
-will check the last indice at position ``length`` to determine if the string is accompanied with
-a NULL terminator.  If the string does not have a NULL terminator, the last character will
-be replaced with the value ``"\0"``.
+``value`` represents a string and ``length`` represents the length of the string to include
+the null terminator.
 
 .. code-block:: c
 
@@ -454,3 +452,29 @@ be replaced with the value ``"\0"``.
    }
    // "Hello ", "World "
    free_string_vector(&vec);
+
+====================
+insert_string_vector
+====================
+The function ``insert_string_vector(StringVector *vec, char *value, size_t length, size_t index)``
+can be used to insert a string to a string vector container at a specified index.  The variable
+``vec`` represents a StringVector container, ``value`` represents a string, ``length`` represents
+the length of the string, including the null terminator, ``index`` represents the index where a
+
+.. code-block:: c
+
+   char a[6] = "Hello";
+   StringVector vec = init_string_vector(6);
+   push_string_vector(&vec, a, 6);
+   char b[7] = "World!";
+   push_string_vector(&vec, b, 7);
+   char c[8] = "Goodbye"
+   push_string_vector(&vec, c, 8);
+   char d[5] = "Goof";
+   insert_string_vector(&vec, d, 5, 1)
+   for (size_t i = 0; i < vec.active_length; i++) {
+       printf("%s\n", vec.vector[i]);
+   }
+   // "Hello ", "Good", "World ", "Goodbye"
+   free_string_vector(&vec);
+
