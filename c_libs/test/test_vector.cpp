@@ -1000,7 +1000,9 @@ TEST(test_push_vector, test_push_data) {
 // ================================================================================
 // ================================================================================
 
-TEST(test_insert_vector, vector) {
+/* This function tests the insert_string_vector to ensure it correctly inserts
+ * a string into a String Container */
+TEST(test_insert_vector, test_insert_data) {
 	char a[6] = "Hello";
 	StringVector vec = init_string_vector();
 	push_string_vector(&vec, a, 6);
@@ -1015,6 +1017,23 @@ TEST(test_insert_vector, vector) {
 	EXPECT_STREQ(b, vec.vector[2]);
 	EXPECT_STREQ(c, vec.vector[3]);
 	EXPECT_EQ(4, vec.length);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the the pop_string_vector function to ensure it
+ * correctly pops a string from a String Vector container */
+TEST(test_pop_vector, test_pop_vector) {
+	char a[6] = "Hello";
+	StringVector vec = init_string_vector();
+	push_string_vector(&vec, a, 6);
+	char b[7] = "World!";
+	push_string_vector(&vec, b, 7);
+	char c[5] = "Goof";	
+	push_string_vector(&vec, c, 5);
+	pop_string_vector(&vec, 1);
+	EXPECT_STREQ(a, vec.vector[0]);
+	EXPECT_STREQ(c, vec.vector[1]);
 }
 // ================================================================================
 // ================================================================================

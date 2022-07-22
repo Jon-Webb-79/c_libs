@@ -68,9 +68,9 @@ Vector init_type_vector(dtype dat_type, size_t num_indices) {
 	pointer = malloc(num_indices * num_bytes);
 	Vector vec;
 	if (pointer == NULL) {
-		printf("Unable to allocate memory, exiting.\n");
+		printf("Unable to allocate memory for init_type_vector, exiting.\n");
 		free(vec.vector);
-		exit(0);
+		return vec;
 	}
 	else {
 		vec.dat_type = dat_type;
@@ -869,9 +869,9 @@ StringVector init_string_vector() {
 	// Create small memory block to be reallocated later
 	char **ptr = (char **)malloc(sizeof(char *));
 	if (ptr == NULL) {
-		printf("WARNING: Not enough available memory, exiting!\n");
+		printf("WARNING: Insufficient memory for init_string_vector, exiting!\n");
 		free(ptr);
-		exit(0);
+		return vec;
 	}
 
 	vec.dat_type = STRING;
@@ -899,7 +899,7 @@ int push_string_vector(StringVector *vec, char *value, size_t length) {
 	size_t size = sizeof(char) * vec->num_indices;
 	char **resized = (char **)realloc(vec->vector, size);
 	if (resized == NULL) {
-		printf("Warning, Insufficient memory!\n");
+		printf("Warning, Insufficient memory for push_string_vector!\n");
 		free(resized);
 		vec->num_indices -= length;
 		return 0;
@@ -952,6 +952,17 @@ int insert_string_vector(StringVector *vec, char *value, size_t length, size_t i
 	vec->vector[index] = value;
 	vec->length += 1;
 	return 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_string_vector(StringVector *vec, size_t index) {
+	size_t length = strlen(vec->vector[index]);
+	for (size_t i = index; i < vec->length - 1; i++) {
+		vec->vector[i] = vec->vector[i + 1];
+	}
+	vec->num_indices -= length;
+	vec->vector = (char **)realloc(vec->vector, vec->num_indices * sizeof(char));
+	vec->length -= 1;
 }
 // ================================================================================
 // ================================================================================

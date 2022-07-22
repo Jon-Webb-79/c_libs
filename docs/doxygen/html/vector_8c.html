@@ -187,6 +187,8 @@ Functions</h2></td></tr>
 <tr class="separator:aadac51d68818d990fceaba6d488d75a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e771a0179db8ba8e6526d339e7e7ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a87e771a0179db8ba8e6526d339e7e7ff">insert_string_vector</a> (<a class="el" href="structStringVector.html">StringVector</a> *vec, char *value, size_t length, size_t index)</td></tr>
 <tr class="separator:a87e771a0179db8ba8e6526d339e7e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ca17f8c29e9bd611ce952702af4460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a77ca17f8c29e9bd611ce952702af4460">pop_string_vector</a> (<a class="el" href="structStringVector.html">StringVector</a> *vec, size_t index)</td></tr>
+<tr class="separator:a77ca17f8c29e9bd611ce952702af4460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab31d891c0d195b49b61fb9cc746a4fdb" name="ab31d891c0d195b49b61fb9cc746a4fdb"></a>
@@ -882,14 +884,15 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, a, 6);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, b, 7);</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, c, 6);</div>
-<div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>)&amp;vec, d, 8);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a87e771a0179db8ba8e6526d339e7e7ff">insert_string_vector</a>(&amp;vec, d, 8);</div>
 <div class="line"><span class="keywordtype">char</span> e[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a87e771a0179db8ba8e6526d339e7e7ff">insert_string_vector</a>(&amp;vec, e, 6, 2);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.active_length; i++) {</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structStringVector.html#ab3dd187db187387508375a820856cc7a">length</a>; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, vec.<a class="code hl_variable" href="structStringVector.html#a87e7b9214d3905000866130379a4ca0a">vector</a>[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; &quot;Hello&quot;, &quot;World!&quot;, &quot;Hello&quot;, &quot;Goofy&quot;, &quot;Goodbye&quot;</span></div>
 <div class="ttc" id="astructStringVector_html_a87e7b9214d3905000866130379a4ca0a"><div class="ttname"><a href="structStringVector.html#a87e7b9214d3905000866130379a4ca0a">StringVector::vector</a></div><div class="ttdeci">char ** vector</div><div class="ttdef"><b>Definition:</b> vector.h:1239</div></div>
+<div class="ttc" id="astructStringVector_html_ab3dd187db187387508375a820856cc7a"><div class="ttname"><a href="structStringVector.html#ab3dd187db187387508375a820856cc7a">StringVector::length</a></div><div class="ttdeci">size_t length</div><div class="ttdef"><b>Definition:</b> vector.h:1240</div></div>
 <div class="ttc" id="avector_8c_html_a6c589d27ef6c35c4ef2d743b325609ce"><div class="ttname"><a href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a></div><div class="ttdeci">int push_string_vector(StringVector *vec, char *value, size_t length)</div><div class="ttdef"><b>Definition:</b> vector.c:886</div></div>
 <div class="ttc" id="avector_8c_html_a87e771a0179db8ba8e6526d339e7e7ff"><div class="ttname"><a href="vector_8c.html#a87e771a0179db8ba8e6526d339e7e7ff">insert_string_vector</a></div><div class="ttdeci">int insert_string_vector(StringVector *vec, char *value, size_t length, size_t index)</div><div class="ttdef"><b>Definition:</b> vector.c:929</div></div>
 </div><!-- fragment --> 
@@ -1097,6 +1100,57 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.0</span></div>
 <div class="ttc" id="avector_8c_html_ae6165f429ccd4b4182ca00f94e965980"><div class="ttname"><a href="vector_8c.html#ae6165f429ccd4b4182ca00f94e965980">median_long_vector</a></div><div class="ttdeci">double median_long_vector(Vector *vec)</div><div class="ttdef"><b>Definition:</b> vector.c:642</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a77ca17f8c29e9bd611ce952702af4460" name="a77ca17f8c29e9bd611ce952702af4460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ca17f8c29e9bd611ce952702af4460">&#9670;&nbsp;</a></span>pop_string_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pop_string_vector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structStringVector.html">StringVector</a> *&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function allows a user to to remove an indice from a String <a class="el" href="structVector.html">Vector</a> container.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>A String <a class="el" href="structVector.html">Vector</a> container </td></tr>
+    <tr><td class="paramname">index</td><td>The index that the user wishes to remove from the container</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">char</span> a[6] = <span class="stringliteral">&quot;Hello&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> b[7] = <span class="stringliteral">&quot;World!&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> c[6] = <span class="stringliteral">&quot;Goofy&quot;</span>;</div>
+<div class="line"><span class="keywordtype">char</span> d[8] = <span class="stringliteral">&quot;Goodbye&quot;</span>;</div>
+<div class="line"><a class="code hl_struct" href="structStringVector.html">StringVector</a> vec = <a class="code hl_function" href="vector_8c.html#a6bf46c0d706d37c8d00900b1ba5c0cea">init_string_vector</a>(4);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, a, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, b, 7);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, c, 6);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a6c589d27ef6c35c4ef2d743b325609ce">push_string_vector</a>(&amp;vec, d, 8);</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a77ca17f8c29e9bd611ce952702af4460">pop_string_vector</a>(@vec, 1);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.<a class="code hl_variable" href="structStringVector.html#ab3dd187db187387508375a820856cc7a">length</a>; i++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, vec.<a class="code hl_variable" href="structStringVector.html#a87e7b9214d3905000866130379a4ca0a">vector</a>[i]);</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// &gt;&gt; &quot;Hello&quot;, &quot;Goofy&quot;, &quot;Goofy&quot;, &quot;Goodbye&quot;</span></div>
+<div class="ttc" id="avector_8c_html_a77ca17f8c29e9bd611ce952702af4460"><div class="ttname"><a href="vector_8c.html#a77ca17f8c29e9bd611ce952702af4460">pop_string_vector</a></div><div class="ttdeci">void pop_string_vector(StringVector *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> vector.c:958</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

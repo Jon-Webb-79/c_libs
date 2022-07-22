@@ -146,6 +146,8 @@ int \mbox{\hyperlink{vector_8h_a6c589d27ef6c35c4ef2d743b325609ce}{push\+\_\+stri
 void \mbox{\hyperlink{vector_8h_aadac51d68818d990fceaba6d488d75a6}{free\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$vec)
 \item 
 int \mbox{\hyperlink{vector_8h_a87e771a0179db8ba8e6526d339e7e7ff}{insert\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$vec, char $\ast$value, size\+\_\+t length, size\+\_\+t index)
+\item 
+void \mbox{\hyperlink{vector_8h_a77ca17f8c29e9bd611ce952702af4460}{pop\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$vec, size\+\_\+t index)
 \end{DoxyCompactItemize}
 
 
@@ -729,10 +731,10 @@ integer An integer representing success (1) or failure (0) of the function
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, a, 6);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, b, 7);}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, c, 6);}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}})\&vec, d, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a87e771a0179db8ba8e6526d339e7e7ff}{insert\_string\_vector}}(\&vec, d, 8);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} e[6] = \textcolor{stringliteral}{"{}Hello"{}};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a87e771a0179db8ba8e6526d339e7e7ff}{insert\_string\_vector}}(\&vec, e, 6, 2);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.active\_length; i++) \{}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structStringVector_ab3dd187db187387508375a820856cc7a}{length}}; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, vec.\mbox{\hyperlink{structStringVector_a87e7b9214d3905000866130379a4ca0a}{vector}}[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> "{}Hello"{}, "{}World!"{}, "{}Hello"{}, "{}Goofy"{}, "{}Goodbye"{}}}
@@ -884,6 +886,39 @@ The median value of a long vector
 \DoxyCodeLine{\textcolor{keywordtype}{double} median = \mbox{\hyperlink{vector_8c_ae6165f429ccd4b4182ca00f94e965980}{median\_long\_vector}}(\&vec);}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, median);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a77ca17f8c29e9bd611ce952702af4460}\label{vector_8h_a77ca17f8c29e9bd611ce952702af4460}} 
+\index{vector.h@{vector.h}!pop\_string\_vector@{pop\_string\_vector}}
+\index{pop\_string\_vector@{pop\_string\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{pop\_string\_vector()}{pop\_string\_vector()}}
+{\footnotesize\ttfamily void pop\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStringVector}{String\+Vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function allows a user to to remove an indice from a String \mbox{\hyperlink{structVector}{Vector}} container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & A String \mbox{\hyperlink{structVector}{Vector}} container \\
+\hline
+{\em index} & The index that the user wishes to remove from the container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} b[7] = \textcolor{stringliteral}{"{}World!"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} c[6] = \textcolor{stringliteral}{"{}Goofy"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{char} d[8] = \textcolor{stringliteral}{"{}Goodbye"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structStringVector}{StringVector}} vec = \mbox{\hyperlink{vector_8c_a6bf46c0d706d37c8d00900b1ba5c0cea}{init\_string\_vector}}(4);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, a, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, b, 7);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, c, 6);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6c589d27ef6c35c4ef2d743b325609ce}{push\_string\_vector}}(\&vec, d, 8);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a77ca17f8c29e9bd611ce952702af4460}{pop\_string\_vector}}(@vec, 1);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.\mbox{\hyperlink{structStringVector_ab3dd187db187387508375a820856cc7a}{length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, vec.\mbox{\hyperlink{structStringVector_a87e7b9214d3905000866130379a4ca0a}{vector}}[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> "{}Hello"{}, "{}Goofy"{}, "{}Goofy"{}, "{}Goodbye"{}}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{vector_8h_aa1be14eba03cd835f46a96a0b1bea6cd}\label{vector_8h_aa1be14eba03cd835f46a96a0b1bea6cd}} 
