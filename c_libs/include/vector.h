@@ -1225,9 +1225,7 @@ Vector cumsum_longlong_vector(Vector *vec);
  *
  * @param Vector::vector
  *    A double pointer to an array in heap memory
- * @param Vector::active_length
- *    The number of indices with assigned data
- * @param Vector::allocated_length
+ * @param Vector: length
  *    The total number of allocated indices in memory
  * @param Vector::num_bytes
  *    The number of bytes consumed by a single indice
@@ -1237,8 +1235,7 @@ Vector cumsum_longlong_vector(Vector *vec);
 typedef struct
 {
 	char **vector;
-	size_t active_length;
-	size_t allocated_length;
+	size_t length;
 	size_t num_bytes;
 	dtype dat_type;
 } StringVector;
@@ -1248,7 +1245,6 @@ typedef struct
  * Instantiates a StringVector container.  This function allocates the vector
  * in heap memory.
  *
- * @param length The estimated length of the string Vector container
  * @return vec A Vector container
  *
  * @code
@@ -1257,7 +1253,7 @@ typedef struct
  * StringVector vec = init_string_vector(5);
  * @endcode
  */
-StringVector init_string_vector(size_t length);
+StringVector init_string_vector(void);
 // --------------------------------------------------------------------------------
 
 /**
@@ -1283,7 +1279,7 @@ StringVector init_string_vector(size_t length);
  * }
  * @endcode
  */
-int push_string_vector(StringVector *vec, char *value, size_t length);
+//int push_string_vector(StringVector *vec, char *value, size_t length);
 // --------------------------------------------------------------------------------
 
 /**
@@ -1292,6 +1288,39 @@ int push_string_vector(StringVector *vec, char *value, size_t length);
  * @param vec A String Vector container
  */
 void free_string_vector(StringVector *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function allows a user to inser a character string into a String Vector
+ * container at an index of the users choosing.
+ *
+ * @param vec A String Vector container
+ * @param value A character string
+ * @param length The length of the value character string
+ * @param index The index within the String Vector container where the
+ *              value will be inserted
+ * @return integer An integer representing success (1) or failure (0) of
+ *                 the function
+ *
+ * @code
+ * char a[6] = "Hello";
+ * char b[7] = "World!";
+ * char c[6] = "Goofy";
+ * char d[8] = "Goodbye";
+ * StringVector vec = init_string_vector(4);
+ * push_string_vector(&vec, a, 6);
+ * push_string_vector(&vec, b, 7);
+ * push_string_vector(&vec, c, 6);
+ * push_string_vector)&vec, d, 8);
+ * char e[6] = "Hello";
+ * insert_string_vector(&vec, e, 6, 2);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *     printf("%s\n", vec.vector[i]);
+ * }
+ * // >> "Hello", "World!", "Hello", "Goofy", "Goodbye"
+ * @endcode
+ */
+//int insert_string_vector(StringVector *vec, char *value, size_t length, size_t index);
 #endif /* vector_H */
 // ================================================================================
 // ================================================================================

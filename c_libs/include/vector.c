@@ -862,11 +862,12 @@ Vector cumsum_longlong_vector(Vector *vec) {
 // ================================================================================
 // STRING VECTOR IMPLMENTATION
 
-StringVector init_string_vector(size_t length) {
+StringVector init_string_vector() {
 
 	StringVector vec;
 
-	char **ptr = (char **)malloc(length * sizeof(char *));
+	// Create small memory block to be reallocated later
+	char **ptr = (char **)malloc(sizeof(char *));
 	if (ptr == NULL) {
 		printf("WARNING: Not enough available memory, exiting!\n");
 		free(ptr);
@@ -875,61 +876,94 @@ StringVector init_string_vector(size_t length) {
 
 	vec.dat_type = STRING;
 	vec.num_bytes = sizeof(char *);
-	vec.active_length = 0;
-	vec.allocated_length = length;
+	vec.length = 0;
 	vec.vector = ptr;
 	return vec;
 }
 // --------------------------------------------------------------------------------
 
-int push_string_vector(StringVector *vec, char *value, size_t length) {
-	// Verify all values have null terminator
-	char new_value[length];
-	const char *test = ((char *)value) + length;
-	int cmp = strcmp(test, "\0");
-	if (cmp != 0) {
-		memcpy(new_value, value, length + 1);
-		memcpy(new_value + length, "\0", 1);
-	}
-	else memcpy(new_value, value, length);
+/* int push_string_vector(StringVector *vec, char *value, size_t length) { */
+/* 	// Verify all values have null terminator */
+/* 	char new_value[length]; */
+/* 	const char *test = ((char *)value) + length; */
+/* 	int cmp = strcmp(test, "\0"); */
+/* 	if (cmp != 0) { */
+/* 		memcpy(new_value, value, length + 1); */
+/* 		memcpy(new_value + length, "\0", 1); */
+/* 	} */
+/* 	else memcpy(new_value, value, length); */
 
-	// Begin push
-	value = strdup(new_value);
-	if (!value) return 0;
+/* 	// Begin push */
+/* 	value = strdup(new_value); */
+/* 	if (!value) return 0; */
 
-	if (vec->active_length >= vec->allocated_length) {
-		size_t size = 2 * (sizeof(char *) * (vec->allocated_length));
-		char **resized = (char**)realloc(vec->vector, size);
-		//char **resized = (char**)realloc(vec->vector, sizeof(char *) * (vec->active_length + 1));
-		if (resized == NULL) {
-			free(value);
-			return 0;
-		}
-		resized[vec->active_length] = value;
-		vec->vector = resized;
-		vec->allocated_length *= 2;
-	}
-	else {
-		vec->vector[vec->active_length] = value;
-	}
-	vec->active_length += 1;
-	return 1;
-}
+/* 	if (vec->active_length + length >= vec->allocated_length) { */
+/* 		size_t size = 2 * (sizeof(char *) * (vec->allocated_length + length)); */
+/* 		char **resized = (char**)realloc(vec->vector, size); */
+/* 		if (resized == NULL) { */
+/* 			free(value); */
+/* 			return 0; */
+/* 		} */
+/* 		resized[vec->active_length] = value; */
+/* 		vec->vector = resized; */
+/* 		vec->allocated_length *= 2; */
+/* 	} */
+/* 	else { */
+/* 		vec->vector[vec->active_length] = value; */
+/* 	} */
+/* 	vec->active_length += 1; */
+/* 	return 1; */
+/* } */
 // --------------------------------------------------------------------------------
 
 void free_string_vector(StringVector *vec) {
 	if (vec != NULL) {
-		for (size_t i = 0; i < vec->allocated_length; i++) {
+		for (size_t i = 0; i < vec->length; i++) {
 			free(vec->vector[i]);
 		}
 		free(vec->vector);
 		vec->vector = NULL;
-		vec->active_length = 0;
-		vec->allocated_length = 0;
+		vec->length = 0;
 		vec->dat_type = 0;
 		vec->num_bytes = 0;
 	}
 }
+// --------------------------------------------------------------------------------
+
+/* int insert_string_vector(StringVector *vec, char *value, size_t length, size_t index) { */
+/* 	// Verify all values have null terminator */
+/* 	char new_value[length + 1]; */
+/* 	const char *test = ((char *)value) + length; */
+/* 	if (*test != '\0') { */
+/* 		memcpy(new_value, value, length + 1); */
+/* 		memcpy(new_value + length, "\0", 1); */
+/* 		length += 1; */
+/* 	} */
+
+/* 	else memcpy(new_value, value, length); */
+
+/* 	// Update vector size if necessary */
+/* 	if (vec->active_length + length >= vec->allocated_length) { */
+/* 		size_t size = 2 * (sizeof(char *) * (vec->allocated_length + length)); */
+/* 		char **resized = (char**)realloc(vec->vector, size); */
+/* 		if (resized == NULL) { */
+/* 			free(value); */
+/* 			return 0; */
+/* 		} */
+/* 		vec->vector = resized; */
+/* 		vec->allocated_length *= 2; */
+/* 	} */
+/* 	int str_len = strlen(vec->vector[index]); */
+
+/* 	//for (size_t i = vec->active_length + 1; i > index; i--) { */
+/* 	//	vec->vector[i] = vec->vector[i-1]; */
+/* 	//} */
+/* 	// Move appropriate portion of vector to the right and insert correct value */
+/* 	memmove(vec->vector[index + 1], vec->vector[index], sizeof(char *)); */
+/* 	vec->vector[index] = value; */
+/* 	vec->active_length += 1; */
+/* 	return 1; */
+/* } */
 // ================================================================================
 // ================================================================================
 // eof
