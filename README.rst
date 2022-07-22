@@ -475,6 +475,29 @@ the length of the string, including the null terminator, ``index`` represents th
    for (size_t i = 0; i < vec.active_length; i++) {
        printf("%s\n", vec.vector[i]);
    }
-   // "Hello ", "Good", "World ", "Goodbye"
+   // "Hello ", "Goof", "World ", "Goodbye"
+   free_string_vector(&vec);
+
+=================
+pop_string_vector
+=================
+The function ``pop_string_vector(StringVector *vec, size_t index)`` can be used to pop
+a data point from the container.  The variable ``vec`` represents a StringVector
+container, ``index`` represents the index that will be popped from the container.
+
+.. code-block:: c
+
+   char a[6] = "Hello";
+   StringVector vec = init_string_vector(6);
+   push_string_vector(&vec, a, 6);
+   char b[7] = "World!";
+   push_string_vector(&vec, b, 7);
+   char c[8] = "Goodbye"
+   push_string_vector(&vec, c, 8);
+   pop_string_vector(&vec, 1)
+   for (size_t i = 0; i < vec.active_length; i++) {
+       printf("%s\n", vec.vector[i]);
+   }
+   // "Hello ", "Goodbye"
    free_string_vector(&vec);
 
