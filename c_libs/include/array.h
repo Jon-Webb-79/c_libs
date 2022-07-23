@@ -162,133 +162,7 @@ int replace_array_index(Array *arr, size_t index, void *value);
 
 /**
  * This function will allow a user to replace specific values in a
- * statically allocated integer array container.
- *
- * @param arr An Array container
- * @param old_value The value to be replaced
- * @param new_value The value to replace the old value
- *
- * @code
- * int a[7] = {1, 2, 1, 3, 1, 1, 5};
- * Array arr = init_array(7, 7, a, INT);
- * replace_int_array_values(&arr, 1, 5);
- * for (size_t i = 0l i < arr->active_length; i++) {
- *     printf("%d\n", a[i]);
- * }
- * // 5, 2, 5, 3, 5, 5, 5
- * @endcode
- */
-void replace_int_array_values(Array *arr, int old_value, int new_value);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will allow a user to replace specific values in a
- * statically allocated float array container.
- *
- * @param arr An Array container
- * @param old_value The value to be replaced
- * @param new_value The value to replace the old value
- *
- * @code
- * float a[7] = {1.1, 2.2, 1.1, 3.3, 1.1, 1.1, 5.5};
- * Array arr = init_array(7, 7, a, FLOAT);
- * replace_float_array_values(&arr, 1.1f, 5.5f);
- * for (size_t i = 0l i < arr->active_length; i++) {
- *     printf("%f\n", a[i]);
- * }
- * // 5.5, 2.2, 5.5, 3.3, 5.5, 5.5, 5.5
- * @endcode
- */
-void replace_float_array_values(Array *arr, float old_value, float new_value);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will allow a user to replace specific values in a
- * statically allocated double array container.
- *
- * @param arr An Array container
- * @param old_value The value to be replaced
- * @param new_value The value to replace the old value
- *
- * @code
- * double a[7] = {1.1, 2.2, 1.1, 3.3, 1.1, 1.1, 5.5};
- * Array arr = init_array(7, 7, a, DOUBLE);
- * replace_double_array_values(&arr, 1.1, 5.5);
- * for (size_t i = 0l i < arr->active_length; i++) {
- *     printf("%lf\n", a[i]);
- * }
- * // 5.5, 2.2, 5.5, 3.3, 5.5, 5.5, 5.5
- * @endcode
- */
-void replace_double_array_values(Array *arr, double old_value, double new_value);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will allow a user to replace specific values in a
- * statically allocated char array container.
- *
- * @param arr An Array container
- * @param old_value The value to be replaced
- * @param new_value The value to replace the old value
- *
- * @code
- * char a[13] = "Hello World!";
- * Array arr = init_array(13, 13, a, CHAR);
- * replace_char_array_values(&arr, 'o', 'q');
- * for (size_t i = 0l i < arr->active_length; i++) {
- *     printf("%lf\n", a[i]);
- * }
- * // 'H', 'e', 'l', 'l', 'q', ' ', 'W', 'q', 'r', 'l', 'd', '!'
- * @endcode
- */
-void replace_char_array_values(Array *arr, char old_value, char new_value);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will allow a user to replace specific values in a
- * statically allocated short array container.
- *
- * @param arr An Array container
- * @param old_value The value to be replaced
- * @param new_value The value to replace the old value
- *
- * @code
- * short a[7] = {1, 2, 1, 3, 1, 1, 5};
- * Array arr = init_array(7, 7, a, SHORTINT);
- * replace_short_array_values(&arr, 1, 5);
- * for (size_t i = 0l i < arr->active_length; i++) {
- *     printf("%d\n", a[i]);
- * }
- * // 5, 2, 5, 3, 5, 5, 5
- * @endcode
- */
-void replace_short_array_values(Array *arr, short old_value, short new_value);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will allow a user to replace specific values in a
- * statically allocated long integer array container.
- *
- * @param arr An Array container
- * @param old_value The value to be replaced
- * @param new_value The value to replace the old value
- *
- * @code
- * long a[7] = {1, 2, 1, 3, 1, 1, 5};
- * Array arr = init_array(7, 7, a, LONG);
- * replace_long_array_values(&arr, 1, 5);
- * for (size_t i = 0l i < arr->active_length; i++) {
- *     printf("%d\n", a[i]);
- * }
- * // 5, 2, 5, 3, 5, 5, 5
- * @endcode
- */
-void replace_long_array_values(Array *arr, long old_value, long new_value);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will allow a user to replace specific values in a
- * statically allocated long long integer array container.
+ * statically allocated array container.
  *
  * @param arr An Array container
  * @param old_value The value to be replaced
@@ -296,15 +170,17 @@ void replace_long_array_values(Array *arr, long old_value, long new_value);
  *
  * @code
  * long long a[7] = {1, 2, 1, 3, 1, 1, 5};
+ * long long aa = 1;
+ * long long bb = 10;
  * Array arr = init_array(7, 7, a, LONGLONG);
- * replace_longlong_array_values(&arr, 1, 5);
+ * replace_array_values(&arr, &aa, &bb);
  * for (size_t i = 0l i < arr->active_length; i++) {
  *     printf("%d\n", a[i]);
  * }
  * // 5, 2, 5, 3, 5, 5, 5
  * @endcode
  */
-void replace_longlong_array_values(Array *arr, long long old_value, long long new_value);
+void replace_array_values(Array *arr, void *old_value, void *new_value);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

@@ -131,7 +131,9 @@ TEST (test_replace_array_index, replace_int) {
 TEST (test_replace_array_values, replace_int) {
 	int a[6] = {1, 2, 1, 3, 4, 1};
 	Array arr = init_array(sizeof(a)/sizeof(int), 6, a, INT);
-	replace_int_array_values(&arr, 1, 10);
+	int aa = 1;
+	int bb = 10;
+	replace_array_values(&arr, &aa, &bb);
 	int b[6] = {10, 2, 10, 3, 4, 10};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_EQ(b[i], a[i]);
@@ -143,8 +145,10 @@ TEST (test_replace_array_values, replace_int) {
  * properly replaces specific float values in a static array */
 TEST (test_replace_array_values, replace_float) {
 	float a[6] = {1.1, 2.2, 1.1, 3.3, 4.4, 1.1};
+	float aa = 1.1;
+	float bb = 10.0;
 	Array arr = init_array(sizeof(a)/sizeof(float), 6, a, FLOAT);
-	replace_float_array_values(&arr, 1.1f, 10.0f);
+	replace_array_values(&arr, &aa, &bb);
 	float b[6] = {10.0, 2.2, 10.0, 3.3, 4.4, 10.0};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_FLOAT_EQ(b[i], a[i]);
@@ -156,8 +160,10 @@ TEST (test_replace_array_values, replace_float) {
  * properly replaces specific double values in a static array */
 TEST (test_replace_array_values, replace_double) {
 	double a[6] = {1.1, 2.2, 1.1, 3.3, 4.4, 1.1};
+	double aa = 1.1;
+	double bb = 10.0;
 	Array arr = init_array(sizeof(a)/sizeof(double), 6, a, DOUBLE);
-	replace_double_array_values(&arr, 1.1, 10.0);
+	replace_array_values(&arr, &aa, &bb);
 	double b[6] = {10.0, 2.2, 10.0, 3.3, 4.4, 10.0};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_DOUBLE_EQ(b[i], a[i]);
@@ -169,8 +175,10 @@ TEST (test_replace_array_values, replace_double) {
  * properly replaces specific char values in a static array */
 TEST (test_replace_array_values, replace_char) {
 	char a[13] = "Hello World!";
+	char aa = 'o';
+	char bb = 'q';
 	Array arr = init_array(sizeof(a)/sizeof(char), 13, a, CHAR);
-	replace_char_array_values(&arr, 'o', 'q');
+	replace_array_values(&arr, &aa, &bb);
 	char b[13] = "Hellq Wqrld!";
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_EQ(b[i], a[i]);
@@ -182,8 +190,10 @@ TEST (test_replace_array_values, replace_char) {
  * properly replaces specific short integer values in a static array */
 TEST (test_replace_array_values, replace_short) {
 	short a[6] = {1, 2, 1, 3, 4, 1};
+	short aa = 1;
+	short bb = 10;
 	Array arr = init_array(sizeof(a)/sizeof(short), 6, a, SHORTINT);
-	replace_short_array_values(&arr, 1, 10);
+	replace_array_values(&arr, &aa, &bb);
 	short b[6] = {10, 2, 10, 3, 4, 10};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_EQ(b[i], a[i]);
@@ -195,8 +205,10 @@ TEST (test_replace_array_values, replace_short) {
  * properly replaces specific long integer values in a static array */
 TEST (test_replace_array_values, replace_long) {
 	long a[6] = {1, 2, 1, 3, 4, 1};
+	long aa = 1;
+	long bb = 10;
 	Array arr = init_array(sizeof(a)/sizeof(long), 6, a, LONG);
-	replace_long_array_values(&arr, 1, 10);
+	replace_array_values(&arr, &aa, &bb);
 	long b[6] = {10, 2, 10, 3, 4, 10};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_EQ(b[i], a[i]);
@@ -208,8 +220,10 @@ TEST (test_replace_array_values, replace_long) {
  * properly replaces specific long long integer values in a static array */
 TEST (test_replace_array_values, replace_longlong) {
 	long long a[6] = {1, 2, 1, 3, 4, 1};
+	long long aa = 1;
+	long long bb = 10;
 	Array arr = init_array(sizeof(a)/sizeof(long long), 6, a, LONGLONG);
-	replace_longlong_array_values(&arr, 1, 10);
+	replace_array_values(&arr, &aa, &bb);
 	long long b[6] = {10, 2, 10, 3, 4, 10};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_EQ(b[i], a[i]);
