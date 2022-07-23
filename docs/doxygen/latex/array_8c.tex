@@ -13,6 +13,20 @@ int \mbox{\hyperlink{array_8c_a033dad1e1d35128014b4e9f923e2f28c}{insert\+\_\+arr
 int \mbox{\hyperlink{array_8c_a8bce31ced29b6dbe98a59dcbcd4bb687}{pop\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, size\+\_\+t index)
 \item 
 int \mbox{\hyperlink{array_8c_aee92712adcda409367a1d6e98f2b545e}{replace\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, size\+\_\+t index, void $\ast$value)
+\item 
+void \mbox{\hyperlink{array_8c_a326be0c9390372dddf59b1162322dca0}{replace\+\_\+int\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, int old\+\_\+value, int new\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_a72e217825220b5ee9ca78b309461d669}{replace\+\_\+float\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, float old\+\_\+value, float new\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_ac62527765fba77dfd871b4c7d6c24fd7}{replace\+\_\+double\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, double old\+\_\+value, double new\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_a72a9e013d2a034fa0d88aae7ae479722}{replace\+\_\+char\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, char old\+\_\+value, char new\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_af07de0f8850cc76b7802a9831a676b64}{replace\+\_\+short\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, short old\+\_\+value, short new\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_a2fcc8023ade873be721cceb62dcffcde}{replace\+\_\+long\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, long old\+\_\+value, long new\+\_\+value)
+\item 
+void \mbox{\hyperlink{array_8c_af602c1f8997b79b1a225e731a5d78bd3}{replace\+\_\+longlong\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, long long old\+\_\+value, long long new\+\_\+value)
 \end{DoxyCompactItemize}
 
 
@@ -160,6 +174,202 @@ index 1 if function performed correctly, 0 if the function does not perform corr
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// 1, 2, 10, 4, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a72a9e013d2a034fa0d88aae7ae479722}\label{array_8c_a72a9e013d2a034fa0d88aae7ae479722}} 
+\index{array.c@{array.c}!replace\_char\_array\_values@{replace\_char\_array\_values}}
+\index{replace\_char\_array\_values@{replace\_char\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_char\_array\_values()}{replace\_char\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+char\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{char}]{old\+\_\+value,  }\item[{char}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated char array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[13] = \textcolor{stringliteral}{"{}Hello World!"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(13, 13, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a72a9e013d2a034fa0d88aae7ae479722}{replace\_char\_array\_values}}(\&arr, \textcolor{charliteral}{'o'}, \textcolor{charliteral}{'q'});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 'H', 'e', 'l', 'l', 'q', ' ', 'W', 'q', 'r', 'l', 'd', '!'}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_ac62527765fba77dfd871b4c7d6c24fd7}\label{array_8c_ac62527765fba77dfd871b4c7d6c24fd7}} 
+\index{array.c@{array.c}!replace\_double\_array\_values@{replace\_double\_array\_values}}
+\index{replace\_double\_array\_values@{replace\_double\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_double\_array\_values()}{replace\_double\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+double\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{double}]{old\+\_\+value,  }\item[{double}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated double array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{1.1, 2.2, 1.1, 3.3, 1.1, 1.1, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac62527765fba77dfd871b4c7d6c24fd7}{replace\_double\_array\_values}}(\&arr, 1.1, 5.5);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 5.5, 2.2, 5.5, 3.3, 5.5, 5.5, 5.5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a72e217825220b5ee9ca78b309461d669}\label{array_8c_a72e217825220b5ee9ca78b309461d669}} 
+\index{array.c@{array.c}!replace\_float\_array\_values@{replace\_float\_array\_values}}
+\index{replace\_float\_array\_values@{replace\_float\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_float\_array\_values()}{replace\_float\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+float\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{float}]{old\+\_\+value,  }\item[{float}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated float array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{1.1, 2.2, 1.1, 3.3, 1.1, 1.1, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a72e217825220b5ee9ca78b309461d669}{replace\_float\_array\_values}}(\&arr, 1.1f, 5.5f);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 5.5, 2.2, 5.5, 3.3, 5.5, 5.5, 5.5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a326be0c9390372dddf59b1162322dca0}\label{array_8c_a326be0c9390372dddf59b1162322dca0}} 
+\index{array.c@{array.c}!replace\_int\_array\_values@{replace\_int\_array\_values}}
+\index{replace\_int\_array\_values@{replace\_int\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_int\_array\_values()}{replace\_int\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+int\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{int}]{old\+\_\+value,  }\item[{int}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated integer array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{1, 2, 1, 3, 1, 1, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a326be0c9390372dddf59b1162322dca0}{replace\_int\_array\_values}}(\&arr, 1, 5);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 5, 2, 5, 3, 5, 5, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a2fcc8023ade873be721cceb62dcffcde}\label{array_8c_a2fcc8023ade873be721cceb62dcffcde}} 
+\index{array.c@{array.c}!replace\_long\_array\_values@{replace\_long\_array\_values}}
+\index{replace\_long\_array\_values@{replace\_long\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_long\_array\_values()}{replace\_long\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+long\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{long}]{old\+\_\+value,  }\item[{long}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated long integer array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[7] = \{1, 2, 1, 3, 1, 1, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2fcc8023ade873be721cceb62dcffcde}{replace\_long\_array\_values}}(\&arr, 1, 5);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 5, 2, 5, 3, 5, 5, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_af602c1f8997b79b1a225e731a5d78bd3}\label{array_8c_af602c1f8997b79b1a225e731a5d78bd3}} 
+\index{array.c@{array.c}!replace\_longlong\_array\_values@{replace\_longlong\_array\_values}}
+\index{replace\_longlong\_array\_values@{replace\_longlong\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_longlong\_array\_values()}{replace\_longlong\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+longlong\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{long long}]{old\+\_\+value,  }\item[{long long}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated long long integer array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[7] = \{1, 2, 1, 3, 1, 1, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_af602c1f8997b79b1a225e731a5d78bd3}{replace\_longlong\_array\_values}}(\&arr, 1, 5);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 5, 2, 5, 3, 5, 5, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_af07de0f8850cc76b7802a9831a676b64}\label{array_8c_af07de0f8850cc76b7802a9831a676b64}} 
+\index{array.c@{array.c}!replace\_short\_array\_values@{replace\_short\_array\_values}}
+\index{replace\_short\_array\_values@{replace\_short\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{replace\_short\_array\_values()}{replace\_short\_array\_values()}}
+{\footnotesize\ttfamily void replace\+\_\+short\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{short}]{old\+\_\+value,  }\item[{short}]{new\+\_\+value }\end{DoxyParamCaption})}
+
+This function will allow a user to replace specific values in a statically allocated short array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em old\+\_\+value} & The value to be replaced \\
+\hline
+{\em new\+\_\+value} & The value to replace the old value\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{short} a[7] = \{1, 2, 1, 3, 1, 1, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_af07de0f8850cc76b7802a9831a676b64}{replace\_short\_array\_values}}(\&arr, 1, 5);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 5, 2, 5, 3, 5, 5, 5}}
 
 \end{DoxyCode}
  

@@ -95,6 +95,62 @@ int replace_array_index(Array *arr, size_t index, void *value) {
 			value, arr->num_bytes);
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+void replace_int_array_values(Array *arr, int old_value, int new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		int a = ((int *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_float_array_values(Array *arr, float old_value, float new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		float a = ((float *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_double_array_values(Array *arr, double old_value, double new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		double a = ((double *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_char_array_values(Array *arr, char old_value, char new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		char a = ((char *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_short_array_values(Array *arr, short old_value, short new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		short a = ((short *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_long_array_values(Array *arr, long old_value, long new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		long a = ((long *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_longlong_array_values(Array *arr, long long old_value, long long new_value) {
+	for (size_t i = 0; i < arr->active_length; i++) {
+		long long a = ((long long *)arr->array)[i];
+		if (a == old_value) replace_array_index(arr, i, &new_value);
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

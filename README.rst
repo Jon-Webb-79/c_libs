@@ -599,3 +599,30 @@ specific index within an array container.
        printf("%d\n", ((int *)arr.array)[i]);
    }
    // 1, 2, 4, 5
+
+===================
+replace_array_index
+===================
+The function ``replace_array_index(Array *arr, size_t index, void *value)`` allows a user to replace
+a value at a specified index.
+
+.. code-block:: c
+
+   int a[5] = {1, 2, 3, 4, 5};
+   Array arr = init_array(5, 5, a, INT);
+   int b = 10;
+   replace_array_index(&arr, 2, &b);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", a[i]);
+   }
+   // 1, 2, 10, 4, 5
+
+This function uses a pointer to the original array allocation.  So this function can also be accomplished
+with the following syntax
+
+.. code-block:: c
+
+   int a[5] = {1, 2, 3, 4, 5};
+   Array arr = init_array(5, 5, a, INT);
+   a[2] = 10
+
