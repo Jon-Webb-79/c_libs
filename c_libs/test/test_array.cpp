@@ -16,7 +16,7 @@
 #include <gtest/gtest.h>
 
 extern "C" {
-#include "array.h"
+	#include "array.h"
 }
 
 /* This function will test the test the pop_int_array function to ensure it
@@ -90,243 +90,243 @@ TEST(test_pop_array, pop_char) {
 /* This function will test the test append_int_array function to ensure it
  * properly appends a parent array with a child array
  */
-TEST(test_append_array, append_int_one) {
-	int a[9] = {1, 2, 3};
-	int b[6] = {4, 5, 6, 7, 8, 9};
-	append_array(a, 3, b, 6, sizeof(int));
-	EXPECT_EQ(a[0], 1);
-	EXPECT_EQ(a[1], 2);
-	EXPECT_EQ(a[2], 3);
-	EXPECT_EQ(a[3], 4);
-	EXPECT_EQ(a[4], 5);
-	EXPECT_EQ(a[5], 6);
-	EXPECT_EQ(a[6], 7);
-	EXPECT_EQ(a[7], 8);
-	EXPECT_EQ(a[8], 9);
-}
+/* TEST(test_append_array, append_int_one) { */
+/* 	int a[9] = {1, 2, 3}; */
+/* 	int b[6] = {4, 5, 6, 7, 8, 9}; */
+/* 	append_array(a, 3, b, 6, sizeof(int)); */
+/* 	EXPECT_EQ(a[0], 1); */
+/* 	EXPECT_EQ(a[1], 2); */
+/* 	EXPECT_EQ(a[2], 3); */
+/* 	EXPECT_EQ(a[3], 4); */
+/* 	EXPECT_EQ(a[4], 5); */
+/* 	EXPECT_EQ(a[5], 6); */
+/* 	EXPECT_EQ(a[6], 7); */
+/* 	EXPECT_EQ(a[7], 8); */
+/* 	EXPECT_EQ(a[8], 9); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test append_int_array function to ensure it
  * properly appends a parent array with a child scalar
  */
-TEST(test_append_array, append_int_two) {
-	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8};
-	int b = 9;
-	append_array(a, 8, &b, 1, sizeof(int));
-	EXPECT_EQ(a[0], 1);
-	EXPECT_EQ(a[1], 2);
-	EXPECT_EQ(a[2], 3);
-	EXPECT_EQ(a[3], 4);
-	EXPECT_EQ(a[4], 5);
-	EXPECT_EQ(a[5], 6);
-	EXPECT_EQ(a[6], 7);
-	EXPECT_EQ(a[7], 8);
-	EXPECT_EQ(a[8], 9);
-}
+/* TEST(test_append_array, append_int_two) { */
+/* 	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8}; */
+/* 	int b = 9; */
+/* 	append_array(a, 8, &b, 1, sizeof(int)); */
+/* 	EXPECT_EQ(a[0], 1); */
+/* 	EXPECT_EQ(a[1], 2); */
+/* 	EXPECT_EQ(a[2], 3); */
+/* 	EXPECT_EQ(a[3], 4); */
+/* 	EXPECT_EQ(a[4], 5); */
+/* 	EXPECT_EQ(a[5], 6); */
+/* 	EXPECT_EQ(a[6], 7); */
+/* 	EXPECT_EQ(a[7], 8); */
+/* 	EXPECT_EQ(a[8], 9); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test append_float_array function to ensure it
  * properly appends a parent array with a child array
  */
-TEST(test_append_array, append_float) {
-	float a[9] = {1.1, 2.2, 3.3};
-	float b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	append_array(a, 3, b, 6, sizeof(float));
-	EXPECT_FLOAT_EQ(a[0], 1.1f);
-	EXPECT_FLOAT_EQ(a[1], 2.2f);
-	EXPECT_FLOAT_EQ(a[2], 3.3f);
-	EXPECT_FLOAT_EQ(a[3], 4.4f);
-	EXPECT_FLOAT_EQ(a[4], 5.5f);
-	EXPECT_FLOAT_EQ(a[5], 6.6f);
-	EXPECT_FLOAT_EQ(a[6], 7.7f);
-	EXPECT_FLOAT_EQ(a[7], 8.8f);
-	EXPECT_FLOAT_EQ(a[8], 9.9f);
-}
+/* TEST(test_append_array, append_float) { */
+/* 	float a[9] = {1.1, 2.2, 3.3}; */
+/* 	float b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9}; */
+/* 	append_array(a, 3, b, 6, sizeof(float)); */
+/* 	EXPECT_FLOAT_EQ(a[0], 1.1f); */
+/* 	EXPECT_FLOAT_EQ(a[1], 2.2f); */
+/* 	EXPECT_FLOAT_EQ(a[2], 3.3f); */
+/* 	EXPECT_FLOAT_EQ(a[3], 4.4f); */
+/* 	EXPECT_FLOAT_EQ(a[4], 5.5f); */
+/* 	EXPECT_FLOAT_EQ(a[5], 6.6f); */
+/* 	EXPECT_FLOAT_EQ(a[6], 7.7f); */
+/* 	EXPECT_FLOAT_EQ(a[7], 8.8f); */
+/* 	EXPECT_FLOAT_EQ(a[8], 9.9f); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test append_double_array function to ensure it
  * properly appends a parent array with a child array
  */
-TEST(test_append_array, append_double) {
-	double a[9] = {1.1, 2.2, 3.3};
-	double b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	append_array(a, 3, b, 6, sizeof(double));
-	EXPECT_DOUBLE_EQ(a[0], 1.1);
-	EXPECT_DOUBLE_EQ(a[1], 2.2);
-	EXPECT_DOUBLE_EQ(a[2], 3.3);
-	EXPECT_DOUBLE_EQ(a[3], 4.4);
-	EXPECT_DOUBLE_EQ(a[4], 5.5);
-	EXPECT_DOUBLE_EQ(a[5], 6.6);
-	EXPECT_DOUBLE_EQ(a[6], 7.7);
-	EXPECT_DOUBLE_EQ(a[7], 8.8);
-	EXPECT_DOUBLE_EQ(a[8], 9.9);
-}
+/* TEST(test_append_array, append_double) { */
+/* 	double a[9] = {1.1, 2.2, 3.3}; */
+/* 	double b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9}; */
+/* 	append_array(a, 3, b, 6, sizeof(double)); */
+/* 	EXPECT_DOUBLE_EQ(a[0], 1.1); */
+/* 	EXPECT_DOUBLE_EQ(a[1], 2.2); */
+/* 	EXPECT_DOUBLE_EQ(a[2], 3.3); */
+/* 	EXPECT_DOUBLE_EQ(a[3], 4.4); */
+/* 	EXPECT_DOUBLE_EQ(a[4], 5.5); */
+/* 	EXPECT_DOUBLE_EQ(a[5], 6.6); */
+/* 	EXPECT_DOUBLE_EQ(a[6], 7.7); */
+/* 	EXPECT_DOUBLE_EQ(a[7], 8.8); */
+/* 	EXPECT_DOUBLE_EQ(a[8], 9.9); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test append_char_array function to ensure it
  * properly appends a parent array with a child array
  */
-TEST(test_append_array, append_char) {
-	char a[10] = "abcdefgh";
-	char b = 'i';
-	append_array(a, 8, &b, 1, sizeof(char));
-	EXPECT_EQ(a[0], 'a');
-	EXPECT_EQ(a[1], 'b');
-	EXPECT_EQ(a[2], 'c');
-	EXPECT_EQ(a[3], 'd');
-	EXPECT_EQ(a[4], 'e');
-	EXPECT_EQ(a[5], 'f');
-	EXPECT_EQ(a[6], 'g');
-	EXPECT_EQ(a[7], 'h');
-	EXPECT_EQ(a[8], 'i');
-}
+/* TEST(test_append_array, append_char) { */
+/* 	char a[10] = "abcdefgh"; */
+/* 	char b = 'i'; */
+/* 	append_array(a, 8, &b, 1, sizeof(char)); */
+/* 	EXPECT_EQ(a[0], 'a'); */
+/* 	EXPECT_EQ(a[1], 'b'); */
+/* 	EXPECT_EQ(a[2], 'c'); */
+/* 	EXPECT_EQ(a[3], 'd'); */
+/* 	EXPECT_EQ(a[4], 'e'); */
+/* 	EXPECT_EQ(a[5], 'f'); */
+/* 	EXPECT_EQ(a[6], 'g'); */
+/* 	EXPECT_EQ(a[7], 'h'); */
+/* 	EXPECT_EQ(a[8], 'i'); */
+/* } */
 // ================================================================================
 
 /* This function will test the test preappend_int_array function to ensure it
  * properly pre_appends a parent array with a child array
  */
-TEST(test_preappend_array, preappend_int_one) {
-	int a[9] = {1, 2, 3};
-	int b[6] = {4, 5, 6, 7, 8, 9};
-	preappend_array(a, 3, (void *)b, 6, sizeof(int));
-	EXPECT_EQ(a[0], 4);
-	EXPECT_EQ(a[1], 5);
-	EXPECT_EQ(a[2], 6);
-	EXPECT_EQ(a[3], 7);
-	EXPECT_EQ(a[4], 8);
-	EXPECT_EQ(a[5], 9);
-	EXPECT_EQ(a[6], 1);
-	EXPECT_EQ(a[7], 2);
-	EXPECT_EQ(a[8], 3);
-}
+/* TEST(test_preappend_array, preappend_int_one) { */
+/* 	int a[9] = {1, 2, 3}; */
+/* 	int b[6] = {4, 5, 6, 7, 8, 9}; */
+/* 	preappend_array(a, 3, (void *)b, 6, sizeof(int)); */
+/* 	EXPECT_EQ(a[0], 4); */
+/* 	EXPECT_EQ(a[1], 5); */
+/* 	EXPECT_EQ(a[2], 6); */
+/* 	EXPECT_EQ(a[3], 7); */
+/* 	EXPECT_EQ(a[4], 8); */
+/* 	EXPECT_EQ(a[5], 9); */
+/* 	EXPECT_EQ(a[6], 1); */
+/* 	EXPECT_EQ(a[7], 2); */
+/* 	EXPECT_EQ(a[8], 3); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test preappend_int_array function to ensure it
  * properly pre_appends a parent array with a child scalar
  */
-TEST(test_preappend_array, preappend_int_two) {
-	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8};
-	int b = 9;
-	preappend_array(a, 8, &b, 1, sizeof(int));
-	EXPECT_EQ(a[0], 9);
-	EXPECT_EQ(a[1], 1);
-	EXPECT_EQ(a[2], 2);
-	EXPECT_EQ(a[3], 3);
-	EXPECT_EQ(a[4], 4);
-	EXPECT_EQ(a[5], 5);
-	EXPECT_EQ(a[6], 6);
-	EXPECT_EQ(a[7], 7);
-	EXPECT_EQ(a[8], 8);
-}
+/* TEST(test_preappend_array, preappend_int_two) { */
+/* 	int a[9] = {1, 2, 3, 4, 5, 6, 7, 8}; */
+/* 	int b = 9; */
+/* 	preappend_array(a, 8, &b, 1, sizeof(int)); */
+/* 	EXPECT_EQ(a[0], 9); */
+/* 	EXPECT_EQ(a[1], 1); */
+/* 	EXPECT_EQ(a[2], 2); */
+/* 	EXPECT_EQ(a[3], 3); */
+/* 	EXPECT_EQ(a[4], 4); */
+/* 	EXPECT_EQ(a[5], 5); */
+/* 	EXPECT_EQ(a[6], 6); */
+/* 	EXPECT_EQ(a[7], 7); */
+/* 	EXPECT_EQ(a[8], 8); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test preappend_float_array function to ensure it
  * properly pre_appends a parent array with a child array
  */
-TEST(test_preappend_array, preappend_float) {
-	float a[9] = {1.1, 2.2, 3.3};
-	float b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	preappend_array(a, 3, b, 6, sizeof(float));
-	EXPECT_FLOAT_EQ(a[0], 4.4f);
-	EXPECT_FLOAT_EQ(a[1], 5.5f);
-	EXPECT_FLOAT_EQ(a[2], 6.6f);
-	EXPECT_FLOAT_EQ(a[3], 7.7f);
-	EXPECT_FLOAT_EQ(a[4], 8.8f);
-	EXPECT_FLOAT_EQ(a[5], 9.9f);
-	EXPECT_FLOAT_EQ(a[6], 1.1f);
-	EXPECT_FLOAT_EQ(a[7], 2.2f);
-	EXPECT_FLOAT_EQ(a[8], 3.3f);
-}
+/* TEST(test_preappend_array, preappend_float) { */
+/* 	float a[9] = {1.1, 2.2, 3.3}; */
+/* 	float b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9}; */
+/* 	preappend_array(a, 3, b, 6, sizeof(float)); */
+/* 	EXPECT_FLOAT_EQ(a[0], 4.4f); */
+/* 	EXPECT_FLOAT_EQ(a[1], 5.5f); */
+/* 	EXPECT_FLOAT_EQ(a[2], 6.6f); */
+/* 	EXPECT_FLOAT_EQ(a[3], 7.7f); */
+/* 	EXPECT_FLOAT_EQ(a[4], 8.8f); */
+/* 	EXPECT_FLOAT_EQ(a[5], 9.9f); */
+/* 	EXPECT_FLOAT_EQ(a[6], 1.1f); */
+/* 	EXPECT_FLOAT_EQ(a[7], 2.2f); */
+/* 	EXPECT_FLOAT_EQ(a[8], 3.3f); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test preappend_double_array function to ensure it
  * properly pre_appends a parent array with a child array
  */
-TEST(test_preappend_array, preappend_double) {
-	double a[9] = {1.1, 2.2, 3.3};
-	double b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9};
-	preappend_array(a, 3, b, 6, sizeof(double));
-	EXPECT_DOUBLE_EQ(a[0], 4.4);
-	EXPECT_DOUBLE_EQ(a[1], 5.5);
-	EXPECT_DOUBLE_EQ(a[2], 6.6);
-	EXPECT_DOUBLE_EQ(a[3], 7.7);
-	EXPECT_DOUBLE_EQ(a[4], 8.8);
-	EXPECT_DOUBLE_EQ(a[5], 9.9);
-	EXPECT_DOUBLE_EQ(a[6], 1.1);
-	EXPECT_DOUBLE_EQ(a[7], 2.2);
-	EXPECT_DOUBLE_EQ(a[8], 3.3);
-}
+/* TEST(test_preappend_array, preappend_double) { */
+/* 	double a[9] = {1.1, 2.2, 3.3}; */
+/* 	double b[6] = {4.4, 5.5, 6.6, 7.7, 8.8, 9.9}; */
+/* 	preappend_array(a, 3, b, 6, sizeof(double)); */
+/* 	EXPECT_DOUBLE_EQ(a[0], 4.4); */
+/* 	EXPECT_DOUBLE_EQ(a[1], 5.5); */
+/* 	EXPECT_DOUBLE_EQ(a[2], 6.6); */
+/* 	EXPECT_DOUBLE_EQ(a[3], 7.7); */
+/* 	EXPECT_DOUBLE_EQ(a[4], 8.8); */
+/* 	EXPECT_DOUBLE_EQ(a[5], 9.9); */
+/* 	EXPECT_DOUBLE_EQ(a[6], 1.1); */
+/* 	EXPECT_DOUBLE_EQ(a[7], 2.2); */
+/* 	EXPECT_DOUBLE_EQ(a[8], 3.3); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the test preappend_char_array function to ensure it
  * properly pre_appends a parent array with a child array
  */
-TEST(test_preappend_array, preappend_char) {
-	char a[10] = "abc";
-	char b[7] = "defghi";
-	preappend_array(a, 3, b, 6, sizeof(char));
-	EXPECT_EQ(a[0], 'd');
-	EXPECT_EQ(a[1], 'e');
-	EXPECT_EQ(a[2], 'f');
-	EXPECT_EQ(a[3], 'g');
-	EXPECT_EQ(a[4], 'h');
-	EXPECT_EQ(a[5], 'i');
-	EXPECT_EQ(a[6], 'a');
-	EXPECT_EQ(a[7], 'b');
-	EXPECT_EQ(a[8], 'c');
-}
+/* TEST(test_preappend_array, preappend_char) { */
+/* 	char a[10] = "abc"; */
+/* 	char b[7] = "defghi"; */
+/* 	preappend_array(a, 3, b, 6, sizeof(char)); */
+/* 	EXPECT_EQ(a[0], 'd'); */
+/* 	EXPECT_EQ(a[1], 'e'); */
+/* 	EXPECT_EQ(a[2], 'f'); */
+/* 	EXPECT_EQ(a[3], 'g'); */
+/* 	EXPECT_EQ(a[4], 'h'); */
+/* 	EXPECT_EQ(a[5], 'i'); */
+/* 	EXPECT_EQ(a[6], 'a'); */
+/* 	EXPECT_EQ(a[7], 'b'); */
+/* 	EXPECT_EQ(a[8], 'c'); */
+/* } */
 // ================================================================================
 
 /* This function will test the find_int_array_indices function to ensure it
  * correctly determines all indeces where the integer 1 resides.
  */
-TEST(find_array_indices, int_indices) {
-	int a[7] = {1, 3, 5, 1, 2, 1, 6};
-	Vector indices = find_int_array_indices(a, 1, 7);
-	EXPECT_EQ(0, int_vector_val(&indices, 0));
-	EXPECT_EQ(3, int_vector_val(&indices, 1));
-	EXPECT_EQ(5, int_vector_val(&indices, 2));
-	free_vector(&indices);
-}
+/* TEST(find_array_indices, int_indices) { */
+/* 	int a[7] = {1, 3, 5, 1, 2, 1, 6}; */
+/* 	Vector indices = find_int_array_indices(a, 1, 7); */
+/* 	EXPECT_EQ(0, int_vector_val(&indices, 0)); */
+/* 	EXPECT_EQ(3, int_vector_val(&indices, 1)); */
+/* 	EXPECT_EQ(5, int_vector_val(&indices, 2)); */
+/* 	free_vector(&indices); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the find_float_array_indices function to ensure it
  * correctly determines all indeces where the float 1.1 resides.
  */
-TEST(find_array_indices, float_indices) {
-	float a[7] = {1.1, 3.3, 5.5, 1.1, 2.2, 1.1, 6.6};
-	Vector indices = find_float_array_indices(a, 1.1f, 7);
-	EXPECT_EQ(0, int_vector_val(&indices, 0));
-	EXPECT_EQ(3, int_vector_val(&indices, 1));
-	EXPECT_EQ(5, int_vector_val(&indices, 2));
-	free_vector(&indices);
-}
+/* TEST(find_array_indices, float_indices) { */
+/* 	float a[7] = {1.1, 3.3, 5.5, 1.1, 2.2, 1.1, 6.6}; */
+/* 	Vector indices = find_float_array_indices(a, 1.1f, 7); */
+/* 	EXPECT_EQ(0, int_vector_val(&indices, 0)); */
+/* 	EXPECT_EQ(3, int_vector_val(&indices, 1)); */
+/* 	EXPECT_EQ(5, int_vector_val(&indices, 2)); */
+/* 	free_vector(&indices); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the find_double_array_indices function to ensure it
  * correctly determines all indeces where the float 1.1 resides.
  */
-TEST(find_array_indices, double_indices) {
-	double a[7] = {1.1, 3.3, 5.5, 1.1, 2.2, 1.1, 6.6};
-	Vector indices = find_double_array_indices(a, 1.1, 7);
-	EXPECT_EQ(0, int_vector_val(&indices, 0));
-	EXPECT_EQ(3, int_vector_val(&indices, 1));
-	EXPECT_EQ(5, int_vector_val(&indices, 2));
-	free_vector(&indices);
-}
+/* TEST(find_array_indices, double_indices) { */
+/* 	double a[7] = {1.1, 3.3, 5.5, 1.1, 2.2, 1.1, 6.6}; */
+/* 	Vector indices = find_double_array_indices(a, 1.1, 7); */
+/* 	EXPECT_EQ(0, int_vector_val(&indices, 0)); */
+/* 	EXPECT_EQ(3, int_vector_val(&indices, 1)); */
+/* 	EXPECT_EQ(5, int_vector_val(&indices, 2)); */
+/* 	free_vector(&indices); */
+/* } */
 // --------------------------------------------------------------------------------
 
 /* This function will test the find_char_array_indices function to ensure it
  * correctly determines all indeces where the float 1.1 resides.
  */
-TEST(find_array_indices, char_indices) {
-	char a[12] = "Hello World";
-	Vector indices = find_char_array_indices(a, 'l', 11);
-	EXPECT_EQ(2, int_vector_val(&indices, 0));
-	EXPECT_EQ(3, int_vector_val(&indices, 1));
-	EXPECT_EQ(9, int_vector_val(&indices, 2));
-	free_vector(&indices);
-}
+/* TEST(find_array_indices, char_indices) { */
+/* 	char a[12] = "Hello World"; */
+/* 	Vector indices = find_char_array_indices(a, 'l', 11); */
+/* 	EXPECT_EQ(2, int_vector_val(&indices, 0)); */
+/* 	EXPECT_EQ(3, int_vector_val(&indices, 1)); */
+/* 	EXPECT_EQ(9, int_vector_val(&indices, 2)); */
+/* 	free_vector(&indices); */
+/* } */
 // ================================================================================
 // ================================================================================
 // eof

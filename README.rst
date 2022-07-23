@@ -32,6 +32,15 @@ In order to download this repository from github, follow these instructions
 3. Open a terminal (Bash, zsh, Linux, or DOS) and cd to the ``c_libs`` directory and type
    ``clone https://github.com/Jon-Webb-79/c_libs.git c_libs``
 
+*******
+Library
+*******
+This library contains several header files, each containing functions that enable specific
+capabilities.  The first header file is the ``vector.h`` file :ref:`C Vector` which contains
+functions that enable dnyamically allocated arrays of all data types to include strings.
+
+.. _C Vector
+
 ******
 Vector
 ******
@@ -501,3 +510,8 @@ container, ``index`` represents the index that will be popped from the container
    // "Hello ", "Goodbye"
    free_string_vector(&vec);
 
+*****
+Array
+*****
+The array library within ``array.h`` builds upon the static array capability inherent with the C language.  This library
+The most basic function in the ``vector.h`` 

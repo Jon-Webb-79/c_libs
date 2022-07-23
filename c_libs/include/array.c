@@ -17,98 +17,101 @@
 // Begin code
 
 int pop_array(void *array, int index, int size, int type) {
-	if (index >= size) return 0;
+	if (index >= size) {
+		printf("WARNING: index greater than array size\n");
+		return 0;
+	}
 	unsigned char *dst = (unsigned char*)array + (index * type);
 	memmove(dst, dst + type, type * (size - index - 1));
 	return 1;
 }
 // --------------------------------------------------------------------------------
 
-void append_array(void *parent_array, int len, void *child_array,
-		          size_t count, int type) {
-	memcpy((char *)parent_array + len * type, child_array, count * type);
-}
+/* void append_array(void *parent_array, int len, void *child_array, */
+/* 		          size_t count, int type) { */
+/* 	memcpy((char *)parent_array + len * type, child_array, count * type); */
+/* } */
 // --------------------------------------------------------------------------------
 
-void preappend_array(void *parent_array, int len, void *child_array,
-		             size_t count, int type) {
-	// Preappend variables and increment the array length
-    memmove(
-    ((char *) parent_array) + count * type, parent_array, len * type);
-    memcpy(parent_array, child_array, count * type);
-}
+/* void preappend_array(void *parent_array, int len, void *child_array, */
+/* 		             size_t count, int type) { */
+/* 	// Preappend variables and increment the array length */
+/*     memmove( */
+/*     ((char *) parent_array) + count * type, parent_array, len * type); */
+/*     memcpy(parent_array, child_array, count * type); */
+/* } */
 // --------------------------------------------------------------------------------
 
-Vector find_int_array_indices(int *array, int value, int len) {
-	int number = 0;
-	int input;
-	for (int i = 0; i < len; i++) {
-		if (value == array[i]) number++;
-	}
+/* Vector find_int_array_indices(int *array, int value, int len) { */
+/* 	int number = 0; */
+/* 	int input; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		if (value == array[i]) number++; */
+/* 	} */
 
-	dat_type dtype = INT;
-	Vector indice_arr = init_vector(dtype, number);
-	int j = 0;
-	for (int i = 0; i < len; i++) {
-		input = i;
-		if(value == array[i]) append_vector(&indice_arr, &input, 1);
-	}
-	return indice_arr;
-}
+/* 	dat_type dtype = INT; */
+/* 	Vector indice_arr = init_vector(dtype, number); */
+/* 	int j = 0; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		input = i; */
+/* 		if(value == array[i]) append_vector(&indice_arr, &input, 1); */
+/* 	} */
+/* 	return indice_arr; */
+/* } */
 // --------------------------------------------------------------------------------
 
-Vector find_float_array_indices(float *array, float value, int len) {
-	int number = 0;
-	int input;
-	for (int i = 0; i < len; i++) {
-		if (value == array[i]) number++;
-	}
+/* Vector find_float_array_indices(float *array, float value, int len) { */
+/* 	int number = 0; */
+/* 	int input; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		if (value == array[i]) number++; */
+/* 	} */
 
-	dat_type dtype = INT;
-	Vector indice_arr = init_vector(dtype, number);
-	int j = 0;
-	for (int i = 0; i < len; i++) {
-		input = i;
-		if(value == array[i]) append_vector(&indice_arr, &input, 1);
-	}
-	return indice_arr;
-}
+/* 	dat_type dtype = INT; */
+/* 	Vector indice_arr = init_vector(dtype, number); */
+/* 	int j = 0; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		input = i; */
+/* 		if(value == array[i]) append_vector(&indice_arr, &input, 1); */
+/* 	} */
+/* 	return indice_arr; */
+/* } */
 // --------------------------------------------------------------------------------
 
-Vector find_double_array_indices(double *array, double value, int len) {
-	int number = 0;
-	int input;
-	for (int i = 0; i < len; i++) {
-		if (value == array[i]) number++;
-	}
+/* Vector find_double_array_indices(double *array, double value, int len) { */
+/* 	int number = 0; */
+/* 	int input; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		if (value == array[i]) number++; */
+/* 	} */
 
-	dat_type dtype = INT;
-	Vector indice_arr = init_vector(dtype, number);
-	int j = 0;
-	for (int i = 0; i < len; i++) {
-		input = i;
-		if(value == array[i]) append_vector(&indice_arr, &input, 1);
-	}
-	return indice_arr;
-}
+/* 	dat_type dtype = INT; */
+/* 	Vector indice_arr = init_vector(dtype, number); */
+/* 	int j = 0; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		input = i; */
+/* 		if(value == array[i]) append_vector(&indice_arr, &input, 1); */
+/* 	} */
+/* 	return indice_arr; */
+/* } */
 // --------------------------------------------------------------------------------
 
-Vector find_char_array_indices(char *array, char value, int len) {
-	int number = 0;
-	int input;
-	for (int i = 0; i < len; i++) {
-		if (value == array[i]) number++;
-	}
+/* Vector find_char_array_indices(char *array, char value, int len) { */
+/* 	int number = 0; */
+/* 	int input; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		if (value == array[i]) number++; */
+/* 	} */
 
-	dat_type dtype = INT;
-	Vector indice_arr = init_vector(dtype, number);
-	int j = 0;
-	for (int i = 0; i < len; i++) {
-		input = i;
-		if(value == array[i]) append_vector(&indice_arr, &input, 1);
-	}
-	return indice_arr;
-}
+/* 	dat_type dtype = INT; */
+/* 	Vector indice_arr = init_vector(dtype, number); */
+/* 	int j = 0; */
+/* 	for (int i = 0; i < len; i++) { */
+/* 		input = i; */
+/* 		if(value == array[i]) append_vector(&indice_arr, &input, 1); */
+/* 	} */
+/* 	return indice_arr; */
+/* } */
 // ================================================================================
 // ================================================================================
 // eof

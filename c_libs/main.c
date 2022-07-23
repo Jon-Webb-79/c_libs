@@ -15,9 +15,20 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO replace_string_vec_index
-// TODO delete_string_vec_duplicates
-// TODO unique_string_vec
+// TODO pop_array
+// TODO append_array
+// TODO insert_array
+// TODO delete_array
+// TODO replace_array
+// TODO delete_array_duplicates
+// TODO unique_array_values
+// TODO sort_array
+// TODO reverse_array
+// TODO median_array
+// TODO sum_array
+// TODO average_array
+// TODO stdev_array
+// TODO cumsum_array
 int main(int argc, const char * argv[]) {
 //	int *a = init_vector(3, sizeof(int));
 //	int b[3] = {1, 2, 3};

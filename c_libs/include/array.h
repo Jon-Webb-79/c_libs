@@ -18,8 +18,6 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "vector.h"
-
 /**
  * This function will remove a data entry from a user specified index
  * within an aray
@@ -76,8 +74,8 @@ int pop_array(void *array, int index, int size, int type);
  * // >> [1, 2, 3, 4, 5, 6, 7, 8, 9]
  * @endcode
  */
-void append_array(void *parent_array, int len, void *child_array,
-		          size_t count, int type);
+//void append_array(void *parent_array, int len, void *child_array,
+//		          size_t count, int type);
 // --------------------------------------------------------------------------------
 
 /**
@@ -113,8 +111,8 @@ void append_array(void *parent_array, int len, void *child_array,
  * // >> [9, 1, 2, 3, 4, 5, 6, 7, 8]
  * @endcode
  */
-void preappend_array(void *parent_array, int len, void *child_array,
-		             size_t count, int type);
+//void preappend_array(void *parent_array, int len, void *child_array,
+//		             size_t count, int type);
 // --------------------------------------------------------------------------------
 
 /**
@@ -136,7 +134,7 @@ void preappend_array(void *parent_array, int len, void *child_array,
  * // >> [0, 3, 5]
  * @endcode
  */
-Vector find_int_array_indices(int *array, int value, int len);
+//Vector find_int_array_indices(int *array, int value, int len);
 // --------------------------------------------------------------------------------
 
 /**
@@ -158,7 +156,7 @@ Vector find_int_array_indices(int *array, int value, int len);
  * // >> [0, 3, 5]
  * @endcode
  */
-Vector find_float_array_indices(float *array, float value, int len);
+//Vector find_float_array_indices(float *array, float value, int len);
 // --------------------------------------------------------------------------------
 
 /**
@@ -180,7 +178,7 @@ Vector find_float_array_indices(float *array, float value, int len);
  * // >> [0, 3, 5]
  * @endcode
  */
-Vector find_double_array_indices(double *array, double value, int len);
+//Vector find_double_array_indices(double *array, double value, int len);
 // --------------------------------------------------------------------------------
 
 /**
@@ -202,7 +200,7 @@ Vector find_double_array_indices(double *array, double value, int len);
  * // >> [2, 3, 9]
  * @endcode
  */
-Vector find_char_array_indices(char *array, char value, int len);
+//Vector find_char_array_indices(char *array, char value, int len);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================
