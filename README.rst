@@ -518,5 +518,23 @@ container, ``index`` represents the index that will be popped from the container
 Array
 *****
 The array library within ``array.h`` builds upon the static array capability inherent with the C language.  This library
-The most basic function in the ``vector.h``
+adds much of the same capability as the ``vector.h`` header file as applied to static arrays in stack memory.
+
+=========
+pop_array
+=========
+The ``pop_array(void *array, size_t index, size_t size, size_t num_bytes)`` function alters the array at its
+memory location.  The variable ``array`` represents the user defined array of any data type, ``index`` 
+represents the index the user wishes to pop, ``size`` represents the active size of the array, and
+``num_bytes`` represents the number of bytes consumed by a single index in the array.  The value
+of ``num_bytes`` can be determined with the ``sizeof(data_type)`` function.
+
+.. code-block:: c
+
+   int a[6] = {1, 2, 3, 4};
+   pop_array(&a, 1, 4, sizeof(int));
+   for (size_t i = 0; i < 3; i++) {
+       printf("%s\n", a[i]);
+   }
+   // 1, 3, 4
 
