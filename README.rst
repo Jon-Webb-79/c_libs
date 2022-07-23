@@ -40,7 +40,8 @@ capabilities.  The first header file is the ``vector.h`` file :ref:`C Vector` wh
 functions that enable dnyamically allocated arrays of all data types to include strings.
 the other is ``array.h`` :ref:`C Array`
 
-.. _C Vector
+.. _C Vector:
+
 ******
 Vector
 ******
@@ -510,7 +511,8 @@ container, ``index`` represents the index that will be popped from the container
    // "Hello ", "Goodbye"
    free_string_vector(&vec);
 
-.. _C Array
+.. _C Array:
+
 *****
 Array
 *****
