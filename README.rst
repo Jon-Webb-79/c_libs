@@ -520,59 +520,18 @@ Array
 The array library within ``array.h`` builds upon the static array capability inherent with the C language.  This library
 adds much of the same capability as the ``vector.h`` header file as applied to static arrays in stack memory.
 
-=========
-pop_array
-=========
-The ``pop_array(void *array, size_t index, size_t size, size_t num_bytes)`` function alters the array at its
-memory location.  The variable ``array`` represents the user defined array of any data type, ``index`` 
-represents the index the user wishes to pop, ``size`` represents the active size of the array, and
-``num_bytes`` represents the number of bytes consumed by a single index in the array.  The value
-of ``num_bytes`` can be determined with the ``sizeof(data_type)`` function.
-
-.. code-block:: c
-
-   int a[6] = {1, 2, 3, 4};
-   pop_array(&a, 1, 4, sizeof(int));
-   for (size_t i = 0; i < 3; i++) {
-       printf("%s\n", a[i]);
-   }
-   // 1, 3, 4
-
 ==========
-push_array
+init_array
 ==========
-The ``push_array(void *parent_array, size_t len, void *child_array, size_t count, size_t num_bytes)`` function allows a user
-to append the ``child_array`` to the ``parent_array``, so as long as the parent array has sufficient
-memory to contain both sets of data.  The terms ``len`` and ``count`` represent the lengths of
-the parent and child arrays respectively.  The term ``num_bytes`` represents the number of bytes
-consumed by a single index.
+THe function ``init_array(size_t allocated_length, size_t active_length, void *array, dtype data_type)`` is the most
+fundamental function in the ``array.h`` library.  This function is used to instantiate an array container and 
+its metadata.  The term ``allocated_length`` represents the total amount of array memory allocated in
+stack memory. ``active_length`` represents the total amount of indices that have actively been populated with
+data, ``array`` is a pointer to the allocated array, and ``data_type`` is an enum representing the 
+data type used in the array.  ``data_type`` can be ``FLOAT``, ``DOUBLE``, ``INT``, ``CHAR``, ``SHORTINT``,
+``LONG``, or ``LONGLONG``.
 
 .. code-block:: c
 
-   int a[6] = {1, 2, 3, 4};
-   int b[2] = {5, 6}
-   push_array(a, 4, b, 2, sizeof(int));
-   for (size_t i = 0; i < 6; i++) {
-       printf("%s\n", a[i]);
-   }
-   // 1, 2, 3, 4, 5, 6
-
-============
-insert_array
-============
-The ``insert_array(*void parent_array, size_t par_len, size_t index, void *child_array, size_t child_len, size_t num_bytes)``
-function allows a user to insert an array into another array or a scalar into an array, so as long as ``parent_array``
-has sufficient allocated memory.  The term ``parent_array`` refers to the array in which data will be inserted,
-``par_len`` is the active length of the array, ``index`` is the index within the ``parent_array`` where data will
-be inserted, ``child_array`` is the array or scalar that will be inserted into the ``paraent_array``,
-and ``num_byes`` is the number of bytes consumed per indice.
-
-.. code-block:: c
-
-   int a[6] = {1, 2, 3, 4};
-   int b[2] = {5, 6}
-   push_array(a, 4, 2, b, 2, sizeof(int));
-   for (size_t i = 0; i < 6; i++) {
-       printf("%s\n", a[i]);
-   }
-   // 1, 2, 5, 6, 3, 4
+   int a[10] = {1, 2, 3, 4};
+   Array arr = init_array(10, 4, a, INT);
