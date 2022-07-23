@@ -36,11 +36,11 @@ In order to download this repository from github, follow these instructions
 Library
 *******
 This library contains several header files, each containing functions that enable specific
-capabilities.  The first header file is the ``vector.h`` `C Vector`_ which contains
+capabilities.  The first header file is the ``vector.h`` `Vector`_ which contains
 functions that enable dnyamically allocated arrays of all data types to include strings.
-the other is ``array.h``
+the other is ``array.h`` `Array`_
 
-.. _C Vector:
+.. _Vector:
 
 ******
 Vector
@@ -511,8 +511,7 @@ container, ``index`` represents the index that will be popped from the container
    // "Hello ", "Goodbye"
    free_string_vector(&vec);
 
-
-.. _C Array:
+.. _Array:
 
 *****
 Array
