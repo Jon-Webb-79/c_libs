@@ -36,8 +36,9 @@ In order to download this repository from github, follow these instructions
 Library
 *******
 This library contains several header files, each containing functions that enable specific
-capabilities.  The first header file is the ``vector.h`` file :ref: `C Vector` which contains
+capabilities.  The first header file is the ``vector.h`` file :ref:`C Vector` which contains
 functions that enable dnyamically allocated arrays of all data types to include strings.
+the other is ``array.h`` :ref:`C Array`
 
 .. _C Vector
 
@@ -509,6 +510,8 @@ container, ``index`` represents the index that will be popped from the container
    }
    // "Hello ", "Goodbye"
    free_string_vector(&vec);
+
+.. _C Array
 
 *****
 Array
