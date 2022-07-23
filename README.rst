@@ -583,3 +583,19 @@ scenarios and return an integer of 0.  Otherwise the function will return an int
        printf("%d\n", ((int *)arr.array)[i]);
    }
    // 1, 2, 5, 6, 7, 8, 9, 10, 3, 4
+
+=========
+pop_array
+=========
+The function ``pop_array(Array &arr, size_t index)`` allows a user to pop the data from a 
+specific index within an array container.
+
+.. code-block:: c
+
+   int a[5] = {1, 2, 3, 4, 5};
+   Array arr = init_array(5, 5, a, INT);
+   pop_array(&arr, 2);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", ((int *)arr.array)[i]);
+   }
+   // 1, 2, 4, 5
