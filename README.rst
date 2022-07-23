@@ -36,9 +36,15 @@ In order to download this repository from github, follow these instructions
 Library
 *******
 This library contains several header files, each containing functions that enable specific
-capabilities.  The first header file is the ``vector.h`` `Vector`_ which contains
+capabilities.  
+
+`Vector`_
+The first header file is the ``vector.h`` which contains
 functions that enable dnyamically allocated arrays of all data types to include strings.
-the other is ``array.h`` `Array`_
+
+`Array`_
+The ``array.h`` contains functions that extend the functionality
+of statically allocated arrays inherent with the C programming language.
 
 .. _Vector:
 
@@ -554,3 +560,26 @@ will produce a warning and return an integer of 0.  Otherwise the function retur
        printf("%d\n", ((int *)arr.array)[i]);
    }
    // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+============
+insert_array
+============
+The function ``insert_array(Array *arr, void *array, size_t active_indices, size_t insert_index)`` allows
+a user to insert a scalar variable or an array of data into an array at a user specified index.  The
+user must take care to ensure that the data inserted does not exceed the allocated length of the 
+array within the container or the available memory left. In addition, the user should ensure
+that the space between the chosen index and the maximum allocated length is large enough to accomodate
+the inserted data.  In either case, the function will warn the user in the event of one of these
+scenarios and return an integer of 0.  Otherwise the function will return an integer of 1.
+
+
+.. code-block:: c
+
+   int a[10] = {1, 2, 3, 4};
+   Array arr = init_array(10, 4, a, INT);
+   int b[6] = {5, 6, 7, 8, 9, 10};
+   insert_array(&arr, b, 6, 2);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", ((int *)arr.array)[i]);
+   }
+   // 1, 2, 5, 6, 7, 8, 9, 10, 3, 4
