@@ -626,3 +626,22 @@ with the following syntax
    Array arr = init_array(5, 5, a, INT);
    a[2] = 10
 
+====================
+replace_array_values
+====================
+The function ``replace_array_values(Array *arr, void *old_value, void *new_value)`` allows a user to replace
+all instances of a variable in an array with another value.
+
+.. code-block:: c
+
+   int a[5] = {1, 2, 1, 4, 5};
+   Array arr = init_array(5, 5, a, INT);
+   int aa = 1;
+   int b = 10;
+   replace_array_index(&arr, &aa, &b);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", a[i]);
+   }
+   // 10, 2, 10, 4, 5
+   
+
