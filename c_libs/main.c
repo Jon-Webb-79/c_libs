@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO replace_array
+// TODO replace_array_values
 // TODO delete_array_duplicates
 // TODO unique_array_values
 // TODO sort_array

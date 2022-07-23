@@ -84,6 +84,17 @@ int pop_array(Array *arr, size_t index) {
 	arr->active_length -= 1;
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+int replace_array_index(Array *arr, size_t index, void *value) {
+	if (index > arr->allocated_length) {
+		printf("WARNING: index larger than allocated length for replace_array_index\n");
+		return 0;
+	}
+	memcpy(((char *)arr->array) + (index * arr->num_bytes),
+			value, arr->num_bytes);
+	return 1;
+}
 // ================================================================================
 // ================================================================================
 // eof

@@ -93,6 +93,7 @@ TEST (test_insert_array, insert_int_scalar) {
 }
 // ================================================================================
 // ================================================================================
+// TEST POP_ARRAY
 
 /* This function will test pop_array to ensure it correctly pops an index from
  * and array within the container */
@@ -105,6 +106,21 @@ TEST (test_pop_array, pop_int) {
 		EXPECT_EQ(b[i], ((int *)arr.array)[i]);
 	}
 	EXPECT_EQ(4, arr.active_length);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests to ensure that the replace_array_index function properly
+ * replaces data in a user specified index */
+TEST (test_replace_array_index, replace_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(sizeof(a)/sizeof(int), 5, a, INT);
+	int b = 10;
+	replace_array_index(&arr, 2, &b);
+	int c[5] = {1, 2, 10, 4, 5};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(a[i], c[i]);
+	}
 }
 // ================================================================================
 // ================================================================================

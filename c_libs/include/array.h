@@ -120,6 +120,8 @@ int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_i
  *
  * @param arr An Array container
  * @param index
+ * @return index 1 if function performed correctly, 0 if the function
+ *               does not perform correctly
  *
  * @code
  * int a[5] = {1, 2, 3, 4, 5};
@@ -132,6 +134,30 @@ int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_i
  * @endcode
  */
 int pop_array(Array *arr, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value at a user specified index
+ *
+ * @param arr An Array container
+ * @param index The index where the user wishes to replace data
+ * @param value The value that will replace the original value. This
+ *              parameter is a scalar
+ * @return index 1 if function performed correctly, 0 if the function
+ *               does not perform correctly
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, INT);
+ * int b = 10;
+ * replace_array_index(&arr, 2, &b);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // 1, 2, 10, 4, 5
+ * @endcode
+ */
+int replace_array_index(Array *arr, size_t index, void *value);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

@@ -18,6 +18,8 @@ int \mbox{\hyperlink{array_8h_a9941a659c9d8f70563eef6e39d5906f7}{push\+\_\+array
 int \mbox{\hyperlink{array_8h_a033dad1e1d35128014b4e9f923e2f28c}{insert\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$array, size\+\_\+t active\+\_\+indices, size\+\_\+t insert\+\_\+index)
 \item 
 int \mbox{\hyperlink{array_8h_a8bce31ced29b6dbe98a59dcbcd4bb687}{pop\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{array_8h_aee92712adcda409367a1d6e98f2b545e}{replace\+\_\+array\+\_\+index}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, size\+\_\+t index, void $\ast$value)
 \end{DoxyCompactItemize}
 
 
@@ -88,6 +90,9 @@ This function pops the data from a specific array index within an \mbox{\hyperli
 {\em index} & \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index 1 if function performed correctly, 0 if the function does not perform correctly
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
@@ -130,6 +135,38 @@ integer Returns 1 if function sucessfully executed, 0 if the function fails to e
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_aee92712adcda409367a1d6e98f2b545e}\label{array_8h_aee92712adcda409367a1d6e98f2b545e}} 
+\index{array.h@{array.h}!replace\_array\_index@{replace\_array\_index}}
+\index{replace\_array\_index@{replace\_array\_index}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{replace\_array\_index()}{replace\_array\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+array\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{size\+\_\+t}]{index,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+This function will replace the value at a user specified index
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em index} & The index where the user wishes to replace data \\
+\hline
+{\em value} & The value that will replace the original value. This parameter is a scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index 1 if function performed correctly, 0 if the function does not perform correctly
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{int} b = 10;}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_aee92712adcda409367a1d6e98f2b545e}{replace\_array\_index}}(\&arr, 2, \&b);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 1, 2, 10, 4, 5}}
 
 \end{DoxyCode}
  
