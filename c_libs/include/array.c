@@ -16,21 +16,21 @@
 
 // Begin code
 
-int pop_array(void *array, int index, int size, int type) {
+int pop_array(void *array, size_t index, size_t size, size_t num_bytes) {
 	if (index >= size) {
 		printf("WARNING: index greater than array size\n");
 		return 0;
 	}
-	unsigned char *dst = (unsigned char*)array + (index * type);
-	memmove(dst, dst + type, type * (size - index - 1));
+	unsigned char *dst = (unsigned char*)array + (index * num_bytes);
+	memmove(dst, dst + num_bytes, num_bytes * (size - index - 1));
 	return 1;
 }
 // --------------------------------------------------------------------------------
 
-/* void append_array(void *parent_array, int len, void *child_array, */
-/* 		          size_t count, int type) { */
-/* 	memcpy((char *)parent_array + len * type, child_array, count * type); */
-/* } */
+void push_array(void *parent_array, int len, void *child_array,
+		        size_t count, int type) {
+	memcpy((char *)parent_array + len * type, child_array, count * type);
+}
 // --------------------------------------------------------------------------------
 
 /* void preappend_array(void *parent_array, int len, void *child_array, */

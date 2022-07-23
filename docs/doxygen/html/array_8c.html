@@ -75,30 +75,76 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ade257c4734ef94d47aea5f0424b8fdf9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#ade257c4734ef94d47aea5f0424b8fdf9">pop_array</a> (void *array, int index, int size, int type)</td></tr>
-<tr class="separator:ade257c4734ef94d47aea5f0424b8fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71a34401951bb5d5736c60f52dda532d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a> (void *parent_array, int len, void *child_array, size_t count, int type)</td></tr>
-<tr class="separator:a71a34401951bb5d5736c60f52dda532d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9b354d1add686cf59b0705521d4db6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#ad9b354d1add686cf59b0705521d4db6c">preappend_array</a> (void *parent_array, int len, void *child_array, size_t count, int type)</td></tr>
-<tr class="separator:ad9b354d1add686cf59b0705521d4db6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010f79b46568099d9ae30ca3aaa344e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a010f79b46568099d9ae30ca3aaa344e5">find_int_array_indices</a> (int *array, int value, int len)</td></tr>
-<tr class="separator:a010f79b46568099d9ae30ca3aaa344e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1597eedcaeb3b901b96410777061e095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a1597eedcaeb3b901b96410777061e095">find_float_array_indices</a> (float *array, float value, int len)</td></tr>
-<tr class="separator:a1597eedcaeb3b901b96410777061e095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e6483a50eb27bc2eb0ad606d103084"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#ab7e6483a50eb27bc2eb0ad606d103084">find_double_array_indices</a> (double *array, double value, int len)</td></tr>
-<tr class="separator:ab7e6483a50eb27bc2eb0ad606d103084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0643a93a759aab607b795d01be273c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structVector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a0643a93a759aab607b795d01be273c9a">find_char_array_indices</a> (char *array, char value, int len)</td></tr>
-<tr class="separator:a0643a93a759aab607b795d01be273c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bed0fef262a5ac199ce3c7cfd1b3f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a21bed0fef262a5ac199ce3c7cfd1b3f0">pop_array</a> (void *array, size_t index, size_t size, size_t num_bytes)</td></tr>
+<tr class="separator:a21bed0fef262a5ac199ce3c7cfd1b3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f700c01206231271f62e0504853b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a90f700c01206231271f62e0504853b33">push_array</a> (void *parent_array, int len, void *child_array, size_t count, int type)</td></tr>
+<tr class="separator:a90f700c01206231271f62e0504853b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a71a34401951bb5d5736c60f52dda532d" name="a71a34401951bb5d5736c60f52dda532d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71a34401951bb5d5736c60f52dda532d">&#9670;&nbsp;</a></span>append_array()</h2>
+<a id="a21bed0fef262a5ac199ce3c7cfd1b3f0" name="a21bed0fef262a5ac199ce3c7cfd1b3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bed0fef262a5ac199ce3c7cfd1b3f0">&#9670;&nbsp;</a></span>pop_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void append_array </td>
+          <td class="memname">int pop_array </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>num_bytes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will remove a data entry from a user specified index within an aray</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>A data rray of any type </td></tr>
+    <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
+    <tr><td class="paramname">size</td><td>The size of the array </td></tr>
+    <tr><td class="paramname">num_bytes</td><td>An integer representing the memory allocation assigned to the user defined data type</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};</div>
+<div class="line">pop_int_array((<span class="keywordtype">void</span> *)a, 3, 9, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 5, 6, 7, 8, 9]</span></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a90f700c01206231271f62e0504853b33" name="a90f700c01206231271f62e0504853b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f700c01206231271f62e0504853b33">&#9670;&nbsp;</a></span>push_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void push_array </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>parent_array</em>, </td>
@@ -147,7 +193,7 @@ Functions</h2></td></tr>
 </dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3};</div>
 <div class="line"><span class="keywordtype">int</span> b[6] = [4, 5, 6, 7, 8, 9];</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(a, 3, b, 6, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a90f700c01206231271f62e0504853b33">push_array</a>(a, 3, b, 6, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
 <div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>i, a[i]);</div>
 <div class="line">}</div>
@@ -155,346 +201,12 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8};</div>
 <div class="line"><span class="keywordtype">int</span> b = 9;</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a>(a, 8, &amp;b, 1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a90f700c01206231271f62e0504853b33">push_array</a>(a, 8, &amp;b, 1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
 <div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></div>
-<div class="ttc" id="aarray_8c_html_a71a34401951bb5d5736c60f52dda532d"><div class="ttname"><a href="array_8c.html#a71a34401951bb5d5736c60f52dda532d">append_array</a></div><div class="ttdeci">void append_array(void *parent_array, int len, void *child_array, size_t count, int type)</div><div class="ttdef"><b>Definition:</b> array.c:27</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a0643a93a759aab607b795d01be273c9a" name="a0643a93a759aab607b795d01be273c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0643a93a759aab607b795d01be273c9a">&#9670;&nbsp;</a></span>find_char_array_indices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structVector.html">Vector</a> find_char_array_indices </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will determine the indices where a specific char value exists within an array.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An array of char values </td></tr>
-    <tr><td class="paramname">value</td><td>A char value </td></tr>
-    <tr><td class="paramname">len</td><td>The active length of array </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>indice_arr A <a class="el" href="structVector.html">Vector</a> containing the index points where the integer value exists within array.</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">char</span>[12] = <span class="stringliteral">&quot;Hello World&quot;</span></div>
-<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> indeces = <a class="code hl_function" href="array_8c.html#a0643a93a759aab607b795d01be273c9a">find_char_array_indices</a>(a, <span class="charliteral">&#39;l&#39;</span>, 11);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; array.len; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, int_vector_val(&amp;indices, &amp;i));</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [2, 3, 9]</span></div>
-<div class="ttc" id="aarray_8c_html_a0643a93a759aab607b795d01be273c9a"><div class="ttname"><a href="array_8c.html#a0643a93a759aab607b795d01be273c9a">find_char_array_indices</a></div><div class="ttdeci">Vector find_char_array_indices(char *array, char value, int len)</div><div class="ttdef"><b>Definition:</b> array.c:96</div></div>
-<div class="ttc" id="astructVector_html"><div class="ttname"><a href="structVector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> vector.h:86</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="ab7e6483a50eb27bc2eb0ad606d103084" name="ab7e6483a50eb27bc2eb0ad606d103084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7e6483a50eb27bc2eb0ad606d103084">&#9670;&nbsp;</a></span>find_double_array_indices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structVector.html">Vector</a> find_double_array_indices </td>
-          <td>(</td>
-          <td class="paramtype">double *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will determine the indices where a specific double value exists within an array.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An array of double values </td></tr>
-    <tr><td class="paramname">value</td><td>A double value </td></tr>
-    <tr><td class="paramname">len</td><td>The active length of array </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>indice_arr A <a class="el" href="structVector.html">Vector</a> containing the index points where the integer value exists within array.</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[7] = {1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1};</div>
-<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> indeces = <a class="code hl_function" href="array_8c.html#ab7e6483a50eb27bc2eb0ad606d103084">find_double_array_indices</a>(a, 1.1, 7);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; array.len; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, int_vector_val(&amp;indices, &amp;i));</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [0, 3, 5]</span></div>
-<div class="ttc" id="aarray_8c_html_ab7e6483a50eb27bc2eb0ad606d103084"><div class="ttname"><a href="array_8c.html#ab7e6483a50eb27bc2eb0ad606d103084">find_double_array_indices</a></div><div class="ttdeci">Vector find_double_array_indices(double *array, double value, int len)</div><div class="ttdef"><b>Definition:</b> array.c:78</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a1597eedcaeb3b901b96410777061e095" name="a1597eedcaeb3b901b96410777061e095"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1597eedcaeb3b901b96410777061e095">&#9670;&nbsp;</a></span>find_float_array_indices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structVector.html">Vector</a> find_float_array_indices </td>
-          <td>(</td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will determine the indices where a specific float value exists within an array.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An array of float values </td></tr>
-    <tr><td class="paramname">value</td><td>A float value </td></tr>
-    <tr><td class="paramname">len</td><td>The active length of array </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>indice_arr A <a class="el" href="structVector.html">Vector</a> containing the index points where the integer value exists within array.</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[7] = {1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1};</div>
-<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> indeces = <a class="code hl_function" href="array_8c.html#a1597eedcaeb3b901b96410777061e095">find_float_array_indices</a>(a, 1.1f, 7);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; array.len; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, int_vector_val(&amp;indices, &amp;i));</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [0, 3, 5]</span></div>
-<div class="ttc" id="aarray_8c_html_a1597eedcaeb3b901b96410777061e095"><div class="ttname"><a href="array_8c.html#a1597eedcaeb3b901b96410777061e095">find_float_array_indices</a></div><div class="ttdeci">Vector find_float_array_indices(float *array, float value, int len)</div><div class="ttdef"><b>Definition:</b> array.c:60</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a010f79b46568099d9ae30ca3aaa344e5" name="a010f79b46568099d9ae30ca3aaa344e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a010f79b46568099d9ae30ca3aaa344e5">&#9670;&nbsp;</a></span>find_int_array_indices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structVector.html">Vector</a> find_int_array_indices </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will determine the indices where a specific integer value exists within an array.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>An array of integer values </td></tr>
-    <tr><td class="paramname">value</td><td>An integer value </td></tr>
-    <tr><td class="paramname">len</td><td>The active length of array </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>indice_arr A <a class="el" href="structVector.html">Vector</a> containing the index points where the integer value exists within array.</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[7] = {1, 3, 5, 1, 2, 1, 6};</div>
-<div class="line"><a class="code hl_struct" href="structVector.html">Vector</a> indeces = <a class="code hl_function" href="array_8c.html#a010f79b46568099d9ae30ca3aaa344e5">find_int_array_indices</a>(a, 1, 7);</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> = 0; i &lt; array.len; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, int_vector_val(&amp;indices, &amp;i));</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [0, 3, 5]</span></div>
-<div class="ttc" id="aarray_8c_html_a010f79b46568099d9ae30ca3aaa344e5"><div class="ttname"><a href="array_8c.html#a010f79b46568099d9ae30ca3aaa344e5">find_int_array_indices</a></div><div class="ttdeci">Vector find_int_array_indices(int *array, int value, int len)</div><div class="ttdef"><b>Definition:</b> array.c:42</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="ade257c4734ef94d47aea5f0424b8fdf9" name="ade257c4734ef94d47aea5f0424b8fdf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade257c4734ef94d47aea5f0424b8fdf9">&#9670;&nbsp;</a></span>pop_array()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int pop_array </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will remove a data entry from a user specified index within an aray</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">array</td><td>A data rray of any type </td></tr>
-    <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array </td></tr>
-    <tr><td class="paramname">type</td><td>An integer representing the memory allocation assigned to the user defined data type</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};</div>
-<div class="line">pop_int_array((<span class="keywordtype">void</span> *)a, 3, 9, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 5, 6, 7, 8, 9]</span></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="ad9b354d1add686cf59b0705521d4db6c" name="ad9b354d1add686cf59b0705521d4db6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9b354d1add686cf59b0705521d4db6c">&#9670;&nbsp;</a></span>preappend_array()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void preappend_array </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>parent_array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>child_array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >This function will pre-append an existing array with a scalar value or another array. WARNING: The size the data within the parent_array combined with the data in the child_array cannot exceed the total allocation of memory for the parent_array</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">parent_array</td><td>The array to which more data will be added </td></tr>
-    <tr><td class="paramname">len</td><td>The number of allocated indices in the parent_array, not to be confused with the total number of allocated indices </td></tr>
-    <tr><td class="paramname">child_array</td><td>A scalar or array of data to be added to the parent_array </td></tr>
-    <tr><td class="paramname">count</td><td>The total number of indices to be added to the parent_array from the child_array </td></tr>
-    <tr><td class="paramname">type</td><td>The number of bytes occupied by the array datatype</td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = [1, 2, 3];</div>
-<div class="line"><span class="keywordtype">int</span> b[6] = {4, 5, 6, 7, 8, 9};</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#ad9b354d1add686cf59b0705521d4db6c">preappend_array</a>(a, 3, b, 6, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%c\n&quot;</span>i, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [4, 5, 6, 7, 8, 9, 1, 2, 3]</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> a[9] = [1, 2, 3, 4, 5, 6, 7, 8];</div>
-<div class="line"><span class="keywordtype">int</span> b = 9;</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#ad9b354d1add686cf59b0705521d4db6c">preappend_array</a>(a, 9, &amp;b 1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%c\n&quot;</span>, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [9, 1, 2, 3, 4, 5, 6, 7, 8]</span></div>
-<div class="ttc" id="aarray_8c_html_ad9b354d1add686cf59b0705521d4db6c"><div class="ttname"><a href="array_8c.html#ad9b354d1add686cf59b0705521d4db6c">preappend_array</a></div><div class="ttdeci">void preappend_array(void *parent_array, int len, void *child_array, size_t count, int type)</div><div class="ttdef"><b>Definition:</b> array.c:33</div></div>
+<div class="ttc" id="aarray_8c_html_a90f700c01206231271f62e0504853b33"><div class="ttname"><a href="array_8c.html#a90f700c01206231271f62e0504853b33">push_array</a></div><div class="ttdeci">void push_array(void *parent_array, int len, void *child_array, size_t count, int type)</div><div class="ttdef"><b>Definition:</b> array.c:30</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

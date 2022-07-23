@@ -2,32 +2,50 @@
 \label{array_8h}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}vector.\+h\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}{pop\+\_\+array}} (void $\ast$array, int index, int size, int type)
+int \mbox{\hyperlink{array_8h_a21bed0fef262a5ac199ce3c7cfd1b3f0}{pop\+\_\+array}} (void $\ast$array, size\+\_\+t index, size\+\_\+t size, size\+\_\+t num\+\_\+bytes)
 \item 
-void \mbox{\hyperlink{array_8h_a71a34401951bb5d5736c60f52dda532d}{append\+\_\+array}} (void $\ast$parent\+\_\+array, int len, void $\ast$child\+\_\+array, size\+\_\+t count, int type)
-\item 
-void \mbox{\hyperlink{array_8h_ad9b354d1add686cf59b0705521d4db6c}{preappend\+\_\+array}} (void $\ast$parent\+\_\+array, int len, void $\ast$child\+\_\+array, size\+\_\+t count, int type)
-\item 
-\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{array_8h_a010f79b46568099d9ae30ca3aaa344e5}{find\+\_\+int\+\_\+array\+\_\+indices}} (int $\ast$array, int value, int len)
-\item 
-\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{array_8h_a1597eedcaeb3b901b96410777061e095}{find\+\_\+float\+\_\+array\+\_\+indices}} (float $\ast$array, float value, int len)
-\item 
-\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{array_8h_ab7e6483a50eb27bc2eb0ad606d103084}{find\+\_\+double\+\_\+array\+\_\+indices}} (double $\ast$array, double value, int len)
-\item 
-\mbox{\hyperlink{structVector}{Vector}} \mbox{\hyperlink{array_8h_a0643a93a759aab607b795d01be273c9a}{find\+\_\+char\+\_\+array\+\_\+indices}} (char $\ast$array, char value, int len)
+void \mbox{\hyperlink{array_8h_a90f700c01206231271f62e0504853b33}{push\+\_\+array}} (void $\ast$parent\+\_\+array, int len, void $\ast$child\+\_\+array, size\+\_\+t count, int type)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{array_8h_a71a34401951bb5d5736c60f52dda532d}\label{array_8h_a71a34401951bb5d5736c60f52dda532d}} 
-\index{array.h@{array.h}!append\_array@{append\_array}}
-\index{append\_array@{append\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{append\_array()}{append\_array()}}
-{\footnotesize\ttfamily void append\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{void $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count,  }\item[{int}]{type }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{array_8h_a21bed0fef262a5ac199ce3c7cfd1b3f0}\label{array_8h_a21bed0fef262a5ac199ce3c7cfd1b3f0}} 
+\index{array.h@{array.h}!pop\_array@{pop\_array}}
+\index{pop\_array@{pop\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
+{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{array,  }\item[{size\+\_\+t}]{index,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{num\+\_\+bytes }\end{DoxyParamCaption})}
+
+This function will remove a data entry from a user specified index within an aray
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & A data rray of any type \\
+\hline
+{\em index} & The index containing data to be removed from the array \\
+\hline
+{\em size} & The size of the array \\
+\hline
+{\em num\+\_\+bytes} & An integer representing the memory allocation assigned to the user defined data type\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8, 9\};}
+\DoxyCodeLine{pop\_int\_array((\textcolor{keywordtype}{void} *)a, 3, 9, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 5, 6, 7, 8, 9]}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a90f700c01206231271f62e0504853b33}\label{array_8h_a90f700c01206231271f62e0504853b33}} 
+\index{array.h@{array.h}!push\_array@{push\_array}}
+\index{push\_array@{push\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{push\_array()}{push\_array()}}
+{\footnotesize\ttfamily void push\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{void $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count,  }\item[{int}]{type }\end{DoxyParamCaption})}
 
 This function will append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
 
@@ -48,7 +66,7 @@ This function will append an existing array with a scalar value or another array
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = [4, 5, 6, 7, 8, 9];}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(a, 3, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a90f700c01206231271f62e0504853b33}{push\_array}}(a, 3, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}i, a[i]);}
 \DoxyCodeLine{\}}
@@ -56,200 +74,11 @@ This function will append an existing array with a scalar value or another array
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8\};}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b = 9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a71a34401951bb5d5736c60f52dda532d}{append\_array}}(a, 8, \&b, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a90f700c01206231271f62e0504853b33}{push\_array}}(a, 8, \&b, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
 \DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 4, 5, 6, 7, 8, 9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a0643a93a759aab607b795d01be273c9a}\label{array_8h_a0643a93a759aab607b795d01be273c9a}} 
-\index{array.h@{array.h}!find\_char\_array\_indices@{find\_char\_array\_indices}}
-\index{find\_char\_array\_indices@{find\_char\_array\_indices}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{find\_char\_array\_indices()}{find\_char\_array\_indices()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+char\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{char $\ast$}]{array,  }\item[{char}]{value,  }\item[{int}]{len }\end{DoxyParamCaption})}
-
-This function will determine the indices where a specific char value exists within an array.
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & An array of char values \\
-\hline
-{\em value} & A char value \\
-\hline
-{\em len} & The active length of array \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-indice\+\_\+arr A \mbox{\hyperlink{structVector}{Vector}} containing the index points where the integer value exists within array.
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{char}[12] = \textcolor{stringliteral}{"{}Hello World"{}}}
-\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} indeces = \mbox{\hyperlink{array_8c_a0643a93a759aab607b795d01be273c9a}{find\_char\_array\_indices}}(a, \textcolor{charliteral}{'l'}, 11);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < array.len; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, int\_vector\_val(\&indices, \&i));}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [2, 3, 9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_ab7e6483a50eb27bc2eb0ad606d103084}\label{array_8h_ab7e6483a50eb27bc2eb0ad606d103084}} 
-\index{array.h@{array.h}!find\_double\_array\_indices@{find\_double\_array\_indices}}
-\index{find\_double\_array\_indices@{find\_double\_array\_indices}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{find\_double\_array\_indices()}{find\_double\_array\_indices()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+double\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{double $\ast$}]{array,  }\item[{double}]{value,  }\item[{int}]{len }\end{DoxyParamCaption})}
-
-This function will determine the indices where a specific double value exists within an array.
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & An array of double values \\
-\hline
-{\em value} & A double value \\
-\hline
-{\em len} & The active length of array \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-indice\+\_\+arr A \mbox{\hyperlink{structVector}{Vector}} containing the index points where the integer value exists within array.
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{double} a[7] = \{1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1\};}
-\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} indeces = \mbox{\hyperlink{array_8c_ab7e6483a50eb27bc2eb0ad606d103084}{find\_double\_array\_indices}}(a, 1.1, 7);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < array.len; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, int\_vector\_val(\&indices, \&i));}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 5]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a1597eedcaeb3b901b96410777061e095}\label{array_8h_a1597eedcaeb3b901b96410777061e095}} 
-\index{array.h@{array.h}!find\_float\_array\_indices@{find\_float\_array\_indices}}
-\index{find\_float\_array\_indices@{find\_float\_array\_indices}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{find\_float\_array\_indices()}{find\_float\_array\_indices()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+float\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{float $\ast$}]{array,  }\item[{float}]{value,  }\item[{int}]{len }\end{DoxyParamCaption})}
-
-This function will determine the indices where a specific float value exists within an array.
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & An array of float values \\
-\hline
-{\em value} & A float value \\
-\hline
-{\em len} & The active length of array \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-indice\+\_\+arr A \mbox{\hyperlink{structVector}{Vector}} containing the index points where the integer value exists within array.
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{float} a[7] = \{1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1\};}
-\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} indeces = \mbox{\hyperlink{array_8c_a1597eedcaeb3b901b96410777061e095}{find\_float\_array\_indices}}(a, 1.1f, 7);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < array.len; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, int\_vector\_val(\&indices, \&i));}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 5]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a010f79b46568099d9ae30ca3aaa344e5}\label{array_8h_a010f79b46568099d9ae30ca3aaa344e5}} 
-\index{array.h@{array.h}!find\_int\_array\_indices@{find\_int\_array\_indices}}
-\index{find\_int\_array\_indices@{find\_int\_array\_indices}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{find\_int\_array\_indices()}{find\_int\_array\_indices()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structVector}{Vector}} find\+\_\+int\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{value,  }\item[{int}]{len }\end{DoxyParamCaption})}
-
-This function will determine the indices where a specific integer value exists within an array.
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & An array of integer values \\
-\hline
-{\em value} & An integer value \\
-\hline
-{\em len} & The active length of array \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-indice\+\_\+arr A \mbox{\hyperlink{structVector}{Vector}} containing the index points where the integer value exists within array.
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[7] = \{1, 3, 5, 1, 2, 1, 6\};}
-\DoxyCodeLine{\mbox{\hyperlink{structVector}{Vector}} indeces = \mbox{\hyperlink{array_8c_a010f79b46568099d9ae30ca3aaa344e5}{find\_int\_array\_indices}}(a, 1, 7);}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} = 0; i < array.len; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, int\_vector\_val(\&indices, \&i));}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [0, 3, 5]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}\label{array_8h_ade257c4734ef94d47aea5f0424b8fdf9}} 
-\index{array.h@{array.h}!pop\_array@{pop\_array}}
-\index{pop\_array@{pop\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
-{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{array,  }\item[{int}]{index,  }\item[{int}]{size,  }\item[{int}]{type }\end{DoxyParamCaption})}
-
-This function will remove a data entry from a user specified index within an aray
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & A data rray of any type \\
-\hline
-{\em index} & The index containing data to be removed from the array \\
-\hline
-{\em size} & The size of the array \\
-\hline
-{\em type} & An integer representing the memory allocation assigned to the user defined data type\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8, 9\};}
-\DoxyCodeLine{pop\_int\_array((\textcolor{keywordtype}{void} *)a, 3, 9, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 5, 6, 7, 8, 9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_ad9b354d1add686cf59b0705521d4db6c}\label{array_8h_ad9b354d1add686cf59b0705521d4db6c}} 
-\index{array.h@{array.h}!preappend\_array@{preappend\_array}}
-\index{preappend\_array@{preappend\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{preappend\_array()}{preappend\_array()}}
-{\footnotesize\ttfamily void preappend\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{parent\+\_\+array,  }\item[{int}]{len,  }\item[{void $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{count,  }\item[{int}]{type }\end{DoxyParamCaption})}
-
-This function will pre-\/append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
-
-
-\begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The array to which more data will be added \\
-\hline
-{\em len} & The number of allocated indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
-\hline
-{\em child\+\_\+array} & A scalar or array of data to be added to the parent\+\_\+array \\
-\hline
-{\em count} & The total number of indices to be added to the parent\+\_\+array from the child\+\_\+array \\
-\hline
-{\em type} & The number of bytes occupied by the array datatype\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = [1, 2, 3];}
-\DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = \{4, 5, 6, 7, 8, 9\};}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ad9b354d1add686cf59b0705521d4db6c}{preappend\_array}}(a, 3, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [4, 5, 6, 7, 8, 9, 1, 2, 3]}}
-\DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = [1, 2, 3, 4, 5, 6, 7, 8];}
-\DoxyCodeLine{\textcolor{keywordtype}{int} b = 9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_ad9b354d1add686cf59b0705521d4db6c}{preappend\_array}}(a, 9, \&b 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [9, 1, 2, 3, 4, 5, 6, 7, 8]}}
 
 \end{DoxyCode}
  
