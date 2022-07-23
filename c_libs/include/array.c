@@ -27,19 +27,23 @@ int pop_array(void *array, size_t index, size_t size, size_t num_bytes) {
 }
 // --------------------------------------------------------------------------------
 
-void push_array(void *parent_array, int len, void *child_array,
-		        size_t count, int type) {
-	memcpy((char *)parent_array + len * type, child_array, count * type);
+void push_array(void *parent_array, size_t par_len, void *child_array,
+		        size_t child_len, size_t num_bytes) {
+	memcpy(((char *)parent_array) + (par_len * num_bytes),
+			child_array,
+            child_len * num_bytes);
 }
 // --------------------------------------------------------------------------------
 
-/* void preappend_array(void *parent_array, int len, void *child_array, */
-/* 		             size_t count, int type) { */
-/* 	// Preappend variables and increment the array length */
-/*     memmove( */
-/*     ((char *) parent_array) + count * type, parent_array, len * type); */
-/*     memcpy(parent_array, child_array, count * type); */
-/* } */
+void insert_array(void *parent_array, size_t par_len, size_t index, void *child_array,
+		          size_t child_len, size_t num_bytes) {
+	memmove(((char *)parent_array) + (index + child_len) * num_bytes,
+			((char *)parent_array) + (index * num_bytes),
+			(par_len - index) * num_bytes);
+	memcpy(((char *)parent_array) + (index * num_bytes),
+			child_array,
+			child_len * num_bytes);
+}
 // --------------------------------------------------------------------------------
 
 /* Vector find_int_array_indices(int *array, int value, int len) { */

@@ -541,16 +541,17 @@ of ``num_bytes`` can be determined with the ``sizeof(data_type)`` function.
 ==========
 push_array
 ==========
-The ``push_array(void *parent_array, size_t len, void *child_array, size_t count)`` function allows a user
+The ``push_array(void *parent_array, size_t len, void *child_array, size_t count, size_t num_bytes)`` function allows a user
 to append the ``child_array`` to the ``parent_array``, so as long as the parent array has sufficient
 memory to contain both sets of data.  The terms ``len`` and ``count`` represent the lengths of
-the parent and child arrays respectively.
+the parent and child arrays respectively.  The term ``num_bytes`` represents the number of bytes
+consumed by a single index.
 
 .. code-block:: c
 
    int a[6] = {1, 2, 3, 4};
    int b[2] = {5, 6}
-   push_array(&a, 4, &b, 2);
+   push_array(&a, 4, &b, 2, sizeof(int));
    for (size_t i = 0; i < 6; i++) {
        printf("%s\n", a[i]);
    }

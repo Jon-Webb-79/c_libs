@@ -47,14 +47,12 @@ int pop_array(void *array, size_t index, size_t size, size_t num_bytes);
  * for the parent_array
  *
  * @param parent_array The integer array to which more data will be added
- * @param len The number of allocated indices in the parent_array, not to be
- *            confused with the total number of allocated indices
+ * @param par_len The active length of the parent array
  * @param child_array A integer scalar or integer array of data to be added
  *                    to the parent_array
- * @param count The total number of indices to be added to the parent_array
- *              from the child_array
- * @param type An integer representing the amount of memory consumed by
- *             a single data type
+ * @param child_len THe active length of the child array
+ * @param num_bytes An integer representing the amount of memory consumed by
+ *                  a single data type
  *
  * @code
  * int a[9] = {1, 2, 3};
@@ -74,45 +72,45 @@ int pop_array(void *array, size_t index, size_t size, size_t num_bytes);
  * // >> [1, 2, 3, 4, 5, 6, 7, 8, 9]
  * @endcode
  */
-void push_array(void *parent_array, int len, void *child_array,
-		        size_t count, int type);
+void push_array(void *parent_array, size_t par_len, void *child_array,
+		        size_t child_len, size_t num_bytes);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will pre-append an existing array with a scalar value or another
+ * This function will insert an existing array with a scalar value or another
  * array.  WARNING: The size the data within the parent_array combined with
  * the data in the child_array cannot exceed the total allocation of memory
  * for the parent_array
  *
  * @param parent_array The array to which more data will be added
- * @param len The number of allocated indices in the parent_array, not to be
- *            confused with the total number of allocated indices
+ * @param par_len The number of active indices in the parent_array, not to be
+ *                confused with the total number of allocated indices
+ * @param index The index where the data will be inserted
  * @param child_array A scalar or array of data to be added
  *                    to the parent_array
- * @param count The total number of indices to be added to the parent_array
- *              from the child_array
- * @param type The number of bytes occupied by the array datatype
+ * @param child_len The active length of the child array
+ * @param num_bytes The number of bytes occupied by the array datatype
  *
  * @code
  * int a[9] = [1, 2, 3];
  * int b[6] = {4, 5, 6, 7, 8, 9};
- * preappend_array(a, 3, b, 6, sizeof(int));
+ * preappend_array(a, 3, 1, b, 6, sizeof(int));
  * for (int i = 0; i < 9; i++) {
  *     printf("%c\n"i, a[i]);
  * }
- * // >> [4, 5, 6, 7, 8, 9, 1, 2, 3]
+ * // >> [1, 4, 5, 6, 7, 8, 9, 2, 3]
  *
  * int a[9] = [1, 2, 3, 4, 5, 6, 7, 8];
  * int b = 9;
- * preappend_array(a, 9, &b 1, sizeof(int));
+ * preappend_array(a, 9, 0, &b 1, sizeof(int));
  * for (int i = 0; i < 9; i++) {
  *     printf("%c\n", a[i]);
  * }
- * // >> [9, 1, 2, 3, 4, 5, 6, 7, 8]
+ * // >> [1, 9, 2, 3, 4, 5, 6, 7, 8]
  * @endcode
  */
-//void preappend_array(void *parent_array, int len, void *child_array,
-//		             size_t count, int type);
+void insert_array(void *parent_array, size_t par_len, size_t index, void *child_array,
+		          size_t child_len, size_t num_bytes);
 // --------------------------------------------------------------------------------
 
 /**
