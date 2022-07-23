@@ -18,187 +18,101 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "vector.h"
+
 /**
- * This function will remove a data entry from a user specified index
- * within an aray
+ * A container for a dynamically allocated array and related data
  *
- * @param array A data rray of any type
- * @param index The index containing data to be removed from the array
- * @param size The size of the array
- * @param num_bytes An integer representing the memory allocation assigned
- *                  to the user defined data type
+ * @struct Array
+ * A container for a dynamic array and metadata
  *
- * @code
- * int a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
- * pop_int_array((void *)a, 3, 9, sizeof(int));
- * for (int i = 0; i < 8; i++) {
- *     printf("%d\n", a[i]);
- * }
- * // >> [1, 2, 3, 5, 6, 7, 8, 9]
- * @endcode
+ * @param Array::array
+ *    A pointer to an array in stack memory
+ * @param Array::active_length
+ *    The number of indices with assigned data
+ * @param Array::allocated_length
+ *    The total number of allocated indices in memory
+ * @param Array::num_bytes
+ *    The number of bytes consumed by a single indice
+ * @param Array::dat_type
+ *    The data type. Must use data types allocated in dtype enum
  */
-int pop_array(void *array, size_t index, size_t size, size_t num_bytes);
+typedef struct
+{
+	void *array;
+	size_t active_length;
+	size_t allocated_length;
+	size_t num_bytes;
+	dtype dat_type;
+} Array;
 // --------------------------------------------------------------------------------
 
 /**
- * This function will append an existing array with a scalar value or another
- * array.  WARNING: The size the data within the parent_array combined with
- * the data in the child_array cannot exceed the total allocation of memory
- * for the parent_array
+ * This function is used to instantiate an Array container with a staitc
+ * array allocated in stack memory.
  *
- * @param parent_array The integer array to which more data will be added
- * @param par_len The active length of the parent array
- * @param child_array A integer scalar or integer array of data to be added
- *                    to the parent_array
- * @param child_len THe active length of the child array
- * @param num_bytes An integer representing the amount of memory consumed by
- *                  a single data type
- *
- * @code
- * int a[9] = {1, 2, 3};
- * int b[6] = [4, 5, 6, 7, 8, 9];
- * push_array(a, 3, b, 6, sizeof(int));
- * for (int i = 0; i < 9; i++) {
- *     printf("%d\n"i, a[i]);
- * }
- * // >> [1, 2, 3, 4, 5, 6, 7, 8, 9]
- *
- * int a[9] = {1, 2, 3, 4, 5, 6, 7, 8};
- * int b = 9;
- * push_array(a, 8, &b, 1, sizeof(int));
- * for (int i = 0; i < 9; i++) {
- * printf("%d\n", a[i]);
- * }
- * // >> [1, 2, 3, 4, 5, 6, 7, 8, 9]
- * @endcode
+ * @param allocated_length The total amount of memory allocated in stack
+ *                      memory
+ * @param active_length The total number of indices that have been populated
+ *                      with data
+ * @param array A pointer to the memory where the array is allocated
+ * @param data_type The data type which must be one of the following, FLOAT, DOUBLE,
+ *              CHAR, INT, SHORTINT, LONG, or LONGLONG
  */
-void push_array(void *parent_array, size_t par_len, void *child_array,
-		        size_t child_len, size_t num_bytes);
+Array init_array(size_t allocated_length, size_t active_length,
+		         void *array, dtype data_type);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will insert an existing array with a scalar value or another
- * array.  WARNING: The size the data within the parent_array combined with
- * the data in the child_array cannot exceed the total allocation of memory
- * for the parent_array
+ * This function allows a user to push a scalar value or an array of data
+ * the the end of an array container.  All data is stored in stack memory.
  *
- * @param parent_array The array to which more data will be added
- * @param par_len The number of active indices in the parent_array, not to be
- *                confused with the total number of allocated indices
- * @param index The index where the data will be inserted
- * @param child_array A scalar or array of data to be added
- *                    to the parent_array
- * @param child_len The active length of the child array
- * @param num_bytes The number of bytes occupied by the array datatype
+ * @param arr An Array container
+ * @param array A static array or scalar stored in stack memory
+ * @param active_indices: The active length of array.  In other words, the number
+ *                       of indices with data stored in them, which may be different
+ *                       than the total amount of memory allocated to array.
+ * @return integer Returns 1 if function sucessfully executed, 0 if the function
+ *                 fails to execute properly
  *
  * @code
- * int a[9] = [1, 2, 3];
- * int b[6] = {4, 5, 6, 7, 8, 9};
- * preappend_array(a, 3, 1, b, 6, sizeof(int));
- * for (int i = 0; i < 9; i++) {
- *     printf("%c\n"i, a[i]);
- * }
- * // >> [1, 4, 5, 6, 7, 8, 9, 2, 3]
+ * int a[10] = {1, 2, 3, 4};
+ * int b[6] = {5, 6, 7, 8, 9, 10};
+ * Array arr = init_array(10, 4, a, INT);
+ * push_array(&arr, b, 6);
  *
- * int a[9] = [1, 2, 3, 4, 5, 6, 7, 8];
- * int b = 9;
- * preappend_array(a, 9, 0, &b 1, sizeof(int));
- * for (int i = 0; i < 9; i++) {
- *     printf("%c\n", a[i]);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", ((int *)arr.array)[i]);
  * }
- * // >> [1, 9, 2, 3, 4, 5, 6, 7, 8]
+ * // >> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
  * @endcode
  */
-void insert_array(void *parent_array, size_t par_len, size_t index, void *child_array,
-		          size_t child_len, size_t num_bytes);
+int push_array(Array *arr, void *array, size_t active_indices);
 // --------------------------------------------------------------------------------
 
 /**
- * This function will determine the indices where a specific integer value exists
- * within an array.
+ * This function allows a user to insert a scalar value or an array into
+ * an Array container at a user defined index
  *
- * @param array An array of integer values
- * @param value An integer value
- * @param len The active length of array
- * @return indice_arr A Vector containing the index points where the integer
- *                    value exists within array.
- *
- * @code
- * int a[7] = {1, 3, 5, 1, 2, 1, 6};
- * Vector indeces = find_int_array_indices(a, 1, 7);
- * for (int = 0; i < array.len; i++) {
- *     printf("%d\n", int_vector_val(&indices, &i));
- * }
- * // >> [0, 3, 5]
- * @endcode
- */
-//Vector find_int_array_indices(int *array, int value, int len);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will determine the indices where a specific float value exists
- * within an array.
- *
- * @param array An array of float values
- * @param value A float value
- * @param len The active length of array
- * @return indice_arr A Vector containing the index points where the integer
- *                    value exists within array.
+ * @param arr An Array container
+ * @param array An array or scalar to be inserted into the container
+ * @param active_indices The number of actively used indices in the array to
+ *                       be inserted into the Array container.
+ * @param insert_index The index where data will be inserted
  *
  * @code
- * float a[7] = {1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1};
- * Vector indeces = find_float_array_indices(a, 1.1f, 7);
- * for (int = 0; i < array.len; i++) {
- *     printf("%d\n", int_vector_val(&indices, &i));
+ * int a[10] = {1, 2, 3, 4};
+ * int b[6] = {5, 6, 7, 8, 9, 10};
+ * Array arr = init_array(10, 4, a, INT);
+ * insert_array(&arr, b, 6, 2);
+ *
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", ((int *)arr.array)[i]);
  * }
- * // >> [0, 3, 5]
+ * // >> 1, 2, 5, 6, 7, 8, 9, 10, 3, 4
  * @endcode
  */
-//Vector find_float_array_indices(float *array, float value, int len);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will determine the indices where a specific double value exists
- * within an array.
- *
- * @param array An array of double values
- * @param value A double value
- * @param len The active length of array
- * @return indice_arr A Vector containing the index points where the integer
- *                    value exists within array.
- *
- * @code
- * double a[7] = {1.1, 3.3, 5.5, 1.1, 2.1, 1.1, 6.1};
- * Vector indeces = find_double_array_indices(a, 1.1, 7);
- * for (int = 0; i < array.len; i++) {
- *     printf("%d\n", int_vector_val(&indices, &i));
- * }
- * // >> [0, 3, 5]
- * @endcode
- */
-//Vector find_double_array_indices(double *array, double value, int len);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will determine the indices where a specific char value exists
- * within an array.
- *
- * @param array An array of char values
- * @param value A char value
- * @param len The active length of array
- * @return indice_arr A Vector containing the index points where the integer
- *                    value exists within array.
- *
- * @code
- * char[12] = "Hello World"
- * Vector indeces = find_char_array_indices(a, 'l', 11);
- * for (int = 0; i < array.len; i++) {
- *     printf("%d\n", int_vector_val(&indices, &i));
- * }
- * // >> [2, 3, 9]
- * @endcode
- */
-//Vector find_char_array_indices(char *array, char value, int len);
+int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_index);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

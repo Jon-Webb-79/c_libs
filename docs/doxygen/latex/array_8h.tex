@@ -2,127 +2,106 @@
 \label{array_8h}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/array.h}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vector.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structArray}{Array}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{array_8h_a21bed0fef262a5ac199ce3c7cfd1b3f0}{pop\+\_\+array}} (void $\ast$array, size\+\_\+t index, size\+\_\+t size, size\+\_\+t num\+\_\+bytes)
+\mbox{\hyperlink{structArray}{Array}} \mbox{\hyperlink{array_8h_a1ef27c704c5d241cc4a359e1b834ecf4}{init\+\_\+array}} (size\+\_\+t allocated\+\_\+length, size\+\_\+t active\+\_\+length, void $\ast$array, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} data\+\_\+type)
 \item 
-void \mbox{\hyperlink{array_8h_a6fc9f1bbb3a7383ae358df2f1f8322d3}{push\+\_\+array}} (void $\ast$parent\+\_\+array, size\+\_\+t par\+\_\+len, void $\ast$child\+\_\+array, size\+\_\+t child\+\_\+len, size\+\_\+t num\+\_\+bytes)
+int \mbox{\hyperlink{array_8h_a9941a659c9d8f70563eef6e39d5906f7}{push\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$array, size\+\_\+t active\+\_\+indices)
 \item 
-void \mbox{\hyperlink{array_8h_aed9a03aa4b80814f9a9b17f2120e37ac}{insert\+\_\+array}} (void $\ast$parent\+\_\+array, size\+\_\+t par\+\_\+len, size\+\_\+t index, void $\ast$child\+\_\+array, size\+\_\+t child\+\_\+len, size\+\_\+t num\+\_\+bytes)
+int \mbox{\hyperlink{array_8h_a033dad1e1d35128014b4e9f923e2f28c}{insert\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$array, size\+\_\+t active\+\_\+indices, size\+\_\+t insert\+\_\+index)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{array_8h_aed9a03aa4b80814f9a9b17f2120e37ac}\label{array_8h_aed9a03aa4b80814f9a9b17f2120e37ac}} 
+\mbox{\Hypertarget{array_8h_a1ef27c704c5d241cc4a359e1b834ecf4}\label{array_8h_a1ef27c704c5d241cc4a359e1b834ecf4}} 
+\index{array.h@{array.h}!init\_array@{init\_array}}
+\index{init\_array@{init\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{init\_array()}{init\_array()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structArray}{Array}} init\+\_\+array (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{allocated\+\_\+length,  }\item[{size\+\_\+t}]{active\+\_\+length,  }\item[{void $\ast$}]{array,  }\item[{\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}}}]{data\+\_\+type }\end{DoxyParamCaption})}
+
+This function is used to instantiate an \mbox{\hyperlink{structArray}{Array}} container with a staitc array allocated in stack memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocated\+\_\+length} & The total amount of memory allocated in stack memory \\
+\hline
+{\em active\+\_\+length} & The total number of indices that have been populated with data \\
+\hline
+{\em array} & A pointer to the memory where the array is allocated \\
+\hline
+{\em data\+\_\+type} & The data type which must be one of the following, FLOAT, DOUBLE, CHAR, INT, SHORTINT, LONG, or LONGLONG \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{array_8h_a033dad1e1d35128014b4e9f923e2f28c}\label{array_8h_a033dad1e1d35128014b4e9f923e2f28c}} 
 \index{array.h@{array.h}!insert\_array@{insert\_array}}
 \index{insert\_array@{insert\_array}!array.h@{array.h}}
 \doxysubsubsection{\texorpdfstring{insert\_array()}{insert\_array()}}
-{\footnotesize\ttfamily void insert\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{parent\+\_\+array,  }\item[{size\+\_\+t}]{par\+\_\+len,  }\item[{size\+\_\+t}]{index,  }\item[{void $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{child\+\_\+len,  }\item[{size\+\_\+t}]{num\+\_\+bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int insert\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{void $\ast$}]{array,  }\item[{size\+\_\+t}]{active\+\_\+indices,  }\item[{size\+\_\+t}]{insert\+\_\+index }\end{DoxyParamCaption})}
 
-This function will insert an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
+This function allows a user to insert a scalar value or an array into an \mbox{\hyperlink{structArray}{Array}} container at a user defined index
 
 
 \begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The array to which more data will be added \\
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
 \hline
-{\em par\+\_\+len} & The number of active indices in the parent\+\_\+array, not to be confused with the total number of allocated indices \\
+{\em array} & An array or scalar to be inserted into the container \\
 \hline
-{\em index} & The index where the data will be inserted \\
+{\em active\+\_\+indices} & The number of actively used indices in the array to be inserted into the \mbox{\hyperlink{structArray}{Array}} container. \\
 \hline
-{\em child\+\_\+array} & A scalar or array of data to be added to the parent\+\_\+array \\
-\hline
-{\em child\+\_\+len} & The active length of the child array \\
-\hline
-{\em num\+\_\+bytes} & The number of bytes occupied by the array datatype\\
+{\em insert\+\_\+index} & The index where data will be inserted\\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = [1, 2, 3];}
-\DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = \{4, 5, 6, 7, 8, 9\};}
-\DoxyCodeLine{preappend\_array(a, 3, 1, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1, 4, 5, 6, 7, 8, 9, 2, 3]}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = \{5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(10, 4, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a033dad1e1d35128014b4e9f923e2f28c}{insert\_array}}(\&arr, b, 6, 2);}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = [1, 2, 3, 4, 5, 6, 7, 8];}
-\DoxyCodeLine{\textcolor{keywordtype}{int} b = 9;}
-\DoxyCodeLine{preappend\_array(a, 9, 0, \&b 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
 \DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1, 9, 2, 3, 4, 5, 6, 7, 8]}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 5, 6, 7, 8, 9, 10, 3, 4}}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a21bed0fef262a5ac199ce3c7cfd1b3f0}\label{array_8h_a21bed0fef262a5ac199ce3c7cfd1b3f0}} 
-\index{array.h@{array.h}!pop\_array@{pop\_array}}
-\index{pop\_array@{pop\_array}!array.h@{array.h}}
-\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
-{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{array,  }\item[{size\+\_\+t}]{index,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{num\+\_\+bytes }\end{DoxyParamCaption})}
-
-This function will remove a data entry from a user specified index within an aray
-
-
-\begin{DoxyParams}{Parameters}
-{\em array} & A data rray of any type \\
-\hline
-{\em index} & The index containing data to be removed from the array \\
-\hline
-{\em size} & The size of the array \\
-\hline
-{\em num\+\_\+bytes} & An integer representing the memory allocation assigned to the user defined data type\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8, 9\};}
-\DoxyCodeLine{pop\_int\_array((\textcolor{keywordtype}{void} *)a, 3, 9, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 8; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 5, 6, 7, 8, 9]}}
-
-\end{DoxyCode}
- \mbox{\Hypertarget{array_8h_a6fc9f1bbb3a7383ae358df2f1f8322d3}\label{array_8h_a6fc9f1bbb3a7383ae358df2f1f8322d3}} 
+ \mbox{\Hypertarget{array_8h_a9941a659c9d8f70563eef6e39d5906f7}\label{array_8h_a9941a659c9d8f70563eef6e39d5906f7}} 
 \index{array.h@{array.h}!push\_array@{push\_array}}
 \index{push\_array@{push\_array}!array.h@{array.h}}
 \doxysubsubsection{\texorpdfstring{push\_array()}{push\_array()}}
-{\footnotesize\ttfamily void push\+\_\+array (\begin{DoxyParamCaption}\item[{void $\ast$}]{parent\+\_\+array,  }\item[{size\+\_\+t}]{par\+\_\+len,  }\item[{void $\ast$}]{child\+\_\+array,  }\item[{size\+\_\+t}]{child\+\_\+len,  }\item[{size\+\_\+t}]{num\+\_\+bytes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int push\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{void $\ast$}]{array,  }\item[{size\+\_\+t}]{active\+\_\+indices }\end{DoxyParamCaption})}
 
-This function will append an existing array with a scalar value or another array. WARNING\+: The size the data within the parent\+\_\+array combined with the data in the child\+\_\+array cannot exceed the total allocation of memory for the parent\+\_\+array
+This function allows a user to push a scalar value or an array of data the the end of an array container. All data is stored in stack memory.
 
 
 \begin{DoxyParams}{Parameters}
-{\em parent\+\_\+array} & The integer array to which more data will be added \\
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
 \hline
-{\em par\+\_\+len} & The active length of the parent array \\
+{\em array} & A static array or scalar stored in stack memory \\
 \hline
-{\em child\+\_\+array} & A integer scalar or integer array of data to be added to the parent\+\_\+array \\
-\hline
-{\em child\+\_\+len} & THe active length of the child array \\
-\hline
-{\em num\+\_\+bytes} & An integer representing the amount of memory consumed by a single data type\\
+{\em active\+\_\+indices} & The active length of array. In other words, the number of indices with data stored in them, which may be different than the total amount of memory allocated to array. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer Returns 1 if function sucessfully executed, 0 if the function fails to execute properly
+\end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3\};}
-\DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = [4, 5, 6, 7, 8, 9];}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a6fc9f1bbb3a7383ae358df2f1f8322d3}{push\_array}}(a, 3, b, 6, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}i, a[i]);}
-\DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 4, 5, 6, 7, 8, 9]}}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\textcolor{keywordtype}{int} b[6] = \{5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(10, 4, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a9941a659c9d8f70563eef6e39d5906f7}{push\_array}}(\&arr, b, 6);}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int} a[9] = \{1, 2, 3, 4, 5, 6, 7, 8\};}
-\DoxyCodeLine{\textcolor{keywordtype}{int} b = 9;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a6fc9f1bbb3a7383ae358df2f1f8322d3}{push\_array}}(a, 8, \&b, 1, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; i++) \{}
-\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
 \DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// >> [1, 2, 3, 4, 5, 6, 7, 8, 9]}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}}
 
 \end{DoxyCode}
  

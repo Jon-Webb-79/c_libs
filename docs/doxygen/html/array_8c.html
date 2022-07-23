@@ -75,55 +75,43 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a21bed0fef262a5ac199ce3c7cfd1b3f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a21bed0fef262a5ac199ce3c7cfd1b3f0">pop_array</a> (void *array, size_t index, size_t size, size_t num_bytes)</td></tr>
-<tr class="separator:a21bed0fef262a5ac199ce3c7cfd1b3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fc9f1bbb3a7383ae358df2f1f8322d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a6fc9f1bbb3a7383ae358df2f1f8322d3">push_array</a> (void *parent_array, size_t par_len, void *child_array, size_t child_len, size_t num_bytes)</td></tr>
-<tr class="separator:a6fc9f1bbb3a7383ae358df2f1f8322d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed9a03aa4b80814f9a9b17f2120e37ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#aed9a03aa4b80814f9a9b17f2120e37ac">insert_array</a> (void *parent_array, size_t par_len, size_t index, void *child_array, size_t child_len, size_t num_bytes)</td></tr>
-<tr class="separator:aed9a03aa4b80814f9a9b17f2120e37ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef27c704c5d241cc4a359e1b834ecf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArray.html">Array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a> (size_t allocated_length, size_t active_length, void *array, <a class="el" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815">dtype</a> data_type)</td></tr>
+<tr class="separator:a1ef27c704c5d241cc4a359e1b834ecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9941a659c9d8f70563eef6e39d5906f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a9941a659c9d8f70563eef6e39d5906f7">push_array</a> (<a class="el" href="structArray.html">Array</a> *arr, void *array, size_t active_indices)</td></tr>
+<tr class="separator:a9941a659c9d8f70563eef6e39d5906f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033dad1e1d35128014b4e9f923e2f28c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8c.html#a033dad1e1d35128014b4e9f923e2f28c">insert_array</a> (<a class="el" href="structArray.html">Array</a> *arr, void *array, size_t active_indices, size_t insert_index)</td></tr>
+<tr class="separator:a033dad1e1d35128014b4e9f923e2f28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aed9a03aa4b80814f9a9b17f2120e37ac" name="aed9a03aa4b80814f9a9b17f2120e37ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed9a03aa4b80814f9a9b17f2120e37ac">&#9670;&nbsp;</a></span>insert_array()</h2>
+<a id="a1ef27c704c5d241cc4a359e1b834ecf4" name="a1ef27c704c5d241cc4a359e1b834ecf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ef27c704c5d241cc4a359e1b834ecf4">&#9670;&nbsp;</a></span>init_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void insert_array </td>
+          <td class="memname"><a class="el" href="structArray.html">Array</a> init_array </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>parent_array</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>allocated_length</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>par_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
+          <td class="paramname"><em>active_length</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>child_array</em>, </td>
+          <td class="paramname"><em>array</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>child_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>num_bytes</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815">dtype</a>&#160;</td>
+          <td class="paramname"><em>data_type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -132,45 +120,34 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will insert an existing array with a scalar value or another array. WARNING: The size the data within the parent_array combined with the data in the child_array cannot exceed the total allocation of memory for the parent_array</p>
+<p >This function is used to instantiate an <a class="el" href="structArray.html">Array</a> container with a staitc array allocated in stack memory.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent_array</td><td>The array to which more data will be added </td></tr>
-    <tr><td class="paramname">par_len</td><td>The number of active indices in the parent_array, not to be confused with the total number of allocated indices </td></tr>
-    <tr><td class="paramname">index</td><td>The index where the data will be inserted </td></tr>
-    <tr><td class="paramname">child_array</td><td>A scalar or array of data to be added to the parent_array </td></tr>
-    <tr><td class="paramname">child_len</td><td>The active length of the child array </td></tr>
-    <tr><td class="paramname">num_bytes</td><td>The number of bytes occupied by the array datatype</td></tr>
+    <tr><td class="paramname">allocated_length</td><td>The total amount of memory allocated in stack memory </td></tr>
+    <tr><td class="paramname">active_length</td><td>The total number of indices that have been populated with data </td></tr>
+    <tr><td class="paramname">array</td><td>A pointer to the memory where the array is allocated </td></tr>
+    <tr><td class="paramname">data_type</td><td>The data type which must be one of the following, FLOAT, DOUBLE, CHAR, INT, SHORTINT, LONG, or LONGLONG </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = [1, 2, 3];</div>
-<div class="line"><span class="keywordtype">int</span> b[6] = {4, 5, 6, 7, 8, 9};</div>
-<div class="line">preappend_array(a, 3, 1, b, 6, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%c\n&quot;</span>i, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1, 4, 5, 6, 7, 8, 9, 2, 3]</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> a[9] = [1, 2, 3, 4, 5, 6, 7, 8];</div>
-<div class="line"><span class="keywordtype">int</span> b = 9;</div>
-<div class="line">preappend_array(a, 9, 0, &amp;b 1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%c\n&quot;</span>, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1, 9, 2, 3, 4, 5, 6, 7, 8]</span></div>
-</div><!-- fragment --> 
+
 </div>
 </div>
-<a id="a21bed0fef262a5ac199ce3c7cfd1b3f0" name="a21bed0fef262a5ac199ce3c7cfd1b3f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21bed0fef262a5ac199ce3c7cfd1b3f0">&#9670;&nbsp;</a></span>pop_array()</h2>
+<a id="a033dad1e1d35128014b4e9f923e2f28c" name="a033dad1e1d35128014b4e9f923e2f28c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a033dad1e1d35128014b4e9f923e2f28c">&#9670;&nbsp;</a></span>insert_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int pop_array </td>
+          <td class="memname">int insert_array </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>array</em>, </td>
         </tr>
@@ -178,19 +155,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>index</em>, </td>
+          <td class="paramname"><em>active_indices</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>num_bytes</em>&#160;</td>
+          <td class="paramname"><em>insert_index</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,60 +170,57 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will remove a data entry from a user specified index within an aray</p>
+<p >This function allows a user to insert a scalar value or an array into an <a class="el" href="structArray.html">Array</a> container at a user defined index</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">array</td><td>A data rray of any type </td></tr>
-    <tr><td class="paramname">index</td><td>The index containing data to be removed from the array </td></tr>
-    <tr><td class="paramname">size</td><td>The size of the array </td></tr>
-    <tr><td class="paramname">num_bytes</td><td>An integer representing the memory allocation assigned to the user defined data type</td></tr>
+    <tr><td class="paramname">arr</td><td>An <a class="el" href="structArray.html">Array</a> container </td></tr>
+    <tr><td class="paramname">array</td><td>An array or scalar to be inserted into the container </td></tr>
+    <tr><td class="paramname">active_indices</td><td>The number of actively used indices in the array to be inserted into the <a class="el" href="structArray.html">Array</a> container. </td></tr>
+    <tr><td class="paramname">insert_index</td><td>The index where data will be inserted</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};</div>
-<div class="line">pop_int_array((<span class="keywordtype">void</span> *)a, 3, 9, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[10] = {1, 2, 3, 4};</div>
+<div class="line"><span class="keywordtype">int</span> b[6] = {5, 6, 7, 8, 9, 10};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(10, 4, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a033dad1e1d35128014b4e9f923e2f28c">insert_array</a>(&amp;arr, b, 6, 2);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; arr.<a class="code hl_variable" href="structArray.html#a576709f0aee25289727faa37b5386fd3">active_length</a>; i++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *)arr.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[i]);</div>
 <div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 5, 6, 7, 8, 9]</span></div>
+<div class="line"><span class="comment">// &gt;&gt; 1, 2, 5, 6, 7, 8, 9, 10, 3, 4</span></div>
+<div class="ttc" id="aarray_8c_html_a033dad1e1d35128014b4e9f923e2f28c"><div class="ttname"><a href="array_8c.html#a033dad1e1d35128014b4e9f923e2f28c">insert_array</a></div><div class="ttdeci">int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_index)</div><div class="ttdef"><b>Definition:</b> array.c:55</div></div>
+<div class="ttc" id="aarray_8c_html_a1ef27c704c5d241cc4a359e1b834ecf4"><div class="ttname"><a href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a></div><div class="ttdeci">Array init_array(size_t allocated_length, size_t active_length, void *array, dtype data_type)</div><div class="ttdef"><b>Definition:</b> array.c:19</div></div>
+<div class="ttc" id="astructArray_html"><div class="ttname"><a href="structArray.html">Array</a></div><div class="ttdef"><b>Definition:</b> array.h:41</div></div>
+<div class="ttc" id="astructArray_html_a576709f0aee25289727faa37b5386fd3"><div class="ttname"><a href="structArray.html#a576709f0aee25289727faa37b5386fd3">Array::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> array.h:43</div></div>
+<div class="ttc" id="astructArray_html_ae5a3c34db1de06a6ae6ca3c455298377"><div class="ttname"><a href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">Array::array</a></div><div class="ttdeci">void * array</div><div class="ttdef"><b>Definition:</b> array.h:42</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a6fc9f1bbb3a7383ae358df2f1f8322d3" name="a6fc9f1bbb3a7383ae358df2f1f8322d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fc9f1bbb3a7383ae358df2f1f8322d3">&#9670;&nbsp;</a></span>push_array()</h2>
+<a id="a9941a659c9d8f70563eef6e39d5906f7" name="a9941a659c9d8f70563eef6e39d5906f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9941a659c9d8f70563eef6e39d5906f7">&#9670;&nbsp;</a></span>push_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void push_array </td>
+          <td class="memname">int push_array </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>parent_array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>par_len</em>, </td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>child_array</em>, </td>
+          <td class="paramname"><em>array</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>child_len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>num_bytes</em>&#160;</td>
+          <td class="paramname"><em>active_indices</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -261,33 +229,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will append an existing array with a scalar value or another array. WARNING: The size the data within the parent_array combined with the data in the child_array cannot exceed the total allocation of memory for the parent_array</p>
+<p >This function allows a user to push a scalar value or an array of data the the end of an array container. All data is stored in stack memory.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent_array</td><td>The integer array to which more data will be added </td></tr>
-    <tr><td class="paramname">par_len</td><td>The active length of the parent array </td></tr>
-    <tr><td class="paramname">child_array</td><td>A integer scalar or integer array of data to be added to the parent_array </td></tr>
-    <tr><td class="paramname">child_len</td><td>THe active length of the child array </td></tr>
-    <tr><td class="paramname">num_bytes</td><td>An integer representing the amount of memory consumed by a single data type</td></tr>
+    <tr><td class="paramname">arr</td><td>An <a class="el" href="structArray.html">Array</a> container </td></tr>
+    <tr><td class="paramname">array</td><td>A static array or scalar stored in stack memory </td></tr>
+    <tr><td class="paramname">active_indices</td><td>The active length of array. In other words, the number of indices with data stored in them, which may be different than the total amount of memory allocated to array. </td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3};</div>
-<div class="line"><span class="keywordtype">int</span> b[6] = [4, 5, 6, 7, 8, 9];</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a6fc9f1bbb3a7383ae358df2f1f8322d3">push_array</a>(a, 3, b, 6, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
-<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>i, a[i]);</div>
-<div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></div>
+<dl class="section return"><dt>Returns</dt><dd>integer Returns 1 if function sucessfully executed, 0 if the function fails to execute properly</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[10] = {1, 2, 3, 4};</div>
+<div class="line"><span class="keywordtype">int</span> b[6] = {5, 6, 7, 8, 9, 10};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(10, 4, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>);</div>
+<div class="line"><a class="code hl_function" href="array_8c.html#a9941a659c9d8f70563eef6e39d5906f7">push_array</a>(&amp;arr, b, 6);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> a[9] = {1, 2, 3, 4, 5, 6, 7, 8};</div>
-<div class="line"><span class="keywordtype">int</span> b = 9;</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a6fc9f1bbb3a7383ae358df2f1f8322d3">push_array</a>(a, 8, &amp;b, 1, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 9; i++) {</div>
-<div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; arr.<a class="code hl_variable" href="structArray.html#a576709f0aee25289727faa37b5386fd3">active_length</a>; i++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, ((<span class="keywordtype">int</span> *)arr.<a class="code hl_variable" href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">array</a>)[i]);</div>
 <div class="line">}</div>
-<div class="line"><span class="comment">// &gt;&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></div>
-<div class="ttc" id="aarray_8c_html_a6fc9f1bbb3a7383ae358df2f1f8322d3"><div class="ttname"><a href="array_8c.html#a6fc9f1bbb3a7383ae358df2f1f8322d3">push_array</a></div><div class="ttdeci">void push_array(void *parent_array, size_t par_len, void *child_array, size_t child_len, size_t num_bytes)</div><div class="ttdef"><b>Definition:</b> array.c:30</div></div>
+<div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</span></div>
+<div class="ttc" id="aarray_8c_html_a9941a659c9d8f70563eef6e39d5906f7"><div class="ttname"><a href="array_8c.html#a9941a659c9d8f70563eef6e39d5906f7">push_array</a></div><div class="ttdeci">int push_array(Array *arr, void *array, size_t active_indices)</div><div class="ttdef"><b>Definition:</b> array.c:43</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

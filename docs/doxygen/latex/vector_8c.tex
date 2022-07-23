@@ -801,7 +801,7 @@ This function allows a user to to remove an indice from a String \mbox{\hyperlin
 \doxysubsubsection{\texorpdfstring{pop\_vector()}{pop\_vector()}}
 {\footnotesize\ttfamily int pop\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVector}{Vector}} $\ast$}]{vec,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
 
-This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function. This function is of time order 1.
+This function will delete a user defined index from the array. However, the function must be embedded within an \mbox{\hyperlink{structArray}{Array}} container and the container must be passed to the function. This function is of time order 1.
 
 
 \begin{DoxyParams}{Parameters}
@@ -814,11 +814,11 @@ This function will delete a user defined index from the array. However, the func
 integer An error code of 0 if the user defines an indice greater than the array length. 1 if the function is executed succesfully. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{size\_t} indices = 4}
-\DoxyCodeLine{Array arr\_test = init\_typ\_vecot(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, indices);}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr\_test = init\_typ\_vecot(\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}}, indices);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[4] = \{10.1, 9.2, 8.3, 7.4\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_abd491da9e3521e9be05a17d8f72d04d7}{push\_vector}}(\&arr\_test, a, 4);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} b = 8.3;}
-\DoxyCodeLine{\mbox{\hyperlink{array_8c_a21bed0fef262a5ac199ce3c7cfd1b3f0}{pop\_array}}(\&arr\_test, \&b);}
+\DoxyCodeLine{pop\_array(\&arr\_test, \&b);}
 \DoxyCodeLine{\textcolor{comment}{// >> [10.1, 9.2, 7.4]}}
 
 \end{DoxyCode}

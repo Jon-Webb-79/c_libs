@@ -1282,7 +1282,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >This function will delete a user defined index from the array. However, the function must be embedded within an Array container and the container must be passed to the function. This function is of time order 1.</p>
+<p >This function will delete a user defined index from the array. However, the function must be embedded within an <a class="el" href="structArray.html">Array</a> container and the container must be passed to the function. This function is of time order 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">vec</td><td>A <a class="el" href="structVector.html">Vector</a> container </td></tr>
@@ -1291,13 +1291,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>integer An error code of 0 if the user defines an indice greater than the array length. 1 if the function is executed succesfully. <div class="fragment"><div class="line"><span class="keywordtype">size_t</span> indices = 4</div>
-<div class="line">Array arr_test = init_typ_vecot(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, indices);</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr_test = init_typ_vecot(<a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>, indices);</div>
 <div class="line"><span class="keywordtype">float</span> a[4] = {10.1, 9.2, 8.3, 7.4};</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#abd491da9e3521e9be05a17d8f72d04d7">push_vector</a>(&amp;arr_test, a, 4);</div>
 <div class="line"><span class="keywordtype">float</span> b = 8.3;</div>
-<div class="line"><a class="code hl_function" href="array_8c.html#a21bed0fef262a5ac199ce3c7cfd1b3f0">pop_array</a>(&amp;arr_test, &amp;b);</div>
+<div class="line">pop_array(&amp;arr_test, &amp;b);</div>
 <div class="line"><span class="comment">// &gt;&gt; [10.1, 9.2, 7.4]</span></div>
-<div class="ttc" id="aarray_8c_html_a21bed0fef262a5ac199ce3c7cfd1b3f0"><div class="ttname"><a href="array_8c.html#a21bed0fef262a5ac199ce3c7cfd1b3f0">pop_array</a></div><div class="ttdeci">int pop_array(void *array, size_t index, size_t size, size_t num_bytes)</div><div class="ttdef"><b>Definition:</b> array.c:19</div></div>
+<div class="ttc" id="astructArray_html"><div class="ttname"><a href="structArray.html">Array</a></div><div class="ttdef"><b>Definition:</b> array.h:41</div></div>
 </div><!-- fragment --></dd></dl>
 <p>The above code should yield an arr_test array with the values of 10.1, 9.2, and 7.4. </p>
 

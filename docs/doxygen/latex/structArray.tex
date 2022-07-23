@@ -2,80 +2,76 @@
 \label{structArray}\index{Array@{Array}}
 
 
-{\ttfamily \#include $<$vector.\+h$>$}
+{\ttfamily \#include $<$array.\+h$>$}
 
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 void $\ast$ \mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}}
 \item 
-size\+\_\+t \mbox{\hyperlink{structArray_adc2079bc1e342709d756f3e6dd51bcf5}{len}}
+size\+\_\+t \mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\+\_\+length}}
 \item 
-size\+\_\+t \mbox{\hyperlink{structArray_a13f67ab957f4fdd3443d7f62b2fd09ce}{size}}
+size\+\_\+t \mbox{\hyperlink{structArray_a5e5a2c038477468e6ee9a3e78fc9be92}{allocated\+\_\+length}}
 \item 
-int \mbox{\hyperlink{structArray_a0c6b261b75471e83ce4aa51e02948846}{elem}}
+size\+\_\+t \mbox{\hyperlink{structArray_a51b8e923bc10c6a0e5ccc0bc82bc183d}{num\+\_\+bytes}}
 \item 
-char \mbox{\hyperlink{structArray_ab28f698a2b91c20e474b6d34bda6c134}{name}} \mbox{[}20\mbox{]}
-\item 
-\mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} \mbox{\hyperlink{structArray_a83f86af19c6def993ed0c61f9561e2e3}{dat}}
+\mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} \mbox{\hyperlink{structArray_ae2a01cb3f09ac6a09ba15be95f58d4d2}{dat\+\_\+type}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-A container for a dynamically allocated array and related data 
+A container for a dynamically allocated array and related data
+
+A container for a dynamic array and metadata
+
+
 \begin{DoxyParams}{Parameters}
-{\em array} & a pointer to an array in memory \\
+{\em \mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{Array\+::array}}} & A pointer to an array in stack memory \\
 \hline
-{\em len} & The active length of the array \\
+{\em \mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{Array\+::active\+\_\+length}}} & The number of indices with assigned data \\
 \hline
-{\em size} & The total number of indices allocated for the array \\
+{\em \mbox{\hyperlink{structArray_a5e5a2c038477468e6ee9a3e78fc9be92}{Array\+::allocated\+\_\+length}}} & The total number of allocated indices in memory \\
 \hline
-{\em elem} & The memory consumption for each indice \\
+{\em \mbox{\hyperlink{structArray_a51b8e923bc10c6a0e5ccc0bc82bc183d}{Array\+::num\+\_\+bytes}}} & The number of bytes consumed by a single indice \\
 \hline
-{\em name} & The name of the array \\
+{\em \mbox{\hyperlink{structArray_ae2a01cb3f09ac6a09ba15be95f58d4d2}{Array\+::dat\+\_\+type}}} & The data type. Must use data types allocated in dtype enum \\
 \hline
 \end{DoxyParams}
 
 
-\doxysubsection{Member Data Documentation}
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structArray_a576709f0aee25289727faa37b5386fd3}\label{structArray_a576709f0aee25289727faa37b5386fd3}} 
+\index{Array@{Array}!active\_length@{active\_length}}
+\index{active\_length@{active\_length}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{active\_length}{active\_length}}
+{\footnotesize\ttfamily size\+\_\+t Array\+::active\+\_\+length}
+
+\mbox{\Hypertarget{structArray_a5e5a2c038477468e6ee9a3e78fc9be92}\label{structArray_a5e5a2c038477468e6ee9a3e78fc9be92}} 
+\index{Array@{Array}!allocated\_length@{allocated\_length}}
+\index{allocated\_length@{allocated\_length}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{allocated\_length}{allocated\_length}}
+{\footnotesize\ttfamily size\+\_\+t Array\+::allocated\+\_\+length}
+
 \mbox{\Hypertarget{structArray_ae5a3c34db1de06a6ae6ca3c455298377}\label{structArray_ae5a3c34db1de06a6ae6ca3c455298377}} 
 \index{Array@{Array}!array@{array}}
 \index{array@{array}!Array@{Array}}
 \doxysubsubsection{\texorpdfstring{array}{array}}
 {\footnotesize\ttfamily void$\ast$ Array\+::array}
 
-\mbox{\Hypertarget{structArray_a83f86af19c6def993ed0c61f9561e2e3}\label{structArray_a83f86af19c6def993ed0c61f9561e2e3}} 
-\index{Array@{Array}!dat@{dat}}
-\index{dat@{dat}!Array@{Array}}
-\doxysubsubsection{\texorpdfstring{dat}{dat}}
-{\footnotesize\ttfamily \mbox{\hyperlink{vector_8h_a1abd8bcc329e46eb9463a815548d6686}{dat\+\_\+type}} Array\+::dat}
+\mbox{\Hypertarget{structArray_ae2a01cb3f09ac6a09ba15be95f58d4d2}\label{structArray_ae2a01cb3f09ac6a09ba15be95f58d4d2}} 
+\index{Array@{Array}!dat\_type@{dat\_type}}
+\index{dat\_type@{dat\_type}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{dat\_type}{dat\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815}{dtype}} Array\+::dat\+\_\+type}
 
-\mbox{\Hypertarget{structArray_a0c6b261b75471e83ce4aa51e02948846}\label{structArray_a0c6b261b75471e83ce4aa51e02948846}} 
-\index{Array@{Array}!elem@{elem}}
-\index{elem@{elem}!Array@{Array}}
-\doxysubsubsection{\texorpdfstring{elem}{elem}}
-{\footnotesize\ttfamily int Array\+::elem}
-
-\mbox{\Hypertarget{structArray_adc2079bc1e342709d756f3e6dd51bcf5}\label{structArray_adc2079bc1e342709d756f3e6dd51bcf5}} 
-\index{Array@{Array}!len@{len}}
-\index{len@{len}!Array@{Array}}
-\doxysubsubsection{\texorpdfstring{len}{len}}
-{\footnotesize\ttfamily size\+\_\+t Array\+::len}
-
-\mbox{\Hypertarget{structArray_ab28f698a2b91c20e474b6d34bda6c134}\label{structArray_ab28f698a2b91c20e474b6d34bda6c134}} 
-\index{Array@{Array}!name@{name}}
-\index{name@{name}!Array@{Array}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily char Array\+::name\mbox{[}20\mbox{]}}
-
-\mbox{\Hypertarget{structArray_a13f67ab957f4fdd3443d7f62b2fd09ce}\label{structArray_a13f67ab957f4fdd3443d7f62b2fd09ce}} 
-\index{Array@{Array}!size@{size}}
-\index{size@{size}!Array@{Array}}
-\doxysubsubsection{\texorpdfstring{size}{size}}
-{\footnotesize\ttfamily size\+\_\+t Array\+::size}
+\mbox{\Hypertarget{structArray_a51b8e923bc10c6a0e5ccc0bc82bc183d}\label{structArray_a51b8e923bc10c6a0e5ccc0bc82bc183d}} 
+\index{Array@{Array}!num\_bytes@{num\_bytes}}
+\index{num\_bytes@{num\_bytes}!Array@{Array}}
+\doxysubsubsection{\texorpdfstring{num\_bytes}{num\_bytes}}
+{\footnotesize\ttfamily size\+\_\+t Array\+::num\+\_\+bytes}
 
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/\mbox{\hyperlink{vector_8h}{vector.\+h}}\end{DoxyCompactItemize}
+/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/\mbox{\hyperlink{array_8h}{array.\+h}}\end{DoxyCompactItemize}
