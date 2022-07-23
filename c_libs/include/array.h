@@ -113,6 +113,25 @@ int push_array(Array *arr, void *array, size_t active_indices);
  * @endcode
  */
 int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function pops the data from a specific array index within an Array container.
+ *
+ * @param arr An Array container
+ * @param index
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(10, 5, a, INT);
+ * pop_array(arr, 2);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", ((int *)arr.array)[i]);
+ * }
+ * // 1, 2, 4, 5
+ * @endcode
+ */
+int pop_array(Array *arr, size_t index);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

@@ -16,6 +16,8 @@ struct \mbox{\hyperlink{structArray}{Array}}
 int \mbox{\hyperlink{array_8h_a9941a659c9d8f70563eef6e39d5906f7}{push\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$array, size\+\_\+t active\+\_\+indices)
 \item 
 int \mbox{\hyperlink{array_8h_a033dad1e1d35128014b4e9f923e2f28c}{insert\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$array, size\+\_\+t active\+\_\+indices, size\+\_\+t insert\+\_\+index)
+\item 
+int \mbox{\hyperlink{array_8h_a8bce31ced29b6dbe98a59dcbcd4bb687}{pop\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, size\+\_\+t index)
 \end{DoxyCompactItemize}
 
 
@@ -69,6 +71,32 @@ This function allows a user to insert a scalar value or an array into an \mbox{\
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 5, 6, 7, 8, 9, 10, 3, 4}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a8bce31ced29b6dbe98a59dcbcd4bb687}\label{array_8h_a8bce31ced29b6dbe98a59dcbcd4bb687}} 
+\index{array.h@{array.h}!pop\_array@{pop\_array}}
+\index{pop\_array@{pop\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{pop\_array()}{pop\_array()}}
+{\footnotesize\ttfamily int pop\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function pops the data from a specific array index within an \mbox{\hyperlink{structArray}{Array}} container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(10, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a8bce31ced29b6dbe98a59dcbcd4bb687}{pop\_array}}(arr, 2);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 1, 2, 4, 5}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8h_a9941a659c9d8f70563eef6e39d5906f7}\label{array_8h_a9941a659c9d8f70563eef6e39d5906f7}} 

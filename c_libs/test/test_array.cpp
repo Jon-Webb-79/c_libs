@@ -93,4 +93,19 @@ TEST (test_insert_array, insert_int_scalar) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function will test pop_array to ensure it correctly pops an index from
+ * and array within the container */
+TEST (test_pop_array, pop_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(sizeof(a)/sizeof(int), 5, a, INT);
+	pop_array(&arr, 2);	
+	int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], ((int *)arr.array)[i]);
+	}
+	EXPECT_EQ(4, arr.active_length);
+}
+// ================================================================================
+// ================================================================================
 // eof

@@ -71,6 +71,19 @@ int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_i
 	arr->active_length += active_indices;
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+int pop_array(Array *arr, size_t index) {
+	if (index > arr->allocated_length) {
+		printf("WARNING: index in pop_array is greater than allocated_length\n");
+		return 0;
+	}
+	memmove(((char *)arr->array) + (index * arr->num_bytes),
+			((char *)arr->array) + ((index + 1) * arr->num_bytes),
+			(arr->active_length - index) * arr->num_bytes);
+	arr->active_length -= 1;
+	return 1;
+}
 // ================================================================================
 // ================================================================================
 // eof
