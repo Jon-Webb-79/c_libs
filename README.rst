@@ -520,8 +520,3 @@ Array
 The array library within ``array.h`` builds upon the static array capability inherent with the C language.  This library
 The most basic function in the ``vector.h``
 
-.. _my-reference-label:
-
-Section to cross-reference
---------------------------
-sdsdsdds
