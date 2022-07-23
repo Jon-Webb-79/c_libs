@@ -41,7 +41,6 @@ functions that enable dnyamically allocated arrays of all data types to include 
 the other is ``array.h`` :ref:`C Array`
 
 .. _C Vector
-
 ******
 Vector
 ******
@@ -512,7 +511,6 @@ container, ``index`` represents the index that will be popped from the container
    free_string_vector(&vec);
 
 .. _C Array
-
 *****
 Array
 *****
