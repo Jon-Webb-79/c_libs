@@ -551,10 +551,28 @@ consumed by a single index.
 
    int a[6] = {1, 2, 3, 4};
    int b[2] = {5, 6}
-   push_array(&a, 4, &b, 2, sizeof(int));
+   push_array(a, 4, b, 2, sizeof(int));
    for (size_t i = 0; i < 6; i++) {
        printf("%s\n", a[i]);
    }
    // 1, 2, 3, 4, 5, 6
 
+============
+insert_array
+============
+The ``insert_array(*void parent_array, size_t par_len, size_t index, void *child_array, size_t child_len, size_t num_bytes)``
+function allows a user to insert an array into another array or a scalar into an array, so as long as ``parent_array``
+has sufficient allocated memory.  The term ``parent_array`` refers to the array in which data will be inserted,
+``par_len`` is the active length of the array, ``index`` is the index within the ``parent_array`` where data will
+be inserted, ``child_array`` is the array or scalar that will be inserted into the ``paraent_array``,
+and ``num_byes`` is the number of bytes consumed per indice.
 
+.. code-block:: c
+
+   int a[6] = {1, 2, 3, 4};
+   int b[2] = {5, 6}
+   push_array(a, 4, 2, b, 2, sizeof(int));
+   for (size_t i = 0; i < 6; i++) {
+       printf("%s\n", a[i]);
+   }
+   // 1, 2, 5, 6, 3, 4
