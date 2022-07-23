@@ -523,7 +523,7 @@ adds much of the same capability as the ``vector.h`` header file as applied to s
 ==========
 init_array
 ==========
-THe function ``init_array(size_t allocated_length, size_t active_length, void *array, dtype data_type)`` is the most
+The function ``init_array(size_t allocated_length, size_t active_length, void *array, dtype data_type)`` is the most
 fundamental function in the ``array.h`` library.  This function is used to instantiate an array container and 
 its metadata.  The term ``allocated_length`` represents the total amount of array memory allocated in
 stack memory. ``active_length`` represents the total amount of indices that have actively been populated with
@@ -535,3 +535,23 @@ data type used in the array.  ``data_type`` can be ``FLOAT``, ``DOUBLE``, ``INT`
 
    int a[10] = {1, 2, 3, 4};
    Array arr = init_array(10, 4, a, INT);
+
+==========
+push_array
+==========
+The function ``push_array(Array *arr, void *array, size_t active_indices)`` allows a user to push a scalar
+variable or an array of data to the end of the active array within an Array container.  The user must take
+caution to ensure that the data pushed to the array container in conjunction with the data already in
+the array container does not exceed the allocated length of the array.  If this is the case, the function
+will produce a warning and return an integer of 0.  Otherwise the function returns an integer of 1.
+
+.. code-block:: c
+
+   int a[10] = {1, 2, 3, 4};
+   Array arr = init_array(10, 4, a, INT);
+   int b[6] = {5, 6, 7, 8, 9, 10};
+   push_array(&arr, b, 6);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", ((int *)arr.array)[i]);
+   }
+   // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
