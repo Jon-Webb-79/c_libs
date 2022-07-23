@@ -41,7 +41,6 @@ functions that enable dnyamically allocated arrays of all data types to include 
 the other is ``array.h`` `C Array`_
 
 .. _C Vector:
-
 ******
 Vector
 ******
