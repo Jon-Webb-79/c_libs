@@ -658,3 +658,19 @@ The function ``delete_array_duplicates(Array *arr)`` will delete all repeated va
        printf("%d\n", a[i]);
    }
    // 1, 2, 3, 4, 5
+
+====================
+unique_vector_values
+====================
+The function ``unique_array_values(Array *arr)`` will delete all values, expect for those that have
+no duplicates in an array.
+
+.. code-block:: c
+
+   int a[9] = {1, 2, 2, 3, 3, 4, 5, 6, 6};
+   Array arr = init_array(9, 9, a, INT);
+   unique_array_values(&arr);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", a[i]);
+   }
+   // 1, 4, 5
