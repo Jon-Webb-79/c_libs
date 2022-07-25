@@ -181,6 +181,25 @@ int replace_array_index(Array *arr, size_t index, void *value);
  * @endcode
  */
 void replace_array_values(Array *arr, void *old_value, void *new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to delete all duplicate value in an array, whil
+ * preserving the initial value.
+ *
+ * @param arr An Array container
+ *
+ * @code
+ * int a[8] = {1, 2, 1, 3, 3, 4, 5, 4};
+ * Array arr = init_array(8, 8, a, INT);
+ * delete_array_duplicates(&arr);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // >> 1, 2, 3, 4, 5
+ * @endcode
+ */
+void delete_array_duplicates(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

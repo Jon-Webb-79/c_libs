@@ -107,6 +107,22 @@ void replace_array_values(Array *arr, void *old_value, void *new_value) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void delete_array_duplicates(Array *arr) {
+	int compare;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		for (size_t j = i + 1; j < arr->active_length; j++) {
+			compare = memcmp(arr->array + (i * arr->num_bytes),
+							 arr->array + (j * arr->num_bytes),
+							 arr->num_bytes);
+			if (compare == 0) {
+				pop_array(arr, j);
+				j -= 1;
+			}
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

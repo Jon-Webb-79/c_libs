@@ -231,4 +231,19 @@ TEST (test_replace_array_values, replace_longlong) {
 }
 // ================================================================================
 // ================================================================================
+// TEST DELETE_ARRAY_DUPLICATES
+
+/* This function tests the delete_array_duplicates function to ensure it properly
+ * deletes all repeat values in an integer vector */
+TEST (test_delete_duplicates, delete_int) {
+	int a[8] = {1, 1, 2, 3, 2, 4, 5, 5};
+	Array arr = init_array(sizeof(a)/sizeof(int), 8, a, INT);
+	delete_array_duplicates(&arr);
+	int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// ================================================================================
+// ================================================================================
 // eof
