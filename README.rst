@@ -644,4 +644,17 @@ all instances of a variable in an array with another value.
    }
    // 10, 2, 10, 4, 5
    
+=======================
+delete_array_duplicates
+=======================
+The function ``delete_array_duplicates(Array *arr)`` will delete all repeated values in an array
 
+.. code-block:: c
+
+   int a[8] = {1, 2, 1, 3, 4, 5, 5, 4};
+   Array arr = init_array(8, 8, a, INT);
+   delete_array_duplicates(&arr);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", a[i]);
+   }
+   // 1, 2, 3, 4, 5
