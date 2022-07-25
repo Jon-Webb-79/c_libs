@@ -200,6 +200,25 @@ void replace_array_values(Array *arr, void *old_value, void *new_value);
  * @endcode
  */
 void delete_array_duplicates(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all repeated values to include the original
+ * value.
+ *
+ * @param arr An Array container
+ *
+ * @code
+ * int a[9] = {1, 2, 2, 3, 4, 4, 5, 6, 6};
+ * Array arr = init_array(9, 9, a, INT);
+ * unique_array_values(&arr);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // >> 1, 3, 5
+ * @endcode
+ */
+void unique_array_values(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

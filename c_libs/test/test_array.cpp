@@ -246,4 +246,19 @@ TEST (test_delete_duplicates, delete_int) {
 }
 // ================================================================================
 // ================================================================================
+// TEST UNIQUE_VECTOR_VALUES
+
+/* This function tests the unique_vector_values function to ensure it properly
+ * deletes all values except for the unique values */
+TEST (test_unique_values, unique_int) {
+	int a[9] = {1, 2, 2, 3, 3, 4, 5, 6, 6};
+	Array arr = init_array(sizeof(a)/sizeof(int), 9, a, INT);
+	unique_array_values(&arr);
+	int b[5] = {1, 4, 5};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// ================================================================================
+// ================================================================================
 // eof

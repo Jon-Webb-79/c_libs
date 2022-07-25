@@ -123,6 +123,29 @@ void delete_array_duplicates(Array *arr) {
 		}
 	}
 }
+// --------------------------------------------------------------------------------
+
+void unique_array_values(Array *arr) {
+	int compare;
+	int flag = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		for (size_t j = i + 1; j < arr->active_length; j++) {
+			compare = memcmp(arr->array + (i * arr->num_bytes),
+							 arr->array + (j * arr->num_bytes),
+							 arr->num_bytes);
+			if (compare == 0) {
+				pop_array(arr, j);
+				flag = 1;
+				j -= 1;
+			}
+		}
+		if (flag == 1) {
+			pop_array(arr, i);
+			flag = 0;
+			i -= 1;
+		}
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof
