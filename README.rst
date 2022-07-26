@@ -674,3 +674,25 @@ no duplicates in an array.
        printf("%d\n", a[i]);
    }
    // 1, 4, 5
+
+==========
+sort_array
+==========
+The function ``sort_array(Array *arr, order method)`` will sort an array using a simple insert method
+in ascending or descending order.  The term ``method`` is an enum which can be ``FORWARD`` or ``REVERSE``
+representing ascending or descending order.  Since the Array container metadata is not manipulated in
+this process, the user can also implement other more advanced sorting methods like the bubble method
+or the ``qsort`` method.
+
+.. code-block:: c
+
+   int a[5] = {5, 1, 4, 3, 2};
+   Array arr = init_array(5, 5, a, INT);
+   sort_array(&arr, FORWARD);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", a[i]);
+   }
+   // 1, 2, 3, 4, 5
+
+In addition, the user can use the ``sort_xxx__array(Array *arr, order method)`` functions where ``xxx``
+represents all applicable data types.
