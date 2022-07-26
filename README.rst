@@ -696,3 +696,18 @@ or the ``qsort`` method.
 
 In addition, the user can use the ``sort_xxx__array(Array *arr, order method)`` functions where ``xxx``
 represents all applicable data types.
+
+=============
+reverse_array
+=============
+The function ``reverse_array(Array *arr)`` will reverse the order of an array.
+
+.. code-block:: c
+
+   int a[5] = {5, 4, 3, 2, 1};
+   Array arr = init_array(5, 5, a, INT);
+   reverse_array(&arr);
+   for (size_t i = 0; i < arr.active_length; i++) {
+       printf("%d\n", a[i]);
+   }
+   // 1, 2, 3, 4, 5
