@@ -424,6 +424,151 @@ int sort_longlong_array(Array *arr, order method);
  * @endcode
  */
 int sort_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of an integer array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, INT);
+ * reverse_int_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_int_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a float array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Array arr = init_array(5, 5, a, FLOAT);
+ * reverse_float_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%f\n", a[i]);
+ * }
+ * // >> 5.5, 4.4, 3.3, 2.2, 1.1
+ * @endcode
+ */
+void reverse_float_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a double array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Array arr = init_array(5, 5, a, DOUBLE);
+ * reverse_double_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%lf\n", a[i]);
+ * }
+ * // >> 5.5, 4.4, 3.3, 2.2, 1.1
+ * @endcode
+ */
+void reverse_double_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a char array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * char a[6] = "Hello";
+ * Array arr = init_array(6, 6, a, CHAR);
+ * reverse_char_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%c\n", a[i]);
+ * }
+ * // >> "olleH"
+ * @endcode
+ */
+void reverse_char_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a short array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * short a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, SHORT);
+ * reverse_short_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_short_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a long array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG);
+ * reverse_long_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_long_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of a long long array
+ *
+ * @param arr An array container
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG LONG);
+ * reverse_longlong_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+void reverse_longlong_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of an array
+ *
+ * @param arr An array container
+ * @return integer 0 if unsucessful, 1 if sucessful
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG LONG);
+ * reverse_array(&arr);
+ * for (size_t i = 0; i < arr->active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 5, 4, 3, 2, 1
+ * @endcode
+ */
+int reverse_array(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

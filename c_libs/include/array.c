@@ -389,6 +389,112 @@ int sort_array(Array *arr, order method) {
 	}
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+void reverse_int_array(Array *arr) {
+	int value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((int *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_float_array(Array *arr) {
+	float value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((float *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_double_array(Array *arr) {
+	double value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((double *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_char_array(Array *arr) {
+	char value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((char *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+	char compare = ((char *)arr->array)[0];
+	char term = '\0';
+	if (compare == term) {
+		pop_array(arr, 0);
+		push_array(arr, &term, 1);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_short_array(Array *arr) {
+	short value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((short *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_long_array(Array *arr) {
+	long value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((long *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void reverse_longlong_array(Array *arr) {
+	long long value;
+	int num = 0;
+	for (size_t i = arr->active_length - 1; i > 0; i--) {
+		value = ((long long *)arr->array)[arr->active_length - 1];
+		pop_array(arr, arr->active_length - 1);
+		insert_array(arr, &value, 1, num);
+		num++;
+	}
+}
+// --------------------------------------------------------------------------------
+
+int reverse_array(Array *arr) {
+	if (arr->dat_type == INT) reverse_int_array(arr);
+	else if (arr->dat_type == FLOAT) reverse_float_array(arr);
+	else if (arr->dat_type == DOUBLE) reverse_double_array(arr);
+	else if (arr->dat_type == CHAR) reverse_char_array(arr);
+	else if (arr->dat_type == SHORTINT) reverse_short_array(arr);
+	else if (arr->dat_type == LONG) reverse_long_array(arr);
+	else if (arr->dat_type == LONGLONG) reverse_longlong_array(arr);
+	else {
+		printf("Incorrect data type, cannot reverse vector\n");
+		return 0;
+	}
+	return 1;
+}
 // ================================================================================
 // ================================================================================
 // eof

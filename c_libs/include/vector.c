@@ -493,9 +493,9 @@ void reverse_int_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((int *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -505,9 +505,9 @@ void reverse_float_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((float *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -517,9 +517,9 @@ void reverse_double_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((double *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -529,9 +529,9 @@ void reverse_char_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((char *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -541,9 +541,9 @@ void reverse_short_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((short *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -553,9 +553,9 @@ void reverse_long_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((long *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------
@@ -565,9 +565,9 @@ void reverse_longlong_vector(Vector *vec) {
 	int num = 0;
 	for (size_t i = vec->active_length - 1; i > 0; i--) {
 		value = ((long long *)vec->vector)[vec->active_length - 1];
+		pop_vector(vec, vec->active_length - 1);
 		insert_vector(vec, &value, 1, num);
 		num++;
-		pop_vector(vec, vec->active_length - 1);
 	}
 }
 // --------------------------------------------------------------------------------

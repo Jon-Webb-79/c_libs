@@ -44,6 +44,22 @@ int \mbox{\hyperlink{array_8h_a73867541a023b4f11f600c07928e23c4}{sort\+\_\+long\
 int \mbox{\hyperlink{array_8h_a667ebdf87dcebefdbc018634ea21ba4e}{sort\+\_\+longlong\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
 \item 
 int \mbox{\hyperlink{array_8h_a0e08a40e855a37a0fc2b34aa329e5845}{sort\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+void \mbox{\hyperlink{array_8h_a0b33e8804975184154e41e43bacb1a3b}{reverse\+\_\+int\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+void \mbox{\hyperlink{array_8h_a7293ab900a84ccbd4079a104e56a7aa7}{reverse\+\_\+float\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+void \mbox{\hyperlink{array_8h_a473db97d73197bc83725f80b67a47263}{reverse\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+void \mbox{\hyperlink{array_8h_ac1b2b20a6dea694450731cbfd1f5a325}{reverse\+\_\+char\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+void \mbox{\hyperlink{array_8h_abfa91ac27ab99894bc6943af5a9b4a3e}{reverse\+\_\+short\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+void \mbox{\hyperlink{array_8h_afa7bbdad6bd569b4e8fe73bb7133b9c9}{reverse\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+void \mbox{\hyperlink{array_8h_a2c0ade2dd34bb4a95e03675c66899bea}{reverse\+\_\+longlong\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+int \mbox{\hyperlink{array_8h_a2da90c16f3d50770c60cf1b7022ad66d}{reverse\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \end{DoxyCompactItemize}
 
 
@@ -272,6 +288,201 @@ This function will allow a user to replace specific values in a statically alloc
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// 10, 2, 10, 3, 10, 10, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a2da90c16f3d50770c60cf1b7022ad66d}\label{array_8h_a2da90c16f3d50770c60cf1b7022ad66d}} 
+\index{array.h@{array.h}!reverse\_array@{reverse\_array}}
+\index{reverse\_array@{reverse\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_array()}{reverse\_array()}}
+{\footnotesize\ttfamily int reverse\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of an array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucessful, 1 if sucessful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}} \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2da90c16f3d50770c60cf1b7022ad66d}{reverse\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_ac1b2b20a6dea694450731cbfd1f5a325}\label{array_8h_ac1b2b20a6dea694450731cbfd1f5a325}} 
+\index{array.h@{array.h}!reverse\_char\_array@{reverse\_char\_array}}
+\index{reverse\_char\_array@{reverse\_char\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_char\_array()}{reverse\_char\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+char\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of a char array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[6] = \textcolor{stringliteral}{"{}Hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ac1b2b20a6dea694450731cbfd1f5a325}{reverse\_char\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> "{}olleH"{}}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a473db97d73197bc83725f80b67a47263}\label{array_8h_a473db97d73197bc83725f80b67a47263}} 
+\index{array.h@{array.h}!reverse\_double\_array@{reverse\_double\_array}}
+\index{reverse\_double\_array@{reverse\_double\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_double\_array()}{reverse\_double\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of a double array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.1, 2.2, 3.3, 4.4, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a473db97d73197bc83725f80b67a47263}{reverse\_double\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5.5, 4.4, 3.3, 2.2, 1.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a7293ab900a84ccbd4079a104e56a7aa7}\label{array_8h_a7293ab900a84ccbd4079a104e56a7aa7}} 
+\index{array.h@{array.h}!reverse\_float\_array@{reverse\_float\_array}}
+\index{reverse\_float\_array@{reverse\_float\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_float\_array()}{reverse\_float\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of a float array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.1, 2.2, 3.3, 4.4, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a7293ab900a84ccbd4079a104e56a7aa7}{reverse\_float\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5.5, 4.4, 3.3, 2.2, 1.1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a0b33e8804975184154e41e43bacb1a3b}\label{array_8h_a0b33e8804975184154e41e43bacb1a3b}} 
+\index{array.h@{array.h}!reverse\_int\_array@{reverse\_int\_array}}
+\index{reverse\_int\_array@{reverse\_int\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_int\_array()}{reverse\_int\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of an integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a0b33e8804975184154e41e43bacb1a3b}{reverse\_int\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_afa7bbdad6bd569b4e8fe73bb7133b9c9}\label{array_8h_afa7bbdad6bd569b4e8fe73bb7133b9c9}} 
+\index{array.h@{array.h}!reverse\_long\_array@{reverse\_long\_array}}
+\index{reverse\_long\_array@{reverse\_long\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_long\_array()}{reverse\_long\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of a long array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_afa7bbdad6bd569b4e8fe73bb7133b9c9}{reverse\_long\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a2c0ade2dd34bb4a95e03675c66899bea}\label{array_8h_a2c0ade2dd34bb4a95e03675c66899bea}} 
+\index{array.h@{array.h}!reverse\_longlong\_array@{reverse\_longlong\_array}}
+\index{reverse\_longlong\_array@{reverse\_longlong\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_longlong\_array()}{reverse\_longlong\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+longlong\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of a long long array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}} \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a2c0ade2dd34bb4a95e03675c66899bea}{reverse\_longlong\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_abfa91ac27ab99894bc6943af5a9b4a3e}\label{array_8h_abfa91ac27ab99894bc6943af5a9b4a3e}} 
+\index{array.h@{array.h}!reverse\_short\_array@{reverse\_short\_array}}
+\index{reverse\_short\_array@{reverse\_short\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_short\_array()}{reverse\_short\_array()}}
+{\footnotesize\ttfamily void reverse\+\_\+short\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will reverse the order of a short array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{short} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, SHORT);}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_abfa91ac27ab99894bc6943af5a9b4a3e}{reverse\_short\_array}}(\&arr);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr-\/>\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 5, 4, 3, 2, 1}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8h_a0e08a40e855a37a0fc2b34aa329e5845}\label{array_8h_a0e08a40e855a37a0fc2b34aa329e5845}} 

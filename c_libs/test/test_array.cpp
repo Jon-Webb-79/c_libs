@@ -472,4 +472,101 @@ TEST (test_sort, sort_reverse) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the reverse_int_vector function */
+TEST (test_reverse_array, reverse_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, INT);
+	reverse_int_array(&arr);
+	int b[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_float_vector function */
+TEST (test_reverse_array, reverse_float) {
+	float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	Array arr = init_array(5, 5, a, FLOAT);
+	reverse_float_array(&arr);
+	float b[5] = {5.5, 4.4, 3.3, 2.2, 1.1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_double_vector function */
+TEST (test_reverse_array, reverse_double) {
+	double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	Array arr = init_array(5, 5, a, DOUBLE);
+	reverse_double_array(&arr);
+	double b[5] = {5.5, 4.4, 3.3, 2.2, 1.1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_DOUBLE_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_char_vector function */
+TEST (test_reverse_array, reverse_char) {
+	char a[6] = "Hello";
+	Array arr = init_array(6, 6, a, CHAR);
+	reverse_char_array(&arr);
+	char b[6] = "olleH";
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_short_vector function */
+TEST (test_reverse_array, reverse_short) {
+	short a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, SHORTINT);
+	reverse_short_array(&arr);
+	short b[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_long_vector function */
+TEST (test_reverse_array, reverse_long) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONG);
+	reverse_long_array(&arr);
+	long b[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_longlong_vector function */
+TEST (test_reverse_array, reverse_longlong) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONGLONG);
+	reverse_longlong_array(&arr);
+	long long b[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the reverse_vector function */
+TEST (test_reverse_array, reverse) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONGLONG);
+	reverse_array(&arr);
+	long long b[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// ================================================================================
+// ================================================================================
 // eof
