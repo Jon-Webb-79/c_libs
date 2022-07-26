@@ -177,10 +177,31 @@ int replace_array_index(Array *arr, size_t index, void *value);
  * for (size_t i = 0l i < arr->active_length; i++) {
  *     printf("%d\n", a[i]);
  * }
- * // 5, 2, 5, 3, 5, 5, 5
+ * // 10, 2, 10, 3, 10, 10, 5
  * @endcode
  */
 void replace_array_values(Array *arr, void *old_value, void *new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to delete specific values in a
+ * statically allocated array container.
+ *
+ * @param arr An Array container
+ * @param value The value to be deleted
+ *
+ * @code
+ * long long a[7] = {1, 2, 1, 3, 1, 1, 5};
+ * long long aa = 1;
+ * Array arr = init_array(7, 7, a, LONGLONG);
+ * delete_array_values(&arr, &aa);
+ * for (size_t i = 0l i < arr->active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // 2, 3, 5
+ * @endcode
+ */
+void delete_array_values(Array *arr, void *value);
 // --------------------------------------------------------------------------------
 
 /**
@@ -219,6 +240,190 @@ void delete_array_duplicates(Array *arr);
  * @endcode
  */
 void unique_array_values(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order an integer array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * int a[6] = { 1, 3, 5, 2, 4, 6};
+ * Array arr  = init_array(6, 6, a, INT);
+ * sort_int_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // >> 1, 2, 3, 4, 5, 6
+ * @endcode
+ */
+int sort_int_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order a float array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * float a[6] = { 1.1, 3.3, 5.5, 2.2, 4.4, 6.6};
+ * Array arr  = init_array(6, 6, a, FLOAT);
+ * sort_float_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%f\n", a[i]);
+ * }
+ * // >> 1.1, 2.2, 3.3, 4.4, 5.5, 6.6
+ * @endcode
+ */
+int sort_float_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order a double array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * double a[6] = { 1.1, 3.3, 5.5, 2.2, 4.4, 6.6};
+ * Array arr  = init_array(6, 6, a, DOUBLE);
+ * sort_double_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%lf\n", a[i]);
+ * }
+ * // >> 1.1, 2.2, 3.3, 4.4, 5.5, 6.6
+ * @endcode
+ */
+int sort_double_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order a char array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * char a[] = "Hello World!";
+ * Array arr  = init_array(6, 6, a, CHAR);
+ * sort_char_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%c\n", a[i]);
+ * }
+ * // >> " !HWdellloor";
+ * @endcode
+ */
+int sort_char_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order an short integer array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * short a[6] = { 1, 3, 5, 2, 4, 6};
+ * Array arr  = init_array(6, 6, a, SHORTINT);
+ * sort_short_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%d\n", a[i]);
+ * }
+ * // >> 1, 2, 3, 4, 5, 6
+ * @endcode
+ */
+int sort_short_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order an long integer array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * long a[6] = { 1, 3, 5, 2, 4, 6};
+ * Array arr  = init_array(6, 6, a, LONG);
+ * sort_long_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 1, 2, 3, 4, 5, 6
+ * @endcode
+ */
+int sort_long_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order an long long integer array from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * long long a[6] = { 1, 3, 5, 2, 4, 6};
+ * Array arr  = init_array(6, 6, a, LONGLONG);
+ * sort_longlong_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 1, 2, 3, 4, 5, 6
+ * @endcode
+ */
+int sort_longlong_array(Array *arr, order method);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will re-order an array of any data type from least to greatest (ascending),
+ * or greates to least (descending).  This function uses a simple insert method.
+ * This function does not modify any of the Array container metadata.  As a result,
+ * the user can also use other C sort methods.
+ *
+ * @param arr An array container
+ * @param method Either FORWARD, or REVERSE
+ * @return integer 0 if unsucesful and 1 if succesful
+ *
+ * @code
+ * long long a[6] = { 1, 3, 5, 2, 4, 6};
+ * Array arr  = init_array(6, 6, a, LONGLONG);
+ * sort_array(&arr, FORWARD);
+ * for (size_t i = 0; i < arr.active_length; i++) {
+ *     printf("%ld\n", a[i]);
+ * }
+ * // >> 1, 2, 3, 4, 5, 6
+ * @endcode
+ */
+int sort_array(Array *arr, order method);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

@@ -231,6 +231,20 @@ TEST (test_replace_array_values, replace_longlong) {
 }
 // ================================================================================
 // ================================================================================
+// TEST DELETE_ARRAY_VALUES
+
+TEST (test_delete_values, delete_int) {
+	int a[8] = {1, 1, 2, 3, 2, 4, 5, 5};
+	Array arr = init_array(sizeof(a)/sizeof(int), 8, a, INT);
+	int b = 1;
+	delete_array_values(&arr, &b);
+	int c[6] = {2, 3, 2, 4, 5, 5};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(c[i], a[i]);
+	}
+}
+// ================================================================================
+// ================================================================================
 // TEST DELETE_ARRAY_DUPLICATES
 
 /* This function tests the delete_array_duplicates function to ensure it properly
@@ -255,6 +269,203 @@ TEST (test_unique_values, unique_int) {
 	Array arr = init_array(sizeof(a)/sizeof(int), 9, a, INT);
 	unique_array_values(&arr);
 	int b[5] = {1, 4, 5};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// ================================================================================
+// ================================================================================
+// TEST SORT_XXX_ARRAY
+
+/* This function tests the sort_int_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_int_forward) {
+	int a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(int), 6, a, INT);
+	sort_int_array(&arr, FORWARD);
+	int b[6] = {1, 2, 3, 4, 5, 6};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_int_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_int_reverse) {
+	int a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(int), 6, a, INT);
+	sort_int_array(&arr, REVERSE);
+	int b[6] = {6, 5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_float_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_float_forward) {
+	float a[6] = {3.3, 5.5, 1.1, 2.2, 4.4, 6.6};
+	Array arr = init_array(sizeof(a)/sizeof(float), 6, a, FLOAT);
+	sort_float_array(&arr, FORWARD);
+	float b[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_float_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_float_reverse) {
+	float a[6] = {3.3, 5.5, 1.1, 2.2, 4.4, 6.6};
+	Array arr = init_array(sizeof(a)/sizeof(float), 6, a, FLOAT);
+	sort_float_array(&arr, REVERSE);
+	float b[6] = {6.6, 5.5, 4.4, 3.3, 2.2, 1.1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_double_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_double_forward) {
+	double a[6] = {3.3, 5.5, 1.1, 2.2, 4.4, 6.6};
+	Array arr = init_array(sizeof(a)/sizeof(double), 6, a, DOUBLE);
+	sort_double_array(&arr, FORWARD);
+	double b[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_DOUBLE_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_double_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_double_reverse) {
+	double a[6] = {3.3, 5.5, 1.1, 2.2, 4.4, 6.6};
+	Array arr = init_array(sizeof(a)/sizeof(double), 6, a, DOUBLE);
+	sort_double_array(&arr, REVERSE);
+	double b[6] = {6.6, 5.5, 4.4, 3.3, 2.2, 1.1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_DOUBLE_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_char_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_char_forward) {
+	char a[13] = "Hello World!";
+	Array arr = init_array(sizeof(a)/sizeof(char), 13, a, CHAR);
+	sort_char_array(&arr, FORWARD);
+	char b[13] = " !HWdellloor";
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_char_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_char_reverse) {
+	char a[13] = "Hello World!";
+	Array arr = init_array(sizeof(a)/sizeof(char), 13, a, CHAR);
+	sort_char_array(&arr, REVERSE);
+	char b[13] = "roollledWH! ";
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_short_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_short_forward) {
+	short a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(short), 6, a, SHORTINT);
+	sort_short_array(&arr, FORWARD);
+	short b[6] = {1, 2, 3, 4, 5, 6};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_sort_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_short_reverse) {
+	short a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(short), 6, a, SHORTINT);
+	sort_short_array(&arr, REVERSE);
+	short b[6] = {6, 5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_long_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_long_forward) {
+	long a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(long), 6, a, LONG);
+	sort_long_array(&arr, FORWARD);
+	long b[6] = {1, 2, 3, 4, 5, 6};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_long_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_long_reverse) {
+	long a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(long), 6, a, LONG);
+	sort_long_array(&arr, REVERSE);
+	long b[6] = {6, 5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_longlong_array function to ensure it correctly
+ * sorts ain integer array in forward order */
+TEST (test_sort, sort_longlong_forward) {
+	long long a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(long long), 6, a, LONGLONG);
+	sort_longlong_array(&arr, FORWARD);
+	long long b[6] = {1, 2, 3, 4, 5, 6};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_longlong_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_longlong_reverse) {
+	long long a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(long long), 6, a, LONGLONG);
+	sort_longlong_array(&arr, REVERSE);
+	long long b[6] = {6, 5, 4, 3, 2, 1};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		EXPECT_EQ(b[i], a[i]);
+	}
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sort_array function to ensure it correctly
+ * sorts ain integer array in reverse order */
+TEST (test_sort, sort_reverse) {
+	long long a[6] = {3, 5, 1, 2, 4, 6};
+	Array arr = init_array(sizeof(a)/sizeof(long long), 6, a, LONGLONG);
+	sort_array(&arr, REVERSE);
+	long long b[6] = {6, 5, 4, 3, 2, 1};
 	for (size_t i = 0; i < arr.active_length; i++) {
 		EXPECT_EQ(b[i], a[i]);
 	}

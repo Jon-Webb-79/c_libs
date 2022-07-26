@@ -109,6 +109,23 @@ void replace_array_values(Array *arr, void *old_value, void *new_value) {
 }
 // --------------------------------------------------------------------------------
 
+void delete_array_values(Array *arr, void *value) {
+	int compare;
+	char *val = (char *)value;
+	char *dst;
+	// Instantiate vector container with an estimated size of 10
+	for (size_t i = 0; ; i++) {
+		if (i >= arr->active_length) break;
+		dst = (char *) arr->array + (i * arr->num_bytes);
+		compare = memcmp(dst, val, arr->num_bytes);
+		if (compare == 0) {
+			pop_array(arr, i);
+			i -= 1;
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
 void delete_array_duplicates(Array *arr) {
 	int compare;
 	for (size_t i = 0; i < arr->active_length; i++) {
@@ -145,6 +162,232 @@ void unique_array_values(Array *arr) {
 			i -= 1;
 		}
 	}
+}
+// --------------------------------------------------------------------------------
+
+int sort_int_array(Array *arr, order method) {
+	int i, j, min_idx;
+    int var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((int *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((int *)arr->array)[min_idx];
+			var_two = ((int *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((int *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((int *)arr->array)[min_idx];
+			}
+		}
+		* (int *) ((char *) arr->array + min_idx * arr->num_bytes) = ((int *)arr->array)[i];
+		* (int *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_float_array(Array *arr, order method) {
+	int i, j, min_idx;
+    float var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((float *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((float *)arr->array)[min_idx];
+			var_two = ((float *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((float *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((float *)arr->array)[min_idx];
+			}
+		}
+		* (float *) ((char *) arr->array + min_idx * arr->num_bytes) = ((float *)arr->array)[i];
+		* (float *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_double_array(Array *arr, order method) {
+	int i, j, min_idx;
+    double var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((double *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((double *)arr->array)[min_idx];
+			var_two = ((double *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((double *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((double *)arr->array)[min_idx];
+			}
+		}
+		* (double *) ((char *) arr->array + min_idx * arr->num_bytes) = ((double *)arr->array)[i];
+		* (double *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_char_array(Array *arr, order method) {
+	int i, j, min_idx;
+    char var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((char *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((char *)arr->array)[min_idx];
+			var_two = ((char *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((char *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((char *)arr->array)[min_idx];
+			}
+		}
+		* (char *) ((char *) arr->array + min_idx * arr->num_bytes) = ((char *)arr->array)[i];
+		* (char *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	// The NULL must be moved to the end if it exists in original array
+	char term = '\0';
+	size_t t_length = arr->active_length;
+	delete_array_values(arr, &term);
+    if (arr->active_length != t_length)
+		push_array(arr, &term, 1);
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_short_array(Array *arr, order method) {
+	int i, j, min_idx;
+    short var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((short *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((short *)arr->array)[min_idx];
+			var_two = ((short *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((short *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((short *)arr->array)[min_idx];
+			}
+		}
+		* (short *) ((char *) arr->array + min_idx * arr->num_bytes) = ((short *)arr->array)[i];
+		* (short *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_long_array(Array *arr, order method) {
+	int i, j, min_idx;
+    long var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((long *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((long *)arr->array)[min_idx];
+			var_two = ((long *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((long *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((long *)arr->array)[min_idx];
+			}
+		}
+		* (long *) ((char *) arr->array + min_idx * arr->num_bytes) = ((long *)arr->array)[i];
+		* (long *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_longlong_array(Array *arr, order method) {
+	int i, j, min_idx;
+    long var_one, var_two, temp;
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
+		return 0;
+	}
+	for (i = 0; i < arr->active_length - 1; i++) {
+		min_idx = i;
+		temp = ((long long *)arr->array)[min_idx];
+		for (j = i + 1; j < arr->active_length; j++) {
+			var_one = ((long long *)arr->array)[min_idx];
+			var_two = ((long long *)arr->array)[j];
+			if (var_two < var_one && method == FORWARD) {
+				min_idx = j;
+				temp = ((long long *)arr->array)[min_idx];
+			}
+			else if (var_two > var_one && method == REVERSE) {
+				min_idx = j;
+				temp = ((long long *)arr->array)[min_idx];
+			}
+		}
+		* (long long *) ((char *) arr->array + min_idx * arr->num_bytes) = ((long long *)arr->array)[i];
+		* (long long *) ((char *) arr->array + i * arr->num_bytes) = temp;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int sort_array(Array *arr, order method) {
+
+	if (arr->dat_type == FLOAT) sort_float_array(arr, method);
+	else if (arr->dat_type == DOUBLE) sort_double_array(arr, method);
+	else if (arr->dat_type == CHAR) sort_char_array(arr, method);
+	else if (arr->dat_type == INT) sort_int_array(arr, method);
+	else if (arr->dat_type == SHORTINT) sort_short_array(arr, method);
+	else if (arr->dat_type == LONG) sort_long_array(arr, method);
+	else if (arr->dat_type == LONGLONG) sort_longlong_array(arr, method);
+	else {
+		printf("WARNING: Cannot sort vector type\n");
+		return 0;
+	}
+	return 1;
 }
 // ================================================================================
 // ================================================================================

@@ -16,9 +16,27 @@ int \mbox{\hyperlink{array_8c_aee92712adcda409367a1d6e98f2b545e}{replace\+\_\+ar
 \item 
 void \mbox{\hyperlink{array_8c_a5d63d726b200ed6b1d50a984a0f30f84}{replace\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$old\+\_\+value, void $\ast$new\+\_\+value)
 \item 
+void \mbox{\hyperlink{array_8c_a7bc2f2a236cfbb0b186c40aad46753c8}{delete\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, void $\ast$value)
+\item 
 void \mbox{\hyperlink{array_8c_a90ed4b58d4cf789dbdc9c10b7291b9b1}{delete\+\_\+array\+\_\+duplicates}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \item 
 void \mbox{\hyperlink{array_8c_ab173e37afb423f0491a68b0cafba084e}{unique\+\_\+array\+\_\+values}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+int \mbox{\hyperlink{array_8c_afa7a40d2022315d89b7d44c853c7cd27}{sort\+\_\+int\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_ad20cf57b9428b16ecfcd7aeffaae3eca}{sort\+\_\+float\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_af3ac20c19312243d50152f821e196986}{sort\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_ad0ff1fc647d5c803e697677ab813d7f9}{sort\+\_\+char\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_a33a6eebf29272e376dd64ca1246a95ce}{sort\+\_\+short\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_a73867541a023b4f11f600c07928e23c4}{sort\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_a667ebdf87dcebefdbc018634ea21ba4e}{sort\+\_\+longlong\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
+\item 
+int \mbox{\hyperlink{array_8c_a0e08a40e855a37a0fc2b34aa329e5845}{sort\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}} method)
 \end{DoxyCompactItemize}
 
 
@@ -45,6 +63,33 @@ This function will allow a user to delete all duplicate value in an array, whil 
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a7bc2f2a236cfbb0b186c40aad46753c8}\label{array_8c_a7bc2f2a236cfbb0b186c40aad46753c8}} 
+\index{array.c@{array.c}!delete\_array\_values@{delete\_array\_values}}
+\index{delete\_array\_values@{delete\_array\_values}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{delete\_array\_values()}{delete\_array\_values()}}
+{\footnotesize\ttfamily void delete\+\_\+array\+\_\+values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+This function will allow a user to delete specific values in a statically allocated array container.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An \mbox{\hyperlink{structArray}{Array}} container \\
+\hline
+{\em value} & The value to be deleted\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[7] = \{1, 2, 1, 3, 1, 1, 5\};}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} aa = 1;}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(7, 7, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a7bc2f2a236cfbb0b186c40aad46753c8}{delete\_array\_values}}(\&arr, \&aa);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// 2, 3, 5}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}\label{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}} 
@@ -219,7 +264,239 @@ This function will allow a user to replace specific values in a statically alloc
 \DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0l i < arr-\/>active\_length; i++) \{}
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
-\DoxyCodeLine{\textcolor{comment}{// 5, 2, 5, 3, 5, 5, 5}}
+\DoxyCodeLine{\textcolor{comment}{// 10, 2, 10, 3, 10, 10, 5}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a0e08a40e855a37a0fc2b34aa329e5845}\label{array_8c_a0e08a40e855a37a0fc2b34aa329e5845}} 
+\index{array.c@{array.c}!sort\_array@{sort\_array}}
+\index{sort\_array@{sort\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_array()}{sort\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order an array of any data type from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[6] = \{ 1, 3, 5, 2, 4, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a0e08a40e855a37a0fc2b34aa329e5845}{sort\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_ad0ff1fc647d5c803e697677ab813d7f9}\label{array_8c_ad0ff1fc647d5c803e697677ab813d7f9}} 
+\index{array.c@{array.c}!sort\_char\_array@{sort\_char\_array}}
+\index{sort\_char\_array@{sort\_char\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_char\_array()}{sort\_char\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+char\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order a char array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[] = \textcolor{stringliteral}{"{}Hello World!"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a4618cf21306b3c647741afa7ebefcab8}{CHAR}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ad0ff1fc647d5c803e697677ab813d7f9}{sort\_char\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%c\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> "{} !HWdellloor"{};}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_af3ac20c19312243d50152f821e196986}\label{array_8c_af3ac20c19312243d50152f821e196986}} 
+\index{array.c@{array.c}!sort\_double\_array@{sort\_double\_array}}
+\index{sort\_double\_array@{sort\_double\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_double\_array()}{sort\_double\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order a double array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[6] = \{ 1.1, 3.3, 5.5, 2.2, 4.4, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_af3ac20c19312243d50152f821e196986}{sort\_double\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.1, 2.2, 3.3, 4.4, 5.5, 6.6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_ad20cf57b9428b16ecfcd7aeffaae3eca}\label{array_8c_ad20cf57b9428b16ecfcd7aeffaae3eca}} 
+\index{array.c@{array.c}!sort\_float\_array@{sort\_float\_array}}
+\index{sort\_float\_array@{sort\_float\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_float\_array()}{sort\_float\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order a float array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[6] = \{ 1.1, 3.3, 5.5, 2.2, 4.4, 6.6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_ad20cf57b9428b16ecfcd7aeffaae3eca}{sort\_float\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.1, 2.2, 3.3, 4.4, 5.5, 6.6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_afa7a40d2022315d89b7d44c853c7cd27}\label{array_8c_afa7a40d2022315d89b7d44c853c7cd27}} 
+\index{array.c@{array.c}!sort\_int\_array@{sort\_int\_array}}
+\index{sort\_int\_array@{sort\_int\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_int\_array()}{sort\_int\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order an integer array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[6] = \{ 1, 3, 5, 2, 4, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_afa7a40d2022315d89b7d44c853c7cd27}{sort\_int\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a73867541a023b4f11f600c07928e23c4}\label{array_8c_a73867541a023b4f11f600c07928e23c4}} 
+\index{array.c@{array.c}!sort\_long\_array@{sort\_long\_array}}
+\index{sort\_long\_array@{sort\_long\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_long\_array()}{sort\_long\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order an long integer array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[6] = \{ 1, 3, 5, 2, 4, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a73867541a023b4f11f600c07928e23c4}{sort\_long\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a667ebdf87dcebefdbc018634ea21ba4e}\label{array_8c_a667ebdf87dcebefdbc018634ea21ba4e}} 
+\index{array.c@{array.c}!sort\_longlong\_array@{sort\_longlong\_array}}
+\index{sort\_longlong\_array@{sort\_longlong\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_longlong\_array()}{sort\_longlong\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+longlong\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order an long long integer array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[6] = \{ 1, 3, 5, 2, 4, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a667ebdf87dcebefdbc018634ea21ba4e}{sort\_longlong\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a33a6eebf29272e376dd64ca1246a95ce}\label{array_8c_a33a6eebf29272e376dd64ca1246a95ce}} 
+\index{array.c@{array.c}!sort\_short\_array@{sort\_short\_array}}
+\index{sort\_short\_array@{sort\_short\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sort\_short\_array()}{sort\_short\_array()}}
+{\footnotesize\ttfamily int sort\+\_\+short\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr,  }\item[{\mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759}{order}}}]{method }\end{DoxyParamCaption})}
+
+This function will re-\/order an short integer array from least to greatest (ascending), or greates to least (descending). This function uses a simple insert method. This function does not modify any of the \mbox{\hyperlink{structArray}{Array}} container metadata. As a result, the user can also use other C sort methods.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An array container \\
+\hline
+{\em method} & Either FORWARD, or REVERSE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 0 if unsucesful and 1 if succesful
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{short} a[6] = \{ 1, 3, 5, 2, 4, 6\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr  = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(6, 6, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}});}
+\DoxyCodeLine{\mbox{\hyperlink{array_8c_a33a6eebf29272e376dd64ca1246a95ce}{sort\_short\_array}}(\&arr, \mbox{\hyperlink{vector_8h_a9f4e8630516f3da89537313b4c828759aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < arr.\mbox{\hyperlink{structArray_a576709f0aee25289727faa37b5386fd3}{active\_length}}; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8c_ab173e37afb423f0491a68b0cafba084e}\label{array_8c_ab173e37afb423f0491a68b0cafba084e}} 

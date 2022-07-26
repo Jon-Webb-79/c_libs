@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO sort_array
 // TODO reverse_array
 // TODO median_array
 // TODO sum_array

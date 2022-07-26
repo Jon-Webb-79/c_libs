@@ -271,8 +271,8 @@ void unique_vector_values(Vector *vec) {
 int sort_int_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     int var_one, var_two, temp;
-	if(method < 0 || method > 1) {
-		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
 		return 0;
 	}
 	for (i = 0; i < vec->active_length - 1; i++) {
@@ -300,8 +300,8 @@ int sort_int_vector(Vector *vec, order method) {
 int sort_float_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     float var_one, var_two, temp;
-	if(method < 0 || method > 1) {
-		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
 		return 0;
 	}
 	for (i = 0; i < vec->active_length - 1; i++) {
@@ -329,8 +329,8 @@ int sort_float_vector(Vector *vec, order method) {
 int sort_double_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     double var_one, var_two, temp;
-	if(method < 0 || method > 1) {
-		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
 		return 0;
 	}
 	for (i = 0; i < vec->active_length - 1; i++) {
@@ -358,7 +358,7 @@ int sort_double_vector(Vector *vec, order method) {
 int sort_char_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     char var_one, var_two, temp;
-	if(method < 0 || method > 1) {
+	if(method != FORWARD && method != REVERSE) {
 		printf("method must be 0 or 1 for ascending or descending respectively!\n");
 		return 0;
 	}
@@ -387,8 +387,8 @@ int sort_char_vector(Vector *vec, order method) {
 int sort_short_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     short var_one, var_two, temp;
-	if(method < 0 || method > 1) {
-		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
 		return 0;
 	}
 	for (i = 0; i < vec->active_length - 1; i++) {
@@ -416,8 +416,8 @@ int sort_short_vector(Vector *vec, order method) {
 int sort_long_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     long var_one, var_two, temp;
-	if(method < 0 || method > 1) {
-		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
 		return 0;
 	}
 	for (i = 0; i < vec->active_length - 1; i++) {
@@ -445,8 +445,8 @@ int sort_long_vector(Vector *vec, order method) {
 int sort_longlong_vector(Vector *vec, order method) {
 	int i, j, min_idx;
     long long var_one, var_two, temp;
-	if(method < 0 || method > 1) {
-		printf("method must be 0 or 1 for ascending or descending respectively!\n");
+	if(method != FORWARD && method != REVERSE) {
+		printf("method must be FORWARD or REVERSE for ascending or descending respectively!\n");
 		return 0;
 	}
 	for (i = 0; i < vec->active_length - 1; i++) {
