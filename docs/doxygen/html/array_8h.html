@@ -135,6 +135,14 @@ Functions</h2></td></tr>
 <tr class="separator:a2c0ade2dd34bb4a95e03675c66899bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da90c16f3d50770c60cf1b7022ad66d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a2da90c16f3d50770c60cf1b7022ad66d">reverse_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
 <tr class="separator:a2da90c16f3d50770c60cf1b7022ad66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ef9d5a78922ed7d2875a259cc152a21"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a5ef9d5a78922ed7d2875a259cc152a21">median_int_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a5ef9d5a78922ed7d2875a259cc152a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529fb008f85f2b9cd9b3c2e125178a08"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a529fb008f85f2b9cd9b3c2e125178a08">median_float_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a529fb008f85f2b9cd9b3c2e125178a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc18f4107328436b46da68199fb8a1d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a9fc18f4107328436b46da68199fb8a1d">median_double_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a9fc18f4107328436b46da68199fb8a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9989ae1e1d18746e27f2fd255f7052cc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a9989ae1e1d18746e27f2fd255f7052cc">median_long_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a9989ae1e1d18746e27f2fd255f7052cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a90ed4b58d4cf789dbdc9c10b7291b9b1" name="a90ed4b58d4cf789dbdc9c10b7291b9b1"></a>
@@ -328,6 +336,137 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 5, 6, 7, 8, 9, 10, 3, 4</span></div>
 <div class="ttc" id="aarray_8c_html_a033dad1e1d35128014b4e9f923e2f28c"><div class="ttname"><a href="array_8c.html#a033dad1e1d35128014b4e9f923e2f28c">insert_array</a></div><div class="ttdeci">int insert_array(Array *arr, void *array, size_t active_indices, size_t insert_index)</div><div class="ttdef"><b>Definition:</b> array.c:55</div></div>
 <div class="ttc" id="astructArray_html_ae5a3c34db1de06a6ae6ca3c455298377"><div class="ttname"><a href="structArray.html#ae5a3c34db1de06a6ae6ca3c455298377">Array::array</a></div><div class="ttdeci">void * array</div><div class="ttdef"><b>Definition:</b> array.h:42</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9fc18f4107328436b46da68199fb8a1d" name="a9fc18f4107328436b46da68199fb8a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc18f4107328436b46da68199fb8a1d">&#9670;&nbsp;</a></span>median_double_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double median_double_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median value of a double array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A double array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>);</div>
+<div class="line"><span class="keywordtype">double</span> median = <a class="code hl_function" href="array_8c.html#a9fc18f4107328436b46da68199fb8a1d">median_double_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
+<div class="line"><span class="comment">// &gt;&gt; 3.3</span></div>
+<div class="ttc" id="aarray_8c_html_a9fc18f4107328436b46da68199fb8a1d"><div class="ttname"><a href="array_8c.html#a9fc18f4107328436b46da68199fb8a1d">median_double_array</a></div><div class="ttdeci">double median_double_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:534</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a529fb008f85f2b9cd9b3c2e125178a08" name="a529fb008f85f2b9cd9b3c2e125178a08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529fb008f85f2b9cd9b3c2e125178a08">&#9670;&nbsp;</a></span>median_float_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float median_float_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median value of a float array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A float array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>);</div>
+<div class="line"><span class="keywordtype">float</span> median = <a class="code hl_function" href="array_8c.html#a529fb008f85f2b9cd9b3c2e125178a08">median_float_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, median);</div>
+<div class="line"><span class="comment">// &gt;&gt; 3.3</span></div>
+<div class="ttc" id="aarray_8c_html_a529fb008f85f2b9cd9b3c2e125178a08"><div class="ttname"><a href="array_8c.html#a529fb008f85f2b9cd9b3c2e125178a08">median_float_array</a></div><div class="ttdeci">float median_float_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:517</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a5ef9d5a78922ed7d2875a259cc152a21" name="a5ef9d5a78922ed7d2875a259cc152a21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ef9d5a78922ed7d2875a259cc152a21">&#9670;&nbsp;</a></span>median_int_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float median_int_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median value of an int array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>An integer array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>);</div>
+<div class="line"><span class="keywordtype">float</span> median = <a class="code hl_function" href="array_8c.html#a5ef9d5a78922ed7d2875a259cc152a21">median_int_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, median);</div>
+<div class="line"><span class="comment">// &gt;&gt; 3</span></div>
+<div class="ttc" id="aarray_8c_html_a5ef9d5a78922ed7d2875a259cc152a21"><div class="ttname"><a href="array_8c.html#a5ef9d5a78922ed7d2875a259cc152a21">median_int_array</a></div><div class="ttdeci">float median_int_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:500</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9989ae1e1d18746e27f2fd255f7052cc" name="a9989ae1e1d18746e27f2fd255f7052cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9989ae1e1d18746e27f2fd255f7052cc">&#9670;&nbsp;</a></span>median_long_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double median_long_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the median value of a long integer array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A long integer array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>);</div>
+<div class="line"><span class="keywordtype">double</span> median = <a class="code hl_function" href="array_8c.html#a9989ae1e1d18746e27f2fd255f7052cc">median_long_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
+<div class="line"><span class="comment">// &gt;&gt; 3.3</span></div>
+<div class="ttc" id="aarray_8c_html_a9989ae1e1d18746e27f2fd255f7052cc"><div class="ttname"><a href="array_8c.html#a9989ae1e1d18746e27f2fd255f7052cc">median_long_array</a></div><div class="ttdeci">double median_long_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:551</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -567,7 +706,6 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 5, 4, 3, 2, 1</span></div>
 <div class="ttc" id="aarray_8c_html_a2da90c16f3d50770c60cf1b7022ad66d"><div class="ttname"><a href="array_8c.html#a2da90c16f3d50770c60cf1b7022ad66d">reverse_array</a></div><div class="ttdeci">int reverse_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:484</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -635,7 +773,6 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 5.5, 4.4, 3.3, 2.2, 1.1</span></div>
 <div class="ttc" id="aarray_8c_html_a473db97d73197bc83725f80b67a47263"><div class="ttname"><a href="array_8c.html#a473db97d73197bc83725f80b67a47263">reverse_double_array</a></div><div class="ttdeci">void reverse_double_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:418</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -669,7 +806,6 @@ Functions</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 5.5, 4.4, 3.3, 2.2, 1.1</span></div>
 <div class="ttc" id="aarray_8c_html_a7293ab900a84ccbd4079a104e56a7aa7"><div class="ttname"><a href="array_8c.html#a7293ab900a84ccbd4079a104e56a7aa7">reverse_float_array</a></div><div class="ttdeci">void reverse_float_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:406</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

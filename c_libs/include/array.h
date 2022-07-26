@@ -569,6 +569,86 @@ void reverse_longlong_array(Array *arr);
  * @endcode
  */
 int reverse_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of an int array
+ *
+ * @param arr An integer array container
+ * @return median The median value of an array.  This will be the middle
+ *                value if the array has an odd number of values, or the
+ *                average of the two middle values if the array has an
+ *                even number of values.
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, INT);
+ * float median = median_int_array(&arr);
+ * printf("%d\n", median);
+ * // >> 3
+ * @endcode
+ */
+float median_int_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of a float array
+ *
+ * @param arr A float array container
+ * @return median The median value of an array.  This will be the middle
+ *                value if the array has an odd number of values, or the
+ *                average of the two middle values if the array has an
+ *                even number of values.
+ *
+ * @code
+ * float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Array arr = init_array(5, 5, a, FLOAT);
+ * float median = median_float_array(&arr);
+ * printf("%f\n", median);
+ * // >> 3.3
+ * @endcode
+ */
+float median_float_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of a double array
+ *
+ * @param arr A double array container
+ * @return median The median value of an array.  This will be the middle
+ *                value if the array has an odd number of values, or the
+ *                average of the two middle values if the array has an
+ *                even number of values.
+ *
+ * @code
+ * double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+ * Array arr = init_array(5, 5, a, DOUBLE);
+ * double median = median_double_array(&arr);
+ * printf("%lf\n", median);
+ * // >> 3.3
+ * @endcode
+ */
+double median_double_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the median value of a long integer array
+ *
+ * @param arr A long integer array container
+ * @return median The median value of an array.  This will be the middle
+ *                value if the array has an odd number of values, or the
+ *                average of the two middle values if the array has an
+ *                even number of values.
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG);
+ * double median = median_long_array(&arr);
+ * printf("%lf\n", median);
+ * // >> 3.3
+ * @endcode
+ */
+double median_long_array(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

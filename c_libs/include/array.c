@@ -495,6 +495,74 @@ int reverse_array(Array *arr) {
 	}
 	return 1;
 }
+// --------------------------------------------------------------------------------
+
+float median_int_array(Array *arr) {
+	if (arr->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (arr->active_length / 2) -1;
+		indice2 = ((arr->active_length + 2) - 1) / 2;
+		int value_one = ((int *)arr->array)[indice1];
+		int value_two = ((int *)arr->array)[indice2];
+		return ((float)value_one + (float)value_two) / 2.0f;
+	}
+	else {
+		size_t indice = ((arr->active_length + 1) / 2) - 1;
+		int value = ((int *)arr->array)[indice];
+		return (float)value;
+	}
+}
+// --------------------------------------------------------------------------------
+
+float median_float_array(Array *arr) {
+	if (arr->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (arr->active_length / 2) -1;
+		indice2 = ((arr->active_length + 2) - 1) / 2;
+		float value_one = ((float *)arr->array)[indice1];
+		float value_two = ((float *)arr->array)[indice2];
+		return ((float)value_one + (float)value_two) / 2.0f;
+	}
+	else {
+		size_t indice = ((arr->active_length + 1) / 2) - 1;
+		float value = ((float *)arr->array)[indice];
+		return (float)value;
+	}
+}
+// --------------------------------------------------------------------------------
+
+double median_double_array(Array *arr) {
+	if (arr->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (arr->active_length / 2) -1;
+		indice2 = ((arr->active_length + 2) - 1) / 2;
+		double value_one = ((double *)arr->array)[indice1];
+		double value_two = ((double *)arr->array)[indice2];
+		return ((double)value_one + (double)value_two) / 2.0;
+	}
+	else {
+		size_t indice = ((arr->active_length + 1) / 2) - 1;
+		double value = ((double *)arr->array)[indice];
+		return (double)value;
+	}
+}
+// --------------------------------------------------------------------------------
+
+double median_long_array(Array *arr) {
+	if (arr->active_length % 2 == 0) {
+		size_t indice1, indice2;
+		indice1 = (arr->active_length / 2) -1;
+		indice2 = ((arr->active_length + 2) - 1) / 2;
+		long value_one = ((long *)arr->array)[indice1];
+		long value_two = ((long *)arr->array)[indice2];
+		return ((double)value_one + (double)value_two) / 2.0;
+	}
+	else {
+		size_t indice = ((arr->active_length + 1) / 2) - 1;
+		long value = ((long *)arr->array)[indice];
+		return (double)value;
+	}
+}
 // ================================================================================
 // ================================================================================
 // eof

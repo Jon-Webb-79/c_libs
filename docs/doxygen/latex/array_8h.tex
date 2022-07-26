@@ -60,6 +60,14 @@ void \mbox{\hyperlink{array_8h_afa7bbdad6bd569b4e8fe73bb7133b9c9}{reverse\+\_\+l
 void \mbox{\hyperlink{array_8h_a2c0ade2dd34bb4a95e03675c66899bea}{reverse\+\_\+longlong\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \item 
 int \mbox{\hyperlink{array_8h_a2da90c16f3d50770c60cf1b7022ad66d}{reverse\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8h_a5ef9d5a78922ed7d2875a259cc152a21}{median\+\_\+int\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8h_a529fb008f85f2b9cd9b3c2e125178a08}{median\+\_\+float\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8h_a9fc18f4107328436b46da68199fb8a1d}{median\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8h_a9989ae1e1d18746e27f2fd255f7052cc}{median\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \end{DoxyCompactItemize}
 
 
@@ -164,6 +172,106 @@ This function allows a user to insert a scalar value or an array into an \mbox{\
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, ((\textcolor{keywordtype}{int} *)arr.\mbox{\hyperlink{structArray_ae5a3c34db1de06a6ae6ca3c455298377}{array}})[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 5, 6, 7, 8, 9, 10, 3, 4}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a9fc18f4107328436b46da68199fb8a1d}\label{array_8h_a9fc18f4107328436b46da68199fb8a1d}} 
+\index{array.h@{array.h}!median\_double\_array@{median\_double\_array}}
+\index{median\_double\_array@{median\_double\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{median\_double\_array()}{median\_double\_array()}}
+{\footnotesize\ttfamily double median\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the median value of a double array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A double array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.1, 2.2, 3.3, 4.4, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} median = \mbox{\hyperlink{array_8c_a9fc18f4107328436b46da68199fb8a1d}{median\_double\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.3}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a529fb008f85f2b9cd9b3c2e125178a08}\label{array_8h_a529fb008f85f2b9cd9b3c2e125178a08}} 
+\index{array.h@{array.h}!median\_float\_array@{median\_float\_array}}
+\index{median\_float\_array@{median\_float\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{median\_float\_array()}{median\_float\_array()}}
+{\footnotesize\ttfamily float median\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the median value of a float array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A float array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.1, 2.2, 3.3, 4.4, 5.5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} median = \mbox{\hyperlink{array_8c_a529fb008f85f2b9cd9b3c2e125178a08}{median\_float\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.3}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a5ef9d5a78922ed7d2875a259cc152a21}\label{array_8h_a5ef9d5a78922ed7d2875a259cc152a21}} 
+\index{array.h@{array.h}!median\_int\_array@{median\_int\_array}}
+\index{median\_int\_array@{median\_int\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{median\_int\_array()}{median\_int\_array()}}
+{\footnotesize\ttfamily float median\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the median value of an int array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An integer array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} median = \mbox{\hyperlink{array_8c_a5ef9d5a78922ed7d2875a259cc152a21}{median\_int\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8h_a9989ae1e1d18746e27f2fd255f7052cc}\label{array_8h_a9989ae1e1d18746e27f2fd255f7052cc}} 
+\index{array.h@{array.h}!median\_long\_array@{median\_long\_array}}
+\index{median\_long\_array@{median\_long\_array}!array.h@{array.h}}
+\doxysubsubsection{\texorpdfstring{median\_long\_array()}{median\_long\_array()}}
+{\footnotesize\ttfamily double median\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the median value of a long integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A long integer array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+median The median value of an array. This will be the middle value if the array has an odd number of values, or the average of the two middle values if the array has an even number of values.
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} median = \mbox{\hyperlink{array_8c_a9989ae1e1d18746e27f2fd255f7052cc}{median\_long\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, median);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.3}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8h_a8bce31ced29b6dbe98a59dcbcd4bb687}\label{array_8h_a8bce31ced29b6dbe98a59dcbcd4bb687}} 

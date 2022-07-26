@@ -569,4 +569,85 @@ TEST (test_reverse_array, reverse) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests teh median_int_array function for a use case where the
+ * array contains an odd number of values */
+TEST (test_median_array, median_int_odd) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, INT);
+	float median = median_int_array(&arr);
+	EXPECT_FLOAT_EQ(median, 3.0f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests teh median_int_array function for a use case where the
+ * array contains an even number of values */
+TEST (test_median_array, median_int_even) {
+	int a[6] = {1, 2, 3, 4, 5, 6};
+	Array arr = init_array(6, 6, a, INT);
+	float median = median_int_array(&arr);
+	EXPECT_FLOAT_EQ(median, 3.5f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests teh median_float_array function for a use case where the
+ * array contains an odd number of values */
+TEST (test_median_array, median_float_odd) {
+	float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr = init_array(5, 5, a, FLOAT);
+	float median = median_float_array(&arr);
+	EXPECT_FLOAT_EQ(median, 3.0f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests teh median_float_array function for a use case where the
+ * array contains an even number of values */
+TEST (test_median_array, median_float_even) {
+	float a[6] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
+	Array arr = init_array(6, 6, a, FLOAT);
+	float median = median_float_array(&arr);
+	EXPECT_FLOAT_EQ(median, 3.5f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_double_array function for a use case where the
+ * array contains an odd number of values */
+TEST (test_median_array, median_double_odd) {
+	double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr = init_array(5, 5, a, DOUBLE);
+	double median = median_double_array(&arr);
+	EXPECT_DOUBLE_EQ(median, 3.0);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests teh median_double_array function for a use case where the
+ * array contains an even number of values */
+TEST (test_median_array, median_double_even) {
+	double a[6] = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
+	Array arr = init_array(6, 6, a, DOUBLE);
+	double median = median_double_array(&arr);
+	EXPECT_DOUBLE_EQ(median, 3.5);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the median_long_array function for a use case where the
+ * array contains an odd number of values */
+TEST (test_median_array, median_long_odd) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONG);
+	double median = median_long_array(&arr);
+	EXPECT_DOUBLE_EQ(median, 3.0);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests teh median_long_array function for a use case where the
+ * array contains an even number of values */
+TEST (test_median_array, median_long_even) {
+	long a[6] = {1, 2, 3, 4, 5, 6};
+	Array arr = init_array(6, 6, a, LONG);
+	double median = median_long_array(&arr);
+	EXPECT_DOUBLE_EQ(median, 3.5);
+}
+// ================================================================================
+// ================================================================================
 // eof
