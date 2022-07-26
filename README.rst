@@ -715,7 +715,6 @@ The function ``reverse_array(Array *arr)`` will reverse the order of an array.
 ================
 median_xxx_array
 ================
-
 The function ``median_xxx_array(Array *arr)`` can be used to determine the median value of an array,
 where ``xxx`` represents ``int``, ``float``, ``double``, and ``long``, which return ``float``, ``float``,
 ``double, and ``double`` data types respectively.  If an array contains an odd number of value, this
@@ -726,6 +725,22 @@ will return the average of the two middle values.
 
    int a[5] = {5, 4, 3, 2, 1};
    Array arr = init_array(5, 5, a, INT);
-   float median = reverse_array(&arr);
+   float median = reverse_int_array(&arr);
     printf("%f\n", median);
    // 3.0
+
+=============
+sum_xxx_array
+=============
+The function ``sum_xxx_array(Array *arr)`` can be used to determine the sum of the values of
+an array, where ``xxx`` represents ``int``, ``float``, ``double``, and ``long``, which are
+consistent with the input and output type.
+
+.. code-block:: c
+
+   int a[5] = {5, 4, 3, 2, 1};
+   Array arr = init_array(5, 5, a, INT);
+   int sum = sum_int_array(&arr);
+    printf("%d\n", median);
+   // 15
+
