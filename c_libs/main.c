@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO stdev_array
 // TODO cumsum_array
 int main(int argc, const char * argv[]) {
 //	int *a = init_vector(3, sizeof(int));

@@ -163,6 +163,14 @@ Functions</h2></td></tr>
 <tr class="separator:a322fb7deef5b1040128edd8ae2416696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ab0bf184eff43d753c888d2f5dcf715"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a5ab0bf184eff43d753c888d2f5dcf715">average_long_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
 <tr class="separator:a5ab0bf184eff43d753c888d2f5dcf715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7881b5f9edaf50047a7a2618d519815e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a7881b5f9edaf50047a7a2618d519815e">stdev_int_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a7881b5f9edaf50047a7a2618d519815e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698e8418284dbd985cf05ade07d2f6b9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a698e8418284dbd985cf05ade07d2f6b9">stdev_float_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a698e8418284dbd985cf05ade07d2f6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77e9b9efd36f1d5eefdd009b1e6dc5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#ad77e9b9efd36f1d5eefdd009b1e6dc5a">stdev_double_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:ad77e9b9efd36f1d5eefdd009b1e6dc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b045a3e2f67b4cc69adb8d24fced503"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a2b045a3e2f67b4cc69adb8d24fced503">stdev_long_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a2b045a3e2f67b4cc69adb8d24fced503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a322fb7deef5b1040128edd8ae2416696" name="a322fb7deef5b1040128edd8ae2416696"></a>
@@ -1448,6 +1456,134 @@ Functions</h2></td></tr>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 4, 5, 6</span></div>
 <div class="ttc" id="aarray_8c_html_a33a6eebf29272e376dd64ca1246a95ce"><div class="ttname"><a href="array_8c.html#a33a6eebf29272e376dd64ca1246a95ce">sort_short_array</a></div><div class="ttdeci">int sort_short_array(Array *arr, order method)</div><div class="ttdef"><b>Definition:</b> array.c:290</div></div>
 <div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187">SHORTINT</a></div><div class="ttdeci">@ SHORTINT</div><div class="ttdef"><b>Definition:</b> vector.h:47</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad77e9b9efd36f1d5eefdd009b1e6dc5a" name="ad77e9b9efd36f1d5eefdd009b1e6dc5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77e9b9efd36f1d5eefdd009b1e6dc5a">&#9670;&nbsp;</a></span>stdev_double_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double stdev_double_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the standard deviation of the values in a double array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A double array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdv The standard deviation of the values in an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>);</div>
+<div class="line"><span class="keywordtype">double</span> stdv = <a class="code hl_function" href="array_8c.html#ad77e9b9efd36f1d5eefdd009b1e6dc5a">stdev_double_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, stdv);</div>
+<div class="line"><span class="comment">// &gt;&gt; 1.58</span></div>
+<div class="ttc" id="aarray_8c_html_ad77e9b9efd36f1d5eefdd009b1e6dc5a"><div class="ttname"><a href="array_8c.html#ad77e9b9efd36f1d5eefdd009b1e6dc5a">stdev_double_array</a></div><div class="ttdeci">double stdev_double_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:678</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a698e8418284dbd985cf05ade07d2f6b9" name="a698e8418284dbd985cf05ade07d2f6b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698e8418284dbd985cf05ade07d2f6b9">&#9670;&nbsp;</a></span>stdev_float_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stdev_float_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the standard deviation of the values in a float array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A float array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdv The standard deviation of the values in an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>);</div>
+<div class="line"><span class="keywordtype">float</span> stdv = <a class="code hl_function" href="array_8c.html#a698e8418284dbd985cf05ade07d2f6b9">stdev_float_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, stdv);</div>
+<div class="line"><span class="comment">// &gt;&gt; 1.58</span></div>
+<div class="ttc" id="aarray_8c_html_a698e8418284dbd985cf05ade07d2f6b9"><div class="ttname"><a href="array_8c.html#a698e8418284dbd985cf05ade07d2f6b9">stdev_float_array</a></div><div class="ttdeci">float stdev_float_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:664</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a7881b5f9edaf50047a7a2618d519815e" name="a7881b5f9edaf50047a7a2618d519815e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7881b5f9edaf50047a7a2618d519815e">&#9670;&nbsp;</a></span>stdev_int_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stdev_int_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the standard deviation of the values in an integer array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>An integer array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdv The standard deviation of the values in an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>);</div>
+<div class="line"><span class="keywordtype">float</span> stdv = <a class="code hl_function" href="array_8c.html#a7881b5f9edaf50047a7a2618d519815e">stdev_int_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, stdv);</div>
+<div class="line"><span class="comment">// &gt;&gt; 1.58</span></div>
+<div class="ttc" id="aarray_8c_html_a7881b5f9edaf50047a7a2618d519815e"><div class="ttname"><a href="array_8c.html#a7881b5f9edaf50047a7a2618d519815e">stdev_int_array</a></div><div class="ttdeci">float stdev_int_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:650</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a2b045a3e2f67b4cc69adb8d24fced503" name="a2b045a3e2f67b4cc69adb8d24fced503"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b045a3e2f67b4cc69adb8d24fced503">&#9670;&nbsp;</a></span>stdev_long_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double stdev_long_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the standard deviation of the values in a long array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A long array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>stdv The standard deviation of the values in an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>);</div>
+<div class="line"><span class="keywordtype">double</span> stdv = <a class="code hl_function" href="array_8c.html#a2b045a3e2f67b4cc69adb8d24fced503">stdev_long_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, stdv);</div>
+<div class="line"><span class="comment">// &gt;&gt; 1.58</span></div>
+<div class="ttc" id="aarray_8c_html_a2b045a3e2f67b4cc69adb8d24fced503"><div class="ttname"><a href="array_8c.html#a2b045a3e2f67b4cc69adb8d24fced503">stdev_long_array</a></div><div class="ttdeci">double stdev_long_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:692</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

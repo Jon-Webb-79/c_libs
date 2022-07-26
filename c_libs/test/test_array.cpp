@@ -742,4 +742,41 @@ TEST (test_avg_array, test_long) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the stdev_int_array function */
+TEST (test_stdev, test_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr= init_array(5, 5, a, INT);
+	float stdev = stdev_int_array(&arr);
+	EXPECT_NEAR(stdev, 1.5811f, 0.001f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_float_array function */
+TEST (test_stdev, test_float) {
+	float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr= init_array(5, 5, a, FLOAT);
+	float stdev = stdev_float_array(&arr);
+	EXPECT_NEAR(stdev, 1.5811f, 0.001f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_double_array function */
+TEST (test_stdev, test_double) {
+	double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr= init_array(5, 5, a, DOUBLE);
+	double stdev = stdev_double_array(&arr);
+	EXPECT_NEAR(stdev, 1.5811f, 0.001f);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the stdev_long_array function */
+TEST (test_stdev, test_long) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Array arr= init_array(5, 5, a, LONG);
+	double stdev = stdev_long_array(&arr);
+	EXPECT_NEAR(stdev, 1.5811f, 0.001f);
+}
+// ================================================================================
+// ================================================================================
 // eof

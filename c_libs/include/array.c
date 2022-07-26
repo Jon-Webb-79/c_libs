@@ -645,6 +645,62 @@ double average_long_array(Array *arr) {
 	double num = (double)arr->active_length;
 	return (double)sum / num;
 }
+// --------------------------------------------------------------------------------
+
+float stdev_int_array(Array *arr) {
+	float average = average_int_array(arr);
+	float var = 0;
+	int value;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		value = ((int *)arr->array)[i];
+		var += pow(((float)value - average), 2.0);
+	}
+	float interm = (1.0 / ((float)arr->active_length - 1.0)) * var;
+	float stddev = sqrt(interm);
+	return stddev;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_float_array(Array *arr) {
+	float average = average_float_array(arr);
+	float var = 0;
+	int value;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		value = ((float *)arr->array)[i];
+		var += pow(((float)value - average), 2.0);
+	}
+	float interm = (1.0 / ((float)arr->active_length - 1.0)) * var;
+	float stddev = sqrt(interm);
+	return stddev;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_double_array(Array *arr) {
+	double average = average_double_array(arr);
+	double var = 0;
+	int value;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		value = ((double *)arr->array)[i];
+		var += pow(((double)value - average), 2.0);
+	}
+	double interm = (1.0 / ((double)arr->active_length - 1.0)) * var;
+	double stddev = sqrt(interm);
+	return stddev;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_long_array(Array *arr) {
+	double average = average_long_array(arr);
+	double var = 0;
+	int value;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		value = ((long *)arr->array)[i];
+		var += pow(((double)value - average), 2.0);
+	}
+	double interm = (1.0 / ((double)arr->active_length - 1.0)) * var;
+	double stddev = sqrt(interm);
+	return stddev;
+}
 // ================================================================================
 // ================================================================================
 // eof

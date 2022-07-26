@@ -825,6 +825,78 @@ double average_double_array(Array *arr);
  * @endcode
  */
 double average_long_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the standard deviation of the values in
+ * an integer array
+ *
+ * @param arr An integer array container
+ * @return stdv The standard deviation of the values in an array
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, INT);
+ * float stdv = stdev_int_array(&arr);
+ * printf("%f\n", stdv);
+ * // >> 1.58
+ * @endcode
+ */
+float stdev_int_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the standard deviation of the values in
+ * a float array
+ *
+ * @param arr A float array container
+ * @return stdv The standard deviation of the values in an array
+ *
+ * @code
+ * float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+ * Array arr = init_array(5, 5, a, FLOAT);
+ * float stdv = stdev_float_array(&arr);
+ * printf("%f\n", stdv);
+ * // >> 1.58
+ * @endcode
+ */
+float stdev_float_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the standard deviation of the values in
+ * a double array
+ *
+ * @param arr A double array container
+ * @return stdv The standard deviation of the values in an array
+ *
+ * @code
+ * double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+ * Array arr = init_array(5, 5, a, DOUBLE);
+ * double stdv = stdev_double_array(&arr);
+ * printf("%lf\n", stdv);
+ * // >> 1.58
+ * @endcode
+ */
+double stdev_double_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the standard deviation of the values in
+ * a long array
+ *
+ * @param arr A long array container
+ * @return stdv The standard deviation of the values in an array
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG);
+ * double stdv = stdev_long_array(&arr);
+ * printf("%lf\n", stdv);
+ * // >> 1.58
+ * @endcode
+ */
+double stdev_long_array(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

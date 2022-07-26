@@ -81,6 +81,14 @@ float \mbox{\hyperlink{array_8c_a6381f34fa828f64ed668cdd68ea581fc}{average\+\_\+
 double \mbox{\hyperlink{array_8c_a322fb7deef5b1040128edd8ae2416696}{average\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \item 
 double \mbox{\hyperlink{array_8c_a5ab0bf184eff43d753c888d2f5dcf715}{average\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8c_a7881b5f9edaf50047a7a2618d519815e}{stdev\+\_\+int\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8c_a698e8418284dbd985cf05ade07d2f6b9}{stdev\+\_\+float\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8c_ad77e9b9efd36f1d5eefdd009b1e6dc5a}{stdev\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8c_a2b045a3e2f67b4cc69adb8d24fced503}{stdev\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \end{DoxyCompactItemize}
 
 
@@ -936,6 +944,106 @@ integer 0 if unsucesful and 1 if succesful
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_ad77e9b9efd36f1d5eefdd009b1e6dc5a}\label{array_8c_ad77e9b9efd36f1d5eefdd009b1e6dc5a}} 
+\index{array.c@{array.c}!stdev\_double\_array@{stdev\_double\_array}}
+\index{stdev\_double\_array@{stdev\_double\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{stdev\_double\_array()}{stdev\_double\_array()}}
+{\footnotesize\ttfamily double stdev\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the standard deviation of the values in a double array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A double array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdv The standard deviation of the values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdv = \mbox{\hyperlink{array_8c_ad77e9b9efd36f1d5eefdd009b1e6dc5a}{stdev\_double\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, stdv);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.58}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a698e8418284dbd985cf05ade07d2f6b9}\label{array_8c_a698e8418284dbd985cf05ade07d2f6b9}} 
+\index{array.c@{array.c}!stdev\_float\_array@{stdev\_float\_array}}
+\index{stdev\_float\_array@{stdev\_float\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{stdev\_float\_array()}{stdev\_float\_array()}}
+{\footnotesize\ttfamily float stdev\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the standard deviation of the values in a float array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A float array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdv The standard deviation of the values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdv = \mbox{\hyperlink{array_8c_a698e8418284dbd985cf05ade07d2f6b9}{stdev\_float\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, stdv);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.58}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a7881b5f9edaf50047a7a2618d519815e}\label{array_8c_a7881b5f9edaf50047a7a2618d519815e}} 
+\index{array.c@{array.c}!stdev\_int\_array@{stdev\_int\_array}}
+\index{stdev\_int\_array@{stdev\_int\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{stdev\_int\_array()}{stdev\_int\_array()}}
+{\footnotesize\ttfamily float stdev\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the standard deviation of the values in an integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An integer array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdv The standard deviation of the values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdv = \mbox{\hyperlink{array_8c_a7881b5f9edaf50047a7a2618d519815e}{stdev\_int\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, stdv);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.58}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a2b045a3e2f67b4cc69adb8d24fced503}\label{array_8c_a2b045a3e2f67b4cc69adb8d24fced503}} 
+\index{array.c@{array.c}!stdev\_long\_array@{stdev\_long\_array}}
+\index{stdev\_long\_array@{stdev\_long\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{stdev\_long\_array()}{stdev\_long\_array()}}
+{\footnotesize\ttfamily double stdev\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the standard deviation of the values in a long array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A long array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+stdv The standard deviation of the values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdv = \mbox{\hyperlink{array_8c_a2b045a3e2f67b4cc69adb8d24fced503}{stdev\_long\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, stdv);}
+\DoxyCodeLine{\textcolor{comment}{// >> 1.58}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8c_ac53f169faf828f238f7ac1ee3bbcc8d2}\label{array_8c_ac53f169faf828f238f7ac1ee3bbcc8d2}} 
