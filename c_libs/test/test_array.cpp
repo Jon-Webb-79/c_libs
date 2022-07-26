@@ -640,13 +640,68 @@ TEST (test_median_array, median_long_odd) {
 }
 // --------------------------------------------------------------------------------
 
-/* This function tests teh median_long_array function for a use case where the
+/* This function tests the median_long_array function for a use case where the
  * array contains an even number of values */
 TEST (test_median_array, median_long_even) {
 	long a[6] = {1, 2, 3, 4, 5, 6};
 	Array arr = init_array(6, 6, a, LONG);
 	double median = median_long_array(&arr);
 	EXPECT_DOUBLE_EQ(median, 3.5);
+}
+// ================================================================================
+// ================================================================================
+
+/* This function tests the sum_int_array function */
+TEST (test_sum_array, test_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, INT);
+	int sum = sum_int_array(&arr);
+	EXPECT_EQ(15, sum);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_float_array function */
+TEST (test_sum_array, test_float) {
+	float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr = init_array(5, 5, a, FLOAT);
+	float sum = sum_float_array(&arr);
+	EXPECT_FLOAT_EQ(15.0f, sum);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_double_array function */
+TEST (test_sum_array, test_double) {
+	double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr = init_array(5, 5, a, DOUBLE);
+	double sum = sum_double_array(&arr);
+	EXPECT_DOUBLE_EQ(15.0, sum);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_short_array function */
+TEST (test_sum_array, test_short) {
+	short a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, SHORTINT);
+	short sum = sum_short_array(&arr);
+	EXPECT_EQ(15, sum);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_long_array function */
+TEST (test_sum_array, test_long) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONG);
+	long sum = sum_long_array(&arr);
+	EXPECT_EQ(15, sum);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the sum_longlong_array function */
+TEST (test_sum_array, test_longlong) {
+	long long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONGLONG);
+	long long sum = sum_longlong_array(&arr);
+	EXPECT_EQ(15, sum);
 }
 // ================================================================================
 // ================================================================================

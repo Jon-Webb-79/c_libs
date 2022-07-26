@@ -61,6 +61,18 @@ float \mbox{\hyperlink{array_8c_a529fb008f85f2b9cd9b3c2e125178a08}{median\+\_\+f
 double \mbox{\hyperlink{array_8c_a9fc18f4107328436b46da68199fb8a1d}{median\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \item 
 double \mbox{\hyperlink{array_8c_a9989ae1e1d18746e27f2fd255f7052cc}{median\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+int \mbox{\hyperlink{array_8c_ad277d029c69c115413495285f0387e87}{sum\+\_\+int\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8c_a071d874c7b9c9ba930cd7b12748fc6ba}{sum\+\_\+float\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8c_ac53f169faf828f238f7ac1ee3bbcc8d2}{sum\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+short \mbox{\hyperlink{array_8c_a738075fe4b7537fc48b205cb38604dd6}{sum\+\_\+short\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+long \mbox{\hyperlink{array_8c_a733a63634920ac579d3d810415093f92}{sum\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+long long \mbox{\hyperlink{array_8c_a01e151e572082543c1d47dc8e3cf6058}{sum\+\_\+longlong\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \end{DoxyCompactItemize}
 
 
@@ -816,6 +828,156 @@ integer 0 if unsucesful and 1 if succesful
 \DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, a[i]);}
 \DoxyCodeLine{\}}
 \DoxyCodeLine{\textcolor{comment}{// >> 1, 2, 3, 4, 5, 6}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_ac53f169faf828f238f7ac1ee3bbcc8d2}\label{array_8c_ac53f169faf828f238f7ac1ee3bbcc8d2}} 
+\index{array.c@{array.c}!sum\_double\_array@{sum\_double\_array}}
+\index{sum\_double\_array@{sum\_double\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sum\_double\_array()}{sum\_double\_array()}}
+{\footnotesize\ttfamily double sum\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the sum total of all values in a double array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An double array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum total of all values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} sum = \mbox{\hyperlink{array_8c_ac53f169faf828f238f7ac1ee3bbcc8d2}{sum\_double\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a071d874c7b9c9ba930cd7b12748fc6ba}\label{array_8c_a071d874c7b9c9ba930cd7b12748fc6ba}} 
+\index{array.c@{array.c}!sum\_float\_array@{sum\_float\_array}}
+\index{sum\_float\_array@{sum\_float\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sum\_float\_array()}{sum\_float\_array()}}
+{\footnotesize\ttfamily float sum\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the sum total of all values in a float array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An float array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum total of all values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} sum = \mbox{\hyperlink{array_8c_a071d874c7b9c9ba930cd7b12748fc6ba}{sum\_float\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_ad277d029c69c115413495285f0387e87}\label{array_8c_ad277d029c69c115413495285f0387e87}} 
+\index{array.c@{array.c}!sum\_int\_array@{sum\_int\_array}}
+\index{sum\_int\_array@{sum\_int\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sum\_int\_array()}{sum\_int\_array()}}
+{\footnotesize\ttfamily int sum\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the sum total of all values in an integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An integer array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum total of all values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{int} sum = \mbox{\hyperlink{array_8c_ad277d029c69c115413495285f0387e87}{sum\_int\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a733a63634920ac579d3d810415093f92}\label{array_8c_a733a63634920ac579d3d810415093f92}} 
+\index{array.c@{array.c}!sum\_long\_array@{sum\_long\_array}}
+\index{sum\_long\_array@{sum\_long\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sum\_long\_array()}{sum\_long\_array()}}
+{\footnotesize\ttfamily long sum\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the sum total of all values in a long integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An long integer array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum total of all values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\textcolor{keywordtype}{long} sum = \mbox{\hyperlink{array_8c_a733a63634920ac579d3d810415093f92}{sum\_long\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a01e151e572082543c1d47dc8e3cf6058}\label{array_8c_a01e151e572082543c1d47dc8e3cf6058}} 
+\index{array.c@{array.c}!sum\_longlong\_array@{sum\_longlong\_array}}
+\index{sum\_longlong\_array@{sum\_longlong\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sum\_longlong\_array()}{sum\_longlong\_array()}}
+{\footnotesize\ttfamily long long sum\+\_\+longlong\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the sum total of all values in a long long integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An long long integer array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum total of all values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a6f20a0296b153acb8046f73b274794df}{LONGLONG}});}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} sum = \mbox{\hyperlink{array_8c_a01e151e572082543c1d47dc8e3cf6058}{sum\_longlong\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a738075fe4b7537fc48b205cb38604dd6}\label{array_8c_a738075fe4b7537fc48b205cb38604dd6}} 
+\index{array.c@{array.c}!sum\_short\_array@{sum\_short\_array}}
+\index{sum\_short\_array@{sum\_short\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{sum\_short\_array()}{sum\_short\_array()}}
+{\footnotesize\ttfamily short sum\+\_\+short\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the sum total of all values in a short integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An short integer array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum The sum total of all values in an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{short} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a205f14321a3265e1981e0ee184c71187}{SHORTINT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{short} sum = \mbox{\hyperlink{array_8c_a738075fe4b7537fc48b205cb38604dd6}{sum\_short\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%ld\(\backslash\)n"{}}, sum);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
 
 \end{DoxyCode}
  \mbox{\Hypertarget{array_8c_ab173e37afb423f0491a68b0cafba084e}\label{array_8c_ab173e37afb423f0491a68b0cafba084e}} 

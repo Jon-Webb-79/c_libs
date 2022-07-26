@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO sum_array
 // TODO average_array
 // TODO stdev_array
 // TODO cumsum_array

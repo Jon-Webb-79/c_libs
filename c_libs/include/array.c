@@ -563,6 +563,60 @@ double median_long_array(Array *arr) {
 		return (double)value;
 	}
 }
+// --------------------------------------------------------------------------------
+
+int sum_int_array(Array *arr) {
+	int sum = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		sum += ((int *)arr->array)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+float sum_float_array(Array *arr) {
+	int sum = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		sum += ((float *)arr->array)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+double sum_double_array(Array *arr) {
+	int sum = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		sum += ((double *)arr->array)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+short sum_short_array(Array *arr) {
+	int sum = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		sum += ((short *)arr->array)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long sum_long_array(Array *arr) {
+	int sum = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		sum += ((long *)arr->array)[i];
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long long sum_longlong_array(Array *arr) {
+	int sum = 0;
+	for (size_t i = 0; i < arr->active_length; i++) {
+		sum += ((long long *)arr->array)[i];
+	}
+	return sum;
+}
 // ================================================================================
 // ================================================================================
 // eof

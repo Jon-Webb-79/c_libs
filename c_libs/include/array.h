@@ -649,6 +649,114 @@ double median_double_array(Array *arr);
  * @endcode
  */
 double median_long_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the sum total of all values in an integer
+ * array
+ *
+ * @param arr An integer array
+ * @return sum The sum total of all values in an array
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, INT);
+ * int sum = sum_int_array(&arr);
+ * printf("%d\n", sum);
+ * // >> 15
+ * @endcode
+ */
+int sum_int_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the sum total of all values in a float
+ * array
+ *
+ * @param arr An float array
+ * @return sum The sum total of all values in an array
+ *
+ * @code
+ * float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+ * Array arr = init_array(5, 5, a, FLOAT);
+ * float sum = sum_float_array(&arr);
+ * printf("%f\n", sum);
+ * // >> 15.0
+ * @endcode
+ */
+float sum_float_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the sum total of all values in a double
+ * array
+ *
+ * @param arr An double array
+ * @return sum The sum total of all values in an array
+ *
+ * @code
+ * double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+ * Array arr = init_array(5, 5, a, DOUBLE);
+ * double sum = sum_double_array(&arr);
+ * printf("%lf\n", sum);
+ * // >> 15.0
+ * @endcode
+ */
+double sum_double_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the sum total of all values in a short integer
+ * array
+ *
+ * @param arr An short integer array
+ * @return sum The sum total of all values in an array
+ *
+ * @code
+ * short a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, SHORTINT);
+ * short sum = sum_short_array(&arr);
+ * printf("%ld\n", sum);
+ * // >> 15
+ * @endcode
+ */
+short sum_short_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the sum total of all values in a long integer
+ * array
+ *
+ * @param arr An long integer array
+ * @return sum The sum total of all values in an array
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG);
+ * long sum = sum_long_array(&arr);
+ * printf("%ld\n", sum);
+ * // >> 15
+ * @endcode
+ */
+long sum_long_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the sum total of all values in a long long integer
+ * array
+ *
+ * @param arr An long long integer array
+ * @return sum The sum total of all values in an array
+ *
+ * @code
+ * long long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONGLONG);
+ * long long sum = sum_longlong_array(&arr);
+ * printf("%ld\n", sum);
+ * // >> 15
+ * @endcode
+ */
+long long sum_longlong_array(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================
