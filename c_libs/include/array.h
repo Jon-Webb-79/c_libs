@@ -757,6 +757,74 @@ long sum_long_array(Array *arr);
  * @endcode
  */
 long long sum_longlong_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average of the values in an integer array
+ *
+ * @param arr An integer array container
+ * @return avg The average value of an array
+ *
+ * @code
+ * int a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, INT);
+ * float avg = average_int_array(&arr);
+ * printf("%d\n", avg);
+ * // 3.0
+ * @endcode
+ */
+float average_int_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average of the values in a float array
+ *
+ * @param arr A float array container
+ * @return avg The average value of an array
+ *
+ * @code
+ * float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+ * Array arr = init_array(5, 5, a, FLOAT);
+ * float avg = average_float_array(&arr);
+ * printf("%f\n", avg);
+ * // 3.0
+ * @endcode
+ */
+float average_float_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average of the values in a double array
+ *
+ * @param arr A double array container
+ * @return avg The average value of an array
+ *
+ * @code
+ * double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+ * Array arr = init_array(5, 5, a, DOUBLE);
+ * double avg = average_double_array(&arr);
+ * printf("%lf\n", avg);
+ * // 3.0
+ * @endcode
+ */
+double average_double_array(Array *arr);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average of the values in a long array
+ *
+ * @param arr A long array container
+ * @return avg The average value of an array
+ *
+ * @code
+ * long a[5] = {1, 2, 3, 4, 5};
+ * Array arr = init_array(5, 5, a, LONG);
+ * double avg = average_long_array(&arr);
+ * printf("%lf\n", avg);
+ * // 3.0
+ * @endcode
+ */
+double average_long_array(Array *arr);
 #endif /* array_H */
 // ================================================================================
 // ================================================================================

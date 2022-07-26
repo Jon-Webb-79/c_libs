@@ -155,8 +155,150 @@ Functions</h2></td></tr>
 <tr class="separator:a733a63634920ac579d3d810415093f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01e151e572082543c1d47dc8e3cf6058"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a01e151e572082543c1d47dc8e3cf6058">sum_longlong_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
 <tr class="separator:a01e151e572082543c1d47dc8e3cf6058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafadce5395a9c8c0a98fd92bf45337be"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#aafadce5395a9c8c0a98fd92bf45337be">average_int_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:aafadce5395a9c8c0a98fd92bf45337be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6381f34fa828f64ed668cdd68ea581fc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a6381f34fa828f64ed668cdd68ea581fc">average_float_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a6381f34fa828f64ed668cdd68ea581fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322fb7deef5b1040128edd8ae2416696"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a322fb7deef5b1040128edd8ae2416696">average_double_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a322fb7deef5b1040128edd8ae2416696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab0bf184eff43d753c888d2f5dcf715"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="array_8h.html#a5ab0bf184eff43d753c888d2f5dcf715">average_long_array</a> (<a class="el" href="structArray.html">Array</a> *arr)</td></tr>
+<tr class="separator:a5ab0bf184eff43d753c888d2f5dcf715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a322fb7deef5b1040128edd8ae2416696" name="a322fb7deef5b1040128edd8ae2416696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a322fb7deef5b1040128edd8ae2416696">&#9670;&nbsp;</a></span>average_double_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double average_double_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the average of the values in a double array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A double array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a>);</div>
+<div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_function" href="array_8c.html#a322fb7deef5b1040128edd8ae2416696">average_double_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.0</span></div>
+<div class="ttc" id="aarray_8c_html_a1ef27c704c5d241cc4a359e1b834ecf4"><div class="ttname"><a href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a></div><div class="ttdeci">Array init_array(size_t allocated_length, size_t active_length, void *array, dtype data_type)</div><div class="ttdef"><b>Definition:</b> array.c:19</div></div>
+<div class="ttc" id="aarray_8c_html_a322fb7deef5b1040128edd8ae2416696"><div class="ttname"><a href="array_8c.html#a322fb7deef5b1040128edd8ae2416696">average_double_array</a></div><div class="ttdeci">double average_double_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:636</div></div>
+<div class="ttc" id="astructArray_html"><div class="ttname"><a href="structArray.html">Array</a></div><div class="ttdef"><b>Definition:</b> array.h:41</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6381f34fa828f64ed668cdd68ea581fc" name="a6381f34fa828f64ed668cdd68ea581fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6381f34fa828f64ed668cdd68ea581fc">&#9670;&nbsp;</a></span>average_float_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float average_float_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the average of the values in a float array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A float array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">float</span> a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a>);</div>
+<div class="line"><span class="keywordtype">float</span> avg = <a class="code hl_function" href="array_8c.html#a6381f34fa828f64ed668cdd68ea581fc">average_float_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.0</span></div>
+<div class="ttc" id="aarray_8c_html_a6381f34fa828f64ed668cdd68ea581fc"><div class="ttname"><a href="array_8c.html#a6381f34fa828f64ed668cdd68ea581fc">average_float_array</a></div><div class="ttdeci">float average_float_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:629</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aafadce5395a9c8c0a98fd92bf45337be" name="aafadce5395a9c8c0a98fd92bf45337be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafadce5395a9c8c0a98fd92bf45337be">&#9670;&nbsp;</a></span>average_int_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float average_int_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the average of the values in an integer array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>An integer array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a>);</div>
+<div class="line"><span class="keywordtype">float</span> avg = <a class="code hl_function" href="array_8c.html#aafadce5395a9c8c0a98fd92bf45337be">average_int_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%d\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.0</span></div>
+<div class="ttc" id="aarray_8c_html_aafadce5395a9c8c0a98fd92bf45337be"><div class="ttname"><a href="array_8c.html#aafadce5395a9c8c0a98fd92bf45337be">average_int_array</a></div><div class="ttdeci">float average_int_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:622</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a5ab0bf184eff43d753c888d2f5dcf715" name="a5ab0bf184eff43d753c888d2f5dcf715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab0bf184eff43d753c888d2f5dcf715">&#9670;&nbsp;</a></span>average_long_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double average_long_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArray.html">Array</a> *&#160;</td>
+          <td class="paramname"><em>arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return the average of the values in a long array</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>A long array container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>avg The average value of an array</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">long</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_struct" href="structArray.html">Array</a> arr = <a class="code hl_function" href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a>(5, 5, a, <a class="code hl_enumvalue" href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a>);</div>
+<div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_function" href="array_8c.html#a5ab0bf184eff43d753c888d2f5dcf715">average_long_array</a>(&amp;arr);</div>
+<div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, avg);</div>
+<div class="line"><span class="comment">// 3.0</span></div>
+<div class="ttc" id="aarray_8c_html_a5ab0bf184eff43d753c888d2f5dcf715"><div class="ttname"><a href="array_8c.html#a5ab0bf184eff43d753c888d2f5dcf715">average_long_array</a></div><div class="ttdeci">double average_long_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:643</div></div>
+<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a90ed4b58d4cf789dbdc9c10b7291b9b1" name="a90ed4b58d4cf789dbdc9c10b7291b9b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90ed4b58d4cf789dbdc9c10b7291b9b1">&#9670;&nbsp;</a></span>delete_array_duplicates()</h2>
 
@@ -186,11 +328,8 @@ Functions</h2></td></tr>
 <div class="line">    printf(<span class="stringliteral">&quot;%d\n&quot;</span>, a[i]);</div>
 <div class="line">}</div>
 <div class="line"><span class="comment">// &gt;&gt; 1, 2, 3, 4, 5</span></div>
-<div class="ttc" id="aarray_8c_html_a1ef27c704c5d241cc4a359e1b834ecf4"><div class="ttname"><a href="array_8c.html#a1ef27c704c5d241cc4a359e1b834ecf4">init_array</a></div><div class="ttdeci">Array init_array(size_t allocated_length, size_t active_length, void *array, dtype data_type)</div><div class="ttdef"><b>Definition:</b> array.c:19</div></div>
 <div class="ttc" id="aarray_8c_html_a90ed4b58d4cf789dbdc9c10b7291b9b1"><div class="ttname"><a href="array_8c.html#a90ed4b58d4cf789dbdc9c10b7291b9b1">delete_array_duplicates</a></div><div class="ttdeci">void delete_array_duplicates(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:129</div></div>
-<div class="ttc" id="astructArray_html"><div class="ttname"><a href="structArray.html">Array</a></div><div class="ttdef"><b>Definition:</b> array.h:41</div></div>
 <div class="ttc" id="astructArray_html_a576709f0aee25289727faa37b5386fd3"><div class="ttname"><a href="structArray.html#a576709f0aee25289727faa37b5386fd3">Array::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> array.h:43</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> vector.h:45</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -380,7 +519,6 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.3</span></div>
 <div class="ttc" id="aarray_8c_html_a9fc18f4107328436b46da68199fb8a1d"><div class="ttname"><a href="array_8c.html#a9fc18f4107328436b46da68199fb8a1d">median_double_array</a></div><div class="ttdeci">double median_double_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:534</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92">DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition:</b> vector.h:43</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -413,7 +551,6 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%f\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.3</span></div>
 <div class="ttc" id="aarray_8c_html_a529fb008f85f2b9cd9b3c2e125178a08"><div class="ttname"><a href="array_8c.html#a529fb008f85f2b9cd9b3c2e125178a08">median_float_array</a></div><div class="ttdeci">float median_float_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:517</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> vector.h:42</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -478,7 +615,6 @@ Functions</h2></td></tr>
 <div class="line">printf(<span class="stringliteral">&quot;%lf\n&quot;</span>, median);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.3</span></div>
 <div class="ttc" id="aarray_8c_html_a9989ae1e1d18746e27f2fd255f7052cc"><div class="ttname"><a href="array_8c.html#a9989ae1e1d18746e27f2fd255f7052cc">median_long_array</a></div><div class="ttdeci">double median_long_array(Array *arr)</div><div class="ttdef"><b>Definition:</b> array.c:551</div></div>
-<div class="ttc" id="avector_8h_html_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea"><div class="ttname"><a href="vector_8h.html#acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea">LONG</a></div><div class="ttdeci">@ LONG</div><div class="ttdef"><b>Definition:</b> vector.h:48</div></div>
 </div><!-- fragment --> 
 </div>
 </div>

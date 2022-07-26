@@ -73,11 +73,119 @@ short \mbox{\hyperlink{array_8c_a738075fe4b7537fc48b205cb38604dd6}{sum\+\_\+shor
 long \mbox{\hyperlink{array_8c_a733a63634920ac579d3d810415093f92}{sum\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \item 
 long long \mbox{\hyperlink{array_8c_a01e151e572082543c1d47dc8e3cf6058}{sum\+\_\+longlong\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8c_aafadce5395a9c8c0a98fd92bf45337be}{average\+\_\+int\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+float \mbox{\hyperlink{array_8c_a6381f34fa828f64ed668cdd68ea581fc}{average\+\_\+float\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8c_a322fb7deef5b1040128edd8ae2416696}{average\+\_\+double\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
+\item 
+double \mbox{\hyperlink{array_8c_a5ab0bf184eff43d753c888d2f5dcf715}{average\+\_\+long\+\_\+array}} (\mbox{\hyperlink{structArray}{Array}} $\ast$arr)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{array_8c_a90ed4b58d4cf789dbdc9c10b7291b9b1}\label{array_8c_a90ed4b58d4cf789dbdc9c10b7291b9b1}} 
+\mbox{\Hypertarget{array_8c_a322fb7deef5b1040128edd8ae2416696}\label{array_8c_a322fb7deef5b1040128edd8ae2416696}} 
+\index{array.c@{array.c}!average\_double\_array@{average\_double\_array}}
+\index{average\_double\_array@{average\_double\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{average\_double\_array()}{average\_double\_array()}}
+{\footnotesize\ttfamily double average\+\_\+double\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the average of the values in a double array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A double array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+avg The average value of an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a33465d1d419b1074fb259ef444609e92}{DOUBLE}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} avg = \mbox{\hyperlink{array_8c_a322fb7deef5b1040128edd8ae2416696}{average\_double\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, avg);}
+\DoxyCodeLine{\textcolor{comment}{// 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a6381f34fa828f64ed668cdd68ea581fc}\label{array_8c_a6381f34fa828f64ed668cdd68ea581fc}} 
+\index{array.c@{array.c}!average\_float\_array@{average\_float\_array}}
+\index{average\_float\_array@{average\_float\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{average\_float\_array()}{average\_float\_array()}}
+{\footnotesize\ttfamily float average\+\_\+float\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the average of the values in a float array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A float array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+avg The average value of an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1.0, 2.0, 3.0, 4.0, 5.0\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815a9cf4a0866224b0bb4a7a895da27c9c4c}{FLOAT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} avg = \mbox{\hyperlink{array_8c_a6381f34fa828f64ed668cdd68ea581fc}{average\_float\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%f\(\backslash\)n"{}}, avg);}
+\DoxyCodeLine{\textcolor{comment}{// 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_aafadce5395a9c8c0a98fd92bf45337be}\label{array_8c_aafadce5395a9c8c0a98fd92bf45337be}} 
+\index{array.c@{array.c}!average\_int\_array@{average\_int\_array}}
+\index{average\_int\_array@{average\_int\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{average\_int\_array()}{average\_int\_array()}}
+{\footnotesize\ttfamily float average\+\_\+int\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the average of the values in an integer array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & An integer array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+avg The average value of an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815afd5a5f51ce25953f3db2c7e93eb7864a}{INT}});}
+\DoxyCodeLine{\textcolor{keywordtype}{float} avg = \mbox{\hyperlink{array_8c_aafadce5395a9c8c0a98fd92bf45337be}{average\_int\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)n"{}}, avg);}
+\DoxyCodeLine{\textcolor{comment}{// 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a5ab0bf184eff43d753c888d2f5dcf715}\label{array_8c_a5ab0bf184eff43d753c888d2f5dcf715}} 
+\index{array.c@{array.c}!average\_long\_array@{average\_long\_array}}
+\index{average\_long\_array@{average\_long\_array}!array.c@{array.c}}
+\doxysubsubsection{\texorpdfstring{average\_long\_array()}{average\_long\_array()}}
+{\footnotesize\ttfamily double average\+\_\+long\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structArray}{Array}} $\ast$}]{arr }\end{DoxyParamCaption})}
+
+This function will return the average of the values in a long array
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & A long array container \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+avg The average value of an array
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{long} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{structArray}{Array}} arr = \mbox{\hyperlink{array_8c_a1ef27c704c5d241cc4a359e1b834ecf4}{init\_array}}(5, 5, a, \mbox{\hyperlink{vector_8h_acfe99d230e216901bd782cc580e4e815aaee055c4a5aba7d55774e4f1c01dacea}{LONG}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double} avg = \mbox{\hyperlink{array_8c_a5ab0bf184eff43d753c888d2f5dcf715}{average\_long\_array}}(\&arr);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"{}\%lf\(\backslash\)n"{}}, avg);}
+\DoxyCodeLine{\textcolor{comment}{// 3.0}}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{array_8c_a90ed4b58d4cf789dbdc9c10b7291b9b1}\label{array_8c_a90ed4b58d4cf789dbdc9c10b7291b9b1}} 
 \index{array.c@{array.c}!delete\_array\_duplicates@{delete\_array\_duplicates}}
 \index{delete\_array\_duplicates@{delete\_array\_duplicates}!array.c@{array.c}}
 \doxysubsubsection{\texorpdfstring{delete\_array\_duplicates()}{delete\_array\_duplicates()}}

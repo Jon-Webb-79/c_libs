@@ -705,4 +705,41 @@ TEST (test_sum_array, test_longlong) {
 }
 // ================================================================================
 // ================================================================================
+
+/* This function tests the average_int_array function */
+TEST (test_avg_array, test_int) {
+	int a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, INT);
+	float avg = average_int_array(&arr);
+	EXPECT_FLOAT_EQ(3.0f, avg);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_float_array function */
+TEST (test_avg_array, test_float) {
+	float a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr = init_array(5, 5, a, FLOAT);
+	float avg = average_float_array(&arr);
+	EXPECT_FLOAT_EQ(3.0f, avg);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_double_array function */
+TEST (test_avg_array, test_double) {
+	double a[5] = {1.0, 2.0, 3.0, 4.0, 5.0};
+	Array arr = init_array(5, 5, a, DOUBLE);
+	double avg = average_double_array(&arr);
+	EXPECT_FLOAT_EQ(3.0, avg);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the average_long_array function */
+TEST (test_avg_array, test_long) {
+	long a[5] = {1, 2, 3, 4, 5};
+	Array arr = init_array(5, 5, a, LONG);
+	double avg = average_long_array(&arr);
+	EXPECT_FLOAT_EQ(3.0, avg);
+}
+// ================================================================================
+// ================================================================================
 // eof

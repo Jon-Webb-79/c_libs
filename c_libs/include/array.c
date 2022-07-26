@@ -617,6 +617,34 @@ long long sum_longlong_array(Array *arr) {
 	}
 	return sum;
 }
+// --------------------------------------------------------------------------------
+
+float average_int_array(Array *arr) {
+	int sum = sum_int_array(arr);
+	float num = (float)arr->active_length;
+	return (float)sum / num;
+}
+// --------------------------------------------------------------------------------
+
+float average_float_array(Array *arr) {
+	float sum = sum_float_array(arr);
+	float num = (float)arr->active_length;
+	return (float)sum / num;
+}
+// --------------------------------------------------------------------------------
+
+double average_double_array(Array *arr) {
+	double sum = sum_double_array(arr);
+	double num = (double)arr->active_length;
+	return (double)sum / num;
+}
+// --------------------------------------------------------------------------------
+
+double average_long_array(Array *arr) {
+	long sum = sum_long_array(arr);
+	double num = (double)arr->active_length;
+	return (double)sum / num;
+}
 // ================================================================================
 // ================================================================================
 // eof
