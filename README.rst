@@ -744,3 +744,18 @@ consistent with the input and output type.
     printf("%d\n", median);
    // 15
 
+=================
+average_xxx_array
+=================
+The function ``average_xxx_array(Array *arr)`` will return the average of all values in an
+array where ``xxx`` represents ``int``, ``float``, ``double``, and ``long``, which are
+consistent with the input type.  The outputs are ``float`` and ``double``.
+
+.. code-block:: c
+
+   int a[5] = {5, 4, 3, 2, 1};
+   Array arr = init_array(5, 5, a, INT);
+   float sum = average_int_array(&arr);
+    printf("%d\n", median);
+   // 15 
+
