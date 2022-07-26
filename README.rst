@@ -756,6 +756,20 @@ consistent with the input type.  The outputs are ``float`` and ``double``.
    int a[5] = {5, 4, 3, 2, 1};
    Array arr = init_array(5, 5, a, INT);
    float sum = average_int_array(&arr);
-    printf("%d\n", median);
-   // 15 
+    printf("%f\n", median);
+   // 3.0
 
+===============
+stdev_xxx_array
+===============
+The function ``stdev_array(Array *arr)`` will return the standard deviation of all values
+in an array ``xxx`` represents ``int``, ``float``, ``double``, and ``long``, which are
+consistent with the input type.  The outputs are ``float`` and ``double``. 
+
+.. code-block:: c
+
+   int a[5] = {5, 4, 3, 2, 1};
+   Array arr = init_array(5, 5, a, INT);
+   float sum = stdev_int_array(&arr);
+    printf("%f\n", median);
+   // 1.5811
