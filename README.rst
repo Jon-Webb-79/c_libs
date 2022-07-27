@@ -39,36 +39,73 @@ This library contains several header files, each containing functions that enabl
 capabilities.  
 
 `vector.h`_
-The first header file is the ``vector.h`` which contains
-functions that enable dnyamically allocated arrays of all data types to include strings.
 
+Contains functions for dynamically allocated array, also called vectors.
 
 .. _vector.h:
 
 ********
 vector.h
 ********
-The ``vector.h`` library contains functions that enable to user to create and operate on a dynamically
-allocated vector that is allocated in heap memory.  
+The ``vector.h`` file implements several functions that support the creation, manipulation,
+and destruction of dynamically allocated arrays.  The entire library is implemented as
+a series of macros, and as such will run slightly faster than typical functions, but will
+also consume more memory, which may be of relevance for some applications such as embedded
+programming.  The following functions are implemented in the ``vector.h`` library.
 
 ===========
 init_vector
 ===========
-The most basic function in the ``vector.h`` 
-library is the ``init_vector(size_t num_bytes, size_t num_indices)`` function, which takes as
-arguements ``num_bytes`` which represents the number of bytes consumed by a single indice, and
-``num_indices``, which is a user define number of indices that the vector is expected to require.
-The ``init_vector`` returns a ``Vector`` data type, which represents a ``struct`` containing
-vector parameters.  The following code snippet shows how a user can instantiate an integer
-and double vector that may require 20 indices.  An integer data point consumes 4 bytes of
-memory and a double type consumes 8 bytes of memory.  The returned variable should
-be considered as a vector container, and not just a vector.
+The entire ``header.h`` library is based on the implementation of the ``##`` operator to
+expand the naming of function types to include the user defined data type.  If the
+user wishes to use a specific data type, the must define this above the main function
+in the ``init_vector(type)`` macro function, in the manner shown below for the ``int``
+and ``float`` data types.
 
 .. code-block:: c
 
-   // Integer vector
-   Vector int_vec = init_vector(4, 20);
+   #include<stdio.h>
 
-   // Double vector
-   Vector double_vec = init_vector(8, 20);
+   init_vector(int);
+   init_vector(float);
 
+   int main(int arg, const char *argv[]) {
+       // implement functions here
+       return 0;
+   }
+
+================
+init_type_vector
+================
+Once the user enables the ``init_vector(type)`` macro functions for the desired data types,
+all reh requisite functions are enabled.  A dynamically allocated array can be instantiated
+with the ``typeVector = init_type_vector(size_t num_indices)`` where the ``type`` is equal to the type
+set in the ``init_vector(type)`` macro, and ``num_indices`` is a user guess for the number
+of indices to be allocated in the vector.  If the number of required indices turns out to
+be incorrect, the functions will reallocate memory as necessary.  The function returns a 
+``struct`` of the data type set in the macro.  The ``struct`` contains a pointer to the 
+vector as well as metadata such as ``num_bytes`` representing the number of bytes
+consumed by the data type, ``allocated_length`` which is the total number of allocated
+indices, and ``active_length``, which is the mount of indices currently occupied
+with data.  All metadata is assigned to a ``size_t`` data type.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(int);
+   init_vector(float);
+
+   int main(int arg, const char *argv[]) {
+       intVector vec1 = init_int_vector(5);
+       floatVector vec2 = init_float_vector(6);
+
+       printf("%ld\n", vec1.active_length);
+       printf("%ld\n", vec2.allocated_length);
+       printf("%ld\n", vec2.num_bytes);
+
+       // >> 0
+       // >> 6
+       // >> 4
+       return 0;
+   }
