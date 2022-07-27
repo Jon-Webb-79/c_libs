@@ -19,14 +19,81 @@ extern "C" {
 	#include "vector.h"
 }
 
-TEST(test_initialize_vector, notype_vec) {
-	size_t size = sizeof(int);
-    size_t length = 5;
-	Vector vec = init_vector(size, length);
-	EXPECT_EQ(vec.num_bytes, 4);
-	EXPECT_EQ(vec.allocated_length, 5);
-	EXPECT_EQ(vec.active_length, 0);
-	free(vec.vector);
+init_vector(int);
+init_vector(float);
+/* This test ensures that init_xxx_vector, push_xxx_vector, and free_xx_vector
+ * works correctly when only one vector of one data type is defined */
+TEST(push_data, single_int_test) {
+	int a[5] = {1, 2, 3, 4, 5};
+	intVector vec = init_int_vector(5);
+	push_int_vector(&vec, a, 5);
+	// Ensure correct assignment
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(a[i], vec.vector[i]);
+	}
+	// Ensure correct allocation
+	EXPECT_EQ(5, vec.active_length);
+	EXPECT_EQ(5, vec.allocated_length);
+	EXPECT_EQ(sizeof(int), vec.num_bytes);
+	free_int_vector(&vec);
+	// Ensure proper deallocation
+	EXPECT_EQ(0, vec.active_length);
+	EXPECT_EQ(0, vec.allocated_length);
+	EXPECT_EQ(0, vec.num_bytes);	
+}
+// --------------------------------------------------------------------------------
+
+/* This test ensures that init_xxx_vector, push_xxx_vector, and free_xxx_vector
+ * works correctly when multiple vectors and data types are defined */
+TEST(push_data, multiple_vec_test) {
+	int a[5] = {1, 2, 3, 4, 5};
+	int b[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	float c[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
+	intVector vec1 = init_int_vector(5);
+	intVector vec2 = init_int_vector(10);
+	floatVector vec3 = init_float_vector(6);
+	push_int_vector(&vec1, a, 5);
+	push_int_vector(&vec2, b, 10);
+	push_float_vector(&vec3, c, 6);
+	EXPECT_EQ(vec1.active_length, 5);
+	EXPECT_EQ(vec2.active_length, 10);
+	EXPECT_EQ(vec3.active_length, 6);
+	free_int_vector(&vec1);
+	free_int_vector(&vec2);
+	free_float_vector(&vec3);
+}
+// --------------------------------------------------------------------------------
+
+/* This function will test the insert_vector function as well as the ability
+ * of the function to allocate new memory */
+TEST (push_data, insert_vector) {
+	int a[5] = {1, 2, 3, 4, 5};
+	int b[6] = {6, 7, 8, 9, 10, 11};
+	intVector vec = init_int_vector(5);
+	push_int_vector(&vec, a, 5);
+	insert_int_vector(&vec, b, 6, 2);
+	int c[11] = {1, 2, 6, 7, 8, 9, 10, 11, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(c[i], vec.vector[i]);
+	}
+	EXPECT_EQ(11, vec.active_length);
+	EXPECT_EQ(22, vec.allocated_length);
+	free_int_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the pop_xxx_vector function to ensure it properly
+ * pops a variable from an array */
+TEST (pop_vector, pop_float) {
+	float a[5] = {1.2, 3.4, 6.3, 1.3, 9.2};
+	floatVector vec = init_float_vector(5);
+	push_float_vector(&vec, a, 5);
+	float b[4] = {1.2, 3.4, 1.3, 9.2};
+	pop_float_vector(&vec, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], vec.vector[i]);
+	}
+	free_float_vector(&vec);
 }
 // ================================================================================
 // ================================================================================
