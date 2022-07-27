@@ -116,7 +116,12 @@ push_type_vector
 The ``void = pus_type_vector(typeVector *vec, type *elements, size_t num_indices)`` function
 will push a scalar value or an array of data to the end of a dynamically allocated array.
 The term ``elements`` is a pointer to the scalar value or the array of data, and ``num_indices``
-is the number of indices consumed by the data in ``elements``.
+is the number of indices consumed by the data in ``elements``.  **NOTE:** This function will
+handle ``char`` data types, but does not check for null terminators (i.e ``'\0'``). It is
+the programmers responsibility to determine if null terminators should be incorporated
+in this function.  However, if they are included, the function could append another
+character array onto a null terminator, leaving multiple terminators within the string.
+This could be advantageous or dis-advantageous depending on the use case.
 
 .. code-block:: c
 
@@ -126,12 +131,16 @@ is the number of indices consumed by the data in ``elements``.
 
    int main(int arg, const char *argv[]) {
        intVector vec = init_int_vector(5);
+
+       // push an array
        int a[5] = {1, 2, 3, 4, 5};
        push_int_vector(&vec, a, 5);
        for (size_t i = 0; i < vec.active_length; i++) {
            printf("%d\n", vec.vector[i]);
        }
        // >> 1, 2, 3, 4, 5
+
+       // push a scalar
        int c = 6;
        push_int_vector(&vec, &c, 1);
        printf("%d\n", vec.vector[5]);
@@ -143,3 +152,41 @@ is the number of indices consumed by the data in ``elements``.
 
 Notice that at the end we are using the ``free_type_vector`` function to deallocate all
 memory and reset that metadata in the static ``struct``.
+
+==================
+insert_type_vector
+==================
+The ``int = insert_type_vector(typeVector *vec, type *elements, size_t num_indices, size_t index)`` function
+will insert a scalar variable, or an array of variables to the user defined index within a vector container.
+The variable ``vec`` represents the typed vector container, ``elements`` represents the scalar or array of
+data to be inserted, ``num_indices`` represents the number of indices consumed by ``elements``, and ``index``
+is the index within the container where the data is to be inserted.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(int);
+
+   int main(int arg, const char *argv[]) {
+       // Insert an array
+       intVector vec = init_int_vector(5);
+       int a[5] = {1, 2, 3, 4, 5};
+       push_int_vector(&vec, a, 5);
+       int b[3] = {10, 9, 8};
+       insert_int_vector(&vec, b, 3, 2);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%d\n", vec.vector[i]);
+       }
+       // >> 1, 2, 10, 9, 8, 3, 4, 5
+
+       // Insert a scalar
+       int c = 6;
+       insert_int_vector(&vec, &c, 1, 0);
+       printf("%d\n", vec.vector[0]);
+       // >> 6
+
+       free_int_vector(&vec);
+       return 0;
+   }
+

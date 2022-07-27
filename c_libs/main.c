@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO add insert_type_vector instructions to README.rst
+// TODO insert pop_type_vector to README.rst
 // TODO Add doc strings to macro functions
 // TODO improve error handling with anthother macro
 // TODO determine if there is a way to turn data type into string
