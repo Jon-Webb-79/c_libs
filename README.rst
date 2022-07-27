@@ -38,15 +38,14 @@ Library
 This library contains several header files, each containing functions that enable specific
 capabilities.  
 
-`vector.h`_
-
+`Vector`_
 Contains functions for dynamically allocated array, also called vectors.
 
-.. _vector.h:
+.. _Vector:
 
-********
-vector.h
-********
+******
+Vector
+******
 The ``vector.h`` file implements several functions that support the creation, manipulation,
 and destruction of dynamically allocated arrays.  The entire library is implemented as
 a series of macros, and as such will run slightly faster than typical functions, but will
@@ -87,7 +86,8 @@ be incorrect, the functions will reallocate memory as necessary.  The function r
 vector as well as metadata such as ``num_bytes`` representing the number of bytes
 consumed by the data type, ``allocated_length`` which is the total number of allocated
 indices, and ``active_length``, which is the mount of indices currently occupied
-with data.  All metadata is assigned to a ``size_t`` data type.
+with data.  All metadata is assigned to a ``size_t`` data type. In addition, the 
+vector data is assigned to the variable ``vector``.
 
 .. code-block:: c
 
@@ -109,3 +109,37 @@ with data.  All metadata is assigned to a ``size_t`` data type.
        // >> 4
        return 0;
    }
+
+================
+push_type_vector
+================
+The ``void = pus_type_vector(typeVector *vec, type *elements, size_t num_indices)`` function
+will push a scalar value or an array of data to the end of a dynamically allocated array.
+The term ``elements`` is a pointer to the scalar value or the array of data, and ``num_indices``
+is the number of indices consumed by the data in ``elements``.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(int);
+
+   int main(int arg, const char *argv[]) {
+       intVector vec = init_int_vector(5);
+       int a[5] = {1, 2, 3, 4, 5};
+       pus_int_vector(&vec, a, 5);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%d\n", vec.vector[i]);
+       }
+       // >> 1, 2, 3, 4, 5
+       int c = 6;
+       push_int_vector(&vec, &c, 1);
+       printf("%d\n", vec.vector[5]);
+       // >> 6
+
+       free_int_vector(&vec);
+       return 0;
+   }
+
+Notice that at the end we are using the ``free_type_vector`` function to deallocate all
+memory and reset that metadata in the static ``struct``.
