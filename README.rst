@@ -160,7 +160,15 @@ The ``int = insert_type_vector(typeVector *vec, type *elements, size_t num_indic
 will insert a scalar variable, or an array of variables to the user defined index within a vector container.
 The variable ``vec`` represents the typed vector container, ``elements`` represents the scalar or array of
 data to be inserted, ``num_indices`` represents the number of indices consumed by ``elements``, and ``index``
-is the index within the container where the data is to be inserted.
+is the index within the container where the data is to be inserted. **NOTE:** This function will
+handle ``char`` data types, but does not check for null terminators (i.e ``'\0'``). It is
+the programmers responsibility to determine if null terminators should be incorporated
+in this function.  However, if they are included, the function could append another
+character array onto a null terminator, leaving multiple terminators within the string.
+This could be advantageous or dis-advantageous depending on the use case. 
+
+This function will return an integer value of -1 if the function fails, or 1 if the function
+is succesfully executed.
 
 .. code-block:: c
 
@@ -190,3 +198,29 @@ is the index within the container where the data is to be inserted.
        return 0;
    }
 
+===============
+pop_type_vector
+===============
+The ``int = pop_type_vector(typeVector *vec, size_t index)`` function will remove a scalar value from
+a type vector container.  The variable ``index`` represents the index, where the user wishes to
+remove data.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(int);
+
+   int main(int arg, const char *argv[]) {
+       // Insert an array
+       intVector vec = init_int_vector(5);
+       int a[5] = {1, 2, 3, 4, 5};
+       push_int_vector(&vec, a, 5);
+       pop_int_vector(&vec, 2);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%d\n", vec.vector[i]);
+       }
+       // >> 1, 2, 4, 5
+       free_int_vector(&vec);
+       return 0;
+   }
