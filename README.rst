@@ -39,7 +39,7 @@ This library contains several header files, each containing functions that enabl
 capabilities.  
 
 `Vector`_
-Contains functions for dynamically allocated array, also called vectors.
+Contains functions for dynamically allocated arrays, also called vectors.
 
 .. _Vector:
 
@@ -127,7 +127,7 @@ is the number of indices consumed by the data in ``elements``.
    int main(int arg, const char *argv[]) {
        intVector vec = init_int_vector(5);
        int a[5] = {1, 2, 3, 4, 5};
-       pus_int_vector(&vec, a, 5);
+       push_int_vector(&vec, a, 5);
        for (size_t i = 0; i < vec.active_length; i++) {
            printf("%d\n", vec.vector[i]);
        }

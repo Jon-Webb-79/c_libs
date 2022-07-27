@@ -23,7 +23,7 @@ init_vector(int);
 init_vector(float);
 /* This test ensures that init_xxx_vector, push_xxx_vector, and free_xx_vector
  * works correctly when only one vector of one data type is defined */
-TEST(push_data, single_int_test) {
+TEST(test_vector, test_push_single_vec) {
 	int a[5] = {1, 2, 3, 4, 5};
 	intVector vec = init_int_vector(5);
 	push_int_vector(&vec, a, 5);
@@ -45,7 +45,7 @@ TEST(push_data, single_int_test) {
 
 /* This test ensures that init_xxx_vector, push_xxx_vector, and free_xxx_vector
  * works correctly when multiple vectors and data types are defined */
-TEST(push_data, multiple_vec_test) {
+TEST(test_vector, test_push_multiple_vecs) {
 	int a[5] = {1, 2, 3, 4, 5};
 	int b[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	float c[6] = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6};
@@ -66,7 +66,7 @@ TEST(push_data, multiple_vec_test) {
 
 /* This function will test the insert_vector function as well as the ability
  * of the function to allocate new memory */
-TEST (push_data, insert_vector) {
+TEST (test_vector, test_insert_vector) {
 	int a[5] = {1, 2, 3, 4, 5};
 	int b[6] = {6, 7, 8, 9, 10, 11};
 	intVector vec = init_int_vector(5);
@@ -84,7 +84,7 @@ TEST (push_data, insert_vector) {
 
 /* This function tests the pop_xxx_vector function to ensure it properly
  * pops a variable from an array */
-TEST (pop_vector, pop_float) {
+TEST (test_vector, pop_vector) {
 	float a[5] = {1.2, 3.4, 6.3, 1.3, 9.2};
 	floatVector vec = init_float_vector(5);
 	push_float_vector(&vec, a, 5);
