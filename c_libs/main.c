@@ -16,7 +16,6 @@
 #include "include/vector.h"
 // Begin code
 // TODO Add doc strings to macro functions
-// TODO improve error handling with anthother macro
 // TODO determine if there is a way to turn data type into string
 // TODO Add enum for DYNAMIC and STATIC
 int main(int argc, const char * argv[]) {

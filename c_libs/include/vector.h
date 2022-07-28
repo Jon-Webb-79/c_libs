@@ -44,6 +44,7 @@ TYPE##Vector init_##TYPE##_vector(size_t num_indices)							\
 	TYPE *pointer = (TYPE *)malloc(num_indices * sizeof(TYPE));					\
 	if (pointer == NULL) {														\
 		perror("WARNING ");														\
+		printf("Failure on file=%s, line=%d)", __FILE__, __LINE__);				\
 		free(pointer);															\
 		exit(0);																\
 	}																			\
@@ -60,6 +61,7 @@ void push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)
 		TYPE *pointer = (TYPE *)realloc(vec->vector, size * sizeof(TYPE));			\
 		if (pointer == NULL) {														\
 			perror("WARNING ");														\
+			printf("Failure on file=%s, line=%d)", __FILE__, __LINE__);				\
 			free(pointer);															\
 			exit(0);																\
 		}																			\
@@ -83,13 +85,14 @@ int insert_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices
 {																					\
 	if (index > vec->active_length) {												\
 		printf("WARNING: The selected index is larger than the active length\n");	\
-		return -1;																	\
+		return 0;																	\
 	}																				\
 	if (vec->active_length + num_indices > vec->allocated_length) {					\
 		size_t size = (vec->active_length + num_indices) * 2;						\
 		TYPE *pointer = (TYPE *)realloc(vec->vector, size * sizeof(TYPE));			\
 		if (pointer == NULL) {														\
 			perror("WARNING ");														\
+			printf("Failure on file=%s, line=%d)", __FILE__, __LINE__);				\
 			free(pointer);															\
 			exit(0);																\
 		}																			\
@@ -109,7 +112,7 @@ int pop_##TYPE##_vector(TYPE##Vector *vec, size_t index)						\
 {																				\
 	if(index >= vec->active_length) {											\
 		printf("Index %ld out of the active_bounds for pop\n");					\
-		return -1;																\
+		return 0;																\
 	}																			\
 	unsigned char *dst = (unsigned char *)vec->vector + index * sizeof(TYPE);	\
 	memmove(dst, dst + sizeof(TYPE),											\
