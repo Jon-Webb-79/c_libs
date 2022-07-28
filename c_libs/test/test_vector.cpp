@@ -34,12 +34,10 @@ TEST(test_vector, test_push_single_vec) {
 	// Ensure correct allocation
 	EXPECT_EQ(5, vec.active_length);
 	EXPECT_EQ(5, vec.allocated_length);
-	EXPECT_EQ(sizeof(int), vec.num_bytes);
 	free_int_vector(&vec);
 	// Ensure proper deallocation
 	EXPECT_EQ(0, vec.active_length);
 	EXPECT_EQ(0, vec.allocated_length);
-	EXPECT_EQ(0, vec.num_bytes);	
 }
 // --------------------------------------------------------------------------------
 
