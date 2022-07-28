@@ -41,6 +41,8 @@ typedef struct																	\
 	TYPE *vector;																\
 	size_t active_length;														\
 	size_t allocated_length;													\
+	TYPE max;																	\
+	TYPE min;																	\
 	TYPE##mem_type memory;														\
 } TYPE##Vector;																	\
 																				\
@@ -79,6 +81,14 @@ int push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)	
 		vec->vector = pointer;														\
 		vec->allocated_length = size;												\
 	}																				\
+	if (vec->active_length == 0) {													\
+		vec->max = elements[0];														\
+		vec->min = elements[0];														\
+	}																				\
+	for (size_t i = 1; i < num_indices; i++) {										\
+		if (vec->max < elements[i]) vec->max = elements[i];							\
+		if (vec->min > elements[i]) vec->min = elements[i];							\
+	}																				\
 	memcpy((char *)vec->vector + vec->active_length * sizeof(TYPE), elements,		\
 			num_indices * sizeof(TYPE));											\
 	vec->active_length += num_indices;												\
@@ -114,6 +124,14 @@ int insert_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices
 		}																			\
 		vec->vector = pointer;														\
 		vec->allocated_length = size;												\
+	}																				\
+	if (vec->active_length == 0) {													\
+		vec->max = elements[0];														\
+		vec->min = elements[0];														\
+	}																				\
+	for (size_t i = 1; i < num_indices; i++) {										\
+		if (vec->max < elements[i]) vec->max = elements[i];							\
+		if (vec->min > elements[i]) vec->min = elements[i];							\
 	}																				\
 	memmove(((char *)vec->vector) + (num_indices + index) * sizeof(TYPE),			\
 			((char *)vec->vector) + index * sizeof(TYPE),							\

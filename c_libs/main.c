@@ -15,6 +15,17 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
+// TODO delete_vector_values
+// TODO replace_vector_index
+// TODO replace_vector_values
+// TODO delete_vector_duplicates
+// TODO unique_vector_values
+// TODO sort_vector
+// TODO reverse_vector
+// TODO median_vector
+// TODO average_vector
+// TODO stdev_vector
+// TODO cumsum_vector
 // TODO Add doc strings to macro functions
 // TODO determine if there is a way to turn data type into string
 int main(int argc, const char * argv[]) {
