@@ -17,7 +17,6 @@
 // Begin code
 // TODO Add doc strings to macro functions
 // TODO determine if there is a way to turn data type into string
-// TODO Add enum for DYNAMIC and STATIC
 int main(int argc, const char * argv[]) {
 //	int *a = init_vector(3, sizeof(int));
 //	int b[3] = {1, 2, 3};

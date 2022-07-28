@@ -31,11 +31,17 @@
  * \param num_bytes The number of bytes consumed by a single index
  */
 #define init_vector(TYPE)														\
+typedef enum																	\
+{																				\
+	TYPE##DYNAMIC,																\
+	TYPE##STATIC																\
+} TYPE##mem_type;																\
 typedef struct																	\
 {																				\
 	TYPE *vector;																\
 	size_t active_length;														\
 	size_t allocated_length;													\
+	TYPE##mem_type memory;														\
 } TYPE##Vector;																	\
 																				\
 TYPE##Vector init_##TYPE##_vector(size_t num_indices)							\
@@ -43,7 +49,7 @@ TYPE##Vector init_##TYPE##_vector(size_t num_indices)							\
 	TYPE##Vector vec;															\
 	TYPE *pointer = (TYPE *)malloc(num_indices * sizeof(TYPE));					\
 	if (pointer == NULL) {														\
-		perror("WARNING ");														\
+		perror("FATAL ERROR ");													\
 		printf("Failure on file=%s, line=%d)", __FILE__, __LINE__);				\
 		free(pointer);															\
 		exit(0);																\
@@ -51,11 +57,16 @@ TYPE##Vector init_##TYPE##_vector(size_t num_indices)							\
 	vec.active_length = 0;														\
 	vec.allocated_length = num_indices;											\
 	vec.vector = pointer;														\
+	vec.memory = TYPE##DYNAMIC;													\
 	return vec;																	\
 }																				\
 																				\
-void push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)	\
+int push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)		\
 {																					\
+	if (vec->memory != TYPE##DYNAMIC) {												\
+		printf("WARNING: Memory must be dynamic\n");								\
+		return 0;																	\
+	}																				\
 	if (vec->active_length + num_indices > vec->allocated_length) {					\
 		size_t size = (vec->active_length + num_indices) * 2;						\
 		TYPE *pointer = (TYPE *)realloc(vec->vector, size * sizeof(TYPE));			\
@@ -63,7 +74,7 @@ void push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)
 			perror("WARNING ");														\
 			printf("Failure on file=%s, line=%d)", __FILE__, __LINE__);				\
 			free(pointer);															\
-			exit(0);																\
+			return 0;																\
 		}																			\
 		vec->vector = pointer;														\
 		vec->allocated_length = size;												\
@@ -71,6 +82,7 @@ void push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)
 	memcpy((char *)vec->vector + vec->active_length * sizeof(TYPE), elements,		\
 			num_indices * sizeof(TYPE));											\
 	vec->active_length += num_indices;												\
+	return 1;																		\
 }																					\
 																				\
 void free_##TYPE##_vector(TYPE##Vector *vec)									\
@@ -83,6 +95,10 @@ void free_##TYPE##_vector(TYPE##Vector *vec)									\
 int insert_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices,	\
 		                    size_t index)											\
 {																					\
+	if (vec->memory != TYPE##DYNAMIC) {												\
+		printf("WARNING: Memory must be dynamic\n");								\
+		return 0;																	\
+	}																				\
 	if (index > vec->active_length) {												\
 		printf("WARNING: The selected index is larger than the active length\n");	\
 		return 0;																	\
@@ -94,7 +110,7 @@ int insert_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices
 			perror("WARNING ");														\
 			printf("Failure on file=%s, line=%d)", __FILE__, __LINE__);				\
 			free(pointer);															\
-			exit(0);																\
+			return 0;																\
 		}																			\
 		vec->vector = pointer;														\
 		vec->allocated_length = size;												\
