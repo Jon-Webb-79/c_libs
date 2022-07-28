@@ -87,7 +87,8 @@ vector as well as metadata such as ``num_bytes`` representing the number of byte
 consumed by the data type, ``allocated_length`` which is the total number of allocated
 indices, and ``active_length``, which is the mount of indices currently occupied
 with data.  All metadata is assigned to a ``size_t`` data type. In addition, the 
-vector data is assigned to the variable ``vector``.
+vector data is assigned to the variable ``vector``.  The ``struct`` is also accompanied
+with a ``min`` and ``max`` attribute.
 
 .. code-block:: c
 
@@ -145,6 +146,10 @@ This could be advantageous or dis-advantageous depending on the use case.
        push_int_vector(&vec, &c, 1);
        printf("%d\n", vec.vector[5]);
        // >> 6
+       printf("%d\n", vec.max);
+       printf("%d\n", vec.min);
+       // >> 6
+       // >> 1
 
        free_int_vector(&vec);
        return 0;
