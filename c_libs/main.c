@@ -16,7 +16,6 @@
 #include "include/vector.h"
 // Begin code
 // TODO add code examples to doc strings
-// TODO delete max and min from struct and insert functions.
 // TODO unique_vector_values
 // TODO sort_vector
 // TODO reverse_vector

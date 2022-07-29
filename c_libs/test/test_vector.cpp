@@ -31,8 +31,6 @@ TEST(test_vector, test_push_single_vec) {
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(a[i], vec.vector[i]);
 	}
-	EXPECT_EQ(1, vec.min);
-	EXPECT_EQ(5, vec.max);
 
 	// Ensure correct allocation
 	EXPECT_EQ(5, vec.active_length);
@@ -77,8 +75,6 @@ TEST (test_vector, test_insert_vector) {
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_EQ(c[i], vec.vector[i]);
 	}
-	EXPECT_EQ(11, vec.max);
-	EXPECT_EQ(1, vec.min);
 	EXPECT_EQ(11, vec.active_length);
 	EXPECT_EQ(22, vec.allocated_length);
 	free_int_vector(&vec);
