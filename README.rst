@@ -229,3 +229,37 @@ remove data.
        free_int_vector(&vec);
        return 0;
    }
+
+=========================
+delete_type_vector_values
+=========================
+The ``void delete_type_vector_values(typeVector *vec, type *value, size_t num_indices)`` function will remove a user
+defined scalar variable or an array of variables from an input Vector or Array container.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(float);
+
+   int main(int arg, const char *argv[]) {
+       // Insert an array
+       floatVector vec = init_float_vector(6);
+       int a[7] = {1.1, 3.8, 2.2, 1.1, 3.6, 4.2, 1.1};
+       push_float_vector(&vec, a, 7);
+       float b[2] = {1.1, 3.8}
+       delete_float_vector_values(&vec, b, 2);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%f\n", vec.vector[i]);
+       }
+       // >> 2.2, 3.6, 4.2
+       float c = 2.2;
+       delete_float_vector_values(&vec, &c, 1);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%f\n", vec.vector[i]);
+       }
+       // >> 3.6, 4.2
+       free_int_vector(&vec);
+       return 0;
+   }
+
