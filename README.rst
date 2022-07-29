@@ -266,8 +266,9 @@ defined scalar variable or an array of variables from an input Vector or Array c
 =========================
 replace_type_vector_index
 =========================
-The ``int replace_type_vector_index(typeVector *vec, size_t index, type replacement_value)`` function will replace
-the value within an array at a specified ``index`` with a ``replacement_value``.
+The ``int replace_type_vector_index(type *vec, size_t length, size_t index, type replacement_value)`` function will replace
+the value within an array at a specified ``index`` with a ``replacement_value``. Unlike other functions in this
+library, the user will pass the vector or array to this function, not the array or vector container
 
 .. code-block:: c
 
@@ -280,7 +281,7 @@ the value within an array at a specified ``index`` with a ``replacement_value``.
        intVector vec = init_int_vector(5);
        int a[5] = {1, 2, 3, 4, 5};
        push_int_vector(&vec, a, 5);
-       replace_int_vector_values(&vec, 2, 5);
+       replace_int_vector_values(vec.vector, vec.active_length, 2, 5);
        for (size_t i = 0; i < vec.active_length; i++) {
            printf("%d\n", vec.vector[i]);
        }
@@ -289,3 +290,28 @@ the value within an array at a specified ``index`` with a ``replacement_value``.
        return 0;
    }
 
+==========================
+replace_type_vector_values
+==========================
+The ``void replace_type_vector_values(type *vec, size_t length, type old_value, type new_value)`` function will
+replace ``old_value`` in an array or vector with ``new_value``.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(int);
+
+   int main(int arg, const char *argv[]) {
+       // Insert an array
+       intVector vec = init_int_vector(5);
+       int a[5] = {1, 2, 3, 4, 5};
+       push_int_vector(&vec, a, 5);
+       replace_int_vector_values(vec.vector, vec.active_length, 2, 5);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%d\n", vec.vector[i]);
+       }
+       // >> 1, 5, 3, 4, 5
+       free_int_vector(&vec);
+       return 0;
+   }
