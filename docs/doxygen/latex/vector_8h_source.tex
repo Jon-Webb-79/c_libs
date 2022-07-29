@@ -25,99 +25,183 @@
 \DoxyCodeLine{21 \textcolor{preprocessor}{\#include <string.h>}}
 \DoxyCodeLine{22 \textcolor{preprocessor}{\#include <math.h>}}
 \DoxyCodeLine{23 }
-\DoxyCodeLine{33 \textcolor{preprocessor}{\#define init\_vector(TYPE)                                                       \(\backslash\)}}
-\DoxyCodeLine{34 \textcolor{preprocessor}{typedef struct                                                                  \(\backslash\)}}
-\DoxyCodeLine{35 \textcolor{preprocessor}{\{                                                                               \(\backslash\)}}
-\DoxyCodeLine{36 \textcolor{preprocessor}{    TYPE *vector;                                                               \(\backslash\)}}
-\DoxyCodeLine{37 \textcolor{preprocessor}{    size\_t active\_length;                                                       \(\backslash\)}}
-\DoxyCodeLine{38 \textcolor{preprocessor}{    size\_t allocated\_length;                                                    \(\backslash\)}}
-\DoxyCodeLine{39 \textcolor{preprocessor}{    size\_t num\_bytes;                                                           \(\backslash\)}}
-\DoxyCodeLine{40 \textcolor{preprocessor}{\} TYPE\#\#Vector;                                                                 \(\backslash\)}}
-\DoxyCodeLine{41 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
-\DoxyCodeLine{42 \textcolor{preprocessor}{TYPE\#\#Vector init\_\#\#TYPE\#\#\_vector(size\_t num\_indices)                           \(\backslash\)}}
-\DoxyCodeLine{43 \textcolor{preprocessor}{\{                                                                               \(\backslash\)}}
-\DoxyCodeLine{44 \textcolor{preprocessor}{    TYPE\#\#Vector vec;                                                           \(\backslash\)}}
-\DoxyCodeLine{45 \textcolor{preprocessor}{    TYPE *pointer = (TYPE *)malloc(num\_indices * sizeof(TYPE));                 \(\backslash\)}}
-\DoxyCodeLine{46 \textcolor{preprocessor}{    if (pointer == NULL) \{                                                      \(\backslash\)}}
-\DoxyCodeLine{47 \textcolor{preprocessor}{        perror("{}WARNING "{}});                                                     \(\backslash\)}
-\DoxyCodeLine{48         free(pointer);                                                          \(\backslash\)}
-\DoxyCodeLine{49         exit(0);                                                                \(\backslash\)}
-\DoxyCodeLine{50     \}                                                                           \(\backslash\)}
-\DoxyCodeLine{51     vec.num\_bytes = sizeof(TYPE);                                               \(\backslash\)}
-\DoxyCodeLine{52     vec.active\_length = 0;                                                      \(\backslash\)}
-\DoxyCodeLine{53     vec.allocated\_length = num\_indices;                                         \(\backslash\)}
-\DoxyCodeLine{54     vec.vector = pointer;                                                       \(\backslash\)}
-\DoxyCodeLine{55     return vec;                                                                 \(\backslash\)}
-\DoxyCodeLine{56 \}                                                                               \(\backslash\)}
-\DoxyCodeLine{57                                                                                 \(\backslash\)}
-\DoxyCodeLine{58 void push\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec, TYPE *elements, size\_t num\_indices)    \(\backslash\)}
-\DoxyCodeLine{59 \{                                                                                   \(\backslash\)}
-\DoxyCodeLine{60     if (vec-\/>active\_length + num\_indices > vec-\/>allocated\_length) \{                 \(\backslash\)}
-\DoxyCodeLine{61         size\_t size = (vec-\/>active\_length + num\_indices) * 2;                       \(\backslash\)}
-\DoxyCodeLine{62         TYPE *pointer = (TYPE *)realloc(vec-\/>vector, size * vec-\/>num\_bytes);        \(\backslash\)}
-\DoxyCodeLine{63         if (pointer == NULL) \{                                                      \(\backslash\)}
-\DoxyCodeLine{64             perror("{}WARNING "{});                                                     \(\backslash\)}
-\DoxyCodeLine{65             free(pointer);                                                          \(\backslash\)}
-\DoxyCodeLine{66             exit(0);                                                                \(\backslash\)}
-\DoxyCodeLine{67         \}                                                                           \(\backslash\)}
-\DoxyCodeLine{68         vec-\/>vector = pointer;                                                      \(\backslash\)}
-\DoxyCodeLine{69         vec-\/>allocated\_length = size;                                               \(\backslash\)}
-\DoxyCodeLine{70     \}                                                                               \(\backslash\)}
-\DoxyCodeLine{71     memcpy((char *)vec-\/>vector + vec-\/>active\_length * vec-\/>num\_bytes, elements,     \(\backslash\)}
-\DoxyCodeLine{72             num\_indices * vec-\/>num\_bytes);                                          \(\backslash\)}
-\DoxyCodeLine{73     vec-\/>active\_length += num\_indices;                                              \(\backslash\)}
-\DoxyCodeLine{74 \}                                                                                   \(\backslash\)}
-\DoxyCodeLine{75                                                                                 \(\backslash\)}
-\DoxyCodeLine{76 void free\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec)                                    \(\backslash\)}
-\DoxyCodeLine{77 \{                                                                               \(\backslash\)}
-\DoxyCodeLine{78     free(vec-\/>vector);                                                          \(\backslash\)}
-\DoxyCodeLine{79     vec-\/>active\_length = 0;                                                     \(\backslash\)}
-\DoxyCodeLine{80     vec-\/>allocated\_length = 0;                                                  \(\backslash\)}
-\DoxyCodeLine{81     vec-\/>num\_bytes = 0;                                                         \(\backslash\)}
-\DoxyCodeLine{82 \}                                                                               \(\backslash\)}
-\DoxyCodeLine{83                                                                                 \(\backslash\)}
-\DoxyCodeLine{84 int insert\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec, TYPE *elements, size\_t num\_indices,   \(\backslash\)}
-\DoxyCodeLine{85                             size\_t index)                                           \(\backslash\)}
-\DoxyCodeLine{86 \{                                                                                   \(\backslash\)}
-\DoxyCodeLine{87     if (index > vec-\/>active\_length) \{                                               \(\backslash\)}
-\DoxyCodeLine{88         printf("{}WARNING: The selected index is larger than the active length\(\backslash\)n"{});   \(\backslash\)}
-\DoxyCodeLine{89         return -\/1;                                                                  \(\backslash\)}
-\DoxyCodeLine{90     \}                                                                               \(\backslash\)}
-\DoxyCodeLine{91     if (vec-\/>active\_length + num\_indices > vec-\/>allocated\_length) \{                 \(\backslash\)}
-\DoxyCodeLine{92         size\_t size = (vec-\/>active\_length + num\_indices) * 2;                       \(\backslash\)}
-\DoxyCodeLine{93         TYPE *pointer = (TYPE *)realloc(vec-\/>vector, size * vec-\/>num\_bytes);        \(\backslash\)}
-\DoxyCodeLine{94         if (pointer == NULL) \{                                                      \(\backslash\)}
-\DoxyCodeLine{95             perror("{}WARNING "{});                                                     \(\backslash\)}
-\DoxyCodeLine{96             free(pointer);                                                          \(\backslash\)}
-\DoxyCodeLine{97             exit(0);                                                                \(\backslash\)}
-\DoxyCodeLine{98         \}                                                                           \(\backslash\)}
-\DoxyCodeLine{99         vec-\/>vector = pointer;                                                      \(\backslash\)}
-\DoxyCodeLine{100         vec-\/>allocated\_length = size;                                               \(\backslash\)}
-\DoxyCodeLine{101     \}                                                                               \(\backslash\)}
-\DoxyCodeLine{102     memmove(((char *)vec-\/>vector) + (num\_indices + index) * vec-\/>num\_bytes,     \(\backslash\)}
-\DoxyCodeLine{103             ((char *)vec-\/>vector) + index * vec-\/>num\_bytes,                         \(\backslash\)}
-\DoxyCodeLine{104             (vec-\/>active\_length -\/ index) * vec-\/>num\_bytes);                         \(\backslash\)}
-\DoxyCodeLine{105     memcpy(((char *)vec-\/>vector) + index * vec-\/>num\_bytes, elements,                \(\backslash\)}
-\DoxyCodeLine{106             num\_indices * vec-\/>num\_bytes);                                          \(\backslash\)}
-\DoxyCodeLine{107     vec-\/>active\_length += num\_indices;                                              \(\backslash\)}
-\DoxyCodeLine{108     return 1;                                                                       \(\backslash\)}
-\DoxyCodeLine{109 \}                                                                                   \(\backslash\)}
-\DoxyCodeLine{110                                                                                     \(\backslash\)}
-\DoxyCodeLine{111 int pop\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec, size\_t index)                        \(\backslash\)}
-\DoxyCodeLine{112 \{                                                                               \(\backslash\)}
-\DoxyCodeLine{113     if(index >= vec-\/>active\_length) \{                                           \(\backslash\)}
-\DoxyCodeLine{114         printf("{}Index \%ld out of the active\_bounds for pop\(\backslash\)n"{});                 \(\backslash\)}
-\DoxyCodeLine{115         return -\/1;                                                              \(\backslash\)}
-\DoxyCodeLine{116     \}                                                                           \(\backslash\)}
-\DoxyCodeLine{117     unsigned char *dst = (unsigned char *)vec-\/>vector + index * vec-\/>num\_bytes; \(\backslash\)}
-\DoxyCodeLine{118     memmove(dst, dst + vec-\/>num\_bytes,                                          \(\backslash\)}
-\DoxyCodeLine{119             vec-\/>num\_bytes * (vec-\/>allocated\_length -\/ index -\/ 1));              \(\backslash\)}
-\DoxyCodeLine{120     vec-\/>active\_length -\/= 1;                                                    \(\backslash\)}
-\DoxyCodeLine{121     return 1;                                                                   \(\backslash\)}
-\DoxyCodeLine{122 \}}
-\DoxyCodeLine{123 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{124 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{125 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{126 \textcolor{comment}{// eof}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define init\_vector(TYPE)                                                       \(\backslash\)}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{typedef enum                                                                    \(\backslash\)}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\{                                                                               \(\backslash\)}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{    TYPE\#\#DYNAMIC,                                                              \(\backslash\)}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{    TYPE\#\#STATIC                                                                \(\backslash\)}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\} TYPE\#\#mem\_type;                                                               \(\backslash\)}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{typedef struct                                                                  \(\backslash\)}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\{                                                                               \(\backslash\)}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{    TYPE *vector;                                                               \(\backslash\)}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{    size\_t active\_length;                                                       \(\backslash\)}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{    size\_t allocated\_length;                                                    \(\backslash\)}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{    TYPE max;                                                                   \(\backslash\)}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{    TYPE min;                                                                   \(\backslash\)}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{    TYPE\#\#mem\_type memory;                                                      \(\backslash\)}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\} TYPE\#\#Vector;                                                                 \(\backslash\)}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{                                                                                \(\backslash\)}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{TYPE\#\#Vector init\_\#\#TYPE\#\#\_vector(size\_t num\_indices)                           \(\backslash\)}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\{                                                                               \(\backslash\)}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{    TYPE\#\#Vector vec;                                                           \(\backslash\)}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{    TYPE *pointer = (TYPE *)malloc(num\_indices * sizeof(TYPE));                 \(\backslash\)}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{    if (pointer == NULL) \{                                                      \(\backslash\)}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{        perror("{}FATAL ERROR "{}});                                                 \(\backslash\)}
+\DoxyCodeLine{78         printf("{}Failure on file=\%s, line=\%d)"{}, \_\_FILE\_\_, \_\_LINE\_\_);             \(\backslash\)}
+\DoxyCodeLine{79         free(pointer);                                                          \(\backslash\)}
+\DoxyCodeLine{80         exit(0);                                                                \(\backslash\)}
+\DoxyCodeLine{81     \}                                                                           \(\backslash\)}
+\DoxyCodeLine{82     vec.active\_length = 0;                                                      \(\backslash\)}
+\DoxyCodeLine{83     vec.allocated\_length = num\_indices;                                         \(\backslash\)}
+\DoxyCodeLine{84     vec.vector = pointer;                                                       \(\backslash\)}
+\DoxyCodeLine{85     vec.memory = TYPE\#\#DYNAMIC;                                                 \(\backslash\)}
+\DoxyCodeLine{86     return vec;                                                                 \(\backslash\)}
+\DoxyCodeLine{87 \}                                                                               \(\backslash\)}
+\DoxyCodeLine{88                                                                                 \(\backslash\)}
+\DoxyCodeLine{89 int push\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec, TYPE *elements, size\_t num\_indices)     \(\backslash\)}
+\DoxyCodeLine{90 \{                                                                                   \(\backslash\)}
+\DoxyCodeLine{91     if (vec-\/>memory != TYPE\#\#DYNAMIC) \{                                             \(\backslash\)}
+\DoxyCodeLine{92         printf("{}WARNING: Memory must be dynamic\(\backslash\)n"{});                                \(\backslash\)}
+\DoxyCodeLine{93         return 0;                                                                   \(\backslash\)}
+\DoxyCodeLine{94     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{95     if (vec-\/>active\_length + num\_indices > vec-\/>allocated\_length) \{                 \(\backslash\)}
+\DoxyCodeLine{96         size\_t size = (vec-\/>active\_length + num\_indices) * 2;                       \(\backslash\)}
+\DoxyCodeLine{97         TYPE *pointer = (TYPE *)realloc(vec-\/>vector, size * sizeof(TYPE));          \(\backslash\)}
+\DoxyCodeLine{98         if (pointer == NULL) \{                                                      \(\backslash\)}
+\DoxyCodeLine{99             perror("{}WARNING "{});                                                     \(\backslash\)}
+\DoxyCodeLine{100             printf("{}Failure on file=\%s, line=\%d)"{}, \_\_FILE\_\_, \_\_LINE\_\_);             \(\backslash\)}
+\DoxyCodeLine{101             free(pointer);                                                          \(\backslash\)}
+\DoxyCodeLine{102             return 0;                                                               \(\backslash\)}
+\DoxyCodeLine{103         \}                                                                           \(\backslash\)}
+\DoxyCodeLine{104         vec-\/>vector = pointer;                                                      \(\backslash\)}
+\DoxyCodeLine{105         vec-\/>allocated\_length = size;                                               \(\backslash\)}
+\DoxyCodeLine{106     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{107     if (vec-\/>active\_length == 0) \{                                                  \(\backslash\)}
+\DoxyCodeLine{108         vec-\/>max = elements[0];                                                     \(\backslash\)}
+\DoxyCodeLine{109         vec-\/>min = elements[0];                                                     \(\backslash\)}
+\DoxyCodeLine{110     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{111     for (size\_t i = 1; i < num\_indices; i++) \{                                      \(\backslash\)}
+\DoxyCodeLine{112         if (vec-\/>max < elements[i]) vec-\/>max = elements[i];                         \(\backslash\)}
+\DoxyCodeLine{113         if (vec-\/>min > elements[i]) vec-\/>min = elements[i];                         \(\backslash\)}
+\DoxyCodeLine{114     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{115     memcpy((char *)vec-\/>vector + vec-\/>active\_length * sizeof(TYPE), elements,       \(\backslash\)}
+\DoxyCodeLine{116             num\_indices * sizeof(TYPE));                                            \(\backslash\)}
+\DoxyCodeLine{117     vec-\/>active\_length += num\_indices;                                              \(\backslash\)}
+\DoxyCodeLine{118     return 1;                                                                       \(\backslash\)}
+\DoxyCodeLine{119 \}                                                                                   \(\backslash\)}
+\DoxyCodeLine{120                                                                                 \(\backslash\)}
+\DoxyCodeLine{121 void free\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec)                                    \(\backslash\)}
+\DoxyCodeLine{122 \{                                                                               \(\backslash\)}
+\DoxyCodeLine{123     free(vec-\/>vector);                                                          \(\backslash\)}
+\DoxyCodeLine{124     vec-\/>active\_length = 0;                                                     \(\backslash\)}
+\DoxyCodeLine{125     vec-\/>allocated\_length = 0;                                                  \(\backslash\)}
+\DoxyCodeLine{126 \}                                                                               \(\backslash\)}
+\DoxyCodeLine{127                                                                                 \(\backslash\)}
+\DoxyCodeLine{128 int insert\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec, TYPE *elements, size\_t num\_indices,   \(\backslash\)}
+\DoxyCodeLine{129                             size\_t index)                                           \(\backslash\)}
+\DoxyCodeLine{130 \{                                                                                   \(\backslash\)}
+\DoxyCodeLine{131     if (vec-\/>memory != TYPE\#\#DYNAMIC) \{                                             \(\backslash\)}
+\DoxyCodeLine{132         printf("{}WARNING: Memory must be dynamic\(\backslash\)n"{});                                \(\backslash\)}
+\DoxyCodeLine{133         return 0;                                                                   \(\backslash\)}
+\DoxyCodeLine{134     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{135     if (index > vec-\/>active\_length) \{                                               \(\backslash\)}
+\DoxyCodeLine{136         printf("{}WARNING: The selected index is larger than the active length\(\backslash\)n"{});   \(\backslash\)}
+\DoxyCodeLine{137         return 0;                                                                   \(\backslash\)}
+\DoxyCodeLine{138     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{139     if (vec-\/>active\_length + num\_indices > vec-\/>allocated\_length) \{                 \(\backslash\)}
+\DoxyCodeLine{140         size\_t size = (vec-\/>active\_length + num\_indices) * 2;                       \(\backslash\)}
+\DoxyCodeLine{141         TYPE *pointer = (TYPE *)realloc(vec-\/>vector, size * sizeof(TYPE));          \(\backslash\)}
+\DoxyCodeLine{142         if (pointer == NULL) \{                                                      \(\backslash\)}
+\DoxyCodeLine{143             perror("{}WARNING "{});                                                     \(\backslash\)}
+\DoxyCodeLine{144             printf("{}Failure on file=\%s, line=\%d)"{}, \_\_FILE\_\_, \_\_LINE\_\_);             \(\backslash\)}
+\DoxyCodeLine{145             free(pointer);                                                          \(\backslash\)}
+\DoxyCodeLine{146             return 0;                                                               \(\backslash\)}
+\DoxyCodeLine{147         \}                                                                           \(\backslash\)}
+\DoxyCodeLine{148         vec-\/>vector = pointer;                                                      \(\backslash\)}
+\DoxyCodeLine{149         vec-\/>allocated\_length = size;                                               \(\backslash\)}
+\DoxyCodeLine{150     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{151     if (vec-\/>active\_length == 0) \{                                                  \(\backslash\)}
+\DoxyCodeLine{152         vec-\/>max = elements[0];                                                     \(\backslash\)}
+\DoxyCodeLine{153         vec-\/>min = elements[0];                                                     \(\backslash\)}
+\DoxyCodeLine{154     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{155     for (size\_t i = 1; i < num\_indices; i++) \{                                      \(\backslash\)}
+\DoxyCodeLine{156         if (vec-\/>max < elements[i]) vec-\/>max = elements[i];                         \(\backslash\)}
+\DoxyCodeLine{157         if (vec-\/>min > elements[i]) vec-\/>min = elements[i];                         \(\backslash\)}
+\DoxyCodeLine{158     \}                                                                               \(\backslash\)}
+\DoxyCodeLine{159     memmove(((char *)vec-\/>vector) + (num\_indices + index) * sizeof(TYPE),           \(\backslash\)}
+\DoxyCodeLine{160             ((char *)vec-\/>vector) + index * sizeof(TYPE),                           \(\backslash\)}
+\DoxyCodeLine{161             (vec-\/>active\_length -\/ index) * sizeof(TYPE));                           \(\backslash\)}
+\DoxyCodeLine{162     memcpy(((char *)vec-\/>vector) + index * sizeof(TYPE), elements,                  \(\backslash\)}
+\DoxyCodeLine{163             num\_indices * sizeof(TYPE));                                            \(\backslash\)}
+\DoxyCodeLine{164     vec-\/>active\_length += num\_indices;                                              \(\backslash\)}
+\DoxyCodeLine{165     return 1;                                                                       \(\backslash\)}
+\DoxyCodeLine{166 \}                                                                                   \(\backslash\)}
+\DoxyCodeLine{167                                                                                     \(\backslash\)}
+\DoxyCodeLine{168 int pop\_\#\#TYPE\#\#\_vector(TYPE\#\#Vector *vec, size\_t index)                        \(\backslash\)}
+\DoxyCodeLine{169 \{                                                                               \(\backslash\)}
+\DoxyCodeLine{170     if(index >= vec-\/>active\_length) \{                                           \(\backslash\)}
+\DoxyCodeLine{171         printf("{}Index \%ld out of the active\_bounds for pop\(\backslash\)n"{});                 \(\backslash\)}
+\DoxyCodeLine{172         return 0;                                                               \(\backslash\)}
+\DoxyCodeLine{173     \}                                                                           \(\backslash\)}
+\DoxyCodeLine{174     unsigned char *dst = (unsigned char *)vec-\/>vector + index * sizeof(TYPE);   \(\backslash\)}
+\DoxyCodeLine{175     memmove(dst, dst + sizeof(TYPE),                                            \(\backslash\)}
+\DoxyCodeLine{176             sizeof(TYPE) * (vec-\/>allocated\_length -\/ index -\/ 1));                \(\backslash\)}
+\DoxyCodeLine{177     vec-\/>active\_length -\/= 1;                                                    \(\backslash\)}
+\DoxyCodeLine{178     return 1;                                                                   \(\backslash\)}
+\DoxyCodeLine{179 \}                                                                               \(\backslash\)}
+\DoxyCodeLine{180                                                                                 \(\backslash\)}
+\DoxyCodeLine{181 void delete\_\#\#TYPE\#\#\_vector\_values(TYPE\#\#Vector *vec, TYPE *value,              \(\backslash\)}
+\DoxyCodeLine{182                                    size\_t num\_indices)                          \(\backslash\)}
+\DoxyCodeLine{183 \{                                                                               \(\backslash\)}
+\DoxyCodeLine{184     for (size\_t i = 0; ; i++) \{                                                 \(\backslash\)}
+\DoxyCodeLine{185         if (i >= vec-\/>active\_length) break;                                     \(\backslash\)}
+\DoxyCodeLine{186         for (size\_t j = 0; j < num\_indices; j++) \{                              \(\backslash\)}
+\DoxyCodeLine{187             if (vec-\/>vector[i] == value[j]) \{                                   \(\backslash\)}
+\DoxyCodeLine{188                 pop\_\#\#TYPE\#\#\_vector(vec, i);                                    \(\backslash\)}
+\DoxyCodeLine{189                 i -\/= 1;                                                         \(\backslash\)}
+\DoxyCodeLine{190             \}                                                                   \(\backslash\)}
+\DoxyCodeLine{191         \}                                                                       \(\backslash\)}
+\DoxyCodeLine{192     \}                                                                           \(\backslash\)}
+\DoxyCodeLine{193 \}                                                                               \(\backslash\)}
+\DoxyCodeLine{194                                                                                 \(\backslash\)}
+\DoxyCodeLine{195 int replace\_\#\#TYPE\#\#\_vector\_index(TYPE *vec, size\_t length, size\_t index,       \(\backslash\)}
+\DoxyCodeLine{196                                   TYPE replacement\_value)                       \(\backslash\)}
+\DoxyCodeLine{197 \{                                                                               \(\backslash\)}
+\DoxyCodeLine{198     if (index > length || index < 0) \{                                          \(\backslash\)}
+\DoxyCodeLine{199         printf("{}WARNING: Failure on file=\%s, line=\%d)"{}, \_\_FILE\_\_, \_\_LINE\_\_);    \(\backslash\)}
+\DoxyCodeLine{200         return 0;                                                               \(\backslash\)}
+\DoxyCodeLine{201     \}                                                                           \(\backslash\)}
+\DoxyCodeLine{202     vec[index] = replacement\_value;                                             \(\backslash\)}
+\DoxyCodeLine{203     return 1;                                                                   \(\backslash\)}
+\DoxyCodeLine{204 \}                                                                               \(\backslash\)}
+\DoxyCodeLine{205                                                                                 \(\backslash\)}
+\DoxyCodeLine{206 void replace\_\#\#TYPE\#\#\_vector\_values(TYPE *vec, size\_t length, TYPE old\_value,   \(\backslash\)}
+\DoxyCodeLine{207                                     TYPE new\_value)                             \(\backslash\)}
+\DoxyCodeLine{208 \{                                                                               \(\backslash\)}
+\DoxyCodeLine{209     for (size\_t i = 0; i < length; i++) \{                                       \(\backslash\)}
+\DoxyCodeLine{210         if (vec[i] == old\_value) vec[i] = new\_value;                            \(\backslash\)}
+\DoxyCodeLine{211     \}                                                                           \(\backslash\)}
+\DoxyCodeLine{212 \}                                                                               \(\backslash\)}
+\DoxyCodeLine{213                                                                                 \(\backslash\)}
+\DoxyCodeLine{214 void delete\_\#\#TYPE\#\#\_vector\_duplicates(TYPE\#\#Vector *vec)                       \(\backslash\)}
+\DoxyCodeLine{215 \{                                                                               \(\backslash\)}
+\DoxyCodeLine{216     for (size\_t i = 0; i < vec-\/>active\_length -\/ 1; i++) \{                       \(\backslash\)}
+\DoxyCodeLine{217         for (size\_t j = i + 1; j < vec-\/>active\_length; j++) \{                   \(\backslash\)}
+\DoxyCodeLine{218             if (vec-\/>vector[i] == vec-\/>vector[j]) \{                             \(\backslash\)}
+\DoxyCodeLine{219                 pop\_\#\#TYPE\#\#\_vector(vec, j);                                    \(\backslash\)}
+\DoxyCodeLine{220                 j -\/= 1;                                                         \(\backslash\)}
+\DoxyCodeLine{221             \}                                                                   \(\backslash\)}
+\DoxyCodeLine{222         \}                                                                       \(\backslash\)}
+\DoxyCodeLine{223     \}                                                                           \(\backslash\)}
+\DoxyCodeLine{224 \}}
+\DoxyCodeLine{225 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{226 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{228 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}
