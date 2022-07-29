@@ -160,6 +160,21 @@ TEST (test_vector, replace_vector_values) {
 	}
 	free_float_vector(&vec);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_xxx_vector_duplicates function to ensure it properly
+ * replaces an series of array value */
+TEST (test_vector, delete_vector_duplicates) {
+	int a[7] = {1, 1, 2, 3, 4, 2, 5};
+	intVector vec = init_int_vector(7);
+	push_int_vector(&vec, a, 7);
+	delete_int_vector_duplicates(&vec);
+	int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_EQ(b[i], vec.vector[i]);
+	}
+	free_int_vector(&vec);
+}
 // ================================================================================
 // ================================================================================
 // eof

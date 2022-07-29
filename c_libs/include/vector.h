@@ -186,6 +186,18 @@ void replace_##TYPE##_vector_values(TYPE *vec, size_t length, TYPE old_value,   
 	for (size_t i = 0; i < length; i++) {										\
 		if (vec[i] == old_value) vec[i] = new_value;							\
 	}																			\
+}																				\
+																				\
+void delete_##TYPE##_vector_duplicates(TYPE##Vector *vec)						\
+{																				\
+	for (size_t i = 0; i < vec->active_length - 1; i++) {						\
+		for (size_t j = i + 1; j < vec->active_length; j++) {					\
+			if (vec->vector[i] == vec->vector[j]) {								\
+				pop_##TYPE##_vector(vec, j);									\
+				j -= 1;															\
+			}																	\
+		}																		\
+	}																			\
 }
 // ================================================================================
 // ================================================================================
