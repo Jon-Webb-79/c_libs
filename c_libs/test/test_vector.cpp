@@ -136,10 +136,25 @@ TEST (test_vector, delete_vector_values_array) {
  * replaces an array value */
 TEST (test_vector, replace_vector_index) {
 	float a[7] = {1.1, 2.2, 1.1, 3.8, 4.2, 1.1, 2.2};
-	floatVector vec = init_float_vector(6);
-	push_float_vector(&vec, a, 6);
-	replace_float_vector_index(&vec, 2, 3.1f);
+	floatVector vec = init_float_vector(7);
+	push_float_vector(&vec, a, 7);
+	replace_float_vector_index(vec.vector, vec.active_length, 2, 3.1f);
 	float b[7] = {1.1, 2.2, 3.1, 3.8, 4.2, 1.1, 2.2};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], vec.vector[i]);
+	}
+	free_float_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the replace_xxx_vector_values function to ensure it properly
+ * replaces an series of array value */
+TEST (test_vector, replace_vector_values) {
+	float a[7] = {1.1, 2.2, 1.1, 3.8, 4.2, 1.1, 2.2};
+	floatVector vec = init_float_vector(7);
+	push_float_vector(&vec, a, 7);
+	replace_float_vector_values(vec.vector, vec.active_length, 1.1, 3.1f);
+	float b[7] = {3.1, 2.2, 3.1, 3.8, 4.2, 3.1, 2.2};
 	for (size_t i = 0; i < vec.active_length; i++) {
 		EXPECT_FLOAT_EQ(b[i], vec.vector[i]);
 	}

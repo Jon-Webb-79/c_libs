@@ -169,15 +169,23 @@ void delete_##TYPE##_vector_values(TYPE##Vector *vec, TYPE *value,				\
 	}																			\
 }																				\
 																				\
-int replace_##TYPE##_vector_index(TYPE##Vector *vec, size_t index,				\
+int replace_##TYPE##_vector_index(TYPE *vec, size_t length, size_t index,		\
 		                          TYPE replacement_value)						\
 {																				\
-	if (index > vec->active_length || index < 0) {								\
+	if (index > length || index < 0) {											\
 		printf("WARNING: Failure on file=%s, line=%d)", __FILE__, __LINE__);	\
 		return 0;																\
 	}																			\
-	vec->vector[index] = replacement_value;										\
+	vec[index] = replacement_value;												\
 	return 1;																	\
+}																				\
+																				\
+void replace_##TYPE##_vector_values(TYPE *vec, size_t length, TYPE old_value,   \
+		                            TYPE new_value)								\
+{																				\
+	for (size_t i = 0; i < length; i++) {										\
+		if (vec[i] == old_value) vec[i] = new_value;							\
+	}																			\
 }
 // ================================================================================
 // ================================================================================
