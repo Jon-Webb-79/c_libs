@@ -245,7 +245,7 @@ defined scalar variable or an array of variables from an input Vector or Array c
    int main(int arg, const char *argv[]) {
        // Insert an array
        floatVector vec = init_float_vector(6);
-       int a[7] = {1.1, 3.8, 2.2, 1.1, 3.6, 4.2, 1.1};
+       float a[7] = {1.1, 3.8, 2.2, 1.1, 3.6, 4.2, 1.1};
        push_float_vector(&vec, a, 7);
        float b[2] = {1.1, 3.8}
        delete_float_vector_values(&vec, b, 2);
@@ -259,6 +259,32 @@ defined scalar variable or an array of variables from an input Vector or Array c
            printf("%f\n", vec.vector[i]);
        }
        // >> 3.6, 4.2
+       free_int_vector(&vec);
+       return 0;
+   }
+
+=========================
+replace_type_vector_index
+=========================
+The ``int replace_type_vector_index(typeVector *vec, size_t index, type replacement_value)`` function will replace
+the value within an array at a specified ``index`` with a ``replacement_value``.
+
+.. code-block:: c
+
+   #include<stdio.h>
+
+   init_vector(int);
+
+   int main(int arg, const char *argv[]) {
+       // Insert an array
+       intVector vec = init_int_vector(5);
+       int a[5] = {1, 2, 3, 4, 5};
+       push_int_vector(&vec, a, 5);
+       replace_int_vector_values(&vec, 2, 5);
+       for (size_t i = 0; i < vec.active_length; i++) {
+           printf("%d\n", vec.vector[i]);
+       }
+       // >> 1, 2, 5, 4, 5
        free_int_vector(&vec);
        return 0;
    }
