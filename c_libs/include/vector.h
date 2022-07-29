@@ -153,6 +153,20 @@ int pop_##TYPE##_vector(TYPE##Vector *vec, size_t index)						\
 			sizeof(TYPE) * (vec->allocated_length - index - 1));				\
 	vec->active_length -= 1;													\
 	return 1;																	\
+}																				\
+																				\
+void delete_##TYPE##_vector_values(TYPE##Vector *vec, TYPE *value,				\
+		                           size_t num_indices)							\
+{																				\
+	for (size_t i = 0; ; i++) {													\
+		if (i >= vec->active_length) break;										\
+		for (size_t j = 0; j < num_indices; j++) {								\
+			if (vec->vector[i] == value[j]) {									\
+				pop_##TYPE##_vector(vec, i);									\
+				i -= 1;															\
+			}																	\
+		}																		\
+	}																			\
 }
 // ================================================================================
 // ================================================================================

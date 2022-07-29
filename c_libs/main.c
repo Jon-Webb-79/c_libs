@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO delete_vector_values
 // TODO replace_vector_index
 // TODO replace_vector_values
 // TODO delete_vector_duplicates

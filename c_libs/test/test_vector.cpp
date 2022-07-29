@@ -98,6 +98,38 @@ TEST (test_vector, pop_vector) {
 	}
 	free_float_vector(&vec);
 }
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_xxx_vector_values function to ensure it properly
+ * pops a scalar variable from an array */
+TEST (test_vector, delete_vector_values_scalar) {
+	float a[6] = {1.1, 2.2, 1.1, 3.8, 4.2, 1.1};
+	floatVector vec = init_float_vector(6);
+	push_float_vector(&vec, a, 6);
+	float c = 1.1;
+	delete_float_vector_values(&vec, &c, 1);
+	float b[3] = {2.2, 3.8, 4.2};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], vec.vector[i]);
+	}
+	free_float_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+/* This function tests the delete_xxx_vector_values function to ensure it properly
+ * pops an array variable from an array */
+TEST (test_vector, delete_vector_values_array) {
+	float a[7] = {1.1, 2.2, 1.1, 3.8, 4.2, 1.1, 2.2};
+	floatVector vec = init_float_vector(6);
+	push_float_vector(&vec, a, 6);
+	float c[2] = {1.1, 2.2};
+	delete_float_vector_values(&vec, c, 2);
+	float b[3] = {3.8, 4.2};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		EXPECT_FLOAT_EQ(b[i], vec.vector[i]);
+	}
+	free_float_vector(&vec);
+}
 // ================================================================================
 // ================================================================================
 // eof
