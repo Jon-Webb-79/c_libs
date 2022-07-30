@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include "include/vector.h"
 // Begin code
-// TODO add code examples to doc strings
+// TODO print_vector
 // TODO unique_vector_values
 // TODO sort_vector
 // TODO reverse_vector

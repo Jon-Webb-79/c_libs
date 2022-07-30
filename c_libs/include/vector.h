@@ -66,6 +66,11 @@ typedef struct																	\
  * \param num_indices A guess for the number of indices consumed by				\
  *                    the vector												\
  * \return TYPE##Vec A Vector struct container									\
+ *																				\
+ * @code																		\
+ * init_vector(int);																\
+ * intVector vec = init_int_vector(20);											\
+ * @endcode																		\
  */																				\
 TYPE##Vector init_##TYPE##_vector(size_t num_indices)							\
 {																				\
@@ -92,6 +97,20 @@ TYPE##Vector init_##TYPE##_vector(size_t num_indices)							\
  * \param elements A scalar or array of data to be pushed						\
  * \param num_indices The number of indices ocupied by the data in elements		\
  * \returns 1 if the function executes sucessfully, 0 if it does not			\
+ *																				\
+ * @code																		\
+ * init_vector(int);															\
+ * intVector vec = init_int_vector(20);											\
+ * int a[5] = {1, 2, 3, 4, 5};													\
+ * push_int_vector(&vec, a, 5);													\
+ * int b = 12;																	\
+ * push_int_vector(&vec, &b, 1);												\
+ * for (size_t i = 0; i < vec->active_length; i++) {							\
+ *     printf("%d\n", vec.vector[i]);											\
+ *  }																			\
+ * free_int_vector(&vec);														\
+ * // >> 1, 2, 3, 4, 5, 12														\
+ * @endcode																		\
  */																				\
 int push_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices)		\
 {																					\
@@ -138,6 +157,19 @@ void free_##TYPE##_vector(TYPE##Vector *vec)									\
  * \param num_indices The number of indices consumed by the data in elements	\
  * \param index The index where data will be inserted							\
  * \return 1 if function executes sucessfully, 0 if not							\
+ *																				\
+ * @code																		\
+ * init_vector(float);															\
+ * floatVector vec = init_float_vector(5);										\
+ * float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};										\
+ * push_float_vector(&vec, a, 5);												\
+ * float b[2] = {2.5, 7.2};														\
+ * insert_float_vector(&vec, b, 2, 2};											\
+ * for (size_t i = 0; i < active_length; i++) {									\
+ *     printf("%d\n", vec.vector]i]);											\
+ * }																			\
+ * // >> 1.1, 2.2, 2.5, 7.2, 3.3, 4.4, 5.5										\
+ * @endcode																		\
  */																				\
 int insert_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices,	\
 		                    size_t index)											\
@@ -178,6 +210,18 @@ int insert_##TYPE##_vector(TYPE##Vector *vec, TYPE *elements, size_t num_indices
  * \param vec An array or vector container											\
  * \param index The index that will be popped										\
  * \return 1 if function executes successfully, 0 if not							\
+ *																					\
+ * @code																			\
+ * int a[5] = {1, 2, 3, 4, 5}														\
+ * intVector vec = init_int_vec(5);													\
+ * push_int_vector(&vec, a, 5);														\
+ * pop_int_vector(&vec, 1);															\
+ * for (size_t i = 0; i < i < vec.active_length; i++) {								\
+ *     printf("%d\n", vec.vector[i]);												\
+ *  }																				\
+ * // >> 1, 3, 4, 5																	\
+ * free_int_vector(&vec);															\
+ * @endcode																			\
  */																					\
 int pop_##TYPE##_vector(TYPE##Vector *vec, size_t index)						\
 {																				\
@@ -199,6 +243,26 @@ int pop_##TYPE##_vector(TYPE##Vector *vec, size_t index)						\
  * \param vec An array or vector container										\
  * \param value The scalar or array of data to be deleted						\
  * \param num_indies The number of indices in value								\
+ *																				\
+ * @code																		\
+ * int a[5] = {1, 1,  2, 1, 3, 4, 5};											\
+ * intVector vec init_int_vector(5);											\
+ * push_int_vector(&vec, a, 5);													\
+ * delete_int_vector_values(&vec, 1, 1)											\
+ * for (size_t i = 0; i < vec.active_length; i++) {								\
+ *     printf("%d\n", vec.vector[i]);											\
+ *  }																			\
+ * // >> 2, 3, 4, 5																\
+ * int b[5] = {1, 1,  2, 1, 3, 4, 5};											\
+ * intVector vec init_int_vector(5);											\
+ * push_int_vector(&vec, b, 5);													\
+ * int c[2] = {1, 3};															\
+ * delete_int_vector_values(&vec, c, 2)											\
+ * for (size_t i = 0; i < vec.active_length; i++) {								\
+ *     printf("%d\n", vec.vector[i]);											\
+ *  }																			\
+ * // >> 2, 4, 5																\
+ * @endcode																		\
  */																				\
 void delete_##TYPE##_vector_values(TYPE##Vector *vec, TYPE *value,				\
 		                           size_t num_indices)							\
@@ -222,6 +286,17 @@ void delete_##TYPE##_vector_values(TYPE##Vector *vec, TYPE *value,				\
  * \param length The length of the vector or array								\
  * \param index The index where data will be replaced							\
  * \param replacement_value The new value to be placed in index					\
+ *																				\
+ * @code																		\
+ * int a[6] = {1, 2, 1, 3, 4, 5}												\
+ * intVector vec = init_int_vector(6);											\
+ * push_int_vector(&vec, a, 6);													\
+ * replace_int_vector_index(vec.vector, vec.active_length, 1, 3);				\
+ * for (size_t i = 0; i < vec.active_length, i++) {								\
+ *     printf("%d\n", vec.vector[i]);											\
+ * }																			\
+ * // >> 1, 3, 1, 3, 4, 5														\
+ * @endcode																		\
  */																				\
 int replace_##TYPE##_vector_index(TYPE *vec, size_t length, size_t index,		\
 		                          TYPE replacement_value)						\
@@ -242,6 +317,17 @@ int replace_##TYPE##_vector_index(TYPE *vec, size_t length, size_t index,		\
  * \param length The length of the array or vector								\
  * \param old_value The value to be replaced									\
  * \param new_value The value that will replace the old value					\
+ *																				\
+ * @code																		\
+ * float a[5] = {1.1, 3.4, 1.1, 4.8, 2.1};										\
+ * floatVector vec = init_float_vector(5);										\
+ * push_float_vector(&vec, a, 5);												\
+ * replace_float_vector_values(vec.vector, vec.active_length, 1.1f, 2.2f);		\
+ * for (size_t i = 0; i < vec.active_length; i++) {								\
+ *     printf("%f\n", vec.vector[i]);											\
+ * }																			\
+ * // >> 2.2, 3.4, 2.2, 4.8, 2.1												\
+ * @endcode																		\
  */																				\
 void replace_##TYPE##_vector_values(TYPE *vec, size_t length, TYPE old_value,   \
 		                            TYPE new_value)								\
@@ -255,6 +341,17 @@ void replace_##TYPE##_vector_values(TYPE *vec, size_t length, TYPE old_value,   
  * This function will delete all duplicate values from an array					\
  *																				\
  * \param vec A Vector or Array container										\
+ *																				\
+ * @code																		\
+ * float a[5] = {1.1, 2.2, 1.1, 3.3, 4.4};										\
+ * floatVector vec = init_float_vector(5);										\
+ * push_float_vector(&vec, a, 5);												\
+ * delete_float_vector_duplicates(&vec)											\
+ * for (size_t i = 0; i < vec.active_length; i++) {								\
+ *     printf("%f\n", vec.vector[i]);											\
+ * }																			\
+ * // >> 1.1, 2.2, 3.3, 4.4														\
+ * @endcode																		\
  */																				\
 void delete_##TYPE##_vector_duplicates(TYPE##Vector *vec)						\
 {																				\
