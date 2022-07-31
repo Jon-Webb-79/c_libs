@@ -21,6 +21,7 @@ extern "C" {
 
 init_vector(int);
 init_vector(float);
+init_vector(ushort);
 /* This test ensures that init_xxx_vector, push_xxx_vector, and free_xx_vector
  * works correctly when only one vector of one data type is defined */
 TEST(test_vector, test_push_single_vec) {
@@ -170,6 +171,14 @@ TEST (test_vector, delete_vector_duplicates) {
 		EXPECT_EQ(b[i], vec.vector[i]);
 	}
 	free_int_vector(&vec);
+}
+// --------------------------------------------------------------------------------
+
+TEST (test_print, print) {
+    long long a[12] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+//	size_tVector vec = init_size_t_vector(12);
+//	push_size_t_vector(&vec, a, 12);
+	print_longlong_vec(a, 10, 12);
 }
 // ================================================================================
 // ================================================================================

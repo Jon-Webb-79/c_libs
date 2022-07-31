@@ -73,6 +73,20 @@ and ``float`` data types.
        return 0;
    }
 
+The ``init_vector(TYPE)`` function only takes one data input, which is not condusive to
+data types such as ``unsigned long`` that require two words.  The ``vector.h`` file contains
+the following alliases as a ``typedef`` that can be used in place of the two word equivalents.
+
+.. code-block:: c
+
+   typedef long long longlongint;
+   typedef unsigned short Ushortint;
+   typedef unsigned int Uint4;
+   typedef unsigned long Ulongint;
+   typedef unsigned long long Ulonglongint;
+   typedef long double longdouble;
+   typedef long double ldouble;
+
 ================
 init_type_vector
 ================

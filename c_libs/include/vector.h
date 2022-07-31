@@ -21,6 +21,17 @@
 #include <string.h>
 #include <math.h>
 
+// The function macro init_vector(TYPE) takes one input variable, which is not
+// condusive to some data representations.  This section provides typedef
+// alliases for data types containing multiple words.
+typedef long long longlongint;
+typedef unsigned short Ushortint;
+typedef unsigned int Uint4;
+typedef unsigned long Ulongint;
+typedef unsigned long long Ulonglongint;
+typedef long double longdouble;
+typedef long double ldouble;
+
 /**
  * \def init_vector(TYPE)
  * \param TYPE The data type
@@ -50,6 +61,7 @@ typedef enum																	\
  * \param max maximum															\
  * \param min minimum															\
  * \param memory An enum describing memory allocation							\
+ * \param data An enum describing the data typedef								\
  */																				\
 typedef struct																	\
 {																				\
@@ -68,7 +80,7 @@ typedef struct																	\
  * \return TYPE##Vec A Vector struct container									\
  *																				\
  * @code																		\
- * init_vector(int);																\
+ * init_vector(int);															\
  * intVector vec = init_int_vector(20);											\
  * @endcode																		\
  */																				\
@@ -364,6 +376,52 @@ void delete_##TYPE##_vector_duplicates(TYPE##Vector *vec)						\
 		}																		\
 	}																			\
 }
+// ================================================================================
+// ================================================================================
+// Define traditional functions
+
+/**
+ * This function will print an integer array or vector out to a user defined number
+ * of columns
+ *
+ * /param vec An integer array or vector
+ * /param cols The number of columns to print before proceeding to new line
+ * /param length The length of the array or vector
+ */
+void print_int_vec(int *vec, size_t cols, size_t length);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will print a short integer array or vector out to a user defined
+ * number of columns
+ *
+ * /param vec A short integer array or vector
+ * /param cols The number of columns to print before proceeding to new line
+ * /param length The length of the array or vector
+ */
+void print_short_vec(short *vec, size_t cols, size_t length);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will print a long integer array or vector out to a user defined
+ * number of columns
+ *
+ * /param vec A long integer array or vector
+ * /param cols The number of columns to print before proceeding to new line
+ * /param length The length of the array or vector
+ */
+void print_long_vec(long *vec, size_t cols, size_t length);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will print a long long integer array or vector out to a user defined
+ * number of columns
+ *
+ * /param vec A long long integer array or vector
+ * /param cols The number of columns to print before proceeding to new line
+ * /param length The length of the array or vector
+ */
+void print_longlong_vec(long long *vec, size_t cols, size_t length);
 // ================================================================================
 // ================================================================================
 #endif /* vector_H */
