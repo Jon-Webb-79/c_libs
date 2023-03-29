@@ -13,11 +13,154 @@
 // Include modules here
 
 #include "swap.h"
+// ================================================================================
+// ================================================================================
+// SWAP FUNCTIONS
 
-// Begin code
-int func() {
-	// Replace this function with the correct one
-	return 0;
+void swap_int8(int8_t *a, int8_t *b) {
+	int8_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_uint8(uint8_t *a, uint8_t *b) {
+	uint8_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_int16(int16_t *a, int16_t *b) {
+	int16_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_uint16(uint16_t *a, uint16_t *b) {
+	uint16_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_int32(int32_t *a, int32_t *b) {
+	int32_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_uint32(uint32_t *a, uint32_t *b) {
+	uint32_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_int64(int64_t *a, int64_t *b) {
+	int64_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_uint64(uint64_t *a, uint64_t *b) {
+	uint64_t temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_short(short int *a, short int *b) {
+	short int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_ushort(unsigned short int *a, unsigned short int *b) {
+	unsigned short int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_int(int *a, int *b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_uint(unsigned int *a, unsigned int *b) {
+	unsigned int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_long(long int *a, long int *b) {
+	long int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_ulong(unsigned long int *a, unsigned long int *b) {
+	unsigned long int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_llong(long long int *a, long long int *b) {
+	long long int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_ullong(unsigned long long int *a, unsigned long long int *b) {
+	unsigned long long int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_float(float *a, float *b) {
+	float temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_double(double *a, double *b) {
+	double temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_ldouble(long double *a, long double *b) {
+	long double temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_char(char *a, char *b) {
+	char temp = *a;
+	*a = *b;
+	*b = temp;
+}
+// --------------------------------------------------------------------------------
+
+void swap_bool(bool *a, bool *b) {
+	bool temp = *a;
+	*a = *b;
+	*b = temp;
 }
 // ================================================================================
 // ================================================================================
