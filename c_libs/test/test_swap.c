@@ -12,15 +12,16 @@
 // ================================================================================
 // Include modules here
 
-#include "test.h"
+#include "test_swap.h"
 
-void test_func(void **state)
+void test_swap_int8(void **state)
 {
 	(void) state;
-	int a = 5;
-	int b = 2;
-	int c = a + b;
-	assert_int_equal(c, 7);
+	int8_t a = 5;
+	int8_t b = 2;
+	swap_int8(&a, &b);
+	assert_int_equal(b, (int8_t)5);
+	assert_int_equal(a, (int8_t)2);
 }
 // ================================================================================
 // ================================================================================

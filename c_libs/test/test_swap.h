@@ -10,7 +10,7 @@
 // - Copyright: Copyright 2022, Jon Webb Inc.
 // ================================================================================
 // ================================================================================
-// Include modules here
+// Test swap functions
 
 #ifndef test_H
 #define test_H
@@ -22,7 +22,30 @@
 #include <stdint.h>
 #include <cmocka.h>
 
-void test_func(void **state);
+#include "../include/swap.h"
+
+
+void test_swap_int8(void **state);
+void test_swap_uint8(void **state);
+void test_swap_int16(void **state);
+void test_swap_uint16(void **state);
+void test_swap_int32(void **state);
+void test_swap_uint32(void **state);
+void test_swap_int64(void **state);
+void test_swap_uint64(void **state);
+void test_swap_short(void **state);
+void test_swap_ushort(void **state);
+void test_swap_int(void **state);
+void test_swap_uint(void **state);
+void test_swap_long(void **state);
+void test_swap_ulong(void **state);
+void test_swap_llong(void **state);
+void test_swap_ullong(void **state);
+void test_swap_float(void **state);
+void test_swap_double(void **state);
+void test_swap_ldouble(void **state);
+void test_swap_bool(void **state);
+void test_swap_char(void **state);
 
 #endif /* test_H */
 // ================================================================================

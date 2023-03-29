@@ -19,12 +19,12 @@
 #include <stdint.h>
 #include <cmocka.h>
 
-#include "test.h"
+#include "test_swap.h"
 
 // Begin code
 int main(int argc, const char * argv[]) {
 	const struct CMUnitTest test_one[] = {
-		cmocka_unit_test(test_funct)
+		cmocka_unit_test(test_swap_int8)
 	};
 	return cmocka_run_group_tests(test_one, NULL, NULL);
 }

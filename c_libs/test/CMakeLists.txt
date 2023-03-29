@@ -16,8 +16,8 @@ cmake_minimum_required(VERSION 3.22.2)
 add_executable(
   unit_tests
   unit_test.c
-  test.c
-  test.h
+  test_swap.c
+  test_swap.h
 )
 target_link_libraries(
   unit_tests
