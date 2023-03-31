@@ -1,18 +1,46 @@
 /**
  * \mainpage C Libraries
  *
- * This library contains
+ * This library contains pre-defined data structures, random number generators, and file readers programmed
+ * in the C language.  The libraries contain functions ang generic operators to simplify the user interface.
+ * The generic operators do not increase memory usage or decrease execution time like traditional operators,
+ * but instead feed the pre-compiler with the appropriate function definition based on data type.  This allows
+ * a type generic interface.
  *
  * \section install_sec Installation
  *
- * To install the library, simply include the header files and link against the library in your
- * project.
+ * This library has been tested on the clang 14.0.0, and the gcc 12.2.1 compilers.  Use the following
+ * process to install this library
+ * 1. Ensure that gcc 12.2.1 or clang 14.0.0 or later compilers are installed on your computer
+ * 2. Clone the library with the following command clone `https://github.com/Jon-Webb-79/c_libs`  
+ * 3. Install locally as a library with the command `xxx`
  *
- * \section usage_sec Usage
+ * \section files_sec Files
+ *
+ * This library contains the following header files and contents
+ *
+ * 1. swap.h
+ * This header file contains functions and macros that can be used to swap data in memory.
+ * This file contains the following functions.
  *
  * The library provides the following functions:
- * - `my_func1()`: This function does X.
- * - `my_func2()`: This function does Y.
+ * - `swap_char()`: Swaps two char values in memory.
+ * - `swap_uchar()`: Swaps two unsinged char values in memory.
+ * - `swap_short()`: Swaps two short integer values in memory.
+ * - `swap_ushort()`: Swaps two unsigned short integer values in memory.
+ * - `swap_int()`: Swaps two integer values in memory.
+ * - `swap_uint()`: Swaps two unsigned integer values in memory.
+ * - `swap_long()`: Swaps two long integer values in memory.
+ * - `swap_ulong()`: Swaps two unsigned long integer values in memory.
+ * - `swap_llong()`: Swaps two long long integer values in memory.
+ * - `swap_ullong()`: Swaps two unsigned long long integer values in memory.
+ * - `swap_float()`: Swaps two float values in memory.
+ * - `swap_double()`: Swaps two double values in memory.
+ * - `swap_ldouble()`: Swaps two long double values in memory.
+ * - `swap_bool()`: Swaps two bool values in memory.
+ *
+ * This file also contains the following macros.
+ * - `SWAP()`: Swaps data of any type listed aboved in a single macro.
  *
  * \section license_sec License
  *

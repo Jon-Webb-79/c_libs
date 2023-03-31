@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C Libraries: My Library</title>
+<title>C Libraries: C Libraries</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,18 +63,42 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">My Library </div></div>
+  <div class="headertitle"><div class="title">C Libraries </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >This is the high-level description of my library. It contains a set of useful functions for performing various tasks.</p>
+<div class="textblock"><p >This library contains pre-defined data structures, random number generators, and file readers programmed in the C language. The libraries contain functions ang generic operators to simplify the user interface. The generic operators do not increase memory usage or decrease execution time like traditional operators, but instead feed the pre-compiler with the appropriate function definition based on data type. This allows a type generic interface.</p>
 <h1><a class="anchor" id="install_sec"></a>
 Installation</h1>
-<p >To install the library, simply include the header files and link against the library in your project.</p>
-<h1><a class="anchor" id="usage_sec"></a>
-Usage</h1>
+<p >This library has been tested on the clang 14.0.0, and the gcc 12.2.1 compilers. Use the following process to install this library</p><ol type="1">
+<li>Ensure that gcc 12.2.1 or clang 14.0.0 or later compilers are installed on your computer</li>
+<li>Clone the library with the following command clone <code><a href="https://github.com/Jon-Webb-79/c_libs">https://github.com/Jon-Webb-79/c_libs</a></code> <br  />
+</li>
+<li>Install locally as a library with the command <code>xxx</code></li>
+</ol>
+<h1><a class="anchor" id="files_sec"></a>
+Files</h1>
+<p >This library contains the following header files and contents</p>
+<ol type="1">
+<li><a class="el" href="swap_8h.html">swap.h</a> This header file contains functions and macros that can be used to swap data in memory. This file contains the following functions.</li>
+</ol>
 <p >The library provides the following functions:</p><ul>
-<li><code>my_func1()</code>: This function does X.</li>
-<li><code>my_func2()</code>: This function does Y.</li>
+<li><code><a class="el" href="swap_8c.html#a30ac4d4001cfea5cd988c8697c5756be">swap_char()</a></code>: Swaps two char values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a99803287c0fa88fd89efa65c71a74a39">swap_uchar()</a></code>: Swaps two unsinged char values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a67d6114e177ee4d85994ff482b1329cc">swap_short()</a></code>: Swaps two short integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a7946c35a5344cd2a139d81e5d807c877">swap_ushort()</a></code>: Swaps two unsigned short integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a10ec5db73aebdd0d7508b49e72770ef4">swap_int()</a></code>: Swaps two integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#ad0c2579d9b7805b5ff6102ddc6f2ef85">swap_uint()</a></code>: Swaps two unsigned integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a0f866f8d63bc72771d9700427d483767">swap_long()</a></code>: Swaps two long integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a54c3802c0ad98c4d033bd66be679ab6b">swap_ulong()</a></code>: Swaps two unsigned long integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a88fe4609428512028b7284547f316ae5">swap_llong()</a></code>: Swaps two long long integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a7ff2f756663b834f0fb747ef72a00211">swap_ullong()</a></code>: Swaps two unsigned long long integer values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a09cf214b72d833078d15069e39feda2e">swap_float()</a></code>: Swaps two float values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#abfa4eebba539e060400a6a7fe746614e">swap_double()</a></code>: Swaps two double values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a37e67cc39114f8a2b8020266bbf69d99">swap_ldouble()</a></code>: Swaps two long double values in memory.</li>
+<li><code><a class="el" href="swap_8c.html#a8a2a44625c90172a99a93e5cc1dba005">swap_bool()</a></code>: Swaps two bool values in memory.</li>
+</ul>
+<p >This file also contains the following macros.</p><ul>
+<li><code><a class="el" href="swap_8h.html#aac9153aee4bdb92701df902e06a74eb3">SWAP()</a></code>: Swaps data of any type listed aboved in a single macro.</li>
 </ul>
 <h1><a class="anchor" id="license_sec"></a>
 License</h1>

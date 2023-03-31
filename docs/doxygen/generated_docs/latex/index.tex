@@ -1,8 +1,38 @@
-This is the high-\/level description of my library. It contains a set of useful functions for performing various tasks.\hypertarget{index_install_sec}{}\doxysection{Installation}\label{index_install_sec}
-To install the library, simply include the header files and link against the library in your project.\hypertarget{index_usage_sec}{}\doxysection{Usage}\label{index_usage_sec}
+This library contains pre-\/defined data structures, random number generators, and file readers programmed in the C language. The libraries contain functions ang generic operators to simplify the user interface. The generic operators do not increase memory usage or decrease execution time like traditional operators, but instead feed the pre-\/compiler with the appropriate function definition based on data type. This allows a type generic interface.\hypertarget{index_install_sec}{}\doxysection{Installation}\label{index_install_sec}
+This library has been tested on the clang 14.\+0.\+0, and the gcc 12.\+2.\+1 compilers. Use the following process to install this library
+\begin{DoxyEnumerate}
+\item Ensure that gcc 12.\+2.\+1 or clang 14.\+0.\+0 or later compilers are installed on your computer
+\item Clone the library with the following command clone {\ttfamily \href{https://github.com/Jon-Webb-79/c_libs}{\texttt{ https\+://github.\+com/\+Jon-\/\+Webb-\/79/c\+\_\+libs}}} ~\newline
+
+\item Install locally as a library with the command {\ttfamily xxx}
+\end{DoxyEnumerate}\hypertarget{index_files_sec}{}\doxysection{Files}\label{index_files_sec}
+This library contains the following header files and contents
+
+
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{swap_8h}{swap.\+h}} This header file contains functions and macros that can be used to swap data in memory. This file contains the following functions.
+\end{DoxyEnumerate}
+
 The library provides the following functions\+:
 \begin{DoxyItemize}
-\item {\ttfamily my\+\_\+func1()}\+: This function does X.
-\item {\ttfamily my\+\_\+func2()}\+: This function does Y.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a30ac4d4001cfea5cd988c8697c5756be}{swap\+\_\+char()}}}\+: Swaps two char values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a99803287c0fa88fd89efa65c71a74a39}{swap\+\_\+uchar()}}}\+: Swaps two unsinged char values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a67d6114e177ee4d85994ff482b1329cc}{swap\+\_\+short()}}}\+: Swaps two short integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a7946c35a5344cd2a139d81e5d807c877}{swap\+\_\+ushort()}}}\+: Swaps two unsigned short integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a10ec5db73aebdd0d7508b49e72770ef4}{swap\+\_\+int()}}}\+: Swaps two integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_ad0c2579d9b7805b5ff6102ddc6f2ef85}{swap\+\_\+uint()}}}\+: Swaps two unsigned integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a0f866f8d63bc72771d9700427d483767}{swap\+\_\+long()}}}\+: Swaps two long integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a54c3802c0ad98c4d033bd66be679ab6b}{swap\+\_\+ulong()}}}\+: Swaps two unsigned long integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a88fe4609428512028b7284547f316ae5}{swap\+\_\+llong()}}}\+: Swaps two long long integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a7ff2f756663b834f0fb747ef72a00211}{swap\+\_\+ullong()}}}\+: Swaps two unsigned long long integer values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a09cf214b72d833078d15069e39feda2e}{swap\+\_\+float()}}}\+: Swaps two float values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_abfa4eebba539e060400a6a7fe746614e}{swap\+\_\+double()}}}\+: Swaps two double values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a37e67cc39114f8a2b8020266bbf69d99}{swap\+\_\+ldouble()}}}\+: Swaps two long double values in memory.
+\item {\ttfamily \mbox{\hyperlink{swap_8c_a8a2a44625c90172a99a93e5cc1dba005}{swap\+\_\+bool()}}}\+: Swaps two bool values in memory.
+\end{DoxyItemize}
+
+This file also contains the following macros.
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{swap_8h_aac9153aee4bdb92701df902e06a74eb3}{SWAP()}}}\+: Swaps data of any type listed aboved in a single macro.
 \end{DoxyItemize}\hypertarget{index_license_sec}{}\doxysection{License}\label{index_license_sec}
 This library is released under the MIT License. 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['my_20library_0',['My Library',['../index.html',1,'']]]
+  ['c_20libraries_0',['C Libraries',['../index.html',1,'']]]
 ];

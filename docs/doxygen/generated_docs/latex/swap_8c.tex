@@ -4,21 +4,7 @@
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{swap_8c_a8c45bde440fe2b087b03d16c01a1d21c}{swap\+\_\+int8}} (int8\+\_\+t $\ast$a, int8\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_a989f19bf1113e99ee16a075be1c7aeb7}{swap\+\_\+uint8}} (uint8\+\_\+t $\ast$a, uint8\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_a1bc9958f722e410588dee32eab2b2a73}{swap\+\_\+int16}} (int16\+\_\+t $\ast$a, int16\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_a7799a8701056c22b87947093f1d73ec6}{swap\+\_\+uint16}} (uint16\+\_\+t $\ast$a, uint16\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_a28bc962d959d30b3b85ebae01cd78a17}{swap\+\_\+int32}} (int32\+\_\+t $\ast$a, int32\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_a3de891c26e818f552e82aa28cdcf93da}{swap\+\_\+uint32}} (uint32\+\_\+t $\ast$a, uint32\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_aa1d5feb3234a51c8c8f4e1e08dd63d01}{swap\+\_\+int64}} (int64\+\_\+t $\ast$a, int64\+\_\+t $\ast$b)
-\item 
-void \mbox{\hyperlink{swap_8c_ac393d34f6c3935e12d809f2d2b7ef167}{swap\+\_\+uint64}} (uint64\+\_\+t $\ast$a, uint64\+\_\+t $\ast$b)
+void \mbox{\hyperlink{swap_8c_a99803287c0fa88fd89efa65c71a74a39}{swap\+\_\+uchar}} (unsigned char $\ast$a, unsigned char $\ast$b)
 \item 
 void \mbox{\hyperlink{swap_8c_a67d6114e177ee4d85994ff482b1329cc}{swap\+\_\+short}} (short int $\ast$a, short int $\ast$b)
 \item 
@@ -76,15 +62,15 @@ This function will swap two char data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00160}{160}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00111}{111}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00160                                  \{}
-\DoxyCodeLine{00161     \textcolor{keywordtype}{bool} temp = *a;}
-\DoxyCodeLine{00162     *a = *b;}
-\DoxyCodeLine{00163     *b = temp;}
-\DoxyCodeLine{00164 \}}
+\DoxyCodeLine{00111                                  \{}
+\DoxyCodeLine{00112     \textcolor{keywordtype}{bool} temp = *a;}
+\DoxyCodeLine{00113     *a = *b;}
+\DoxyCodeLine{00114     *b = temp;}
+\DoxyCodeLine{00115 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a30ac4d4001cfea5cd988c8697c5756be}\label{swap_8c_a30ac4d4001cfea5cd988c8697c5756be}} 
@@ -114,15 +100,15 @@ This function will swap two char data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00153}{153}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00104}{104}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00153                                  \{}
-\DoxyCodeLine{00154     \textcolor{keywordtype}{char} temp = *a;}
-\DoxyCodeLine{00155     *a = *b;}
-\DoxyCodeLine{00156     *b = temp;}
-\DoxyCodeLine{00157 \}}
+\DoxyCodeLine{00104                                  \{}
+\DoxyCodeLine{00105     \textcolor{keywordtype}{char} temp = *a;}
+\DoxyCodeLine{00106     *a = *b;}
+\DoxyCodeLine{00107     *b = temp;}
+\DoxyCodeLine{00108 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_abfa4eebba539e060400a6a7fe746614e}\label{swap_8c_abfa4eebba539e060400a6a7fe746614e}} 
@@ -152,15 +138,15 @@ This function will swap two double data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00139}{139}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00090}{90}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00139                                        \{}
-\DoxyCodeLine{00140     \textcolor{keywordtype}{double} temp = *a;}
-\DoxyCodeLine{00141     *a = *b;}
-\DoxyCodeLine{00142     *b = temp;}
-\DoxyCodeLine{00143 \}}
+\DoxyCodeLine{00090                                        \{}
+\DoxyCodeLine{00091     \textcolor{keywordtype}{double} temp = *a;}
+\DoxyCodeLine{00092     *a = *b;}
+\DoxyCodeLine{00093     *b = temp;}
+\DoxyCodeLine{00094 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a09cf214b72d833078d15069e39feda2e}\label{swap_8c_a09cf214b72d833078d15069e39feda2e}} 
@@ -190,15 +176,15 @@ This function will swap two float data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00132}{132}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00083}{83}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00132                                     \{}
-\DoxyCodeLine{00133     \textcolor{keywordtype}{float} temp = *a;}
-\DoxyCodeLine{00134     *a = *b;}
-\DoxyCodeLine{00135     *b = temp;}
-\DoxyCodeLine{00136 \}}
+\DoxyCodeLine{00083                                     \{}
+\DoxyCodeLine{00084     \textcolor{keywordtype}{float} temp = *a;}
+\DoxyCodeLine{00085     *a = *b;}
+\DoxyCodeLine{00086     *b = temp;}
+\DoxyCodeLine{00087 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a10ec5db73aebdd0d7508b49e72770ef4}\label{swap_8c_a10ec5db73aebdd0d7508b49e72770ef4}} 
@@ -228,167 +214,15 @@ This function will swap two int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00090}{90}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00041}{41}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00090                               \{}
-\DoxyCodeLine{00091     \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00092     *a = *b;}
-\DoxyCodeLine{00093     *b = temp;}
-\DoxyCodeLine{00094 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_a1bc9958f722e410588dee32eab2b2a73}\label{swap_8c_a1bc9958f722e410588dee32eab2b2a73}} 
-\index{swap.c@{swap.c}!swap\_int16@{swap\_int16}}
-\index{swap\_int16@{swap\_int16}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_int16()}{swap\_int16()}}
-{\footnotesize\ttfamily void swap\+\_\+int16 (\begin{DoxyParamCaption}\item[{int16\+\_\+t $\ast$}]{a,  }\item[{int16\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two int16\+\_\+t data types in memory
-
-/param a Variable 1 of type int16\+\_\+t /param b Variable 2 of type int16\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{int16\_t a = 3;}
-\DoxyCodeLine{int16\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a1bc9958f722e410588dee32eab2b2a73}{swap\_int16}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00034}{34}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00034                                         \{}
-\DoxyCodeLine{00035     int16\_t temp = *a;}
-\DoxyCodeLine{00036     *a = *b;}
-\DoxyCodeLine{00037     *b = temp;}
-\DoxyCodeLine{00038 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_a28bc962d959d30b3b85ebae01cd78a17}\label{swap_8c_a28bc962d959d30b3b85ebae01cd78a17}} 
-\index{swap.c@{swap.c}!swap\_int32@{swap\_int32}}
-\index{swap\_int32@{swap\_int32}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_int32()}{swap\_int32()}}
-{\footnotesize\ttfamily void swap\+\_\+int32 (\begin{DoxyParamCaption}\item[{int32\+\_\+t $\ast$}]{a,  }\item[{int32\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two int32\+\_\+t data types in memory
-
-/param a Variable 1 of type int32\+\_\+t /param b Variable 2 of type int32\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{int32\_t a = 3;}
-\DoxyCodeLine{int32\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a28bc962d959d30b3b85ebae01cd78a17}{swap\_int32}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00048}{48}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00048                                         \{}
-\DoxyCodeLine{00049     int32\_t temp = *a;}
-\DoxyCodeLine{00050     *a = *b;}
-\DoxyCodeLine{00051     *b = temp;}
-\DoxyCodeLine{00052 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_aa1d5feb3234a51c8c8f4e1e08dd63d01}\label{swap_8c_aa1d5feb3234a51c8c8f4e1e08dd63d01}} 
-\index{swap.c@{swap.c}!swap\_int64@{swap\_int64}}
-\index{swap\_int64@{swap\_int64}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_int64()}{swap\_int64()}}
-{\footnotesize\ttfamily void swap\+\_\+int64 (\begin{DoxyParamCaption}\item[{int64\+\_\+t $\ast$}]{a,  }\item[{int64\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two int64\+\_\+t data types in memory
-
-/param a Variable 1 of type int64\+\_\+t /param b Variable 2 of type int64\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{int64\_t a = 3;}
-\DoxyCodeLine{int64\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_aa1d5feb3234a51c8c8f4e1e08dd63d01}{swap\_int64}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00062}{62}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00062                                         \{}
-\DoxyCodeLine{00063     int64\_t temp = *a;}
-\DoxyCodeLine{00064     *a = *b;}
-\DoxyCodeLine{00065     *b = temp;}
-\DoxyCodeLine{00066 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_a8c45bde440fe2b087b03d16c01a1d21c}\label{swap_8c_a8c45bde440fe2b087b03d16c01a1d21c}} 
-\index{swap.c@{swap.c}!swap\_int8@{swap\_int8}}
-\index{swap\_int8@{swap\_int8}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_int8()}{swap\_int8()}}
-{\footnotesize\ttfamily void swap\+\_\+int8 (\begin{DoxyParamCaption}\item[{int8\+\_\+t $\ast$}]{a,  }\item[{int8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two int8\+\_\+t data types in memory
-
-/param a Variable 1 of type int8\+\_\+t /param b Variable 2 of type int8\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{int8\_t a = 3;}
-\DoxyCodeLine{int8\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a8c45bde440fe2b087b03d16c01a1d21c}{swap\_int8}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00020}{20}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00020                                      \{}
-\DoxyCodeLine{00021     int8\_t temp = *a;}
-\DoxyCodeLine{00022     *a = *b;}
-\DoxyCodeLine{00023     *b = temp;}
-\DoxyCodeLine{00024 \}}
+\DoxyCodeLine{00041                               \{}
+\DoxyCodeLine{00042     \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00043     *a = *b;}
+\DoxyCodeLine{00044     *b = temp;}
+\DoxyCodeLine{00045 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a37e67cc39114f8a2b8020266bbf69d99}\label{swap_8c_a37e67cc39114f8a2b8020266bbf69d99}} 
@@ -418,15 +252,15 @@ This function will swap two long double data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00146}{146}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00097}{97}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00146                                                   \{}
-\DoxyCodeLine{00147     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} temp = *a;}
-\DoxyCodeLine{00148     *a = *b;}
-\DoxyCodeLine{00149     *b = temp;}
-\DoxyCodeLine{00150 \}}
+\DoxyCodeLine{00097                                                   \{}
+\DoxyCodeLine{00098     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} temp = *a;}
+\DoxyCodeLine{00099     *a = *b;}
+\DoxyCodeLine{00100     *b = temp;}
+\DoxyCodeLine{00101 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a88fe4609428512028b7284547f316ae5}\label{swap_8c_a88fe4609428512028b7284547f316ae5}} 
@@ -456,15 +290,15 @@ This function will swap two long long int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00118}{118}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00069}{69}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00118                                                     \{}
-\DoxyCodeLine{00119     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00120     *a = *b;}
-\DoxyCodeLine{00121     *b = temp;}
-\DoxyCodeLine{00122 \}}
+\DoxyCodeLine{00069                                                     \{}
+\DoxyCodeLine{00070     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00071     *a = *b;}
+\DoxyCodeLine{00072     *b = temp;}
+\DoxyCodeLine{00073 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a0f866f8d63bc72771d9700427d483767}\label{swap_8c_a0f866f8d63bc72771d9700427d483767}} 
@@ -494,15 +328,15 @@ This function will swap two long int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00104}{104}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00055}{55}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00104                                          \{}
-\DoxyCodeLine{00105     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00106     *a = *b;}
-\DoxyCodeLine{00107     *b = temp;}
-\DoxyCodeLine{00108 \}}
+\DoxyCodeLine{00055                                          \{}
+\DoxyCodeLine{00056     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00057     *a = *b;}
+\DoxyCodeLine{00058     *b = temp;}
+\DoxyCodeLine{00059 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a67d6114e177ee4d85994ff482b1329cc}\label{swap_8c_a67d6114e177ee4d85994ff482b1329cc}} 
@@ -532,15 +366,53 @@ This function will swap two short int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00076}{76}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00027}{27}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00076                                             \{}
-\DoxyCodeLine{00077     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00078     *a = *b;}
-\DoxyCodeLine{00079     *b = temp;}
-\DoxyCodeLine{00080 \}}
+\DoxyCodeLine{00027                                             \{}
+\DoxyCodeLine{00028     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00029     *a = *b;}
+\DoxyCodeLine{00030     *b = temp;}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{swap_8c_a99803287c0fa88fd89efa65c71a74a39}\label{swap_8c_a99803287c0fa88fd89efa65c71a74a39}} 
+\index{swap.c@{swap.c}!swap\_uchar@{swap\_uchar}}
+\index{swap\_uchar@{swap\_uchar}!swap.c@{swap.c}}
+\doxysubsubsection{\texorpdfstring{swap\_uchar()}{swap\_uchar()}}
+{\footnotesize\ttfamily void swap\+\_\+uchar (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{a,  }\item[{unsigned char $\ast$}]{b }\end{DoxyParamCaption})}
+
+This function will swap two uint8\+\_\+t data types in memory
+
+/param a Variable 1 of type uint8\+\_\+t /param b Variable 2 of type uint8\+\_\+t
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{uint8\_t a = 3;}
+\DoxyCodeLine{uint8\_t b = 6;}
+\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
+\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
+\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a99803287c0fa88fd89efa65c71a74a39}{swap\_uchar}}(\&a, \&b);}
+\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
+\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
+\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
+\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
+\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
+\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{swap_8c_source_l00020}{20}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                                     \{}
+\DoxyCodeLine{00021     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} temp = *a;}
+\DoxyCodeLine{00022     *a = *b;}
+\DoxyCodeLine{00023     *b = temp;}
+\DoxyCodeLine{00024 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_ad0c2579d9b7805b5ff6102ddc6f2ef85}\label{swap_8c_ad0c2579d9b7805b5ff6102ddc6f2ef85}} 
@@ -570,167 +442,15 @@ This function will swap two unsigned int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00097}{97}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00048}{48}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00097                                                  \{}
-\DoxyCodeLine{00098     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00099     *a = *b;}
-\DoxyCodeLine{00100     *b = temp;}
-\DoxyCodeLine{00101 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_a7799a8701056c22b87947093f1d73ec6}\label{swap_8c_a7799a8701056c22b87947093f1d73ec6}} 
-\index{swap.c@{swap.c}!swap\_uint16@{swap\_uint16}}
-\index{swap\_uint16@{swap\_uint16}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_uint16()}{swap\_uint16()}}
-{\footnotesize\ttfamily void swap\+\_\+uint16 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{a,  }\item[{uint16\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two uint16\+\_\+t data types in memory
-
-/param a Variable 1 of type uint16\+\_\+t /param b Variable 2 of type uint16\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{uint16\_t a = 3;}
-\DoxyCodeLine{uint16\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a7799a8701056c22b87947093f1d73ec6}{swap\_uint16}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00041}{41}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00041                                            \{}
-\DoxyCodeLine{00042     uint16\_t temp = *a;}
-\DoxyCodeLine{00043     *a = *b;}
-\DoxyCodeLine{00044     *b = temp;}
-\DoxyCodeLine{00045 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_a3de891c26e818f552e82aa28cdcf93da}\label{swap_8c_a3de891c26e818f552e82aa28cdcf93da}} 
-\index{swap.c@{swap.c}!swap\_uint32@{swap\_uint32}}
-\index{swap\_uint32@{swap\_uint32}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_uint32()}{swap\_uint32()}}
-{\footnotesize\ttfamily void swap\+\_\+uint32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{a,  }\item[{uint32\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two uint32\+\_\+t data types in memory
-
-/param a Variable 1 of type uint32\+\_\+t /param b Variable 2 of type uint32\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{uint32\_t a = 3;}
-\DoxyCodeLine{uint32\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a3de891c26e818f552e82aa28cdcf93da}{swap\_uint32}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00055}{55}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00055                                            \{}
-\DoxyCodeLine{00056     uint32\_t temp = *a;}
-\DoxyCodeLine{00057     *a = *b;}
-\DoxyCodeLine{00058     *b = temp;}
-\DoxyCodeLine{00059 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_ac393d34f6c3935e12d809f2d2b7ef167}\label{swap_8c_ac393d34f6c3935e12d809f2d2b7ef167}} 
-\index{swap.c@{swap.c}!swap\_uint64@{swap\_uint64}}
-\index{swap\_uint64@{swap\_uint64}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_uint64()}{swap\_uint64()}}
-{\footnotesize\ttfamily void swap\+\_\+uint64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t $\ast$}]{a,  }\item[{uint64\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two uint64\+\_\+t data types in memory
-
-/param a Variable 1 of type uint64\+\_\+t /param b Variable 2 of type uint64\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{uint64\_t a = 3;}
-\DoxyCodeLine{uint64\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_ac393d34f6c3935e12d809f2d2b7ef167}{swap\_uint64}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00069}{69}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00069                                            \{}
-\DoxyCodeLine{00070     uint64\_t temp = *a;}
-\DoxyCodeLine{00071     *a = *b;}
-\DoxyCodeLine{00072     *b = temp;}
-\DoxyCodeLine{00073 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{swap_8c_a989f19bf1113e99ee16a075be1c7aeb7}\label{swap_8c_a989f19bf1113e99ee16a075be1c7aeb7}} 
-\index{swap.c@{swap.c}!swap\_uint8@{swap\_uint8}}
-\index{swap\_uint8@{swap\_uint8}!swap.c@{swap.c}}
-\doxysubsubsection{\texorpdfstring{swap\_uint8()}{swap\_uint8()}}
-{\footnotesize\ttfamily void swap\+\_\+uint8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{uint8\+\_\+t $\ast$}]{b }\end{DoxyParamCaption})}
-
-This function will swap two uint8\+\_\+t data types in memory
-
-/param a Variable 1 of type uint8\+\_\+t /param b Variable 2 of type uint8\+\_\+t
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{uint8\_t a = 3;}
-\DoxyCodeLine{uint8\_t b = 6;}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable a: "{}}, a);}
-\DoxyCodeLine{PRINT(\textcolor{stringliteral}{"{}Pre Variable b: "{}}, b);}
-\DoxyCodeLine{\mbox{\hyperlink{swap_8c_a989f19bf1113e99ee16a075be1c7aeb7}{swap\_uint8}}(\&a, \&b);}
-\DoxyCodeLine{PRINT(Post Variable a: \textcolor{stringliteral}{"{} a);}}
-\DoxyCodeLine{\textcolor{stringliteral}{PRINT(Post Variable b: "{}} b);}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable a: 3}}
-\DoxyCodeLine{\textcolor{comment}{// >> Pre Variable b: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable a: 6}}
-\DoxyCodeLine{\textcolor{comment}{// >> Post Variable b: 3}}
-
-\end{DoxyCode}
- 
-
-Definition at line \mbox{\hyperlink{swap_8c_source_l00027}{27}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00027                                         \{}
-\DoxyCodeLine{00028     uint8\_t temp = *a;}
-\DoxyCodeLine{00029     *a = *b;}
-\DoxyCodeLine{00030     *b = temp;}
-\DoxyCodeLine{00031 \}}
+\DoxyCodeLine{00048                                                  \{}
+\DoxyCodeLine{00049     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00050     *a = *b;}
+\DoxyCodeLine{00051     *b = temp;}
+\DoxyCodeLine{00052 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a7ff2f756663b834f0fb747ef72a00211}\label{swap_8c_a7ff2f756663b834f0fb747ef72a00211}} 
@@ -760,15 +480,15 @@ This function will swap two unsigned long long int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00125}{125}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00076}{76}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00125                                                                        \{}
-\DoxyCodeLine{00126     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00127     *a = *b;}
-\DoxyCodeLine{00128     *b = temp;}
-\DoxyCodeLine{00129 \}}
+\DoxyCodeLine{00076                                                                        \{}
+\DoxyCodeLine{00077     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00078     *a = *b;}
+\DoxyCodeLine{00079     *b = temp;}
+\DoxyCodeLine{00080 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a54c3802c0ad98c4d033bd66be679ab6b}\label{swap_8c_a54c3802c0ad98c4d033bd66be679ab6b}} 
@@ -798,15 +518,15 @@ This function will swap two usngined long int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00111}{111}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00062}{62}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00111                                                             \{}
-\DoxyCodeLine{00112     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00113     *a = *b;}
-\DoxyCodeLine{00114     *b = temp;}
-\DoxyCodeLine{00115 \}}
+\DoxyCodeLine{00062                                                             \{}
+\DoxyCodeLine{00063     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00064     *a = *b;}
+\DoxyCodeLine{00065     *b = temp;}
+\DoxyCodeLine{00066 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{swap_8c_a7946c35a5344cd2a139d81e5d807c877}\label{swap_8c_a7946c35a5344cd2a139d81e5d807c877}} 
@@ -836,14 +556,14 @@ This function will swap two unsigned short int data types in memory
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{swap_8c_source_l00083}{83}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
+Definition at line \mbox{\hyperlink{swap_8c_source_l00034}{34}} of file \mbox{\hyperlink{swap_8c_source}{swap.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00083                                                                \{}
-\DoxyCodeLine{00084     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} temp = *a;}
-\DoxyCodeLine{00085     *a = *b;}
-\DoxyCodeLine{00086     *b = temp;}
-\DoxyCodeLine{00087 \}}
+\DoxyCodeLine{00034                                                                \{}
+\DoxyCodeLine{00035     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} temp = *a;}
+\DoxyCodeLine{00036     *a = *b;}
+\DoxyCodeLine{00037     *b = temp;}
+\DoxyCodeLine{00038 \}}
 
 \end{DoxyCode}
