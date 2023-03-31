@@ -35,5 +35,5 @@ In order to download this repository from github, follow these instructions
 
 Library Functions and Macros
 ############################
-The functions and macros within this `library <docs/doxygen/generatred_docs/html/index.html>`_
+The functions and macros within this library `<docs/doxygen/generatred_docs/html/index.html>`_
 are described with implmentation examples.
