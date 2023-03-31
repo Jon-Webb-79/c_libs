@@ -19,20 +19,10 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <setjmp.h>
-#include <stdint.h>
 #include <cmocka.h>
 
 #include "../include/swap.h"
 
-
-void test_swap_int8(void **state);
-void test_swap_uint8(void **state);
-void test_swap_int16(void **state);
-void test_swap_uint16(void **state);
-void test_swap_int32(void **state);
-void test_swap_uint32(void **state);
-void test_swap_int64(void **state);
-void test_swap_uint64(void **state);
 void test_swap_short(void **state);
 void test_swap_ushort(void **state);
 void test_swap_int(void **state);

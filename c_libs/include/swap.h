@@ -17,33 +17,9 @@
 #define swap_H
 
 #include <stdio.h>
-#include <stdint.h>
 #include <stdbool.h>
 
 // SWAP_TYPE prototypes
-
-/**
- * This function will swap two int8_t data types in memory
- *
- * /param a Variable 1 of type int8_t
- * /param b Variable 2 of type int8_t
- *
- * @code
- * int8_t a = 3;
- * int8_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_int8(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_int8(int8_t *a, int8_t *b);
-// --------------------------------------------------------------------------------
 
 /**
  * This function will swap two uint8_t data types in memory
@@ -56,7 +32,7 @@ void swap_int8(int8_t *a, int8_t *b);
  * uint8_t b = 6;
  * PRINT("Pre Variable a: ", a);
  * PRINT("Pre Variable b: ", b);
- * swap_uint8(&a, &b);
+ * swap_uchar(&a, &b);
  * PRINT(Post Variable a: " a);
  * PRINT(Post Variable b: " b);
  * // >> Pre Variable a: 3
@@ -65,145 +41,7 @@ void swap_int8(int8_t *a, int8_t *b);
  * // >> Post Variable b: 3
  * @endcode
  */
-void swap_uint8(uint8_t *a, uint8_t *b);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will swap two int16_t data types in memory
- *
- * /param a Variable 1 of type int16_t
- * /param b Variable 2 of type int16_t
- *
- * @code
- * int16_t a = 3;
- * int16_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_int16(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_int16(int16_t *a, int16_t *b);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will swap two uint16_t data types in memory
- *
- * /param a Variable 1 of type uint16_t
- * /param b Variable 2 of type uint16_t
- *
- * @code
- * uint16_t a = 3;
- * uint16_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_uint16(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_uint16(uint16_t *a, uint16_t *b);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will swap two int32_t data types in memory
- *
- * /param a Variable 1 of type int32_t
- * /param b Variable 2 of type int32_t
- *
- * @code
- * int32_t a = 3;
- * int32_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_int32(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_int32(int32_t *a, int32_t *b);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will swap two uint32_t data types in memory
- *
- * /param a Variable 1 of type uint32_t
- * /param b Variable 2 of type uint32_t
- *
- * @code
- * uint32_t a = 3;
- * uint32_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_uint32(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_uint32(uint32_t *a, uint32_t *b);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will swap two int64_t data types in memory
- *
- * /param a Variable 1 of type int64_t
- * /param b Variable 2 of type int64_t
- *
- * @code
- * int64_t a = 3;
- * int64_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_int64(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_int64(int64_t *a, int64_t *b);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will swap two uint64_t data types in memory
- *
- * /param a Variable 1 of type uint64_t
- * /param b Variable 2 of type uint64_t
- *
- * @code
- * uint64_t a = 3;
- * uint64_t b = 6;
- * PRINT("Pre Variable a: ", a);
- * PRINT("Pre Variable b: ", b);
- * swap_uint64(&a, &b);
- * PRINT(Post Variable a: " a);
- * PRINT(Post Variable b: " b);
- * // >> Pre Variable a: 3
- * // >> Pre Variable b: 6
- * // >> Post Variable a: 6
- * // >> Post Variable b: 3
- * @endcode
- */
-void swap_uint64(uint64_t *a, uint64_t *b);
+void swap_uchar(unsigned char *a, unsigned char *b);
 // --------------------------------------------------------------------------------
 
 /**
@@ -526,7 +364,9 @@ void swap_bool(bool *a, bool *b);
  * // >> Post Variable b: 3
  * @endcode
  */
-#define SWAP(a, b) _Generic( (a), short int: swap_short, \
+#define SWAP(a, b) _Generic( (a), char: swap_char, \
+		                          unsigned char: swap_uchar, \
+								  short int: swap_short, \
                                   unsigned short int: swap_ushort, \
 								  int: swap_int, \
 		                          unsigned int: swap_uint, \
@@ -537,7 +377,6 @@ void swap_bool(bool *a, bool *b);
 								  float: swap_float, \
 								  double: swap_double, \
 								  long double: swap_ldouble, \
-								  char: swap_char, \
 								  bool: swap_bool)(&a, &b)
 // ==========================================================================================
 // ==========================================================================================

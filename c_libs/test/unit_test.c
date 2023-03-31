@@ -24,14 +24,6 @@
 // Begin code
 int main(int argc, const char * argv[]) {
 	const struct CMUnitTest test_swap[] = {
-		cmocka_unit_test(test_swap_int8),
-		cmocka_unit_test(test_swap_uint8),
-		cmocka_unit_test(test_swap_int16),
-		cmocka_unit_test(test_swap_uint16),
-		cmocka_unit_test(test_swap_int32),
-		cmocka_unit_test(test_swap_uint32),
-		cmocka_unit_test(test_swap_int64),
-		cmocka_unit_test(test_swap_uint64),
 		cmocka_unit_test(test_swap_short),
 		cmocka_unit_test(test_swap_ushort),
 		cmocka_unit_test(test_swap_int),
