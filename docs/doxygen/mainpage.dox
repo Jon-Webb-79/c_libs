@@ -61,6 +61,11 @@
  * - `init_double_vector()`: Initializes a dynamically allocated vector of type double.
  * - `init_ldouble_vector()`: Initializes a dynamically allocated vector of type long double
  * - `init_bool_vector()`: Initializes a dynamically allocated vector of type bool.
+ * - `init_string_vector()`: Initializes a dynamically allocated vector of type string.
+ *
+ * - `INIT_VECTOR()`: A macro to initialize a dynamically allocated vecotr of all data types described anove, excpet string
+ *
+ *
  *
  * \section license_sec License
  *
