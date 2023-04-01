@@ -1,13 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "acdfimsv",
+  0: "acdfimpsv",
   1: "s",
-  2: "msv",
-  3: "fisv",
+  2: "dmsv",
+  3: "fipsv",
   4: "a",
   5: "m",
   6: "ds",
-  7: "isv",
+  7: "ipsv",
   8: "c"
 };
 

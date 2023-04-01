@@ -70,8 +70,8 @@ $(function() {
   <div class="headertitle"><div class="title">vector.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="vector_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// ================================================================================</span></div>
+<a href="vector_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// ==========================================================================================</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// - File:    vector.h</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// - Purpose: Describe the file purpose here</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//</span></div>
@@ -80,8 +80,8 @@ $(function() {
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// - Date:    March 31, 2023</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// - Version: 1.0</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// - Copyright: Copyright 2022, Jon Webb Inc.</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// ================================================================================</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// ==========================================================================================</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Include modules here</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef vector_H</span></div>
@@ -89,250 +89,756 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="swap_8h.html">swap.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// SET UP RELEVANT ENUMS</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="vector_8h.html#ad756268621f03e4812b68792b291fff5">   34</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">   36</a></span>    <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">STATIC</a></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">   38</a></span>} <a class="code hl_enumeration" href="vector_8h.html#ad756268621f03e4812b68792b291fff5">mem_type</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">   56</a></span><span class="preprocessor">#define VECTOR_STRUCT(type, dtype)                                                  \</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">    typedef struct {type *array; size_t allocated_length; size_t active_length; mem_type dat_type; } dtype</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// Pre-define struct_vectors</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="vector_8h.html#a22378da9ec8728f3fa5c61c1de5f189e">   62</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">short</span>, Short);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="vector_8h.html#af4854ee647c0798e8c429ceb7c5aaa07">   63</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>, UShort);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="vector_8h.html#af30edbc3dc0645c433b051bb83875b8b">   64</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">int</span>, Int);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="vector_8h.html#af22d1fb58a6f6cdc9d32a164f7e0fee3">   65</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span>, UInt);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="vector_8h.html#adf652b76e7a9c0bc0f4d5b42ac3fc970">   66</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">long</span>, LInt);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="vector_8h.html#a26c207f46f273005ad443b7c7f0eb73f">   67</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>, ULInt);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="vector_8h.html#ac3258892fe9cc72193a924b0b0b33435">   68</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>, LLInt);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="vector_8h.html#a4042fdb2520f2054b912e58401324101">   69</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>, ULLInt);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="vector_8h.html#ab22acd5a17b86277a505b475e66982b1">   70</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">float</span>, Flt);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="vector_8h.html#a49c25e289c0341b0444dada783c71486">   71</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">double</span>, Dble);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="vector_8h.html#a936d8a8d5499976181272eaf89377576">   72</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span>, LDble);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="vector_8h.html#acd7f1c678d05d8616a9121b79688cb52">   73</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">char</span>, Char);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="vector_8h.html#abcfe82e05583adb181bf61f603dc91e0">   74</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, UChar);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="vector_8h.html#a2543513836c5661ccdd157851a7088b8">   75</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">bool</span>, Bool);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// String struct</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structString.html">   79</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">   81</a></span>    <span class="keywordtype">char</span> **<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">   82</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <a class="code hl_struct" href="structString.html">String</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// INIT_VECTOR FUNCTIONS</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"> * This function initialize a vector struct of type Short to containt a</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"> * /param vec A Vector struct of type Short</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="vector_8h.html#a749211e8a46a8b2297b3c6ebb78aed0e">   96</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a>(Short *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"> * This function initialize a vector struct of type UShort to containt a</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"> * /param vec A Vector struct of type UShort</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="vector_8h.html#aa63398bdb55f97b891b93404a89de14d">  107</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a>(UShort *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"> * This function initialize a vector struct of type Int to containt a</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"> * /param vec A Vector struct of type Int</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="vector_8h.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">  118</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a>(Int *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment"> * This function initialize a vector struct of type UInt to containt a</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment"> * /param vec A Vector struct of type UInt</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="vector_8h.html#a9d8eb1d9ce65365d7b044fe684387a3f">  129</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a>(UInt *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment"> * This function initialize a vector struct of type LInt to containt a</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment"> * /param vec A Vector struct of type LInt</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="vector_8h.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">  140</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a>(LInt *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment"> * This function initialize a vector struct of type ULInt to containt a</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment"> * /param vec A Vector struct of type ULInt</span></div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="vector_8h.html#af08098b392c0ff01db799bff9c83a521">  151</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a>(ULInt *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment"> * This function initialize a vector struct of type LLInt to containt a</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment"> * /param vec A Vector struct of type LLInt</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="vector_8h.html#a65eda538d3c07a8beb1475c1a214ff67">  162</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a>(LLInt *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment"> * This function initialize a vector struct of type ULLInt to containt a</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"> * /param vec A Vector struct of type ULLInt</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="vector_8h.html#ab05d31d34c87d8d6cd76f48539bf367f">  173</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a>(ULLInt *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment"> * This function initialize a vector struct of type Flt to containt a</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment"> * /param vec A Vector struct of type Flt</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="vector_8h.html#a92bba70874a1570bd9c87a2a7385af35">  184</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a>(Flt *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment"> * This function initialize a vector struct of type Dble to containt a</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment"> * /param vec A Vector struct of type Dble</span></div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="vector_8h.html#a2c0735f69da8e40535b5ecceace1a399">  195</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a>(Dble *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment"> * This function initialize a vector struct of type LDble to containt a</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment"> * /param vec A Vector struct of type LDble</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="vector_8h.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">  206</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a>(LDble *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment"> * This function initialize a vector struct of type Char to containt a</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment"> * /param vec A Vector struct of type Char</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="vector_8h.html#aecde718777430d31ec254f8a4f40cce0">  217</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a>(Char *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment"> * This function initialize a vector struct of type UChar to containt a</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment"> * /param vec A Vector struct of type UChar</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="vector_8h.html#a9289ec52674f95ebf45ac81b70dfdc67">  228</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a>(UChar *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment"> * This function initialize a vector struct of type Bool to containt a</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment"> * dynamically allocated array of length.</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment"> * /param vec A Vector struct of type Bool</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment"> *               allocated array.</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="vector_8h.html#a2e1ea608c0b9b0768ba61facb8df913f">  239</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a2e1ea608c0b9b0768ba61facb8df913f">init_bool_vector</a>(Bool *vec, <span class="keywordtype">size_t</span> length);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="vector_8h.html#ad5c4c9d8676c13f1f381b0b6c1119c4d">  248</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ad5c4c9d8676c13f1f381b0b6c1119c4d">init_string_vector</a>(<a class="code hl_struct" href="structString.html">String</a> *vec);</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">  267</a></span><span class="preprocessor">#define INIT_VECTOR(T, length) _Generic( (T), Short: init_short_vector, \</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">                                                   UShort: init_ushort_vector, \</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">                                                   Int: init_int_vector, \</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">                                                   UInt: init_uint_vector, \</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">                                                   LInt: init_long_vector, \</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">                                                   ULInt: init_ulong_vector, \</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">                                                   LLInt: init_llong_vector, \</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">                                                   ULLInt: init_ullong_vector, \</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">                                                   Flt: init_float_vector, \</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">                                                   Dble: init_double_vector, \</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">                                                   LDble: init_ldouble_vector, \</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">                                                   Char: init_char_vector, \</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">                                                   UChar: init_uchar_vector, \</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">                                                   Bool: init_bool_vector)(&amp;T, length)</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#endif </span><span class="comment">/* vector_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment">// ================================================================================</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">// eof</span></div>
-<div class="ttc" id="astructString_html"><div class="ttname"><a href="structString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00079">vector.h:80</a></div></div>
-<div class="ttc" id="astructString_html_a706ffaf2f520d46074dd99e7896d6673"><div class="ttname"><a href="structString.html#a706ffaf2f520d46074dd99e7896d6673">String::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00082">vector.h:82</a></div></div>
-<div class="ttc" id="astructString_html_a984d87136c3d76ab3145bdb65880a3fa"><div class="ttname"><a href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">String::array</a></div><div class="ttdeci">char ** array</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00081">vector.h:81</a></div></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="swap_8h.html">swap.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// SET UP RELEVANT ENUMS</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">//</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="vector_8h.html#ad756268621f03e4812b68792b291fff5">   36</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">   38</a></span>    <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">STATIC</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">   40</a></span>} <a class="code hl_enumeration" href="vector_8h.html#ad756268621f03e4812b68792b291fff5">mem_type</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">   58</a></span><span class="preprocessor">#define VECTOR_STRUCT(type, dtype)                                                  \</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    typedef struct {type *array; size_t allocated_length; size_t active_length; mem_type dat_type; } dtype</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// Pre-define struct_vectors</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="vector_8h.html#a22378da9ec8728f3fa5c61c1de5f189e">   64</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">short</span>, Short);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="vector_8h.html#af4854ee647c0798e8c429ceb7c5aaa07">   65</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>, UShort);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="vector_8h.html#af30edbc3dc0645c433b051bb83875b8b">   66</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">int</span>, Int);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="vector_8h.html#af22d1fb58a6f6cdc9d32a164f7e0fee3">   67</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span>, UInt);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="vector_8h.html#adf652b76e7a9c0bc0f4d5b42ac3fc970">   68</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">long</span>, LInt);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="vector_8h.html#a26c207f46f273005ad443b7c7f0eb73f">   69</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>, ULInt);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="vector_8h.html#ac3258892fe9cc72193a924b0b0b33435">   70</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>, LLInt);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="vector_8h.html#a4042fdb2520f2054b912e58401324101">   71</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>, ULLInt);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="vector_8h.html#ab22acd5a17b86277a505b475e66982b1">   72</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">float</span>, Flt);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="vector_8h.html#a49c25e289c0341b0444dada783c71486">   73</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">double</span>, Dble);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="vector_8h.html#a936d8a8d5499976181272eaf89377576">   74</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span>, LDble);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="vector_8h.html#acd7f1c678d05d8616a9121b79688cb52">   75</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">char</span>, Char);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="vector_8h.html#abcfe82e05583adb181bf61f603dc91e0">   76</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>, UChar);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="vector_8h.html#a2543513836c5661ccdd157851a7088b8">   77</a></span><a class="code hl_define" href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a>(<span class="keywordtype">bool</span>, Bool);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">// String struct</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structString.html">   81</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">   83</a></span>    <span class="keywordtype">char</span> **<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">   84</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <a class="code hl_struct" href="structString.html">String</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// INIT_VECTOR FUNCTIONS</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> * This function initialize a vector struct of type Short to containt a</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"> * /param vec A Vector struct of type Short</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a>(Short *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"> * This function initialize a vector struct of type UShort to containt a</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"> * /param vec A Vector struct of type UShort</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a>(UShort *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"> * This function initialize a vector struct of type Int to containt a</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> * /param vec A Vector struct of type Int</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a>(Int *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"> * This function initialize a vector struct of type UInt to containt a</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"> * /param vec A Vector struct of type UInt</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a>(UInt *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"> * This function initialize a vector struct of type LInt to containt a</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment"> * /param vec A Vector struct of type LInt</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a>(LInt *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment"> * This function initialize a vector struct of type ULInt to containt a</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment"> * /param vec A Vector struct of type ULInt</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a>(ULInt *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment"> * This function initialize a vector struct of type LLInt to containt a</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment"> * /param vec A Vector struct of type LLInt</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a>(LLInt *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment"> * This function initialize a vector struct of type ULLInt to containt a</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment"> * /param vec A Vector struct of type ULLInt</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a>(ULLInt *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment"> * This function initialize a vector struct of type Flt to containt a</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment"> * /param vec A Vector struct of type Flt</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a>(Flt *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment"> * This function initialize a vector struct of type Dble to containt a</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment"> * /param vec A Vector struct of type Dble</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a>(Dble *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment"> * This function initialize a vector struct of type LDble to containt a</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment"> * /param vec A Vector struct of type LDble</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a>(LDble *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment"> * This function initialize a vector struct of type Char to containt a</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment"> * /param vec A Vector struct of type Char</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a>(Char *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment"> * This function initialize a vector struct of type UChar to containt a</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment"> * /param vec A Vector struct of type UChar</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a>(UChar *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"> * This function initialize a vector struct of type Bool to containt a</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment"> * dynamically allocated array of length.</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment"> * /param vec A Vector struct of type Bool</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment"> * /param length The initial guess for the number of indices in the dynamically</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment"> *               allocated array.</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a2e1ea608c0b9b0768ba61facb8df913f">init_bool_vector</a>(Bool *vec, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ad5c4c9d8676c13f1f381b0b6c1119c4d">init_string_vector</a>(<a class="code hl_struct" href="structString.html">String</a> *vec);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">  269</a></span><span class="preprocessor">#define INIT_VECTOR(T, length) _Generic( (T), Short: init_short_vector, \</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">                                                   UShort: init_ushort_vector, \</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">                                                   Int: init_int_vector, \</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">                                                   UInt: init_uint_vector, \</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">                                                   LInt: init_long_vector, \</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">                                                   ULInt: init_ulong_vector, \</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">                                                   LLInt: init_llong_vector, \</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">                                                   ULLInt: init_ullong_vector, \</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">                                                   Flt: init_float_vector, \</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">                                                   Dble: init_double_vector, \</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">                                                   LDble: init_ldouble_vector, \</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">                                                   Char: init_char_vector, \</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">                                                   UChar: init_uchar_vector, \</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">                                                   Bool: init_bool_vector)(&amp;T, length)</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">// INIT_TYPE_ARRAY FUNCTIONS</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#acb7b3bcd9252ad84ea9d05436f57bd6c">init_short_array</a>(Short *vec, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#abbac579a20b2655deda9ec8a915fcfb7">init_ushort_array</a>(UShort *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length,</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                       <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a29734ea7a6541b75cd3824bc05e3e589">init_int_array</a>(Int *vec, <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a2739fb21bf4216de09c51c393b89ece7">init_uint_array</a>(UInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#acbddef55e279d25613203d2f14957597">init_long_array</a>(LInt *vec, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#acdf31865e9c36adc693dd7fa7fadcacc">init_ulong_array</a>(ULInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a65e3799f14e154e10bd3ce7a4d4fe184">init_llong_array</a>(LLInt *vec, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span> </div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a39d896e588ac932b9958b4f2e32d97c2">init_ullong_array</a>(ULLInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span> </div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a5fcc9ae29ce6bd76060856b388992240">init_float_array</a>(Flt *vec, <span class="keywordtype">float</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#af1f590cad5f66c4caded12d7cd92675b">init_double_array</a>(Dble *vec, <span class="keywordtype">double</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span> </div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#ae670278f7c9522a0fdc6b261cb76e5e5">init_ldouble_array</a>(LDble *vec, <span class="keywordtype">long</span> <span class="keywordtype">double</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span> </div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a85ef363e6bfd0897ffc5ccb10c5eb721">init_char_array</a>(Char *vec, <span class="keywordtype">char</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span> </div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#a2f22fc4866a5c4e5ba5cc10fbf73bb5e">init_uchar_array</a>(UChar *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span> </div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#ad2512ad5d79463921401fee2bf996b10">init_bool_array</a>(Bool *vec, <span class="keywordtype">bool</span> *arr, <span class="keywordtype">size_t</span> allocated_length, <span class="keywordtype">size_t</span> active_length);</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span><span class="comment">// INIT_ARRAY GENERIC OPERATOR</span></div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span> </div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span><span class="comment">// Controlling expression to define function type for INIT_VECTOR macro</span></div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno"><a class="line" href="vector_8h.html#a77aa58ae761e2e9fe859c4ac316bec41">  556</a></span><span class="preprocessor">#define INIT_ARRAY(T, arr, aloc_len, active_len) _Generic( (T), Short: init_short_array, \</span></div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span><span class="preprocessor">                                                   UShort: init_ushort_array, \</span></div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span><span class="preprocessor">                                                   Int: init_int_array, \</span></div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span><span class="preprocessor">                                                   UInt: init_uint_array, \</span></div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span><span class="preprocessor">                                                   LInt: init_long_array, \</span></div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span><span class="preprocessor">                                                   ULInt: init_ulong_array, \</span></div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="preprocessor">                                                   LLInt: init_llong_array, \</span></div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="preprocessor">                                                   ULLInt: init_ullong_array, \</span></div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="preprocessor">                                                   Flt: init_float_array, \</span></div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span><span class="preprocessor">                                                   Dble: init_double_array, \</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="preprocessor">                                                   LDble: init_ldouble_array, \</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span><span class="preprocessor">                                                   Char: init_char_array, \</span></div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span><span class="preprocessor">                                                   UChar: init_uchar_array)(&amp;T, arr, aloc_len, active_len)</span></div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span><span class="comment"> * This function pushes a scalar short value to a user defined indice</span></div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="comment"> * in a Short vector struc.</span></div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="comment"> * /param vec A vector struct of type Short</span></div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="comment"> * /param value The scalar value of type short</span></div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="comment"> * Short vec;</span></div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="comment"> * init_short_vector(vec, 3);</span></div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="comment"> * push_short_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="comment"> * push_short_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="comment"> * push_short_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="comment"> * free_short_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector</a>(Short *vec, <span class="keywordtype">short</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="comment"> * This function pushes a scalar unsigned short value to a user defined indice</span></div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="comment"> * in a UShort vector struc.</span></div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span><span class="comment"> * /param vec A vector struct of type UShort</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span><span class="comment"> * /param value The scalar value of type unsigned short</span></div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="comment"> * UShort vec;</span></div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span><span class="comment"> * init_ushort_vector(vec, 3);</span></div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span><span class="comment"> * push_ushort_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span><span class="comment"> * push_ushort_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span><span class="comment"> * push_ushort_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="comment"> * free_ushort_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector</a>(UShort *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="comment"> * This function pushes a scalar int value to a user defined indice</span></div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="comment"> * in a Int vector struc.</span></div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="comment"> * /param vec A vector struct of type Int</span></div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="comment"> * /param value The scalar value of type int</span></div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span><span class="comment"> * Int vec;</span></div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span><span class="comment"> * init_int_vector(vec, 3);</span></div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span><span class="comment"> * push_int_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span><span class="comment"> * push_int_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span><span class="comment"> * push_int_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span><span class="comment"> * free_int_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector</a>(Int *vec, <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span> </div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span><span class="comment"> * This function pushes a scalar unsigned int value to a user defined indice</span></div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="comment"> * in a UInt vector struc.</span></div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span><span class="comment"> * /param vec A vector struct of type UInt</span></div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span><span class="comment"> * /param value The scalar value of type unsigned int</span></div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span><span class="comment"> * UInt vec;</span></div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span><span class="comment"> * init_uint_vector(vec, 3);</span></div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span><span class="comment"> * push_uint_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span><span class="comment"> * push_uint_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span><span class="comment"> * push_uint_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span><span class="comment"> * free_uint_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a787fc2bba6112c4ede10d0ec14ab3825">push_uint_vector</a>(UInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span><span class="comment"> * This function pushes a scalar long int value to a user defined indice</span></div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span><span class="comment"> * in a LInt vector struc.</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span><span class="comment"> * /param vec A vector struct of type LInt</span></div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span><span class="comment"> * /param value The scalar value of type long int</span></div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span><span class="comment"> * LInt vec;</span></div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span><span class="comment"> * init_long_vector(vec, 3);</span></div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span><span class="comment"> * push_long_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span><span class="comment"> * push_long_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span><span class="comment"> * push_long_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="comment"> * free_long_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a6135368684b7d740482cfc775417f255">push_long_vector</a>(LInt *vec, <span class="keywordtype">long</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span><span class="comment"> * This function pushes a scalar unsigned long int value to a user defined indice</span></div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span><span class="comment"> * in a ULInt vector struc.</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span><span class="comment"> * /param vec A vector struct of type ULInt</span></div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span><span class="comment"> * /param value The scalar value of type unsigned long int</span></div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span><span class="comment"> * ULInt vec;</span></div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="comment"> * init_ulong_vector(vec, 3);</span></div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span><span class="comment"> * push_ulong_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span><span class="comment"> * push_ulong_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span><span class="comment"> * push_ulong_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span><span class="comment"> * free_ulong_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a>(ULInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span> </div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span><span class="comment"> * This function pushes a scalar long long int value to a user defined indice</span></div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span><span class="comment"> * in a LLInt vector struc.</span></div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span><span class="comment"> * /param vec A vector struct of type LLInt</span></div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span><span class="comment"> * /param value The scalar value of type long long int</span></div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span><span class="comment"> * LLInt vec;</span></div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span><span class="comment"> * inint_llong_vector(vec, 3);</span></div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span><span class="comment"> * push_llong_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span><span class="comment"> * push_llong_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span><span class="comment"> * push_llong_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span><span class="comment"> * free_llong_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector</a>(LLInt *vec, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span> </div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span><span class="comment"> * This function pushes a scalar unsigned long long int value to a user defined indice</span></div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span><span class="comment"> * in a ULLInt vector struc.</span></div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span><span class="comment"> * /param vec A vector struct of type ULLInt</span></div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span><span class="comment"> * /param value The scalar value of type unsigned long long int</span></div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span><span class="comment"> * ULLInt vec;</span></div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span><span class="comment"> * init_ullong_vector(vec, 3);</span></div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span><span class="comment"> * push_ullong_vector(vec, 1, vec.active_length);</span></div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="comment"> * push_ullong_vector(vec, 2, vec.active_length);</span></div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span><span class="comment"> * push_ullong_vector(vec, 5, 0);</span></div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span><span class="comment"> * // &gt;&gt; [ 5, 1, 2 ]</span></div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span><span class="comment"> * free_ullong_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector</a>(ULLInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span> </div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span><span class="comment"> * This function pushes a scalar unsigned float value to a user defined indice</span></div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span><span class="comment"> * in a Flt vector struc.</span></div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span><span class="comment"> * /param vec A vector struct of type Flt</span></div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span><span class="comment"> * /param value The scalar value of type float</span></div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span><span class="comment"> * Flt vec;</span></div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span><span class="comment"> * init_float_vector(vec, 3);</span></div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span><span class="comment"> * push_float_vector(vec, 1.f, vec.active_length);</span></div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="comment"> * push_float_vector(vec, 2.f, vec.active_length);</span></div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span><span class="comment"> * push_float_vector(vec, 5.f, 0);</span></div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span><span class="comment"> * // &gt;&gt; [ 5.000, 1.000, 2.000 ]</span></div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span><span class="comment"> * free_float_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector</a>(Flt *vec, <span class="keywordtype">float</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span> </div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span><span class="comment"> * This function pushes a scalar unsigned double value to a user defined indice</span></div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span><span class="comment"> * in a Dble vector struc.</span></div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="comment"> * /param vec A vector struct of type Dble</span></div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><span class="comment"> * /param value The scalar value of type double</span></div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span><span class="comment"> * Dble vec;</span></div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span><span class="comment"> * init_double_vector(vec, 3);</span></div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span><span class="comment"> * push_double_vector(vec, 1., vec.active_length);</span></div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span><span class="comment"> * push_double_vector(vec, 2., vec.active_length);</span></div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span><span class="comment"> * push_double_vector(vec, 5., 0);</span></div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><span class="comment"> * // &gt;&gt; [ 5.000, 1.000, 2.000 ]</span></div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span><span class="comment"> * free_double_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector</a>(Dble *vec, <span class="keywordtype">double</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span><span class="comment"> * This function pushes a scalar unsigned long double value to a user defined indice</span></div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span><span class="comment"> * in a LDble vector struc.</span></div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span><span class="comment"> * /param vec A vector struct of type LDble</span></div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span><span class="comment"> * /param value The scalar value of type long double</span></div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span><span class="comment"> * LDble vec;</span></div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span><span class="comment"> * init_ldouble_vector(vec, 3);</span></div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span><span class="comment"> * push_ldouble_vector(vec, 1., vec.active_length);</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span><span class="comment"> * push_ldouble_vector(vec, 2., vec.active_length);</span></div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span><span class="comment"> * push_ldouble_vector(vec, 5., 0);</span></div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span><span class="comment"> * // &gt;&gt; [ 5.000, 1.000, 2.000 ]</span></div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span><span class="comment"> * free_ldouble_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ad001560a2793c40efb1c64532cefe2e2">push_ldouble_vector</a>(LDble *vec, <span class="keywordtype">long</span> <span class="keywordtype">double</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span> </div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span><span class="comment"> * This function pushes a scalar char value to a user defined indice</span></div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span><span class="comment"> * in a Char vector struc.</span></div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span><span class="comment"> * /param vec A vector struct of type Char</span></div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span><span class="comment"> * /param value The scalar value of type char</span></div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span><span class="comment"> * Char vec;</span></div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span><span class="comment"> * init_char_vector(vec, 3);</span></div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span><span class="comment"> * push_char_vector(vec, &#39;a&#39;, vec.active_length);</span></div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span><span class="comment"> * push_char_vector(vec, &#39;b&#39;, vec.active_length);</span></div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span><span class="comment"> * push_char_vector(vec, &#39;c&#39;, 0);</span></div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span><span class="comment"> * // &gt;&gt; [ c, a, b ]</span></div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span><span class="comment"> * free_char_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector</a>(Char *vec, <span class="keywordtype">char</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span> </div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span><span class="comment"> * This function pushes a scalar char value to a user defined indice</span></div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span><span class="comment"> * in a Char vector struc.</span></div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span><span class="comment"> * /param vec A vector struct of type Char</span></div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span><span class="comment"> * /param value The scalar value of type char</span></div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span><span class="comment"> * Char vec;</span></div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span><span class="comment"> * init_uchar_vector(vec, 3);</span></div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span><span class="comment"> * push_uchar_vector(vec, &#39;a&#39;, vec.active_length);</span></div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span><span class="comment"> * push_uchar_vector(vec, &#39;b&#39;, vec.active_length);</span></div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span><span class="comment"> * push_uchar_vector(vec, &#39;c&#39;, 0);</span></div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span><span class="comment"> * // &gt;&gt; [ c, a, b ]</span></div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span><span class="comment"> * free_uchar_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno"><a class="line" href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">  894</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">push_uchar_vector</a>(UChar *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span> </div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a078616c26d55c1ddb2ec4c551298a4f8">push_string_vector</a>(<a class="code hl_struct" href="structString.html">String</a> *vec, <span class="keywordtype">char</span> *value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span> </div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span><span class="comment"> * This function pushes a scalar bool value to a user defined indice</span></div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span><span class="comment"> * in a Bool vector struc.</span></div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span><span class="comment"> * /param vec A vector struct of type Bool</span></div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span><span class="comment"> * /param value The scalar value of type bool</span></div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span><span class="comment"> * /param index The index where the data will be pushed.</span></div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="comment"> * @code</span></div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span><span class="comment"> * #include &quot;vector.h&quot;</span></div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span><span class="comment"> * #include &quot;print.h&quot;</span></div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span><span class="comment"> * Bool vec;</span></div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="comment"> * init_bool_vector(vec, 3);</span></div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="comment"> * push_bool_vector(vec, true, vec.active_length);</span></div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><span class="comment"> * push_bool_vector(vec, true, vec.active_length);</span></div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="comment"> * push_bool_vector(vec, false, 0);</span></div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="comment"> * PRINT(vec);</span></div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span><span class="comment"> * // &gt;&gt; [ true, true, false ]</span></div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span><span class="comment"> * free_bool_vector(vec)&#39;</span></div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span><span class="comment"> * @endcode</span></div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a66a1a1c291efbab607defa13421167dc">push_bool_vector</a>(Bool *vec, <span class="keywordtype">bool</span> value, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span><span class="comment">// INSERT_TYPE_VECTOR</span></div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a2ed595a869e30a4c834c1d2cf5b934ee">insert_short_vector</a>(Short *vec, <span class="keywordtype">short</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aa8495c3a316b6d93c8697d194c86fc2b">insert_ushort_vector</a>(UShort *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span> </div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a0acf8b86d4a95be517c7af80f8eff4ac">insert_int_vector</a>(Int *vec, <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span> </div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ad78d40537dece17df4f506fd6ba7dc34">insert_uint_vector</a>(UInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span> </div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab5d840518e5e7bbd9ed243681b7124f7">insert_long_vector</a>(LInt *vec, <span class="keywordtype">long</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span> </div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#aa419c32bb276bfe866787e1744669b94">insert_ulong_vector</a>(ULInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span> </div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9817d90055331624db7529c5d74a80ad">insert_llong_vector</a>(LLInt *vec, <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span> </div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#afccda80cf8e96d76846df29a256f6974">insert_ullong_vector</a>(ULLInt *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span> </div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a17ee89c38df38d9d1d5b0cb2e33266d1">insert_float_vector</a>(Flt *vec, <span class="keywordtype">float</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span> </div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#af1e86e2b45b0339cc18ba5b35bf01132">insert_double_vector</a>(Dble *vec, <span class="keywordtype">double</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span> </div>
+<div class="line"><a id="l01253" name="l01253"></a><span class="lineno"> 1253</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a0ec3e3b802f62c5f9cdd9b7d197bd4a1">insert_ldouble_vector</a>(LDble *vec, <span class="keywordtype">long</span> <span class="keywordtype">double</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01254" name="l01254"></a><span class="lineno"> 1254</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01255" name="l01255"></a><span class="lineno"> 1255</span> </div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a>(Char *vec, <span class="keywordtype">char</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01283" name="l01283"></a><span class="lineno"> 1283</span> </div>
+<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ae5b1c45f4d2083c6d87f217646609a2d">insert_uchar_vector</a>(UChar *vec, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span> </div>
+<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span><span class="keywordtype">int</span> <a class="code hl_function" href="vector_8h.html#ab344e3b36aa397f037cb2c573e1d3aff">insert_bool_vector</a>(Bool *vec, <span class="keywordtype">bool</span> *elements, <span class="keywordtype">size_t</span> num_indices, <span class="keywordtype">size_t</span> index);</div>
+<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span> </div>
+<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span><span class="preprocessor">#endif </span><span class="comment">/* vector_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span><span class="comment">// eof</span></div>
+<div class="ttc" id="astructString_html"><div class="ttname"><a href="structString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00081">vector.h:82</a></div></div>
+<div class="ttc" id="astructString_html_a706ffaf2f520d46074dd99e7896d6673"><div class="ttname"><a href="structString.html#a706ffaf2f520d46074dd99e7896d6673">String::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00084">vector.h:84</a></div></div>
+<div class="ttc" id="astructString_html_a984d87136c3d76ab3145bdb65880a3fa"><div class="ttname"><a href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">String::array</a></div><div class="ttdeci">char ** array</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00083">vector.h:83</a></div></div>
 <div class="ttc" id="aswap_8h_html"><div class="ttname"><a href="swap_8h.html">swap.h</a></div></div>
-<div class="ttc" id="avector_8h_html_a2c0735f69da8e40535b5ecceace1a399"><div class="ttname"><a href="vector_8h.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a></div><div class="ttdeci">int init_double_vector(Dble *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a2e1ea608c0b9b0768ba61facb8df913f"><div class="ttname"><a href="vector_8h.html#a2e1ea608c0b9b0768ba61facb8df913f">init_bool_vector</a></div><div class="ttdeci">int init_bool_vector(Bool *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a65eda538d3c07a8beb1475c1a214ff67"><div class="ttname"><a href="vector_8h.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a></div><div class="ttdeci">int init_llong_vector(LLInt *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a749211e8a46a8b2297b3c6ebb78aed0e"><div class="ttname"><a href="vector_8h.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a></div><div class="ttdeci">int init_short_vector(Short *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a79d9f9d1d1cb31d09620bc5cdc73e94e"><div class="ttname"><a href="vector_8h.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a></div><div class="ttdeci">int init_ldouble_vector(LDble *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a84eaf8fe661d2d8eb9275491bc8329df"><div class="ttname"><a href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a></div><div class="ttdeci">#define VECTOR_STRUCT(type, dtype)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00056">vector.h:56</a></div></div>
-<div class="ttc" id="avector_8h_html_a9289ec52674f95ebf45ac81b70dfdc67"><div class="ttname"><a href="vector_8h.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a></div><div class="ttdeci">int init_uchar_vector(UChar *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a92bba70874a1570bd9c87a2a7385af35"><div class="ttname"><a href="vector_8h.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a></div><div class="ttdeci">int init_float_vector(Flt *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a9d8eb1d9ce65365d7b044fe684387a3f"><div class="ttname"><a href="vector_8h.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a></div><div class="ttdeci">int init_uint_vector(UInt *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_a9fdb6c5fdd9f0d5a3bfb751f9e82968e"><div class="ttname"><a href="vector_8h.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a></div><div class="ttdeci">int init_int_vector(Int *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_aa63398bdb55f97b891b93404a89de14d"><div class="ttname"><a href="vector_8h.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a></div><div class="ttdeci">int init_ushort_vector(UShort *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_ab05d31d34c87d8d6cd76f48539bf367f"><div class="ttname"><a href="vector_8h.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a></div><div class="ttdeci">int init_ullong_vector(ULLInt *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_ac59c5fed0f4cd6b9aaf4c87b7a997bd3"><div class="ttname"><a href="vector_8h.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a></div><div class="ttdeci">int init_long_vector(LInt *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_ad5c4c9d8676c13f1f381b0b6c1119c4d"><div class="ttname"><a href="vector_8h.html#ad5c4c9d8676c13f1f381b0b6c1119c4d">init_string_vector</a></div><div class="ttdeci">int init_string_vector(String *vec)</div></div>
-<div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5">mem_type</a></div><div class="ttdeci">mem_type</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00034">vector.h:35</a></div></div>
-<div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a></div><div class="ttdeci">@ DYNAMIC</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00036">vector.h:36</a></div></div>
-<div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">STATIC</a></div><div class="ttdeci">@ STATIC</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00038">vector.h:37</a></div></div>
-<div class="ttc" id="avector_8h_html_aecde718777430d31ec254f8a4f40cce0"><div class="ttname"><a href="vector_8h.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a></div><div class="ttdeci">int init_char_vector(Char *vec, size_t length)</div></div>
-<div class="ttc" id="avector_8h_html_af08098b392c0ff01db799bff9c83a521"><div class="ttname"><a href="vector_8h.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a></div><div class="ttdeci">int init_ulong_vector(ULInt *vec, size_t length)</div></div>
+<div class="ttc" id="avector_8h_html_a078616c26d55c1ddb2ec4c551298a4f8"><div class="ttname"><a href="vector_8h.html#a078616c26d55c1ddb2ec4c551298a4f8">push_string_vector</a></div><div class="ttdeci">int push_string_vector(String *vec, char *value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00778">vector.c:778</a></div></div>
+<div class="ttc" id="avector_8h_html_a0acf8b86d4a95be517c7af80f8eff4ac"><div class="ttname"><a href="vector_8h.html#a0acf8b86d4a95be517c7af80f8eff4ac">insert_int_vector</a></div><div class="ttdeci">int insert_int_vector(Int *vec, int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00872">vector.c:872</a></div></div>
+<div class="ttc" id="avector_8h_html_a0ec3e3b802f62c5f9cdd9b7d197bd4a1"><div class="ttname"><a href="vector_8h.html#a0ec3e3b802f62c5f9cdd9b7d197bd4a1">insert_ldouble_vector</a></div><div class="ttdeci">int insert_ldouble_vector(LDble *vec, long double *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01160">vector.c:1160</a></div></div>
+<div class="ttc" id="avector_8h_html_a17ee89c38df38d9d1d5b0cb2e33266d1"><div class="ttname"><a href="vector_8h.html#a17ee89c38df38d9d1d5b0cb2e33266d1">insert_float_vector</a></div><div class="ttdeci">int insert_float_vector(Flt *vec, float *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01088">vector.c:1088</a></div></div>
+<div class="ttc" id="avector_8h_html_a2739fb21bf4216de09c51c393b89ece7"><div class="ttname"><a href="vector_8h.html#a2739fb21bf4216de09c51c393b89ece7">init_uint_array</a></div><div class="ttdeci">void init_uint_array(UInt *vec, unsigned int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00260">vector.c:260</a></div></div>
+<div class="ttc" id="avector_8h_html_a29734ea7a6541b75cd3824bc05e3e589"><div class="ttname"><a href="vector_8h.html#a29734ea7a6541b75cd3824bc05e3e589">init_int_array</a></div><div class="ttdeci">void init_int_array(Int *vec, int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00252">vector.c:252</a></div></div>
+<div class="ttc" id="avector_8h_html_a2c0735f69da8e40535b5ecceace1a399"><div class="ttname"><a href="vector_8h.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a></div><div class="ttdeci">int init_double_vector(Dble *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00152">vector.c:152</a></div></div>
+<div class="ttc" id="avector_8h_html_a2e1ea608c0b9b0768ba61facb8df913f"><div class="ttname"><a href="vector_8h.html#a2e1ea608c0b9b0768ba61facb8df913f">init_bool_vector</a></div><div class="ttdeci">int init_bool_vector(Bool *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00212">vector.c:212</a></div></div>
+<div class="ttc" id="avector_8h_html_a2ed595a869e30a4c834c1d2cf5b934ee"><div class="ttname"><a href="vector_8h.html#a2ed595a869e30a4c834c1d2cf5b934ee">insert_short_vector</a></div><div class="ttdeci">int insert_short_vector(Short *vec, short int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00800">vector.c:800</a></div></div>
+<div class="ttc" id="avector_8h_html_a2f22fc4866a5c4e5ba5cc10fbf73bb5e"><div class="ttname"><a href="vector_8h.html#a2f22fc4866a5c4e5ba5cc10fbf73bb5e">init_uchar_array</a></div><div class="ttdeci">void init_uchar_array(UChar *vec, unsigned char *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00332">vector.c:332</a></div></div>
+<div class="ttc" id="avector_8h_html_a31e02f437f4f9f43d1126e017ae1cac3"><div class="ttname"><a href="vector_8h.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector</a></div><div class="ttdeci">int push_float_vector(Flt *vec, float value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00613">vector.c:613</a></div></div>
+<div class="ttc" id="avector_8h_html_a3478a298e62d85cb93f11a78f64d6f80"><div class="ttname"><a href="vector_8h.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector</a></div><div class="ttdeci">int push_ullong_vector(ULLInt *vec, unsigned long long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00580">vector.c:580</a></div></div>
+<div class="ttc" id="avector_8h_html_a38068c17aa5cf7286175572d43219b8d"><div class="ttname"><a href="vector_8h.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector</a></div><div class="ttdeci">int push_short_vector(Short *vec, short int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00349">vector.c:349</a></div></div>
+<div class="ttc" id="avector_8h_html_a39d896e588ac932b9958b4f2e32d97c2"><div class="ttname"><a href="vector_8h.html#a39d896e588ac932b9958b4f2e32d97c2">init_ullong_array</a></div><div class="ttdeci">void init_ullong_array(ULLInt *vec, unsigned long long int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00292">vector.c:292</a></div></div>
+<div class="ttc" id="avector_8h_html_a5fcc9ae29ce6bd76060856b388992240"><div class="ttname"><a href="vector_8h.html#a5fcc9ae29ce6bd76060856b388992240">init_float_array</a></div><div class="ttdeci">void init_float_array(Flt *vec, float *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00300">vector.c:300</a></div></div>
+<div class="ttc" id="avector_8h_html_a6135368684b7d740482cfc775417f255"><div class="ttname"><a href="vector_8h.html#a6135368684b7d740482cfc775417f255">push_long_vector</a></div><div class="ttdeci">int push_long_vector(LInt *vec, long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00481">vector.c:481</a></div></div>
+<div class="ttc" id="avector_8h_html_a65e3799f14e154e10bd3ce7a4d4fe184"><div class="ttname"><a href="vector_8h.html#a65e3799f14e154e10bd3ce7a4d4fe184">init_llong_array</a></div><div class="ttdeci">void init_llong_array(LLInt *vec, long long int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00284">vector.c:284</a></div></div>
+<div class="ttc" id="avector_8h_html_a65eda538d3c07a8beb1475c1a214ff67"><div class="ttname"><a href="vector_8h.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a></div><div class="ttdeci">int init_llong_vector(LLInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00107">vector.c:107</a></div></div>
+<div class="ttc" id="avector_8h_html_a66a1a1c291efbab607defa13421167dc"><div class="ttname"><a href="vector_8h.html#a66a1a1c291efbab607defa13421167dc">push_bool_vector</a></div><div class="ttdeci">int push_bool_vector(Bool *vec, bool value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00745">vector.c:745</a></div></div>
+<div class="ttc" id="avector_8h_html_a6baf75dc56de293f3dbdc8ac40934980"><div class="ttname"><a href="vector_8h.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector</a></div><div class="ttdeci">int push_int_vector(Int *vec, int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00415">vector.c:415</a></div></div>
+<div class="ttc" id="avector_8h_html_a749211e8a46a8b2297b3c6ebb78aed0e"><div class="ttname"><a href="vector_8h.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a></div><div class="ttdeci">int init_short_vector(Short *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00018">vector.c:18</a></div></div>
+<div class="ttc" id="avector_8h_html_a787fc2bba6112c4ede10d0ec14ab3825"><div class="ttname"><a href="vector_8h.html#a787fc2bba6112c4ede10d0ec14ab3825">push_uint_vector</a></div><div class="ttdeci">int push_uint_vector(UInt *vec, unsigned int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00448">vector.c:448</a></div></div>
+<div class="ttc" id="avector_8h_html_a79d9f9d1d1cb31d09620bc5cdc73e94e"><div class="ttname"><a href="vector_8h.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a></div><div class="ttdeci">int init_ldouble_vector(LDble *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00167">vector.c:167</a></div></div>
+<div class="ttc" id="avector_8h_html_a84eaf8fe661d2d8eb9275491bc8329df"><div class="ttname"><a href="vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df">VECTOR_STRUCT</a></div><div class="ttdeci">#define VECTOR_STRUCT(type, dtype)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00058">vector.h:58</a></div></div>
+<div class="ttc" id="avector_8h_html_a85ef363e6bfd0897ffc5ccb10c5eb721"><div class="ttname"><a href="vector_8h.html#a85ef363e6bfd0897ffc5ccb10c5eb721">init_char_array</a></div><div class="ttdeci">void init_char_array(Char *vec, char *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00324">vector.c:324</a></div></div>
+<div class="ttc" id="avector_8h_html_a9289ec52674f95ebf45ac81b70dfdc67"><div class="ttname"><a href="vector_8h.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a></div><div class="ttdeci">int init_uchar_vector(UChar *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00197">vector.c:197</a></div></div>
+<div class="ttc" id="avector_8h_html_a92bba70874a1570bd9c87a2a7385af35"><div class="ttname"><a href="vector_8h.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a></div><div class="ttdeci">int init_float_vector(Flt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00137">vector.c:137</a></div></div>
+<div class="ttc" id="avector_8h_html_a93f7e28f97718d9d7c5c84df61c1466c"><div class="ttname"><a href="vector_8h.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector</a></div><div class="ttdeci">int push_llong_vector(LLInt *vec, long long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00547">vector.c:547</a></div></div>
+<div class="ttc" id="avector_8h_html_a97670c026df2a05dda5b0c85ebeb4d69"><div class="ttname"><a href="vector_8h.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector</a></div><div class="ttdeci">int push_ushort_vector(UShort *vec, unsigned short int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00382">vector.c:382</a></div></div>
+<div class="ttc" id="avector_8h_html_a9817d90055331624db7529c5d74a80ad"><div class="ttname"><a href="vector_8h.html#a9817d90055331624db7529c5d74a80ad">insert_llong_vector</a></div><div class="ttdeci">int insert_llong_vector(LLInt *vec, long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01016">vector.c:1016</a></div></div>
+<div class="ttc" id="avector_8h_html_a9d8eb1d9ce65365d7b044fe684387a3f"><div class="ttname"><a href="vector_8h.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a></div><div class="ttdeci">int init_uint_vector(UInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00063">vector.c:63</a></div></div>
+<div class="ttc" id="avector_8h_html_a9e9db9d87d5a9f3bb6dae1ba5668ef12"><div class="ttname"><a href="vector_8h.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a></div><div class="ttdeci">int insert_char_vector(Char *vec, char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01196">vector.c:1196</a></div></div>
+<div class="ttc" id="avector_8h_html_a9fdb6c5fdd9f0d5a3bfb751f9e82968e"><div class="ttname"><a href="vector_8h.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a></div><div class="ttdeci">int init_int_vector(Int *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00048">vector.c:48</a></div></div>
+<div class="ttc" id="avector_8h_html_aa419c32bb276bfe866787e1744669b94"><div class="ttname"><a href="vector_8h.html#aa419c32bb276bfe866787e1744669b94">insert_ulong_vector</a></div><div class="ttdeci">int insert_ulong_vector(ULInt *vec, unsigned long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00980">vector.c:980</a></div></div>
+<div class="ttc" id="avector_8h_html_aa63398bdb55f97b891b93404a89de14d"><div class="ttname"><a href="vector_8h.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a></div><div class="ttdeci">int init_ushort_vector(UShort *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00033">vector.c:33</a></div></div>
+<div class="ttc" id="avector_8h_html_aa8495c3a316b6d93c8697d194c86fc2b"><div class="ttname"><a href="vector_8h.html#aa8495c3a316b6d93c8697d194c86fc2b">insert_ushort_vector</a></div><div class="ttdeci">int insert_ushort_vector(UShort *vec, unsigned short int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00836">vector.c:836</a></div></div>
+<div class="ttc" id="avector_8h_html_ab05d31d34c87d8d6cd76f48539bf367f"><div class="ttname"><a href="vector_8h.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a></div><div class="ttdeci">int init_ullong_vector(ULLInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00122">vector.c:122</a></div></div>
+<div class="ttc" id="avector_8h_html_ab312c467d82a0fccc66cbb89a6b8de5c"><div class="ttname"><a href="vector_8h.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector</a></div><div class="ttdeci">int push_double_vector(Dble *vec, double value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00646">vector.c:646</a></div></div>
+<div class="ttc" id="avector_8h_html_ab344e3b36aa397f037cb2c573e1d3aff"><div class="ttname"><a href="vector_8h.html#ab344e3b36aa397f037cb2c573e1d3aff">insert_bool_vector</a></div><div class="ttdeci">int insert_bool_vector(Bool *vec, bool *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01268">vector.c:1268</a></div></div>
+<div class="ttc" id="avector_8h_html_ab4f076e9a6e7d0795c2c3a0216c5c97e"><div class="ttname"><a href="vector_8h.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector</a></div><div class="ttdeci">int push_char_vector(Char *vec, char value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00712">vector.c:712</a></div></div>
+<div class="ttc" id="avector_8h_html_ab5d840518e5e7bbd9ed243681b7124f7"><div class="ttname"><a href="vector_8h.html#ab5d840518e5e7bbd9ed243681b7124f7">insert_long_vector</a></div><div class="ttdeci">int insert_long_vector(LInt *vec, long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00944">vector.c:944</a></div></div>
+<div class="ttc" id="avector_8h_html_abbac579a20b2655deda9ec8a915fcfb7"><div class="ttname"><a href="vector_8h.html#abbac579a20b2655deda9ec8a915fcfb7">init_ushort_array</a></div><div class="ttdeci">void init_ushort_array(UShort *vec, unsigned short int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00244">vector.c:244</a></div></div>
+<div class="ttc" id="avector_8h_html_ac59c5fed0f4cd6b9aaf4c87b7a997bd3"><div class="ttname"><a href="vector_8h.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a></div><div class="ttdeci">int init_long_vector(LInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00078">vector.c:78</a></div></div>
+<div class="ttc" id="avector_8h_html_acb7b3bcd9252ad84ea9d05436f57bd6c"><div class="ttname"><a href="vector_8h.html#acb7b3bcd9252ad84ea9d05436f57bd6c">init_short_array</a></div><div class="ttdeci">void init_short_array(Short *vec, short int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00236">vector.c:236</a></div></div>
+<div class="ttc" id="avector_8h_html_acbddef55e279d25613203d2f14957597"><div class="ttname"><a href="vector_8h.html#acbddef55e279d25613203d2f14957597">init_long_array</a></div><div class="ttdeci">void init_long_array(LInt *vec, long int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00268">vector.c:268</a></div></div>
+<div class="ttc" id="avector_8h_html_acc6fd3b434ba25d3473adff60160500b"><div class="ttname"><a href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">push_uchar_vector</a></div><div class="ttdeci">int push_uchar_vector(UChar *vec, unsigned char value, size_t index)</div></div>
+<div class="ttc" id="avector_8h_html_acdf31865e9c36adc693dd7fa7fadcacc"><div class="ttname"><a href="vector_8h.html#acdf31865e9c36adc693dd7fa7fadcacc">init_ulong_array</a></div><div class="ttdeci">void init_ulong_array(ULInt *vec, unsigned long int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00276">vector.c:276</a></div></div>
+<div class="ttc" id="avector_8h_html_ad001560a2793c40efb1c64532cefe2e2"><div class="ttname"><a href="vector_8h.html#ad001560a2793c40efb1c64532cefe2e2">push_ldouble_vector</a></div><div class="ttdeci">int push_ldouble_vector(LDble *vec, long double value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00679">vector.c:679</a></div></div>
+<div class="ttc" id="avector_8h_html_ad2512ad5d79463921401fee2bf996b10"><div class="ttname"><a href="vector_8h.html#ad2512ad5d79463921401fee2bf996b10">init_bool_array</a></div><div class="ttdeci">void init_bool_array(Bool *vec, bool *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00340">vector.c:340</a></div></div>
+<div class="ttc" id="avector_8h_html_ad5c4c9d8676c13f1f381b0b6c1119c4d"><div class="ttname"><a href="vector_8h.html#ad5c4c9d8676c13f1f381b0b6c1119c4d">init_string_vector</a></div><div class="ttdeci">int init_string_vector(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00227">vector.c:227</a></div></div>
+<div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5">mem_type</a></div><div class="ttdeci">mem_type</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00036">vector.h:37</a></div></div>
+<div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a></div><div class="ttdeci">@ DYNAMIC</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00038">vector.h:38</a></div></div>
+<div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">STATIC</a></div><div class="ttdeci">@ STATIC</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00040">vector.h:39</a></div></div>
+<div class="ttc" id="avector_8h_html_ad78d40537dece17df4f506fd6ba7dc34"><div class="ttname"><a href="vector_8h.html#ad78d40537dece17df4f506fd6ba7dc34">insert_uint_vector</a></div><div class="ttdeci">int insert_uint_vector(UInt *vec, unsigned int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00908">vector.c:908</a></div></div>
+<div class="ttc" id="avector_8h_html_ae5b1c45f4d2083c6d87f217646609a2d"><div class="ttname"><a href="vector_8h.html#ae5b1c45f4d2083c6d87f217646609a2d">insert_uchar_vector</a></div><div class="ttdeci">int insert_uchar_vector(UChar *vec, unsigned char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01232">vector.c:1232</a></div></div>
+<div class="ttc" id="avector_8h_html_ae670278f7c9522a0fdc6b261cb76e5e5"><div class="ttname"><a href="vector_8h.html#ae670278f7c9522a0fdc6b261cb76e5e5">init_ldouble_array</a></div><div class="ttdeci">void init_ldouble_array(LDble *vec, long double *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00316">vector.c:316</a></div></div>
+<div class="ttc" id="avector_8h_html_aea5f95b56df2836ee553face60351e61"><div class="ttname"><a href="vector_8h.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a></div><div class="ttdeci">int push_ulong_vector(ULInt *vec, unsigned long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00514">vector.c:514</a></div></div>
+<div class="ttc" id="avector_8h_html_aecde718777430d31ec254f8a4f40cce0"><div class="ttname"><a href="vector_8h.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a></div><div class="ttdeci">int init_char_vector(Char *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00182">vector.c:182</a></div></div>
+<div class="ttc" id="avector_8h_html_af08098b392c0ff01db799bff9c83a521"><div class="ttname"><a href="vector_8h.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a></div><div class="ttdeci">int init_ulong_vector(ULInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00093">vector.c:93</a></div></div>
+<div class="ttc" id="avector_8h_html_af1e86e2b45b0339cc18ba5b35bf01132"><div class="ttname"><a href="vector_8h.html#af1e86e2b45b0339cc18ba5b35bf01132">insert_double_vector</a></div><div class="ttdeci">int insert_double_vector(Dble *vec, double *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01124">vector.c:1124</a></div></div>
+<div class="ttc" id="avector_8h_html_af1f590cad5f66c4caded12d7cd92675b"><div class="ttname"><a href="vector_8h.html#af1f590cad5f66c4caded12d7cd92675b">init_double_array</a></div><div class="ttdeci">void init_double_array(Dble *vec, double *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00308">vector.c:308</a></div></div>
+<div class="ttc" id="avector_8h_html_afccda80cf8e96d76846df29a256f6974"><div class="ttname"><a href="vector_8h.html#afccda80cf8e96d76846df29a256f6974">insert_ullong_vector</a></div><div class="ttdeci">int insert_ullong_vector(ULLInt *vec, unsigned long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01052">vector.c:1052</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

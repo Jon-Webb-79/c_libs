@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "swap.h"
 
@@ -565,6 +566,776 @@ void init_bool_array(Bool *vec, bool *arr, size_t allocated_length, size_t activ
 										           LDble: init_ldouble_array, \
 										           Char: init_char_array, \
 												   UChar: init_uchar_array)(&T, arr, aloc_len, active_len)
+// ==========================================================================================
+// ==========================================================================================
+
+/*
+ * This function pushes a scalar short value to a user defined indice
+ * in a Short vector struc.
+ *
+ * /param vec A vector struct of type Short
+ * /param value The scalar value of type short
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Short vec;
+ * init_short_vector(vec, 3);
+ * push_short_vector(vec, 1, vec.active_length);
+ * push_short_vector(vec, 2, vec.active_length);
+ * push_short_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_short_vector(vec)'
+ * @endcode
+ */
+int push_short_vector(Short *vec, short int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned short value to a user defined indice
+ * in a UShort vector struc.
+ *
+ * /param vec A vector struct of type UShort
+ * /param value The scalar value of type unsigned short
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * UShort vec;
+ * init_ushort_vector(vec, 3);
+ * push_ushort_vector(vec, 1, vec.active_length);
+ * push_ushort_vector(vec, 2, vec.active_length);
+ * push_ushort_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_ushort_vector(vec)'
+ * @endcode
+ */
+int push_ushort_vector(UShort *vec, unsigned short int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar int value to a user defined indice
+ * in a Int vector struc.
+ *
+ * /param vec A vector struct of type Int
+ * /param value The scalar value of type int
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Int vec;
+ * init_int_vector(vec, 3);
+ * push_int_vector(vec, 1, vec.active_length);
+ * push_int_vector(vec, 2, vec.active_length);
+ * push_int_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_int_vector(vec)'
+ * @endcode
+ */
+int push_int_vector(Int *vec, int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned int value to a user defined indice
+ * in a UInt vector struc.
+ *
+ * /param vec A vector struct of type UInt
+ * /param value The scalar value of type unsigned int
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * UInt vec;
+ * init_uint_vector(vec, 3);
+ * push_uint_vector(vec, 1, vec.active_length);
+ * push_uint_vector(vec, 2, vec.active_length);
+ * push_uint_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_uint_vector(vec)'
+ * @endcode
+ */
+int push_uint_vector(UInt *vec, unsigned int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar long int value to a user defined indice
+ * in a LInt vector struc.
+ *
+ * /param vec A vector struct of type LInt
+ * /param value The scalar value of type long int
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * LInt vec;
+ * init_long_vector(vec, 3);
+ * push_long_vector(vec, 1, vec.active_length);
+ * push_long_vector(vec, 2, vec.active_length);
+ * push_long_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_long_vector(vec)'
+ * @endcode
+ */
+int push_long_vector(LInt *vec, long int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned long int value to a user defined indice
+ * in a ULInt vector struc.
+ *
+ * /param vec A vector struct of type ULInt
+ * /param value The scalar value of type unsigned long int
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * ULInt vec;
+ * init_ulong_vector(vec, 3);
+ * push_ulong_vector(vec, 1, vec.active_length);
+ * push_ulong_vector(vec, 2, vec.active_length);
+ * push_ulong_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_ulong_vector(vec)'
+ * @endcode
+ */
+int push_ulong_vector(ULInt *vec, unsigned long int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar long long int value to a user defined indice
+ * in a LLInt vector struc.
+ *
+ * /param vec A vector struct of type LLInt
+ * /param value The scalar value of type long long int
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * LLInt vec;
+ * inint_llong_vector(vec, 3);
+ * push_llong_vector(vec, 1, vec.active_length);
+ * push_llong_vector(vec, 2, vec.active_length);
+ * push_llong_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_llong_vector(vec)'
+ * @endcode
+ */
+int push_llong_vector(LLInt *vec, long long int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned long long int value to a user defined indice
+ * in a ULLInt vector struc.
+ *
+ * /param vec A vector struct of type ULLInt
+ * /param value The scalar value of type unsigned long long int
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * ULLInt vec;
+ * init_ullong_vector(vec, 3);
+ * push_ullong_vector(vec, 1, vec.active_length);
+ * push_ullong_vector(vec, 2, vec.active_length);
+ * push_ullong_vector(vec, 5, 0);
+ * PRINT(vec);
+ * // >> [ 5, 1, 2 ]
+ * free_ullong_vector(vec)'
+ * @endcode
+ */
+int push_ullong_vector(ULLInt *vec, unsigned long long int value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned float value to a user defined indice
+ * in a Flt vector struc.
+ *
+ * /param vec A vector struct of type Flt
+ * /param value The scalar value of type float
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Flt vec;
+ * init_float_vector(vec, 3);
+ * push_float_vector(vec, 1.f, vec.active_length);
+ * push_float_vector(vec, 2.f, vec.active_length);
+ * push_float_vector(vec, 5.f, 0);
+ * PRINT(vec);
+ * // >> [ 5.000, 1.000, 2.000 ]
+ * free_float_vector(vec)'
+ * @endcode
+ */
+int push_float_vector(Flt *vec, float value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned double value to a user defined indice
+ * in a Dble vector struc.
+ *
+ * /param vec A vector struct of type Dble
+ * /param value The scalar value of type double
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Dble vec;
+ * init_double_vector(vec, 3);
+ * push_double_vector(vec, 1., vec.active_length);
+ * push_double_vector(vec, 2., vec.active_length);
+ * push_double_vector(vec, 5., 0);
+ * PRINT(vec);
+ * // >> [ 5.000, 1.000, 2.000 ]
+ * free_double_vector(vec)'
+ * @endcode
+ */
+int push_double_vector(Dble *vec, double value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar unsigned long double value to a user defined indice
+ * in a LDble vector struc.
+ *
+ * /param vec A vector struct of type LDble
+ * /param value The scalar value of type long double
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * LDble vec;
+ * init_ldouble_vector(vec, 3);
+ * push_ldouble_vector(vec, 1., vec.active_length);
+ * push_ldouble_vector(vec, 2., vec.active_length);
+ * push_ldouble_vector(vec, 5., 0);
+ * PRINT(vec);
+ * // >> [ 5.000, 1.000, 2.000 ]
+ * free_ldouble_vector(vec)'
+ * @endcode
+ */
+int push_ldouble_vector(LDble *vec, long double value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar char value to a user defined indice
+ * in a Char vector struc.
+ *
+ * /param vec A vector struct of type Char
+ * /param value The scalar value of type char
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Char vec;
+ * init_char_vector(vec, 3);
+ * push_char_vector(vec, 'a', vec.active_length);
+ * push_char_vector(vec, 'b', vec.active_length);
+ * push_char_vector(vec, 'c', 0);
+ * PRINT(vec);
+ * // >> [ c, a, b ]
+ * free_char_vector(vec)'
+ * @endcode
+ */
+int push_char_vector(Char *vec, char value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar char value to a user defined indice
+ * in a Char vector struc.
+ *
+ * /param vec A vector struct of type Char
+ * /param value The scalar value of type char
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Char vec;
+ * init_uchar_vector(vec, 3);
+ * push_uchar_vector(vec, 'a', vec.active_length);
+ * push_uchar_vector(vec, 'b', vec.active_length);
+ * push_uchar_vector(vec, 'c', 0);
+ * PRINT(vec);
+ * // >> [ c, a, b ]
+ * free_uchar_vector(vec)'
+ * @endcode
+ */
+int push_uchar_vector(UChar *vec, unsigned char value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will push a single string to an existing string vector container
+ *
+ * /param vec A vector struct of type String
+ * /param value A string
+ * /param index The index where the string is to be pushed
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * String vec;
+ * init_string_vector(vec);
+ * push_string_vector(&vec, "Hello", 0);
+ * push_string_vector(&vec, "Goodbye", 1);
+ * push_string_vector(&vec, "Again", 0);
+ * PRINT(vec);
+ * // >> [ Again, Hello, Goodbye ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+int push_string_vector(String *vec, char *value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/*
+ * This function pushes a scalar bool value to a user defined indice
+ * in a Bool vector struc.
+ *
+ * /param vec A vector struct of type Bool
+ * /param value The scalar value of type bool
+ * /param index The index where the data will be pushed.
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"
+ *
+ * Bool vec;
+ * init_bool_vector(vec, 3);
+ * push_bool_vector(vec, true, vec.active_length);
+ * push_bool_vector(vec, true, vec.active_length);
+ * push_bool_vector(vec, false, 0);
+ * PRINT(vec);
+ * // >> [ true, true, false ]
+ * free_bool_vector(vec)'
+ * @endcode
+ */
+int push_bool_vector(Bool *vec, bool value, size_t index);
+// ==========================================================================================
+// ==========================================================================================
+// INSERT_TYPE_VECTOR
+
+/**
+ * This function will allow a user to insert a scalar short or an array of short
+ * values into a vector struct of Short type.
+ *
+ * /param vec A vector struct of type Short
+ * /param elements An array or scalar of type short
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * Short vec;
+ * init_short_vector(vec, 6);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 2);
+ * push_short_vector(vec, 3);
+ * short a[3] = {5, 6, 7};
+ * insert_short_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+int insert_short_vector(Short *vec, short int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar unsigned short or an array of unsigned short
+ * values into a vector struct of UShort type.
+ *
+ * /param vec A vector struct of type UShort
+ * /param elements An array or scalar of type unsigned short
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * UShort vec;
+ * init_ushort_vector(vec, 6);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 2);
+ * push_ushort_vector(vec, 3);
+ * unsigned short a[3] = {5, 6, 7};
+ * insert_ushort_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+int insert_ushort_vector(UShort *vec, unsigned short int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar int or an array of int
+ * values into a vector struct of Int type.
+ *
+ * /param vec A vector struct of type Int
+ * /param elements An array or scalar of type int
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * Int vec;
+ * init_int_vector(vec, 6);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 2);
+ * push_int_vector(vec, 3);
+ * int a[3] = {5, 6, 7};
+ * insert_int_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int insert_int_vector(Int *vec, int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar unsigned int or an array of unsigned int
+ * values into a vector struct of UInt type.
+ *
+ * /param vec A vector struct of type UInt
+ * /param elements An array or scalar of type unsigned int
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * UInt vec;
+ * init_uint_vector(vec, 6);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 2);
+ * push_uint_vector(vec, 3);
+ * unsigned int a[3] = {5, 6, 7};
+ * insert_uint_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+int insert_uint_vector(UInt *vec, unsigned int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar long or an array of long
+ * values into a vector struct of LInt type.
+ *
+ * /param vec A vector struct of type LInt
+ * /param elements An array or scalar of type long int
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * LInt vec;
+ * init_long_vector(vec, 6);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 2);
+ * push_long_vector(vec, 3);
+ * long int a[3] = {5, 6, 7};
+ * insert_long_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+int insert_long_vector(LInt *vec, long int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar unsigned long or an array of unsigned long
+ * values into a vector struct of ULInt type.
+ *
+ * /param vec A vector struct of type ULInt
+ * /param elements An array or scalar of type unsigned long int
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * ULInt vec;
+ * init_ulong_vector(vec, 6);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 2);
+ * push_ulong_vector(vec, 3);
+ * unsigned long int a[3] = {5, 6, 7};
+ * insert_ulong_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+int insert_ulong_vector(ULInt *vec, unsigned long int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar long long or an array of long long
+ * values into a vector struct of LLInt type.
+ *
+ * /param vec A vector struct of type LLInt
+ * /param elements An array or scalar of type long long int
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * LLInt vec;
+ * init_llong_vector(vec, 6);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 2);
+ * push_llong_vector(vec, 3);
+ * long long int a[3] = {5, 6, 7};
+ * insert_llong_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+int insert_llong_vector(LLInt *vec, long long int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar unsigned long long or an array of unsigned long long
+ * values into a vector struct of ULLInt type.
+ *
+ * /param vec A vector struct of type ULLInt
+ * /param elements An array or scalar of type unsigned long long int
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * ULLInt vec;
+ * init_ullong_vector(vec, 6);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 2);
+ * push_ullong_vector(vec, 3);
+ * unsigned long long int a[3] = {5, 6, 7};
+ * insert_ullong_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+int insert_ullong_vector(ULLInt *vec, unsigned long long int *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar float or an array of float
+ * values into a vector struct of Flt type.
+ *
+ * /param vec A vector struct of type Flt
+ * /param elements An array or scalar of type float
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * Flt vec;
+ * init_float_vector(vec, 6);
+ * push_float_vector(vec, 1);
+ * push_float_vector(vec, 2);
+ * push_float_vector(vec, 3);
+ * float a[3] = {5, 6, 7};
+ * insert_float_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+int insert_float_vector(Flt *vec, float *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar double or an array of double
+ * values into a vector struct of Dble type.
+ *
+ * /param vec A vector struct of type Dble
+ * /param elements An array or scalar of type double
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * Dble vec;
+ * init_double_vector(vec, 6);
+ * push_double_vector(vec, 1);
+ * push_double_vector(vec, 2);
+ * push_double_vector(vec, 3);
+ * double a[3] = {5, 6, 7};
+ * insert_double_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+int insert_double_vector(Dble *vec, double *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar long double or an array of long double
+ * values into a vector struct of LDble type.
+ *
+ * /param vec A vector struct of type LDble
+ * /param elements An array or scalar of type long double
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * LDble vec;
+ * init_ldouble_vector(vec, 6);
+ * push_ldouble_vector(vec, 1);
+ * push_ldouble_vector(vec, 2);
+ * push_ldouble_vector(vec, 3);
+ * long double a[3] = {5, 6, 7};
+ * insert_ldouble_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ 1, 5, 6, 7, 2, 3 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+int insert_ldouble_vector(LDble *vec, long double *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar char or an array of char
+ * values into a vector struct of Char type.
+ *
+ * /param vec A vector struct of type Char
+ * /param elements An array or scalar of type char
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * Char vec;
+ * init_char_vector(vec, 6);
+ * push_char_vector(vec, 'a');
+ * push_char_vector(vec, 'b');
+ * push_char_vector(vec, 'c';
+ * char a[3] = {'x', 'y', 'z'};
+ * insert_ldouble_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ a, x, y, z, b, c ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+int insert_char_vector(Char *vec, char *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar char or an array of char
+ * values into a vector struct of Char type.
+ *
+ * /param vec A vector struct of type Char
+ * /param elements An array or scalar of type char
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * UChar vec;
+ * init_uchar_vector(vec, 6);
+ * push_uchar_vector(vec, 'a');
+ * push_uchar_vector(vec, 'b');
+ * push_uchar_vector(vec, 'c';
+ * char a[3] = {'x', 'y', 'z'};
+ * insert_uchar_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ a, x, y, z, b, c ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+int insert_uchar_vector(UChar *vec, unsigned char *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar char or an array of bool
+ * values into a vector struct of Bool type.
+ *
+ * /param vec A vector struct of type Bool
+ * /param elements An array or scalar of type bool
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * Bool vec;
+ * init_bool_vector(vec, 6);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, false;
+ * char a[3] = {false, false, false};
+ * insert_bool_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ true, false, false, false, true, false ]
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+int insert_bool_vector(Bool *vec, bool *elements, size_t num_indices, size_t index);
+
 #endif /* vector_H */
 // ==========================================================================================
 // ==========================================================================================
