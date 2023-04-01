@@ -42,6 +42,26 @@
  * This file also contains the following macros.
  * - `SWAP()`: Swaps data of any type listed aboved in a single macro.
  *
+ * 2. vector.h
+ * This header file contains functions and macros that can be used to instantiate and execute
+ * a dynamically and statically allocated array.  \b NOTE: The contents of this file can also
+ * be accessed via the data_structure.h file. The vector.h file contains the following functions.
+ *
+ * - `init_char_vector()`: Initializes a dynamically allocated vector of type char.
+ * - `init_uchar_vector()`: Initializes a dynamically allocated vector of type unsigned char.
+ * - `init_short_vector()`: Initializes a dynamically allocated vector of type short int.
+ * - `init_ushort_vector()`: Initializes a dynamically allocated vector of type unsigned short int.
+ * - `init_int_vector()`: Initializes a dynamically allocated vector of type int.
+ * - `init_uint_vector()`: Initializes a dynamically allocated vector of type unsigned int.
+ * - `init_long_vector()`: Initializes a dynamically allocated vector of type long int.
+ * - `init_ulong_vector()`: Initializes a dynamically allocated vector of type unsigned long int.
+ * - `init_llong_vector()`: Initializes a dynamically allocated vector of type long long int.
+ * - `init_ullong_vector()`: Initializes a dynamically allocated vector of type unsigned long long int.
+ * - `init_float_vector()`: Initializes a dynamically allocated vector of type float.
+ * - `init_double_vector()`: Initializes a dynamically allocated vector of type double.
+ * - `init_ldouble_vector()`: Initializes a dynamically allocated vector of type long double
+ * - `init_bool_vector()`: Initializes a dynamically allocated vector of type bool.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

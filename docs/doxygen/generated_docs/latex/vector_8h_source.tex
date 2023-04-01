@@ -1,0 +1,246 @@
+\hypertarget{vector_8h_source}{}\doxysection{vector.\+h}
+\label{vector_8h_source}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vector.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vector.h}}
+\mbox{\hyperlink{vector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00001}00001 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00002}00002 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00003}00003 \textcolor{comment}{// -\/ File:    vector.h}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00004}00004 \textcolor{comment}{// -\/ Purpose: Describe the file purpose here}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00005}00005 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00006}00006 \textcolor{comment}{// Source Metadata}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00007}00007 \textcolor{comment}{// -\/ Author:  Jonathan A. Webb}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00008}00008 \textcolor{comment}{// -\/ Date:    March 31, 2023}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00009}00009 \textcolor{comment}{// -\/ Version: 1.0}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00010}00010 \textcolor{comment}{// -\/ Copyright: Copyright 2022, Jon Webb Inc.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00011}00011 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00012}00012 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00013}00013 \textcolor{comment}{// Include modules here}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00015}00015 \textcolor{preprocessor}{\#ifndef vector\_H}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00016}00016 \textcolor{preprocessor}{\#define vector\_H}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00019}00019 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00021}00021 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{swap_8h}{swap.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00023}00023 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00024}00024 \textcolor{comment}{// SET UP RELEVANT ENUMS}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00025}00025 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00034}\mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{00034}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00036}\mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{00036}}     \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}},}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00037}00037     \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00038}\mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{00038}} \} \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{mem\_type}};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00039}00039 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00056}\mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{00056}} \textcolor{preprocessor}{\#define VECTOR\_STRUCT(type, dtype)                                                  \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00057}00057 \textcolor{preprocessor}{    typedef struct \{type *array; size\_t allocated\_length; size\_t active\_length; mem\_type dat\_type; \} dtype}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00058}00058 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00059}00059 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00060}00060 \textcolor{comment}{// Pre-\/define struct\_vectors}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00062}\mbox{\hyperlink{vector_8h_a22378da9ec8728f3fa5c61c1de5f189e}{00062}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{short}, Short);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00063}\mbox{\hyperlink{vector_8h_af4854ee647c0798e8c429ceb7c5aaa07}{00063}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int}, UShort);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00064}\mbox{\hyperlink{vector_8h_af30edbc3dc0645c433b051bb83875b8b}{00064}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{int}, Int);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00065}\mbox{\hyperlink{vector_8h_af22d1fb58a6f6cdc9d32a164f7e0fee3}{00065}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{unsigned}, UInt);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00066}\mbox{\hyperlink{vector_8h_adf652b76e7a9c0bc0f4d5b42ac3fc970}{00066}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{long}, LInt);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00067}\mbox{\hyperlink{vector_8h_a26c207f46f273005ad443b7c7f0eb73f}{00067}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}, ULInt);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00068}\mbox{\hyperlink{vector_8h_ac3258892fe9cc72193a924b0b0b33435}{00068}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}, LLInt);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00069}\mbox{\hyperlink{vector_8h_a4042fdb2520f2054b912e58401324101}{00069}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int}, ULLInt);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00070}\mbox{\hyperlink{vector_8h_ab22acd5a17b86277a505b475e66982b1}{00070}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{float}, Flt);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00071}\mbox{\hyperlink{vector_8h_a49c25e289c0341b0444dada783c71486}{00071}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{double}, Dble);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00072}\mbox{\hyperlink{vector_8h_a936d8a8d5499976181272eaf89377576}{00072}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}, LDble);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00073}\mbox{\hyperlink{vector_8h_acd7f1c678d05d8616a9121b79688cb52}{00073}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{char}, Char);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00074}\mbox{\hyperlink{vector_8h_abcfe82e05583adb181bf61f603dc91e0}{00074}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}, UChar);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00075}\mbox{\hyperlink{vector_8h_a2543513836c5661ccdd157851a7088b8}{00075}} \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{bool}, Bool);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00076}00076 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00077}00077 \textcolor{comment}{// String struct}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00079}\mbox{\hyperlink{structString}{00079}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00080}00080 \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00081}\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{00081}}     \textcolor{keywordtype}{char} **\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00082}\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{00082}}     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00083}00083 \} \mbox{\hyperlink{structString}{String}};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00084}00084 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00085}00085 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00086}00086 \textcolor{comment}{// INIT\_VECTOR FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00088}00088 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00089}00089 \textcolor{comment}{ * This function initialize a vector struct of type Short to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00090}00090 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00091}00091 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00092}00092 \textcolor{comment}{ * /param vec A Vector struct of type Short}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00093}00093 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00094}00094 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00095}00095 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00096}\mbox{\hyperlink{vector_8h_a749211e8a46a8b2297b3c6ebb78aed0e}{00096}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(Short *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00097}00097 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00099}00099 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00100}00100 \textcolor{comment}{ * This function initialize a vector struct of type UShort to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00101}00101 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00102}00102 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00103}00103 \textcolor{comment}{ * /param vec A Vector struct of type UShort}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00104}00104 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00105}00105 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00106}00106 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00107}\mbox{\hyperlink{vector_8h_aa63398bdb55f97b891b93404a89de14d}{00107}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(UShort *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00108}00108 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00110}00110 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00111}00111 \textcolor{comment}{ * This function initialize a vector struct of type Int to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00112}00112 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00113}00113 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00114}00114 \textcolor{comment}{ * /param vec A Vector struct of type Int}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00115}00115 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00116}00116 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00117}00117 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00118}\mbox{\hyperlink{vector_8h_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{00118}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(Int *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00119}00119 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00121}00121 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00122}00122 \textcolor{comment}{ * This function initialize a vector struct of type UInt to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00123}00123 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00124}00124 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00125}00125 \textcolor{comment}{ * /param vec A Vector struct of type UInt}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00126}00126 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00127}00127 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00128}00128 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00129}\mbox{\hyperlink{vector_8h_a9d8eb1d9ce65365d7b044fe684387a3f}{00129}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(UInt *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00130}00130 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00132}00132 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00133}00133 \textcolor{comment}{ * This function initialize a vector struct of type LInt to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00134}00134 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00135}00135 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00136}00136 \textcolor{comment}{ * /param vec A Vector struct of type LInt}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00137}00137 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00138}00138 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00139}00139 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00140}\mbox{\hyperlink{vector_8h_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{00140}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(LInt *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00141}00141 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00143}00143 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00144}00144 \textcolor{comment}{ * This function initialize a vector struct of type ULInt to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00145}00145 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00146}00146 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00147}00147 \textcolor{comment}{ * /param vec A Vector struct of type ULInt}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00148}00148 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00149}00149 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00150}00150 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00151}\mbox{\hyperlink{vector_8h_af08098b392c0ff01db799bff9c83a521}{00151}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(ULInt *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00152}00152 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00154}00154 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00155}00155 \textcolor{comment}{ * This function initialize a vector struct of type LLInt to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00156}00156 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00157}00157 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00158}00158 \textcolor{comment}{ * /param vec A Vector struct of type LLInt}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00159}00159 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00160}00160 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00161}00161 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00162}\mbox{\hyperlink{vector_8h_a65eda538d3c07a8beb1475c1a214ff67}{00162}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(LLInt *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00163}00163 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00165}00165 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00166}00166 \textcolor{comment}{ * This function initialize a vector struct of type ULLInt to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00167}00167 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00168}00168 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00169}00169 \textcolor{comment}{ * /param vec A Vector struct of type ULLInt}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00170}00170 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00171}00171 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00172}00172 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00173}\mbox{\hyperlink{vector_8h_ab05d31d34c87d8d6cd76f48539bf367f}{00173}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(ULLInt *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00174}00174 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00175}00175 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00176}00176 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00177}00177 \textcolor{comment}{ * This function initialize a vector struct of type Flt to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00178}00178 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00179}00179 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00180}00180 \textcolor{comment}{ * /param vec A Vector struct of type Flt}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00181}00181 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00182}00182 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00183}00183 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00184}\mbox{\hyperlink{vector_8h_a92bba70874a1570bd9c87a2a7385af35}{00184}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(Flt *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00185}00185 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00187}00187 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00188}00188 \textcolor{comment}{ * This function initialize a vector struct of type Dble to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00189}00189 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00190}00190 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00191}00191 \textcolor{comment}{ * /param vec A Vector struct of type Dble}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00192}00192 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00193}00193 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00194}00194 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00195}\mbox{\hyperlink{vector_8h_a2c0735f69da8e40535b5ecceace1a399}{00195}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(Dble *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00196}00196 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00197}00197 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00198}00198 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00199}00199 \textcolor{comment}{ * This function initialize a vector struct of type LDble to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00200}00200 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00201}00201 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00202}00202 \textcolor{comment}{ * /param vec A Vector struct of type LDble}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00203}00203 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00204}00204 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00205}00205 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00206}\mbox{\hyperlink{vector_8h_a79d9f9d1d1cb31d09620bc5cdc73e94e}{00206}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(LDble *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00207}00207 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00209}00209 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00210}00210 \textcolor{comment}{ * This function initialize a vector struct of type Char to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00211}00211 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00212}00212 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00213}00213 \textcolor{comment}{ * /param vec A Vector struct of type Char}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00214}00214 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00215}00215 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00216}00216 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00217}\mbox{\hyperlink{vector_8h_aecde718777430d31ec254f8a4f40cce0}{00217}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(Char *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00218}00218 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00220}00220 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00221}00221 \textcolor{comment}{ * This function initialize a vector struct of type UChar to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00222}00222 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00223}00223 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00224}00224 \textcolor{comment}{ * /param vec A Vector struct of type UChar}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00225}00225 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00226}00226 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00227}00227 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00228}\mbox{\hyperlink{vector_8h_a9289ec52674f95ebf45ac81b70dfdc67}{00228}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(UChar *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00229}00229 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00230}00230 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00231}00231 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00232}00232 \textcolor{comment}{ * This function initialize a vector struct of type Bool to containt a}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00233}00233 \textcolor{comment}{ * dynamically allocated array of length.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00234}00234 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00235}00235 \textcolor{comment}{ * /param vec A Vector struct of type Bool}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00236}00236 \textcolor{comment}{ * /param length The initial guess for the number of indices in the dynamically}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00237}00237 \textcolor{comment}{ *               allocated array.}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00238}00238 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00239}\mbox{\hyperlink{vector_8h_a2e1ea608c0b9b0768ba61facb8df913f}{00239}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(Bool *vec, \textcolor{keywordtype}{size\_t} length);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00240}00240 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00248}\mbox{\hyperlink{vector_8h_ad5c4c9d8676c13f1f381b0b6c1119c4d}{00248}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\mbox{\hyperlink{structString}{String}} *vec);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00249}00249 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00267}\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{00267}} \textcolor{preprocessor}{\#define INIT\_VECTOR(T, length) \_Generic( (T), Short: init\_short\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00268}00268 \textcolor{preprocessor}{                                                   UShort: init\_ushort\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00269}00269 \textcolor{preprocessor}{                                                   Int: init\_int\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00270}00270 \textcolor{preprocessor}{                                                   UInt: init\_uint\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00271}00271 \textcolor{preprocessor}{                                                   LInt: init\_long\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00272}00272 \textcolor{preprocessor}{                                                   ULInt: init\_ulong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00273}00273 \textcolor{preprocessor}{                                                   LLInt: init\_llong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00274}00274 \textcolor{preprocessor}{                                                   ULLInt: init\_ullong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00275}00275 \textcolor{preprocessor}{                                                   Flt: init\_float\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00276}00276 \textcolor{preprocessor}{                                                   Dble: init\_double\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00277}00277 \textcolor{preprocessor}{                                                   LDble: init\_ldouble\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00278}00278 \textcolor{preprocessor}{                                                   Char: init\_char\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00279}00279 \textcolor{preprocessor}{                                                   UChar: init\_uchar\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00280}00280 \textcolor{preprocessor}{                                                   Bool: init\_bool\_vector)(\&T, length)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00281}00281 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00282}00282 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00283}00283 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00284}00284 \textcolor{comment}{// eof}}
+
+\end{DoxyCode}

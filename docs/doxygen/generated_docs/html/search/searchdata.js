@@ -1,27 +1,39 @@
 var indexSectionsWithContent =
 {
-  0: "cms",
-  1: "ms",
-  2: "s",
-  3: "s",
-  4: "c"
+  0: "acdfimsv",
+  1: "s",
+  2: "msv",
+  3: "fisv",
+  4: "a",
+  5: "m",
+  6: "ds",
+  7: "isv",
+  8: "c"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "defines",
-  4: "pages"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "enums",
+  6: "enumvalues",
+  7: "defines",
+  8: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Macros",
-  4: "Pages"
+  1: "Classes",
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Enumerations",
+  6: "Enumerator",
+  7: "Macros",
+  8: "Pages"
 };
 

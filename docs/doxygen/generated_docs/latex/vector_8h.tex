@@ -1,0 +1,367 @@
+\hypertarget{vector_8h}{}\doxysection{/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/vector.h File Reference}
+\label{vector_8h}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vector.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/vector.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}swap.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structString}{String}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\+\_\+\+STRUCT}}(type,  dtype)~ typedef struct \{type $\ast$array; size\+\_\+t allocated\+\_\+length; size\+\_\+t active\+\_\+length; \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{mem\+\_\+type}} dat\+\_\+type; \} dtype
+\item 
+\#define \mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\+\_\+\+VECTOR}}(T,  length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{mem\+\_\+type}} \{ \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}
+, \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector_8h_a22378da9ec8728f3fa5c61c1de5f189e}{VECTOR\+\_\+\+STRUCT}} (short, Short)
+\item 
+\mbox{\hyperlink{vector_8h_af4854ee647c0798e8c429ceb7c5aaa07}{VECTOR\+\_\+\+STRUCT}} (unsigned short int, UShort)
+\item 
+\mbox{\hyperlink{vector_8h_af30edbc3dc0645c433b051bb83875b8b}{VECTOR\+\_\+\+STRUCT}} (int, Int)
+\item 
+\mbox{\hyperlink{vector_8h_af22d1fb58a6f6cdc9d32a164f7e0fee3}{VECTOR\+\_\+\+STRUCT}} (unsigned, UInt)
+\item 
+\mbox{\hyperlink{vector_8h_adf652b76e7a9c0bc0f4d5b42ac3fc970}{VECTOR\+\_\+\+STRUCT}} (long, LInt)
+\item 
+\mbox{\hyperlink{vector_8h_a26c207f46f273005ad443b7c7f0eb73f}{VECTOR\+\_\+\+STRUCT}} (unsigned long int, ULInt)
+\item 
+\mbox{\hyperlink{vector_8h_ac3258892fe9cc72193a924b0b0b33435}{VECTOR\+\_\+\+STRUCT}} (long long int, LLInt)
+\item 
+\mbox{\hyperlink{vector_8h_a4042fdb2520f2054b912e58401324101}{VECTOR\+\_\+\+STRUCT}} (unsigned long long int, ULLInt)
+\item 
+\mbox{\hyperlink{vector_8h_ab22acd5a17b86277a505b475e66982b1}{VECTOR\+\_\+\+STRUCT}} (float, Flt)
+\item 
+\mbox{\hyperlink{vector_8h_a49c25e289c0341b0444dada783c71486}{VECTOR\+\_\+\+STRUCT}} (double, Dble)
+\item 
+\mbox{\hyperlink{vector_8h_a936d8a8d5499976181272eaf89377576}{VECTOR\+\_\+\+STRUCT}} (long double, LDble)
+\item 
+\mbox{\hyperlink{vector_8h_acd7f1c678d05d8616a9121b79688cb52}{VECTOR\+\_\+\+STRUCT}} (char, Char)
+\item 
+\mbox{\hyperlink{vector_8h_abcfe82e05583adb181bf61f603dc91e0}{VECTOR\+\_\+\+STRUCT}} (unsigned char, UChar)
+\item 
+\mbox{\hyperlink{vector_8h_a2543513836c5661ccdd157851a7088b8}{VECTOR\+\_\+\+STRUCT}} (bool, Bool)
+\item 
+int \mbox{\hyperlink{vector_8h_a749211e8a46a8b2297b3c6ebb78aed0e}{init\+\_\+short\+\_\+vector}} (Short $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_aa63398bdb55f97b891b93404a89de14d}{init\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\+\_\+int\+\_\+vector}} (Int $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a9d8eb1d9ce65365d7b044fe684387a3f}{init\+\_\+uint\+\_\+vector}} (UInt $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\+\_\+long\+\_\+vector}} (LInt $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_af08098b392c0ff01db799bff9c83a521}{init\+\_\+ulong\+\_\+vector}} (ULInt $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a65eda538d3c07a8beb1475c1a214ff67}{init\+\_\+llong\+\_\+vector}} (LLInt $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_ab05d31d34c87d8d6cd76f48539bf367f}{init\+\_\+ullong\+\_\+vector}} (ULLInt $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a92bba70874a1570bd9c87a2a7385af35}{init\+\_\+float\+\_\+vector}} (Flt $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a2c0735f69da8e40535b5ecceace1a399}{init\+\_\+double\+\_\+vector}} (Dble $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_aecde718777430d31ec254f8a4f40cce0}{init\+\_\+char\+\_\+vector}} (Char $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a9289ec52674f95ebf45ac81b70dfdc67}{init\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_a2e1ea608c0b9b0768ba61facb8df913f}{init\+\_\+bool\+\_\+vector}} (Bool $\ast$vec, size\+\_\+t length)
+\item 
+int \mbox{\hyperlink{vector_8h_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structString}{String}} $\ast$vec)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vector_8h_a78b085b69ede6314aedfc346b480a078}\label{vector_8h_a78b085b69ede6314aedfc346b480a078}} 
+\index{vector.h@{vector.h}!INIT\_VECTOR@{INIT\_VECTOR}}
+\index{INIT\_VECTOR@{INIT\_VECTOR}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{INIT\_VECTOR}{INIT\_VECTOR}}
+{\footnotesize\ttfamily \#define INIT\+\_\+\+VECTOR(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{length }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   \_Generic( (T), Short: \mbox{\hyperlink{vector_8h_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UShort: \mbox{\hyperlink{vector_8h_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Int: \mbox{\hyperlink{vector_8h_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UInt: \mbox{\hyperlink{vector_8h_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LInt: \mbox{\hyperlink{vector_8h_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   ULInt: \mbox{\hyperlink{vector_8h_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LLInt: \mbox{\hyperlink{vector_8h_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   ULLInt: \mbox{\hyperlink{vector_8h_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Flt: \mbox{\hyperlink{vector_8h_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Dble: \mbox{\hyperlink{vector_8h_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LDble: \mbox{\hyperlink{vector_8h_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Char: \mbox{\hyperlink{vector_8h_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UChar: \mbox{\hyperlink{vector_8h_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Bool: \mbox{\hyperlink{vector_8h_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}})(\&T, length)}
+
+\end{DoxyCode}
+This macro will allocate memory for an array and assign that memory to the array pointer variable in a struct. The macro will also assign the number of allocated indices to allocated\+\_\+length and assign active\+\_\+length a size of 0. This function requires the input of a struct instantiated with the VECTOR\+\_\+\+STRUCT method.
+
+/param vec A vector instantiated with the VECTOR\+\_\+\+STRUCT macro. /length The length of the array as a size\+\_\+t variable
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Initialize a dynamically allocated Integer vector with 0 indices}}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 20)}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8h_source_l00267}{267}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
+
+\mbox{\Hypertarget{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}\label{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT}{VECTOR\_STRUCT}}
+{\footnotesize\ttfamily \#define VECTOR\+\_\+\+STRUCT(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{dtype }\end{DoxyParamCaption})~ typedef struct \{type $\ast$array; size\+\_\+t allocated\+\_\+length; size\+\_\+t active\+\_\+length; \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{mem\+\_\+type}} dat\+\_\+type; \} dtype}
+
+This macro will produce a struct that is specifically designed to track all attributes necessary for the maintenance of a dynamically, or statically allocated array. The macro has an attribute to a pointer for the array, allocated\+\_\+length, active\+\_\+length, and mem\+\_\+type.
+
+/param type The data type that will be assigned to the array pointer /param dtype The name to be given to the typedef for the struct
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// code to create a struct of type IntVector}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}{VECTOR\_STRUCT}}(\textcolor{keywordtype}{float}, IntVector)}
+\DoxyCodeLine{IntVector vec;}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8h_source_l00056}{56}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{vector_8h_ad756268621f03e4812b68792b291fff5}\label{vector_8h_ad756268621f03e4812b68792b291fff5}} 
+\index{vector.h@{vector.h}!mem\_type@{mem\_type}}
+\index{mem\_type@{mem\_type}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{mem\_type}{mem\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{mem\+\_\+type}}}
+
+A collection of human readable integer representations that describe how memory is allocated to a vector or array
+
+
+\begin{DoxyParams}{Parameters}
+{\em DYNAMIC} & An integer representing dynamic memory allocation on the heap \\
+\hline
+{\em STATIC} & An integer representing static memory allocation on the stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DYNAMIC@{DYNAMIC}!vector.h@{vector.h}}\index{vector.h@{vector.h}!DYNAMIC@{DYNAMIC}}}\mbox{\Hypertarget{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}\label{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}} 
+DYNAMIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATIC@{STATIC}!vector.h@{vector.h}}\index{vector.h@{vector.h}!STATIC@{STATIC}}}\mbox{\Hypertarget{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}\label{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}} 
+STATIC&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{vector_8h_source_l00034}{34}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}},}
+\DoxyCodeLine{00037     \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}}
+\DoxyCodeLine{00038 \} \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5}{mem\_type}};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vector_8h_a2e1ea608c0b9b0768ba61facb8df913f}\label{vector_8h_a2e1ea608c0b9b0768ba61facb8df913f}} 
+\index{vector.h@{vector.h}!init\_bool\_vector@{init\_bool\_vector}}
+\index{init\_bool\_vector@{init\_bool\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_bool\_vector()}{init\_bool\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+bool\+\_\+vector (\begin{DoxyParamCaption}\item[{Bool $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_aecde718777430d31ec254f8a4f40cce0}\label{vector_8h_aecde718777430d31ec254f8a4f40cce0}} 
+\index{vector.h@{vector.h}!init\_char\_vector@{init\_char\_vector}}
+\index{init\_char\_vector@{init\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_char\_vector()}{init\_char\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a2c0735f69da8e40535b5ecceace1a399}\label{vector_8h_a2c0735f69da8e40535b5ecceace1a399}} 
+\index{vector.h@{vector.h}!init\_double\_vector@{init\_double\_vector}}
+\index{init\_double\_vector@{init\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_double\_vector()}{init\_double\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a92bba70874a1570bd9c87a2a7385af35}\label{vector_8h_a92bba70874a1570bd9c87a2a7385af35}} 
+\index{vector.h@{vector.h}!init\_float\_vector@{init\_float\_vector}}
+\index{init\_float\_vector@{init\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_float\_vector()}{init\_float\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}\label{vector_8h_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}} 
+\index{vector.h@{vector.h}!init\_int\_vector@{init\_int\_vector}}
+\index{init\_int\_vector@{init\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_int\_vector()}{init\_int\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a79d9f9d1d1cb31d09620bc5cdc73e94e}\label{vector_8h_a79d9f9d1d1cb31d09620bc5cdc73e94e}} 
+\index{vector.h@{vector.h}!init\_ldouble\_vector@{init\_ldouble\_vector}}
+\index{init\_ldouble\_vector@{init\_ldouble\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_ldouble\_vector()}{init\_ldouble\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a65eda538d3c07a8beb1475c1a214ff67}\label{vector_8h_a65eda538d3c07a8beb1475c1a214ff67}} 
+\index{vector.h@{vector.h}!init\_llong\_vector@{init\_llong\_vector}}
+\index{init\_llong\_vector@{init\_llong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_llong\_vector()}{init\_llong\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+llong\+\_\+vector (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}\label{vector_8h_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}} 
+\index{vector.h@{vector.h}!init\_long\_vector@{init\_long\_vector}}
+\index{init\_long\_vector@{init\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_long\_vector()}{init\_long\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a749211e8a46a8b2297b3c6ebb78aed0e}\label{vector_8h_a749211e8a46a8b2297b3c6ebb78aed0e}} 
+\index{vector.h@{vector.h}!init\_short\_vector@{init\_short\_vector}}
+\index{init\_short\_vector@{init\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_short\_vector()}{init\_short\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_ad5c4c9d8676c13f1f381b0b6c1119c4d}\label{vector_8h_ad5c4c9d8676c13f1f381b0b6c1119c4d}} 
+\index{vector.h@{vector.h}!init\_string\_vector@{init\_string\_vector}}
+\index{init\_string\_vector@{init\_string\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_string\_vector()}{init\_string\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structString}{String}} $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function initializes a vector struct of type \mbox{\hyperlink{structString}{String}} to contain a dynamically allocated array of strings.
+
+/param vec A Vector struct of type \mbox{\hyperlink{structString}{String}} \mbox{\Hypertarget{vector_8h_a9289ec52674f95ebf45ac81b70dfdc67}\label{vector_8h_a9289ec52674f95ebf45ac81b70dfdc67}} 
+\index{vector.h@{vector.h}!init\_uchar\_vector@{init\_uchar\_vector}}
+\index{init\_uchar\_vector@{init\_uchar\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_uchar\_vector()}{init\_uchar\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a9d8eb1d9ce65365d7b044fe684387a3f}\label{vector_8h_a9d8eb1d9ce65365d7b044fe684387a3f}} 
+\index{vector.h@{vector.h}!init\_uint\_vector@{init\_uint\_vector}}
+\index{init\_uint\_vector@{init\_uint\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_uint\_vector()}{init\_uint\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+uint\+\_\+vector (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_ab05d31d34c87d8d6cd76f48539bf367f}\label{vector_8h_ab05d31d34c87d8d6cd76f48539bf367f}} 
+\index{vector.h@{vector.h}!init\_ullong\_vector@{init\_ullong\_vector}}
+\index{init\_ullong\_vector@{init\_ullong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_ullong\_vector()}{init\_ullong\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+ullong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_af08098b392c0ff01db799bff9c83a521}\label{vector_8h_af08098b392c0ff01db799bff9c83a521}} 
+\index{vector.h@{vector.h}!init\_ulong\_vector@{init\_ulong\_vector}}
+\index{init\_ulong\_vector@{init\_ulong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_ulong\_vector()}{init\_ulong\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+ulong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_aa63398bdb55f97b891b93404a89de14d}\label{vector_8h_aa63398bdb55f97b891b93404a89de14d}} 
+\index{vector.h@{vector.h}!init\_ushort\_vector@{init\_ushort\_vector}}
+\index{init\_ushort\_vector@{init\_ushort\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{init\_ushort\_vector()}{init\_ushort\_vector()}}
+{\footnotesize\ttfamily int init\+\_\+ushort\+\_\+vector (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a2543513836c5661ccdd157851a7088b8}\label{vector_8h_a2543513836c5661ccdd157851a7088b8}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{bool}]{,  }\item[{Bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_acd7f1c678d05d8616a9121b79688cb52}\label{vector_8h_acd7f1c678d05d8616a9121b79688cb52}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{char}]{,  }\item[{Char}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a49c25e289c0341b0444dada783c71486}\label{vector_8h_a49c25e289c0341b0444dada783c71486}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [3/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{double}]{,  }\item[{Dble}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_ab22acd5a17b86277a505b475e66982b1}\label{vector_8h_ab22acd5a17b86277a505b475e66982b1}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [4/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{Flt}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_af30edbc3dc0645c433b051bb83875b8b}\label{vector_8h_af30edbc3dc0645c433b051bb83875b8b}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [5/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{Int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a936d8a8d5499976181272eaf89377576}\label{vector_8h_a936d8a8d5499976181272eaf89377576}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [6/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{long double}]{,  }\item[{LDble}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_ac3258892fe9cc72193a924b0b0b33435}\label{vector_8h_ac3258892fe9cc72193a924b0b0b33435}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [7/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{long long int}]{,  }\item[{LLInt}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_adf652b76e7a9c0bc0f4d5b42ac3fc970}\label{vector_8h_adf652b76e7a9c0bc0f4d5b42ac3fc970}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [8/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{long}]{,  }\item[{LInt}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a22378da9ec8728f3fa5c61c1de5f189e}\label{vector_8h_a22378da9ec8728f3fa5c61c1de5f189e}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [9/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{short}]{,  }\item[{Short}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_abcfe82e05583adb181bf61f603dc91e0}\label{vector_8h_abcfe82e05583adb181bf61f603dc91e0}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [10/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{unsigned char}]{,  }\item[{UChar}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a26c207f46f273005ad443b7c7f0eb73f}\label{vector_8h_a26c207f46f273005ad443b7c7f0eb73f}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [11/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{unsigned long int}]{,  }\item[{ULInt}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_a4042fdb2520f2054b912e58401324101}\label{vector_8h_a4042fdb2520f2054b912e58401324101}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [12/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{unsigned long long int}]{,  }\item[{ULLInt}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_af4854ee647c0798e8c429ceb7c5aaa07}\label{vector_8h_af4854ee647c0798e8c429ceb7c5aaa07}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [13/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{unsigned short int}]{,  }\item[{UShort}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vector_8h_af22d1fb58a6f6cdc9d32a164f7e0fee3}\label{vector_8h_af22d1fb58a6f6cdc9d32a164f7e0fee3}} 
+\index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
+\index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{VECTOR\_STRUCT()}{VECTOR\_STRUCT()}\hspace{0.1cm}{\footnotesize\ttfamily [14/14]}}
+{\footnotesize\ttfamily VECTOR\+\_\+\+STRUCT (\begin{DoxyParamCaption}\item[{unsigned}]{,  }\item[{UInt}]{ }\end{DoxyParamCaption})}
+

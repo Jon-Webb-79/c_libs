@@ -30,10 +30,10 @@ In order to download this repository from github, follow these instructions
 1. Ensure you have .git installed on your computer
 2. Ensure you have CMake version 3.22.2 or later versions installed on your computer
 3. Ensure have a clang 14.0.0 or gcc 12.2.1 compiler or later version installed on your computer
-3. Open a terminal (Bash, zsh, Linux, or DOS) and type ``close https://github.com/Jon-Webb-79/Project_Name.git project_name``
-4. Install as a library with the command ``xxxx``
+4. Open a terminal (Bash, zsh, Linux, or DOS) and type ``close https://github.com/Jon-Webb-79/Project_Name.git project_name``
+5. Install as a library with the command ``xxxx``
 
 Library Functions and Macros
 ############################
-The functions and macros within this `library <docs/doxygen/generated_docs/html/index.html>`_
+The functions and macros within this library `<docs/doxygen/generated_docs/html/index.html>`_
 are described with implmentation examples.
