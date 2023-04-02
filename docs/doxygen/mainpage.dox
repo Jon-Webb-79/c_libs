@@ -127,6 +127,26 @@
  * - `reverse_bool_vector()`: Function to reverse the order of a bool vector or array.
  * - `reverse_string_vector()`: Function to reverse the order of a string vector or array.
  *
+ * - `sort_char_vector()`: Function to sort a char vector or array in forward or reverse direction.
+ * - `sort_uchar_vector()`: Function to sort an unsigned char vector or array in forward or reverse direction.
+ * - `sort_short_vector()`: Function to sort a short vector or array in forward or reverse direction.
+ * - `sort_ushort_vector()`: Function to sort an unsigned short vector or array in forward or reverse direction.
+ * - `sort_char_vector()`: Function to sort a char vector or array in forward or reverse direction.
+ * - `sort_uchar_vector()`: Function to sort an unsigned char vector or array in forward or reverse direction.
+ * - `sort_short_vector()`: Function to sort a short vector or array in forward or reverse direction.
+ * - `sort_ushort_vector()`: Function to sort an unsigned short vector or array in forward or reverse direction.
+ * - `sort_int_vector()`: Function to sort an integer vector or array in forward or reverse direction.
+ * - `sort_uint_vector()`: Function to sort an integer vector or array in forward or reverse direction.
+ * - `sort_long_vector()`: Function to sort a long integer vector or array in forward or reverse direction.
+ * - `sort_ulong_vector()`: Function to sort an unsigned long integer vector or array in forward or reverse direction.
+ * - `sort_llong_vector()`: Function to sort a long long integer vector or array in forward or reverse directions.
+ * - `sort_ullong_vector()`: Function to sort an unsigned long long vector or array in forward or reverse direction.
+ * - `sort_float_vector()`: Function to sort a float vector or array in forward or reverse direction.
+ * - `sort_double_vector()`: Function to sort a double vector or array in forward or reverse direction.
+ * - `sort_ldouble_vector()`: Function to sort a long double vector or array in forward or reverse direction.
+ * - `sort_bool_vector()`: Function to sort a bool vector or array in forward or reverse direction.
+ * - `sort_string_vector()`: Function to sort a string vector or array in forward or reverse direction.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

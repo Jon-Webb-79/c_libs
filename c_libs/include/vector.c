@@ -1314,7 +1314,7 @@ int pop_short_vector_index(Short *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_ushort_vector_index(UShort *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1327,7 +1327,7 @@ int pop_ushort_vector_index(UShort *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_int_vector_index(Int *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1340,7 +1340,7 @@ int pop_int_vector_index(Int *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_uint_vector_index(UInt *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1353,7 +1353,7 @@ int pop_uint_vector_index(UInt *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_long_vector_index(LInt *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1366,7 +1366,7 @@ int pop_long_vector_index(LInt *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_ulong_vector_index(ULInt *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1379,7 +1379,7 @@ int pop_ulong_vector_index(ULInt *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_llong_vector_index(LLInt *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1392,7 +1392,7 @@ int pop_llong_vector_index(LLInt *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_ullong_vector_index(ULLInt *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1405,7 +1405,7 @@ int pop_ullong_vector_index(ULLInt *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_float_vector_index(Flt *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1418,7 +1418,7 @@ int pop_float_vector_index(Flt *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_double_vector_index(Dble *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1431,7 +1431,7 @@ int pop_double_vector_index(Dble *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_ldouble_vector_index(LDble *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1444,20 +1444,32 @@ int pop_ldouble_vector_index(LDble *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_char_vector_index(Char *vec, size_t index) {
 	if (index >= vec->active_length) {
 		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
 		return -1;
 	}
-	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(char);
+	char *dst = (char *)vec->array + index * sizeof(char);
 	memmove(dst, dst + sizeof(char), sizeof(char) * (vec->active_length - index - 1));
 	vec->array[vec->active_length - 1] = 0;
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+int pop_uchar_vector_index(UChar *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(unsigned char);
+	memmove(dst, dst + sizeof(char), sizeof(char) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// ------------------------------------------------------------------------------------------
 
 int pop_bool_vector_index(Bool *vec, size_t index) {
 	if (index >= vec->active_length) {
@@ -1470,7 +1482,7 @@ int pop_bool_vector_index(Bool *vec, size_t index) {
 	vec->active_length -= 1;
 	return 1;
 }
-// --------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
 int pop_string_vector_index(String *vec, size_t index) {
 	if (index + 1 > vec->active_length) {
@@ -2201,6 +2213,550 @@ void reverse_string_vector(String *vec) {
 		++start;
 		--end;
 	}
+}
+// ==========================================================================================
+// ==========================================================================================
+// SORT_TYPE VEC FUNCTIONS
+
+size_t partition_short_vec(short int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    short int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			short int *a = &arr[i];
+			short int *b = &arr[j];
+			short int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			short int *a = &arr[low];
+			short int *b = &arr[j];
+			short int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_short_vector(Short *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_short_vec(vec->array, low, high, order);
+		sort_short_vector(vec, low, pivot - 1, order);
+		sort_short_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_ushort_vec(unsigned short int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    unsigned short int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			unsigned short int *a = &arr[i];
+			unsigned short int *b = &arr[j];
+			unsigned short int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			unsigned short int *a = &arr[low];
+			unsigned short int *b = &arr[j];
+			unsigned short int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_ushort_vector(UShort *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_ushort_vec(vec->array, low, high, order);
+		sort_ushort_vector(vec, low, pivot - 1, order);
+		sort_ushort_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_int_vec(int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > high && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			int *a = &arr[i];
+			int *b = &arr[j];
+			int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			int *a = &arr[low];
+			int *b = &arr[j];
+			int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_int_vector(Int *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_int_vec(vec->array, low, high, order);
+		sort_int_vector(vec, low, pivot - 1, order);
+		sort_int_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_uint_vec(unsigned int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    unsigned int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			unsigned int *a = &arr[i];
+			unsigned int *b = &arr[j];
+			unsigned int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			unsigned int *a = &arr[low];
+			unsigned int *b = &arr[j];
+			unsigned int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_uint_vector(UInt *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_uint_vec(vec->array, low, high, order);
+		sort_uint_vector(vec, low, pivot - 1, order);
+		sort_uint_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_long_vec(long int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    long int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			long int *a = &arr[i];
+			long int *b = &arr[j];
+			long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			long int *a = &arr[low];
+			long int *b = &arr[j];
+			long int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_long_vector(LInt *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_long_vec(vec->array, low, high, order);
+		sort_long_vector(vec, low, pivot - 1, order);
+		sort_long_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_ulong_vec(unsigned long int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    unsigned long int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			unsigned long int *a = &arr[i];
+			unsigned long int *b = &arr[j];
+			unsigned long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			unsigned long int *a = &arr[low];
+			unsigned long int *b = &arr[j];
+			unsigned long int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_ulong_vector(ULInt *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_ulong_vec(vec->array, low, high, order);
+		sort_ulong_vector(vec, low, pivot - 1, order);
+		sort_ulong_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_llong_vec(long long int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    long long int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			long long int *a = &arr[i];
+			long long int *b = &arr[j];
+			long long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			long long int *a = &arr[low];
+			long long int *b = &arr[j];
+			long long int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_llong_vector(LLInt *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_llong_vec(vec->array, low, high, order);
+		sort_llong_vector(vec, low, pivot - 1, order);
+		sort_llong_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_ullong_vec(unsigned long long int *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    unsigned long long int pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			unsigned long long int *a = &arr[i];
+			unsigned long long int *b = &arr[j];
+			unsigned long long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			unsigned long long int *a = &arr[low];
+			unsigned long long int *b = &arr[j];
+			unsigned long long int temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_ullong_vector(ULLInt *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_ullong_vec(vec->array, low, high, order);
+		sort_ullong_vector(vec, low, pivot - 1, order);
+		sort_ullong_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_float_vec(float *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    float pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			float *a = &arr[i];
+			float *b = &arr[j];
+			float temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			float *a = &arr[low];
+			float *b = &arr[j];
+			float temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_float_vector(Flt *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_float_vec(vec->array, low, high, order);
+		sort_float_vector(vec, low, pivot - 1, order);
+		sort_float_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_double_vec(double *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    double pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			double *a = &arr[i];
+			double *b = &arr[j];
+			double temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			double *a = &arr[low];
+			double *b = &arr[j];
+			double temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_double_vector(Dble *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_double_vec(vec->array, low, high, order);
+		sort_double_vector(vec, low, pivot - 1, order);
+		sort_double_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_ldouble_vec(long double *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    long double pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			long double *a = &arr[i];
+			long double *b = &arr[j];
+			long double temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			long double *a = &arr[low];
+			long double *b = &arr[j];
+			long double temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_ldouble_vector(LDble *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_ldouble_vec(vec->array, low, high, order);
+		sort_ldouble_vector(vec, low, pivot - 1, order);
+		sort_ldouble_vector(vec, pivot + 1, high, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+size_t partition_char_vec(char *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    char pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			char *a = &arr[i];
+			char *b = &arr[j];
+			char temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			char *a = &arr[low];
+			char *b = &arr[j];
+			char temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_char_vector(Char *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_char_vec(vec->array, low, high, order);
+		sort_char_vector(vec, low, pivot - 1, order);
+		sort_char_vector(vec, pivot + 1, high, order);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+size_t partition_uchar_vec(unsigned char *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    unsigned char pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			unsigned char *a = &arr[i];
+			unsigned char *b = &arr[j];
+			unsigned char temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			unsigned char *a = &arr[low];
+			unsigned char *b = &arr[j];
+			unsigned char temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_uchar_vector(UChar *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_uchar_vec(vec->array, low, high, order);
+		sort_uchar_vector(vec, low, pivot - 1, order);
+		sort_uchar_vector(vec, pivot + 1, high, order);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+static int forward_comparator(const void* str1, const void* str2) {
+	if (strcmp(*(const char**) str1, *(const char**)str2) >=0)
+		return 1;
+	else
+		return 0;
+}
+
+static int reverse_comparator(const void* str1, const void* str2) {
+	if (strcmp(*(const char**) str1, *(const char**)str2) <=0)
+		return 1;
+	else
+		return 0;
+}
+
+void sort_string_vector(String *vec, size_t low, size_t high, sort_order order) {
+	if (order == FORWARD)
+		qsort(vec->array, vec->active_length, sizeof(const char*), forward_comparator);
+	else
+		qsort(vec->array, vec->active_length, sizeof(const char*), reverse_comparator);
 }
 // ==========================================================================================
 // ==========================================================================================

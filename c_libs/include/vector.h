@@ -41,6 +41,17 @@ typedef enum
 // ==========================================================================================
 
 /**
+ * A collection of human readable integer representations that describe
+ * whether an array is to be sorted in the forward or reverse direction
+ */
+typedef enum
+{
+	FORWARD,
+	REVERSE
+} sort_order;
+// ==========================================================================================
+
+/**
  * This macro will produce a struct that is specifically designed to track all
  * attributes necessary for the maintenance of a dynamically, or statically allocated
  * array.  The macro has an attribute to a pointer for the array, allocated_length,
@@ -2917,6 +2928,602 @@ void reverse_bool_vector(Bool *vec);
  * @endcode
  */
 void reverse_string_vector(String *vec);
+// ==========================================================================================
+// ==========================================================================================
+// SORT_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will sort a vector data structure of type Int8 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Int8
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Int8 vec;
+ * init_int8_vector(vec, 5);
+ * int8_t a[5] = {4, 2, 1, 3, 5};
+ * insert_int8_vector(&vec, a, 5, 0);
+ * sort_int8_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_int8_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_int8_vector(&vec);
+ * @endcode
+ */
+void sort_int8_vector(Int8 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type UInt8 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UInt8
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UInt8 vec;
+ * init_uint8_vector(vec, 5);
+ * uint8_t a[5] = {4, 2, 1, 3, 5};
+ * insert_uint8_vector(&vec, a, 5, 0);
+ * sort_uint8_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_uint8_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_uint8_vector(&vec);
+ * @endcode
+ */
+void sort_uint8_vector(UInt8 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Int16 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Int16
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Int16 vec;
+ * init_int16_vector(vec, 5);
+ * int16_t a[5] = {4, 2, 1, 3, 5};
+ * insert_int16_vector(&vec, a, 5, 0);
+ * sort_int16_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_int16_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_int16_vector(&vec);
+ * @endcode
+ */
+void sort_int16_vector(Int16 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type UInt16 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UInt16
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UInt16 vec;
+ * init_uint16_vector(vec, 5);
+ * uint16_t a[5] = {4, 2, 1, 3, 5};
+ * insert_uint16_vector(&vec, a, 5, 0);
+ * sort_uint16_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_uint16_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_uint16_vector(&vec);
+ * @endcode
+ */
+void sort_uint16_vector(UInt16 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Int32 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Int32
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Int32 vec;
+ * init_int32_vector(vec, 5);
+ * int32_t a[5] = {4, 2, 1, 3, 5};
+ * insert_int32_vector(&vec, a, 5, 0);
+ * sort_int32_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_int32_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_int32_vector(&vec);
+ * @endcode
+ */
+void sort_int32_vector(Int32 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type UInt32 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UInt32
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UInt32 vec;
+ * init_uint32_vector(vec, 5);
+ * uint32_t a[5] = {4, 2, 1, 3, 5};
+ * insert_uint32_vector(&vec, a, 5, 0);
+ * sort_uint32_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_uint32_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_uint32_vector(&vec);
+ * @endcode
+ */
+void sort_uint32_vector(UInt32 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Int64 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Int64
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Int64 vec;
+ * init_int64_vector(vec, 5);
+ * int64_t a[5] = {4, 2, 1, 3, 5};
+ * insert_int64_vector(&vec, a, 5, 0);
+ * sort_int64_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_int64_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_int64_vector(&vec);
+ * @endcode
+ */
+void sort_int64_vector(Int64 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type UInt64 in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UInt64
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UInt64 vec;
+ * init_uint64_vector(vec, 5);
+ * uint64_t a[5] = {4, 2, 1, 3, 5};
+ * insert_uint64_vector(&vec, a, 5, 0);
+ * sort_uint64_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_uint64_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_uint64_vector(&vec);
+ * @endcode
+ */
+void sort_uint64_vector(UInt64 *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Short in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Short
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(vec, 5);
+ * short int a[5] = {4, 2, 1, 3, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * sort_short_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_short_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+void sort_short_vector(Short *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type UShort in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UShort
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(vec, 5);
+ * unsigned short int a[5] = {4, 2, 1, 3, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * sort_ushort_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_ushort_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+void sort_ushort_vector(UShort *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Int in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Int
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(vec, 5);
+ * int a[5] = {4, 2, 1, 3, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * sort_int_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_int_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+void sort_int_vector(Int *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type UInt in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UInt
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(vec, 5);
+ * unsigned int a[5] = {4, 2, 1, 3, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * sort_uint_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_uint_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+void sort_uint_vector(UInt *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type LInt in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type LInt
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(vec, 5);
+ * long int a[5] = {4, 2, 1, 3, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * sort_long_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_long_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+void sort_long_vector(LInt *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type ULInt in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type ULInt
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(vec, 5);
+ * unsigned long int a[5] = {4, 2, 1, 3, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * sort_ulong_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_ulong_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+void sort_ulong_vector(ULInt *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type LLInt in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type LLInt
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 5);
+ * long long int a[5] = {4, 2, 1, 3, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * sort_llong_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_llong_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+void sort_llong_vector(LLInt *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type ULLInt in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type ULLInt
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(vec, 5);
+ * unsigned long long int a[5] = {4, 2, 1, 3, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * sort_ullong_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_ullong_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+void sort_ullong_vector(ULLInt *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Flt in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Flt
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(vec, 5);
+ * float a[5] = {4., 2., 1., 3., 5.};
+ * insert_float_vector(&vec, a, 5, 0);
+ * sort_float_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1., 2., 3., 4., 5. ]
+ * sort_float_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5., 4., 3., 2., 1. ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+void sort_float_vector(Flt *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Dble in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Dble
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(vec, 5);
+ * double a[5] = {4., 2., 1., 3., 5.};
+ * insert_double_vector(&vec, a, 5, 0);
+ * sort_double_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1., 2., 3., 4., 5. ]
+ * sort_double_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5., 4., 3., 2., 1. ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+void sort_double_vector(Dble *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type LDble in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type LDble
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(vec, 5);
+ * long double a[5] = {4., 2., 1., 3., 5.};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * sort_ldouble_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ 1., 2., 3., 4., 5. ]
+ * sort_ldouble_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ 5., 4., 3., 2., 1. ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+void sort_ldouble_vector(LDble *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Char in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Char
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(vec, 5);
+ * char a[5] = {'e', 'b', 'a', 'c', 'e'};
+ * insert_char_vector(&vec, a, 5, 0);
+ * sort_char_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ a, b, c, d, e ]
+ * sort_ldouble_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ e, d, c, b, a ]
+ * free_char_vector(&vec);
+ * FREE(vec);
+ * @endcode
+ */
+void sort_char_vector(Char *vec, size_t low, size_t high, sort_order order);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Char in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type UChar
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(vec, 5);
+ * unsigned char a[5] = {'e', 'b', 'a', 'c', 'e'};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * sort_uchar_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ a, b, c, d, e ]
+ * sort_uchar_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ e, d, c, b, a ]
+ * free_uchar_vector(&vec);
+ * FREE(vec);
+ * @endcode
+ */
+void sort_uchar_vector(UChar *vec, size_t low, size_t high, sort_order order);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector structure of type String in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type String
+ * /param low the lowest indice for parittioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * String vec;
+ * init_string_vector(vec);
+ * push_string_vector(&vec, "Xylaphone", 0);
+ * push_string_vector(&vec, "Apple", 1);
+ * push_string_vector(&vec, "Cucumber", 2);
+ * push_string_vector(&vec, "Banana", 3);
+ * sort_string_vector(&vec, 0, vec.active_length, FORWARD);
+ * PRINT(vec);
+ * [ Apple, Banana, Cucumber, Xylaphone ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+void sort_string_vector(String *vec, size_t low, size_t high, sort_order order);
 // ==========================================================================================
 // ==========================================================================================
 // eof
