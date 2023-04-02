@@ -175,6 +175,34 @@
  * - `cumsum_double_vector()`: Function to determine the cumulative sum of a double vector or array.
  * - `cumsum_ldouble_vetor()`: Function to determine the cumulative sum of a long double vector or array.
  *
+ * - `average_char_vector()`: Function to determine the average value of a char vector or array.
+ * - `average_uchar_vector()`: Function to determine the average value of an unsigned char vector or array.
+ * - `average_short_vector()`: Function to determine the average value of a short integer vector or array.
+ * - `average_ushort_vector()`: Function to determine the average value of an unsigned short vector or array.
+ * - `average_int_vector()`: Function to determine the average value of an integer vector or array.
+ * - `average_uint_vector()`: Function to determine the average value of an unsigned integer vector or array.
+ * - `average_long_vector()`: Function to determine the average value of a long integer vector or array.
+ * - `average_ulong_vector()`: Function to determine the average value of an unsigned long vector.
+ * - `average_llong_vector()`: Function to determine the average value of a long long vector or array.
+ * - `average_ullong_vector()`: Function to determine the average value of an unsigned long long vector or array.
+ * - `average_float_vector()`: Function to determine the average value of a float vector or array.
+ * - `average_double_vector()`: Function to determine the average value of a double vector or array.
+ * - `average_ldouble_vector()`: Function to determine the average value of a long double vector or array.
+ *
+ * - `stdev_char_vector()`: Function to determine the standard deviation of a char vector or array.
+ * - `stdev_uchar_vector()`: Function to determine the standard deviation of an unsigned char vector or array.
+ * - `stdev_short_vector()`: Function to determine the standard deviation of a short integer vector or array.
+ * - `stdev_ushort_vector()`: Function to determine the standard deviation of an unsigned short integer vector or array.
+ * - `stdev_int_vector()`: Function to determine the standard deviation of an integer vector or array.
+ * - `stdev_uint_vector()`: Function to determine the standard deviation of an unsigned interger array.
+ * - `stdev_long_vector()`: Function to determine the standard deviation of a long integer vector or array.
+ * - `stdev_ulong_vector()`: Function to determine the standard deviation of an unsigned long vector or array.
+ * - `stdev_llong_vector()`: Function to determine the standard deviation of a long long integer vector or array.
+ * - `stdev_ullong_vector()`: Function to determine the standard deviation of an unsigned long long integer vector or array.
+ * - `stdev_float_vector()`: Function to determine the standard deviation of a float vector or array.
+ * - `stdev_double_vector()`: Function to determine the standard deviation of a double vector or array.
+ * - `stdev_ldouble_vector()`: Function to determine the standard deviation of a long double vector or array.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

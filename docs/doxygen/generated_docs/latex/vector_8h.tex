@@ -407,6 +407,10 @@ Dble \mbox{\hyperlink{vector_8h_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+d
 \item 
 LDble \mbox{\hyperlink{vector_8h_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
 \item 
+char \mbox{\hyperlink{vector_8h_a0a47e22454ec90b6c959915dbc3c87a6}{average\+\_\+char\+\_\+vector}} (Char $\ast$vec)
+\item 
+unsigned char \mbox{\hyperlink{vector_8h_ad821bfcf3659a78a11a5c9c7fd72a277}{average\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
+\item 
 float \mbox{\hyperlink{vector_8h_a5a553d82722c04ec4b613014fa1d0688}{average\+\_\+short\+\_\+vector}} (Short $\ast$vec)
 \item 
 float \mbox{\hyperlink{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}{average\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
@@ -428,6 +432,32 @@ float \mbox{\hyperlink{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}{average\+\_\
 double \mbox{\hyperlink{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
 \item 
 long double \mbox{\hyperlink{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}{average\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
+\item 
+char \mbox{\hyperlink{vector_8h_ac1aed2328b69191a30927c16c7986299}{stdev\+\_\+char\+\_\+vector}} (Char $\ast$vec)
+\item 
+char \mbox{\hyperlink{vector_8h_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a193f4372f93ae17ab490841af7e508c3}{stdev\+\_\+short\+\_\+vector}} (Short $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\+\_\+int\+\_\+vector}} (Int $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a2a72fa8e25403401326d07853c45c7fe}{stdev\+\_\+uint\+\_\+vector}} (UInt $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\+\_\+long\+\_\+vector}} (LInt $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\+\_\+ulong\+\_\+vector}} (ULInt $\ast$vec)
+\item 
+long double \mbox{\hyperlink{vector_8h_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\+\_\+llong\+\_\+vector}} (LLInt $\ast$vec)
+\item 
+long double \mbox{\hyperlink{vector_8h_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\+\_\+ullong\+\_\+vector}} (ULLInt $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_abb791f292ea37822fa3c8f20749b8571}{stdev\+\_\+float\+\_\+vector}} (Flt $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
+\item 
+long double \mbox{\hyperlink{vector_8h_abf8b31942231ba26f9f5d4729cdd5370}{stdev\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -590,6 +620,49 @@ Definition at line \mbox{\hyperlink{vector_8h_source_l00047}{47}} of file \mbox{
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vector_8h_a0a47e22454ec90b6c959915dbc3c87a6}\label{vector_8h_a0a47e22454ec90b6c959915dbc3c87a6}} 
+\index{vector.h@{vector.h}!average\_char\_vector@{average\_char\_vector}}
+\index{average\_char\_vector@{average\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_char\_vector()}{average\_char\_vector()}}
+{\footnotesize\ttfamily char average\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type Short
+
+/param vec A vector data structure of type Char /return avg The average value in the input data structure of type Char
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Char vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} b = \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03042}{3042}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03042                                     \{}
+\DoxyCodeLine{03043     \textcolor{keywordtype}{char} sum = \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\_char\_vector}}(vec);}
+\DoxyCodeLine{03044     \textcolor{keywordtype}{char} avg = sum / (char)vec-\/>active\_length;}
+\DoxyCodeLine{03045     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03046 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\+\_\+char\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{stdev\+\_\+char\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}\label{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}} 
 \index{vector.h@{vector.h}!average\_double\_vector@{average\_double\_vector}}
 \index{average\_double\_vector@{average\_double\_vector}!vector.h@{vector.h}}
@@ -606,13 +679,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\_double\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\_double\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}\label{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03118}{3118}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03118                                         \{}
+\DoxyCodeLine{03119     \textcolor{keywordtype}{double} sum = \mbox{\hyperlink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\_double\_vector}}(vec);}
+\DoxyCodeLine{03120     \textcolor{keywordtype}{double} avg = sum / (double)vec-\/>active\_length;}
+\DoxyCodeLine{03121     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03122 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\+\_\+double\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\+\_\+double\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}\label{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}} 
 \index{vector.h@{vector.h}!average\_float\_vector@{average\_float\_vector}}
 \index{average\_float\_vector@{average\_float\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_float\_vector()}{average\_float\_vector()}}
@@ -628,13 +722,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}{average\_float\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\_float\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}\label{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03111}{3111}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03111                                      \{}
+\DoxyCodeLine{03112     \textcolor{keywordtype}{float} sum = \mbox{\hyperlink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\_float\_vector}}(vec);}
+\DoxyCodeLine{03113     \textcolor{keywordtype}{float} avg = sum / (float)vec-\/>active\_length;}
+\DoxyCodeLine{03114     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03115 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\+\_\+float\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_abb791f292ea37822fa3c8f20749b8571}{stdev\+\_\+float\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}\label{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}} 
 \index{vector.h@{vector.h}!average\_int\_vector@{average\_int\_vector}}
 \index{average\_int\_vector@{average\_int\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_int\_vector()}{average\_int\_vector()}}
@@ -650,13 +765,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\_int\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\_int\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}\label{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03069}{3069}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03069                                    \{}
+\DoxyCodeLine{03070     \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_aaf01dd9c2caec4100d4315bd8d525a30}{sum\_int\_vector}}(vec);}
+\DoxyCodeLine{03071     \textcolor{keywordtype}{float} avg = sum / (float)vec-\/>active\_length;}
+\DoxyCodeLine{03072     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03073 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_aaf01dd9c2caec4100d4315bd8d525a30}{sum\+\_\+int\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\+\_\+int\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}\label{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}} 
 \index{vector.h@{vector.h}!average\_ldouble\_vector@{average\_ldouble\_vector}}
 \index{average\_ldouble\_vector@{average\_ldouble\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_ldouble\_vector()}{average\_ldouble\_vector()}}
@@ -672,13 +808,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}{average\_ldouble\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\_ldouble\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_ae3782b50d088b4488da3a8283670ffcc}\label{vector_8h_ae3782b50d088b4488da3a8283670ffcc}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03125}{3125}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03125                                                \{}
+\DoxyCodeLine{03126     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} sum = \mbox{\hyperlink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\_ldouble\_vector}}(vec);}
+\DoxyCodeLine{03127     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} avg = sum / (\textcolor{keywordtype}{long} double)vec-\/>active\_length;}
+\DoxyCodeLine{03128     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03129 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\+\_\+ldouble\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_abf8b31942231ba26f9f5d4729cdd5370}{stdev\+\_\+ldouble\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ae3782b50d088b4488da3a8283670ffcc}\label{vector_8h_ae3782b50d088b4488da3a8283670ffcc}} 
 \index{vector.h@{vector.h}!average\_llong\_vector@{average\_llong\_vector}}
 \index{average\_llong\_vector@{average\_llong\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_llong\_vector()}{average\_llong\_vector()}}
@@ -694,13 +851,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_ae3782b50d088b4488da3a8283670ffcc}{average\_llong\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\_llong\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}\label{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03097}{3097}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03097                                              \{}
+\DoxyCodeLine{03098     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a838510507e7f386e844fd1e5e3ae494a}{sum\_llong\_vector}}(vec);}
+\DoxyCodeLine{03099     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} avg = sum / (\textcolor{keywordtype}{long} double)vec-\/>active\_length;}
+\DoxyCodeLine{03100     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03101 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a838510507e7f386e844fd1e5e3ae494a}{sum\+\_\+llong\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\+\_\+llong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}\label{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}} 
 \index{vector.h@{vector.h}!average\_long\_vector@{average\_long\_vector}}
 \index{average\_long\_vector@{average\_long\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_long\_vector()}{average\_long\_vector()}}
@@ -716,13 +894,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}{average\_long\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\_long\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a5a553d82722c04ec4b613014fa1d0688}\label{vector_8h_a5a553d82722c04ec4b613014fa1d0688}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03083}{3083}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03083                                       \{}
+\DoxyCodeLine{03084     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_af2ca62fb5fa87cccef8750d24b3979da}{sum\_long\_vector}}(vec);}
+\DoxyCodeLine{03085     \textcolor{keywordtype}{double} avg = sum / (double)vec-\/>active\_length;}
+\DoxyCodeLine{03086     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03087 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_af2ca62fb5fa87cccef8750d24b3979da}{sum\+\_\+long\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\+\_\+long\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a5a553d82722c04ec4b613014fa1d0688}\label{vector_8h_a5a553d82722c04ec4b613014fa1d0688}} 
 \index{vector.h@{vector.h}!average\_short\_vector@{average\_short\_vector}}
 \index{average\_short\_vector@{average\_short\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_short\_vector()}{average\_short\_vector()}}
@@ -738,13 +937,77 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a5a553d82722c04ec4b613014fa1d0688}{average\_short\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\_short\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a35959e6bd4010b04681750611d00a7b7}\label{vector_8h_a35959e6bd4010b04681750611d00a7b7}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03055}{3055}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03055                                        \{}
+\DoxyCodeLine{03056     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a54d410de6d79f482b3d560bcb78fd2ff}{sum\_short\_vector}}(vec);}
+\DoxyCodeLine{03057     \textcolor{keywordtype}{float} avg = sum / (float)vec-\/>active\_length;}
+\DoxyCodeLine{03058     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03059 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a54d410de6d79f482b3d560bcb78fd2ff}{sum\+\_\+short\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\+\_\+short\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ad821bfcf3659a78a11a5c9c7fd72a277}\label{vector_8h_ad821bfcf3659a78a11a5c9c7fd72a277}} 
+\index{vector.h@{vector.h}!average\_uchar\_vector@{average\_uchar\_vector}}
+\index{average\_uchar\_vector@{average\_uchar\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_uchar\_vector()}{average\_uchar\_vector()}}
+{\footnotesize\ttfamily unsigned char average\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type Short
+
+/param vec A vector data structure of type Char /return avg The average value in the input data structure of type Char
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UChar vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} b = \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03049}{3049}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03049                                                \{}
+\DoxyCodeLine{03050     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} sum = \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\_uchar\_vector}}(vec);}
+\DoxyCodeLine{03051     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} avg = sum / (\textcolor{keywordtype}{unsigned} char)vec-\/>active\_length;}
+\DoxyCodeLine{03052     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03053 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\+\_\+uchar\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\+\_\+uchar\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a35959e6bd4010b04681750611d00a7b7}\label{vector_8h_a35959e6bd4010b04681750611d00a7b7}} 
 \index{vector.h@{vector.h}!average\_uint\_vector@{average\_uint\_vector}}
 \index{average\_uint\_vector@{average\_uint\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_uint\_vector()}{average\_uint\_vector()}}
@@ -760,13 +1023,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a35959e6bd4010b04681750611d00a7b7}{average\_uint\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\_uint\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_abb879670618c44d1259b4cb689d36698}\label{vector_8h_abb879670618c44d1259b4cb689d36698}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03076}{3076}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03076                                      \{}
+\DoxyCodeLine{03077     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a791fe9c8f9bd1d04158b01c3aa022edd}{sum\_uint\_vector}}(vec);}
+\DoxyCodeLine{03078     \textcolor{keywordtype}{float} avg = sum / (float)vec-\/>active\_length;}
+\DoxyCodeLine{03079     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03080 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a791fe9c8f9bd1d04158b01c3aa022edd}{sum\+\_\+uint\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a2a72fa8e25403401326d07853c45c7fe}{stdev\+\_\+uint\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_abb879670618c44d1259b4cb689d36698}\label{vector_8h_abb879670618c44d1259b4cb689d36698}} 
 \index{vector.h@{vector.h}!average\_ullong\_vector@{average\_ullong\_vector}}
 \index{average\_ullong\_vector@{average\_ullong\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_ullong\_vector()}{average\_ullong\_vector()}}
@@ -782,13 +1066,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_abb879670618c44d1259b4cb689d36698}{average\_ullong\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\_ullong\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_aa94c4a725c6ab558c748baa93b652363}\label{vector_8h_aa94c4a725c6ab558c748baa93b652363}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03104}{3104}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03104                                                \{}
+\DoxyCodeLine{03105     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_af1cc1dfd0470ab00fc1537ebcbb5c089}{sum\_ullong\_vector}}(vec);}
+\DoxyCodeLine{03106     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} avg = sum / (\textcolor{keywordtype}{long} double)vec-\/>active\_length;}
+\DoxyCodeLine{03107     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03108 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_af1cc1dfd0470ab00fc1537ebcbb5c089}{sum\+\_\+ullong\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\+\_\+ullong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_aa94c4a725c6ab558c748baa93b652363}\label{vector_8h_aa94c4a725c6ab558c748baa93b652363}} 
 \index{vector.h@{vector.h}!average\_ulong\_vector@{average\_ulong\_vector}}
 \index{average\_ulong\_vector@{average\_ulong\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_ulong\_vector()}{average\_ulong\_vector()}}
@@ -804,13 +1109,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_aa94c4a725c6ab558c748baa93b652363}{average\_ulong\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\_ulong\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}\label{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03090}{3090}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03090                                         \{}
+\DoxyCodeLine{03091     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a3233da20e23c20659dd5aba81307b58d}{sum\_ulong\_vector}}(vec);}
+\DoxyCodeLine{03092     \textcolor{keywordtype}{double} avg = sum / (double)vec-\/>active\_length;}
+\DoxyCodeLine{03093     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03094 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a3233da20e23c20659dd5aba81307b58d}{sum\+\_\+ulong\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\+\_\+ulong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}\label{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}} 
 \index{vector.h@{vector.h}!average\_ushort\_vector@{average\_ushort\_vector}}
 \index{average\_ushort\_vector@{average\_ushort\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{average\_ushort\_vector()}{average\_ushort\_vector()}}
@@ -826,13 +1152,34 @@ This function will return the average value of the data in a vector data structu
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}{average\_ushort\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\_ushort\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_a877296aab1e625bc7b103322f6b93b14}\label{vector_8h_a877296aab1e625bc7b103322f6b93b14}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03062}{3062}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03062                                          \{}
+\DoxyCodeLine{03063     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = \mbox{\hyperlink{vector_8c_a67f48de636722d00447f21d5040f8d81}{sum\_ushort\_vector}}(vec);}
+\DoxyCodeLine{03064     \textcolor{keywordtype}{float} avg = sum / (float)vec-\/>active\_length;}
+\DoxyCodeLine{03065     \textcolor{keywordflow}{return} avg;}
+\DoxyCodeLine{03066 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a67f48de636722d00447f21d5040f8d81}{sum\+\_\+ushort\+\_\+vector()}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\+\_\+ushort\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a877296aab1e625bc7b103322f6b93b14}\label{vector_8h_a877296aab1e625bc7b103322f6b93b14}} 
 \index{vector.h@{vector.h}!cumsum\_char\_vector@{cumsum\_char\_vector}}
 \index{cumsum\_char\_vector@{cumsum\_char\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{cumsum\_char\_vector()}{cumsum\_char\_vector()}}
@@ -8004,6 +8351,1176 @@ References \mbox{\hyperlink{vector_8c_ac3a8bea84161a65f8360d4eeb093cbd3}{partiti
 
 Referenced by \mbox{\hyperlink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\+\_\+ushort\+\_\+vector()}}.
 
+\mbox{\Hypertarget{vector_8h_ac1aed2328b69191a30927c16c7986299}\label{vector_8h_ac1aed2328b69191a30927c16c7986299}} 
+\index{vector.h@{vector.h}!stdev\_char\_vector@{stdev\_char\_vector}}
+\index{stdev\_char\_vector@{stdev\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_char\_vector()}{stdev\_char\_vector()}}
+{\footnotesize\ttfamily char stdev\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type Char
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Char vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} stdev = \mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{stdev\_char\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03134}{3134}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03134                                   \{}
+\DoxyCodeLine{03135     \textcolor{keywordtype}{char} average = \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}}(vec);}
+\DoxyCodeLine{03136     \textcolor{keywordtype}{char} var = 0.0;}
+\DoxyCodeLine{03137     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{03138     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03139         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03140         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03141     \}}
+\DoxyCodeLine{03142     \textcolor{keywordtype}{char} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03143 }
+\DoxyCodeLine{03144     \textcolor{keywordtype}{char} number = interm;}
+\DoxyCodeLine{03145     \textcolor{keywordtype}{char} start = 0.0f, end = number;}
+\DoxyCodeLine{03146     \textcolor{keywordtype}{char} mid;}
+\DoxyCodeLine{03147 }
+\DoxyCodeLine{03148     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03149     \textcolor{keywordtype}{char} ans = 0.;}
+\DoxyCodeLine{03150     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03151     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03152     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03153         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03154         mid = (start + end) / 2;}
+\DoxyCodeLine{03155         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03156         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03157         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03158             ans = mid;}
+\DoxyCodeLine{03159             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03160         \}}
+\DoxyCodeLine{03161         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03162         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03163         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03164         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03165           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03166             ans=start;}
+\DoxyCodeLine{03167           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03168             start = mid + 1.f;}
+\DoxyCodeLine{03169         \}}
+\DoxyCodeLine{03170         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03171         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03172         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03173             end = mid -\/ 1.f;}
+\DoxyCodeLine{03174         \}}
+\DoxyCodeLine{03175     \}}
+\DoxyCodeLine{03176     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03177     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03178     \textcolor{keywordtype}{float} increment = 0.1f;}
+\DoxyCodeLine{03179     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03180         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03181             ans += increment;}
+\DoxyCodeLine{03182         \}}
+\DoxyCodeLine{03183         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03184         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03185         ans = ans -\/ increment;}
+\DoxyCodeLine{03186         increment = increment / 10;}
+\DoxyCodeLine{03187     \}}
+\DoxyCodeLine{03188     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03189 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\+\_\+char\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_aa05c06bd35f0e74c8a07ef0257a8aa67}\label{vector_8h_aa05c06bd35f0e74c8a07ef0257a8aa67}} 
+\index{vector.h@{vector.h}!stdev\_double\_vector@{stdev\_double\_vector}}
+\index{stdev\_double\_vector@{stdev\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_double\_vector()}{stdev\_double\_vector()}}
+{\footnotesize\ttfamily double stdev\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type Dble
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Dble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[10] = \{1., 2., 3., 4., 5., 6., 7., 8., 9., 10.\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\_double\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03772}{3772}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03772                                       \{}
+\DoxyCodeLine{03773     \textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\_double\_vector}}(vec);}
+\DoxyCodeLine{03774     \textcolor{keywordtype}{double} var = 0.0;}
+\DoxyCodeLine{03775     \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{03776     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03777         value = (double)vec-\/>array[i];}
+\DoxyCodeLine{03778         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03779     \}}
+\DoxyCodeLine{03780     \textcolor{keywordtype}{double} interm = (1.0 / ((double)vec-\/>active\_length -\/ 1.0)) * var;}
+\DoxyCodeLine{03781 }
+\DoxyCodeLine{03782     \textcolor{keywordtype}{double} number = interm;}
+\DoxyCodeLine{03783     \textcolor{keywordtype}{double} start = 0.0, end = number;}
+\DoxyCodeLine{03784     \textcolor{keywordtype}{double} mid;}
+\DoxyCodeLine{03785 }
+\DoxyCodeLine{03786     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03787     \textcolor{keywordtype}{double} ans = 0.;}
+\DoxyCodeLine{03788     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03789     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03790     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03791         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03792         mid = (start + end) / 2;}
+\DoxyCodeLine{03793         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03794         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03795         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03796             ans = mid;}
+\DoxyCodeLine{03797             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03798         \}}
+\DoxyCodeLine{03799         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03800         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03801         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03802         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03803           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03804             ans=start;}
+\DoxyCodeLine{03805           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03806             start = mid + 1.;}
+\DoxyCodeLine{03807         \}}
+\DoxyCodeLine{03808         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03809         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03810         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03811             end = mid -\/ 1.;}
+\DoxyCodeLine{03812         \}}
+\DoxyCodeLine{03813     \}}
+\DoxyCodeLine{03814     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03815     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03816     \textcolor{keywordtype}{double} increment = 0.1;}
+\DoxyCodeLine{03817     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03818         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03819             ans += increment;}
+\DoxyCodeLine{03820         \}}
+\DoxyCodeLine{03821         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03822         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03823         ans = ans -\/ increment;}
+\DoxyCodeLine{03824         increment = increment / 10;}
+\DoxyCodeLine{03825     \}}
+\DoxyCodeLine{03826     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03827 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\+\_\+double\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_abb791f292ea37822fa3c8f20749b8571}\label{vector_8h_abb791f292ea37822fa3c8f20749b8571}} 
+\index{vector.h@{vector.h}!stdev\_float\_vector@{stdev\_float\_vector}}
+\index{stdev\_float\_vector@{stdev\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_float\_vector()}{stdev\_float\_vector()}}
+{\footnotesize\ttfamily float stdev\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type Flt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Flt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[10] = \{1., 2., 3., 4., 5., 6., 7., 8., 9., 10.\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_abb791f292ea37822fa3c8f20749b8571}{stdev\_float\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03714}{3714}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03714                                    \{}
+\DoxyCodeLine{03715     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\_float\_vector}}(vec);}
+\DoxyCodeLine{03716     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03717     \textcolor{keywordtype}{float} value;}
+\DoxyCodeLine{03718     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03719         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03720         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03721     \}}
+\DoxyCodeLine{03722     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03723 }
+\DoxyCodeLine{03724     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03725     \textcolor{keywordtype}{float} start = 0.0, end = number;}
+\DoxyCodeLine{03726     \textcolor{keywordtype}{float} mid;}
+\DoxyCodeLine{03727 }
+\DoxyCodeLine{03728     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03729     \textcolor{keywordtype}{float} ans = 0.;}
+\DoxyCodeLine{03730     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03731     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03732     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03733         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03734         mid = (start + end) / 2;}
+\DoxyCodeLine{03735         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03736         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03737         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03738             ans = mid;}
+\DoxyCodeLine{03739             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03740         \}}
+\DoxyCodeLine{03741         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03742         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03743         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03744         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03745           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03746             ans=start;}
+\DoxyCodeLine{03747           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03748             start = mid + 1.f;}
+\DoxyCodeLine{03749         \}}
+\DoxyCodeLine{03750         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03751         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03752         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03753             end = mid -\/ 1.f;}
+\DoxyCodeLine{03754         \}}
+\DoxyCodeLine{03755     \}}
+\DoxyCodeLine{03756     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03757     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03758     \textcolor{keywordtype}{float} increment = 0.1;}
+\DoxyCodeLine{03759     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03760         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03761             ans += increment;}
+\DoxyCodeLine{03762         \}}
+\DoxyCodeLine{03763         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03764         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03765         ans = ans -\/ increment;}
+\DoxyCodeLine{03766         increment = increment / 10;}
+\DoxyCodeLine{03767     \}}
+\DoxyCodeLine{03768     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03769 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\+\_\+float\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_aa469dd50aa2a8cd43ad5c577016145e8}\label{vector_8h_aa469dd50aa2a8cd43ad5c577016145e8}} 
+\index{vector.h@{vector.h}!stdev\_int\_vector@{stdev\_int\_vector}}
+\index{stdev\_int\_vector@{stdev\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_int\_vector()}{stdev\_int\_vector()}}
+{\footnotesize\ttfamily float stdev\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type Int
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\_int\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03366}{3366}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03366                                  \{}
+\DoxyCodeLine{03367     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\_int\_vector}}(vec);}
+\DoxyCodeLine{03368     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03369     \textcolor{keywordtype}{float} value;}
+\DoxyCodeLine{03370     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03371         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03372         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03373     \}}
+\DoxyCodeLine{03374     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03375 }
+\DoxyCodeLine{03376     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03377     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{03378     \textcolor{keywordtype}{float} mid;}
+\DoxyCodeLine{03379 }
+\DoxyCodeLine{03380     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03381     \textcolor{keywordtype}{float} ans = 0.;}
+\DoxyCodeLine{03382     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03383     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03384     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03385         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03386         mid = (start + end) / 2;}
+\DoxyCodeLine{03387         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03388         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03389         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03390             ans = mid;}
+\DoxyCodeLine{03391             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03392         \}}
+\DoxyCodeLine{03393         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03394         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03395         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03396         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03397           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03398             ans=start;}
+\DoxyCodeLine{03399           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03400             start = mid + 1.f;}
+\DoxyCodeLine{03401         \}}
+\DoxyCodeLine{03402         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03403         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03404         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03405             end = mid -\/ 1.f;}
+\DoxyCodeLine{03406         \}}
+\DoxyCodeLine{03407     \}}
+\DoxyCodeLine{03408     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03409     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03410     \textcolor{keywordtype}{float} increment = 0.1;}
+\DoxyCodeLine{03411     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03412         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03413             ans += increment;}
+\DoxyCodeLine{03414         \}}
+\DoxyCodeLine{03415         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03416         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03417         ans = ans -\/ increment;}
+\DoxyCodeLine{03418         increment = increment / 10;}
+\DoxyCodeLine{03419     \}}
+\DoxyCodeLine{03420     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03421 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\+\_\+int\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_abf8b31942231ba26f9f5d4729cdd5370}\label{vector_8h_abf8b31942231ba26f9f5d4729cdd5370}} 
+\index{vector.h@{vector.h}!stdev\_ldouble\_vector@{stdev\_ldouble\_vector}}
+\index{stdev\_ldouble\_vector@{stdev\_ldouble\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_ldouble\_vector()}{stdev\_ldouble\_vector()}}
+{\footnotesize\ttfamily long double stdev\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type LDble
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LDble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} a[10] = \{1., 2., 3., 4., 5., 6., 7., 8., 9., 10.\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_abf8b31942231ba26f9f5d4729cdd5370}{stdev\_ldouble\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03830}{3830}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03830                                              \{}
+\DoxyCodeLine{03831     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\_ldouble\_vector}}(vec);}
+\DoxyCodeLine{03832     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} var = 0.0;}
+\DoxyCodeLine{03833     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{03834     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03835         value = (\textcolor{keywordtype}{long} double)vec-\/>array[i];}
+\DoxyCodeLine{03836         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03837     \}}
+\DoxyCodeLine{03838     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} interm = (1.0 / ((\textcolor{keywordtype}{long} double)vec-\/>active\_length -\/ 1.0)) * var;}
+\DoxyCodeLine{03839 }
+\DoxyCodeLine{03840     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} number = interm;}
+\DoxyCodeLine{03841     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} start = 0.0, end = number;}
+\DoxyCodeLine{03842     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} mid;}
+\DoxyCodeLine{03843 }
+\DoxyCodeLine{03844     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03845     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} ans = 0.;}
+\DoxyCodeLine{03846     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03847     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03848     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03849         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03850         mid = (start + end) / 2;}
+\DoxyCodeLine{03851         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03852         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03853         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03854             ans = mid;}
+\DoxyCodeLine{03855             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03856         \}}
+\DoxyCodeLine{03857         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03858         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03859         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03860         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03861           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03862             ans=start;}
+\DoxyCodeLine{03863           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03864             start = mid + 1.;}
+\DoxyCodeLine{03865         \}}
+\DoxyCodeLine{03866         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03867         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03868         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03869             end = mid -\/ 1.;}
+\DoxyCodeLine{03870         \}}
+\DoxyCodeLine{03871     \}}
+\DoxyCodeLine{03872     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03873     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03874     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} increment = 0.1;}
+\DoxyCodeLine{03875     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03876         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03877             ans += increment;}
+\DoxyCodeLine{03878         \}}
+\DoxyCodeLine{03879         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03880         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03881         ans = ans -\/ increment;}
+\DoxyCodeLine{03882         increment = increment / 10;}
+\DoxyCodeLine{03883     \}}
+\DoxyCodeLine{03884     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03885 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\+\_\+ldouble\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a5b29dc6f20528b67a4a53208c5beefe7}\label{vector_8h_a5b29dc6f20528b67a4a53208c5beefe7}} 
+\index{vector.h@{vector.h}!stdev\_llong\_vector@{stdev\_llong\_vector}}
+\index{stdev\_llong\_vector@{stdev\_llong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_llong\_vector()}{stdev\_llong\_vector()}}
+{\footnotesize\ttfamily long double stdev\+\_\+llong\+\_\+vector (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type LLInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\_llong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03598}{3598}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03598                                            \{}
+\DoxyCodeLine{03599     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\_llong\_vector}}(vec);}
+\DoxyCodeLine{03600     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} var = 0.0;}
+\DoxyCodeLine{03601     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{03602     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03603         value = (\textcolor{keywordtype}{long} double)vec-\/>array[i];}
+\DoxyCodeLine{03604         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03605     \}}
+\DoxyCodeLine{03606     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} interm = (1.0 / ((\textcolor{keywordtype}{long} double)vec-\/>active\_length -\/ 1.0)) * var;}
+\DoxyCodeLine{03607 }
+\DoxyCodeLine{03608     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} number = interm;}
+\DoxyCodeLine{03609     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} start = 0.0, end = number;}
+\DoxyCodeLine{03610     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} mid;}
+\DoxyCodeLine{03611 }
+\DoxyCodeLine{03612     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03613     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} ans = 0.;}
+\DoxyCodeLine{03614     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03615     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03616     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03617         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03618         mid = (start + end) / 2;}
+\DoxyCodeLine{03619         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03620         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03621         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03622             ans = mid;}
+\DoxyCodeLine{03623             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03624         \}}
+\DoxyCodeLine{03625         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03626         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03627         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03628         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03629           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03630             ans=start;}
+\DoxyCodeLine{03631           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03632             start = mid + 1.;}
+\DoxyCodeLine{03633         \}}
+\DoxyCodeLine{03634         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03635         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03636         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03637             end = mid -\/ 1.;}
+\DoxyCodeLine{03638         \}}
+\DoxyCodeLine{03639     \}}
+\DoxyCodeLine{03640     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03641     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03642     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} increment = 0.1;}
+\DoxyCodeLine{03643     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03644         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03645             ans += increment;}
+\DoxyCodeLine{03646         \}}
+\DoxyCodeLine{03647         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03648         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03649         ans = ans -\/ increment;}
+\DoxyCodeLine{03650         increment = increment / 10;}
+\DoxyCodeLine{03651     \}}
+\DoxyCodeLine{03652     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03653 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\+\_\+llong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ab875bc51d7595b4e6fe536770cfe62c5}\label{vector_8h_ab875bc51d7595b4e6fe536770cfe62c5}} 
+\index{vector.h@{vector.h}!stdev\_long\_vector@{stdev\_long\_vector}}
+\index{stdev\_long\_vector@{stdev\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_long\_vector()}{stdev\_long\_vector()}}
+{\footnotesize\ttfamily double stdev\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type LInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\_long\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03482}{3482}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03482                                     \{}
+\DoxyCodeLine{03483     \textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\_long\_vector}}(vec);}
+\DoxyCodeLine{03484     \textcolor{keywordtype}{double} var = 0.0;}
+\DoxyCodeLine{03485     \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{03486     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03487         value = (double)vec-\/>array[i];}
+\DoxyCodeLine{03488         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03489     \}}
+\DoxyCodeLine{03490     \textcolor{keywordtype}{double} interm = (1.0 / ((double)vec-\/>active\_length -\/ 1.0)) * var;}
+\DoxyCodeLine{03491 }
+\DoxyCodeLine{03492     \textcolor{keywordtype}{double} number = interm;}
+\DoxyCodeLine{03493     \textcolor{keywordtype}{double} start = 0.0, end = number;}
+\DoxyCodeLine{03494     \textcolor{keywordtype}{double} mid;}
+\DoxyCodeLine{03495 }
+\DoxyCodeLine{03496     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03497     \textcolor{keywordtype}{double} ans = 0.;}
+\DoxyCodeLine{03498     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03499     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03500     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03501         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03502         mid = (start + end) / 2;}
+\DoxyCodeLine{03503         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03504         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03505         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03506             ans = mid;}
+\DoxyCodeLine{03507             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03508         \}}
+\DoxyCodeLine{03509         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03510         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03511         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03512         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03513           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03514             ans=start;}
+\DoxyCodeLine{03515           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03516             start = mid + 1.;}
+\DoxyCodeLine{03517         \}}
+\DoxyCodeLine{03518         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03519         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03520         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03521             end = mid -\/ 1.;}
+\DoxyCodeLine{03522         \}}
+\DoxyCodeLine{03523     \}}
+\DoxyCodeLine{03524     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03525     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03526     \textcolor{keywordtype}{double} increment = 0.1;}
+\DoxyCodeLine{03527     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03528         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03529             ans += increment;}
+\DoxyCodeLine{03530         \}}
+\DoxyCodeLine{03531         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03532         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03533         ans = ans -\/ increment;}
+\DoxyCodeLine{03534         increment = increment / 10;}
+\DoxyCodeLine{03535     \}}
+\DoxyCodeLine{03536     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03537 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\+\_\+long\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a193f4372f93ae17ab490841af7e508c3}\label{vector_8h_a193f4372f93ae17ab490841af7e508c3}} 
+\index{vector.h@{vector.h}!stdev\_short\_vector@{stdev\_short\_vector}}
+\index{stdev\_short\_vector@{stdev\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_short\_vector()}{stdev\_short\_vector()}}
+{\footnotesize\ttfamily float stdev\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type Short
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Short vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\_short\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03250}{3250}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03250                                      \{}
+\DoxyCodeLine{03251     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\_short\_vector}}(vec);}
+\DoxyCodeLine{03252     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03253     \textcolor{keywordtype}{float} value;}
+\DoxyCodeLine{03254     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03255         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03256         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03257     \}}
+\DoxyCodeLine{03258     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03259 }
+\DoxyCodeLine{03260     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03261     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{03262     \textcolor{keywordtype}{float} mid;}
+\DoxyCodeLine{03263 }
+\DoxyCodeLine{03264     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03265     \textcolor{keywordtype}{float} ans = 0.;}
+\DoxyCodeLine{03266     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03267     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03268     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03269         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03270         mid = (start + end) / 2;}
+\DoxyCodeLine{03271         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03272         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03273         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03274             ans = mid;}
+\DoxyCodeLine{03275             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03276         \}}
+\DoxyCodeLine{03277         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03278         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03279         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03280         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03281           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03282             ans=start;}
+\DoxyCodeLine{03283           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03284             start = mid + 1.f;}
+\DoxyCodeLine{03285         \}}
+\DoxyCodeLine{03286         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03287         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03288         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03289             end = mid -\/ 1.f;}
+\DoxyCodeLine{03290         \}}
+\DoxyCodeLine{03291     \}}
+\DoxyCodeLine{03292     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03293     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03294     \textcolor{keywordtype}{float} increment = 0.1f;}
+\DoxyCodeLine{03295     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03296         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03297             ans += increment;}
+\DoxyCodeLine{03298         \}}
+\DoxyCodeLine{03299         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03300         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03301         ans = ans -\/ increment;}
+\DoxyCodeLine{03302         increment = increment / 10;}
+\DoxyCodeLine{03303     \}}
+\DoxyCodeLine{03304     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03305 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\+\_\+short\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a22f3e8ba5b20b60e38c8f039a5c9c3fd}\label{vector_8h_a22f3e8ba5b20b60e38c8f039a5c9c3fd}} 
+\index{vector.h@{vector.h}!stdev\_uchar\_vector@{stdev\_uchar\_vector}}
+\index{stdev\_uchar\_vector@{stdev\_uchar\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_uchar\_vector()}{stdev\_uchar\_vector()}}
+{\footnotesize\ttfamily char stdev\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type UChar
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UChar vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} stdev = \mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\_uchar\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03192}{3192}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03192                                     \{}
+\DoxyCodeLine{03193     \textcolor{keywordtype}{char} average = \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}}(vec);}
+\DoxyCodeLine{03194     \textcolor{keywordtype}{char} var = 0.0;}
+\DoxyCodeLine{03195     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{03196     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03197         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03198         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03199     \}}
+\DoxyCodeLine{03200     \textcolor{keywordtype}{char} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03201 }
+\DoxyCodeLine{03202     \textcolor{keywordtype}{char} number = interm;}
+\DoxyCodeLine{03203     \textcolor{keywordtype}{char} start = 0.0f, end = number;}
+\DoxyCodeLine{03204     \textcolor{keywordtype}{char} mid;}
+\DoxyCodeLine{03205 }
+\DoxyCodeLine{03206     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03207     \textcolor{keywordtype}{char} ans = 0.;}
+\DoxyCodeLine{03208     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03209     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03210     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03211         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03212         mid = (start + end) / 2;}
+\DoxyCodeLine{03213         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03214         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03215         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03216             ans = mid;}
+\DoxyCodeLine{03217             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03218         \}}
+\DoxyCodeLine{03219         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03220         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03221         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03222         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03223           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03224             ans=start;}
+\DoxyCodeLine{03225           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03226             start = mid + 1.f;}
+\DoxyCodeLine{03227         \}}
+\DoxyCodeLine{03228         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03229         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03230         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03231             end = mid -\/ 1.f;}
+\DoxyCodeLine{03232         \}}
+\DoxyCodeLine{03233     \}}
+\DoxyCodeLine{03234     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03235     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03236     \textcolor{keywordtype}{float} increment = 0.1f;}
+\DoxyCodeLine{03237     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03238         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03239             ans += increment;}
+\DoxyCodeLine{03240         \}}
+\DoxyCodeLine{03241         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03242         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03243         ans = ans -\/ increment;}
+\DoxyCodeLine{03244         increment = increment / 10;}
+\DoxyCodeLine{03245     \}}
+\DoxyCodeLine{03246     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03247 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\+\_\+uchar\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a2a72fa8e25403401326d07853c45c7fe}\label{vector_8h_a2a72fa8e25403401326d07853c45c7fe}} 
+\index{vector.h@{vector.h}!stdev\_uint\_vector@{stdev\_uint\_vector}}
+\index{stdev\_uint\_vector@{stdev\_uint\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_uint\_vector()}{stdev\_uint\_vector()}}
+{\footnotesize\ttfamily float stdev\+\_\+uint\+\_\+vector (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type UInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a2a72fa8e25403401326d07853c45c7fe}{stdev\_uint\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03424}{3424}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03424                                    \{}
+\DoxyCodeLine{03425     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\_uint\_vector}}(vec);}
+\DoxyCodeLine{03426     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03427     \textcolor{keywordtype}{float} value;}
+\DoxyCodeLine{03428     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03429         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03430         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03431     \}}
+\DoxyCodeLine{03432     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03433 }
+\DoxyCodeLine{03434     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03435     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{03436     \textcolor{keywordtype}{float} mid;}
+\DoxyCodeLine{03437 }
+\DoxyCodeLine{03438     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03439     \textcolor{keywordtype}{float} ans = 0.;}
+\DoxyCodeLine{03440     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03441     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03442     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03443         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03444         mid = (start + end) / 2;}
+\DoxyCodeLine{03445         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03446         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03447         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03448             ans = mid;}
+\DoxyCodeLine{03449             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03450         \}}
+\DoxyCodeLine{03451         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03452         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03453         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03454         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03455           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03456             ans=start;}
+\DoxyCodeLine{03457           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03458             start = mid + 1.f;}
+\DoxyCodeLine{03459         \}}
+\DoxyCodeLine{03460         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03461         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03462         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03463             end = mid -\/ 1.f;}
+\DoxyCodeLine{03464         \}}
+\DoxyCodeLine{03465     \}}
+\DoxyCodeLine{03466     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03467     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03468     \textcolor{keywordtype}{float} increment = 0.1;}
+\DoxyCodeLine{03469     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03470         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03471             ans += increment;}
+\DoxyCodeLine{03472         \}}
+\DoxyCodeLine{03473         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03474         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03475         ans = ans -\/ increment;}
+\DoxyCodeLine{03476         increment = increment / 10;}
+\DoxyCodeLine{03477     \}}
+\DoxyCodeLine{03478     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03479 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\+\_\+uint\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a9cb0b02a7bedef69397ef758fd36baa6}\label{vector_8h_a9cb0b02a7bedef69397ef758fd36baa6}} 
+\index{vector.h@{vector.h}!stdev\_ullong\_vector@{stdev\_ullong\_vector}}
+\index{stdev\_ullong\_vector@{stdev\_ullong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_ullong\_vector()}{stdev\_ullong\_vector()}}
+{\footnotesize\ttfamily long double stdev\+\_\+ullong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type ULLInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\_ullong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03656}{3656}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03656                                              \{}
+\DoxyCodeLine{03657     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\_ullong\_vector}}(vec);}
+\DoxyCodeLine{03658     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} var = 0.0;}
+\DoxyCodeLine{03659     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{03660     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03661         value = (\textcolor{keywordtype}{long} double)vec-\/>array[i];}
+\DoxyCodeLine{03662         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03663     \}}
+\DoxyCodeLine{03664     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} interm = (1.0 / ((\textcolor{keywordtype}{long} double)vec-\/>active\_length -\/ 1.0)) * var;}
+\DoxyCodeLine{03665 }
+\DoxyCodeLine{03666     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} number = interm;}
+\DoxyCodeLine{03667     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} start = 0.0, end = number;}
+\DoxyCodeLine{03668     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} mid;}
+\DoxyCodeLine{03669 }
+\DoxyCodeLine{03670     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03671     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} ans = 0.;}
+\DoxyCodeLine{03672     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03673     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03674     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03675         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03676         mid = (start + end) / 2;}
+\DoxyCodeLine{03677         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03678         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03679         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03680             ans = mid;}
+\DoxyCodeLine{03681             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03682         \}}
+\DoxyCodeLine{03683         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03684         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03685         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03686         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03687           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03688             ans=start;}
+\DoxyCodeLine{03689           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03690             start = mid + 1.;}
+\DoxyCodeLine{03691         \}}
+\DoxyCodeLine{03692         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03693         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03694         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03695             end = mid -\/ 1.;}
+\DoxyCodeLine{03696         \}}
+\DoxyCodeLine{03697     \}}
+\DoxyCodeLine{03698     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03699     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03700     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} increment = 0.1;}
+\DoxyCodeLine{03701     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03702         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03703             ans += increment;}
+\DoxyCodeLine{03704         \}}
+\DoxyCodeLine{03705         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03706         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03707         ans = ans -\/ increment;}
+\DoxyCodeLine{03708         increment = increment / 10;}
+\DoxyCodeLine{03709     \}}
+\DoxyCodeLine{03710     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03711 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\+\_\+ullong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a3cd9fa1fbe73338e380ccc9b98a6b768}\label{vector_8h_a3cd9fa1fbe73338e380ccc9b98a6b768}} 
+\index{vector.h@{vector.h}!stdev\_ulong\_vector@{stdev\_ulong\_vector}}
+\index{stdev\_ulong\_vector@{stdev\_ulong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_ulong\_vector()}{stdev\_ulong\_vector()}}
+{\footnotesize\ttfamily double stdev\+\_\+ulong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type ULInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{vector_8c_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\_ulong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03540}{3540}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03540                                       \{}
+\DoxyCodeLine{03541     \textcolor{keywordtype}{double} average = \mbox{\hyperlink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\_ulong\_vector}}(vec);}
+\DoxyCodeLine{03542     \textcolor{keywordtype}{double} var = 0.0;}
+\DoxyCodeLine{03543     \textcolor{keywordtype}{double} value;}
+\DoxyCodeLine{03544     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03545         value = (double)vec-\/>array[i];}
+\DoxyCodeLine{03546         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03547     \}}
+\DoxyCodeLine{03548     \textcolor{keywordtype}{double} interm = (1.0 / ((double)vec-\/>active\_length -\/ 1.0)) * var;}
+\DoxyCodeLine{03549 }
+\DoxyCodeLine{03550     \textcolor{keywordtype}{double} number = interm;}
+\DoxyCodeLine{03551     \textcolor{keywordtype}{double} start = 0.0, end = number;}
+\DoxyCodeLine{03552     \textcolor{keywordtype}{double} mid;}
+\DoxyCodeLine{03553 }
+\DoxyCodeLine{03554     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03555     \textcolor{keywordtype}{double} ans = 0.;}
+\DoxyCodeLine{03556     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03557     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03558     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03559         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03560         mid = (start + end) / 2;}
+\DoxyCodeLine{03561         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03562         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03563         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03564             ans = mid;}
+\DoxyCodeLine{03565             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03566         \}}
+\DoxyCodeLine{03567         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03568         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03569         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03570         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03571           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03572             ans=start;}
+\DoxyCodeLine{03573           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03574             start = mid + 1.;}
+\DoxyCodeLine{03575         \}}
+\DoxyCodeLine{03576         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03577         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03578         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03579             end = mid -\/ 1.;}
+\DoxyCodeLine{03580         \}}
+\DoxyCodeLine{03581     \}}
+\DoxyCodeLine{03582     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03583     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03584     \textcolor{keywordtype}{double} increment = 0.1;}
+\DoxyCodeLine{03585     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03586         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03587             ans += increment;}
+\DoxyCodeLine{03588         \}}
+\DoxyCodeLine{03589         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03590         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03591         ans = ans -\/ increment;}
+\DoxyCodeLine{03592         increment = increment / 10;}
+\DoxyCodeLine{03593     \}}
+\DoxyCodeLine{03594     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03595 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\+\_\+ulong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ae0c29568372c468d83c1a5f33d4c60c6}\label{vector_8h_ae0c29568372c468d83c1a5f33d4c60c6}} 
+\index{vector.h@{vector.h}!stdev\_ushort\_vector@{stdev\_ushort\_vector}}
+\index{stdev\_ushort\_vector@{stdev\_ushort\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{stdev\_ushort\_vector()}{stdev\_ushort\_vector()}}
+{\footnotesize\ttfamily float stdev\+\_\+ushort\+\_\+vector (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function wil calculate the standard deviation for the values in a vector container.
+
+/param vec A vector data structure of type UShort
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UShort vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&vec, a, 10, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\_ushort\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l03308}{3308}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{03308                                        \{}
+\DoxyCodeLine{03309     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\_ushort\_vector}}(vec);}
+\DoxyCodeLine{03310     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03311     \textcolor{keywordtype}{float} value;}
+\DoxyCodeLine{03312     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03313         value = (float)vec-\/>array[i];}
+\DoxyCodeLine{03314         var += ((value -\/ average) * (value -\/ average));}
+\DoxyCodeLine{03315     \}}
+\DoxyCodeLine{03316     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03317 }
+\DoxyCodeLine{03318     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03319     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{03320     \textcolor{keywordtype}{float} mid;}
+\DoxyCodeLine{03321 }
+\DoxyCodeLine{03322     \textcolor{comment}{// To store the answer}}
+\DoxyCodeLine{03323     \textcolor{keywordtype}{float} ans = 0.;}
+\DoxyCodeLine{03324     \textcolor{comment}{// To find integral part of square}}
+\DoxyCodeLine{03325     \textcolor{comment}{// root of number}}
+\DoxyCodeLine{03326     \textcolor{keywordflow}{while} (start <= end) \{}
+\DoxyCodeLine{03327         \textcolor{comment}{// Find mid}}
+\DoxyCodeLine{03328         mid = (start + end) / 2;}
+\DoxyCodeLine{03329         \textcolor{comment}{// If number is perfect square}}
+\DoxyCodeLine{03330         \textcolor{comment}{// then break}}
+\DoxyCodeLine{03331         \textcolor{keywordflow}{if} (mid * mid == number) \{}
+\DoxyCodeLine{03332             ans = mid;}
+\DoxyCodeLine{03333             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{03334         \}}
+\DoxyCodeLine{03335         \textcolor{comment}{// Increment start if integral}}
+\DoxyCodeLine{03336         \textcolor{comment}{// part lies on right side}}
+\DoxyCodeLine{03337         \textcolor{comment}{// of the mid}}
+\DoxyCodeLine{03338         \textcolor{keywordflow}{if} (mid * mid < number) \{}
+\DoxyCodeLine{03339           \textcolor{comment}{//first start value should be added to answer}}
+\DoxyCodeLine{03340             ans=start;}
+\DoxyCodeLine{03341           \textcolor{comment}{//then start should be changed}}
+\DoxyCodeLine{03342             start = mid + 1.f;}
+\DoxyCodeLine{03343         \}}
+\DoxyCodeLine{03344         \textcolor{comment}{// Decrement end if integral part}}
+\DoxyCodeLine{03345         \textcolor{comment}{// lies on the left side of the mid}}
+\DoxyCodeLine{03346         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{03347             end = mid -\/ 1.f;}
+\DoxyCodeLine{03348         \}}
+\DoxyCodeLine{03349     \}}
+\DoxyCodeLine{03350     \textcolor{comment}{// To find the fractional part}}
+\DoxyCodeLine{03351     \textcolor{comment}{// of square root upto 5 decimal}}
+\DoxyCodeLine{03352     \textcolor{keywordtype}{float} increment = 0.1;}
+\DoxyCodeLine{03353     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{03354         \textcolor{keywordflow}{while} (ans * ans <= number) \{}
+\DoxyCodeLine{03355             ans += increment;}
+\DoxyCodeLine{03356         \}}
+\DoxyCodeLine{03357         \textcolor{comment}{// Loop terminates,}}
+\DoxyCodeLine{03358         \textcolor{comment}{// when ans * ans > number}}
+\DoxyCodeLine{03359         ans = ans -\/ increment;}
+\DoxyCodeLine{03360         increment = increment / 10;}
+\DoxyCodeLine{03361     \}}
+\DoxyCodeLine{03362     \textcolor{keywordflow}{return} ans;}
+\DoxyCodeLine{03363 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\+\_\+ushort\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a0684e2f1aee143f1769dd8ff908c852c}\label{vector_8h_a0684e2f1aee143f1769dd8ff908c852c}} 
 \index{vector.h@{vector.h}!sum\_char\_vector@{sum\_char\_vector}}
 \index{sum\_char\_vector@{sum\_char\_vector}!vector.h@{vector.h}}
@@ -8041,6 +9558,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02765}{2765}} of file \mbo
 \DoxyCodeLine{02771 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\+\_\+char\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a98a70f4f173d451a1ff5357f4779289d}\label{vector_8h_a98a70f4f173d451a1ff5357f4779289d}} 
 \index{vector.h@{vector.h}!sum\_double\_vector@{sum\_double\_vector}}
 \index{sum\_double\_vector@{sum\_double\_vector}!vector.h@{vector.h}}
@@ -8078,6 +9599,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02864}{2864}} of file \mbo
 \DoxyCodeLine{02870 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\+\_\+double\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_ab9177b68251ddf43f4a245afd559e462}\label{vector_8h_ab9177b68251ddf43f4a245afd559e462}} 
 \index{vector.h@{vector.h}!sum\_float\_vector@{sum\_float\_vector}}
 \index{sum\_float\_vector@{sum\_float\_vector}!vector.h@{vector.h}}
@@ -8115,6 +9640,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02855}{2855}} of file \mbo
 \DoxyCodeLine{02861 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\+\_\+float\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_aaf01dd9c2caec4100d4315bd8d525a30}\label{vector_8h_aaf01dd9c2caec4100d4315bd8d525a30}} 
 \index{vector.h@{vector.h}!sum\_int\_vector@{sum\_int\_vector}}
 \index{sum\_int\_vector@{sum\_int\_vector}!vector.h@{vector.h}}
@@ -8152,6 +9681,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02801}{2801}} of file \mbo
 \DoxyCodeLine{02807 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\+\_\+int\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_af2df2f0fe19814004ab61a91521d7b21}\label{vector_8h_af2df2f0fe19814004ab61a91521d7b21}} 
 \index{vector.h@{vector.h}!sum\_ldouble\_vector@{sum\_ldouble\_vector}}
 \index{sum\_ldouble\_vector@{sum\_ldouble\_vector}!vector.h@{vector.h}}
@@ -8189,6 +9722,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02873}{2873}} of file \mbo
 \DoxyCodeLine{02879 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\+\_\+ldouble\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a838510507e7f386e844fd1e5e3ae494a}\label{vector_8h_a838510507e7f386e844fd1e5e3ae494a}} 
 \index{vector.h@{vector.h}!sum\_llong\_vector@{sum\_llong\_vector}}
 \index{sum\_llong\_vector@{sum\_llong\_vector}!vector.h@{vector.h}}
@@ -8226,6 +9763,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02837}{2837}} of file \mbo
 \DoxyCodeLine{02843 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\+\_\+llong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_af2ca62fb5fa87cccef8750d24b3979da}\label{vector_8h_af2ca62fb5fa87cccef8750d24b3979da}} 
 \index{vector.h@{vector.h}!sum\_long\_vector@{sum\_long\_vector}}
 \index{sum\_long\_vector@{sum\_long\_vector}!vector.h@{vector.h}}
@@ -8263,6 +9804,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02819}{2819}} of file \mbo
 \DoxyCodeLine{02825 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\+\_\+long\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a54d410de6d79f482b3d560bcb78fd2ff}\label{vector_8h_a54d410de6d79f482b3d560bcb78fd2ff}} 
 \index{vector.h@{vector.h}!sum\_short\_vector@{sum\_short\_vector}}
 \index{sum\_short\_vector@{sum\_short\_vector}!vector.h@{vector.h}}
@@ -8300,6 +9845,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02783}{2783}} of file \mbo
 \DoxyCodeLine{02789 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\+\_\+short\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a643cb8d97c368f436a0010dacfca2401}\label{vector_8h_a643cb8d97c368f436a0010dacfca2401}} 
 \index{vector.h@{vector.h}!sum\_uchar\_vector@{sum\_uchar\_vector}}
 \index{sum\_uchar\_vector@{sum\_uchar\_vector}!vector.h@{vector.h}}
@@ -8337,6 +9886,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02774}{2774}} of file \mbo
 \DoxyCodeLine{02780 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\+\_\+uchar\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a791fe9c8f9bd1d04158b01c3aa022edd}\label{vector_8h_a791fe9c8f9bd1d04158b01c3aa022edd}} 
 \index{vector.h@{vector.h}!sum\_uint\_vector@{sum\_uint\_vector}}
 \index{sum\_uint\_vector@{sum\_uint\_vector}!vector.h@{vector.h}}
@@ -8374,6 +9927,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02810}{2810}} of file \mbo
 \DoxyCodeLine{02816 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\+\_\+uint\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_af1cc1dfd0470ab00fc1537ebcbb5c089}\label{vector_8h_af1cc1dfd0470ab00fc1537ebcbb5c089}} 
 \index{vector.h@{vector.h}!sum\_ullong\_vector@{sum\_ullong\_vector}}
 \index{sum\_ullong\_vector@{sum\_ullong\_vector}!vector.h@{vector.h}}
@@ -8411,6 +9968,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02846}{2846}} of file \mbo
 \DoxyCodeLine{02852 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\+\_\+ullong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a3233da20e23c20659dd5aba81307b58d}\label{vector_8h_a3233da20e23c20659dd5aba81307b58d}} 
 \index{vector.h@{vector.h}!sum\_ulong\_vector@{sum\_ulong\_vector}}
 \index{sum\_ulong\_vector@{sum\_ulong\_vector}!vector.h@{vector.h}}
@@ -8448,6 +10009,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02828}{2828}} of file \mbo
 \DoxyCodeLine{02834 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\+\_\+ulong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a67f48de636722d00447f21d5040f8d81}\label{vector_8h_a67f48de636722d00447f21d5040f8d81}} 
 \index{vector.h@{vector.h}!sum\_ushort\_vector@{sum\_ushort\_vector}}
 \index{sum\_ushort\_vector@{sum\_ushort\_vector}!vector.h@{vector.h}}
@@ -8485,6 +10050,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02792}{2792}} of file \mbo
 \DoxyCodeLine{02798 \}}
 
 \end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\+\_\+ushort\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_a2543513836c5661ccdd157851a7088b8}\label{vector_8h_a2543513836c5661ccdd157851a7088b8}} 
 \index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}
 \index{VECTOR\_STRUCT@{VECTOR\_STRUCT}!vector.h@{vector.h}}

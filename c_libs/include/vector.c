@@ -3037,4 +3037,852 @@ LDble cumsum_ldouble_vector(LDble *vec) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// AVERAGE_TYPE_VEC FUNCTIONS
+
+char average_char_vector(Char *vec) {
+	char sum = sum_char_vector(vec);
+	char avg = sum / (char)vec->active_length;
+	return avg;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned char average_uchar_vector(UChar *vec) {
+	unsigned char sum = sum_uchar_vector(vec);
+	unsigned char avg = sum / (unsigned char)vec->active_length;
+	return avg;
+}
+// ------------------------------------------------------------------------------------------
+float average_short_vector(Short *vec) {
+	short int sum = sum_short_vector(vec);
+	float avg = sum / (float)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_ushort_vector(UShort *vec) {
+	unsigned short int sum = sum_ushort_vector(vec);
+	float avg = sum / (float)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_int_vector(Int *vec) {
+	int sum = sum_int_vector(vec);
+	float avg = sum / (float)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_uint_vector(UInt *vec) {
+	unsigned int sum = sum_uint_vector(vec);
+	float avg = sum / (float)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+double average_long_vector(LInt *vec) {
+	long int sum = sum_long_vector(vec);
+	double avg = sum / (double)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+double average_ulong_vector(ULInt *vec) {
+	unsigned long int sum = sum_ulong_vector(vec);
+	double avg = sum / (double)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+long double average_llong_vector(LLInt *vec) {
+	long long int sum = sum_llong_vector(vec);
+	long double avg = sum / (long double)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+long double average_ullong_vector(ULLInt *vec) {
+	unsigned long long int sum = sum_ullong_vector(vec);
+	long double avg = sum / (long double)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_float_vector(Flt *vec) {
+	float sum = sum_float_vector(vec);
+	float avg = sum / (float)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+double average_double_vector(Dble *vec) {
+	double sum = sum_double_vector(vec);
+	double avg = sum / (double)vec->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+long double average_ldouble_vector(LDble *vec) {
+	long double sum = sum_ldouble_vector(vec);
+	long double avg = sum / (long double)vec->active_length;
+	return avg;
+}
+// ==========================================================================================
+// ==========================================================================================
+// STDEV_TYPE_VEC FUNCTIONS
+
+char stdev_char_vector(Char *vec) {
+	char average = average_char_vector(vec);
+	char var = 0.0;
+	char value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	char interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	char number = interm;
+    char start = 0.0f, end = number;
+    char mid;
+
+    // To store the answer
+    char ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1f;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// ------------------------------------------------------------------------------------------
+
+char stdev_uchar_vector(UChar *vec) {
+	char average = average_uchar_vector(vec);
+	char var = 0.0;
+	char value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	char interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	char number = interm;
+    char start = 0.0f, end = number;
+    char mid;
+
+    // To store the answer
+    char ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1f;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// ------------------------------------------------------------------------------------------
+
+float stdev_short_vector(Short *vec) {
+	float average = average_short_vector(vec);
+	float var = 0.0;
+	float value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	float number = interm;
+    float start = 0.0f, end = number;
+    float mid;
+
+    // To store the answer
+    float ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1f;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_ushort_vector(UShort *vec) {
+	float average = average_ushort_vector(vec);
+	float var = 0.0;
+	float value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	float number = interm;
+    float start = 0.0f, end = number;
+    float mid;
+
+    // To store the answer
+    float ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_int_vector(Int *vec) {
+	float average = average_int_vector(vec);
+	float var = 0.0;
+	float value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	float number = interm;
+    float start = 0.0f, end = number;
+    float mid;
+
+    // To store the answer
+    float ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_uint_vector(UInt *vec) {
+	float average = average_uint_vector(vec);
+	float var = 0.0;
+	float value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	float number = interm;
+    float start = 0.0f, end = number;
+    float mid;
+
+    // To store the answer
+    float ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_long_vector(LInt *vec) {
+	double average = average_long_vector(vec);
+	double var = 0.0;
+	double value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (double)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	double interm = (1.0 / ((double)vec->active_length - 1.0)) * var;
+
+	double number = interm;
+    double start = 0.0, end = number;
+    double mid;
+
+    // To store the answer
+    double ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_ulong_vector(ULInt *vec) {
+	double average = average_ulong_vector(vec);
+	double var = 0.0;
+	double value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (double)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	double interm = (1.0 / ((double)vec->active_length - 1.0)) * var;
+
+	double number = interm;
+    double start = 0.0, end = number;
+    double mid;
+
+    // To store the answer
+    double ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+long double stdev_llong_vector(LLInt *vec) {
+	long double average = average_llong_vector(vec);
+	long double var = 0.0;
+	long double value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (long double)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	long double interm = (1.0 / ((long double)vec->active_length - 1.0)) * var;
+
+	long double number = interm;
+    long double start = 0.0, end = number;
+    long double mid;
+
+    // To store the answer
+    long double ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    long double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+long double stdev_ullong_vector(ULLInt *vec) {
+	long double average = average_ullong_vector(vec);
+	long double var = 0.0;
+	long double value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (long double)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	long double interm = (1.0 / ((long double)vec->active_length - 1.0)) * var;
+
+	long double number = interm;
+    long double start = 0.0, end = number;
+    long double mid;
+
+    // To store the answer
+    long double ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    long double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_float_vector(Flt *vec) {
+	float average = average_float_vector(vec);
+	float var = 0.0;
+	float value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (float)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+
+	float number = interm;
+    float start = 0.0, end = number;
+    float mid;
+
+    // To store the answer
+    float ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_double_vector(Dble *vec) {
+	double average = average_double_vector(vec);
+	double var = 0.0;
+	double value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (double)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	double interm = (1.0 / ((double)vec->active_length - 1.0)) * var;
+
+	double number = interm;
+    double start = 0.0, end = number;
+    double mid;
+
+    // To store the answer
+    double ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+long double stdev_ldouble_vector(LDble *vec) {
+	long double average = average_ldouble_vector(vec);
+	long double var = 0.0;
+	long double value;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		value = (long double)vec->array[i];
+		var += ((value - average) * (value - average));
+	}
+	long double interm = (1.0 / ((long double)vec->active_length - 1.0)) * var;
+
+	long double number = interm;
+    long double start = 0.0, end = number;
+    long double mid;
+
+    // To store the answer
+    long double ans = 0.;
+    // To find integral part of square
+    // root of number
+    while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    long double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
