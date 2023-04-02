@@ -231,6 +231,20 @@
  * - `min_double_vector()`: Function to determine the minimum value in an double vector or array.
  * - `min_ldouble_vector()`: Function to determine the minimum value in an long double vector or array.
  *
+ * - `range_char_vector()`: Function to produce a range of char values as a vector.
+ * - `range_uchar_vector()`: Function to produce a range of unsigned char values as a vector.
+ * - `range_short_vector()`: Function to produce a range of short integer values as a vector.
+ * - `range_ushort_vector()`: Function to produce a range of unsigned short integer values as a vector.
+ * - `range_int_vector()`: Function to produce a range of integer values as a vector.
+ * - `range_uint_vector()`: Function to produce a range of unsigned integer values as a vector.
+ * - `range_long_vector()`: Function to produce a range of long integer values as a vector.
+ * - `range_ulong_vector()`: Function to produce a range of unsigned long short integer values as a vector.
+ * - `range_llong_vector()`: Function to produce a range of long long integer values as a vector.
+ * - `range_ullong_vector()`: Function to produce a range of unsigned long long short integer values as a vector.
+ * - `range_float_vector()`: Function to produce a range of float values as a vector.
+ * - `range_double_vector()`: Function to produce a range of double values as a vector.
+ * - `range_ldouble_vector()`: Function to produce a range of long double values as a vector.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

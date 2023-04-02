@@ -4907,4 +4907,297 @@ double min_double_vector(Dble *vec);
 long double min_ldouble_vector(LDble *vec);
 // ==========================================================================================
 // ==========================================================================================
+// RANGE_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type Char
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec, 10);
+ * range_char_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+void range_char_vector(Char *vec, char start, char end, char delta);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type UChar
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec, 10);
+ * range_uchar_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+void range_uchar_vector(UChar *vec, unsigned char start, unsigned char end, unsigned char delta);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type Short
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 10);
+ * range_short_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+void range_short_vector(Short *vec, short int start, short int end, short int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type UShort
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 10);
+ * range_ushort_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+void range_ushort_vector(UShort *vec, unsigned short int start, unsigned short int end,
+		                 unsigned short int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type Int
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 10);
+ * range_int_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+void range_int_vector(Int *vec, int start, int end, int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type UInt
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 10);
+ * range_uint_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+void range_uint_vector(UInt *vec, unsigned int start, unsigned int end, unsigned int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type LInt
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 10);
+ * range_long_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+void range_long_vector(LInt *vec, long int start, long int end, long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type ULInt
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 10);
+ * range_ulong_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+void range_ulong_vector(ULInt *vec, unsigned long int start, unsigned long int end,
+		                unsigned long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type LLInt
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 10);
+ * range_llong_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+void range_llong_vector(LLInt *vec, long long int start, long long int end,
+		                long long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type ULLInt
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 10);
+ * range_ullong_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+void range_ullong_vector(ULLInt *vec, unsigned long long int start,
+		                 unsigned long long int end,
+		                 unsigned long long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type Flt
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 10);
+ * range_float_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+void range_float_vector(Flt *vec, float start, float end, float delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type Dble
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * Dble vec;
+ * init_double_vectoe(&vec, 10);
+ * range_double_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+void range_double_vector(Dble *vec, double start, double end, double delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a vector data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A vector data structure of type LDble
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 10);
+ * range_ldouble_vector(&vec, 2, 20, 2);
+ * PRINT(vec);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+void range_ldouble_vector(LDble *vec, long double start, long double end, long double delta);
+// ==========================================================================================
+// ==========================================================================================
 // eof

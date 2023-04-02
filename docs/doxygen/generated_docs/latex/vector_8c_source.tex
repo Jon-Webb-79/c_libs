@@ -4167,6 +4167,144 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04164}04164 \}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04165}04165 \textcolor{comment}{// ==========================================================================================}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04166}04166 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04167}04167 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04167}04167 \textcolor{comment}{// RANGE\_TYPE\_VEC FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04168}04168 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04169}\mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{04169}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\_char\_vector}}(Char *vec, \textcolor{keywordtype}{char} start, \textcolor{keywordtype}{char} end, \textcolor{keywordtype}{char} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04170}04170     \textcolor{keywordtype}{char} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04171}04171     \textcolor{keywordtype}{char} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04172}04172     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04173}04173         \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04174}04174         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04175}04175     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04176}04176 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04177}04177 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04178}04178 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04179}\mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{04179}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\_uchar\_vector}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} start, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} end, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04180}04180     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04181}04181     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04182}04182     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04183}04183         \mbox{\hyperlink{vector_8h_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04184}04184         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04185}04185     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04186}04186 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04187}04187 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04188}04188 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04189}\mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{04189}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\_short\_vector}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} end, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04190}04190     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04191}04191     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04192}04192     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04193}04193         \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04194}04194         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04195}04195     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04196}04196 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04197}04197 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04198}04198 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04199}\mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{04199}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\_ushort\_vector}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} end,}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04200}04200                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04201}04201     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04202}04202     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04203}04203     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04204}04204         \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04205}04205         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04206}04206     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04207}04207 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04208}04208 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04209}04209 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04210}\mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{04210}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\_int\_vector}}(Int *vec, \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{int} end, \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04211}04211     \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04212}04212     \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04213}04213     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04214}04214         \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04215}04215         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04216}04216     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04217}04217 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04218}04218 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04219}04219 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04220}\mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{04220}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\_uint\_vector}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} end,}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04221}04221                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04222}04222     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04223}04223     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04224}04224     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04225}04225         \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04226}04226         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04227}04227     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04228}04228 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04229}04229 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04230}04230 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04231}\mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{04231}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\_long\_vector}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} end, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04232}04232     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04233}04233     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04234}04234     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04235}04235         \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04236}04236         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04237}04237     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04238}04238 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04239}04239 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04240}04240 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04241}\mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{04241}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\_ulong\_vector}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} end,}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04242}04242                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04243}04243     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04244}04244     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04245}04245     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04246}04246         \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04247}04247         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04248}04248     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04249}04249 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04250}04250 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04251}04251 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04252}\mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{04252}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{range\_llong\_vector}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} end, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04253}04253     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04254}04254     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04255}04255     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04256}04256         \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04257}04257         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04258}04258     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04259}04259 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04260}04260 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04261}04261 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04262}\mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{04262}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\_ullong\_vector}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} start, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} end,}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04263}04263                      \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04264}04264     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04265}04265     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04266}04266     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04267}04267         \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04268}04268         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04269}04269     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04270}04270 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04271}04271 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04272}04272 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04273}\mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{04273}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\_float\_vector}}(Flt *vec, \textcolor{keywordtype}{float} start, \textcolor{keywordtype}{float} end, \textcolor{keywordtype}{float} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04274}04274     \textcolor{keywordtype}{float} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04275}04275     \textcolor{keywordtype}{float} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04276}04276     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04277}04277         \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04278}04278         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04279}04279     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04280}04280 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04281}04281 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04282}04282 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04283}\mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{04283}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\_double\_vector}}(Dble *vec, \textcolor{keywordtype}{double} start, \textcolor{keywordtype}{double} end,}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04284}04284                       \textcolor{keywordtype}{double} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04285}04285     \textcolor{keywordtype}{double} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04286}04286     \textcolor{keywordtype}{double} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04287}04287     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04288}04288         \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04289}04289         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04290}04290     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04291}04291 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04292}04292 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04293}04293 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04294}\mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{04294}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\_ldouble\_vector}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} start, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} end,}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04295}04295                        \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} delta) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04296}04296     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} num = (end -\/ start) / delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04297}04297     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} advance = start;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04298}04298     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04299}04299         \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04300}04300         advance += delta;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04301}04301     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04302}04302 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04303}04303 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04304}04304 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04305}04305 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

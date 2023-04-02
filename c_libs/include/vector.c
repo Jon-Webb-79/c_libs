@@ -4164,4 +4164,142 @@ double min_double_vector(Dble *vec) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// RANGE_TYPE_VEC FUNCTIONS
+
+void range_char_vector(Char *vec, char start, char end, char delta) {
+	char num = (end - start) / delta;
+	char advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_char_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void range_uchar_vector(UChar *vec, unsigned char start, unsigned char end, unsigned char delta) {
+	unsigned char num = (end - start) / delta;
+	unsigned char advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_uchar_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void range_short_vector(Short *vec, short int start, short int end, short int delta) {
+	short int num = (end - start) / delta;
+	short int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_short_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_ushort_vector(UShort *vec, unsigned short int start, unsigned short int end,
+		              unsigned short int delta) {
+	unsigned short int num = (end - start) / delta;
+	unsigned short int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_ushort_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_int_vector(Int *vec, int start, int end, int delta) {
+	int num = (end - start) / delta;
+	int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_int_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_uint_vector(UInt *vec, unsigned int start, unsigned int end,
+		            unsigned int delta) {
+	unsigned int num = (end - start) / delta;
+	unsigned int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_uint_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_long_vector(LInt *vec, long int start, long int end, long int delta) {
+	long int num = (end - start) / delta;
+	long int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_long_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_ulong_vector(ULInt *vec, unsigned long int start, unsigned long int end,
+		             unsigned long int delta) {
+	unsigned long int num = (end - start) / delta;
+	unsigned long int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_ulong_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_llong_vector(LLInt *vec, long long int start, long long int end, long long int delta) {
+	long long int num = (end - start) / delta;
+	long long int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_llong_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_ullong_vector(ULLInt *vec, unsigned long long int start, unsigned long long int end,
+		             unsigned long long int delta) {
+	unsigned long long int num = (end - start) / delta;
+	unsigned long long int advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_ullong_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_float_vector(Flt *vec, float start, float end, float delta) {
+	float num = (end - start) / delta;
+	float advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_float_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_double_vector(Dble *vec, double start, double end,
+		              double delta) {
+	double num = (end - start) / delta;
+	double advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_double_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void range_ldouble_vector(LDble *vec, long double start, long double end,
+		               long double delta) {
+	long double num = (end - start) / delta;
+	long double advance = start;
+	for (size_t i = 0; i < num + 1; i++) {
+		push_ldouble_vector(vec, advance, vec->active_length);
+		advance += delta;
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
