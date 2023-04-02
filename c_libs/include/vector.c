@@ -3885,4 +3885,283 @@ long double stdev_ldouble_vector(LDble *vec) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// MAX_TYPE_VEC FUNCTIONS
+
+char max_char_vector(Char *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	char max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned char max_uchar_vector(UChar *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned char max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// ------------------------------------------------------------------------------------------
+
+short int max_short_vector(Short *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	short int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int max_ushort_vector(UShort *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned short int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+int max_int_vector(Int *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int max_uint_vector(UInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long int max_long_vector(LInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int max_ulong_vector(ULInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long long int max_llong_vector(LLInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	long long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int max_ullong_vector(ULLInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned long long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+float max_float_vector(Flt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	float max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+double max_double_vector(Dble *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	double max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long double max_ldouble_vector(LDble *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	long double max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max < vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// ==========================================================================================
+// ==========================================================================================
+// MIN_TYPE_VEC FUNCTIONS
+
+char min_char_vector(Char *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	char max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned char min_uchar_vector(UChar *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned char max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// ------------------------------------------------------------------------------------------
+
+short int min_short_vector(Short *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	short int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int min_ushort_vector(UShort *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned short int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+int min_int_vector(Int *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int min_uint_vector(UInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long int min_long_vector(LInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int min_ulong_vector(ULInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long long int min_llong_vector(LLInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	long long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int min_ullong_vector(ULLInt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	unsigned long long int max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+float min_float_vector(Flt *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	float max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+double min_double_vector(Dble *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	double max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

@@ -50,6 +50,7 @@ var menudata={children:[
 {text:"d",url:"globals_func_d.html#index_d"},
 {text:"f",url:"globals_func_f.html#index_f"},
 {text:"i",url:"globals_func_i.html#index_i"},
+{text:"m",url:"globals_func_m.html#index_m"},
 {text:"p",url:"globals_func_p.html#index_p"},
 {text:"r",url:"globals_func_r.html#index_r"},
 {text:"s",url:"globals_func_s.html#index_s"},

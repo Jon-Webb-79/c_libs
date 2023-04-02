@@ -3888,6 +3888,285 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03885}03885 \}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03886}03886 \textcolor{comment}{// ==========================================================================================}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03887}03887 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03888}03888 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03888}03888 \textcolor{comment}{// MAX\_TYPE\_VEC FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03889}03889 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03890}\mbox{\hyperlink{vector_8c_ac45503684793e5582c2bdac1d7d52ba3}{03890}} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_ac45503684793e5582c2bdac1d7d52ba3}{max\_char\_vector}}(Char *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03891}03891     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03892}03892 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03893}03893     \textcolor{keywordtype}{char} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03894}03894     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03895}03895         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03896}03896     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03897}03897     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03898}03898 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03899}03899 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03900}03900 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03901}\mbox{\hyperlink{vector_8c_a20c0c3f6f0baca86dd48608bbf4fb02e}{03901}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_a20c0c3f6f0baca86dd48608bbf4fb02e}{max\_uchar\_vector}}(UChar *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03902}03902     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03903}03903 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03904}03904     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03905}03905     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03906}03906         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03907}03907     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03908}03908     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03909}03909 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03910}03910 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03911}03911 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03912}\mbox{\hyperlink{vector_8c_a9322308e4f52e03ae336549fd42b7934}{03912}} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9322308e4f52e03ae336549fd42b7934}{max\_short\_vector}}(Short *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03913}03913     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03914}03914 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03915}03915     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03916}03916     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03917}03917         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03918}03918     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03919}03919     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03920}03920 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03921}03921 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03922}03922 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03923}\mbox{\hyperlink{vector_8c_a60d805f5dc29474286fb04c939b5c509}{03923}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a60d805f5dc29474286fb04c939b5c509}{max\_ushort\_vector}}(UShort *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03924}03924     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03925}03925 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03926}03926     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03927}03927     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03928}03928         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03929}03929     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03930}03930     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03931}03931 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03932}03932 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03933}03933 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03934}\mbox{\hyperlink{vector_8c_a2b015405abe5287fffe31e5dc0e31808}{03934}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a2b015405abe5287fffe31e5dc0e31808}{max\_int\_vector}}(Int *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03935}03935     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03936}03936 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03937}03937     \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03938}03938     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03939}03939         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03940}03940     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03941}03941     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03942}03942 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03943}03943 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03944}03944 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03945}\mbox{\hyperlink{vector_8c_a174988fd6cd94257cb6332b91429839d}{03945}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a174988fd6cd94257cb6332b91429839d}{max\_uint\_vector}}(UInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03946}03946     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03947}03947 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03948}03948     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03949}03949     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03950}03950         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03951}03951     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03952}03952     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03953}03953 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03954}03954 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03955}03955 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03956}\mbox{\hyperlink{vector_8c_a3b06accf11f120a22aec6d59ed16d9db}{03956}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a3b06accf11f120a22aec6d59ed16d9db}{max\_long\_vector}}(LInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03957}03957     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03958}03958 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03959}03959     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03960}03960     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03961}03961         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03962}03962     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03963}03963     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03964}03964 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03965}03965 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03966}03966 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03967}\mbox{\hyperlink{vector_8c_ab73b0a00fcc4f391123628e2913a19bb}{03967}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ab73b0a00fcc4f391123628e2913a19bb}{max\_ulong\_vector}}(ULInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03968}03968     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03969}03969 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03970}03970     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03971}03971     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03972}03972         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03973}03973     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03974}03974     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03975}03975 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03976}03976 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03977}03977 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03978}\mbox{\hyperlink{vector_8c_a812e8c27f2970204cc8460728d13c96f}{03978}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a812e8c27f2970204cc8460728d13c96f}{max\_llong\_vector}}(LLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03979}03979     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03980}03980 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03981}03981     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03982}03982     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03983}03983         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03984}03984     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03985}03985     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03986}03986 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03987}03987 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03988}03988 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03989}\mbox{\hyperlink{vector_8c_a1960c8508e6fe43960e240626c497764}{03989}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1960c8508e6fe43960e240626c497764}{max\_ullong\_vector}}(ULLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03990}03990     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03991}03991 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03992}03992     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03993}03993     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03994}03994         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03995}03995     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03996}03996     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03997}03997 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03998}03998 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03999}03999 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04000}\mbox{\hyperlink{vector_8c_a6a09841dc59b5a463a167ee7c2911efe}{04000}} \textcolor{keywordtype}{float} \mbox{\hyperlink{vector_8c_a6a09841dc59b5a463a167ee7c2911efe}{max\_float\_vector}}(Flt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04001}04001     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04002}04002 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04003}04003     \textcolor{keywordtype}{float} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04004}04004     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04005}04005         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04006}04006     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04007}04007     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04008}04008 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04009}04009 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04010}04010 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04011}\mbox{\hyperlink{vector_8c_a2da642346c710d417636ad41cd99b9a9}{04011}} \textcolor{keywordtype}{double} \mbox{\hyperlink{vector_8c_a2da642346c710d417636ad41cd99b9a9}{max\_double\_vector}}(Dble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04012}04012     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04013}04013 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04014}04014     \textcolor{keywordtype}{double} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04015}04015     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04016}04016         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04017}04017     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04018}04018     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04019}04019 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04020}04020 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04021}04021 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04022}\mbox{\hyperlink{vector_8c_adcda6720fac922e691d3bf4927edb42a}{04022}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} \mbox{\hyperlink{vector_8c_adcda6720fac922e691d3bf4927edb42a}{max\_ldouble\_vector}}(LDble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04023}04023     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04024}04024 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04025}04025     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04026}04026     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04027}04027         \textcolor{keywordflow}{if} (max < vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04028}04028     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04029}04029     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04030}04030 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04031}04031 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04032}04032 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04033}04033 \textcolor{comment}{// MIN\_TYPE\_VEC FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04034}04034 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04035}\mbox{\hyperlink{vector_8c_a891486b9b55a8c3ac25a1225553fb0c7}{04035}} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_a891486b9b55a8c3ac25a1225553fb0c7}{min\_char\_vector}}(Char *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04036}04036     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04037}04037 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04038}04038     \textcolor{keywordtype}{char} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04039}04039     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04040}04040         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04041}04041     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04042}04042     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04043}04043 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04044}04044 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04045}04045 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04046}\mbox{\hyperlink{vector_8c_a1dbc7c797a21eb6c44d009cb497b50ae}{04046}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_a1dbc7c797a21eb6c44d009cb497b50ae}{min\_uchar\_vector}}(UChar *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04047}04047     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04048}04048 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04049}04049     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04050}04050     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04051}04051         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04052}04052     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04053}04053     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04054}04054 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04055}04055 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04056}04056 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04057}\mbox{\hyperlink{vector_8c_a21be2c6c074005bfa1c33603299f3181}{04057}} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a21be2c6c074005bfa1c33603299f3181}{min\_short\_vector}}(Short *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04058}04058     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04059}04059 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04060}04060     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04061}04061     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04062}04062         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04063}04063     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04064}04064     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04065}04065 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04066}04066 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04067}04067 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04068}\mbox{\hyperlink{vector_8c_a3b2bb12ccbe4e256ec4da071673dd601}{04068}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a3b2bb12ccbe4e256ec4da071673dd601}{min\_ushort\_vector}}(UShort *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04069}04069     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04070}04070 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04071}04071     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04072}04072     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04073}04073         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04074}04074     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04075}04075     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04076}04076 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04077}04077 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04078}04078 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04079}\mbox{\hyperlink{vector_8c_aad99e117541f381f0c14f5620507f6e1}{04079}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aad99e117541f381f0c14f5620507f6e1}{min\_int\_vector}}(Int *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04080}04080     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04081}04081 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04082}04082     \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04083}04083     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04084}04084         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04085}04085     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04086}04086     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04087}04087 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04088}04088 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04089}04089 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04090}\mbox{\hyperlink{vector_8c_a449905d346deae4f4a83314c592a5b80}{04090}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a449905d346deae4f4a83314c592a5b80}{min\_uint\_vector}}(UInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04091}04091     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04092}04092 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04093}04093     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04094}04094     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04095}04095         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04096}04096     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04097}04097     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04098}04098 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04099}04099 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04100}04100 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04101}\mbox{\hyperlink{vector_8c_aaff52778fc2f05ace6de3570530e9068}{04101}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aaff52778fc2f05ace6de3570530e9068}{min\_long\_vector}}(LInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04102}04102     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04103}04103 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04104}04104     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04105}04105     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04106}04106         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04107}04107     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04108}04108     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04109}04109 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04110}04110 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04111}04111 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04112}\mbox{\hyperlink{vector_8c_a98b9ea464f1a6e1012f3aae9031a8a13}{04112}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a98b9ea464f1a6e1012f3aae9031a8a13}{min\_ulong\_vector}}(ULInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04113}04113     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04114}04114 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04115}04115     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04116}04116     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04117}04117         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04118}04118     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04119}04119     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04120}04120 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04121}04121 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04122}04122 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04123}\mbox{\hyperlink{vector_8c_ad1a7c046cbcac65a71e5442ec5680bdc}{04123}} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ad1a7c046cbcac65a71e5442ec5680bdc}{min\_llong\_vector}}(LLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04124}04124     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04125}04125 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04126}04126     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04127}04127     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04128}04128         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04129}04129     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04130}04130     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04131}04131 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04132}04132 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04133}04133 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04134}\mbox{\hyperlink{vector_8c_a10aea428d676da30abd474d11dbab300}{04134}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a10aea428d676da30abd474d11dbab300}{min\_ullong\_vector}}(ULLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04135}04135     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04136}04136 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04137}04137     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04138}04138     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04139}04139         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04140}04140     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04141}04141     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04142}04142 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04143}04143 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04144}04144 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04145}\mbox{\hyperlink{vector_8c_a37e7749c40c9ecefb35c6f677e6e2786}{04145}} \textcolor{keywordtype}{float} \mbox{\hyperlink{vector_8c_a37e7749c40c9ecefb35c6f677e6e2786}{min\_float\_vector}}(Flt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04146}04146     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04147}04147 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04148}04148     \textcolor{keywordtype}{float} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04149}04149     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04150}04150         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04151}04151     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04152}04152     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04153}04153 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04154}04154 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04155}04155 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04156}\mbox{\hyperlink{vector_8c_ac870c654ea8b8143650fb8504880d80a}{04156}} \textcolor{keywordtype}{double} \mbox{\hyperlink{vector_8c_ac870c654ea8b8143650fb8504880d80a}{min\_double\_vector}}(Dble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04157}04157     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04158}04158 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04159}04159     \textcolor{keywordtype}{double} max = vec-\/>array[0];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04160}04160     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04161}04161         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04162}04162     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04163}04163     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04164}04164 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04165}04165 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04166}04166 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04167}04167 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

@@ -4381,4 +4381,530 @@ double stdev_double_vector(Dble *vec);
 long double stdev_ldouble_vector(LDble *vec);
 // ==========================================================================================
 // ==========================================================================================
+// MAX_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type Char
+ *
+ * /param vec A vector data structure of type Char
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec, 5);
+ * char a[5] = { 1, 2, 3, 4, 5};
+ * insert_char_vector(&vec, a, 5, 0);
+ * char max = max_char_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_char_vector(&vec);
+ * @endcode
+ */
+char max_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type UChar
+ *
+ * /param vec A vector data structure of type UChar
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec, 5);
+ * unsigned char a[5] = { 1, 2, 3, 4, 5};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * unsigned char max = max_uchar_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+unsigned char max_uchar_vector(UChar *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type Short
+ *
+ * /param vec A vector data structure of type Short
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 5);
+ * short int a[5] = { 1, 2, 3, 4, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * short int max = max_short_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_short_vector(&vec);
+ * @endcode
+ */
+short int max_short_vector(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type UShort
+ *
+ * /param vec A vector data structure of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 5);
+ * unsigned short int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * unsigned short int max = max_ushort_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+unsigned short int max_ushort_vector(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type Int
+ *
+ * /param vec A vector data structure of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 5);
+ * int a[5] = { 1, 2, 3, 4, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * int max = max_int_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int max_int_vector(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type UInt
+ *
+ * /param vec A vector data structure of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 5);
+ * unsigned int a[5] = { 1, 2, 3, 4, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * unsigned int max = max_uint_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+unsigned int max_uint_vector(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type LInt
+ *
+ * /param vec A vector data structure of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 5);
+ * long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * long int max = max_long_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_long_vector(&vec);
+ * @endcode
+ */
+long int max_long_vector(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type ULInt
+ *
+ * /param vec A vector data structure of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 5);
+ * unsigned long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * unsigned long int max = max_ulong_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+unsigned long int max_ulong_vector(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type LLInt
+ *
+ * /param vec A vector data structure of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 5);
+ * long long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * long long int max = max_llong_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+long long int max_llong_vector(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type ULLInt
+ *
+ * /param vec A vector data structure of type ULLInt
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 5);
+ * unsigned long long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * unsigned long long int max = max_ullong_vector(&vec);
+ * PRINT(max);
+ * // >> 5
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+unsigned long long int max_ullong_vector(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type Flt
+ *
+ * /param vec A vector data structure of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 5);
+ * float a[5] = { 1.1, 2.2, 3.3, 4.4, 5.5};
+ * insert_float_vector(&vec, a, 5, 0);
+ * float max = max_float_vector(&vec);
+ * PRINT(max);
+ * // >> 5.5
+ * free_float_vector(&vec);
+ * @endcode
+ */
+float max_float_vector(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type Dble
+ *
+ * /param vec A vector data structure of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec, 5);
+ * double a[5] = { 1.1, 2.2, 3.3, 4.4, 5.5};
+ * insert_double_vector(&vec, a, 5, 0);
+ * double max = max_double_vector(&vec);
+ * PRINT(max);
+ * // >> 5.5
+ * free_double_vector(&vec);
+ * @endcode
+ */
+double max_double_vector(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the max value in a vector data structure
+ * of type LDble
+ *
+ * /param vec A vector data structure of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 5);
+ * long double a[5] = { 1.1, 2.2, 3.3, 4.4, 5.5};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * long double max = max_ldouble_vector(&vec);
+ * PRINT(max);
+ * // >> 5.5
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+long double max_ldouble_vector(LDble *vec);
+// ==========================================================================================
+// ==========================================================================================
+// MIN_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type Char
+ *
+ * /param vec A vector data structure of type Char
+ * /return min The minimum value
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec, 5);
+ * char a[5] = { 1, 2, 3, 4, 5};
+ * insert_char_vector(&vec, a, 5, 0);
+ * char min = min_char_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_char_vector(&vec);
+ * @endcode
+ */
+char min_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type UChar
+ *
+ * /param vec A vector data structure of type Short
+ * /param min The minimum values
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec, 5);
+ * unsigned char a[5] = { 1, 2, 3, 4, 5};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * unsigned char min = min_uchar_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+unsigned char min_uchar_vector(UChar *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type Short
+ *
+ * /param vec A vector data structure of type Short
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 5);
+ * short int a[5] = { 1, 2, 3, 4, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * short int min = min_short_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_short_vector(&vec);
+ * @endcode
+ */
+short int min_short_vector(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type UShort
+ *
+ * /param vec A vector data structure of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 5);
+ * unsigned short int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * unsigned short int min = min_ushort_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+unsigned short int min_ushort_vector(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type Int
+ *
+ * /param vec A vector data structure of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 5);
+ * int a[5] = { 1, 2, 3, 4, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * int min = min_int_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int min_int_vector(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type UInt
+ *
+ * /param vec A vector data structure of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 5);
+ * unsigned int a[5] = { 1, 2, 3, 4, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * unsigned int min = min_uint_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+unsigned int min_uint_vector(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type LInt
+ *
+ * /param vec A vector data structure of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 5);
+ * long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * long int min = min_long_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_long_vector(&vec);
+ * @endcode
+ */
+long int min_long_vector(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type ULInt
+ *
+ * /param vec A vector data structure of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 5);
+ * unsigned long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * unsigned long int min = min_ulong_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+unsigned long int min_ulong_vector(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type LLInt
+ *
+ * /param vec A vector data structure of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 5);
+ * long long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * long long int min = min_llong_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+long long int min_llong_vector(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type ULLInt
+ *
+ * /param vec A vector data structure of type ULLInt
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 5);
+ * unsigned long long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * unsigned long long int min = min_ullong_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+unsigned long long int min_ullong_vector(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type Flt
+ *
+ * /param vec A vector data structure of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 5);
+ * float a[5] = {1., 2., 3., 4., 5.};
+ * insert_float_vector(&vec, a, 5, 0);
+ * float min = min_float_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_float_vector(&vec);
+ * @endcode
+ */
+float min_float_vector(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type Dble
+ *
+ * /param vec A vector data structure of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec, 5);
+ * double a[5] = { 1., 2., 3., 4., 5.};
+ * insert_double_vector(&vec, a, 5, 0);
+ * double min = min_double_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_double_vector(&vec);
+ * @endcode
+ */
+double min_double_vector(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a vector data structure
+ * of type LDble
+ *
+ * /param vec A vector data structure of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 5);
+ * long double a[5] = { 1., 2., 3., 4., 5.};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * long double min = min_ldouble_vector(&vec);
+ * PRINT(max);
+ * // >> 1
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+long double min_ldouble_vector(LDble *vec);
+// ==========================================================================================
+// ==========================================================================================
 // eof

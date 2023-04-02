@@ -203,6 +203,34 @@
  * - `stdev_double_vector()`: Function to determine the standard deviation of a double vector or array.
  * - `stdev_ldouble_vector()`: Function to determine the standard deviation of a long double vector or array.
  *
+ * - `max_char_vector()`: Function to determine the maximum value in a char vector or array.
+ * - `max_uchar_vector()`: Function to determine the maximum value in an unsigned char vector or array.
+ * - `max_short_vector()`: Function to determine the maximum value in a short vector or array.
+ * - `max_ushort_vector()`: Function to determine the maximum value in an unsigned short vector or array.
+ * - `max_int_vector()`: Function to determine the maximum value in an integer vector or array.
+ * - `max_uint_vector()`: Function to determine the maximum value in an unsigned integer vector or array.
+ * - `max_long_vector()`: Function to determine the maximum value in a long integer vector or array.
+ * - `max_ulong_vector()`: Function to determine the maximum value in an unsigned long integer vector or array.
+ * - `max_llong_vector()`: Function to determine the maximum value in a long long integer vector or array.
+ * - `max_ullong_vector()`: Function to determine the maximum value in an unsigned long long integer vector or array.
+ * - `max_float_vector()`: Function to determine the maximum value in a float vector or array.
+ * - `max_double_vector()`: Function to determine the maximum value in an double vector or array.
+ * - `max_ldouble_vector()`: Function to determine the maximum value in an long double vector or array.
+ *
+ * - `min_char_vector()`: Function to determine the minimum value in a char vector or array.
+ * - `min_uchar_vector()`: Function to determine the minimum value in an unsigned char vector or array.
+ * - `min_short_vector()`: Function to determine the minimum value in a short vector or array.
+ * - `min_ushort_vector()`: Function to determine the minimum value in an unsigned short vector or array.
+ * - `min_int_vector()`: Function to determine the minumum value in an integer vector or array.
+ * - `min_uint_vector()`: Function to determine the minimum value in an unsigned integer vector or array.
+ * - `min_long_vector()`: Function to determine the minimum value in a long integer vector or array.
+ * - `min_ulong_vector()`: Function to determine the minimum value in an unsigned long integer vector or array.
+ * - `min_llong_vector()`: Function to determine the minimum value in a long long integer vector or array.
+ * - `min_ullong_vector()`: Function to determine the minimum value in an unsigned long long integer vector or array.
+ * - `min_float_vector()`: Function to determine the minimum value in a float vector or array.
+ * - `min_double_vector()`: Function to determine the minimum value in an double vector or array.
+ * - `min_ldouble_vector()`: Function to determine the minimum value in an long double vector or array.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.
