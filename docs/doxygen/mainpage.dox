@@ -159,6 +159,18 @@
  * - `sum_double_vector()`: Function to determine the sum of double values in a short integer vector or array.
  * - `sum_ldouble_vector()`: Function to determine the sum of long double values in a short integer vector or array.
  *
+ * - `cumsum_short_vector()`: Function to determine the cumulative sum of a short integer vector or array.
+ * - `cumsum_ushort_vector()`: Function to determine the cumulative sum of an unsigned short integer vector or array.
+ * - `cumsum_int_vector()`: Function to determine the cumulative sum of an integer vector or array.
+ * - `cumsum_uint_vector()`: Function to determine the cumulative sum of an unsigned integer vector or array.
+ * - `cumsum_long_vector()`: Function to determine the cumulative sum of a long integer vector or array.
+ * - `cumsum_ulong_vector()`: Function to determine the cumulative sum of an unsigned long integer vector or array.
+ * - `cumsum_llong_vector()`: Function to determine the cumulative sum of a long long vector or array.
+ * - `cumsum_ullong_vector()`: Function to determine the cumulative sum of an unsigned long long integer vector or array.
+ * - `cumsum_float_vector()`: Function to determine the cumulative sum of a float vector or array.
+ * - `cumsum_double_vector()`: Function to determine the cumulative sum of a double vector or array.
+ * - `cumsum_ldouble_vetor()`: Function to determine the cumulative sum of a long double vector or array.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

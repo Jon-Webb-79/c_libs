@@ -345,10 +345,516 @@ float \mbox{\hyperlink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\+\_\+flo
 double \mbox{\hyperlink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
 \item 
 long double \mbox{\hyperlink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
+\item 
+Short \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector}} (Short $\ast$vec)
+\item 
+UShort \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
+\item 
+Int \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\+\_\+int\+\_\+vector}} (Int $\ast$vec)
+\item 
+UInt \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\+\_\+uint\+\_\+vector}} (UInt $\ast$vec)
+\item 
+LInt \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\+\_\+long\+\_\+vector}} (LInt $\ast$vec)
+\item 
+ULInt \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\+\_\+ulong\+\_\+vector}} (ULInt $\ast$vec)
+\item 
+LLInt \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\+\_\+llong\+\_\+vector}} (LLInt $\ast$vec)
+\item 
+ULLInt \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\+\_\+ullong\+\_\+vector}} (ULLInt $\ast$vec)
+\item 
+Flt \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+float\+\_\+vector}} (Flt $\ast$vec)
+\item 
+Dble \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
+\item 
+LDble \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}\label{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}} 
+\index{vector.c@{vector.c}!cumsum\_double\_vector@{cumsum\_double\_vector}}
+\index{cumsum\_double\_vector@{cumsum\_double\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_double\_vector()}{cumsum\_double\_vector()}}
+{\footnotesize\ttfamily Dble cumsum\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an Dble vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type Dble /return return\+\_\+vec A vector container of type Dble
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Dble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{Dble cum\_vec = \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\_double\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02974}{2974}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02974                                      \{}
+\DoxyCodeLine{02975     Dble new\_vec;}
+\DoxyCodeLine{02976     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02977     \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{02978     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02979         sum += vec-\/>array[i];}
+\DoxyCodeLine{02980         \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02981     \}}
+\DoxyCodeLine{02982     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02983 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\+\_\+double\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\+\_\+double\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}\label{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}} 
+\index{vector.c@{vector.c}!cumsum\_float\_vector@{cumsum\_float\_vector}}
+\index{cumsum\_float\_vector@{cumsum\_float\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_float\_vector()}{cumsum\_float\_vector()}}
+{\footnotesize\ttfamily Flt cumsum\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an Flt vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type Flt /return return\+\_\+vec A vector container of type Flt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Flt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{Flt cum\_vec = \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\_float\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02962}{2962}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02962                                   \{}
+\DoxyCodeLine{02963     Flt new\_vec;}
+\DoxyCodeLine{02964     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02965     \textcolor{keywordtype}{float} sum = 0;}
+\DoxyCodeLine{02966     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02967         sum += vec-\/>array[i];}
+\DoxyCodeLine{02968         \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02969     \}}
+\DoxyCodeLine{02970     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02971 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\+\_\+float\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\+\_\+float\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}\label{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}} 
+\index{vector.c@{vector.c}!cumsum\_int\_vector@{cumsum\_int\_vector}}
+\index{cumsum\_int\_vector@{cumsum\_int\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_int\_vector()}{cumsum\_int\_vector()}}
+{\footnotesize\ttfamily Int cumsum\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an Int vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type Int /return return\+\_\+vec A vector container of type Int
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{Int cum\_vec = \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\_int\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02890}{2890}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02890                                 \{}
+\DoxyCodeLine{02891     Int new\_vec;}
+\DoxyCodeLine{02892     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02893     \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02894     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02895         sum += vec-\/>array[i];}
+\DoxyCodeLine{02896         \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02897     \}}
+\DoxyCodeLine{02898     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02899 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\+\_\+int\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\+\_\+int\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}\label{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}} 
+\index{vector.c@{vector.c}!cumsum\_ldouble\_vector@{cumsum\_ldouble\_vector}}
+\index{cumsum\_ldouble\_vector@{cumsum\_ldouble\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_ldouble\_vector()}{cumsum\_ldouble\_vector()}}
+{\footnotesize\ttfamily LDble cumsum\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an LDble vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type LDble /return return\+\_\+vec A vector container of type LDble
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LDble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{LDble cum\_vec = \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\_ldouble\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02986}{2986}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02986                                         \{}
+\DoxyCodeLine{02987     LDble new\_vec;}
+\DoxyCodeLine{02988     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02989     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{02990     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02991         sum += vec-\/>array[i];}
+\DoxyCodeLine{02992         \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02993     \}}
+\DoxyCodeLine{02994     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02995 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\+\_\+ldouble\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\+\_\+ldouble\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}\label{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}} 
+\index{vector.c@{vector.c}!cumsum\_llong\_vector@{cumsum\_llong\_vector}}
+\index{cumsum\_llong\_vector@{cumsum\_llong\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_llong\_vector()}{cumsum\_llong\_vector()}}
+{\footnotesize\ttfamily LLInt cumsum\+\_\+llong\+\_\+vector (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an LLInt vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type LLInt /return return\+\_\+vec A vector container of type LLInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{LLInt cum\_vec = \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\_llong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02938}{2938}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02938                                       \{}
+\DoxyCodeLine{02939     LLInt new\_vec;}
+\DoxyCodeLine{02940     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02941     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02942     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02943         sum += vec-\/>array[i];}
+\DoxyCodeLine{02944         \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02945     \}}
+\DoxyCodeLine{02946     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02947 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\+\_\+llong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\+\_\+llong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_aacdbfadbd42e44ba909b315b43152012}\label{vector_8c_aacdbfadbd42e44ba909b315b43152012}} 
+\index{vector.c@{vector.c}!cumsum\_long\_vector@{cumsum\_long\_vector}}
+\index{cumsum\_long\_vector@{cumsum\_long\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_long\_vector()}{cumsum\_long\_vector()}}
+{\footnotesize\ttfamily LInt cumsum\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an LInt vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type LInt /return return\+\_\+vec A vector container of type LInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{LInt cum\_vec = \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\_long\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02914}{2914}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02914                                    \{}
+\DoxyCodeLine{02915     LInt new\_vec;}
+\DoxyCodeLine{02916     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02917     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02918     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02919         sum += vec-\/>array[i];}
+\DoxyCodeLine{02920         \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02921     \}}
+\DoxyCodeLine{02922     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02923 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\+\_\+long\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\+\_\+long\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}\label{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}} 
+\index{vector.c@{vector.c}!cumsum\_short\_vector@{cumsum\_short\_vector}}
+\index{cumsum\_short\_vector@{cumsum\_short\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_short\_vector()}{cumsum\_short\_vector()}}
+{\footnotesize\ttfamily Short cumsum\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an Short vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type Short /return return\+\_\+vec A vector container of type UShort
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Short vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{Short cum\_vec = \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\_short\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02866}{2866}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02866                                       \{}
+\DoxyCodeLine{02867     Short new\_vec;}
+\DoxyCodeLine{02868     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02869     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02870     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02871         sum += vec-\/>array[i];}
+\DoxyCodeLine{02872         \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02873     \}}
+\DoxyCodeLine{02874     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02875 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\+\_\+short\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\+\_\+short\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_abe44138d94c38f7d65d62f63dddf668b}\label{vector_8c_abe44138d94c38f7d65d62f63dddf668b}} 
+\index{vector.c@{vector.c}!cumsum\_uint\_vector@{cumsum\_uint\_vector}}
+\index{cumsum\_uint\_vector@{cumsum\_uint\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_uint\_vector()}{cumsum\_uint\_vector()}}
+{\footnotesize\ttfamily UInt cumsum\+\_\+uint\+\_\+vector (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an UInt vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type UInt /return return\+\_\+vec A vector container of type UInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{UInt cum\_vec = \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\_uint\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02902}{2902}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02902                                    \{}
+\DoxyCodeLine{02903     UInt new\_vec;}
+\DoxyCodeLine{02904     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02905     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02906     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02907         sum += vec-\/>array[i];}
+\DoxyCodeLine{02908         \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02909     \}}
+\DoxyCodeLine{02910     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02911 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\+\_\+uint\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\+\_\+uint\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_a07bde722230b2f57f1b14304054d1d6a}\label{vector_8c_a07bde722230b2f57f1b14304054d1d6a}} 
+\index{vector.c@{vector.c}!cumsum\_ullong\_vector@{cumsum\_ullong\_vector}}
+\index{cumsum\_ullong\_vector@{cumsum\_ullong\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_ullong\_vector()}{cumsum\_ullong\_vector()}}
+{\footnotesize\ttfamily ULLInt cumsum\+\_\+ullong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an ULLInt vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type ULLInt /return return\+\_\+vec A vector container of type ULLInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{ULLInt cum\_vec = \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\_ullong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02950}{2950}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02950                                          \{}
+\DoxyCodeLine{02951     ULLInt new\_vec;}
+\DoxyCodeLine{02952     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02953     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02954     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02955         sum += vec-\/>array[i];}
+\DoxyCodeLine{02956         \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02957     \}}
+\DoxyCodeLine{02958     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02959 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\+\_\+ullong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\+\_\+ullong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}\label{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}} 
+\index{vector.c@{vector.c}!cumsum\_ulong\_vector@{cumsum\_ulong\_vector}}
+\index{cumsum\_ulong\_vector@{cumsum\_ulong\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_ulong\_vector()}{cumsum\_ulong\_vector()}}
+{\footnotesize\ttfamily ULInt cumsum\+\_\+ulong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an ULInt vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type ULInt /return return\+\_\+vec A vector container of type ULInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{ULInt cum\_vec = \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\_ulong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02926}{2926}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02926                                       \{}
+\DoxyCodeLine{02927     ULInt new\_vec;}
+\DoxyCodeLine{02928     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02929     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02930     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02931         sum += vec-\/>array[i];}
+\DoxyCodeLine{02932         \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02933     \}}
+\DoxyCodeLine{02934     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02935 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\+\_\+ulong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\+\_\+ulong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8c_a94f7fe260f499b1a18150332e1a0e427}\label{vector_8c_a94f7fe260f499b1a18150332e1a0e427}} 
+\index{vector.c@{vector.c}!cumsum\_ushort\_vector@{cumsum\_ushort\_vector}}
+\index{cumsum\_ushort\_vector@{cumsum\_ushort\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{cumsum\_ushort\_vector()}{cumsum\_ushort\_vector()}}
+{\footnotesize\ttfamily UShort cumsum\+\_\+ushort\+\_\+vector (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an UShort vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type UShort /return return\+\_\+vec A vector container of type UShort
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UShort vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{UShort cum\_vec = \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\_ushort\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02878}{2878}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02878                                          \{}
+\DoxyCodeLine{02879     UShort new\_vec;}
+\DoxyCodeLine{02880     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02881     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02882     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02883         sum += vec-\/>array[i];}
+\DoxyCodeLine{02884         \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02885     \}}
+\DoxyCodeLine{02886     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02887 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\+\_\+ushort\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\+\_\+ushort\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a1fe7315ba2394e61b43b99bfc765bd75}\label{vector_8c_a1fe7315ba2394e61b43b99bfc765bd75}} 
 \index{vector.c@{vector.c}!delete\_bool\_vector\_duplicates@{delete\_bool\_vector\_duplicates}}
 \index{delete\_bool\_vector\_duplicates@{delete\_bool\_vector\_duplicates}!vector.c@{vector.c}}
@@ -1711,6 +2217,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00152}{152}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a5fcc9ae29ce6bd76060856b388992240}\label{vector_8c_a5fcc9ae29ce6bd76060856b388992240}} 
 \index{vector.c@{vector.c}!init\_float\_array@{init\_float\_array}}
 \index{init\_float\_array@{init\_float\_array}!vector.c@{vector.c}}
@@ -1777,6 +2287,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00137}{137}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+float\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_a29734ea7a6541b75cd3824bc05e3e589}\label{vector_8c_a29734ea7a6541b75cd3824bc05e3e589}} 
 \index{vector.c@{vector.c}!init\_int\_array@{init\_int\_array}}
@@ -1845,6 +2359,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00048}{48}} of file \mbox{
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\+\_\+int\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_ae670278f7c9522a0fdc6b261cb76e5e5}\label{vector_8c_ae670278f7c9522a0fdc6b261cb76e5e5}} 
 \index{vector.c@{vector.c}!init\_ldouble\_array@{init\_ldouble\_array}}
 \index{init\_ldouble\_array@{init\_ldouble\_array}!vector.c@{vector.c}}
@@ -1911,6 +2429,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00167}{167}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_a65e3799f14e154e10bd3ce7a4d4fe184}\label{vector_8c_a65e3799f14e154e10bd3ce7a4d4fe184}} 
 \index{vector.c@{vector.c}!init\_llong\_array@{init\_llong\_array}}
@@ -1979,6 +2501,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00107}{107}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\+\_\+llong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_acbddef55e279d25613203d2f14957597}\label{vector_8c_acbddef55e279d25613203d2f14957597}} 
 \index{vector.c@{vector.c}!init\_long\_array@{init\_long\_array}}
 \index{init\_long\_array@{init\_long\_array}!vector.c@{vector.c}}
@@ -2046,6 +2572,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00078}{78}} of file \mbox{
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\+\_\+long\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_acb7b3bcd9252ad84ea9d05436f57bd6c}\label{vector_8c_acb7b3bcd9252ad84ea9d05436f57bd6c}} 
 \index{vector.c@{vector.c}!init\_short\_array@{init\_short\_array}}
 \index{init\_short\_array@{init\_short\_array}!vector.c@{vector.c}}
@@ -2112,6 +2642,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00018}{18}} of file \mbox{
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}\label{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}} 
 \index{vector.c@{vector.c}!init\_string\_vector@{init\_string\_vector}}
@@ -2272,6 +2806,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00063}{63}} of file \mbox{
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\+\_\+uint\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a39d896e588ac932b9958b4f2e32d97c2}\label{vector_8c_a39d896e588ac932b9958b4f2e32d97c2}} 
 \index{vector.c@{vector.c}!init\_ullong\_array@{init\_ullong\_array}}
 \index{init\_ullong\_array@{init\_ullong\_array}!vector.c@{vector.c}}
@@ -2338,6 +2876,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00122}{122}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\+\_\+ullong\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_acdf31865e9c36adc693dd7fa7fadcacc}\label{vector_8c_acdf31865e9c36adc693dd7fa7fadcacc}} 
 \index{vector.c@{vector.c}!init\_ulong\_array@{init\_ulong\_array}}
@@ -2406,6 +2948,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00093}{93}} of file \mbox{
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\+\_\+ulong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_abbac579a20b2655deda9ec8a915fcfb7}\label{vector_8c_abbac579a20b2655deda9ec8a915fcfb7}} 
 \index{vector.c@{vector.c}!init\_ushort\_array@{init\_ushort\_array}}
 \index{init\_ushort\_array@{init\_ushort\_array}!vector.c@{vector.c}}
@@ -2472,6 +3018,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00033}{33}} of file \mbox{
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}\label{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}} 
 \index{vector.c@{vector.c}!insert\_bool\_vector@{insert\_bool\_vector}}
@@ -5039,6 +5589,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00646}{646}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}\label{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}} 
 \index{vector.c@{vector.c}!push\_float\_vector@{push\_float\_vector}}
 \index{push\_float\_vector@{push\_float\_vector}!vector.c@{vector.c}}
@@ -5087,6 +5641,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00613}{613}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+float\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}\label{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}} 
 \index{vector.c@{vector.c}!push\_int\_vector@{push\_int\_vector}}
@@ -5137,6 +5695,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00415}{415}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\+\_\+int\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_ad001560a2793c40efb1c64532cefe2e2}\label{vector_8c_ad001560a2793c40efb1c64532cefe2e2}} 
 \index{vector.c@{vector.c}!push\_ldouble\_vector@{push\_ldouble\_vector}}
 \index{push\_ldouble\_vector@{push\_ldouble\_vector}!vector.c@{vector.c}}
@@ -5185,6 +5747,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00679}{679}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}\label{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}} 
 \index{vector.c@{vector.c}!push\_llong\_vector@{push\_llong\_vector}}
@@ -5235,6 +5801,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00547}{547}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\+\_\+llong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a6135368684b7d740482cfc775417f255}\label{vector_8c_a6135368684b7d740482cfc775417f255}} 
 \index{vector.c@{vector.c}!push\_long\_vector@{push\_long\_vector}}
 \index{push\_long\_vector@{push\_long\_vector}!vector.c@{vector.c}}
@@ -5284,6 +5854,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00481}{481}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\+\_\+long\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a38068c17aa5cf7286175572d43219b8d}\label{vector_8c_a38068c17aa5cf7286175572d43219b8d}} 
 \index{vector.c@{vector.c}!push\_short\_vector@{push\_short\_vector}}
 \index{push\_short\_vector@{push\_short\_vector}!vector.c@{vector.c}}
@@ -5332,6 +5906,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00349}{349}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}\label{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}} 
 \index{vector.c@{vector.c}!push\_string\_vector@{push\_string\_vector}}
@@ -5442,6 +6020,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00448}{448}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\+\_\+uint\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}\label{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}} 
 \index{vector.c@{vector.c}!push\_ullong\_vector@{push\_ullong\_vector}}
 \index{push\_ullong\_vector@{push\_ullong\_vector}!vector.c@{vector.c}}
@@ -5490,6 +6072,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00580}{580}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\+\_\+ullong\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_aea5f95b56df2836ee553face60351e61}\label{vector_8c_aea5f95b56df2836ee553face60351e61}} 
 \index{vector.c@{vector.c}!push\_ulong\_vector@{push\_ulong\_vector}}
@@ -5540,6 +6126,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00514}{514}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\+\_\+ulong\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}\label{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}} 
 \index{vector.c@{vector.c}!push\_ushort\_vector@{push\_ushort\_vector}}
 \index{push\_ushort\_vector@{push\_ushort\_vector}!vector.c@{vector.c}}
@@ -5588,6 +6178,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00382}{382}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_ab345b0d10cef3cb87e552791440398e9}\label{vector_8c_ab345b0d10cef3cb87e552791440398e9}} 
 \index{vector.c@{vector.c}!replace\_bool\_vector\_values@{replace\_bool\_vector\_values}}

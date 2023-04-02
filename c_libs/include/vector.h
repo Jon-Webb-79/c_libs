@@ -3532,4 +3532,237 @@ double sum_double_vector(Dble *vec);
 long double sum_ldouble_vector(LDble *vec);
 // ==========================================================================================
 // ==========================================================================================
+// CUMSUM_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will return an Short vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type Short
+ * /return return_vec A vector container of type UShort
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 5);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * Short cum_vec = cumsum_short_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+Short cumsum_short_vector(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an UShort vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type UShort
+ * /return return_vec A vector container of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 5);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * UShort cum_vec = cumsum_ushort_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+UShort cumsum_ushort_vector(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an Int vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type Int
+ * /return return_vec A vector container of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 5);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * Int cum_vec = cumsum_int_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+Int cumsum_int_vector(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an UInt vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type UInt
+ * /return return_vec A vector container of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 5);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * UInt cum_vec = cumsum_uint_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+UInt cumsum_uint_vector(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an LInt vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type LInt
+ * /return return_vec A vector container of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 5);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * LInt cum_vec = cumsum_long_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+LInt cumsum_long_vector(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an ULInt vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type ULInt
+ * /return return_vec A vector container of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 5);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * ULInt cum_vec = cumsum_ulong_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+ULInt cumsum_ulong_vector(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an LLInt vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type LLInt
+ * /return return_vec A vector container of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 5);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * LLInt cum_vec = cumsum_llong_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+LLInt cumsum_llong_vector(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an ULLInt vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type ULLInt
+ * /return return_vec A vector container of type ULLInt
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 5);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * ULLInt cum_vec = cumsum_ullong_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+ULLInt cumsum_ullong_vector(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an Flt vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type Flt
+ * /return return_vec A vector container of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 5);
+ * float a[5] = {1, 2, 3, 4, 5};
+ * insert_float_vector(&vec, a, 5, 0);
+ * Flt cum_vec = cumsum_float_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+Flt cumsum_float_vector(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an Dble vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type Dble
+ * /return return_vec A vector container of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec, 5);
+ * double a[5] = {1, 2, 3, 4, 5};
+ * insert_double_vector(&vec, a, 5, 0);
+ * Dble cum_vec = cumsum_double_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+Dble cumsum_double_vector(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an LDble vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type LDble
+ * /return return_vec A vector container of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 5);
+ * long double a[5] = {1, 2, 3, 4, 5};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * LDble cum_vec = cumsum_ldouble_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+LDble cumsum_ldouble_vector(LDble *vec);
+// ==========================================================================================
+// ==========================================================================================
 // eof

@@ -2861,4 +2861,138 @@ long double sum_ldouble_vector(LDble *vec) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// CUMSUM_TYPE_VEC FUNCTIONS
+
+Short cumsum_short_vector(Short *vec) {
+	Short new_vec;
+	init_short_vector(&new_vec, vec->active_length);
+	short int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_short_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+UShort cumsum_ushort_vector(UShort *vec) {
+	UShort new_vec;
+	init_ushort_vector(&new_vec, vec->active_length);
+	unsigned short int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_ushort_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Int cumsum_int_vector(Int *vec) {
+	Int new_vec;
+	init_int_vector(&new_vec, vec->active_length);
+	int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_int_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+UInt cumsum_uint_vector(UInt *vec) {
+	UInt new_vec;
+	init_uint_vector(&new_vec, vec->active_length);
+	unsigned int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_uint_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+LInt cumsum_long_vector(LInt *vec) {
+	LInt new_vec;
+	init_long_vector(&new_vec, vec->active_length);
+	long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_long_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+ULInt cumsum_ulong_vector(ULInt *vec) {
+	ULInt new_vec;
+	init_ulong_vector(&new_vec, vec->active_length);
+	unsigned long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_ulong_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+LLInt cumsum_llong_vector(LLInt *vec) {
+	LLInt new_vec;
+	init_llong_vector(&new_vec, vec->active_length);
+	long long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_llong_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+ULLInt cumsum_ullong_vector(ULLInt *vec) {
+	ULLInt new_vec;
+	init_ullong_vector(&new_vec, vec->active_length);
+	unsigned long long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_ullong_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Flt cumsum_float_vector(Flt *vec) {
+	Flt new_vec;
+	init_float_vector(&new_vec, vec->active_length);
+	float sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_float_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Dble cumsum_double_vector(Dble *vec) {
+	Dble new_vec;
+	init_double_vector(&new_vec, vec->active_length);
+	double sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_double_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+LDble cumsum_ldouble_vector(LDble *vec) {
+	LDble new_vec;
+	init_ldouble_vector(&new_vec, vec->active_length);
+	long double sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_ldouble_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
