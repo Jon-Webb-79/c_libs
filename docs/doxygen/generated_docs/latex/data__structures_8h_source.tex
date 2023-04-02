@@ -20,97 +20,98 @@
 \DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00016}00016 \textcolor{preprocessor}{\#define data\_structures\_H}}
 \DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00017}00017 }
 \DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <stdio.h>}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00020}00020 \textcolor{comment}{// PUSH GENERIC OPERATOR}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00022}00022 \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00023}00023 \textcolor{comment}{ * This macro will push a scalar data point to a user defined index within an}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00024}00024 \textcolor{comment}{ * existing vector.  The macro only selects the correct function, and therefore}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00025}00025 \textcolor{comment}{ * does not incease memory usage or decrease code execution time.  While the user}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00026}00026 \textcolor{comment}{ * can push data to any index, the macro will execute fastest when the user}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00027}00027 \textcolor{comment}{ * pushes data to the next available index.}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00028}00028 \textcolor{comment}{ *}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00029}00029 \textcolor{comment}{ * /param vec A vector struct container}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00030}00030 \textcolor{comment}{ * /param value The data point to be pushed to the vector}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00031}00031 \textcolor{comment}{ * /param index The index where data is to be inserted}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00032}00032 \textcolor{comment}{ *}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00033}00033 \textcolor{comment}{ * @code}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00034}00034 \textcolor{comment}{ * Int vec;}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00035}00035 \textcolor{comment}{ * INIT\_VECTOR(vec, 20);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00036}00036 \textcolor{comment}{ * PUSH(vec, 1, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00037}00037 \textcolor{comment}{ * PUSH(vec, 2, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00038}00038 \textcolor{comment}{ * PUSH(vec, 3, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00039}00039 \textcolor{comment}{ * PUSH(vec, 10, 0);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00040}00040 \textcolor{comment}{ * for (size\_t i = 0; i < vec.active\_length; i++) \{}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00041}00041 \textcolor{comment}{ *     printf("{}\%d\(\backslash\)n"{}, vec.array[i]);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00042}00042 \textcolor{comment}{ * \}}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00043}00043 \textcolor{comment}{ * // >> 10 1 2 3}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00044}00044 \textcolor{comment}{ * @endcode}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00045}00045 \textcolor{comment}{ */}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00046}\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{00046}} \textcolor{preprocessor}{\#define PUSH(T, value, index) \_Generic( (T), Short: push\_short\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00047}00047 \textcolor{preprocessor}{                                                         UShort: push\_ushort\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00048}00048 \textcolor{preprocessor}{                                                         Int: push\_int\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00049}00049 \textcolor{preprocessor}{                                                         UInt: push\_uint\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00050}00050 \textcolor{preprocessor}{                                                         LInt: push\_long\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00051}00051 \textcolor{preprocessor}{                                                         ULInt: push\_ulong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00052}00052 \textcolor{preprocessor}{                                                         LLInt: push\_llong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00053}00053 \textcolor{preprocessor}{                                                         ULLInt: push\_ullong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00054}00054 \textcolor{preprocessor}{                                                         Flt: push\_float\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00055}00055 \textcolor{preprocessor}{                                                         Dble: push\_double\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00056}00056 \textcolor{preprocessor}{                                                         LDble: push\_ldouble\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00057}00057 \textcolor{preprocessor}{                                                         Char: push\_char\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00058}00058 \textcolor{preprocessor}{                                                         UChar: push\_uchar\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00059}00059 \textcolor{preprocessor}{                                                         Bool: push\_bool\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00060}00060 \textcolor{preprocessor}{                                                         String: push\_string\_vector)(\&T, value, index)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00061}00061 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vector_8h}{vector.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00021}00021 \textcolor{comment}{// PUSH GENERIC OPERATOR}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00023}00023 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00024}00024 \textcolor{comment}{ * This macro will push a scalar data point to a user defined index within an}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00025}00025 \textcolor{comment}{ * existing vector.  The macro only selects the correct function, and therefore}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00026}00026 \textcolor{comment}{ * does not incease memory usage or decrease code execution time.  While the user}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00027}00027 \textcolor{comment}{ * can push data to any index, the macro will execute fastest when the user}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00028}00028 \textcolor{comment}{ * pushes data to the next available index.}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00029}00029 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00030}00030 \textcolor{comment}{ * /param vec A vector struct container}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00031}00031 \textcolor{comment}{ * /param value The data point to be pushed to the vector}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00032}00032 \textcolor{comment}{ * /param index The index where data is to be inserted}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00033}00033 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00034}00034 \textcolor{comment}{ * @code}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00035}00035 \textcolor{comment}{ * Int vec;}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00036}00036 \textcolor{comment}{ * INIT\_VECTOR(vec, 20);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00037}00037 \textcolor{comment}{ * PUSH(vec, 1, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00038}00038 \textcolor{comment}{ * PUSH(vec, 2, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00039}00039 \textcolor{comment}{ * PUSH(vec, 3, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00040}00040 \textcolor{comment}{ * PUSH(vec, 10, 0);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00041}00041 \textcolor{comment}{ * for (size\_t i = 0; i < vec.active\_length; i++) \{}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00042}00042 \textcolor{comment}{ *     printf("{}\%d\(\backslash\)n"{}, vec.array[i]);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00043}00043 \textcolor{comment}{ * \}}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00044}00044 \textcolor{comment}{ * // >> 10 1 2 3}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00045}00045 \textcolor{comment}{ * @endcode}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00046}00046 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00047}\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{00047}} \textcolor{preprocessor}{\#define PUSH(T, value, index) \_Generic( (T), Short: push\_short\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00048}00048 \textcolor{preprocessor}{                                                         UShort: push\_ushort\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00049}00049 \textcolor{preprocessor}{                                                         Int: push\_int\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00050}00050 \textcolor{preprocessor}{                                                         UInt: push\_uint\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00051}00051 \textcolor{preprocessor}{                                                         LInt: push\_long\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00052}00052 \textcolor{preprocessor}{                                                         ULInt: push\_ulong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00053}00053 \textcolor{preprocessor}{                                                         LLInt: push\_llong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00054}00054 \textcolor{preprocessor}{                                                         ULLInt: push\_ullong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00055}00055 \textcolor{preprocessor}{                                                         Flt: push\_float\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00056}00056 \textcolor{preprocessor}{                                                         Dble: push\_double\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00057}00057 \textcolor{preprocessor}{                                                         LDble: push\_ldouble\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00058}00058 \textcolor{preprocessor}{                                                         Char: push\_char\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00059}00059 \textcolor{preprocessor}{                                                         UChar: push\_uchar\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00060}00060 \textcolor{preprocessor}{                                                         Bool: push\_bool\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00061}00061 \textcolor{preprocessor}{                                                         String: push\_string\_vector)(\&T, value, index)}}
 \DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00062}00062 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00063}00063 \textcolor{comment}{// INSERT GENERIC OPERATOR}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00064}00064 }
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00065}00065 \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00066}00066 \textcolor{comment}{ * This macro will insert an array of data into a vector container.  In addition, this}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00067}00067 \textcolor{comment}{ * function can also be used to push a scalar variable to a vector container at a user}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00068}00068 \textcolor{comment}{ * defined index.  While the user can insert a scalar or an array to any desired}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00069}00069 \textcolor{comment}{ * index, the function will run fastest when data is inserted at the next available}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00070}00070 \textcolor{comment}{ * index.  This macro only selects the correct function to execute the operation based}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00071}00071 \textcolor{comment}{ * on data type.  Therefore this macro does not increase memory usage, nor does it}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00072}00072 \textcolor{comment}{ * decrease code execution time.}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00073}00073 \textcolor{comment}{ *}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00074}00074 \textcolor{comment}{ * /param vec A vector struct container}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00075}00075 \textcolor{comment}{ * /param elements The array containing elements to be inserted}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00076}00076 \textcolor{comment}{ * /param num\_ind The number of indices occupied by elements}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00077}00077 \textcolor{comment}{ * /param index The index where the array is to be submitted}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00078}00078 \textcolor{comment}{ *}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00079}00079 \textcolor{comment}{ * @code}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00080}00080 \textcolor{comment}{ * Int vec;}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00081}00081 \textcolor{comment}{ * INIT\_VECTOR(vec, 8);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00082}00082 \textcolor{comment}{ * PUSH(vec, 1, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00083}00083 \textcolor{comment}{ * PUSH(vec, 2, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00084}00084 \textcolor{comment}{ * PUSH(vec, 3, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00085}00085 \textcolor{comment}{ * PUSH(vec, 4, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00086}00086 \textcolor{comment}{ * PUSH(vec, 5, vec.active\_length);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00087}00087 \textcolor{comment}{ * int a[3] = \{10, 9, 8\}}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00088}00088 \textcolor{comment}{ * INSERT(vec, a, 3, 2);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00089}00089 \textcolor{comment}{ * PRINT(vec);}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00090}00090 \textcolor{comment}{ * // [ 1, 2, 10, 9, 8, 3, 4, 5 ]}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00091}00091 \textcolor{comment}{ * @endcode}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00092}00092 \textcolor{comment}{ */}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00093}\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{00093}} \textcolor{preprocessor}{\#define INSERT(T, elements, num\_ind, index) \_Generic( (T), Short: insert\_short\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00094}00094 \textcolor{preprocessor}{                                                         UShort: insert\_ushort\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00095}00095 \textcolor{preprocessor}{                                                         Int: insert\_int\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00096}00096 \textcolor{preprocessor}{                                                         UInt: insert\_uint\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00097}00097 \textcolor{preprocessor}{                                                         LInt: insert\_long\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00098}00098 \textcolor{preprocessor}{                                                         ULInt: insert\_ulong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00099}00099 \textcolor{preprocessor}{                                                         LLInt: insert\_llong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00100}00100 \textcolor{preprocessor}{                                                         ULLInt: insert\_ullong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00101}00101 \textcolor{preprocessor}{                                                         Flt: insert\_float\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00102}00102 \textcolor{preprocessor}{                                                         Dble: insert\_double\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00103}00103 \textcolor{preprocessor}{                                                         LDble: insert\_ldouble\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00104}00104 \textcolor{preprocessor}{                                                         Char: insert\_char\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00105}00105 \textcolor{preprocessor}{                                                         UChar: insert\_uchar\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00106}00106 \textcolor{preprocessor}{                                                         Bool: insert\_bool\_vector)(\&T, elements, num\_ind, index)}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00107}00107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* data\_structures\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00108}00108 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00063}00063 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00064}00064 \textcolor{comment}{// INSERT GENERIC OPERATOR}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00066}00066 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00067}00067 \textcolor{comment}{ * This macro will insert an array of data into a vector container.  In addition, this}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00068}00068 \textcolor{comment}{ * function can also be used to push a scalar variable to a vector container at a user}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00069}00069 \textcolor{comment}{ * defined index.  While the user can insert a scalar or an array to any desired}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00070}00070 \textcolor{comment}{ * index, the function will run fastest when data is inserted at the next available}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00071}00071 \textcolor{comment}{ * index.  This macro only selects the correct function to execute the operation based}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00072}00072 \textcolor{comment}{ * on data type.  Therefore this macro does not increase memory usage, nor does it}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00073}00073 \textcolor{comment}{ * decrease code execution time.}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00074}00074 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00075}00075 \textcolor{comment}{ * /param vec A vector struct container}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00076}00076 \textcolor{comment}{ * /param elements The array containing elements to be inserted}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00077}00077 \textcolor{comment}{ * /param num\_ind The number of indices occupied by elements}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00078}00078 \textcolor{comment}{ * /param index The index where the array is to be submitted}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00079}00079 \textcolor{comment}{ *}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00080}00080 \textcolor{comment}{ * @code}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00081}00081 \textcolor{comment}{ * Int vec;}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00082}00082 \textcolor{comment}{ * INIT\_VECTOR(vec, 8);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00083}00083 \textcolor{comment}{ * PUSH(vec, 1, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00084}00084 \textcolor{comment}{ * PUSH(vec, 2, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00085}00085 \textcolor{comment}{ * PUSH(vec, 3, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00086}00086 \textcolor{comment}{ * PUSH(vec, 4, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00087}00087 \textcolor{comment}{ * PUSH(vec, 5, vec.active\_length);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00088}00088 \textcolor{comment}{ * int a[3] = \{10, 9, 8\}}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00089}00089 \textcolor{comment}{ * INSERT(vec, a, 3, 2);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00090}00090 \textcolor{comment}{ * PRINT(vec);}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00091}00091 \textcolor{comment}{ * // [ 1, 2, 10, 9, 8, 3, 4, 5 ]}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00092}00092 \textcolor{comment}{ * @endcode}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00093}00093 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00094}\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{00094}} \textcolor{preprocessor}{\#define INSERT(T, elements, num\_ind, index) \_Generic( (T), Short: insert\_short\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00095}00095 \textcolor{preprocessor}{                                                         UShort: insert\_ushort\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00096}00096 \textcolor{preprocessor}{                                                         Int: insert\_int\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00097}00097 \textcolor{preprocessor}{                                                         UInt: insert\_uint\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00098}00098 \textcolor{preprocessor}{                                                         LInt: insert\_long\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00099}00099 \textcolor{preprocessor}{                                                         ULInt: insert\_ulong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00100}00100 \textcolor{preprocessor}{                                                         LLInt: insert\_llong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00101}00101 \textcolor{preprocessor}{                                                         ULLInt: insert\_ullong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00102}00102 \textcolor{preprocessor}{                                                         Flt: insert\_float\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00103}00103 \textcolor{preprocessor}{                                                         Dble: insert\_double\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00104}00104 \textcolor{preprocessor}{                                                         LDble: insert\_ldouble\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00105}00105 \textcolor{preprocessor}{                                                         Char: insert\_char\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00106}00106 \textcolor{preprocessor}{                                                         UChar: insert\_uchar\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00107}00107 \textcolor{preprocessor}{                                                         Bool: insert\_bool\_vector)(\&T, elements, num\_ind, index)}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00108}00108 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* data\_structures\_H */}\textcolor{preprocessor}{}}
 \DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00109}00109 \textcolor{comment}{// ================================================================================}}
-\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00110}00110 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00110}00110 \textcolor{comment}{// ================================================================================}}
+\DoxyCodeLine{\Hypertarget{data__structures_8h_source_l00111}00111 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

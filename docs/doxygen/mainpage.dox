@@ -79,6 +79,38 @@
  * - `push_bool_vector()`: Function to push a bool value to a vector or array.
  * - `push_string_vector()`: Function to push a string value to a vector or array.
  *
+ * - `pop_char_vector()`: Function to delete a char value from a vector or array.
+ * - `pop_uchar_vector()`: Function to delete an unsigned char value from a vector or array.
+ * - `pop_short_vector()`: Function to delete a short value from a vector or array.
+ * - `pop_ushort_vector()`: Function to delete an unsigned short value from a vector or array.
+ * - `pop_int_vector()`: Function to delete an integer value from a vector or array.
+ * - `pop_uint_vector()`: Function to delete an unsigned integer value from a vector or array.
+ * - `pop_long_vector()`: Function to delete a long integer from a vector or array.
+ * - `pop_ulong_vector()`: Function to delete an unsigned long integer from a vector or array.
+ * - `pop_llong_vector()`: Function to delete a long long integer from a vector or array.
+ * - `pop_ullong_vector()`: Function to delete an unsinged long long integer from a vector or array.
+ * - `pop_float_vector()`: Function to delete a float value from a vector or array.
+ * - `pop_double_vector()`: Function to delete a double value from a vector or array.
+ * - `pop_ldouble_vector()`: Function to delete a long double value from a vector or array.
+ * - `pop_bool_vector()`: Function to delete a bool value from a vector or array.
+ * - `pop_string_vector()`: Function to delete a string value from a vector or array.
+ *
+ * - `replace_char_vector()`: Function to replace a char value with another in a vector or array.
+ * - `replace_uchar_vector()`: Function to replace an unsigned char value with another in a vector or array.
+ * - `replace_short_vector()`: Function to replace a short value with another in a vector or array.
+ * - `replace_ushort_vector()`: Function to replace an unsigned short value with another in a vector or array.
+ * - `replace_int_vector()`: Function to replace an integer value with another in a vector or array.
+ * - `replace_uint_vector()`: Function to replace an unsigned integer value with another in a vector or array.
+ * - `replace_long_vector()`: Function to replace a long integer value with another in a vector or array.
+ * - `replace_ulong_vector()`: Function to replace an unsigned long long vector with another in a vector or array.
+ * - `replace_llong_vector()`: Function to replace a long long integer value with another in a vector or array.
+ * - `replace_ullong_vector()`: Function to replace an unsigned long long vector with another in a vector or array.
+ * - `replace_float_vector()`: Function to replace a float value with another in a vector or array.
+ * - `replace_double_vector()`: Function to replace a double value with another in a vector or array.
+ * - `replace_ldouble_vector()`: Function to replace a long double value with another in a vector or array.
+ * - `replace_bool_vector()`: Function to replace a bool value with another in a vector or array.
+ * - `replace_string_vector()`: Function to replace a string value with another in a vector or array.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

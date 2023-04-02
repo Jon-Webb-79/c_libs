@@ -1335,7 +1335,757 @@ int insert_uchar_vector(UChar *vec, unsigned char *elements, size_t num_indices,
  * @endcode
  */
 int insert_bool_vector(Bool *vec, bool *elements, size_t num_indices, size_t index);
+// ==========================================================================================
+// ==========================================================================================
+// POP_VEC_INDEX prototypes
 
+/**
+ * This function will pop a value from an Short struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Short
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(vec, 5);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 2);
+ * push_short_vector(vec, 3);
+ * push_short_vector(vec, 4);
+ * push_short_vector(vec, 5);
+ * pop_short_vector_index(vec, 0);
+ * pop_short_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+int pop_short_vector_index(Short *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an UShort struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type UShort
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(vec, 5);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 2);
+ * push_ushort_vector(vec, 3);
+ * push_ushort_vector(vec, 4);
+ * push_ushort_vector(vec, 5);
+ * pop_ushort_vector_index(vec, 0);
+ * pop_ushort_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+int pop_ushort_vector_index(UShort *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Int struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Int
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(vec, 5);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 2);
+ * push_int_vector(vec, 3);
+ * push_int_vector(vec, 4);
+ * push_int_vector(vec, 5);
+ * pop_int_vector_index(vec, 0);
+ * pop_int_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int pop_int_vector_index(Int *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an UInt struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type UInt
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(vec, 5);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 2);
+ * push_uint_vector(vec, 3);
+ * push_uint_vector(vec, 4);
+ * push_uint_vector(vec, 5);
+ * pop_uint_vector_index(vec, 0);
+ * pop_uint_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+int pop_uint_vector_index(UInt *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an LInt struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type LInt
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(vec, 5);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 2);
+ * push_long_vector(vec, 3);
+ * push_long_vector(vec, 4);
+ * push_long_vector(vec, 5);
+ * pop_long_vector_index(vec, 0);
+ * pop_long_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+int pop_long_vector_index(LInt *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an ULInt struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type ULInt
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(vec, 5);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 2);
+ * push_ulong_vector(vec, 3);
+ * push_ulong_vector(vec, 4);
+ * push_ulong_vector(vec, 5);
+ * pop_ulong_vector_index(vec, 0);
+ * pop_ulong_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+int pop_ulong_vector_index(ULInt *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an LLInt struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type LLInt
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 5);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 2);
+ * push_llong_vector(vec, 3);
+ * push_llong_vector(vec, 4);
+ * push_llong_vector(vec, 5);
+ * pop_llong_vector_index(vec, 0);
+ * pop_llong_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+int pop_llong_vector_index(LLInt *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an ULLInt struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type ULLInt
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(vec, 5);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 2);
+ * push_ullong_vector(vec, 3);
+ * push_ullong_vector(vec, 4);
+ * push_ullong_vector(vec, 5);
+ * pop_ullong_vector_index(vec, 0);
+ * pop_ullong_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+int pop_ullong_vector_index(ULLInt *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Flt struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Flt
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(vec, 5);
+ * push_float_vector(vec, 1);
+ * push_float_vector(vec, 2);
+ * push_float_vector(vec, 3);
+ * push_float_vector(vec, 4);
+ * push_float_vector(vec, 5);
+ * pop_float_vector_index(vec, 0);
+ * pop_float_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+int pop_float_vector_index(Flt *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Dble struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Dble
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(vec, 5);
+ * push_double_vector(vec, 1);
+ * push_double_vector(vec, 2);
+ * push_double_vector(vec, 3);
+ * push_double_vector(vec, 4);
+ * push_double_vector(vec, 5);
+ * pop_double_vector_index(vec, 0);
+ * pop_double_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+int pop_double_vector_index(Dble *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an LDble struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type LDble
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(vec, 5);
+ * push_ldouble_vector(vec, 1);
+ * push_ldouble_vector(vec, 2);
+ * push_ldouble_vector(vec, 3);
+ * push_ldouble_vector(vec, 4);
+ * push_ldouble_vector(vec, 5);
+ * pop_ldouble_vector_index(vec, 0);
+ * pop_ldouble_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+int pop_ldouble_vector_index(LDble *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Char struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Char
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(vec, 5);
+ * push_char_vector(vec, 1);
+ * push_char_vector(vec, 2);
+ * push_char_vector(vec, 3);
+ * push_char_vector(vec, 4);
+ * push_char_vector(vec, 5);
+ * pop_char_vector_index(vec, 0);
+ * pop_char_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+int pop_char_vector_index(Char *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Char struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type UChar
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(vec, 5);
+ * push_uchar_vector(vec, 1);
+ * push_uchar_vector(vec, 2);
+ * push_uchar_vector(vec, 3);
+ * push_uchar_vector(vec, 4);
+ * push_uchar_vector(vec, 5);
+ * pop_uchar_vector_index(vec, 0);
+ * pop_uchar_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ 2, 3, 4 ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+int pop_uchar_vector_index(UChar *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Bool struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Bool
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * Bool vec;
+ * init_bool_vector(vec, 5);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, false);
+ * push_bool_vector(vec, false);
+ * pop_bool_vector_index(vec, 0);
+ * pop_bool_vector_index(vec, vec.active_length);
+ * PRINT(vec);
+ * [ true, true, false ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+int pop_bool_vector_index(Bool *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will pop a value from an Char struct container as a user defined
+ * index.  This function runs fastest, when the index is the last populated index.
+ *
+ * /param vec An struct container of type Char
+ * /param index The index from which data is to be popped.
+ *
+ * @code
+ * String vec;
+ * init_string_vector(vec);
+ * push_string_vector(vec, "Hello", vec.active_length);
+ * push_string_vector(vec, "Goodbye", vec.active_length);
+ * push_string_vector(vec, "again", vec.active_length);
+ * push_string_vector(vec, Test", vec.active_length);
+ * push_string_vector(vec, "One", vec.active_length);
+ * pop_string_vector_index(vec, 0);
+ * PRINT(vec);
+ * [ Goodbye, again, Test, One ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+int pop_string_vector_index(String *vec, size_t index);
+// ==========================================================================================
+// ==========================================================================================
+// REPLACE_TYPE_VALUES FUNCTIONS
+
+/**
+ * This function will replace all instances of a scalar value in an Short
+ * struct container.
+ *
+ * /param vec A struct container of type Short
+ * /param old_value An short int scalar variable to be replaced
+ * /param new_value An short int scalar variable to replace old_value with
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(vec, 5);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 2);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 3);
+ * replace_short_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+void replace_short_vector_values(Short *vec, short int old_value, short int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an UShort
+ * struct container.
+ *
+ * /param vec A struct container of type UShort
+ * /param old_value An unsigned short int scalar variable to be replaced
+ * /param new_value An unsigned short int scalar variable to replace old_value with
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(vec, 5);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 2);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 3);
+ * replace_ushort_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+void replace_ushort_vector_values(UShort *vec, unsigned short int old_value, unsigned short int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an Int
+ * struct container.
+ *
+ * /param vec A struct container of type Int
+ * /param old_value An int scalar variable to be replaced
+ * /param new_value An int scalar variable to replace old_value with
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(vec, 5);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 2);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 3);
+ * replace_int_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+void replace_int_vector_values(Int *vec, int old_value, int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an UInt
+ * struct container.
+ *
+ * /param vec A struct container of type UInt
+ * /param old_value An unsigned int scalar variable to be replaced
+ * /param new_value An unsigned int scalar variable to replace old_value with
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(vec, 5);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 2);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 3);
+ * replace_uint_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+void replace_uint_vector_values(UInt *vec, unsigned int old_value, unsigned int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an LInt
+ * struct container.
+ *
+ * /param vec A struct container of type LInt
+ * /param old_value An long int scalar variable to be replaced
+ * /param new_value An long int scalar variable to replace old_value with
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(vec, 5);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 2);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 3);
+ * replace_long_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+void replace_long_vector_values(LInt *vec, long int old_value, long int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an ULInt
+ * struct container.
+ *
+ * /param vec A struct container of type ULInt
+ * /param old_value An unsigned long int scalar variable to be replaced
+ * /param new_value An unsigned long int scalar variable to replace old_value with
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(vec, 5);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 2);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 3);
+ * replace_ulong_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+void replace_ulong_vector_values(ULInt *vec, unsigned long int old_value, unsigned long int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an LLInt
+ * struct container.
+ *
+ * /param vec A struct container of type LLInt
+ * /param old_value An long long int scalar variable to be replaced
+ * /param new_value An long long int scalar variable to replace old_value with
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 5);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 2);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 3);
+ * replace_llong_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+void replace_llong_vector_values(LLInt *vec, long long int old_value, long long int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an ULLInt
+ * struct container.
+ *
+ * /param vec A struct container of type ULLInt
+ * /param old_value An unsigned long long int scalar variable to be replaced
+ * /param new_value An unsigned long long int scalar variable to replace old_value with
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(vec, 5);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 2);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 3);
+ * replace_ullong_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+void replace_ullong_vector_values(ULLInt *vec, unsigned long long int old_value, unsigned long long int new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an Flt
+ * struct container.
+ *
+ * /param vec A struct container of type Flt
+ * /param old_value An float scalar variable to be replaced
+ * /param new_value An float scalar variable to replace old_value with
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(vec, 5);
+ * push_float_vector(vec, 1);
+ * push_float_vector(vec, 1);
+ * push_float_vector(vec, 2);
+ * push_float_vector(vec, 1);
+ * push_float_vector(vec, 3);
+ * replace_float_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+void replace_float_vector_values(Flt *vec, float old_value, float new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an Dble
+ * struct container.
+ *
+ * /param vec A struct container of type Dble
+ * /param old_value An double scalar variable to be replaced
+ * /param new_value An double scalar variable to replace old_value with
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(vec, 5);
+ * push_double_vector(vec, 1);
+ * push_double_vector(vec, 1);
+ * push_double_vector(vec, 2);
+ * push_double_vector(vec, 1);
+ * push_double_vector(vec, 3);
+ * replace_double_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+void replace_double_vector_values(Dble *vec, double old_value, double new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an LDble
+ * struct container.
+ *
+ * /param vec A struct container of type LDble
+ * /param old_value A long double scalar variable to be replaced
+ * /param new_value A long double scalar variable to replace old_value with
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(vec, 5);
+ * push_ldouble_vector(vec, 1);
+ * push_ldouble_vector(vec, 1);
+ * push_ldouble_vector(vec, 2);
+ * push_ldouble_vector(vec, 1);
+ * push_ldouble_vector(vec, 3);
+ * replace_ldouble_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+void replace_ldouble_vector_values(LDble *vec, long double old_value, long double new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an Char
+ * struct container.
+ *
+ * /param vec A struct container of type Char
+ * /param old_value A char scalar variable to be replaced
+ * /param new_value A char scalar variable to replace old_value with
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(vec, 5);
+ * push_char_vector(vec, 1);
+ * push_char_vector(vec, 1);
+ * push_char_vector(vec, 2);
+ * push_char_vector(vec, 1);
+ * push_char_vector(vec, 3);
+ * replace_char_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+void replace_char_vector_values(Char *vec, char old_value, char new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an Char
+ * struct container.
+ *
+ * /param vec A struct container of type UChar
+ * /param old_value A char scalar variable to be replaced
+ * /param new_value A char scalar variable to replace old_value with
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(vec, 5);
+ * push_uchar_vector(vec, 1);
+ * push_uchar_vector(vec, 1);
+ * push_uchar_vector(vec, 2);
+ * push_uchar_vector(vec, 1);
+ * push_uchar_vector(vec, 3);
+ * replace_uchar_vector_values(vec, 1, 5);
+ * PRINT(vec);
+ * //>> [ 5, 5, 2, 5, 3 ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+void replace_uchar_vector_values(UChar *vec, unsigned char old_value, unsigned char new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a scalar value in an Bool
+ * struct container.
+ *
+ * /param vec A struct container of type Bool
+ * /param old_value A bool scalar variable to be replaced
+ * /param new_value A bool scalar variable to replace old_value with
+ *
+ * @code
+ * Char vec;
+ * init_bool_vector(vec, 5);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, false);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * replace_bool_vector_values(vec, true, false);
+ * PRINT(vec);
+ * //>> [ false, false, false, false, false ]
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+void replace_bool_vector_values(Bool *vec, bool old_value, char new_value);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a string within a String vector struct
+ *
+ * /param vec A struct container of type String
+ * /param old_value The old string value
+ * /param new_value The new string value
+ *
+ * @code
+ * String vec;
+ * init_string_vector(vec);
+ * push_string_vector(vec, "Hello", 0);
+ * push_string_vector(vec, "Goodbye", 1);
+ * push_string_vector(vec, "Hello", 2);
+ * push_string_vector(vec, "Goodbye", 3);
+ * replace_string_vector_values(vec, "Hello", "Wrong");
+ * PRINT(vec);
+ * // >> [ Wrong, Goodbye, Wrong, Goodbye);
+ * free_string_vector(&vec);
+ * @endcode
+ */
+void replace_string_vector_values(String *vec, char *old_value, char *new_value);
 #endif /* vector_H */
 // ==========================================================================================
 // ==========================================================================================

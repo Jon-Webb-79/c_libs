@@ -1301,4 +1301,311 @@ int insert_bool_vector(Bool *vec, bool *elements,
 }
 // ==========================================================================================
 // ==========================================================================================
+/// pop_type_stack_index functions
+
+int pop_short_vector_index(Short *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(short int);
+	memmove(dst, dst + sizeof(short int), sizeof(short int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ushort_vector_index(UShort *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(unsigned short int);
+	memmove(dst, dst + sizeof(unsigned short int), sizeof(unsigned short int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_int_vector_index(Int *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(int);
+	memmove(dst, dst + sizeof(int), sizeof(int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_uint_vector_index(UInt *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(unsigned int);
+	memmove(dst, dst + sizeof(unsigned int), sizeof(unsigned int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_long_vector_index(LInt *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(long int);
+	memmove(dst, dst + sizeof(long int), sizeof(long int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ulong_vector_index(ULInt *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(unsigned long int);
+	memmove(dst, dst + sizeof(unsigned long int), sizeof(unsigned long int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_llong_vector_index(LLInt *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(long long int);
+	memmove(dst, dst + sizeof(long long int), sizeof(long long int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ullong_vector_index(ULLInt *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(unsigned long long int);
+	memmove(dst, dst + sizeof(unsigned long long int), sizeof(unsigned long long int) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_float_vector_index(Flt *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(float);
+	memmove(dst, dst + sizeof(float), sizeof(float) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_double_vector_index(Dble *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(double);
+	memmove(dst, dst + sizeof(double), sizeof(double) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ldouble_vector_index(LDble *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(long double);
+	memmove(dst, dst + sizeof(long double), sizeof(long double) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_char_vector_index(Char *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(char);
+	memmove(dst, dst + sizeof(char), sizeof(char) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_bool_vector_index(Bool *vec, size_t index) {
+	if (index >= vec->active_length) {
+		fprintf(stderr, "index, out of bounds in file %s at line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	unsigned char *dst = (unsigned char *)vec->array + index * sizeof(bool);
+	memmove(dst, dst + sizeof(bool), sizeof(bool) * (vec->active_length - index - 1));
+	vec->array[vec->active_length - 1] = 0;
+	vec->active_length -= 1;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_string_vector_index(String *vec, size_t index) {
+	if (index + 1 > vec->active_length) {
+		fprintf(stderr, "Index out of range at file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	char *value = vec->array[index];
+	if (index + 1 < vec->active_length) {
+		memmove(vec->array + index, vec->array + index + 1, sizeof(*vec->array) * (vec->active_length - index - 1));
+	}
+	char **resized = realloc(vec->array, sizeof(*vec->array) * (vec->active_length - 1));
+	if (!resized) {
+		fprintf(stderr, "String index out of range in file %s on line %d\n", __FILE__, __LINE__);
+		memmove(vec->array + index + 1, vec->array + index, sizeof(char *) * (vec->active_length - index - 1));
+		vec->array[index] = value;
+		return -1;
+	}
+	vec->array = resized;
+	vec->active_length--;
+	free(value);
+	return 1;
+}
+// ==========================================================================================
+// ==========================================================================================
+// REPLACE_TYPE_VALUES FUNCTIONS
+
+
+void replace_short_vector_values(Short *vec, short int old_value, short int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_ushort_vector_values(UShort *vec, unsigned short int old_value, unsigned short int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_int_vector_values(Int *vec, int old_value, int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_uint_vector_values(UInt *vec, unsigned int old_value, unsigned int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_long_vector_values(LInt *vec, long int old_value, long int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_ulong_vector_values(ULInt *vec, unsigned long int old_value, unsigned long int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_llong_vector_values(LLInt *vec, long long int old_value, long long int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_ullong_vector_values(ULLInt *vec, unsigned long long int old_value, unsigned long long int new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_float_vector_values(Flt *vec, float old_value, float new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_double_vector_values(Dble *vec, double old_value, double new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_ldouble_vector_values(LDble *vec, long double old_value, long double new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_char_vector_values(Char *vec, char old_value, char new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_uchar_vector_values(UChar *vec, unsigned char old_value, unsigned char new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_bool_vector_values(Bool *vec, bool old_value, char new_value) {
+	for (size_t i = 0; i < vec->active_length; i++) {
+		if (vec->array[i] == old_value) vec->array[i] = new_value;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void replace_string_vector_values(String *vec, char *old_value, char *new_value) {
+	int cmp;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		cmp = strcmp(vec->array[i], old_value);
+		if (cmp == 0) {
+			pop_string_vector_index(vec, i);
+			push_string_vector(vec, new_value, i);
+		}
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

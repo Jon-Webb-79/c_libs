@@ -16,6 +16,7 @@
 #define data_structures_H
 
 #include <stdio.h>
+#include "vector.h"
 
 // PUSH GENERIC OPERATOR
 
