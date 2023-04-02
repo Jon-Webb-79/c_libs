@@ -147,6 +147,18 @@
  * - `sort_bool_vector()`: Function to sort a bool vector or array in forward or reverse direction.
  * - `sort_string_vector()`: Function to sort a string vector or array in forward or reverse direction.
  *
+ * - `sum_short_vector()`: Function to determine the sum of short integer values in a short integer vector or array.
+ * - `sum_ushort_vector()`: Function to determine the sum of unsigned short integer values in a short integer vector or array.
+ * - `sum_int_vector()`: Function to determine the sum of integer values in a short integer vector or array.
+ * - `sum_uint_vector()`: Function to determine the sum of unsigned integer values in a short integer vector or array.
+ * - `sum_long_vector()`: Function to determine the sum of long integer values in a short integer vector or array.
+ * - `sum_ulong_vector()`: Function to determine the sum of unsigned long integer values in a short integer vector or array.
+ * - `sum_llong_vector()`: Function to determine the sum of long long integer values in a short integer vector or array.
+ * - `sum_ullong_vector()`: Function to determine the sum of unsigned long long integer values in a short integer vector or array.
+ * - `sum_float_vector()`: Function to determine the sum of float values in a short integer vector or array.
+ * - `sum_double_vector()`: Function to determine the sum of double values in a short integer vector or array.
+ * - `sum_ldouble_vector()`: Function to determine the sum of long double values in a short integer vector or array.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

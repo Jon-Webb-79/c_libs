@@ -2933,222 +2933,6 @@ void reverse_string_vector(String *vec);
 // SORT_TYPE_VEC FUNCTIONS
 
 /**
- * This function will sort a vector data structure of type Int8 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type Int8
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * Int8 vec;
- * init_int8_vector(vec, 5);
- * int8_t a[5] = {4, 2, 1, 3, 5};
- * insert_int8_vector(&vec, a, 5, 0);
- * sort_int8_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_int8_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_int8_vector(&vec);
- * @endcode
- */
-void sort_int8_vector(Int8 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type UInt8 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type UInt8
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * UInt8 vec;
- * init_uint8_vector(vec, 5);
- * uint8_t a[5] = {4, 2, 1, 3, 5};
- * insert_uint8_vector(&vec, a, 5, 0);
- * sort_uint8_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_uint8_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_uint8_vector(&vec);
- * @endcode
- */
-void sort_uint8_vector(UInt8 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type Int16 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type Int16
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * Int16 vec;
- * init_int16_vector(vec, 5);
- * int16_t a[5] = {4, 2, 1, 3, 5};
- * insert_int16_vector(&vec, a, 5, 0);
- * sort_int16_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_int16_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_int16_vector(&vec);
- * @endcode
- */
-void sort_int16_vector(Int16 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type UInt16 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type UInt16
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * UInt16 vec;
- * init_uint16_vector(vec, 5);
- * uint16_t a[5] = {4, 2, 1, 3, 5};
- * insert_uint16_vector(&vec, a, 5, 0);
- * sort_uint16_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_uint16_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_uint16_vector(&vec);
- * @endcode
- */
-void sort_uint16_vector(UInt16 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type Int32 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type Int32
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * Int32 vec;
- * init_int32_vector(vec, 5);
- * int32_t a[5] = {4, 2, 1, 3, 5};
- * insert_int32_vector(&vec, a, 5, 0);
- * sort_int32_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_int32_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_int32_vector(&vec);
- * @endcode
- */
-void sort_int32_vector(Int32 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type UInt32 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type UInt32
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * UInt32 vec;
- * init_uint32_vector(vec, 5);
- * uint32_t a[5] = {4, 2, 1, 3, 5};
- * insert_uint32_vector(&vec, a, 5, 0);
- * sort_uint32_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_uint32_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_uint32_vector(&vec);
- * @endcode
- */
-void sort_uint32_vector(UInt32 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type Int64 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type Int64
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * Int64 vec;
- * init_int64_vector(vec, 5);
- * int64_t a[5] = {4, 2, 1, 3, 5};
- * insert_int64_vector(&vec, a, 5, 0);
- * sort_int64_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_int64_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_int64_vector(&vec);
- * @endcode
- */
-void sort_int64_vector(Int64 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
- * This function will sort a vector data structure of type UInt64 in
- * forward or reverse order
- *
- * /param vec A vector data structure of type UInt64
- * /param low The lowest indice for partitioning, recommended to be 0
- * /param high The highest indice for sorting, recommended to be the last index
- *             in the data structure
- * /param order FORWARD for a forward sort, REVERSE for a reverse sort
- *
- * @code
- * UInt64 vec;
- * init_uint64_vector(vec, 5);
- * uint64_t a[5] = {4, 2, 1, 3, 5};
- * insert_uint64_vector(&vec, a, 5, 0);
- * sort_uint64_vector(&vec, 0, 5, FORWARD);
- * PRINT(vec);
- * // >> [ 1, 2, 3, 4, 5 ]
- * sort_uint64_vector(&vec, 0, 5, REVERSE);
- * PRINT(vec);
- * // >> [ 5, 4, 3, 2, 1 ]
- * free_uint64_vector(&vec);
- * @endcode
- */
-void sort_uint64_vector(UInt64 *vec, size_t low, size_t high, sort_order order);
-// --------------------------------------------------------------------------------
-
-/**
  * This function will sort a vector data structure of type Short in
  * forward or reverse order
  *
@@ -3524,6 +3308,228 @@ void sort_uchar_vector(UChar *vec, size_t low, size_t high, sort_order order);
  * @endcode
  */
 void sort_string_vector(String *vec, size_t low, size_t high, sort_order order);
+// ==========================================================================================
+// ==========================================================================================
+// SUM_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type Short
+ *
+ * /param vec A vector data structure of type Short
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(vec, 5);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * short int sum_value = sum_short_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_short_vector(&vec);
+ * @endcode
+ */
+short int sum_short_vector(Short *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type UShort
+ *
+ * /param vec A vector data structure of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(vec, 5);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * unsigned short int sum_value = sum_ushort_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+unsigned short int sum_ushort_vector(UShort *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type Int
+ *
+ * /param vec A vector data structure of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(vec, 5);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * int sum_value = sum_int_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int sum_int_vector(Int *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type UInt
+ *
+ * /param vec A vector data structure of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(vec, 5);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * unsigned int sum_value = sum_uint_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+unsigned int sum_uint_vector(UInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type LInt
+ *
+ * /param vec A vector data structure of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(vec, 5);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * long int sum_value = sum_long_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_long_vector(&vec);
+ * @endcode
+ */
+long int sum_long_vector(LInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type ULInt
+ *
+ * /param vec A vector data structure of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(vec, 5);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * unsigned long int sum_value = sum_ulong_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+unsigned long int sum_ulong_vector(ULInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type LLInt
+ *
+ * /param vec A vector data structure of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 5);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * long long int sum_value = sum_llong_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+long long int sum_llong_vector(LLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type ULLInt
+ *
+ * /param vec A vector data structure of type ULLInt
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(vec, 5);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * unsigned long long int sum_value = sum_ullong_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+unsigned long long int sum_ullong_vector(ULLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type Flt
+ *
+ * /param vec A vector data structure of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(vec, 5);
+ * float a[5] = {1., 2., 3., 4., 5.};
+ * insert_float_vector(&vec, a, 5, 0);
+ * float sum_value = sum_float_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_float_vector(&vec);
+ * @endcode
+ */
+float sum_float_vector(Flt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type Dble
+ *
+ * /param vec A vector data structure of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(vec, 5);
+ * double a[5] = {1., 2., 3., 4., 5.};
+ * insert_double_vector(&vec, a, 5, 0);
+ * double sum_value = sum_double_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_double_vector(&vec);
+ * @endcode
+ */
+double sum_double_vector(Dble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type LDble
+ *
+ * /param vec A vector data structure of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(vec, 5);
+ * long double a[5] = {1., 2., 3., 4., 5.};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * long double sum_value = sum_ldouble_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ldouble_vector(&vec)
+ * @endcode
+ */
+long double sum_ldouble_vector(LDble *vec);
 // ==========================================================================================
 // ==========================================================================================
 // eof

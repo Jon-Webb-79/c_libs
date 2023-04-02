@@ -2760,4 +2760,105 @@ void sort_string_vector(String *vec, size_t low, size_t high, sort_order order) 
 }
 // ==========================================================================================
 // ==========================================================================================
+// FREE_TYPE_VEC FUNCTIONS
+
+short int sum_short_vector(Short *vec) {
+	short int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned short int sum_ushort_vector(UShort *vec) {
+	unsigned short int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+int sum_int_vector(Int *vec) {
+	int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned int sum_uint_vector(UInt *vec) {
+	unsigned int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+long int sum_long_vector(LInt *vec) {
+	long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned long int sum_ulong_vector(ULInt *vec) {
+	unsigned long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+long long int sum_llong_vector(LLInt *vec) {
+	long long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned long long int sum_ullong_vector(ULLInt *vec) {
+	unsigned long long int sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+float sum_float_vector(Flt *vec) {
+	float sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+double sum_double_vector(Dble *vec) {
+	double sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+long double sum_ldouble_vector(LDble *vec) {
+	long double sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
