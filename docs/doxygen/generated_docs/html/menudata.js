@@ -43,7 +43,8 @@ var menudata={children:[
 {text:"s",url:"globals_s.html#index_s"},
 {text:"v",url:"globals_v.html#index_v"}]},
 {text:"Functions",url:"globals_func.html",children:[
-{text:"f",url:"globals_func.html#index_f"},
+{text:"d",url:"globals_func.html#index_d"},
+{text:"f",url:"globals_func_f.html#index_f"},
 {text:"i",url:"globals_func_i.html#index_i"},
 {text:"p",url:"globals_func_p.html#index_p"},
 {text:"r",url:"globals_func_r.html#index_r"},

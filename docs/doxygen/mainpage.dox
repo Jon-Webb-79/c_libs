@@ -111,6 +111,22 @@
  * - `replace_bool_vector()`: Function to replace a bool value with another in a vector or array.
  * - `replace_string_vector()`: Function to replace a string value with another in a vector or array.
  *
+ * - `reverse_char_vector()`: Function to reverse the order of a char vector or array.
+ * - `reverse_uchar_vector()`: Function to reverse the order of an unsigned char vector or array.
+ * - `reverse_short_vector()`: Function to reverse the order of a short integer vector or array.
+ * - `reverse_ushort_vector()`: Function to reverse the order of an unsigned short integer vector or array.
+ * - `reveree_int_vector()`: Function to reverse the order of an integer vector or array.
+ * - `reverse_uint_vector()`: Functin to reverse the order of an unsigned integer vector or array.
+ * - `reverse_long_vector()`: Function to reverse the order of a long integer vector or array.
+ * - `reverse_ulong_vector()`: Function to reverse the order of an unsigned long interger vector or array.
+ * - `reverse_llong_vector()`: Function to reverse the order of a long long integer vector or array.
+ * - `reverse_ullong_vector()`: Function to reverse the order of an unsinged long long integer vector or array.
+ * - `reverse_float_vector()`: Function to reverse the order of a float vector or array.
+ * - `reverse_double_vector()`: Function to reverse the order of a double vector or array.
+ * - `reverse_ldouble_vector()`: Function to reverse the order of a long double vector or array.
+ * - `reverse_bool_vector()`: Function to reverse the order of a bool vector or array.
+ * - `reverse_string_vector()`: Function to reverse the order of a string vector or array.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

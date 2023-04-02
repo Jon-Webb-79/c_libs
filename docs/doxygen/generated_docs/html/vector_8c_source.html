@@ -1679,38 +1679,661 @@ $(function() {
 <div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>}</div>
 <div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span><span class="comment">// ==========================================================================================</span></div>
 <div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span><span class="comment">// ==========================================================================================</span></div>
-<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span><span class="comment">// eof</span></div>
+<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span><span class="comment">// FREE_TYPE_VEC FUNCTIONS</span></div>
+<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span> </div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"><a class="line" href="vector_8c.html#a8a383d2299a326d3c0ded94c19d73393"> 1613</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a8a383d2299a326d3c0ded94c19d73393">free_short_vector</a>(Short *vec) {</div>
+<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>    }</div>
+<div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>    }</div>
+<div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span>}</div>
+<div class="line"><a id="l01624" name="l01624"></a><span class="lineno"> 1624</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span> </div>
+<div class="line"><a id="l01626" name="l01626"></a><span class="lineno"><a class="line" href="vector_8c.html#a3765cd4f6e59bada679e05ea6dacfff5"> 1626</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a3765cd4f6e59bada679e05ea6dacfff5">free_ushort_vector</a>(UShort *vec) {</div>
+<div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>    }</div>
+<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>    }</div>
+<div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span>}</div>
+<div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span> </div>
+<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"><a class="line" href="vector_8c.html#ab2c13b705440e4d4d53825bb16929ff6"> 1639</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#ab2c13b705440e4d4d53825bb16929ff6">free_int_vector</a>(Int *vec) {</div>
+<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>    }</div>
+<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>    }</div>
+<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>}</div>
+<div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span> </div>
+<div class="line"><a id="l01652" name="l01652"></a><span class="lineno"><a class="line" href="vector_8c.html#a6195f400606be104b4461cd9876f93ce"> 1652</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a6195f400606be104b4461cd9876f93ce">free_uint_vector</a>(UInt *vec) {</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>    }</div>
+<div class="line"><a id="l01659" name="l01659"></a><span class="lineno"> 1659</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01660" name="l01660"></a><span class="lineno"> 1660</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01661" name="l01661"></a><span class="lineno"> 1661</span>    }</div>
+<div class="line"><a id="l01662" name="l01662"></a><span class="lineno"> 1662</span>}</div>
+<div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span> </div>
+<div class="line"><a id="l01665" name="l01665"></a><span class="lineno"><a class="line" href="vector_8c.html#af1ab528ebf7f47a278e3be3b02e9acee"> 1665</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#af1ab528ebf7f47a278e3be3b02e9acee">free_long_vector</a>(LInt *vec) {</div>
+<div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>    }</div>
+<div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>    }</div>
+<div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span>}</div>
+<div class="line"><a id="l01676" name="l01676"></a><span class="lineno"> 1676</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01677" name="l01677"></a><span class="lineno"> 1677</span> </div>
+<div class="line"><a id="l01678" name="l01678"></a><span class="lineno"><a class="line" href="vector_8c.html#a9a05407a3434648f10f4416a7874150d"> 1678</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a9a05407a3434648f10f4416a7874150d">free_ulong_vector</a>(ULInt *vec) {</div>
+<div class="line"><a id="l01679" name="l01679"></a><span class="lineno"> 1679</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01680" name="l01680"></a><span class="lineno"> 1680</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01681" name="l01681"></a><span class="lineno"> 1681</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01682" name="l01682"></a><span class="lineno"> 1682</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01683" name="l01683"></a><span class="lineno"> 1683</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01684" name="l01684"></a><span class="lineno"> 1684</span>    }</div>
+<div class="line"><a id="l01685" name="l01685"></a><span class="lineno"> 1685</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01686" name="l01686"></a><span class="lineno"> 1686</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01687" name="l01687"></a><span class="lineno"> 1687</span>    }</div>
+<div class="line"><a id="l01688" name="l01688"></a><span class="lineno"> 1688</span>}</div>
+<div class="line"><a id="l01689" name="l01689"></a><span class="lineno"> 1689</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span> </div>
+<div class="line"><a id="l01691" name="l01691"></a><span class="lineno"><a class="line" href="vector_8c.html#af92bc034e6f34814eea1008629f41ef9"> 1691</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#af92bc034e6f34814eea1008629f41ef9">free_llong_vector</a>(LLInt *vec) {</div>
+<div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span>    }</div>
+<div class="line"><a id="l01698" name="l01698"></a><span class="lineno"> 1698</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01699" name="l01699"></a><span class="lineno"> 1699</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01700" name="l01700"></a><span class="lineno"> 1700</span>    }</div>
+<div class="line"><a id="l01701" name="l01701"></a><span class="lineno"> 1701</span>}</div>
+<div class="line"><a id="l01702" name="l01702"></a><span class="lineno"> 1702</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span> </div>
+<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"><a class="line" href="vector_8c.html#a605f038b309fb25e53f637c9e9b6e4bd"> 1704</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a605f038b309fb25e53f637c9e9b6e4bd">free_ullong_vector</a>(ULLInt *vec) {</div>
+<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span>    }</div>
+<div class="line"><a id="l01711" name="l01711"></a><span class="lineno"> 1711</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01712" name="l01712"></a><span class="lineno"> 1712</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01713" name="l01713"></a><span class="lineno"> 1713</span>    }</div>
+<div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span>}</div>
+<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span> </div>
+<div class="line"><a id="l01717" name="l01717"></a><span class="lineno"><a class="line" href="vector_8c.html#aa0efda9f361b9e9219f5afc379c7e6cc"> 1717</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#aa0efda9f361b9e9219f5afc379c7e6cc">free_float_vector</a>(Flt *vec) {</div>
+<div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>    }</div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>    }</div>
+<div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>}</div>
+<div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span> </div>
+<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"><a class="line" href="vector_8c.html#a0d9577d0256e0e006d1c55a12ba1bffd"> 1730</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a0d9577d0256e0e006d1c55a12ba1bffd">free_double_vector</a>(Dble *vec) {</div>
+<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>    }</div>
+<div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>    }</div>
+<div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>}</div>
+<div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span> </div>
+<div class="line"><a id="l01743" name="l01743"></a><span class="lineno"><a class="line" href="vector_8c.html#a89e6af78e123543fefe3333963de0e83"> 1743</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a89e6af78e123543fefe3333963de0e83">free_ldouble_vector</a>(LDble *vec) {</div>
+<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01748" name="l01748"></a><span class="lineno"> 1748</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01749" name="l01749"></a><span class="lineno"> 1749</span>    }</div>
+<div class="line"><a id="l01750" name="l01750"></a><span class="lineno"> 1750</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01751" name="l01751"></a><span class="lineno"> 1751</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>    }</div>
+<div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>}</div>
+<div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span> </div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"><a class="line" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4"> 1756</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a>(Char *vec) {</div>
+<div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>    }</div>
+<div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>    }</div>
+<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>}</div>
+<div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01768" name="l01768"></a><span class="lineno"> 1768</span> </div>
+<div class="line"><a id="l01769" name="l01769"></a><span class="lineno"><a class="line" href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268"> 1769</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a>(UChar *vec) {</div>
+<div class="line"><a id="l01770" name="l01770"></a><span class="lineno"> 1770</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01772" name="l01772"></a><span class="lineno"> 1772</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01773" name="l01773"></a><span class="lineno"> 1773</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01774" name="l01774"></a><span class="lineno"> 1774</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01775" name="l01775"></a><span class="lineno"> 1775</span>    }</div>
+<div class="line"><a id="l01776" name="l01776"></a><span class="lineno"> 1776</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span>    }</div>
+<div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>}</div>
+<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span> </div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"><a class="line" href="vector_8c.html#a5783a319298af13236def83e42f00799"> 1782</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a5783a319298af13236def83e42f00799">free_bool_vector</a>(Bool *vec) {</div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>    <span class="keywordflow">if</span> (vec-&gt;dat_type == <a class="code hl_enumvalue" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>) {</div>
+<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>        free(vec-&gt;array);</div>
+<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>        vec-&gt;array = NULL;</div>
+<div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span>        vec-&gt;active_length = 0;</div>
+<div class="line"><a id="l01787" name="l01787"></a><span class="lineno"> 1787</span>        vec-&gt;allocated_length = 0;</div>
+<div class="line"><a id="l01788" name="l01788"></a><span class="lineno"> 1788</span>    }</div>
+<div class="line"><a id="l01789" name="l01789"></a><span class="lineno"> 1789</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>        fprintf(stderr, <span class="stringliteral">&quot;Struct in file %s on line %d must be DYNAMIC\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>    }</div>
+<div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span>}</div>
+<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span> </div>
+<div class="line"><a id="l01795" name="l01795"></a><span class="lineno"><a class="line" href="vector_8c.html#a2975c4c7c36efebc98b926abfc4ba837"> 1795</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a2975c4c7c36efebc98b926abfc4ba837">free_string_vector</a>(<a class="code hl_struct" href="structString.html">String</a> *vec) {</div>
+<div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>    <span class="keywordflow">if</span> (vec != NULL) {</div>
+<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;<a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a>; i++) {</div>
+<div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>            free(vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>[i]);</div>
+<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>        }</div>
+<div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>        free(vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>);</div>
+<div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>        vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a> = NULL;</div>
+<div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span>        vec-&gt;<a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a> = 0;</div>
+<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>    }</div>
+<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>}</div>
+<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span><span class="comment">// delete_type_stack_duplicates functions</span></div>
+<div class="line"><a id="l01808" name="l01808"></a><span class="lineno"> 1808</span> </div>
+<div class="line"><a id="l01809" name="l01809"></a><span class="lineno"><a class="line" href="vector_8c.html#a35b16d98a38d37826ee118f4860d680a"> 1809</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a35b16d98a38d37826ee118f4860d680a">delete_short_vector_duplicates</a>(Short *vec) {</div>
+<div class="line"><a id="l01810" name="l01810"></a><span class="lineno"> 1810</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01811" name="l01811"></a><span class="lineno"> 1811</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span>                <a class="code hl_function" href="vector_8c.html#a90c0d394579f3950b22adabb66f153e9">pop_short_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>                j--;</div>
+<div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>            }</div>
+<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>        }</div>
+<div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>    }</div>
+<div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>}</div>
+<div class="line"><a id="l01819" name="l01819"></a><span class="lineno"> 1819</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01820" name="l01820"></a><span class="lineno"> 1820</span> </div>
+<div class="line"><a id="l01821" name="l01821"></a><span class="lineno"><a class="line" href="vector_8c.html#a372a58405f86fa4ef22f53af37408017"> 1821</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a372a58405f86fa4ef22f53af37408017">delete_ushort_vector_duplicates</a>(UShort *vec) {</div>
+<div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>                <a class="code hl_function" href="vector_8c.html#ab5f9826948a1e75b6ffa74b2e801f8c5">pop_ushort_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>                j--;</div>
+<div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>            }</div>
+<div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>        }</div>
+<div class="line"><a id="l01829" name="l01829"></a><span class="lineno"> 1829</span>    }</div>
+<div class="line"><a id="l01830" name="l01830"></a><span class="lineno"> 1830</span>}</div>
+<div class="line"><a id="l01831" name="l01831"></a><span class="lineno"> 1831</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01832" name="l01832"></a><span class="lineno"> 1832</span> </div>
+<div class="line"><a id="l01833" name="l01833"></a><span class="lineno"><a class="line" href="vector_8c.html#a68a325016f45777566e1eae4b15c4238"> 1833</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a68a325016f45777566e1eae4b15c4238">delete_int_vector_duplicates</a>(Int *vec) {</div>
+<div class="line"><a id="l01834" name="l01834"></a><span class="lineno"> 1834</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01835" name="l01835"></a><span class="lineno"> 1835</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01836" name="l01836"></a><span class="lineno"> 1836</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01837" name="l01837"></a><span class="lineno"> 1837</span>                <a class="code hl_function" href="vector_8c.html#af0ecebd36b313d07d43f40698bd5508f">pop_int_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01838" name="l01838"></a><span class="lineno"> 1838</span>                j--;</div>
+<div class="line"><a id="l01839" name="l01839"></a><span class="lineno"> 1839</span>            }</div>
+<div class="line"><a id="l01840" name="l01840"></a><span class="lineno"> 1840</span>        }</div>
+<div class="line"><a id="l01841" name="l01841"></a><span class="lineno"> 1841</span>    }</div>
+<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>}</div>
+<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01844" name="l01844"></a><span class="lineno"> 1844</span> </div>
+<div class="line"><a id="l01845" name="l01845"></a><span class="lineno"><a class="line" href="vector_8c.html#ab5a49e7e86d86796744395431d475f74"> 1845</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#ab5a49e7e86d86796744395431d475f74">delete_uint_vector_duplicates</a>(UInt *vec) {</div>
+<div class="line"><a id="l01846" name="l01846"></a><span class="lineno"> 1846</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01847" name="l01847"></a><span class="lineno"> 1847</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>                <a class="code hl_function" href="vector_8c.html#aea61eee2cd7481c1d34d13ba4a27e669">pop_uint_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>                j--;</div>
+<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>            }</div>
+<div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>        }</div>
+<div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>    }</div>
+<div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>}</div>
+<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span> </div>
+<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"><a class="line" href="vector_8c.html#a10ee633f27cbd6252d41ffd0761f6392"> 1857</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a10ee633f27cbd6252d41ffd0761f6392">delete_long_vector_duplicates</a>(LInt *vec) {</div>
+<div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01861" name="l01861"></a><span class="lineno"> 1861</span>                <a class="code hl_function" href="vector_8c.html#ade7d072b4cbbed3560461122ff9bf2d1">pop_long_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01862" name="l01862"></a><span class="lineno"> 1862</span>                j--;</div>
+<div class="line"><a id="l01863" name="l01863"></a><span class="lineno"> 1863</span>            }</div>
+<div class="line"><a id="l01864" name="l01864"></a><span class="lineno"> 1864</span>        }</div>
+<div class="line"><a id="l01865" name="l01865"></a><span class="lineno"> 1865</span>    }</div>
+<div class="line"><a id="l01866" name="l01866"></a><span class="lineno"> 1866</span>}</div>
+<div class="line"><a id="l01867" name="l01867"></a><span class="lineno"> 1867</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span> </div>
+<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"><a class="line" href="vector_8c.html#aa7b0890be4e8157712930fedaf437c8a"> 1869</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#aa7b0890be4e8157712930fedaf437c8a">delete_ulong_vector_duplicates</a>(ULInt *vec) {</div>
+<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span>                <a class="code hl_function" href="vector_8c.html#aee6e8f2b009cc7205dfd8c143b8e9839">pop_ulong_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01874" name="l01874"></a><span class="lineno"> 1874</span>                j--;</div>
+<div class="line"><a id="l01875" name="l01875"></a><span class="lineno"> 1875</span>            }</div>
+<div class="line"><a id="l01876" name="l01876"></a><span class="lineno"> 1876</span>        }</div>
+<div class="line"><a id="l01877" name="l01877"></a><span class="lineno"> 1877</span>    }</div>
+<div class="line"><a id="l01878" name="l01878"></a><span class="lineno"> 1878</span>}</div>
+<div class="line"><a id="l01879" name="l01879"></a><span class="lineno"> 1879</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01880" name="l01880"></a><span class="lineno"> 1880</span> </div>
+<div class="line"><a id="l01881" name="l01881"></a><span class="lineno"><a class="line" href="vector_8c.html#a8f895e83e3b4e24dfdd253508da61875"> 1881</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a8f895e83e3b4e24dfdd253508da61875">delete_llong_vector_duplicates</a>(LLInt *vec) {</div>
+<div class="line"><a id="l01882" name="l01882"></a><span class="lineno"> 1882</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>                <a class="code hl_function" href="vector_8c.html#a6475916b10de913b8859fbd0b8312557">pop_llong_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span>                j--;</div>
+<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>            }</div>
+<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span>        }</div>
+<div class="line"><a id="l01889" name="l01889"></a><span class="lineno"> 1889</span>    }</div>
+<div class="line"><a id="l01890" name="l01890"></a><span class="lineno"> 1890</span>}</div>
+<div class="line"><a id="l01891" name="l01891"></a><span class="lineno"> 1891</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01892" name="l01892"></a><span class="lineno"> 1892</span> </div>
+<div class="line"><a id="l01893" name="l01893"></a><span class="lineno"><a class="line" href="vector_8c.html#a91794ceff19b304073f15ca82fe38b0b"> 1893</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a91794ceff19b304073f15ca82fe38b0b">delete_ullong_vector_duplicates</a>(ULLInt *vec) {</div>
+<div class="line"><a id="l01894" name="l01894"></a><span class="lineno"> 1894</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01895" name="l01895"></a><span class="lineno"> 1895</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01896" name="l01896"></a><span class="lineno"> 1896</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01897" name="l01897"></a><span class="lineno"> 1897</span>                <a class="code hl_function" href="vector_8c.html#a52f4d32e9312b40967f4c0ee3de88e7a">pop_ullong_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01898" name="l01898"></a><span class="lineno"> 1898</span>                j--;</div>
+<div class="line"><a id="l01899" name="l01899"></a><span class="lineno"> 1899</span>            }</div>
+<div class="line"><a id="l01900" name="l01900"></a><span class="lineno"> 1900</span>        }</div>
+<div class="line"><a id="l01901" name="l01901"></a><span class="lineno"> 1901</span>    }</div>
+<div class="line"><a id="l01902" name="l01902"></a><span class="lineno"> 1902</span>}</div>
+<div class="line"><a id="l01903" name="l01903"></a><span class="lineno"> 1903</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span> </div>
+<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"><a class="line" href="vector_8c.html#a49e7b8e0e17f4570f95875965ea8c2d6"> 1905</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a49e7b8e0e17f4570f95875965ea8c2d6">delete_float_vector_duplicates</a>(Flt *vec) {</div>
+<div class="line"><a id="l01906" name="l01906"></a><span class="lineno"> 1906</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01907" name="l01907"></a><span class="lineno"> 1907</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01908" name="l01908"></a><span class="lineno"> 1908</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01909" name="l01909"></a><span class="lineno"> 1909</span>                <a class="code hl_function" href="vector_8c.html#a7f179d98deb7852196afc7e3d26ef06d">pop_float_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01910" name="l01910"></a><span class="lineno"> 1910</span>                j--;</div>
+<div class="line"><a id="l01911" name="l01911"></a><span class="lineno"> 1911</span>            }</div>
+<div class="line"><a id="l01912" name="l01912"></a><span class="lineno"> 1912</span>        }</div>
+<div class="line"><a id="l01913" name="l01913"></a><span class="lineno"> 1913</span>    }</div>
+<div class="line"><a id="l01914" name="l01914"></a><span class="lineno"> 1914</span>}</div>
+<div class="line"><a id="l01915" name="l01915"></a><span class="lineno"> 1915</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01916" name="l01916"></a><span class="lineno"> 1916</span> </div>
+<div class="line"><a id="l01917" name="l01917"></a><span class="lineno"><a class="line" href="vector_8c.html#a0bf0ceecb4ef742811c3b2ed8384d432"> 1917</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a0bf0ceecb4ef742811c3b2ed8384d432">delete_double_vector_duplicates</a>(Dble *vec) {</div>
+<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01920" name="l01920"></a><span class="lineno"> 1920</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01921" name="l01921"></a><span class="lineno"> 1921</span>                <a class="code hl_function" href="vector_8c.html#a8d2545eb603560d67e5c481075e5d0fc">pop_double_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01922" name="l01922"></a><span class="lineno"> 1922</span>                j--;</div>
+<div class="line"><a id="l01923" name="l01923"></a><span class="lineno"> 1923</span>            }</div>
+<div class="line"><a id="l01924" name="l01924"></a><span class="lineno"> 1924</span>        }</div>
+<div class="line"><a id="l01925" name="l01925"></a><span class="lineno"> 1925</span>    }</div>
+<div class="line"><a id="l01926" name="l01926"></a><span class="lineno"> 1926</span>}</div>
+<div class="line"><a id="l01927" name="l01927"></a><span class="lineno"> 1927</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01928" name="l01928"></a><span class="lineno"> 1928</span> </div>
+<div class="line"><a id="l01929" name="l01929"></a><span class="lineno"><a class="line" href="vector_8c.html#a915b5e5eff06f5a04ff068c94cdcffb4"> 1929</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a915b5e5eff06f5a04ff068c94cdcffb4">delete_ldouble_vector_duplicates</a>(LDble *vec) {</div>
+<div class="line"><a id="l01930" name="l01930"></a><span class="lineno"> 1930</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01933" name="l01933"></a><span class="lineno"> 1933</span>                <a class="code hl_function" href="vector_8c.html#a3964e5480d290ac44a95680e52706f9d">pop_ldouble_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01934" name="l01934"></a><span class="lineno"> 1934</span>                j--;</div>
+<div class="line"><a id="l01935" name="l01935"></a><span class="lineno"> 1935</span>            }</div>
+<div class="line"><a id="l01936" name="l01936"></a><span class="lineno"> 1936</span>        }</div>
+<div class="line"><a id="l01937" name="l01937"></a><span class="lineno"> 1937</span>    }</div>
+<div class="line"><a id="l01938" name="l01938"></a><span class="lineno"> 1938</span>}</div>
+<div class="line"><a id="l01939" name="l01939"></a><span class="lineno"> 1939</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01940" name="l01940"></a><span class="lineno"> 1940</span> </div>
+<div class="line"><a id="l01941" name="l01941"></a><span class="lineno"><a class="line" href="vector_8c.html#a5a01cb2f66c78b55858a0941ad9459af"> 1941</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a5a01cb2f66c78b55858a0941ad9459af">delete_char_vector_duplicates</a>(Char *vec) {</div>
+<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01944" name="l01944"></a><span class="lineno"> 1944</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01945" name="l01945"></a><span class="lineno"> 1945</span>                <a class="code hl_function" href="vector_8c.html#a4f9d1488d50bc3889fc04afc18fa9958">pop_char_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01946" name="l01946"></a><span class="lineno"> 1946</span>                j--;</div>
+<div class="line"><a id="l01947" name="l01947"></a><span class="lineno"> 1947</span>            }</div>
+<div class="line"><a id="l01948" name="l01948"></a><span class="lineno"> 1948</span>        }</div>
+<div class="line"><a id="l01949" name="l01949"></a><span class="lineno"> 1949</span>    }</div>
+<div class="line"><a id="l01950" name="l01950"></a><span class="lineno"> 1950</span>}</div>
+<div class="line"><a id="l01951" name="l01951"></a><span class="lineno"> 1951</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span> </div>
+<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"><a class="line" href="vector_8c.html#a1fe7315ba2394e61b43b99bfc765bd75"> 1953</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a1fe7315ba2394e61b43b99bfc765bd75">delete_bool_vector_duplicates</a>(Bool *vec) {</div>
+<div class="line"><a id="l01954" name="l01954"></a><span class="lineno"> 1954</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length - 1; i++) {</div>
+<div class="line"><a id="l01955" name="l01955"></a><span class="lineno"> 1955</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;active_length; j++) {</div>
+<div class="line"><a id="l01956" name="l01956"></a><span class="lineno"> 1956</span>            <span class="keywordflow">if</span> (vec-&gt;array[j] == vec-&gt;array[i]) {</div>
+<div class="line"><a id="l01957" name="l01957"></a><span class="lineno"> 1957</span>                <a class="code hl_function" href="vector_8c.html#a69479bf6e334f44f372305c8b1b13bb3">pop_bool_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01958" name="l01958"></a><span class="lineno"> 1958</span>                j--;</div>
+<div class="line"><a id="l01959" name="l01959"></a><span class="lineno"> 1959</span>            }</div>
+<div class="line"><a id="l01960" name="l01960"></a><span class="lineno"> 1960</span>        }</div>
+<div class="line"><a id="l01961" name="l01961"></a><span class="lineno"> 1961</span>    }</div>
+<div class="line"><a id="l01962" name="l01962"></a><span class="lineno"> 1962</span>}</div>
+<div class="line"><a id="l01963" name="l01963"></a><span class="lineno"> 1963</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01964" name="l01964"></a><span class="lineno"> 1964</span> </div>
+<div class="line"><a id="l01965" name="l01965"></a><span class="lineno"><a class="line" href="vector_8c.html#a1b3482060f9c607f98dbef4845db335f"> 1965</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a1b3482060f9c607f98dbef4845db335f">delete_string_vector_duplicates</a>(<a class="code hl_struct" href="structString.html">String</a> *vec) {</div>
+<div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>    <span class="keywordtype">int</span> test;</div>
+<div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;<a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a> - 1; i++) {</div>
+<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = i + 1; j &lt; vec-&gt;<a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a>; j++) {</div>
+<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>            test = strcmp(vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>[i], vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>[j]);</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>            <span class="keywordflow">if</span> (test == 0) {</div>
+<div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span>                <a class="code hl_function" href="vector_8c.html#a4db2688e1c0d0d477c8a7168d811956d">pop_string_vector_index</a>(vec, j);</div>
+<div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>                j--;</div>
+<div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>            }</div>
+<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span>        }</div>
+<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span>    }</div>
+<div class="line"><a id="l01976" name="l01976"></a><span class="lineno"> 1976</span>}</div>
+<div class="line"><a id="l01977" name="l01977"></a><span class="lineno"> 1977</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l01978" name="l01978"></a><span class="lineno"> 1978</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l01979" name="l01979"></a><span class="lineno"> 1979</span><span class="comment">// REVERSE_TYPE VEC FUNCTIONS</span></div>
+<div class="line"><a id="l01980" name="l01980"></a><span class="lineno"> 1980</span> </div>
+<div class="line"><a id="l01981" name="l01981"></a><span class="lineno"><a class="line" href="vector_8c.html#a6388f663263c0c5a219bc2da551d0584"> 1981</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a6388f663263c0c5a219bc2da551d0584">reverse_short_vector</a>(Short *vec) {</div>
+<div class="line"><a id="l01982" name="l01982"></a><span class="lineno"> 1982</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l01983" name="l01983"></a><span class="lineno"> 1983</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l01984" name="l01984"></a><span class="lineno"> 1984</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l01985" name="l01985"></a><span class="lineno"> 1985</span>        <span class="keywordtype">short</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l01986" name="l01986"></a><span class="lineno"> 1986</span>        <span class="keywordtype">short</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>        <span class="keywordtype">short</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span>        *a = *b;</div>
+<div class="line"><a id="l01989" name="l01989"></a><span class="lineno"> 1989</span>        *b = temp;</div>
+<div class="line"><a id="l01990" name="l01990"></a><span class="lineno"> 1990</span>        ++start;</div>
+<div class="line"><a id="l01991" name="l01991"></a><span class="lineno"> 1991</span>        --end;</div>
+<div class="line"><a id="l01992" name="l01992"></a><span class="lineno"> 1992</span>    }</div>
+<div class="line"><a id="l01993" name="l01993"></a><span class="lineno"> 1993</span>}</div>
+<div class="line"><a id="l01994" name="l01994"></a><span class="lineno"> 1994</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span> </div>
+<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"><a class="line" href="vector_8c.html#a15f75e9b6b4192aa83d95635419865da"> 1996</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a15f75e9b6b4192aa83d95635419865da">reverse_ushort_vector</a>(UShort *vec) {</div>
+<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02001" name="l02001"></a><span class="lineno"> 2001</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02002" name="l02002"></a><span class="lineno"> 2002</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02003" name="l02003"></a><span class="lineno"> 2003</span>        *a = *b;</div>
+<div class="line"><a id="l02004" name="l02004"></a><span class="lineno"> 2004</span>        *b = temp;</div>
+<div class="line"><a id="l02005" name="l02005"></a><span class="lineno"> 2005</span>        ++start;</div>
+<div class="line"><a id="l02006" name="l02006"></a><span class="lineno"> 2006</span>        --end;</div>
+<div class="line"><a id="l02007" name="l02007"></a><span class="lineno"> 2007</span>    }</div>
+<div class="line"><a id="l02008" name="l02008"></a><span class="lineno"> 2008</span>}</div>
+<div class="line"><a id="l02009" name="l02009"></a><span class="lineno"> 2009</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02010" name="l02010"></a><span class="lineno"> 2010</span> </div>
+<div class="line"><a id="l02011" name="l02011"></a><span class="lineno"><a class="line" href="vector_8c.html#a0ee6d80508a610096b84893a0edd7e82"> 2011</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a0ee6d80508a610096b84893a0edd7e82">reverse_int_vector</a>(Int *vec) {</div>
+<div class="line"><a id="l02012" name="l02012"></a><span class="lineno"> 2012</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02013" name="l02013"></a><span class="lineno"> 2013</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02014" name="l02014"></a><span class="lineno"> 2014</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02015" name="l02015"></a><span class="lineno"> 2015</span>        <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02016" name="l02016"></a><span class="lineno"> 2016</span>        <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02017" name="l02017"></a><span class="lineno"> 2017</span>        <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>        *a = *b;</div>
+<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>        *b = temp;</div>
+<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span>        ++start;</div>
+<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>        --end;</div>
+<div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span>    }</div>
+<div class="line"><a id="l02023" name="l02023"></a><span class="lineno"> 2023</span>}</div>
+<div class="line"><a id="l02024" name="l02024"></a><span class="lineno"> 2024</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02025" name="l02025"></a><span class="lineno"> 2025</span> </div>
+<div class="line"><a id="l02026" name="l02026"></a><span class="lineno"><a class="line" href="vector_8c.html#a58e127cf5386ca2152ebafcf4dbb8bbd"> 2026</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a58e127cf5386ca2152ebafcf4dbb8bbd">reverse_uint_vector</a>(UInt *vec) {</div>
+<div class="line"><a id="l02027" name="l02027"></a><span class="lineno"> 2027</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02028" name="l02028"></a><span class="lineno"> 2028</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02029" name="l02029"></a><span class="lineno"> 2029</span>    <span class="comment">//unsigned int *a = &amp;vec-&gt;array[start];</span></div>
+<div class="line"><a id="l02030" name="l02030"></a><span class="lineno"> 2030</span>    <span class="comment">//unsigned int *b = &amp;vec-&gt;array[end];</span></div>
+<div class="line"><a id="l02031" name="l02031"></a><span class="lineno"> 2031</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02032" name="l02032"></a><span class="lineno"> 2032</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02033" name="l02033"></a><span class="lineno"> 2033</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02034" name="l02034"></a><span class="lineno"> 2034</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02035" name="l02035"></a><span class="lineno"> 2035</span>        *a = *b;</div>
+<div class="line"><a id="l02036" name="l02036"></a><span class="lineno"> 2036</span>        *b = temp;</div>
+<div class="line"><a id="l02037" name="l02037"></a><span class="lineno"> 2037</span>        ++start;</div>
+<div class="line"><a id="l02038" name="l02038"></a><span class="lineno"> 2038</span>        --end;</div>
+<div class="line"><a id="l02039" name="l02039"></a><span class="lineno"> 2039</span>    }</div>
+<div class="line"><a id="l02040" name="l02040"></a><span class="lineno"> 2040</span>}</div>
+<div class="line"><a id="l02041" name="l02041"></a><span class="lineno"> 2041</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02042" name="l02042"></a><span class="lineno"> 2042</span> </div>
+<div class="line"><a id="l02043" name="l02043"></a><span class="lineno"><a class="line" href="vector_8c.html#a0d89b67e906a169f63e1bfc679df018f"> 2043</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a0d89b67e906a169f63e1bfc679df018f">reverse_long_vector</a>(LInt *vec) {</div>
+<div class="line"><a id="l02044" name="l02044"></a><span class="lineno"> 2044</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02045" name="l02045"></a><span class="lineno"> 2045</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02046" name="l02046"></a><span class="lineno"> 2046</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02047" name="l02047"></a><span class="lineno"> 2047</span>        <span class="keywordtype">long</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02048" name="l02048"></a><span class="lineno"> 2048</span>        <span class="keywordtype">long</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02049" name="l02049"></a><span class="lineno"> 2049</span>        <span class="keywordtype">long</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02050" name="l02050"></a><span class="lineno"> 2050</span>        *a = *b;</div>
+<div class="line"><a id="l02051" name="l02051"></a><span class="lineno"> 2051</span>        *b = temp;</div>
+<div class="line"><a id="l02052" name="l02052"></a><span class="lineno"> 2052</span>        ++start;</div>
+<div class="line"><a id="l02053" name="l02053"></a><span class="lineno"> 2053</span>        --end;</div>
+<div class="line"><a id="l02054" name="l02054"></a><span class="lineno"> 2054</span>    }</div>
+<div class="line"><a id="l02055" name="l02055"></a><span class="lineno"> 2055</span>}</div>
+<div class="line"><a id="l02056" name="l02056"></a><span class="lineno"> 2056</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02057" name="l02057"></a><span class="lineno"> 2057</span> </div>
+<div class="line"><a id="l02058" name="l02058"></a><span class="lineno"><a class="line" href="vector_8c.html#a6196a5bfffe22d6493b2bda77a9340fb"> 2058</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a6196a5bfffe22d6493b2bda77a9340fb">reverse_ulong_vector</a>(ULInt *vec) {</div>
+<div class="line"><a id="l02059" name="l02059"></a><span class="lineno"> 2059</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02060" name="l02060"></a><span class="lineno"> 2060</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02061" name="l02061"></a><span class="lineno"> 2061</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02062" name="l02062"></a><span class="lineno"> 2062</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02063" name="l02063"></a><span class="lineno"> 2063</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02064" name="l02064"></a><span class="lineno"> 2064</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02065" name="l02065"></a><span class="lineno"> 2065</span>        *a = *b;</div>
+<div class="line"><a id="l02066" name="l02066"></a><span class="lineno"> 2066</span>        *b = temp;</div>
+<div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>        ++start;</div>
+<div class="line"><a id="l02068" name="l02068"></a><span class="lineno"> 2068</span>        --end;</div>
+<div class="line"><a id="l02069" name="l02069"></a><span class="lineno"> 2069</span>    }</div>
+<div class="line"><a id="l02070" name="l02070"></a><span class="lineno"> 2070</span>}</div>
+<div class="line"><a id="l02071" name="l02071"></a><span class="lineno"> 2071</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02072" name="l02072"></a><span class="lineno"> 2072</span> </div>
+<div class="line"><a id="l02073" name="l02073"></a><span class="lineno"><a class="line" href="vector_8c.html#a3247bcffd4ad7a9f75c9a2e88ff7bd81"> 2073</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a3247bcffd4ad7a9f75c9a2e88ff7bd81">reverse_llong_vector</a>(LLInt *vec) {</div>
+<div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02077" name="l02077"></a><span class="lineno"> 2077</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02078" name="l02078"></a><span class="lineno"> 2078</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02079" name="l02079"></a><span class="lineno"> 2079</span>        <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02080" name="l02080"></a><span class="lineno"> 2080</span>        *a = *b;</div>
+<div class="line"><a id="l02081" name="l02081"></a><span class="lineno"> 2081</span>        *b = temp;</div>
+<div class="line"><a id="l02082" name="l02082"></a><span class="lineno"> 2082</span>        ++start;</div>
+<div class="line"><a id="l02083" name="l02083"></a><span class="lineno"> 2083</span>        --end;</div>
+<div class="line"><a id="l02084" name="l02084"></a><span class="lineno"> 2084</span>    }</div>
+<div class="line"><a id="l02085" name="l02085"></a><span class="lineno"> 2085</span>}</div>
+<div class="line"><a id="l02086" name="l02086"></a><span class="lineno"> 2086</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02087" name="l02087"></a><span class="lineno"> 2087</span> </div>
+<div class="line"><a id="l02088" name="l02088"></a><span class="lineno"><a class="line" href="vector_8c.html#aa77d55a8f5e4ab149edb6c75d98a94ce"> 2088</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#aa77d55a8f5e4ab149edb6c75d98a94ce">reverse_ullong_vector</a>(ULLInt *vec) {</div>
+<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02092" name="l02092"></a><span class="lineno"> 2092</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02093" name="l02093"></a><span class="lineno"> 2093</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02094" name="l02094"></a><span class="lineno"> 2094</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> temp= *a;</div>
+<div class="line"><a id="l02095" name="l02095"></a><span class="lineno"> 2095</span>        *a = *b;</div>
+<div class="line"><a id="l02096" name="l02096"></a><span class="lineno"> 2096</span>        *b = temp;</div>
+<div class="line"><a id="l02097" name="l02097"></a><span class="lineno"> 2097</span>        ++start;</div>
+<div class="line"><a id="l02098" name="l02098"></a><span class="lineno"> 2098</span>        --end;</div>
+<div class="line"><a id="l02099" name="l02099"></a><span class="lineno"> 2099</span>    }</div>
+<div class="line"><a id="l02100" name="l02100"></a><span class="lineno"> 2100</span>}</div>
+<div class="line"><a id="l02101" name="l02101"></a><span class="lineno"> 2101</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span> </div>
+<div class="line"><a id="l02103" name="l02103"></a><span class="lineno"><a class="line" href="vector_8c.html#a086bbd995dc83d50532944330a44c450"> 2103</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a086bbd995dc83d50532944330a44c450">reverse_float_vector</a>(Flt *vec) {</div>
+<div class="line"><a id="l02104" name="l02104"></a><span class="lineno"> 2104</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02105" name="l02105"></a><span class="lineno"> 2105</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02106" name="l02106"></a><span class="lineno"> 2106</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02107" name="l02107"></a><span class="lineno"> 2107</span>        <span class="keywordtype">float</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>        <span class="keywordtype">float</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span>        <span class="keywordtype">float</span> temp= *a;</div>
+<div class="line"><a id="l02110" name="l02110"></a><span class="lineno"> 2110</span>        *a = *b;</div>
+<div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span>        *b = temp;</div>
+<div class="line"><a id="l02112" name="l02112"></a><span class="lineno"> 2112</span>        ++start;</div>
+<div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span>        --end;</div>
+<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>    }</div>
+<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span>}</div>
+<div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02117" name="l02117"></a><span class="lineno"> 2117</span> </div>
+<div class="line"><a id="l02118" name="l02118"></a><span class="lineno"><a class="line" href="vector_8c.html#a628e48950294512d38556f8b194284d4"> 2118</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a628e48950294512d38556f8b194284d4">reverse_double_vector</a>(Dble *vec) {</div>
+<div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span>        <span class="keywordtype">double</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02123" name="l02123"></a><span class="lineno"> 2123</span>        <span class="keywordtype">double</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02124" name="l02124"></a><span class="lineno"> 2124</span>        <span class="keywordtype">double</span> temp= *a;</div>
+<div class="line"><a id="l02125" name="l02125"></a><span class="lineno"> 2125</span>        *a = *b;</div>
+<div class="line"><a id="l02126" name="l02126"></a><span class="lineno"> 2126</span>        *b = temp;</div>
+<div class="line"><a id="l02127" name="l02127"></a><span class="lineno"> 2127</span>        ++start;</div>
+<div class="line"><a id="l02128" name="l02128"></a><span class="lineno"> 2128</span>        --end;</div>
+<div class="line"><a id="l02129" name="l02129"></a><span class="lineno"> 2129</span>    }</div>
+<div class="line"><a id="l02130" name="l02130"></a><span class="lineno"> 2130</span>}</div>
+<div class="line"><a id="l02131" name="l02131"></a><span class="lineno"> 2131</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02132" name="l02132"></a><span class="lineno"> 2132</span> </div>
+<div class="line"><a id="l02133" name="l02133"></a><span class="lineno"><a class="line" href="vector_8c.html#a8a72b2219830bacf2a5ec926241ed924"> 2133</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a8a72b2219830bacf2a5ec926241ed924">reverse_ldouble_vector</a>(LDble *vec) {</div>
+<div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02135" name="l02135"></a><span class="lineno"> 2135</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02136" name="l02136"></a><span class="lineno"> 2136</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02137" name="l02137"></a><span class="lineno"> 2137</span>        <span class="keywordtype">long</span> <span class="keywordtype">double</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02138" name="l02138"></a><span class="lineno"> 2138</span>        <span class="keywordtype">long</span> <span class="keywordtype">double</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02139" name="l02139"></a><span class="lineno"> 2139</span>        <span class="keywordtype">long</span> <span class="keywordtype">double</span> temp= *a;</div>
+<div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span>        *a = *b;</div>
+<div class="line"><a id="l02141" name="l02141"></a><span class="lineno"> 2141</span>        *b = temp;</div>
+<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>        ++start;</div>
+<div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span>        --end;</div>
+<div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span>    }</div>
+<div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span>}</div>
+<div class="line"><a id="l02146" name="l02146"></a><span class="lineno"> 2146</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02147" name="l02147"></a><span class="lineno"> 2147</span> </div>
+<div class="line"><a id="l02148" name="l02148"></a><span class="lineno"><a class="line" href="vector_8c.html#a06faa32f223a79c02cb771b19cc02a07"> 2148</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a06faa32f223a79c02cb771b19cc02a07">reverse_char_vector</a>(Char *vec) {</div>
+<div class="line"><a id="l02149" name="l02149"></a><span class="lineno"> 2149</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02150" name="l02150"></a><span class="lineno"> 2150</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02151" name="l02151"></a><span class="lineno"> 2151</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02152" name="l02152"></a><span class="lineno"> 2152</span>        <span class="keywordtype">char</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02153" name="l02153"></a><span class="lineno"> 2153</span>        <span class="keywordtype">char</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02154" name="l02154"></a><span class="lineno"> 2154</span>        <span class="keywordtype">char</span> temp= *a;</div>
+<div class="line"><a id="l02155" name="l02155"></a><span class="lineno"> 2155</span>        *a = *b;</div>
+<div class="line"><a id="l02156" name="l02156"></a><span class="lineno"> 2156</span>        *b = temp;</div>
+<div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span>        ++start;</div>
+<div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span>        --end;</div>
+<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span>    }</div>
+<div class="line"><a id="l02160" name="l02160"></a><span class="lineno"> 2160</span>}</div>
+<div class="line"><a id="l02161" name="l02161"></a><span class="lineno"> 2161</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02162" name="l02162"></a><span class="lineno"> 2162</span> </div>
+<div class="line"><a id="l02163" name="l02163"></a><span class="lineno"><a class="line" href="vector_8c.html#a42deacd361fac959a84262a54ebddcb0"> 2163</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a42deacd361fac959a84262a54ebddcb0">reverse_uchar_vector</a>(UChar *vec) {</div>
+<div class="line"><a id="l02164" name="l02164"></a><span class="lineno"> 2164</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02165" name="l02165"></a><span class="lineno"> 2165</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> temp= *a;</div>
+<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>        *a = *b;</div>
+<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span>        *b = temp;</div>
+<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span>        ++start;</div>
+<div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>        --end;</div>
+<div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>    }</div>
+<div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span>}</div>
+<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span> </div>
+<div class="line"><a id="l02178" name="l02178"></a><span class="lineno"><a class="line" href="vector_8c.html#a9b58a773830487b8a8f1973221e93366"> 2178</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a9b58a773830487b8a8f1973221e93366">reverse_bool_vector</a>(Bool *vec) {</div>
+<div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02180" name="l02180"></a><span class="lineno"> 2180</span>    <span class="keywordtype">size_t</span> end = vec-&gt;active_length - 1;</div>
+<div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span>        <span class="keywordtype">bool</span> *a = &amp;vec-&gt;array[start];</div>
+<div class="line"><a id="l02183" name="l02183"></a><span class="lineno"> 2183</span>        <span class="keywordtype">bool</span> *b = &amp;vec-&gt;array[end];</div>
+<div class="line"><a id="l02184" name="l02184"></a><span class="lineno"> 2184</span>        <span class="keywordtype">bool</span> temp= *a;</div>
+<div class="line"><a id="l02185" name="l02185"></a><span class="lineno"> 2185</span>        *a = *b;</div>
+<div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span>        *b = temp;</div>
+<div class="line"><a id="l02187" name="l02187"></a><span class="lineno"> 2187</span>        ++start;</div>
+<div class="line"><a id="l02188" name="l02188"></a><span class="lineno"> 2188</span>        --end;</div>
+<div class="line"><a id="l02189" name="l02189"></a><span class="lineno"> 2189</span>    }</div>
+<div class="line"><a id="l02190" name="l02190"></a><span class="lineno"> 2190</span>}</div>
+<div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span><span class="comment">// ------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span> </div>
+<div class="line"><a id="l02193" name="l02193"></a><span class="lineno"><a class="line" href="vector_8c.html#a6297710c0ac2122db93e47a260e96ad8"> 2193</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8c.html#a6297710c0ac2122db93e47a260e96ad8">reverse_string_vector</a>(<a class="code hl_struct" href="structString.html">String</a> *vec) {</div>
+<div class="line"><a id="l02194" name="l02194"></a><span class="lineno"> 2194</span>    <span class="keywordtype">size_t</span> start = 0;</div>
+<div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>    <span class="keywordtype">size_t</span> end = vec-&gt;<a class="code hl_variable" href="structString.html#a706ffaf2f520d46074dd99e7896d6673">active_length</a> - 1;</div>
+<div class="line"><a id="l02196" name="l02196"></a><span class="lineno"> 2196</span>    <span class="keywordflow">while</span> (start &lt; end) {</div>
+<div class="line"><a id="l02197" name="l02197"></a><span class="lineno"> 2197</span>        <a class="code hl_function" href="vector_8c.html#a078616c26d55c1ddb2ec4c551298a4f8">push_string_vector</a>(vec, vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>[end], start);</div>
+<div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span>        <a class="code hl_function" href="vector_8c.html#a078616c26d55c1ddb2ec4c551298a4f8">push_string_vector</a>(vec, vec-&gt;<a class="code hl_variable" href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">array</a>[start+1], end+1);</div>
+<div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>        <a class="code hl_function" href="vector_8c.html#a4db2688e1c0d0d477c8a7168d811956d">pop_string_vector_index</a>(vec, start+1);</div>
+<div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>        <a class="code hl_function" href="vector_8c.html#a4db2688e1c0d0d477c8a7168d811956d">pop_string_vector_index</a>(vec, end+1);</div>
+<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>        ++start;</div>
+<div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>        --end;</div>
+<div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span>    }</div>
+<div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>}</div>
+<div class="line"><a id="l02205" name="l02205"></a><span class="lineno"> 2205</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l02206" name="l02206"></a><span class="lineno"> 2206</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span><span class="comment">// eof</span></div>
 <div class="ttc" id="astructString_html"><div class="ttname"><a href="structString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00081">vector.h:82</a></div></div>
 <div class="ttc" id="astructString_html_a706ffaf2f520d46074dd99e7896d6673"><div class="ttname"><a href="structString.html#a706ffaf2f520d46074dd99e7896d6673">String::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00084">vector.h:84</a></div></div>
 <div class="ttc" id="astructString_html_a984d87136c3d76ab3145bdb65880a3fa"><div class="ttname"><a href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">String::array</a></div><div class="ttdeci">char ** array</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00083">vector.h:83</a></div></div>
+<div class="ttc" id="avector_8c_html_a06faa32f223a79c02cb771b19cc02a07"><div class="ttname"><a href="vector_8c.html#a06faa32f223a79c02cb771b19cc02a07">reverse_char_vector</a></div><div class="ttdeci">void reverse_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02148">vector.c:2148</a></div></div>
 <div class="ttc" id="avector_8c_html_a078616c26d55c1ddb2ec4c551298a4f8"><div class="ttname"><a href="vector_8c.html#a078616c26d55c1ddb2ec4c551298a4f8">push_string_vector</a></div><div class="ttdeci">int push_string_vector(String *vec, char *value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00778">vector.c:778</a></div></div>
+<div class="ttc" id="avector_8c_html_a086bbd995dc83d50532944330a44c450"><div class="ttname"><a href="vector_8c.html#a086bbd995dc83d50532944330a44c450">reverse_float_vector</a></div><div class="ttdeci">void reverse_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02103">vector.c:2103</a></div></div>
 <div class="ttc" id="avector_8c_html_a0acf8b86d4a95be517c7af80f8eff4ac"><div class="ttname"><a href="vector_8c.html#a0acf8b86d4a95be517c7af80f8eff4ac">insert_int_vector</a></div><div class="ttdeci">int insert_int_vector(Int *vec, int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00872">vector.c:872</a></div></div>
+<div class="ttc" id="avector_8c_html_a0bf0ceecb4ef742811c3b2ed8384d432"><div class="ttname"><a href="vector_8c.html#a0bf0ceecb4ef742811c3b2ed8384d432">delete_double_vector_duplicates</a></div><div class="ttdeci">void delete_double_vector_duplicates(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01917">vector.c:1917</a></div></div>
+<div class="ttc" id="avector_8c_html_a0d89b67e906a169f63e1bfc679df018f"><div class="ttname"><a href="vector_8c.html#a0d89b67e906a169f63e1bfc679df018f">reverse_long_vector</a></div><div class="ttdeci">void reverse_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02043">vector.c:2043</a></div></div>
+<div class="ttc" id="avector_8c_html_a0d9577d0256e0e006d1c55a12ba1bffd"><div class="ttname"><a href="vector_8c.html#a0d9577d0256e0e006d1c55a12ba1bffd">free_double_vector</a></div><div class="ttdeci">void free_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01730">vector.c:1730</a></div></div>
 <div class="ttc" id="avector_8c_html_a0ec3e3b802f62c5f9cdd9b7d197bd4a1"><div class="ttname"><a href="vector_8c.html#a0ec3e3b802f62c5f9cdd9b7d197bd4a1">insert_ldouble_vector</a></div><div class="ttdeci">int insert_ldouble_vector(LDble *vec, long double *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01160">vector.c:1160</a></div></div>
+<div class="ttc" id="avector_8c_html_a0ee6d80508a610096b84893a0edd7e82"><div class="ttname"><a href="vector_8c.html#a0ee6d80508a610096b84893a0edd7e82">reverse_int_vector</a></div><div class="ttdeci">void reverse_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02011">vector.c:2011</a></div></div>
+<div class="ttc" id="avector_8c_html_a10ee633f27cbd6252d41ffd0761f6392"><div class="ttname"><a href="vector_8c.html#a10ee633f27cbd6252d41ffd0761f6392">delete_long_vector_duplicates</a></div><div class="ttdeci">void delete_long_vector_duplicates(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01857">vector.c:1857</a></div></div>
 <div class="ttc" id="avector_8c_html_a141f86441673f219db9af026644dee3e"><div class="ttname"><a href="vector_8c.html#a141f86441673f219db9af026644dee3e">replace_double_vector_values</a></div><div class="ttdeci">void replace_double_vector_values(Dble *vec, double old_value, double new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01564">vector.c:1564</a></div></div>
 <div class="ttc" id="avector_8c_html_a1556bb53212c3c454a2ddb3f4c2f4c8a"><div class="ttname"><a href="vector_8c.html#a1556bb53212c3c454a2ddb3f4c2f4c8a">replace_string_vector_values</a></div><div class="ttdeci">void replace_string_vector_values(String *vec, char *old_value, char *new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01599">vector.c:1599</a></div></div>
+<div class="ttc" id="avector_8c_html_a15f75e9b6b4192aa83d95635419865da"><div class="ttname"><a href="vector_8c.html#a15f75e9b6b4192aa83d95635419865da">reverse_ushort_vector</a></div><div class="ttdeci">void reverse_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01996">vector.c:1996</a></div></div>
 <div class="ttc" id="avector_8c_html_a17ee89c38df38d9d1d5b0cb2e33266d1"><div class="ttname"><a href="vector_8c.html#a17ee89c38df38d9d1d5b0cb2e33266d1">insert_float_vector</a></div><div class="ttdeci">int insert_float_vector(Flt *vec, float *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01088">vector.c:1088</a></div></div>
+<div class="ttc" id="avector_8c_html_a1b3482060f9c607f98dbef4845db335f"><div class="ttname"><a href="vector_8c.html#a1b3482060f9c607f98dbef4845db335f">delete_string_vector_duplicates</a></div><div class="ttdeci">void delete_string_vector_duplicates(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01965">vector.c:1965</a></div></div>
+<div class="ttc" id="avector_8c_html_a1fe7315ba2394e61b43b99bfc765bd75"><div class="ttname"><a href="vector_8c.html#a1fe7315ba2394e61b43b99bfc765bd75">delete_bool_vector_duplicates</a></div><div class="ttdeci">void delete_bool_vector_duplicates(Bool *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01953">vector.c:1953</a></div></div>
 <div class="ttc" id="avector_8c_html_a2739fb21bf4216de09c51c393b89ece7"><div class="ttname"><a href="vector_8c.html#a2739fb21bf4216de09c51c393b89ece7">init_uint_array</a></div><div class="ttdeci">void init_uint_array(UInt *vec, unsigned int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00260">vector.c:260</a></div></div>
 <div class="ttc" id="avector_8c_html_a29734ea7a6541b75cd3824bc05e3e589"><div class="ttname"><a href="vector_8c.html#a29734ea7a6541b75cd3824bc05e3e589">init_int_array</a></div><div class="ttdeci">void init_int_array(Int *vec, int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00252">vector.c:252</a></div></div>
+<div class="ttc" id="avector_8c_html_a2975c4c7c36efebc98b926abfc4ba837"><div class="ttname"><a href="vector_8c.html#a2975c4c7c36efebc98b926abfc4ba837">free_string_vector</a></div><div class="ttdeci">void free_string_vector(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01795">vector.c:1795</a></div></div>
 <div class="ttc" id="avector_8c_html_a2c0735f69da8e40535b5ecceace1a399"><div class="ttname"><a href="vector_8c.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a></div><div class="ttdeci">int init_double_vector(Dble *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00152">vector.c:152</a></div></div>
 <div class="ttc" id="avector_8c_html_a2e1ea608c0b9b0768ba61facb8df913f"><div class="ttname"><a href="vector_8c.html#a2e1ea608c0b9b0768ba61facb8df913f">init_bool_vector</a></div><div class="ttdeci">int init_bool_vector(Bool *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00212">vector.c:212</a></div></div>
 <div class="ttc" id="avector_8c_html_a2ed595a869e30a4c834c1d2cf5b934ee"><div class="ttname"><a href="vector_8c.html#a2ed595a869e30a4c834c1d2cf5b934ee">insert_short_vector</a></div><div class="ttdeci">int insert_short_vector(Short *vec, short int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00800">vector.c:800</a></div></div>
 <div class="ttc" id="avector_8c_html_a2f22fc4866a5c4e5ba5cc10fbf73bb5e"><div class="ttname"><a href="vector_8c.html#a2f22fc4866a5c4e5ba5cc10fbf73bb5e">init_uchar_array</a></div><div class="ttdeci">void init_uchar_array(UChar *vec, unsigned char *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00332">vector.c:332</a></div></div>
 <div class="ttc" id="avector_8c_html_a31e02f437f4f9f43d1126e017ae1cac3"><div class="ttname"><a href="vector_8c.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector</a></div><div class="ttdeci">int push_float_vector(Flt *vec, float value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00613">vector.c:613</a></div></div>
+<div class="ttc" id="avector_8c_html_a3247bcffd4ad7a9f75c9a2e88ff7bd81"><div class="ttname"><a href="vector_8c.html#a3247bcffd4ad7a9f75c9a2e88ff7bd81">reverse_llong_vector</a></div><div class="ttdeci">void reverse_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02073">vector.c:2073</a></div></div>
 <div class="ttc" id="avector_8c_html_a3354495712d1e3910ca4e6a33ee1c1df"><div class="ttname"><a href="vector_8c.html#a3354495712d1e3910ca4e6a33ee1c1df">replace_ulong_vector_values</a></div><div class="ttdeci">void replace_ulong_vector_values(ULInt *vec, unsigned long int old_value, unsigned long int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01536">vector.c:1536</a></div></div>
 <div class="ttc" id="avector_8c_html_a344c029c451a00a0a90e20b34569db22"><div class="ttname"><a href="vector_8c.html#a344c029c451a00a0a90e20b34569db22">replace_ldouble_vector_values</a></div><div class="ttdeci">void replace_ldouble_vector_values(LDble *vec, long double old_value, long double new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01571">vector.c:1571</a></div></div>
 <div class="ttc" id="avector_8c_html_a3478a298e62d85cb93f11a78f64d6f80"><div class="ttname"><a href="vector_8c.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector</a></div><div class="ttdeci">int push_ullong_vector(ULLInt *vec, unsigned long long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00580">vector.c:580</a></div></div>
+<div class="ttc" id="avector_8c_html_a35b16d98a38d37826ee118f4860d680a"><div class="ttname"><a href="vector_8c.html#a35b16d98a38d37826ee118f4860d680a">delete_short_vector_duplicates</a></div><div class="ttdeci">void delete_short_vector_duplicates(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01809">vector.c:1809</a></div></div>
+<div class="ttc" id="avector_8c_html_a372a58405f86fa4ef22f53af37408017"><div class="ttname"><a href="vector_8c.html#a372a58405f86fa4ef22f53af37408017">delete_ushort_vector_duplicates</a></div><div class="ttdeci">void delete_ushort_vector_duplicates(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01821">vector.c:1821</a></div></div>
+<div class="ttc" id="avector_8c_html_a3765cd4f6e59bada679e05ea6dacfff5"><div class="ttname"><a href="vector_8c.html#a3765cd4f6e59bada679e05ea6dacfff5">free_ushort_vector</a></div><div class="ttdeci">void free_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01626">vector.c:1626</a></div></div>
 <div class="ttc" id="avector_8c_html_a38068c17aa5cf7286175572d43219b8d"><div class="ttname"><a href="vector_8c.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector</a></div><div class="ttdeci">int push_short_vector(Short *vec, short int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00349">vector.c:349</a></div></div>
 <div class="ttc" id="avector_8c_html_a3964e5480d290ac44a95680e52706f9d"><div class="ttname"><a href="vector_8c.html#a3964e5480d290ac44a95680e52706f9d">pop_ldouble_vector_index</a></div><div class="ttdeci">int pop_ldouble_vector_index(LDble *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01436">vector.c:1436</a></div></div>
 <div class="ttc" id="avector_8c_html_a39d896e588ac932b9958b4f2e32d97c2"><div class="ttname"><a href="vector_8c.html#a39d896e588ac932b9958b4f2e32d97c2">init_ullong_array</a></div><div class="ttdeci">void init_ullong_array(ULLInt *vec, unsigned long long int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00292">vector.c:292</a></div></div>
+<div class="ttc" id="avector_8c_html_a42deacd361fac959a84262a54ebddcb0"><div class="ttname"><a href="vector_8c.html#a42deacd361fac959a84262a54ebddcb0">reverse_uchar_vector</a></div><div class="ttdeci">void reverse_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02163">vector.c:2163</a></div></div>
+<div class="ttc" id="avector_8c_html_a49e7b8e0e17f4570f95875965ea8c2d6"><div class="ttname"><a href="vector_8c.html#a49e7b8e0e17f4570f95875965ea8c2d6">delete_float_vector_duplicates</a></div><div class="ttdeci">void delete_float_vector_duplicates(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01905">vector.c:1905</a></div></div>
 <div class="ttc" id="avector_8c_html_a4db2688e1c0d0d477c8a7168d811956d"><div class="ttname"><a href="vector_8c.html#a4db2688e1c0d0d477c8a7168d811956d">pop_string_vector_index</a></div><div class="ttdeci">int pop_string_vector_index(String *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01475">vector.c:1475</a></div></div>
 <div class="ttc" id="avector_8c_html_a4f9d1488d50bc3889fc04afc18fa9958"><div class="ttname"><a href="vector_8c.html#a4f9d1488d50bc3889fc04afc18fa9958">pop_char_vector_index</a></div><div class="ttdeci">int pop_char_vector_index(Char *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01449">vector.c:1449</a></div></div>
 <div class="ttc" id="avector_8c_html_a52f4d32e9312b40967f4c0ee3de88e7a"><div class="ttname"><a href="vector_8c.html#a52f4d32e9312b40967f4c0ee3de88e7a">pop_ullong_vector_index</a></div><div class="ttdeci">int pop_ullong_vector_index(ULLInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01397">vector.c:1397</a></div></div>
+<div class="ttc" id="avector_8c_html_a5783a319298af13236def83e42f00799"><div class="ttname"><a href="vector_8c.html#a5783a319298af13236def83e42f00799">free_bool_vector</a></div><div class="ttdeci">void free_bool_vector(Bool *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01782">vector.c:1782</a></div></div>
+<div class="ttc" id="avector_8c_html_a58e127cf5386ca2152ebafcf4dbb8bbd"><div class="ttname"><a href="vector_8c.html#a58e127cf5386ca2152ebafcf4dbb8bbd">reverse_uint_vector</a></div><div class="ttdeci">void reverse_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02026">vector.c:2026</a></div></div>
+<div class="ttc" id="avector_8c_html_a5a01cb2f66c78b55858a0941ad9459af"><div class="ttname"><a href="vector_8c.html#a5a01cb2f66c78b55858a0941ad9459af">delete_char_vector_duplicates</a></div><div class="ttdeci">void delete_char_vector_duplicates(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01941">vector.c:1941</a></div></div>
 <div class="ttc" id="avector_8c_html_a5fcc9ae29ce6bd76060856b388992240"><div class="ttname"><a href="vector_8c.html#a5fcc9ae29ce6bd76060856b388992240">init_float_array</a></div><div class="ttdeci">void init_float_array(Flt *vec, float *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00300">vector.c:300</a></div></div>
+<div class="ttc" id="avector_8c_html_a605f038b309fb25e53f637c9e9b6e4bd"><div class="ttname"><a href="vector_8c.html#a605f038b309fb25e53f637c9e9b6e4bd">free_ullong_vector</a></div><div class="ttdeci">void free_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01704">vector.c:1704</a></div></div>
 <div class="ttc" id="avector_8c_html_a6135368684b7d740482cfc775417f255"><div class="ttname"><a href="vector_8c.html#a6135368684b7d740482cfc775417f255">push_long_vector</a></div><div class="ttdeci">int push_long_vector(LInt *vec, long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00481">vector.c:481</a></div></div>
+<div class="ttc" id="avector_8c_html_a6195f400606be104b4461cd9876f93ce"><div class="ttname"><a href="vector_8c.html#a6195f400606be104b4461cd9876f93ce">free_uint_vector</a></div><div class="ttdeci">void free_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01652">vector.c:1652</a></div></div>
+<div class="ttc" id="avector_8c_html_a6196a5bfffe22d6493b2bda77a9340fb"><div class="ttname"><a href="vector_8c.html#a6196a5bfffe22d6493b2bda77a9340fb">reverse_ulong_vector</a></div><div class="ttdeci">void reverse_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02058">vector.c:2058</a></div></div>
+<div class="ttc" id="avector_8c_html_a628e48950294512d38556f8b194284d4"><div class="ttname"><a href="vector_8c.html#a628e48950294512d38556f8b194284d4">reverse_double_vector</a></div><div class="ttdeci">void reverse_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02118">vector.c:2118</a></div></div>
+<div class="ttc" id="avector_8c_html_a6297710c0ac2122db93e47a260e96ad8"><div class="ttname"><a href="vector_8c.html#a6297710c0ac2122db93e47a260e96ad8">reverse_string_vector</a></div><div class="ttdeci">void reverse_string_vector(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02193">vector.c:2193</a></div></div>
+<div class="ttc" id="avector_8c_html_a6388f663263c0c5a219bc2da551d0584"><div class="ttname"><a href="vector_8c.html#a6388f663263c0c5a219bc2da551d0584">reverse_short_vector</a></div><div class="ttdeci">void reverse_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01981">vector.c:1981</a></div></div>
 <div class="ttc" id="avector_8c_html_a6475916b10de913b8859fbd0b8312557"><div class="ttname"><a href="vector_8c.html#a6475916b10de913b8859fbd0b8312557">pop_llong_vector_index</a></div><div class="ttdeci">int pop_llong_vector_index(LLInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01384">vector.c:1384</a></div></div>
 <div class="ttc" id="avector_8c_html_a65e3799f14e154e10bd3ce7a4d4fe184"><div class="ttname"><a href="vector_8c.html#a65e3799f14e154e10bd3ce7a4d4fe184">init_llong_array</a></div><div class="ttdeci">void init_llong_array(LLInt *vec, long long int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00284">vector.c:284</a></div></div>
 <div class="ttc" id="avector_8c_html_a65eda538d3c07a8beb1475c1a214ff67"><div class="ttname"><a href="vector_8c.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a></div><div class="ttdeci">int init_llong_vector(LLInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00107">vector.c:107</a></div></div>
 <div class="ttc" id="avector_8c_html_a66a1a1c291efbab607defa13421167dc"><div class="ttname"><a href="vector_8c.html#a66a1a1c291efbab607defa13421167dc">push_bool_vector</a></div><div class="ttdeci">int push_bool_vector(Bool *vec, bool value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00745">vector.c:745</a></div></div>
+<div class="ttc" id="avector_8c_html_a68a325016f45777566e1eae4b15c4238"><div class="ttname"><a href="vector_8c.html#a68a325016f45777566e1eae4b15c4238">delete_int_vector_duplicates</a></div><div class="ttdeci">void delete_int_vector_duplicates(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01833">vector.c:1833</a></div></div>
 <div class="ttc" id="avector_8c_html_a69479bf6e334f44f372305c8b1b13bb3"><div class="ttname"><a href="vector_8c.html#a69479bf6e334f44f372305c8b1b13bb3">pop_bool_vector_index</a></div><div class="ttdeci">int pop_bool_vector_index(Bool *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01462">vector.c:1462</a></div></div>
 <div class="ttc" id="avector_8c_html_a6baf75dc56de293f3dbdc8ac40934980"><div class="ttname"><a href="vector_8c.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector</a></div><div class="ttdeci">int push_int_vector(Int *vec, int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00415">vector.c:415</a></div></div>
 <div class="ttc" id="avector_8c_html_a6f10b6c383f01d0f64ccdbedcbf2f9c6"><div class="ttname"><a href="vector_8c.html#a6f10b6c383f01d0f64ccdbedcbf2f9c6">replace_short_vector_values</a></div><div class="ttdeci">void replace_short_vector_values(Short *vec, short int old_value, short int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01501">vector.c:1501</a></div></div>
@@ -1722,29 +2345,43 @@ $(function() {
 <div class="ttc" id="avector_8c_html_a7f179d98deb7852196afc7e3d26ef06d"><div class="ttname"><a href="vector_8c.html#a7f179d98deb7852196afc7e3d26ef06d">pop_float_vector_index</a></div><div class="ttdeci">int pop_float_vector_index(Flt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01410">vector.c:1410</a></div></div>
 <div class="ttc" id="avector_8c_html_a85ef363e6bfd0897ffc5ccb10c5eb721"><div class="ttname"><a href="vector_8c.html#a85ef363e6bfd0897ffc5ccb10c5eb721">init_char_array</a></div><div class="ttdeci">void init_char_array(Char *vec, char *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00324">vector.c:324</a></div></div>
 <div class="ttc" id="avector_8c_html_a879f3876d14b47d940dbe55a1eec452e"><div class="ttname"><a href="vector_8c.html#a879f3876d14b47d940dbe55a1eec452e">replace_ushort_vector_values</a></div><div class="ttdeci">void replace_ushort_vector_values(UShort *vec, unsigned short int old_value, unsigned short int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01508">vector.c:1508</a></div></div>
+<div class="ttc" id="avector_8c_html_a89e6af78e123543fefe3333963de0e83"><div class="ttname"><a href="vector_8c.html#a89e6af78e123543fefe3333963de0e83">free_ldouble_vector</a></div><div class="ttdeci">void free_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01743">vector.c:1743</a></div></div>
+<div class="ttc" id="avector_8c_html_a8a383d2299a326d3c0ded94c19d73393"><div class="ttname"><a href="vector_8c.html#a8a383d2299a326d3c0ded94c19d73393">free_short_vector</a></div><div class="ttdeci">void free_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01613">vector.c:1613</a></div></div>
+<div class="ttc" id="avector_8c_html_a8a72b2219830bacf2a5ec926241ed924"><div class="ttname"><a href="vector_8c.html#a8a72b2219830bacf2a5ec926241ed924">reverse_ldouble_vector</a></div><div class="ttdeci">void reverse_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02133">vector.c:2133</a></div></div>
 <div class="ttc" id="avector_8c_html_a8b7c3baf36c7ef6deca8011f2d622119"><div class="ttname"><a href="vector_8c.html#a8b7c3baf36c7ef6deca8011f2d622119">replace_char_vector_values</a></div><div class="ttdeci">void replace_char_vector_values(Char *vec, char old_value, char new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01578">vector.c:1578</a></div></div>
 <div class="ttc" id="avector_8c_html_a8b8b55713c6eeeba3f8bb8fbbb08ad10"><div class="ttname"><a href="vector_8c.html#a8b8b55713c6eeeba3f8bb8fbbb08ad10">replace_uchar_vector_values</a></div><div class="ttdeci">void replace_uchar_vector_values(UChar *vec, unsigned char old_value, unsigned char new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01585">vector.c:1585</a></div></div>
 <div class="ttc" id="avector_8c_html_a8d2545eb603560d67e5c481075e5d0fc"><div class="ttname"><a href="vector_8c.html#a8d2545eb603560d67e5c481075e5d0fc">pop_double_vector_index</a></div><div class="ttdeci">int pop_double_vector_index(Dble *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01423">vector.c:1423</a></div></div>
 <div class="ttc" id="avector_8c_html_a8f344f297fe759011551c5f2bb5e0161"><div class="ttname"><a href="vector_8c.html#a8f344f297fe759011551c5f2bb5e0161">replace_long_vector_values</a></div><div class="ttdeci">void replace_long_vector_values(LInt *vec, long int old_value, long int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01529">vector.c:1529</a></div></div>
+<div class="ttc" id="avector_8c_html_a8f895e83e3b4e24dfdd253508da61875"><div class="ttname"><a href="vector_8c.html#a8f895e83e3b4e24dfdd253508da61875">delete_llong_vector_duplicates</a></div><div class="ttdeci">void delete_llong_vector_duplicates(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01881">vector.c:1881</a></div></div>
 <div class="ttc" id="avector_8c_html_a90c0d394579f3950b22adabb66f153e9"><div class="ttname"><a href="vector_8c.html#a90c0d394579f3950b22adabb66f153e9">pop_short_vector_index</a></div><div class="ttdeci">int pop_short_vector_index(Short *vec, size_t index)</div><div class="ttdoc">pop_type_stack_index functions</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01306">vector.c:1306</a></div></div>
+<div class="ttc" id="avector_8c_html_a915b5e5eff06f5a04ff068c94cdcffb4"><div class="ttname"><a href="vector_8c.html#a915b5e5eff06f5a04ff068c94cdcffb4">delete_ldouble_vector_duplicates</a></div><div class="ttdeci">void delete_ldouble_vector_duplicates(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01929">vector.c:1929</a></div></div>
+<div class="ttc" id="avector_8c_html_a91794ceff19b304073f15ca82fe38b0b"><div class="ttname"><a href="vector_8c.html#a91794ceff19b304073f15ca82fe38b0b">delete_ullong_vector_duplicates</a></div><div class="ttdeci">void delete_ullong_vector_duplicates(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01893">vector.c:1893</a></div></div>
 <div class="ttc" id="avector_8c_html_a9289ec52674f95ebf45ac81b70dfdc67"><div class="ttname"><a href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a></div><div class="ttdeci">int init_uchar_vector(UChar *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00197">vector.c:197</a></div></div>
 <div class="ttc" id="avector_8c_html_a92bba70874a1570bd9c87a2a7385af35"><div class="ttname"><a href="vector_8c.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a></div><div class="ttdeci">int init_float_vector(Flt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00137">vector.c:137</a></div></div>
 <div class="ttc" id="avector_8c_html_a93f7e28f97718d9d7c5c84df61c1466c"><div class="ttname"><a href="vector_8c.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector</a></div><div class="ttdeci">int push_llong_vector(LLInt *vec, long long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00547">vector.c:547</a></div></div>
 <div class="ttc" id="avector_8c_html_a97670c026df2a05dda5b0c85ebeb4d69"><div class="ttname"><a href="vector_8c.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector</a></div><div class="ttdeci">int push_ushort_vector(UShort *vec, unsigned short int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00382">vector.c:382</a></div></div>
 <div class="ttc" id="avector_8c_html_a9817d90055331624db7529c5d74a80ad"><div class="ttname"><a href="vector_8c.html#a9817d90055331624db7529c5d74a80ad">insert_llong_vector</a></div><div class="ttdeci">int insert_llong_vector(LLInt *vec, long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01016">vector.c:1016</a></div></div>
+<div class="ttc" id="avector_8c_html_a9a05407a3434648f10f4416a7874150d"><div class="ttname"><a href="vector_8c.html#a9a05407a3434648f10f4416a7874150d">free_ulong_vector</a></div><div class="ttdeci">void free_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01678">vector.c:1678</a></div></div>
+<div class="ttc" id="avector_8c_html_a9b58a773830487b8a8f1973221e93366"><div class="ttname"><a href="vector_8c.html#a9b58a773830487b8a8f1973221e93366">reverse_bool_vector</a></div><div class="ttdeci">void reverse_bool_vector(Bool *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02178">vector.c:2178</a></div></div>
 <div class="ttc" id="avector_8c_html_a9d8eb1d9ce65365d7b044fe684387a3f"><div class="ttname"><a href="vector_8c.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a></div><div class="ttdeci">int init_uint_vector(UInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00063">vector.c:63</a></div></div>
 <div class="ttc" id="avector_8c_html_a9d98a8399e52f97b6771d676b3919319"><div class="ttname"><a href="vector_8c.html#a9d98a8399e52f97b6771d676b3919319">replace_uint_vector_values</a></div><div class="ttdeci">void replace_uint_vector_values(UInt *vec, unsigned int old_value, unsigned int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01522">vector.c:1522</a></div></div>
 <div class="ttc" id="avector_8c_html_a9e9db9d87d5a9f3bb6dae1ba5668ef12"><div class="ttname"><a href="vector_8c.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a></div><div class="ttdeci">int insert_char_vector(Char *vec, char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01196">vector.c:1196</a></div></div>
+<div class="ttc" id="avector_8c_html_a9f3fcb3deda563d834c9d3d13f097268"><div class="ttname"><a href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a></div><div class="ttdeci">void free_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01769">vector.c:1769</a></div></div>
 <div class="ttc" id="avector_8c_html_a9fdb6c5fdd9f0d5a3bfb751f9e82968e"><div class="ttname"><a href="vector_8c.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a></div><div class="ttdeci">int init_int_vector(Int *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00048">vector.c:48</a></div></div>
+<div class="ttc" id="avector_8c_html_aa0efda9f361b9e9219f5afc379c7e6cc"><div class="ttname"><a href="vector_8c.html#aa0efda9f361b9e9219f5afc379c7e6cc">free_float_vector</a></div><div class="ttdeci">void free_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01717">vector.c:1717</a></div></div>
 <div class="ttc" id="avector_8c_html_aa419c32bb276bfe866787e1744669b94"><div class="ttname"><a href="vector_8c.html#aa419c32bb276bfe866787e1744669b94">insert_ulong_vector</a></div><div class="ttdeci">int insert_ulong_vector(ULInt *vec, unsigned long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00980">vector.c:980</a></div></div>
 <div class="ttc" id="avector_8c_html_aa63398bdb55f97b891b93404a89de14d"><div class="ttname"><a href="vector_8c.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a></div><div class="ttdeci">int init_ushort_vector(UShort *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00033">vector.c:33</a></div></div>
+<div class="ttc" id="avector_8c_html_aa77d55a8f5e4ab149edb6c75d98a94ce"><div class="ttname"><a href="vector_8c.html#aa77d55a8f5e4ab149edb6c75d98a94ce">reverse_ullong_vector</a></div><div class="ttdeci">void reverse_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02088">vector.c:2088</a></div></div>
+<div class="ttc" id="avector_8c_html_aa7b0890be4e8157712930fedaf437c8a"><div class="ttname"><a href="vector_8c.html#aa7b0890be4e8157712930fedaf437c8a">delete_ulong_vector_duplicates</a></div><div class="ttdeci">void delete_ulong_vector_duplicates(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01869">vector.c:1869</a></div></div>
 <div class="ttc" id="avector_8c_html_aa8495c3a316b6d93c8697d194c86fc2b"><div class="ttname"><a href="vector_8c.html#aa8495c3a316b6d93c8697d194c86fc2b">insert_ushort_vector</a></div><div class="ttdeci">int insert_ushort_vector(UShort *vec, unsigned short int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00836">vector.c:836</a></div></div>
 <div class="ttc" id="avector_8c_html_aafe1e760a31236df3e8d9b5d4fedf79e"><div class="ttname"><a href="vector_8c.html#aafe1e760a31236df3e8d9b5d4fedf79e">replace_float_vector_values</a></div><div class="ttdeci">void replace_float_vector_values(Flt *vec, float old_value, float new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01557">vector.c:1557</a></div></div>
 <div class="ttc" id="avector_8c_html_ab05d31d34c87d8d6cd76f48539bf367f"><div class="ttname"><a href="vector_8c.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a></div><div class="ttdeci">int init_ullong_vector(ULLInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00122">vector.c:122</a></div></div>
+<div class="ttc" id="avector_8c_html_ab2c13b705440e4d4d53825bb16929ff6"><div class="ttname"><a href="vector_8c.html#ab2c13b705440e4d4d53825bb16929ff6">free_int_vector</a></div><div class="ttdeci">void free_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01639">vector.c:1639</a></div></div>
 <div class="ttc" id="avector_8c_html_ab312c467d82a0fccc66cbb89a6b8de5c"><div class="ttname"><a href="vector_8c.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector</a></div><div class="ttdeci">int push_double_vector(Dble *vec, double value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00646">vector.c:646</a></div></div>
 <div class="ttc" id="avector_8c_html_ab344e3b36aa397f037cb2c573e1d3aff"><div class="ttname"><a href="vector_8c.html#ab344e3b36aa397f037cb2c573e1d3aff">insert_bool_vector</a></div><div class="ttdeci">int insert_bool_vector(Bool *vec, bool *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01268">vector.c:1268</a></div></div>
 <div class="ttc" id="avector_8c_html_ab345b0d10cef3cb87e552791440398e9"><div class="ttname"><a href="vector_8c.html#ab345b0d10cef3cb87e552791440398e9">replace_bool_vector_values</a></div><div class="ttdeci">void replace_bool_vector_values(Bool *vec, bool old_value, char new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01592">vector.c:1592</a></div></div>
 <div class="ttc" id="avector_8c_html_ab4f076e9a6e7d0795c2c3a0216c5c97e"><div class="ttname"><a href="vector_8c.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector</a></div><div class="ttdeci">int push_char_vector(Char *vec, char value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00712">vector.c:712</a></div></div>
+<div class="ttc" id="avector_8c_html_ab5a49e7e86d86796744395431d475f74"><div class="ttname"><a href="vector_8c.html#ab5a49e7e86d86796744395431d475f74">delete_uint_vector_duplicates</a></div><div class="ttdeci">void delete_uint_vector_duplicates(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01845">vector.c:1845</a></div></div>
 <div class="ttc" id="avector_8c_html_ab5d840518e5e7bbd9ed243681b7124f7"><div class="ttname"><a href="vector_8c.html#ab5d840518e5e7bbd9ed243681b7124f7">insert_long_vector</a></div><div class="ttdeci">int insert_long_vector(LInt *vec, long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00944">vector.c:944</a></div></div>
 <div class="ttc" id="avector_8c_html_ab5f9826948a1e75b6ffa74b2e801f8c5"><div class="ttname"><a href="vector_8c.html#ab5f9826948a1e75b6ffa74b2e801f8c5">pop_ushort_vector_index</a></div><div class="ttdeci">int pop_ushort_vector_index(UShort *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01319">vector.c:1319</a></div></div>
 <div class="ttc" id="avector_8c_html_abbac579a20b2655deda9ec8a915fcfb7"><div class="ttname"><a href="vector_8c.html#abbac579a20b2655deda9ec8a915fcfb7">init_ushort_array</a></div><div class="ttdeci">void init_ushort_array(UShort *vec, unsigned short int *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00244">vector.c:244</a></div></div>
@@ -1766,9 +2403,12 @@ $(function() {
 <div class="ttc" id="avector_8c_html_aee6e8f2b009cc7205dfd8c143b8e9839"><div class="ttname"><a href="vector_8c.html#aee6e8f2b009cc7205dfd8c143b8e9839">pop_ulong_vector_index</a></div><div class="ttdeci">int pop_ulong_vector_index(ULInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01371">vector.c:1371</a></div></div>
 <div class="ttc" id="avector_8c_html_af08098b392c0ff01db799bff9c83a521"><div class="ttname"><a href="vector_8c.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a></div><div class="ttdeci">int init_ulong_vector(ULInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00093">vector.c:93</a></div></div>
 <div class="ttc" id="avector_8c_html_af0ecebd36b313d07d43f40698bd5508f"><div class="ttname"><a href="vector_8c.html#af0ecebd36b313d07d43f40698bd5508f">pop_int_vector_index</a></div><div class="ttdeci">int pop_int_vector_index(Int *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01332">vector.c:1332</a></div></div>
+<div class="ttc" id="avector_8c_html_af1ab528ebf7f47a278e3be3b02e9acee"><div class="ttname"><a href="vector_8c.html#af1ab528ebf7f47a278e3be3b02e9acee">free_long_vector</a></div><div class="ttdeci">void free_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01665">vector.c:1665</a></div></div>
 <div class="ttc" id="avector_8c_html_af1e86e2b45b0339cc18ba5b35bf01132"><div class="ttname"><a href="vector_8c.html#af1e86e2b45b0339cc18ba5b35bf01132">insert_double_vector</a></div><div class="ttdeci">int insert_double_vector(Dble *vec, double *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01124">vector.c:1124</a></div></div>
 <div class="ttc" id="avector_8c_html_af1f590cad5f66c4caded12d7cd92675b"><div class="ttname"><a href="vector_8c.html#af1f590cad5f66c4caded12d7cd92675b">init_double_array</a></div><div class="ttdeci">void init_double_array(Dble *vec, double *arr, size_t allocated_length, size_t active_length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00308">vector.c:308</a></div></div>
+<div class="ttc" id="avector_8c_html_af92bc034e6f34814eea1008629f41ef9"><div class="ttname"><a href="vector_8c.html#af92bc034e6f34814eea1008629f41ef9">free_llong_vector</a></div><div class="ttdeci">void free_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01691">vector.c:1691</a></div></div>
 <div class="ttc" id="avector_8c_html_afccda80cf8e96d76846df29a256f6974"><div class="ttname"><a href="vector_8c.html#afccda80cf8e96d76846df29a256f6974">insert_ullong_vector</a></div><div class="ttdeci">int insert_ullong_vector(ULLInt *vec, unsigned long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01052">vector.c:1052</a></div></div>
+<div class="ttc" id="avector_8c_html_afef1cb622b3f54256849a3b5446a7af4"><div class="ttname"><a href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a></div><div class="ttdeci">void free_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01756">vector.c:1756</a></div></div>
 <div class="ttc" id="avector_8h_html"><div class="ttname"><a href="vector_8h.html">vector.h</a></div></div>
 <div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a></div><div class="ttdeci">@ DYNAMIC</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00038">vector.h:38</a></div></div>
 <div class="ttc" id="avector_8h_html_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8"><div class="ttname"><a href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">STATIC</a></div><div class="ttdeci">@ STATIC</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00040">vector.h:39</a></div></div>

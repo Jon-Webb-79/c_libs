@@ -1608,4 +1608,600 @@ void replace_string_vector_values(String *vec, char *old_value, char *new_value)
 }
 // ==========================================================================================
 // ==========================================================================================
+// FREE_TYPE_VEC FUNCTIONS
+
+void free_short_vector(Short *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_ushort_vector(UShort *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_int_vector(Int *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_uint_vector(UInt *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_long_vector(LInt *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_ulong_vector(ULInt *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_llong_vector(LLInt *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_ullong_vector(ULLInt *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_float_vector(Flt *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_double_vector(Dble *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_ldouble_vector(LDble *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_char_vector(Char *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_uchar_vector(UChar *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_bool_vector(Bool *vec) {
+	if (vec->dat_type == DYNAMIC) {
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+		vec->allocated_length = 0;
+	}
+	else {
+		fprintf(stderr, "Struct in file %s on line %d must be DYNAMIC\n", __FILE__, __LINE__);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void free_string_vector(String *vec) {
+	if (vec != NULL) {
+		for (size_t i = 0; i < vec->active_length; i++) {
+			free(vec->array[i]);
+		}
+		free(vec->array);
+		vec->array = NULL;
+		vec->active_length = 0;
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
+// delete_type_stack_duplicates functions
+
+void delete_short_vector_duplicates(Short *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_short_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ushort_vector_duplicates(UShort *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_ushort_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_int_vector_duplicates(Int *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_int_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_uint_vector_duplicates(UInt *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_uint_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_long_vector_duplicates(LInt *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_long_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ulong_vector_duplicates(ULInt *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_ulong_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_llong_vector_duplicates(LLInt *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_llong_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ullong_vector_duplicates(ULLInt *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_ullong_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_float_vector_duplicates(Flt *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_float_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_double_vector_duplicates(Dble *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_double_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ldouble_vector_duplicates(LDble *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_ldouble_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_char_vector_duplicates(Char *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_char_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_bool_vector_duplicates(Bool *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_bool_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_string_vector_duplicates(String *vec) {
+	int test;
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			test = strcmp(vec->array[i], vec->array[j]);
+			if (test == 0) {
+				pop_string_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
+// REVERSE_TYPE VEC FUNCTIONS
+
+void reverse_short_vector(Short *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		short int *a = &vec->array[start];
+		short int *b = &vec->array[end];
+		short int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_ushort_vector(UShort *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		unsigned short int *a = &vec->array[start];
+		unsigned short int *b = &vec->array[end];
+		unsigned short int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_int_vector(Int *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		int *a = &vec->array[start];
+		int *b = &vec->array[end];
+		int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_uint_vector(UInt *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	//unsigned int *a = &vec->array[start];
+	//unsigned int *b = &vec->array[end];
+	while (start < end) {
+		unsigned int *a = &vec->array[start];
+		unsigned int *b = &vec->array[end];
+		unsigned int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_long_vector(LInt *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		long int *a = &vec->array[start];
+		long int *b = &vec->array[end];
+		long int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_ulong_vector(ULInt *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		unsigned long int *a = &vec->array[start];
+		unsigned long int *b = &vec->array[end];
+		unsigned long int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_llong_vector(LLInt *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		long long int *a = &vec->array[start];
+		long long int *b = &vec->array[end];
+		long long int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_ullong_vector(ULLInt *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		unsigned long long int *a = &vec->array[start];
+		unsigned long long int *b = &vec->array[end];
+		unsigned long long int temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_float_vector(Flt *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		float *a = &vec->array[start];
+		float *b = &vec->array[end];
+		float temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_double_vector(Dble *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		double *a = &vec->array[start];
+		double *b = &vec->array[end];
+		double temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_ldouble_vector(LDble *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		long double *a = &vec->array[start];
+		long double *b = &vec->array[end];
+		long double temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_char_vector(Char *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		char *a = &vec->array[start];
+		char *b = &vec->array[end];
+		char temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_uchar_vector(UChar *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		unsigned char *a = &vec->array[start];
+		unsigned char *b = &vec->array[end];
+		unsigned char temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_bool_vector(Bool *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		bool *a = &vec->array[start];
+		bool *b = &vec->array[end];
+		bool temp= *a;
+		*a = *b;
+		*b = temp;
+		++start;
+		--end;
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void reverse_string_vector(String *vec) {
+	size_t start = 0;
+	size_t end = vec->active_length - 1;
+	while (start < end) {
+		push_string_vector(vec, vec->array[end], start);
+		push_string_vector(vec, vec->array[start+1], end+1);
+		pop_string_vector_index(vec, start+1);
+		pop_string_vector_index(vec, end+1);
+		++start;
+		--end;
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

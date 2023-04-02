@@ -2086,7 +2086,837 @@ void replace_bool_vector_values(Bool *vec, bool old_value, char new_value);
  * @endcode
  */
 void replace_string_vector_values(String *vec, char *old_value, char *new_value);
+// ==========================================================================================
+// ==========================================================================================
+// FREE_TYPE_VEC FUNCTIONS
+
+/**
+ * This function will free all memory from an Short data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type Short
+ */
+void free_short_vector(Short *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an UShort data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type UShort
+ */
+void free_ushort_vector(UShort *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an Int data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type Int
+ */
+void free_int_vector(Int *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an UInt data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type UInt
+ */
+void free_uint_vector(UInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an LInt data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type LInt
+ */
+void free_long_vector(LInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an ULInt data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type ULInt
+ */
+void free_ulong_vector(ULInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an LLInt data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type LLInt
+ */
+void free_llong_vector(LLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an ULLInt data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type ULLInt
+ */
+void free_ullong_vector(ULLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an Flt data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type Flt
+ */
+void free_float_vector(Flt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an Dble data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type Dble
+ */
+void free_double_vector(Dble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an LDble data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type LDble
+ */
+void free_ldouble_vector(LDble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an Char data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type Char
+ */
+void free_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an Char data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type UChar
+ */
+void free_uchar_vector(UChar *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from an Bool data type assuming the
+ * type was used for dynamically allocated memory.  If the type was initialized
+ * for statically allocated memory, this function will write an error to
+ * stderror and return a value of -1 to the calling program.
+ *
+ * /param vec A struct container of type Bool
+ */
+void free_bool_vector(Bool *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will free all memory from anString data type assuming the
+ * type was used for dynamically allocated memory.
+ *
+ * /param vec A struct container of type String
+ */
+void free_string_vector(String *vec);
+// ==========================================================================================
+// ==========================================================================================
+// DELETE_VEC_DUPLICATES Prototypes
+
+/**
+ * This function will delete all duplicate values in an Short struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Short
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(vec, 6);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 1);
+ * push_short_vector(vec, 2);
+ * push_short_vector(vec, 2);
+ * push_short_vector(vec, 3);
+ * push_short_vector(vec, 3);
+ * delete_short_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+void delete_short_vector_duplicates(Short *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an UShort struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(vec, 6);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 1);
+ * push_ushort_vector(vec, 2);
+ * push_ushort_vector(vec, 2);
+ * push_ushort_vector(vec, 3);
+ * push_ushort_vector(vec, 3);
+ * delete_ushort_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+void delete_ushort_vector_duplicates(UShort *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an Int struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(vec, 6);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 1);
+ * push_int_vector(vec, 2);
+ * push_int_vector(vec, 2);
+ * push_int_vector(vec, 3);
+ * push_int_vector(vec, 3);
+ * delete_int_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+void delete_int_vector_duplicates(Int *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a UInt struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(vec, 6);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 1);
+ * push_uint_vector(vec, 2);
+ * push_uint_vector(vec, 2);
+ * push_uint_vector(vec, 3);
+ * push_uint_vector(vec, 3);
+ * delete_uint_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+void delete_uint_vector_duplicates(UInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a LInt struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(vec, 6);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 1);
+ * push_long_vector(vec, 2);
+ * push_long_vector(vec, 2);
+ * push_long_vector(vec, 3);
+ * push_long_vector(vec, 3);
+ * delete_long_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+void delete_long_vector_duplicates(LInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a ULInt struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(vec, 6);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 1);
+ * push_ulong_vector(vec, 2);
+ * push_ulong_vector(vec, 2);
+ * push_ulong_vector(vec, 3);
+ * push_ulong_vector(vec, 3);
+ * delete_ulong_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+void delete_ulong_vector_duplicates(ULInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a LLInt struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 6);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 1);
+ * push_llong_vector(vec, 2);
+ * push_llong_vector(vec, 2);
+ * push_llong_vector(vec, 3);
+ * push_llong_vector(vec, 3);
+ * delete_llong_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+void delete_llong_vector_duplicates(LLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a ULLInt struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type ULLInt
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(vec, 6);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 1);
+ * push_ullong_vector(vec, 2);
+ * push_ullong_vector(vec, 2);
+ * push_ullong_vector(vec, 3);
+ * push_ullong_vector(vec, 3);
+ * delete_ullong_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+void delete_ullong_vector_duplicates(ULLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a Flt struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(vec, 6);
+ * push_float_vector(vec, 1.f);
+ * push_float_vector(vec, 1.f);
+ * push_float_vector(vec, 2.f);
+ * push_float_vector(vec, 2.f);
+ * push_float_vector(vec, 3.f);
+ * push_float_vector(vec, 3.f);
+ * delete_float_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+void delete_float_vector_duplicates(Flt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a Dble struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(vec, 6);
+ * push_double_vector(vec, 1.);
+ * push_double_vector(vec, 1.);
+ * push_double_vector(vec, 2.);
+ * push_double_vector(vec, 2.);
+ * push_double_vector(vec, 3.);
+ * push_double_vector(vec, 3.);
+ * delete_double_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+void delete_double_vector_duplicates(Dble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a LDble struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(vec, 6);
+ * push_ldouble_vector(vec, 1.);
+ * push_ldouble_vector(vec, 1.);
+ * push_ldouble_vector(vec, 2.);
+ * push_ldouble_vector(vec, 2.);
+ * push_ldouble_vector(vec, 3.);
+ * push_ldouble_vector(vec, 3.);
+ * delete_ldouble_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ 1, 2, 3 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+void delete_ldouble_vector_duplicates(LDble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a Char struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Char
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(vec, 6);
+ * push_char_vector(vec, 'a');
+ * push_char_vector(vec, 'a');
+ * push_char_vector(vec, 'b');
+ * push_char_vector(vec, 'b');
+ * push_char_vector(vec, 'c');
+ * push_char_vector(vec, 'c');
+ * delete_char_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ a, b, c ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+void delete_char_vector_duplicates(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a Char struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Char
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(vec, 6);
+ * push_uchar_vector(vec, 'a');
+ * push_uchar_vector(vec, 'a');
+ * push_uchar_vector(vec, 'b');
+ * push_uchar_vector(vec, 'b');
+ * push_uchar_vector(vec, 'c');
+ * push_uchar_vector(vec, 'c');
+ * delete_uchar_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ a, b, c ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+void delete_uchar_vector_duplicates(UChar *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a Bool struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type Bool
+ *
+ * @code
+ * Char vec;
+ * init_bool_vector(vec, 6);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, false);
+ * push_bool_vector(vec, false);
+ * push_bool_vector(vec, true);
+ * push_bool_vector(vec, true);
+ * delete_bool_vector_duplicates(vec);
+ * PRINT(vec);
+ * [ true, false ]
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+void delete_bool_vector_duplicates(Bool *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in a String struct, with
+ * exception of the first instance of the variable
+ *
+ * /param vec A struct container of type String
+ *
+ * @code
+ * init_string_vector(vec);
+ * push_string_vector(vec, "One", 0);
+ * push_string_vector(vec, "Two", 1);
+ * push_string_vector(vec, "One", 2);
+ * push_string_vector(vec, "One", 3);
+ * push_string_vector(vec, "Three", 4);
+ * push_string_vector(vec, "Two", 5);
+ * delete_string_vector_duplicates(vec);
+ * PRINT(vec);
+ * // >> [One, Two, Three ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+void delete_string_vector_duplicates(String *vec);
 #endif /* vector_H */
+// ==========================================================================================
+// ==========================================================================================
+// REVERSE_TYPE_VEC FUCNTIONS
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type Short.
+ *
+ * /param vec A vector struct container of type Short
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(vec, 4);
+ * short a[4] = {1, 2, 3, 4};
+ * insert_short_vector(vec, a, 4, 0);
+ * reverse_short_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+void reverse_short_vector(Short *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type UShort.
+ *
+ * /param A vector struct container of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(vec, 4);
+ * ushort a[4] = {1, 2, 3, 4};
+ * insert_ushort_vector(vec, a, 4, 0);
+ * reverse_ushort_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+void reverse_ushort_vector(UShort *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type Int.
+ *
+ * /param vec A vector struct container of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(vec, 4);
+ * int a[4] = {1, 2, 3, 4};
+ * insert_int_vector(vec, a, 4, 0);
+ * reverse_int_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+void reverse_int_vector(Int *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type UInt.
+ *
+ * /param vec A vector struct container of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(vec, 4);
+ * uint a[4] = {1, 2, 3, 4};
+ * insert_uint_vector(vec, a, 4, 0);
+ * reverse_uint_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+void reverse_uint_vector(UInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type LInt.
+ *
+ * /param vec A vector struct container of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(vec, 4);
+ * long int a[4] = {1, 2, 3, 4};
+ * insert_long_vector(vec, a, 4, 0);
+ * reverse_long_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+void reverse_long_vector(LInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type ULInt.
+ *
+ * /param vec A vector struct container of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(vec, 4);
+ * unsigned long int a[4] = {1, 2, 3, 4};
+ * insert_ulong_vector(vec, a, 4, 0);
+ * reverse_ulong_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+void reverse_ulong_vector(ULInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type LLInt.
+ *
+ * /param vec A vector struct container of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 4);
+ * unsigned long long int a[4] = {1, 2, 3, 4};
+ * insert_llong_vector(vec, a, 4, 0);
+ * reverse_llong_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+void reverse_llong_vector(LLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type ULLInt.
+ *
+ * /param vec A vector struct container of type ULLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(vec, 4);
+ * unsigned long long int a[4] = {1, 2, 3, 4};
+ * insert_llong_vector(vec, a, 4, 0);
+ * reverse_llong_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+void reverse_ullong_vector(ULLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type Flt.
+ *
+ * /param vec A vector struct container of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(vec, 4);
+ * float a[4] = {1, 2, 3, 4};
+ * insert_float_vector(vec, a, 4, 0);
+ * reverse_float_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+void reverse_float_vector(Flt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type Dble.
+ *
+ * /param vec A vector struct container of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(vec, 4);
+ * double a[4] = {1, 2, 3, 4};
+ * insert_double_vector(vec, a, 4, 0);
+ * reverse_double_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+void reverse_double_vector(Dble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type LDble.
+ *
+ * /param vec A vector struct container of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(vec, 4);
+ * long double a[4] = {1, 2, 3, 4};
+ * insert_ldouble_vector(vec, a, 4, 0);
+ * reverse_ldouble_vector(vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+void reverse_ldouble_vector(LDble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type Char.
+ *
+ * /param vec A vector struct container of type Char
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(vec, 4);
+ * char a[4] = {1, 2, 3, 4};
+ * insert_char_vector(&vec, a, 4, 0);
+ * reverse_char_vector(&vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+void reverse_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type UChar.
+ *
+ * /param vec A vector struct container of type Char
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(vec, 4);
+ * unsigned char a[4] = {1, 2, 3, 4};
+ * insert_uchar_vector(&vec, a, 4, 0);
+ * reverse_uchar_vector(&vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+void reverse_uchar_vector(UChar *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type Bool.
+ *
+ * /param vec A vector struct container of type Bool
+ *
+ * @code
+ * Bool vec;
+ * init_bool_vector(vec, 4);
+ * bool a[4] = {true, true, false, false};
+ * insert_bool_vector(&vec, a, 4, 0);
+ * reverse_bool_vector(&vec);
+ * PRINT(vec);
+ * [ 4, 3, 2, 1 ]
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+void reverse_bool_vector(Bool *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type String.
+ *
+ * /param vec A vector struct container of type String
+ *
+ * @code
+ * String vec;
+ * init_string_vector(&vec);
+ * push_string_vec(&vec, "One", vec.active_length)
+ * push_string_vec(&vec, "Two", vec.active_length)
+ * push_string_vec(&vec, "Three", vec.active_length)
+ * push_string_vec(&vec, "Four", vec.active_length)
+ * reverse_string_vector(&vec);
+ * PRINT(vec);
+ * [ Four, Three, Two, One ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+void reverse_string_vector(String *vec);
 // ==========================================================================================
 // ==========================================================================================
 // eof
