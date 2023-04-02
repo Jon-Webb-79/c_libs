@@ -355,6 +355,10 @@ void \mbox{\hyperlink{vector_8h_a88af2cb1285800957b1de71e783ee93a}{sort\+\_\+uch
 \item 
 void \mbox{\hyperlink{vector_8h_aead9f94df495db661d185ef0363ec1d6}{sort\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structString}{String}} $\ast$vec, size\+\_\+t low, size\+\_\+t high, \mbox{\hyperlink{vector_8h_af40f59df20b550c793c470752e457636}{sort\+\_\+order}} order)
 \item 
+char \mbox{\hyperlink{vector_8h_a0684e2f1aee143f1769dd8ff908c852c}{sum\+\_\+char\+\_\+vector}} (Char $\ast$vec)
+\item 
+unsigned char \mbox{\hyperlink{vector_8h_a643cb8d97c368f436a0010dacfca2401}{sum\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
+\item 
 short int \mbox{\hyperlink{vector_8h_a54d410de6d79f482b3d560bcb78fd2ff}{sum\+\_\+short\+\_\+vector}} (Short $\ast$vec)
 \item 
 unsigned short int \mbox{\hyperlink{vector_8h_a67f48de636722d00447f21d5040f8d81}{sum\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
@@ -377,6 +381,10 @@ double \mbox{\hyperlink{vector_8h_a98a70f4f173d451a1ff5357f4779289d}{sum\+\_\+do
 \item 
 long double \mbox{\hyperlink{vector_8h_af2df2f0fe19814004ab61a91521d7b21}{sum\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
 \item 
+Char \mbox{\hyperlink{vector_8h_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector}} (Char $\ast$vec)
+\item 
+UChar \mbox{\hyperlink{vector_8h_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
+\item 
 Short \mbox{\hyperlink{vector_8h_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector}} (Short $\ast$vec)
 \item 
 UShort \mbox{\hyperlink{vector_8h_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
@@ -398,6 +406,28 @@ Flt \mbox{\hyperlink{vector_8h_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+fl
 Dble \mbox{\hyperlink{vector_8h_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
 \item 
 LDble \mbox{\hyperlink{vector_8h_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a5a553d82722c04ec4b613014fa1d0688}{average\+\_\+short\+\_\+vector}} (Short $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}{average\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\+\_\+int\+\_\+vector}} (Int $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a35959e6bd4010b04681750611d00a7b7}{average\+\_\+uint\+\_\+vector}} (UInt $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}{average\+\_\+long\+\_\+vector}} (LInt $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_aa94c4a725c6ab558c748baa93b652363}{average\+\_\+ulong\+\_\+vector}} (ULInt $\ast$vec)
+\item 
+long double \mbox{\hyperlink{vector_8h_ae3782b50d088b4488da3a8283670ffcc}{average\+\_\+llong\+\_\+vector}} (LLInt $\ast$vec)
+\item 
+long double \mbox{\hyperlink{vector_8h_abb879670618c44d1259b4cb689d36698}{average\+\_\+ullong\+\_\+vector}} (ULLInt $\ast$vec)
+\item 
+float \mbox{\hyperlink{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}{average\+\_\+float\+\_\+vector}} (Flt $\ast$vec)
+\item 
+double \mbox{\hyperlink{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
+\item 
+long double \mbox{\hyperlink{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}{average\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -560,6 +590,292 @@ Definition at line \mbox{\hyperlink{vector_8h_source_l00047}{47}} of file \mbox{
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}\label{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}} 
+\index{vector.h@{vector.h}!average\_double\_vector@{average\_double\_vector}}
+\index{average\_double\_vector@{average\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_double\_vector()}{average\_double\_vector()}}
+{\footnotesize\ttfamily double average\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type Dble
+
+/param vec A vector data structure of type Dble /return avg The average value in the input data structure of type Dble
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Dble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\_double\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}\label{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}} 
+\index{vector.h@{vector.h}!average\_float\_vector@{average\_float\_vector}}
+\index{average\_float\_vector@{average\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_float\_vector()}{average\_float\_vector()}}
+{\footnotesize\ttfamily float average\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type Flt
+
+/param vec A vector data structure of type Flt /return avg The average value in the input data structure of type Flt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Flt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a95e8f18d7457adb1784ca850c7afa01e}{average\_float\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}\label{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}} 
+\index{vector.h@{vector.h}!average\_int\_vector@{average\_int\_vector}}
+\index{average\_int\_vector@{average\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_int\_vector()}{average\_int\_vector()}}
+{\footnotesize\ttfamily float average\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type Int
+
+/param vec A vector data structure of type Int /return avg The average value in the input data structure of type Int
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\_int\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}\label{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}} 
+\index{vector.h@{vector.h}!average\_ldouble\_vector@{average\_ldouble\_vector}}
+\index{average\_ldouble\_vector@{average\_ldouble\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_ldouble\_vector()}{average\_ldouble\_vector()}}
+{\footnotesize\ttfamily long double average\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type LDble
+
+/param vec A vector data structure of type LDble /return avg The average value in the input data structure of type LDble
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LDble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_a136fac1692146b0fc1dd1f548b6a07a4}{average\_ldouble\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ae3782b50d088b4488da3a8283670ffcc}\label{vector_8h_ae3782b50d088b4488da3a8283670ffcc}} 
+\index{vector.h@{vector.h}!average\_llong\_vector@{average\_llong\_vector}}
+\index{average\_llong\_vector@{average\_llong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_llong\_vector()}{average\_llong\_vector()}}
+{\footnotesize\ttfamily long double average\+\_\+llong\+\_\+vector (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type LLInt
+
+/param vec A vector data structure of type LLInt /return avg The average value in the input data structure of type LLInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_ae3782b50d088b4488da3a8283670ffcc}{average\_llong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}\label{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}} 
+\index{vector.h@{vector.h}!average\_long\_vector@{average\_long\_vector}}
+\index{average\_long\_vector@{average\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_long\_vector()}{average\_long\_vector()}}
+{\footnotesize\ttfamily double average\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type LInt
+
+/param vec A vector data structure of type LInt /return avg The average value in the input data structure of type LInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_ad1feee1c2712401a20fbe6699f5c4bc7}{average\_long\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a5a553d82722c04ec4b613014fa1d0688}\label{vector_8h_a5a553d82722c04ec4b613014fa1d0688}} 
+\index{vector.h@{vector.h}!average\_short\_vector@{average\_short\_vector}}
+\index{average\_short\_vector@{average\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_short\_vector()}{average\_short\_vector()}}
+{\footnotesize\ttfamily float average\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type Short
+
+/param vec A vector data structure of type Short /return avg The average value in the input data structure of type Short
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Short vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a5a553d82722c04ec4b613014fa1d0688}{average\_short\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a35959e6bd4010b04681750611d00a7b7}\label{vector_8h_a35959e6bd4010b04681750611d00a7b7}} 
+\index{vector.h@{vector.h}!average\_uint\_vector@{average\_uint\_vector}}
+\index{average\_uint\_vector@{average\_uint\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_uint\_vector()}{average\_uint\_vector()}}
+{\footnotesize\ttfamily float average\+\_\+uint\+\_\+vector (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type UInt
+
+/param vec A vector data structure of type UInt /return avg The average value in the input data structure of type UInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a35959e6bd4010b04681750611d00a7b7}{average\_uint\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_abb879670618c44d1259b4cb689d36698}\label{vector_8h_abb879670618c44d1259b4cb689d36698}} 
+\index{vector.h@{vector.h}!average\_ullong\_vector@{average\_ullong\_vector}}
+\index{average\_ullong\_vector@{average\_ullong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_ullong\_vector()}{average\_ullong\_vector()}}
+{\footnotesize\ttfamily long double average\+\_\+ullong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type ULLInt
+
+/param vec A vector data structure of type ULLInt /return avg The average value in the input data structure of type ULLInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_abb879670618c44d1259b4cb689d36698}{average\_ullong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_aa94c4a725c6ab558c748baa93b652363}\label{vector_8h_aa94c4a725c6ab558c748baa93b652363}} 
+\index{vector.h@{vector.h}!average\_ulong\_vector@{average\_ulong\_vector}}
+\index{average\_ulong\_vector@{average\_ulong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_ulong\_vector()}{average\_ulong\_vector()}}
+{\footnotesize\ttfamily double average\+\_\+ulong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type ULInt
+
+/param vec A vector data structure of type ULInt /return avg The average value in the input data structure of type ULInt
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} b = \mbox{\hyperlink{vector_8h_aa94c4a725c6ab558c748baa93b652363}{average\_ulong\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}\label{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}} 
+\index{vector.h@{vector.h}!average\_ushort\_vector@{average\_ushort\_vector}}
+\index{average\_ushort\_vector@{average\_ushort\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{average\_ushort\_vector()}{average\_ushort\_vector()}}
+{\footnotesize\ttfamily float average\+\_\+ushort\+\_\+vector (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return the average value of the data in a vector data structure of type UShort
+
+/param vec A vector data structure of type UShort /return avg The average value in the input data structure of type UShort
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UShort vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} b = \mbox{\hyperlink{vector_8h_a96018578b7bce5eb04f4b4dbbd63b582}{average\_ushort\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 3.00000}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{vector_8h_a877296aab1e625bc7b103322f6b93b14}\label{vector_8h_a877296aab1e625bc7b103322f6b93b14}} 
+\index{vector.h@{vector.h}!cumsum\_char\_vector@{cumsum\_char\_vector}}
+\index{cumsum\_char\_vector@{cumsum\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{cumsum\_char\_vector()}{cumsum\_char\_vector()}}
+{\footnotesize\ttfamily Char cumsum\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an Char vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type Char /return return\+\_\+vec A vector container of type Char
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Char vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{Char cum\_vec = \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\_char\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02884}{2884}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02884                                    \{}
+\DoxyCodeLine{02885     Char new\_vec;}
+\DoxyCodeLine{02886     \mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02887     \textcolor{keywordtype}{char} sum = 0;}
+\DoxyCodeLine{02888     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02889         sum += vec-\/>array[i];}
+\DoxyCodeLine{02890         \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02891     \}}
+\DoxyCodeLine{02892     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02893 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\+\_\+char\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\+\_\+char\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_ae8512eab3bf15409bda6bce1d6ec0380}\label{vector_8h_ae8512eab3bf15409bda6bce1d6ec0380}} 
 \index{vector.h@{vector.h}!cumsum\_double\_vector@{cumsum\_double\_vector}}
 \index{cumsum\_double\_vector@{cumsum\_double\_vector}!vector.h@{vector.h}}
@@ -584,20 +900,20 @@ This function will return an Dble vector container that holds an array containin
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02974}{2974}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l03016}{3016}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02974                                      \{}
-\DoxyCodeLine{02975     Dble new\_vec;}
-\DoxyCodeLine{02976     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02977     \textcolor{keywordtype}{double} sum = 0;}
-\DoxyCodeLine{02978     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02979         sum += vec-\/>array[i];}
-\DoxyCodeLine{02980         \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02981     \}}
-\DoxyCodeLine{02982     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02983 \}}
+\DoxyCodeLine{03016                                      \{}
+\DoxyCodeLine{03017     Dble new\_vec;}
+\DoxyCodeLine{03018     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{03019     \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{03020     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03021         sum += vec-\/>array[i];}
+\DoxyCodeLine{03022         \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{03023     \}}
+\DoxyCodeLine{03024     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{03025 \}}
 
 \end{DoxyCode}
 
@@ -628,20 +944,20 @@ This function will return an Flt vector container that holds an array containing
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02962}{2962}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l03004}{3004}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02962                                   \{}
-\DoxyCodeLine{02963     Flt new\_vec;}
-\DoxyCodeLine{02964     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02965     \textcolor{keywordtype}{float} sum = 0;}
-\DoxyCodeLine{02966     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02967         sum += vec-\/>array[i];}
-\DoxyCodeLine{02968         \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02969     \}}
-\DoxyCodeLine{02970     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02971 \}}
+\DoxyCodeLine{03004                                   \{}
+\DoxyCodeLine{03005     Flt new\_vec;}
+\DoxyCodeLine{03006     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{03007     \textcolor{keywordtype}{float} sum = 0;}
+\DoxyCodeLine{03008     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03009         sum += vec-\/>array[i];}
+\DoxyCodeLine{03010         \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{03011     \}}
+\DoxyCodeLine{03012     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{03013 \}}
 
 \end{DoxyCode}
 
@@ -672,20 +988,20 @@ This function will return an Int vector container that holds an array containing
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02890}{2890}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02932}{2932}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02890                                 \{}
-\DoxyCodeLine{02891     Int new\_vec;}
-\DoxyCodeLine{02892     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02893     \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02894     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02895         sum += vec-\/>array[i];}
-\DoxyCodeLine{02896         \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02897     \}}
-\DoxyCodeLine{02898     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02899 \}}
+\DoxyCodeLine{02932                                 \{}
+\DoxyCodeLine{02933     Int new\_vec;}
+\DoxyCodeLine{02934     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02935     \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02936     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02937         sum += vec-\/>array[i];}
+\DoxyCodeLine{02938         \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02939     \}}
+\DoxyCodeLine{02940     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02941 \}}
 
 \end{DoxyCode}
 
@@ -716,20 +1032,20 @@ This function will return an LDble vector container that holds an array containi
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02986}{2986}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l03028}{3028}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02986                                         \{}
-\DoxyCodeLine{02987     LDble new\_vec;}
-\DoxyCodeLine{02988     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02989     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} sum = 0;}
-\DoxyCodeLine{02990     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02991         sum += vec-\/>array[i];}
-\DoxyCodeLine{02992         \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02993     \}}
-\DoxyCodeLine{02994     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02995 \}}
+\DoxyCodeLine{03028                                         \{}
+\DoxyCodeLine{03029     LDble new\_vec;}
+\DoxyCodeLine{03030     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{03031     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{03032     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{03033         sum += vec-\/>array[i];}
+\DoxyCodeLine{03034         \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{03035     \}}
+\DoxyCodeLine{03036     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{03037 \}}
 
 \end{DoxyCode}
 
@@ -760,20 +1076,20 @@ This function will return an LLInt vector container that holds an array containi
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02938}{2938}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02980}{2980}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02938                                       \{}
-\DoxyCodeLine{02939     LLInt new\_vec;}
-\DoxyCodeLine{02940     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02941     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02942     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02943         sum += vec-\/>array[i];}
-\DoxyCodeLine{02944         \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02945     \}}
-\DoxyCodeLine{02946     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02947 \}}
+\DoxyCodeLine{02980                                       \{}
+\DoxyCodeLine{02981     LLInt new\_vec;}
+\DoxyCodeLine{02982     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02983     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02984     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02985         sum += vec-\/>array[i];}
+\DoxyCodeLine{02986         \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02987     \}}
+\DoxyCodeLine{02988     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02989 \}}
 
 \end{DoxyCode}
 
@@ -804,20 +1120,20 @@ This function will return an LInt vector container that holds an array containin
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02914}{2914}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02956}{2956}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02914                                    \{}
-\DoxyCodeLine{02915     LInt new\_vec;}
-\DoxyCodeLine{02916     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02917     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02918     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02919         sum += vec-\/>array[i];}
-\DoxyCodeLine{02920         \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02921     \}}
-\DoxyCodeLine{02922     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02923 \}}
+\DoxyCodeLine{02956                                    \{}
+\DoxyCodeLine{02957     LInt new\_vec;}
+\DoxyCodeLine{02958     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02959     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02960     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02961         sum += vec-\/>array[i];}
+\DoxyCodeLine{02962         \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02963     \}}
+\DoxyCodeLine{02964     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02965 \}}
 
 \end{DoxyCode}
 
@@ -848,25 +1164,69 @@ This function will return an Short vector container that holds an array containi
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02866}{2866}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02908}{2908}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02866                                       \{}
-\DoxyCodeLine{02867     Short new\_vec;}
-\DoxyCodeLine{02868     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02869     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02870     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02871         sum += vec-\/>array[i];}
-\DoxyCodeLine{02872         \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02873     \}}
-\DoxyCodeLine{02874     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02875 \}}
+\DoxyCodeLine{02908                                       \{}
+\DoxyCodeLine{02909     Short new\_vec;}
+\DoxyCodeLine{02910     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02911     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02912     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02913         sum += vec-\/>array[i];}
+\DoxyCodeLine{02914         \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02915     \}}
+\DoxyCodeLine{02916     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02917 \}}
 
 \end{DoxyCode}
 
 
 References \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\+\_\+short\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\+\_\+short\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a2850df1b78d17fd2e45847e8bf1e51c2}\label{vector_8h_a2850df1b78d17fd2e45847e8bf1e51c2}} 
+\index{vector.h@{vector.h}!cumsum\_uchar\_vector@{cumsum\_uchar\_vector}}
+\index{cumsum\_uchar\_vector@{cumsum\_uchar\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{cumsum\_uchar\_vector()}{cumsum\_uchar\_vector()}}
+{\footnotesize\ttfamily UChar cumsum\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will return an UChar vector container that holds an array containing the cumulative sum of the values in the input array
+
+/param vec A vector container of type UChar /return return\+\_\+vec A vector container of type UChar
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UChar vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{UChar cum\_vec = \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\_uchar\_vector}}(\&vec);}
+\DoxyCodeLine{PRINT(vum\_vec);}
+\DoxyCodeLine{[ 1, 3, 6, 10, 15 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02896}{2896}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02896                                       \{}
+\DoxyCodeLine{02897     UChar new\_vec;}
+\DoxyCodeLine{02898     \mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02899     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} sum = 0;}
+\DoxyCodeLine{02900     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02901         sum += vec-\/>array[i];}
+\DoxyCodeLine{02902         \mbox{\hyperlink{vector_8h_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02903     \}}
+\DoxyCodeLine{02904     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02905 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\+\_\+uchar\+\_\+vector()}}, and \mbox{\hyperlink{vector_8h_acc6fd3b434ba25d3473adff60160500b}{push\+\_\+uchar\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_abe44138d94c38f7d65d62f63dddf668b}\label{vector_8h_abe44138d94c38f7d65d62f63dddf668b}} 
 \index{vector.h@{vector.h}!cumsum\_uint\_vector@{cumsum\_uint\_vector}}
@@ -892,20 +1252,20 @@ This function will return an UInt vector container that holds an array containin
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02902}{2902}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02944}{2944}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02902                                    \{}
-\DoxyCodeLine{02903     UInt new\_vec;}
-\DoxyCodeLine{02904     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02905     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02906     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02907         sum += vec-\/>array[i];}
-\DoxyCodeLine{02908         \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02909     \}}
-\DoxyCodeLine{02910     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02911 \}}
+\DoxyCodeLine{02944                                    \{}
+\DoxyCodeLine{02945     UInt new\_vec;}
+\DoxyCodeLine{02946     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02947     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02948     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02949         sum += vec-\/>array[i];}
+\DoxyCodeLine{02950         \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02951     \}}
+\DoxyCodeLine{02952     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02953 \}}
 
 \end{DoxyCode}
 
@@ -936,20 +1296,20 @@ This function will return an ULLInt vector container that holds an array contain
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02950}{2950}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02992}{2992}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02950                                          \{}
-\DoxyCodeLine{02951     ULLInt new\_vec;}
-\DoxyCodeLine{02952     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02953     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02954     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02955         sum += vec-\/>array[i];}
-\DoxyCodeLine{02956         \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02957     \}}
-\DoxyCodeLine{02958     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02959 \}}
+\DoxyCodeLine{02992                                          \{}
+\DoxyCodeLine{02993     ULLInt new\_vec;}
+\DoxyCodeLine{02994     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02995     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02996     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02997         sum += vec-\/>array[i];}
+\DoxyCodeLine{02998         \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02999     \}}
+\DoxyCodeLine{03000     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{03001 \}}
 
 \end{DoxyCode}
 
@@ -980,20 +1340,20 @@ This function will return an ULInt vector container that holds an array containi
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02926}{2926}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02968}{2968}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02926                                       \{}
-\DoxyCodeLine{02927     ULInt new\_vec;}
-\DoxyCodeLine{02928     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02929     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02930     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02931         sum += vec-\/>array[i];}
-\DoxyCodeLine{02932         \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02933     \}}
-\DoxyCodeLine{02934     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02935 \}}
+\DoxyCodeLine{02968                                       \{}
+\DoxyCodeLine{02969     ULInt new\_vec;}
+\DoxyCodeLine{02970     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02971     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02972     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02973         sum += vec-\/>array[i];}
+\DoxyCodeLine{02974         \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02975     \}}
+\DoxyCodeLine{02976     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02977 \}}
 
 \end{DoxyCode}
 
@@ -1024,20 +1384,20 @@ This function will return an UShort vector container that holds an array contain
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02878}{2878}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02920}{2920}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02878                                          \{}
-\DoxyCodeLine{02879     UShort new\_vec;}
-\DoxyCodeLine{02880     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{02881     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02882     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02883         sum += vec-\/>array[i];}
-\DoxyCodeLine{02884         \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
-\DoxyCodeLine{02885     \}}
-\DoxyCodeLine{02886     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{02887 \}}
+\DoxyCodeLine{02920                                          \{}
+\DoxyCodeLine{02921     UShort new\_vec;}
+\DoxyCodeLine{02922     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{02923     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02924     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02925         sum += vec-\/>array[i];}
+\DoxyCodeLine{02926         \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(\&new\_vec, sum, new\_vec.active\_length);}
+\DoxyCodeLine{02927     \}}
+\DoxyCodeLine{02928     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{02929 \}}
 
 \end{DoxyCode}
 
@@ -2341,6 +2701,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00182}{182}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_af1f590cad5f66c4caded12d7cd92675b}\label{vector_8h_af1f590cad5f66c4caded12d7cd92675b}} 
 \index{vector.h@{vector.h}!init\_double\_array@{init\_double\_array}}
 \index{init\_double\_array@{init\_double\_array}!vector.h@{vector.h}}
@@ -2929,6 +3293,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00197}{197}} of file \mbox
 
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}.
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\+\_\+uchar\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a2739fb21bf4216de09c51c393b89ece7}\label{vector_8h_a2739fb21bf4216de09c51c393b89ece7}} 
 \index{vector.h@{vector.h}!init\_uint\_array@{init\_uint\_array}}
@@ -5068,6 +5436,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00712}{712}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_ab312c467d82a0fccc66cbb89a6b8de5c}\label{vector_8h_ab312c467d82a0fccc66cbb89a6b8de5c}} 
 \index{vector.h@{vector.h}!push\_double\_vector@{push\_double\_vector}}
 \index{push\_double\_vector@{push\_double\_vector}!vector.h@{vector.h}}
@@ -5504,6 +5876,10 @@ Referenced by \mbox{\hyperlink{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}{repl
 \index{push\_uchar\_vector@{push\_uchar\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{push\_uchar\_vector()}{push\_uchar\_vector()}}
 {\footnotesize\ttfamily int push\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec,  }\item[{unsigned char}]{value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\+\_\+uchar\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a787fc2bba6112c4ede10d0ec14ab3825}\label{vector_8h_a787fc2bba6112c4ede10d0ec14ab3825}} 
 \index{vector.h@{vector.h}!push\_uint\_vector@{push\_uint\_vector}}
@@ -7628,6 +8004,43 @@ References \mbox{\hyperlink{vector_8c_ac3a8bea84161a65f8360d4eeb093cbd3}{partiti
 
 Referenced by \mbox{\hyperlink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\+\_\+ushort\+\_\+vector()}}.
 
+\mbox{\Hypertarget{vector_8h_a0684e2f1aee143f1769dd8ff908c852c}\label{vector_8h_a0684e2f1aee143f1769dd8ff908c852c}} 
+\index{vector.h@{vector.h}!sum\_char\_vector@{sum\_char\_vector}}
+\index{sum\_char\_vector@{sum\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_char\_vector()}{sum\_char\_vector()}}
+{\footnotesize\ttfamily char sum\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will calculate the sum of the values in a vector data structure of type Short
+
+/param vec A vector data structure of type Short
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Char vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} sum\_value = \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\_char\_vector}}(vec);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02765}{2765}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02765                                 \{}
+\DoxyCodeLine{02766     \textcolor{keywordtype}{char} sum = 0;}
+\DoxyCodeLine{02767     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02768         sum += vec-\/>array[i];}
+\DoxyCodeLine{02769     \}}
+\DoxyCodeLine{02770     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02771 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a98a70f4f173d451a1ff5357f4779289d}\label{vector_8h_a98a70f4f173d451a1ff5357f4779289d}} 
 \index{vector.h@{vector.h}!sum\_double\_vector@{sum\_double\_vector}}
 \index{sum\_double\_vector@{sum\_double\_vector}!vector.h@{vector.h}}
@@ -7652,17 +8065,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02846}{2846}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02864}{2864}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02846                                     \{}
-\DoxyCodeLine{02847     \textcolor{keywordtype}{double} sum = 0;}
-\DoxyCodeLine{02848     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02849         sum += vec-\/>array[i];}
-\DoxyCodeLine{02850     \}}
-\DoxyCodeLine{02851     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02852 \}}
+\DoxyCodeLine{02864                                     \{}
+\DoxyCodeLine{02865     \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{02866     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02867         sum += vec-\/>array[i];}
+\DoxyCodeLine{02868     \}}
+\DoxyCodeLine{02869     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02870 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ab9177b68251ddf43f4a245afd559e462}\label{vector_8h_ab9177b68251ddf43f4a245afd559e462}} 
@@ -7689,17 +8102,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02837}{2837}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02855}{2855}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02837                                  \{}
-\DoxyCodeLine{02838     \textcolor{keywordtype}{float} sum = 0;}
-\DoxyCodeLine{02839     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02840         sum += vec-\/>array[i];}
-\DoxyCodeLine{02841     \}}
-\DoxyCodeLine{02842     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02843 \}}
+\DoxyCodeLine{02855                                  \{}
+\DoxyCodeLine{02856     \textcolor{keywordtype}{float} sum = 0;}
+\DoxyCodeLine{02857     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02858         sum += vec-\/>array[i];}
+\DoxyCodeLine{02859     \}}
+\DoxyCodeLine{02860     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02861 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_aaf01dd9c2caec4100d4315bd8d525a30}\label{vector_8h_aaf01dd9c2caec4100d4315bd8d525a30}} 
@@ -7726,17 +8139,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02783}{2783}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02801}{2801}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02783                              \{}
-\DoxyCodeLine{02784     \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02785     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02786         sum += vec-\/>array[i];}
-\DoxyCodeLine{02787     \}}
-\DoxyCodeLine{02788     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02789 \}}
+\DoxyCodeLine{02801                              \{}
+\DoxyCodeLine{02802     \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02803     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02804         sum += vec-\/>array[i];}
+\DoxyCodeLine{02805     \}}
+\DoxyCodeLine{02806     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02807 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_af2df2f0fe19814004ab61a91521d7b21}\label{vector_8h_af2df2f0fe19814004ab61a91521d7b21}} 
@@ -7763,17 +8176,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02855}{2855}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02873}{2873}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02855                                            \{}
-\DoxyCodeLine{02856     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} sum = 0;}
-\DoxyCodeLine{02857     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02858         sum += vec-\/>array[i];}
-\DoxyCodeLine{02859     \}}
-\DoxyCodeLine{02860     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02861 \}}
+\DoxyCodeLine{02873                                            \{}
+\DoxyCodeLine{02874     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} sum = 0;}
+\DoxyCodeLine{02875     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02876         sum += vec-\/>array[i];}
+\DoxyCodeLine{02877     \}}
+\DoxyCodeLine{02878     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02879 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a838510507e7f386e844fd1e5e3ae494a}\label{vector_8h_a838510507e7f386e844fd1e5e3ae494a}} 
@@ -7800,17 +8213,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02819}{2819}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02837}{2837}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02819                                            \{}
-\DoxyCodeLine{02820     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02821     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02822         sum += vec-\/>array[i];}
-\DoxyCodeLine{02823     \}}
-\DoxyCodeLine{02824     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02825 \}}
+\DoxyCodeLine{02837                                            \{}
+\DoxyCodeLine{02838     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02839     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02840         sum += vec-\/>array[i];}
+\DoxyCodeLine{02841     \}}
+\DoxyCodeLine{02842     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02843 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_af2ca62fb5fa87cccef8750d24b3979da}\label{vector_8h_af2ca62fb5fa87cccef8750d24b3979da}} 
@@ -7837,17 +8250,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02801}{2801}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02819}{2819}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02801                                     \{}
-\DoxyCodeLine{02802     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02803     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02804         sum += vec-\/>array[i];}
-\DoxyCodeLine{02805     \}}
-\DoxyCodeLine{02806     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02807 \}}
+\DoxyCodeLine{02819                                     \{}
+\DoxyCodeLine{02820     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02821     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02822         sum += vec-\/>array[i];}
+\DoxyCodeLine{02823     \}}
+\DoxyCodeLine{02824     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02825 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a54d410de6d79f482b3d560bcb78fd2ff}\label{vector_8h_a54d410de6d79f482b3d560bcb78fd2ff}} 
@@ -7874,17 +8287,54 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02765}{2765}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02783}{2783}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02765                                        \{}
-\DoxyCodeLine{02766     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02767     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02768         sum += vec-\/>array[i];}
-\DoxyCodeLine{02769     \}}
-\DoxyCodeLine{02770     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02771 \}}
+\DoxyCodeLine{02783                                        \{}
+\DoxyCodeLine{02784     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02785     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02786         sum += vec-\/>array[i];}
+\DoxyCodeLine{02787     \}}
+\DoxyCodeLine{02788     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02789 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8h_a643cb8d97c368f436a0010dacfca2401}\label{vector_8h_a643cb8d97c368f436a0010dacfca2401}} 
+\index{vector.h@{vector.h}!sum\_uchar\_vector@{sum\_uchar\_vector}}
+\index{sum\_uchar\_vector@{sum\_uchar\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{sum\_uchar\_vector()}{sum\_uchar\_vector()}}
+{\footnotesize\ttfamily unsigned char sum\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will calculate the sum of the values in a vector data structure of type Short
+
+/param vec A vector data structure of type Short
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UChar vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(vec, 5);}
+\DoxyCodeLine{unsgined \textcolor{keywordtype}{char} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} sum\_value = \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\_uchar\_vector}}(vec);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> 15}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l02774}{2774}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{02774                                            \{}
+\DoxyCodeLine{02775     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} sum = 0;}
+\DoxyCodeLine{02776     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02777         sum += vec-\/>array[i];}
+\DoxyCodeLine{02778     \}}
+\DoxyCodeLine{02779     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02780 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a791fe9c8f9bd1d04158b01c3aa022edd}\label{vector_8h_a791fe9c8f9bd1d04158b01c3aa022edd}} 
@@ -7911,17 +8361,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02792}{2792}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02810}{2810}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02792                                         \{}
-\DoxyCodeLine{02793     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02794     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02795         sum += vec-\/>array[i];}
-\DoxyCodeLine{02796     \}}
-\DoxyCodeLine{02797     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02798 \}}
+\DoxyCodeLine{02810                                         \{}
+\DoxyCodeLine{02811     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02812     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02813         sum += vec-\/>array[i];}
+\DoxyCodeLine{02814     \}}
+\DoxyCodeLine{02815     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02816 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_af1cc1dfd0470ab00fc1537ebcbb5c089}\label{vector_8h_af1cc1dfd0470ab00fc1537ebcbb5c089}} 
@@ -7948,17 +8398,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02828}{2828}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02846}{2846}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02828                                                       \{}
-\DoxyCodeLine{02829     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02830     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02831         sum += vec-\/>array[i];}
-\DoxyCodeLine{02832     \}}
-\DoxyCodeLine{02833     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02834 \}}
+\DoxyCodeLine{02846                                                       \{}
+\DoxyCodeLine{02847     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02848     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02849         sum += vec-\/>array[i];}
+\DoxyCodeLine{02850     \}}
+\DoxyCodeLine{02851     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02852 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a3233da20e23c20659dd5aba81307b58d}\label{vector_8h_a3233da20e23c20659dd5aba81307b58d}} 
@@ -7985,17 +8435,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02810}{2810}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02828}{2828}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02810                                                \{}
-\DoxyCodeLine{02811     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02812     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02813         sum += vec-\/>array[i];}
-\DoxyCodeLine{02814     \}}
-\DoxyCodeLine{02815     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02816 \}}
+\DoxyCodeLine{02828                                                \{}
+\DoxyCodeLine{02829     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02830     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02831         sum += vec-\/>array[i];}
+\DoxyCodeLine{02832     \}}
+\DoxyCodeLine{02833     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02834 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a67f48de636722d00447f21d5040f8d81}\label{vector_8h_a67f48de636722d00447f21d5040f8d81}} 
@@ -8022,17 +8472,17 @@ This function will calculate the sum of the values in a vector data structure of
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l02774}{2774}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l02792}{2792}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{02774                                                   \{}
-\DoxyCodeLine{02775     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
-\DoxyCodeLine{02776     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
-\DoxyCodeLine{02777         sum += vec-\/>array[i];}
-\DoxyCodeLine{02778     \}}
-\DoxyCodeLine{02779     \textcolor{keywordflow}{return} sum;}
-\DoxyCodeLine{02780 \}}
+\DoxyCodeLine{02792                                                   \{}
+\DoxyCodeLine{02793     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{02794     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{02795         sum += vec-\/>array[i];}
+\DoxyCodeLine{02796     \}}
+\DoxyCodeLine{02797     \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{02798 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a2543513836c5661ccdd157851a7088b8}\label{vector_8h_a2543513836c5661ccdd157851a7088b8}} 

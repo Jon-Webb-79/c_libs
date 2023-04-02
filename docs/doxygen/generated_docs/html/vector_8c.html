@@ -399,6 +399,10 @@ Functions</h2></td></tr>
 <tr class="separator:aff059eec91dab02d46903ebe9591e061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aead9f94df495db661d185ef0363ec1d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#aead9f94df495db661d185ef0363ec1d6">sort_string_vector</a> (<a class="el" href="structString.html">String</a> *vec, size_t low, size_t high, <a class="el" href="vector_8h.html#af40f59df20b550c793c470752e457636">sort_order</a> order)</td></tr>
 <tr class="separator:aead9f94df495db661d185ef0363ec1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0684e2f1aee143f1769dd8ff908c852c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a0684e2f1aee143f1769dd8ff908c852c">sum_char_vector</a> (Char *vec)</td></tr>
+<tr class="separator:a0684e2f1aee143f1769dd8ff908c852c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643cb8d97c368f436a0010dacfca2401"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a643cb8d97c368f436a0010dacfca2401">sum_uchar_vector</a> (UChar *vec)</td></tr>
+<tr class="separator:a643cb8d97c368f436a0010dacfca2401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54d410de6d79f482b3d560bcb78fd2ff"><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a54d410de6d79f482b3d560bcb78fd2ff">sum_short_vector</a> (Short *vec)</td></tr>
 <tr class="separator:a54d410de6d79f482b3d560bcb78fd2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f48de636722d00447f21d5040f8d81"><td class="memItemLeft" align="right" valign="top">unsigned short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a67f48de636722d00447f21d5040f8d81">sum_ushort_vector</a> (UShort *vec)</td></tr>
@@ -421,6 +425,10 @@ Functions</h2></td></tr>
 <tr class="separator:a98a70f4f173d451a1ff5357f4779289d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2df2f0fe19814004ab61a91521d7b21"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#af2df2f0fe19814004ab61a91521d7b21">sum_ldouble_vector</a> (LDble *vec)</td></tr>
 <tr class="separator:af2df2f0fe19814004ab61a91521d7b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877296aab1e625bc7b103322f6b93b14"><td class="memItemLeft" align="right" valign="top">Char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a877296aab1e625bc7b103322f6b93b14">cumsum_char_vector</a> (Char *vec)</td></tr>
+<tr class="separator:a877296aab1e625bc7b103322f6b93b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2850df1b78d17fd2e45847e8bf1e51c2"><td class="memItemLeft" align="right" valign="top">UChar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a2850df1b78d17fd2e45847e8bf1e51c2">cumsum_uchar_vector</a> (UChar *vec)</td></tr>
+<tr class="separator:a2850df1b78d17fd2e45847e8bf1e51c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a588f2bea0a2ac3d8bf87184d873a2804"><td class="memItemLeft" align="right" valign="top">Short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a588f2bea0a2ac3d8bf87184d873a2804">cumsum_short_vector</a> (Short *vec)</td></tr>
 <tr class="separator:a588f2bea0a2ac3d8bf87184d873a2804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94f7fe260f499b1a18150332e1a0e427"><td class="memItemLeft" align="right" valign="top">UShort&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8c.html#a94f7fe260f499b1a18150332e1a0e427">cumsum_ushort_vector</a> (UShort *vec)</td></tr>
@@ -445,6 +453,53 @@ Functions</h2></td></tr>
 <tr class="separator:ae0f64fd00879ff39b5ffbca0e80c197b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a877296aab1e625bc7b103322f6b93b14" name="a877296aab1e625bc7b103322f6b93b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877296aab1e625bc7b103322f6b93b14">&#9670;&nbsp;</a></span>cumsum_char_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Char cumsum_char_vector </td>
+          <td>(</td>
+          <td class="paramtype">Char *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return an Char vector container that holds an array containing the cumulative sum of the values in the input array</p>
+<p >/param vec A vector container of type Char /return return_vec A vector container of type Char</p>
+<div class="fragment"><div class="line">Char vec;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a>(&amp;vec, 5);</div>
+<div class="line"><span class="keywordtype">char</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a>(&amp;vec, a, 5, 0);</div>
+<div class="line">Char cum_vec = <a class="code hl_function" href="vector_8c.html#a877296aab1e625bc7b103322f6b93b14">cumsum_char_vector</a>(&amp;vec);</div>
+<div class="line">PRINT(vum_vec);</div>
+<div class="line">[ 1, 3, 6, 10, 15 ]</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a>(&amp;vec);</div>
+<div class="ttc" id="avector_8c_html_a877296aab1e625bc7b103322f6b93b14"><div class="ttname"><a href="vector_8c.html#a877296aab1e625bc7b103322f6b93b14">cumsum_char_vector</a></div><div class="ttdeci">Char cumsum_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02884">vector.c:2884</a></div></div>
+<div class="ttc" id="avector_8c_html_a9e9db9d87d5a9f3bb6dae1ba5668ef12"><div class="ttname"><a href="vector_8c.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a></div><div class="ttdeci">int insert_char_vector(Char *vec, char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01196">vector.c:1196</a></div></div>
+<div class="ttc" id="avector_8c_html_aecde718777430d31ec254f8a4f40cce0"><div class="ttname"><a href="vector_8c.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a></div><div class="ttdeci">int init_char_vector(Char *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00182">vector.c:182</a></div></div>
+<div class="ttc" id="avector_8c_html_afef1cb622b3f54256849a3b5446a7af4"><div class="ttname"><a href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a></div><div class="ttdeci">void free_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01768">vector.c:1768</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02884">2884</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2884</span>                                   {</div>
+<div class="line"><span class="lineno"> 2885</span>    Char new_vec;</div>
+<div class="line"><span class="lineno"> 2886</span>    <a class="code hl_function" href="vector_8c.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2887</span>    <span class="keywordtype">char</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2888</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2889</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2890</span>        <a class="code hl_function" href="vector_8c.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2891</span>    }</div>
+<div class="line"><span class="lineno"> 2892</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2893</span>}</div>
+<div class="ttc" id="avector_8c_html_ab4f076e9a6e7d0795c2c3a0216c5c97e"><div class="ttname"><a href="vector_8c.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector</a></div><div class="ttdeci">int push_char_vector(Char *vec, char value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00712">vector.c:712</a></div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="vector_8c.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector()</a>, and <a class="el" href="vector_8c.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector()</a>.</p>
+
+</div>
+</div>
 <a id="ae8512eab3bf15409bda6bce1d6ec0380" name="ae8512eab3bf15409bda6bce1d6ec0380"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8512eab3bf15409bda6bce1d6ec0380">&#9670;&nbsp;</a></span>cumsum_double_vector()</h2>
 
@@ -472,20 +527,20 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a0d9577d0256e0e006d1c55a12ba1bffd">free_double_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a0d9577d0256e0e006d1c55a12ba1bffd"><div class="ttname"><a href="vector_8c.html#a0d9577d0256e0e006d1c55a12ba1bffd">free_double_vector</a></div><div class="ttdeci">void free_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01742">vector.c:1742</a></div></div>
 <div class="ttc" id="avector_8c_html_a2c0735f69da8e40535b5ecceace1a399"><div class="ttname"><a href="vector_8c.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a></div><div class="ttdeci">int init_double_vector(Dble *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00152">vector.c:152</a></div></div>
-<div class="ttc" id="avector_8c_html_ae8512eab3bf15409bda6bce1d6ec0380"><div class="ttname"><a href="vector_8c.html#ae8512eab3bf15409bda6bce1d6ec0380">cumsum_double_vector</a></div><div class="ttdeci">Dble cumsum_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02974">vector.c:2974</a></div></div>
+<div class="ttc" id="avector_8c_html_ae8512eab3bf15409bda6bce1d6ec0380"><div class="ttname"><a href="vector_8c.html#ae8512eab3bf15409bda6bce1d6ec0380">cumsum_double_vector</a></div><div class="ttdeci">Dble cumsum_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03016">vector.c:3016</a></div></div>
 <div class="ttc" id="avector_8c_html_af1e86e2b45b0339cc18ba5b35bf01132"><div class="ttname"><a href="vector_8c.html#af1e86e2b45b0339cc18ba5b35bf01132">insert_double_vector</a></div><div class="ttdeci">int insert_double_vector(Dble *vec, double *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01124">vector.c:1124</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02974">2974</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2974</span>                                     {</div>
-<div class="line"><span class="lineno"> 2975</span>    Dble new_vec;</div>
-<div class="line"><span class="lineno"> 2976</span>    <a class="code hl_function" href="vector_8c.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2977</span>    <span class="keywordtype">double</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2978</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2979</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2980</span>        <a class="code hl_function" href="vector_8c.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2981</span>    }</div>
-<div class="line"><span class="lineno"> 2982</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2983</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l03016">3016</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3016</span>                                     {</div>
+<div class="line"><span class="lineno"> 3017</span>    Dble new_vec;</div>
+<div class="line"><span class="lineno"> 3018</span>    <a class="code hl_function" href="vector_8c.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 3019</span>    <span class="keywordtype">double</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 3020</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 3021</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 3022</span>        <a class="code hl_function" href="vector_8c.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 3023</span>    }</div>
+<div class="line"><span class="lineno"> 3024</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 3025</span>}</div>
 <div class="ttc" id="avector_8c_html_ab312c467d82a0fccc66cbb89a6b8de5c"><div class="ttname"><a href="vector_8c.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector</a></div><div class="ttdeci">int push_double_vector(Dble *vec, double value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00646">vector.c:646</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a2c0735f69da8e40535b5ecceace1a399">init_double_vector()</a>, and <a class="el" href="vector_8c.html#ab312c467d82a0fccc66cbb89a6b8de5c">push_double_vector()</a>.</p>
@@ -519,20 +574,20 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#aa0efda9f361b9e9219f5afc379c7e6cc">free_float_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a17ee89c38df38d9d1d5b0cb2e33266d1"><div class="ttname"><a href="vector_8c.html#a17ee89c38df38d9d1d5b0cb2e33266d1">insert_float_vector</a></div><div class="ttdeci">int insert_float_vector(Flt *vec, float *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01088">vector.c:1088</a></div></div>
 <div class="ttc" id="avector_8c_html_a92bba70874a1570bd9c87a2a7385af35"><div class="ttname"><a href="vector_8c.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a></div><div class="ttdeci">int init_float_vector(Flt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00137">vector.c:137</a></div></div>
-<div class="ttc" id="avector_8c_html_a9ddb912a129b46a9a2f2d147b4a1ddc8"><div class="ttname"><a href="vector_8c.html#a9ddb912a129b46a9a2f2d147b4a1ddc8">cumsum_float_vector</a></div><div class="ttdeci">Flt cumsum_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02962">vector.c:2962</a></div></div>
+<div class="ttc" id="avector_8c_html_a9ddb912a129b46a9a2f2d147b4a1ddc8"><div class="ttname"><a href="vector_8c.html#a9ddb912a129b46a9a2f2d147b4a1ddc8">cumsum_float_vector</a></div><div class="ttdeci">Flt cumsum_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03004">vector.c:3004</a></div></div>
 <div class="ttc" id="avector_8c_html_aa0efda9f361b9e9219f5afc379c7e6cc"><div class="ttname"><a href="vector_8c.html#aa0efda9f361b9e9219f5afc379c7e6cc">free_float_vector</a></div><div class="ttdeci">void free_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01729">vector.c:1729</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02962">2962</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2962</span>                                  {</div>
-<div class="line"><span class="lineno"> 2963</span>    Flt new_vec;</div>
-<div class="line"><span class="lineno"> 2964</span>    <a class="code hl_function" href="vector_8c.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2965</span>    <span class="keywordtype">float</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2966</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2967</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2968</span>        <a class="code hl_function" href="vector_8c.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2969</span>    }</div>
-<div class="line"><span class="lineno"> 2970</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2971</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l03004">3004</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3004</span>                                  {</div>
+<div class="line"><span class="lineno"> 3005</span>    Flt new_vec;</div>
+<div class="line"><span class="lineno"> 3006</span>    <a class="code hl_function" href="vector_8c.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 3007</span>    <span class="keywordtype">float</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 3008</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 3009</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 3010</span>        <a class="code hl_function" href="vector_8c.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 3011</span>    }</div>
+<div class="line"><span class="lineno"> 3012</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 3013</span>}</div>
 <div class="ttc" id="avector_8c_html_a31e02f437f4f9f43d1126e017ae1cac3"><div class="ttname"><a href="vector_8c.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector</a></div><div class="ttdeci">int push_float_vector(Flt *vec, float value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00613">vector.c:613</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a92bba70874a1570bd9c87a2a7385af35">init_float_vector()</a>, and <a class="el" href="vector_8c.html#a31e02f437f4f9f43d1126e017ae1cac3">push_float_vector()</a>.</p>
@@ -567,19 +622,19 @@ Functions</h2></td></tr>
 <div class="ttc" id="avector_8c_html_a0acf8b86d4a95be517c7af80f8eff4ac"><div class="ttname"><a href="vector_8c.html#a0acf8b86d4a95be517c7af80f8eff4ac">insert_int_vector</a></div><div class="ttdeci">int insert_int_vector(Int *vec, int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00872">vector.c:872</a></div></div>
 <div class="ttc" id="avector_8c_html_a9fdb6c5fdd9f0d5a3bfb751f9e82968e"><div class="ttname"><a href="vector_8c.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a></div><div class="ttdeci">int init_int_vector(Int *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00048">vector.c:48</a></div></div>
 <div class="ttc" id="avector_8c_html_ab2c13b705440e4d4d53825bb16929ff6"><div class="ttname"><a href="vector_8c.html#ab2c13b705440e4d4d53825bb16929ff6">free_int_vector</a></div><div class="ttdeci">void free_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01651">vector.c:1651</a></div></div>
-<div class="ttc" id="avector_8c_html_acaf8f7f369483e4dcb9a7af53e79492c"><div class="ttname"><a href="vector_8c.html#acaf8f7f369483e4dcb9a7af53e79492c">cumsum_int_vector</a></div><div class="ttdeci">Int cumsum_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02890">vector.c:2890</a></div></div>
+<div class="ttc" id="avector_8c_html_acaf8f7f369483e4dcb9a7af53e79492c"><div class="ttname"><a href="vector_8c.html#acaf8f7f369483e4dcb9a7af53e79492c">cumsum_int_vector</a></div><div class="ttdeci">Int cumsum_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02932">vector.c:2932</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02890">2890</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2890</span>                                {</div>
-<div class="line"><span class="lineno"> 2891</span>    Int new_vec;</div>
-<div class="line"><span class="lineno"> 2892</span>    <a class="code hl_function" href="vector_8c.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2893</span>    <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2894</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2895</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2896</span>        <a class="code hl_function" href="vector_8c.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2897</span>    }</div>
-<div class="line"><span class="lineno"> 2898</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2899</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02932">2932</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2932</span>                                {</div>
+<div class="line"><span class="lineno"> 2933</span>    Int new_vec;</div>
+<div class="line"><span class="lineno"> 2934</span>    <a class="code hl_function" href="vector_8c.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2935</span>    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2936</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2937</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2938</span>        <a class="code hl_function" href="vector_8c.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2939</span>    }</div>
+<div class="line"><span class="lineno"> 2940</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2941</span>}</div>
 <div class="ttc" id="avector_8c_html_a6baf75dc56de293f3dbdc8ac40934980"><div class="ttname"><a href="vector_8c.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector</a></div><div class="ttdeci">int push_int_vector(Int *vec, int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00415">vector.c:415</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a9fdb6c5fdd9f0d5a3bfb751f9e82968e">init_int_vector()</a>, and <a class="el" href="vector_8c.html#a6baf75dc56de293f3dbdc8ac40934980">push_int_vector()</a>.</p>
@@ -614,19 +669,19 @@ Functions</h2></td></tr>
 <div class="ttc" id="avector_8c_html_a0ec3e3b802f62c5f9cdd9b7d197bd4a1"><div class="ttname"><a href="vector_8c.html#a0ec3e3b802f62c5f9cdd9b7d197bd4a1">insert_ldouble_vector</a></div><div class="ttdeci">int insert_ldouble_vector(LDble *vec, long double *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01160">vector.c:1160</a></div></div>
 <div class="ttc" id="avector_8c_html_a79d9f9d1d1cb31d09620bc5cdc73e94e"><div class="ttname"><a href="vector_8c.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a></div><div class="ttdeci">int init_ldouble_vector(LDble *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00167">vector.c:167</a></div></div>
 <div class="ttc" id="avector_8c_html_a89e6af78e123543fefe3333963de0e83"><div class="ttname"><a href="vector_8c.html#a89e6af78e123543fefe3333963de0e83">free_ldouble_vector</a></div><div class="ttdeci">void free_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01755">vector.c:1755</a></div></div>
-<div class="ttc" id="avector_8c_html_ae0f64fd00879ff39b5ffbca0e80c197b"><div class="ttname"><a href="vector_8c.html#ae0f64fd00879ff39b5ffbca0e80c197b">cumsum_ldouble_vector</a></div><div class="ttdeci">LDble cumsum_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02986">vector.c:2986</a></div></div>
+<div class="ttc" id="avector_8c_html_ae0f64fd00879ff39b5ffbca0e80c197b"><div class="ttname"><a href="vector_8c.html#ae0f64fd00879ff39b5ffbca0e80c197b">cumsum_ldouble_vector</a></div><div class="ttdeci">LDble cumsum_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03028">vector.c:3028</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02986">2986</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2986</span>                                        {</div>
-<div class="line"><span class="lineno"> 2987</span>    LDble new_vec;</div>
-<div class="line"><span class="lineno"> 2988</span>    <a class="code hl_function" href="vector_8c.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2989</span>    <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2990</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2991</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2992</span>        <a class="code hl_function" href="vector_8c.html#ad001560a2793c40efb1c64532cefe2e2">push_ldouble_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2993</span>    }</div>
-<div class="line"><span class="lineno"> 2994</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2995</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l03028">3028</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3028</span>                                        {</div>
+<div class="line"><span class="lineno"> 3029</span>    LDble new_vec;</div>
+<div class="line"><span class="lineno"> 3030</span>    <a class="code hl_function" href="vector_8c.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 3031</span>    <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 3032</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 3033</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 3034</span>        <a class="code hl_function" href="vector_8c.html#ad001560a2793c40efb1c64532cefe2e2">push_ldouble_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 3035</span>    }</div>
+<div class="line"><span class="lineno"> 3036</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 3037</span>}</div>
 <div class="ttc" id="avector_8c_html_ad001560a2793c40efb1c64532cefe2e2"><div class="ttname"><a href="vector_8c.html#ad001560a2793c40efb1c64532cefe2e2">push_ldouble_vector</a></div><div class="ttdeci">int push_ldouble_vector(LDble *vec, long double value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00679">vector.c:679</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a79d9f9d1d1cb31d09620bc5cdc73e94e">init_ldouble_vector()</a>, and <a class="el" href="vector_8c.html#ad001560a2793c40efb1c64532cefe2e2">push_ldouble_vector()</a>.</p>
@@ -658,22 +713,22 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vum_vec);</div>
 <div class="line">[ 1, 3, 6, 10, 15 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#af92bc034e6f34814eea1008629f41ef9">free_llong_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a531b30e8b67bc20cad9865cc3d8afe50"><div class="ttname"><a href="vector_8c.html#a531b30e8b67bc20cad9865cc3d8afe50">cumsum_llong_vector</a></div><div class="ttdeci">LLInt cumsum_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02938">vector.c:2938</a></div></div>
+<div class="ttc" id="avector_8c_html_a531b30e8b67bc20cad9865cc3d8afe50"><div class="ttname"><a href="vector_8c.html#a531b30e8b67bc20cad9865cc3d8afe50">cumsum_llong_vector</a></div><div class="ttdeci">LLInt cumsum_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02980">vector.c:2980</a></div></div>
 <div class="ttc" id="avector_8c_html_a65eda538d3c07a8beb1475c1a214ff67"><div class="ttname"><a href="vector_8c.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a></div><div class="ttdeci">int init_llong_vector(LLInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00107">vector.c:107</a></div></div>
 <div class="ttc" id="avector_8c_html_a9817d90055331624db7529c5d74a80ad"><div class="ttname"><a href="vector_8c.html#a9817d90055331624db7529c5d74a80ad">insert_llong_vector</a></div><div class="ttdeci">int insert_llong_vector(LLInt *vec, long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01016">vector.c:1016</a></div></div>
 <div class="ttc" id="avector_8c_html_af92bc034e6f34814eea1008629f41ef9"><div class="ttname"><a href="vector_8c.html#af92bc034e6f34814eea1008629f41ef9">free_llong_vector</a></div><div class="ttdeci">void free_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01703">vector.c:1703</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02938">2938</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2938</span>                                      {</div>
-<div class="line"><span class="lineno"> 2939</span>    LLInt new_vec;</div>
-<div class="line"><span class="lineno"> 2940</span>    <a class="code hl_function" href="vector_8c.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2941</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2942</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2943</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2944</span>        <a class="code hl_function" href="vector_8c.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2945</span>    }</div>
-<div class="line"><span class="lineno"> 2946</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2947</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02980">2980</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2980</span>                                      {</div>
+<div class="line"><span class="lineno"> 2981</span>    LLInt new_vec;</div>
+<div class="line"><span class="lineno"> 2982</span>    <a class="code hl_function" href="vector_8c.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2983</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2984</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2985</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2986</span>        <a class="code hl_function" href="vector_8c.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2987</span>    }</div>
+<div class="line"><span class="lineno"> 2988</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2989</span>}</div>
 <div class="ttc" id="avector_8c_html_a93f7e28f97718d9d7c5c84df61c1466c"><div class="ttname"><a href="vector_8c.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector</a></div><div class="ttdeci">int push_llong_vector(LLInt *vec, long long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00547">vector.c:547</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a65eda538d3c07a8beb1475c1a214ff67">init_llong_vector()</a>, and <a class="el" href="vector_8c.html#a93f7e28f97718d9d7c5c84df61c1466c">push_llong_vector()</a>.</p>
@@ -705,22 +760,22 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vum_vec);</div>
 <div class="line">[ 1, 3, 6, 10, 15 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#af1ab528ebf7f47a278e3be3b02e9acee">free_long_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_aacdbfadbd42e44ba909b315b43152012"><div class="ttname"><a href="vector_8c.html#aacdbfadbd42e44ba909b315b43152012">cumsum_long_vector</a></div><div class="ttdeci">LInt cumsum_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02914">vector.c:2914</a></div></div>
+<div class="ttc" id="avector_8c_html_aacdbfadbd42e44ba909b315b43152012"><div class="ttname"><a href="vector_8c.html#aacdbfadbd42e44ba909b315b43152012">cumsum_long_vector</a></div><div class="ttdeci">LInt cumsum_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02956">vector.c:2956</a></div></div>
 <div class="ttc" id="avector_8c_html_ab5d840518e5e7bbd9ed243681b7124f7"><div class="ttname"><a href="vector_8c.html#ab5d840518e5e7bbd9ed243681b7124f7">insert_long_vector</a></div><div class="ttdeci">int insert_long_vector(LInt *vec, long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00944">vector.c:944</a></div></div>
 <div class="ttc" id="avector_8c_html_ac59c5fed0f4cd6b9aaf4c87b7a997bd3"><div class="ttname"><a href="vector_8c.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a></div><div class="ttdeci">int init_long_vector(LInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00078">vector.c:78</a></div></div>
 <div class="ttc" id="avector_8c_html_af1ab528ebf7f47a278e3be3b02e9acee"><div class="ttname"><a href="vector_8c.html#af1ab528ebf7f47a278e3be3b02e9acee">free_long_vector</a></div><div class="ttdeci">void free_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01677">vector.c:1677</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02914">2914</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2914</span>                                   {</div>
-<div class="line"><span class="lineno"> 2915</span>    LInt new_vec;</div>
-<div class="line"><span class="lineno"> 2916</span>    <a class="code hl_function" href="vector_8c.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2917</span>    <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2918</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2919</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2920</span>        <a class="code hl_function" href="vector_8c.html#a6135368684b7d740482cfc775417f255">push_long_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2921</span>    }</div>
-<div class="line"><span class="lineno"> 2922</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2923</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02956">2956</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2956</span>                                   {</div>
+<div class="line"><span class="lineno"> 2957</span>    LInt new_vec;</div>
+<div class="line"><span class="lineno"> 2958</span>    <a class="code hl_function" href="vector_8c.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2959</span>    <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2960</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2961</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2962</span>        <a class="code hl_function" href="vector_8c.html#a6135368684b7d740482cfc775417f255">push_long_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2963</span>    }</div>
+<div class="line"><span class="lineno"> 2964</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2965</span>}</div>
 <div class="ttc" id="avector_8c_html_a6135368684b7d740482cfc775417f255"><div class="ttname"><a href="vector_8c.html#a6135368684b7d740482cfc775417f255">push_long_vector</a></div><div class="ttdeci">int push_long_vector(LInt *vec, long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00481">vector.c:481</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#ac59c5fed0f4cd6b9aaf4c87b7a997bd3">init_long_vector()</a>, and <a class="el" href="vector_8c.html#a6135368684b7d740482cfc775417f255">push_long_vector()</a>.</p>
@@ -753,24 +808,71 @@ Functions</h2></td></tr>
 <div class="line">[ 1, 3, 6, 10, 15 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8a383d2299a326d3c0ded94c19d73393">free_short_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a2ed595a869e30a4c834c1d2cf5b934ee"><div class="ttname"><a href="vector_8c.html#a2ed595a869e30a4c834c1d2cf5b934ee">insert_short_vector</a></div><div class="ttdeci">int insert_short_vector(Short *vec, short int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00800">vector.c:800</a></div></div>
-<div class="ttc" id="avector_8c_html_a588f2bea0a2ac3d8bf87184d873a2804"><div class="ttname"><a href="vector_8c.html#a588f2bea0a2ac3d8bf87184d873a2804">cumsum_short_vector</a></div><div class="ttdeci">Short cumsum_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02866">vector.c:2866</a></div></div>
+<div class="ttc" id="avector_8c_html_a588f2bea0a2ac3d8bf87184d873a2804"><div class="ttname"><a href="vector_8c.html#a588f2bea0a2ac3d8bf87184d873a2804">cumsum_short_vector</a></div><div class="ttdeci">Short cumsum_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02908">vector.c:2908</a></div></div>
 <div class="ttc" id="avector_8c_html_a749211e8a46a8b2297b3c6ebb78aed0e"><div class="ttname"><a href="vector_8c.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a></div><div class="ttdeci">int init_short_vector(Short *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00018">vector.c:18</a></div></div>
 <div class="ttc" id="avector_8c_html_a8a383d2299a326d3c0ded94c19d73393"><div class="ttname"><a href="vector_8c.html#a8a383d2299a326d3c0ded94c19d73393">free_short_vector</a></div><div class="ttdeci">void free_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01625">vector.c:1625</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02866">2866</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2866</span>                                      {</div>
-<div class="line"><span class="lineno"> 2867</span>    Short new_vec;</div>
-<div class="line"><span class="lineno"> 2868</span>    <a class="code hl_function" href="vector_8c.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2869</span>    <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2870</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2871</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2872</span>        <a class="code hl_function" href="vector_8c.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2873</span>    }</div>
-<div class="line"><span class="lineno"> 2874</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2875</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02908">2908</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2908</span>                                      {</div>
+<div class="line"><span class="lineno"> 2909</span>    Short new_vec;</div>
+<div class="line"><span class="lineno"> 2910</span>    <a class="code hl_function" href="vector_8c.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2911</span>    <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2912</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2913</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2914</span>        <a class="code hl_function" href="vector_8c.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2915</span>    }</div>
+<div class="line"><span class="lineno"> 2916</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2917</span>}</div>
 <div class="ttc" id="avector_8c_html_a38068c17aa5cf7286175572d43219b8d"><div class="ttname"><a href="vector_8c.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector</a></div><div class="ttdeci">int push_short_vector(Short *vec, short int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00349">vector.c:349</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector()</a>, and <a class="el" href="vector_8c.html#a38068c17aa5cf7286175572d43219b8d">push_short_vector()</a>.</p>
+
+</div>
+</div>
+<a id="a2850df1b78d17fd2e45847e8bf1e51c2" name="a2850df1b78d17fd2e45847e8bf1e51c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2850df1b78d17fd2e45847e8bf1e51c2">&#9670;&nbsp;</a></span>cumsum_uchar_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UChar cumsum_uchar_vector </td>
+          <td>(</td>
+          <td class="paramtype">UChar *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will return an UChar vector container that holds an array containing the cumulative sum of the values in the input array</p>
+<p >/param vec A vector container of type UChar /return return_vec A vector container of type UChar</p>
+<div class="fragment"><div class="line">UChar vec;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a>(&amp;vec, 5);</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#ae5b1c45f4d2083c6d87f217646609a2d">insert_uchar_vector</a>(&amp;vec, a, 5, 0);</div>
+<div class="line">UChar cum_vec = <a class="code hl_function" href="vector_8c.html#a2850df1b78d17fd2e45847e8bf1e51c2">cumsum_uchar_vector</a>(&amp;vec);</div>
+<div class="line">PRINT(vum_vec);</div>
+<div class="line">[ 1, 3, 6, 10, 15 ]</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a>(&amp;vec);</div>
+<div class="ttc" id="avector_8c_html_a2850df1b78d17fd2e45847e8bf1e51c2"><div class="ttname"><a href="vector_8c.html#a2850df1b78d17fd2e45847e8bf1e51c2">cumsum_uchar_vector</a></div><div class="ttdeci">UChar cumsum_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02896">vector.c:2896</a></div></div>
+<div class="ttc" id="avector_8c_html_a9289ec52674f95ebf45ac81b70dfdc67"><div class="ttname"><a href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a></div><div class="ttdeci">int init_uchar_vector(UChar *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00197">vector.c:197</a></div></div>
+<div class="ttc" id="avector_8c_html_a9f3fcb3deda563d834c9d3d13f097268"><div class="ttname"><a href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a></div><div class="ttdeci">void free_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01781">vector.c:1781</a></div></div>
+<div class="ttc" id="avector_8c_html_ae5b1c45f4d2083c6d87f217646609a2d"><div class="ttname"><a href="vector_8c.html#ae5b1c45f4d2083c6d87f217646609a2d">insert_uchar_vector</a></div><div class="ttdeci">int insert_uchar_vector(UChar *vec, unsigned char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01232">vector.c:1232</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02896">2896</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2896</span>                                      {</div>
+<div class="line"><span class="lineno"> 2897</span>    UChar new_vec;</div>
+<div class="line"><span class="lineno"> 2898</span>    <a class="code hl_function" href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2899</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2900</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2901</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2902</span>        <a class="code hl_function" href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">push_uchar_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2903</span>    }</div>
+<div class="line"><span class="lineno"> 2904</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2905</span>}</div>
+<div class="ttc" id="avector_8h_html_acc6fd3b434ba25d3473adff60160500b"><div class="ttname"><a href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">push_uchar_vector</a></div><div class="ttdeci">int push_uchar_vector(UChar *vec, unsigned char value, size_t index)</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector()</a>, and <a class="el" href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">push_uchar_vector()</a>.</p>
 
 </div>
 </div>
@@ -801,20 +903,20 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a6195f400606be104b4461cd9876f93ce">free_uint_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a6195f400606be104b4461cd9876f93ce"><div class="ttname"><a href="vector_8c.html#a6195f400606be104b4461cd9876f93ce">free_uint_vector</a></div><div class="ttdeci">void free_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01664">vector.c:1664</a></div></div>
 <div class="ttc" id="avector_8c_html_a9d8eb1d9ce65365d7b044fe684387a3f"><div class="ttname"><a href="vector_8c.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a></div><div class="ttdeci">int init_uint_vector(UInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00063">vector.c:63</a></div></div>
-<div class="ttc" id="avector_8c_html_abe44138d94c38f7d65d62f63dddf668b"><div class="ttname"><a href="vector_8c.html#abe44138d94c38f7d65d62f63dddf668b">cumsum_uint_vector</a></div><div class="ttdeci">UInt cumsum_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02902">vector.c:2902</a></div></div>
+<div class="ttc" id="avector_8c_html_abe44138d94c38f7d65d62f63dddf668b"><div class="ttname"><a href="vector_8c.html#abe44138d94c38f7d65d62f63dddf668b">cumsum_uint_vector</a></div><div class="ttdeci">UInt cumsum_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02944">vector.c:2944</a></div></div>
 <div class="ttc" id="avector_8c_html_ad78d40537dece17df4f506fd6ba7dc34"><div class="ttname"><a href="vector_8c.html#ad78d40537dece17df4f506fd6ba7dc34">insert_uint_vector</a></div><div class="ttdeci">int insert_uint_vector(UInt *vec, unsigned int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00908">vector.c:908</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02902">2902</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2902</span>                                   {</div>
-<div class="line"><span class="lineno"> 2903</span>    UInt new_vec;</div>
-<div class="line"><span class="lineno"> 2904</span>    <a class="code hl_function" href="vector_8c.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2905</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2906</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2907</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2908</span>        <a class="code hl_function" href="vector_8c.html#a787fc2bba6112c4ede10d0ec14ab3825">push_uint_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2909</span>    }</div>
-<div class="line"><span class="lineno"> 2910</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2911</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02944">2944</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2944</span>                                   {</div>
+<div class="line"><span class="lineno"> 2945</span>    UInt new_vec;</div>
+<div class="line"><span class="lineno"> 2946</span>    <a class="code hl_function" href="vector_8c.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2947</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2948</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2949</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2950</span>        <a class="code hl_function" href="vector_8c.html#a787fc2bba6112c4ede10d0ec14ab3825">push_uint_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2951</span>    }</div>
+<div class="line"><span class="lineno"> 2952</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2953</span>}</div>
 <div class="ttc" id="avector_8c_html_a787fc2bba6112c4ede10d0ec14ab3825"><div class="ttname"><a href="vector_8c.html#a787fc2bba6112c4ede10d0ec14ab3825">push_uint_vector</a></div><div class="ttdeci">int push_uint_vector(UInt *vec, unsigned int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00448">vector.c:448</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#a9d8eb1d9ce65365d7b044fe684387a3f">init_uint_vector()</a>, and <a class="el" href="vector_8c.html#a787fc2bba6112c4ede10d0ec14ab3825">push_uint_vector()</a>.</p>
@@ -846,22 +948,22 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vum_vec);</div>
 <div class="line">[ 1, 3, 6, 10, 15 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a605f038b309fb25e53f637c9e9b6e4bd">free_ullong_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a07bde722230b2f57f1b14304054d1d6a"><div class="ttname"><a href="vector_8c.html#a07bde722230b2f57f1b14304054d1d6a">cumsum_ullong_vector</a></div><div class="ttdeci">ULLInt cumsum_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02950">vector.c:2950</a></div></div>
+<div class="ttc" id="avector_8c_html_a07bde722230b2f57f1b14304054d1d6a"><div class="ttname"><a href="vector_8c.html#a07bde722230b2f57f1b14304054d1d6a">cumsum_ullong_vector</a></div><div class="ttdeci">ULLInt cumsum_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02992">vector.c:2992</a></div></div>
 <div class="ttc" id="avector_8c_html_a605f038b309fb25e53f637c9e9b6e4bd"><div class="ttname"><a href="vector_8c.html#a605f038b309fb25e53f637c9e9b6e4bd">free_ullong_vector</a></div><div class="ttdeci">void free_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01716">vector.c:1716</a></div></div>
 <div class="ttc" id="avector_8c_html_ab05d31d34c87d8d6cd76f48539bf367f"><div class="ttname"><a href="vector_8c.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a></div><div class="ttdeci">int init_ullong_vector(ULLInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00122">vector.c:122</a></div></div>
 <div class="ttc" id="avector_8c_html_afccda80cf8e96d76846df29a256f6974"><div class="ttname"><a href="vector_8c.html#afccda80cf8e96d76846df29a256f6974">insert_ullong_vector</a></div><div class="ttdeci">int insert_ullong_vector(ULLInt *vec, unsigned long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01052">vector.c:1052</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02950">2950</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2950</span>                                         {</div>
-<div class="line"><span class="lineno"> 2951</span>    ULLInt new_vec;</div>
-<div class="line"><span class="lineno"> 2952</span>    <a class="code hl_function" href="vector_8c.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2953</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2954</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2955</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2956</span>        <a class="code hl_function" href="vector_8c.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2957</span>    }</div>
-<div class="line"><span class="lineno"> 2958</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2959</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02992">2992</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2992</span>                                         {</div>
+<div class="line"><span class="lineno"> 2993</span>    ULLInt new_vec;</div>
+<div class="line"><span class="lineno"> 2994</span>    <a class="code hl_function" href="vector_8c.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2995</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2996</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2997</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2998</span>        <a class="code hl_function" href="vector_8c.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2999</span>    }</div>
+<div class="line"><span class="lineno"> 3000</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 3001</span>}</div>
 <div class="ttc" id="avector_8c_html_a3478a298e62d85cb93f11a78f64d6f80"><div class="ttname"><a href="vector_8c.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector</a></div><div class="ttdeci">int push_ullong_vector(ULLInt *vec, unsigned long long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00580">vector.c:580</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#ab05d31d34c87d8d6cd76f48539bf367f">init_ullong_vector()</a>, and <a class="el" href="vector_8c.html#a3478a298e62d85cb93f11a78f64d6f80">push_ullong_vector()</a>.</p>
@@ -895,20 +997,20 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a9a05407a3434648f10f4416a7874150d">free_ulong_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a9a05407a3434648f10f4416a7874150d"><div class="ttname"><a href="vector_8c.html#a9a05407a3434648f10f4416a7874150d">free_ulong_vector</a></div><div class="ttdeci">void free_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01690">vector.c:1690</a></div></div>
 <div class="ttc" id="avector_8c_html_aa419c32bb276bfe866787e1744669b94"><div class="ttname"><a href="vector_8c.html#aa419c32bb276bfe866787e1744669b94">insert_ulong_vector</a></div><div class="ttdeci">int insert_ulong_vector(ULInt *vec, unsigned long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00980">vector.c:980</a></div></div>
-<div class="ttc" id="avector_8c_html_ae856339059aa7e6f5db1d5bd7de43306"><div class="ttname"><a href="vector_8c.html#ae856339059aa7e6f5db1d5bd7de43306">cumsum_ulong_vector</a></div><div class="ttdeci">ULInt cumsum_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02926">vector.c:2926</a></div></div>
+<div class="ttc" id="avector_8c_html_ae856339059aa7e6f5db1d5bd7de43306"><div class="ttname"><a href="vector_8c.html#ae856339059aa7e6f5db1d5bd7de43306">cumsum_ulong_vector</a></div><div class="ttdeci">ULInt cumsum_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02968">vector.c:2968</a></div></div>
 <div class="ttc" id="avector_8c_html_af08098b392c0ff01db799bff9c83a521"><div class="ttname"><a href="vector_8c.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a></div><div class="ttdeci">int init_ulong_vector(ULInt *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00093">vector.c:93</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02926">2926</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2926</span>                                      {</div>
-<div class="line"><span class="lineno"> 2927</span>    ULInt new_vec;</div>
-<div class="line"><span class="lineno"> 2928</span>    <a class="code hl_function" href="vector_8c.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2929</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2930</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2931</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2932</span>        <a class="code hl_function" href="vector_8c.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2933</span>    }</div>
-<div class="line"><span class="lineno"> 2934</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2935</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02968">2968</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2968</span>                                      {</div>
+<div class="line"><span class="lineno"> 2969</span>    ULInt new_vec;</div>
+<div class="line"><span class="lineno"> 2970</span>    <a class="code hl_function" href="vector_8c.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2971</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2972</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2973</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2974</span>        <a class="code hl_function" href="vector_8c.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2975</span>    }</div>
+<div class="line"><span class="lineno"> 2976</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2977</span>}</div>
 <div class="ttc" id="avector_8c_html_aea5f95b56df2836ee553face60351e61"><div class="ttname"><a href="vector_8c.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a></div><div class="ttdeci">int push_ulong_vector(ULInt *vec, unsigned long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00514">vector.c:514</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#af08098b392c0ff01db799bff9c83a521">init_ulong_vector()</a>, and <a class="el" href="vector_8c.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector()</a>.</p>
@@ -941,21 +1043,21 @@ Functions</h2></td></tr>
 <div class="line">[ 1, 3, 6, 10, 15 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3765cd4f6e59bada679e05ea6dacfff5">free_ushort_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a3765cd4f6e59bada679e05ea6dacfff5"><div class="ttname"><a href="vector_8c.html#a3765cd4f6e59bada679e05ea6dacfff5">free_ushort_vector</a></div><div class="ttdeci">void free_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01638">vector.c:1638</a></div></div>
-<div class="ttc" id="avector_8c_html_a94f7fe260f499b1a18150332e1a0e427"><div class="ttname"><a href="vector_8c.html#a94f7fe260f499b1a18150332e1a0e427">cumsum_ushort_vector</a></div><div class="ttdeci">UShort cumsum_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02878">vector.c:2878</a></div></div>
+<div class="ttc" id="avector_8c_html_a94f7fe260f499b1a18150332e1a0e427"><div class="ttname"><a href="vector_8c.html#a94f7fe260f499b1a18150332e1a0e427">cumsum_ushort_vector</a></div><div class="ttdeci">UShort cumsum_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02920">vector.c:2920</a></div></div>
 <div class="ttc" id="avector_8c_html_aa63398bdb55f97b891b93404a89de14d"><div class="ttname"><a href="vector_8c.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a></div><div class="ttdeci">int init_ushort_vector(UShort *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00033">vector.c:33</a></div></div>
 <div class="ttc" id="avector_8c_html_aa8495c3a316b6d93c8697d194c86fc2b"><div class="ttname"><a href="vector_8c.html#aa8495c3a316b6d93c8697d194c86fc2b">insert_ushort_vector</a></div><div class="ttdeci">int insert_ushort_vector(UShort *vec, unsigned short int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00836">vector.c:836</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02878">2878</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2878</span>                                         {</div>
-<div class="line"><span class="lineno"> 2879</span>    UShort new_vec;</div>
-<div class="line"><span class="lineno"> 2880</span>    <a class="code hl_function" href="vector_8c.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
-<div class="line"><span class="lineno"> 2881</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2882</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2883</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2884</span>        <a class="code hl_function" href="vector_8c.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
-<div class="line"><span class="lineno"> 2885</span>    }</div>
-<div class="line"><span class="lineno"> 2886</span>    <span class="keywordflow">return</span> new_vec;</div>
-<div class="line"><span class="lineno"> 2887</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02920">2920</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2920</span>                                         {</div>
+<div class="line"><span class="lineno"> 2921</span>    UShort new_vec;</div>
+<div class="line"><span class="lineno"> 2922</span>    <a class="code hl_function" href="vector_8c.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector</a>(&amp;new_vec, vec-&gt;active_length);</div>
+<div class="line"><span class="lineno"> 2923</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2924</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2925</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2926</span>        <a class="code hl_function" href="vector_8c.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector</a>(&amp;new_vec, sum, new_vec.active_length);</div>
+<div class="line"><span class="lineno"> 2927</span>    }</div>
+<div class="line"><span class="lineno"> 2928</span>    <span class="keywordflow">return</span> new_vec;</div>
+<div class="line"><span class="lineno"> 2929</span>}</div>
 <div class="ttc" id="avector_8c_html_a97670c026df2a05dda5b0c85ebeb4d69"><div class="ttname"><a href="vector_8c.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector</a></div><div class="ttdeci">int push_ushort_vector(UShort *vec, unsigned short int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00382">vector.c:382</a></div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8c.html#aa63398bdb55f97b891b93404a89de14d">init_ushort_vector()</a>, and <a class="el" href="vector_8c.html#a97670c026df2a05dda5b0c85ebeb4d69">push_ushort_vector()</a>.</p>
@@ -1043,9 +1145,6 @@ Functions</h2></td></tr>
 <div class="line">[ a, b, c ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a5a01cb2f66c78b55858a0941ad9459af"><div class="ttname"><a href="vector_8c.html#a5a01cb2f66c78b55858a0941ad9459af">delete_char_vector_duplicates</a></div><div class="ttdeci">void delete_char_vector_duplicates(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01953">vector.c:1953</a></div></div>
-<div class="ttc" id="avector_8c_html_ab4f076e9a6e7d0795c2c3a0216c5c97e"><div class="ttname"><a href="vector_8c.html#ab4f076e9a6e7d0795c2c3a0216c5c97e">push_char_vector</a></div><div class="ttdeci">int push_char_vector(Char *vec, char value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00712">vector.c:712</a></div></div>
-<div class="ttc" id="avector_8c_html_aecde718777430d31ec254f8a4f40cce0"><div class="ttname"><a href="vector_8c.html#aecde718777430d31ec254f8a4f40cce0">init_char_vector</a></div><div class="ttdeci">int init_char_vector(Char *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00182">vector.c:182</a></div></div>
-<div class="ttc" id="avector_8c_html_afef1cb622b3f54256849a3b5446a7af4"><div class="ttname"><a href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a></div><div class="ttdeci">void free_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01768">vector.c:1768</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l01953">1953</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1953</span>                                              {</div>
@@ -2420,6 +2519,8 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="vector_8c.html#a877296aab1e625bc7b103322f6b93b14">cumsum_char_vector()</a>.</p>
+
 </div>
 </div>
 <a id="af1f590cad5f66c4caded12d7cd92675b" name="af1f590cad5f66c4caded12d7cd92675b"></a>
@@ -3278,6 +3379,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  209</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="vector_8c.html#a2850df1b78d17fd2e45847e8bf1e51c2">cumsum_uchar_vector()</a>.</p>
 
 </div>
 </div>
@@ -4579,9 +4682,6 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ a, x, y, z, b, c ]</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a9289ec52674f95ebf45ac81b70dfdc67"><div class="ttname"><a href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a></div><div class="ttdeci">int init_uchar_vector(UChar *vec, size_t length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00197">vector.c:197</a></div></div>
-<div class="ttc" id="avector_8c_html_ae5b1c45f4d2083c6d87f217646609a2d"><div class="ttname"><a href="vector_8c.html#ae5b1c45f4d2083c6d87f217646609a2d">insert_uchar_vector</a></div><div class="ttdeci">int insert_uchar_vector(UChar *vec, unsigned char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01232">vector.c:1232</a></div></div>
-<div class="ttc" id="avector_8h_html_acc6fd3b434ba25d3473adff60160500b"><div class="ttname"><a href="vector_8h.html#acc6fd3b434ba25d3473adff60160500b">push_uchar_vector</a></div><div class="ttdeci">int push_uchar_vector(UChar *vec, unsigned char value, size_t index)</div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l01232">1232</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1233</span>                                                      {</div>
@@ -6591,7 +6691,6 @@ Functions</h2></td></tr>
 <div class="line">[ 2, 3, 4 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a7527a193c89c32c07eba99e8abc08574"><div class="ttname"><a href="vector_8c.html#a7527a193c89c32c07eba99e8abc08574">pop_uchar_vector_index</a></div><div class="ttdeci">int pop_uchar_vector_index(UChar *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01461">vector.c:1461</a></div></div>
-<div class="ttc" id="avector_8c_html_a9f3fcb3deda563d834c9d3d13f097268"><div class="ttname"><a href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a></div><div class="ttdeci">void free_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01781">vector.c:1781</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l01461">1461</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1461</span>                                                     {</div>
@@ -6971,6 +7070,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  742</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="vector_8h.html#ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a">DYNAMIC</a>, and <a class="el" href="vector_8h.html#ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8">STATIC</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="vector_8c.html#a877296aab1e625bc7b103322f6b93b14">cumsum_char_vector()</a>.</p>
 
 </div>
 </div>
@@ -8728,7 +8829,6 @@ Functions</h2></td></tr>
 <div class="line">[ 4, 3, 2, 1 ]</div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a>(&amp;vec);</div>
 <div class="ttc" id="avector_8c_html_a06faa32f223a79c02cb771b19cc02a07"><div class="ttname"><a href="vector_8c.html#a06faa32f223a79c02cb771b19cc02a07">reverse_char_vector</a></div><div class="ttdeci">void reverse_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02160">vector.c:2160</a></div></div>
-<div class="ttc" id="avector_8c_html_a9e9db9d87d5a9f3bb6dae1ba5668ef12"><div class="ttname"><a href="vector_8c.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a></div><div class="ttdeci">int insert_char_vector(Char *vec, char *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01196">vector.c:1196</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02160">2160</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 2160</span>                                    {</div>
@@ -10333,6 +10433,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0684e2f1aee143f1769dd8ff908c852c" name="a0684e2f1aee143f1769dd8ff908c852c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0684e2f1aee143f1769dd8ff908c852c">&#9670;&nbsp;</a></span>sum_char_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char sum_char_vector </td>
+          <td>(</td>
+          <td class="paramtype">Char *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will calculate the sum of the values in a vector data structure of type Short</p>
+<p >/param vec A vector data structure of type Short</p>
+<div class="fragment"><div class="line">Char vec;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a749211e8a46a8b2297b3c6ebb78aed0e">init_short_vector</a>(vec, 5);</div>
+<div class="line"><span class="keywordtype">char</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9e9db9d87d5a9f3bb6dae1ba5668ef12">insert_char_vector</a>(&amp;vec, a, 5, 0);</div>
+<div class="line"><span class="keywordtype">char</span> sum_value = <a class="code hl_function" href="vector_8c.html#a0684e2f1aee143f1769dd8ff908c852c">sum_char_vector</a>(vec);</div>
+<div class="line">PRINT(vec);</div>
+<div class="line"><span class="comment">// &gt;&gt; 15</span></div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a>(&amp;vec);</div>
+<div class="ttc" id="avector_8c_html_a0684e2f1aee143f1769dd8ff908c852c"><div class="ttname"><a href="vector_8c.html#a0684e2f1aee143f1769dd8ff908c852c">sum_char_vector</a></div><div class="ttdeci">char sum_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02765">vector.c:2765</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02765">2765</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2765</span>                                {</div>
+<div class="line"><span class="lineno"> 2766</span>    <span class="keywordtype">char</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2767</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2768</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2769</span>    }</div>
+<div class="line"><span class="lineno"> 2770</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2771</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a98a70f4f173d451a1ff5357f4779289d" name="a98a70f4f173d451a1ff5357f4779289d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a98a70f4f173d451a1ff5357f4779289d">&#9670;&nbsp;</a></span>sum_double_vector()</h2>
 
@@ -10358,16 +10496,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a0d9577d0256e0e006d1c55a12ba1bffd">free_double_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a98a70f4f173d451a1ff5357f4779289d"><div class="ttname"><a href="vector_8c.html#a98a70f4f173d451a1ff5357f4779289d">sum_double_vector</a></div><div class="ttdeci">double sum_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02846">vector.c:2846</a></div></div>
+<div class="ttc" id="avector_8c_html_a98a70f4f173d451a1ff5357f4779289d"><div class="ttname"><a href="vector_8c.html#a98a70f4f173d451a1ff5357f4779289d">sum_double_vector</a></div><div class="ttdeci">double sum_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02864">vector.c:2864</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02846">2846</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2846</span>                                    {</div>
-<div class="line"><span class="lineno"> 2847</span>    <span class="keywordtype">double</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2848</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2849</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2850</span>    }</div>
-<div class="line"><span class="lineno"> 2851</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2852</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02864">2864</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2864</span>                                    {</div>
+<div class="line"><span class="lineno"> 2865</span>    <span class="keywordtype">double</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2866</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2867</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2868</span>    }</div>
+<div class="line"><span class="lineno"> 2869</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2870</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10396,16 +10534,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#aa0efda9f361b9e9219f5afc379c7e6cc">free_float_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_ab9177b68251ddf43f4a245afd559e462"><div class="ttname"><a href="vector_8c.html#ab9177b68251ddf43f4a245afd559e462">sum_float_vector</a></div><div class="ttdeci">float sum_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02837">vector.c:2837</a></div></div>
+<div class="ttc" id="avector_8c_html_ab9177b68251ddf43f4a245afd559e462"><div class="ttname"><a href="vector_8c.html#ab9177b68251ddf43f4a245afd559e462">sum_float_vector</a></div><div class="ttdeci">float sum_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02855">vector.c:2855</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02837">2837</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2837</span>                                 {</div>
-<div class="line"><span class="lineno"> 2838</span>    <span class="keywordtype">float</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2839</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2840</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2841</span>    }</div>
-<div class="line"><span class="lineno"> 2842</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2843</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02855">2855</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2855</span>                                 {</div>
+<div class="line"><span class="lineno"> 2856</span>    <span class="keywordtype">float</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2857</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2858</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2859</span>    }</div>
+<div class="line"><span class="lineno"> 2860</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2861</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10434,16 +10572,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#ab2c13b705440e4d4d53825bb16929ff6">free_int_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_aaf01dd9c2caec4100d4315bd8d525a30"><div class="ttname"><a href="vector_8c.html#aaf01dd9c2caec4100d4315bd8d525a30">sum_int_vector</a></div><div class="ttdeci">int sum_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02783">vector.c:2783</a></div></div>
+<div class="ttc" id="avector_8c_html_aaf01dd9c2caec4100d4315bd8d525a30"><div class="ttname"><a href="vector_8c.html#aaf01dd9c2caec4100d4315bd8d525a30">sum_int_vector</a></div><div class="ttdeci">int sum_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02801">vector.c:2801</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02783">2783</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2783</span>                             {</div>
-<div class="line"><span class="lineno"> 2784</span>    <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2785</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2786</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2787</span>    }</div>
-<div class="line"><span class="lineno"> 2788</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2789</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02801">2801</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2801</span>                             {</div>
+<div class="line"><span class="lineno"> 2802</span>    <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2803</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2804</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2805</span>    }</div>
+<div class="line"><span class="lineno"> 2806</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2807</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10472,16 +10610,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a89e6af78e123543fefe3333963de0e83">free_ldouble_vector</a>(&amp;vec)</div>
-<div class="ttc" id="avector_8c_html_af2df2f0fe19814004ab61a91521d7b21"><div class="ttname"><a href="vector_8c.html#af2df2f0fe19814004ab61a91521d7b21">sum_ldouble_vector</a></div><div class="ttdeci">long double sum_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02855">vector.c:2855</a></div></div>
+<div class="ttc" id="avector_8c_html_af2df2f0fe19814004ab61a91521d7b21"><div class="ttname"><a href="vector_8c.html#af2df2f0fe19814004ab61a91521d7b21">sum_ldouble_vector</a></div><div class="ttdeci">long double sum_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02873">vector.c:2873</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02855">2855</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2855</span>                                           {</div>
-<div class="line"><span class="lineno"> 2856</span>    <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2857</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2858</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2859</span>    }</div>
-<div class="line"><span class="lineno"> 2860</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2861</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02873">2873</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2873</span>                                           {</div>
+<div class="line"><span class="lineno"> 2874</span>    <span class="keywordtype">long</span> <span class="keywordtype">double</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2875</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2876</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2877</span>    }</div>
+<div class="line"><span class="lineno"> 2878</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2879</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10510,16 +10648,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#af92bc034e6f34814eea1008629f41ef9">free_llong_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a838510507e7f386e844fd1e5e3ae494a"><div class="ttname"><a href="vector_8c.html#a838510507e7f386e844fd1e5e3ae494a">sum_llong_vector</a></div><div class="ttdeci">long long int sum_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02819">vector.c:2819</a></div></div>
+<div class="ttc" id="avector_8c_html_a838510507e7f386e844fd1e5e3ae494a"><div class="ttname"><a href="vector_8c.html#a838510507e7f386e844fd1e5e3ae494a">sum_llong_vector</a></div><div class="ttdeci">long long int sum_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02837">vector.c:2837</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02819">2819</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2819</span>                                           {</div>
-<div class="line"><span class="lineno"> 2820</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2821</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2822</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2823</span>    }</div>
-<div class="line"><span class="lineno"> 2824</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2825</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02837">2837</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2837</span>                                           {</div>
+<div class="line"><span class="lineno"> 2838</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2839</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2840</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2841</span>    }</div>
+<div class="line"><span class="lineno"> 2842</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2843</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10548,16 +10686,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#af1ab528ebf7f47a278e3be3b02e9acee">free_long_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_af2ca62fb5fa87cccef8750d24b3979da"><div class="ttname"><a href="vector_8c.html#af2ca62fb5fa87cccef8750d24b3979da">sum_long_vector</a></div><div class="ttdeci">long int sum_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02801">vector.c:2801</a></div></div>
+<div class="ttc" id="avector_8c_html_af2ca62fb5fa87cccef8750d24b3979da"><div class="ttname"><a href="vector_8c.html#af2ca62fb5fa87cccef8750d24b3979da">sum_long_vector</a></div><div class="ttdeci">long int sum_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02819">vector.c:2819</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02801">2801</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2801</span>                                    {</div>
-<div class="line"><span class="lineno"> 2802</span>    <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2803</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2804</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2805</span>    }</div>
-<div class="line"><span class="lineno"> 2806</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2807</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02819">2819</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2819</span>                                    {</div>
+<div class="line"><span class="lineno"> 2820</span>    <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2821</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2822</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2823</span>    }</div>
+<div class="line"><span class="lineno"> 2824</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2825</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10586,16 +10724,54 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a8a383d2299a326d3c0ded94c19d73393">free_short_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a54d410de6d79f482b3d560bcb78fd2ff"><div class="ttname"><a href="vector_8c.html#a54d410de6d79f482b3d560bcb78fd2ff">sum_short_vector</a></div><div class="ttdeci">short int sum_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02765">vector.c:2765</a></div></div>
+<div class="ttc" id="avector_8c_html_a54d410de6d79f482b3d560bcb78fd2ff"><div class="ttname"><a href="vector_8c.html#a54d410de6d79f482b3d560bcb78fd2ff">sum_short_vector</a></div><div class="ttdeci">short int sum_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02783">vector.c:2783</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02765">2765</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2765</span>                                       {</div>
-<div class="line"><span class="lineno"> 2766</span>    <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2767</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2768</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2769</span>    }</div>
-<div class="line"><span class="lineno"> 2770</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2771</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02783">2783</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2783</span>                                       {</div>
+<div class="line"><span class="lineno"> 2784</span>    <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2785</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2786</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2787</span>    }</div>
+<div class="line"><span class="lineno"> 2788</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2789</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a643cb8d97c368f436a0010dacfca2401" name="a643cb8d97c368f436a0010dacfca2401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643cb8d97c368f436a0010dacfca2401">&#9670;&nbsp;</a></span>sum_uchar_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char sum_uchar_vector </td>
+          <td>(</td>
+          <td class="paramtype">UChar *&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function will calculate the sum of the values in a vector data structure of type Short</p>
+<p >/param vec A vector data structure of type Short</p>
+<div class="fragment"><div class="line">UChar vec;</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9289ec52674f95ebf45ac81b70dfdc67">init_uchar_vector</a>(vec, 5);</div>
+<div class="line">unsgined <span class="keywordtype">char</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#ae5b1c45f4d2083c6d87f217646609a2d">insert_uchar_vector</a>(&amp;vec, a, 5, 0);</div>
+<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> sum_value = <a class="code hl_function" href="vector_8c.html#a643cb8d97c368f436a0010dacfca2401">sum_uchar_vector</a>(vec);</div>
+<div class="line">PRINT(vec);</div>
+<div class="line"><span class="comment">// &gt;&gt; 15</span></div>
+<div class="line"><a class="code hl_function" href="vector_8c.html#a9f3fcb3deda563d834c9d3d13f097268">free_uchar_vector</a>(&amp;vec);</div>
+<div class="ttc" id="avector_8c_html_a643cb8d97c368f436a0010dacfca2401"><div class="ttname"><a href="vector_8c.html#a643cb8d97c368f436a0010dacfca2401">sum_uchar_vector</a></div><div class="ttdeci">unsigned char sum_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02774">vector.c:2774</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02774">2774</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2774</span>                                           {</div>
+<div class="line"><span class="lineno"> 2775</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2776</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2777</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2778</span>    }</div>
+<div class="line"><span class="lineno"> 2779</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2780</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10624,16 +10800,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a6195f400606be104b4461cd9876f93ce">free_uint_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a791fe9c8f9bd1d04158b01c3aa022edd"><div class="ttname"><a href="vector_8c.html#a791fe9c8f9bd1d04158b01c3aa022edd">sum_uint_vector</a></div><div class="ttdeci">unsigned int sum_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02792">vector.c:2792</a></div></div>
+<div class="ttc" id="avector_8c_html_a791fe9c8f9bd1d04158b01c3aa022edd"><div class="ttname"><a href="vector_8c.html#a791fe9c8f9bd1d04158b01c3aa022edd">sum_uint_vector</a></div><div class="ttdeci">unsigned int sum_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02810">vector.c:2810</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02792">2792</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2792</span>                                        {</div>
-<div class="line"><span class="lineno"> 2793</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2794</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2795</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2796</span>    }</div>
-<div class="line"><span class="lineno"> 2797</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2798</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02810">2810</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2810</span>                                        {</div>
+<div class="line"><span class="lineno"> 2811</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2812</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2813</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2814</span>    }</div>
+<div class="line"><span class="lineno"> 2815</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2816</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10662,16 +10838,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a605f038b309fb25e53f637c9e9b6e4bd">free_ullong_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_af1cc1dfd0470ab00fc1537ebcbb5c089"><div class="ttname"><a href="vector_8c.html#af1cc1dfd0470ab00fc1537ebcbb5c089">sum_ullong_vector</a></div><div class="ttdeci">unsigned long long int sum_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02828">vector.c:2828</a></div></div>
+<div class="ttc" id="avector_8c_html_af1cc1dfd0470ab00fc1537ebcbb5c089"><div class="ttname"><a href="vector_8c.html#af1cc1dfd0470ab00fc1537ebcbb5c089">sum_ullong_vector</a></div><div class="ttdeci">unsigned long long int sum_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02846">vector.c:2846</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02828">2828</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2828</span>                                                      {</div>
-<div class="line"><span class="lineno"> 2829</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2830</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2831</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2832</span>    }</div>
-<div class="line"><span class="lineno"> 2833</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2834</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02846">2846</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2846</span>                                                      {</div>
+<div class="line"><span class="lineno"> 2847</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2848</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2849</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2850</span>    }</div>
+<div class="line"><span class="lineno"> 2851</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2852</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10700,16 +10876,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a9a05407a3434648f10f4416a7874150d">free_ulong_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a3233da20e23c20659dd5aba81307b58d"><div class="ttname"><a href="vector_8c.html#a3233da20e23c20659dd5aba81307b58d">sum_ulong_vector</a></div><div class="ttdeci">unsigned long int sum_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02810">vector.c:2810</a></div></div>
+<div class="ttc" id="avector_8c_html_a3233da20e23c20659dd5aba81307b58d"><div class="ttname"><a href="vector_8c.html#a3233da20e23c20659dd5aba81307b58d">sum_ulong_vector</a></div><div class="ttdeci">unsigned long int sum_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02828">vector.c:2828</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02810">2810</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2810</span>                                               {</div>
-<div class="line"><span class="lineno"> 2811</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2812</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2813</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2814</span>    }</div>
-<div class="line"><span class="lineno"> 2815</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2816</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02828">2828</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2828</span>                                               {</div>
+<div class="line"><span class="lineno"> 2829</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2830</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2831</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2832</span>    }</div>
+<div class="line"><span class="lineno"> 2833</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2834</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -10738,16 +10914,16 @@ Functions</h2></td></tr>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; 15</span></div>
 <div class="line"><a class="code hl_function" href="vector_8c.html#a3765cd4f6e59bada679e05ea6dacfff5">free_ushort_vector</a>(&amp;vec);</div>
-<div class="ttc" id="avector_8c_html_a67f48de636722d00447f21d5040f8d81"><div class="ttname"><a href="vector_8c.html#a67f48de636722d00447f21d5040f8d81">sum_ushort_vector</a></div><div class="ttdeci">unsigned short int sum_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02774">vector.c:2774</a></div></div>
+<div class="ttc" id="avector_8c_html_a67f48de636722d00447f21d5040f8d81"><div class="ttname"><a href="vector_8c.html#a67f48de636722d00447f21d5040f8d81">sum_ushort_vector</a></div><div class="ttdeci">unsigned short int sum_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02792">vector.c:2792</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02774">2774</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2774</span>                                                  {</div>
-<div class="line"><span class="lineno"> 2775</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
-<div class="line"><span class="lineno"> 2776</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
-<div class="line"><span class="lineno"> 2777</span>        sum += vec-&gt;array[i];</div>
-<div class="line"><span class="lineno"> 2778</span>    }</div>
-<div class="line"><span class="lineno"> 2779</span>    <span class="keywordflow">return</span> sum;</div>
-<div class="line"><span class="lineno"> 2780</span>}</div>
+<p class="definition">Definition at line <a class="el" href="vector_8c_source.html#l02792">2792</a> of file <a class="el" href="vector_8c_source.html">vector.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2792</span>                                                  {</div>
+<div class="line"><span class="lineno"> 2793</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> sum = 0;</div>
+<div class="line"><span class="lineno"> 2794</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec-&gt;active_length; i++) {</div>
+<div class="line"><span class="lineno"> 2795</span>        sum += vec-&gt;array[i];</div>
+<div class="line"><span class="lineno"> 2796</span>    }</div>
+<div class="line"><span class="lineno"> 2797</span>    <span class="keywordflow">return</span> sum;</div>
+<div class="line"><span class="lineno"> 2798</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

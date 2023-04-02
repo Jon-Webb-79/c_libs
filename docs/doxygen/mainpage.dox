@@ -147,6 +147,8 @@
  * - `sort_bool_vector()`: Function to sort a bool vector or array in forward or reverse direction.
  * - `sort_string_vector()`: Function to sort a string vector or array in forward or reverse direction.
  *
+ * - `sum_char_vector()`: Function to determine the sum of char values in a vector or array.
+ * - `sum_uchar_vector()`: Function to determine the sum of unsigned char values in a vector or array.
  * - `sum_short_vector()`: Function to determine the sum of short integer values in a short integer vector or array.
  * - `sum_ushort_vector()`: Function to determine the sum of unsigned short integer values in a short integer vector or array.
  * - `sum_int_vector()`: Function to determine the sum of integer values in a short integer vector or array.
@@ -155,10 +157,12 @@
  * - `sum_ulong_vector()`: Function to determine the sum of unsigned long integer values in a short integer vector or array.
  * - `sum_llong_vector()`: Function to determine the sum of long long integer values in a short integer vector or array.
  * - `sum_ullong_vector()`: Function to determine the sum of unsigned long long integer values in a short integer vector or array.
- * - `sum_float_vector()`: Function to determine the sum of float values in a short integer vector or array.
- * - `sum_double_vector()`: Function to determine the sum of double values in a short integer vector or array.
- * - `sum_ldouble_vector()`: Function to determine the sum of long double values in a short integer vector or array.
+ * - `sum_float_vector()`: Function to determine the sum of float values in a vector or array.
+ * - `sum_double_vector()`: Function to determine the sum of double values in a vector or array.
+ * - `sum_ldouble_vector()`: Function to determine the sum of long double values in a vector or array.
  *
+ * - `cumsum_char_vector()`: Function to determine the cumulative sum of a char vector or array.
+ * - `cumsum_char_vector()`: Function to determine the cumulative sum of an unsigned char vector or array.
  * - `cumsum_short_vector()`: Function to determine the cumulative sum of a short integer vector or array.
  * - `cumsum_ushort_vector()`: Function to determine the cumulative sum of an unsigned short integer vector or array.
  * - `cumsum_int_vector()`: Function to determine the cumulative sum of an integer vector or array.

@@ -3319,6 +3319,45 @@ void sort_string_vector(String *vec, size_t low, size_t high, sort_order order);
  * /param vec A vector data structure of type Short
  *
  * @code
+ * Char vec;
+ * init_short_vector(vec, 5);
+ * char a[5] = {1, 2, 3, 4, 5};
+ * insert_char_vector(&vec, a, 5, 0);
+ * char sum_value = sum_char_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_char_vector(&vec);
+ * @endcode
+ */
+char sum_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type Short
+ *
+ * /param vec A vector data structure of type Short
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(vec, 5);
+ * unsgined char a[5] = {1, 2, 3, 4, 5};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * unsigned char sum_value = sum_uchar_vector(vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+unsigned char sum_uchar_vector(UChar *vec);
+// ------------------------------------------------------------------------------------------
+/**
+ * This function will calculate the sum of the values in a vector data structure
+ * of type Short
+ *
+ * /param vec A vector data structure of type Short
+ *
+ * @code
  * Short vec;
  * init_short_vector(vec, 5);
  * short int a[5] = {1, 2, 3, 4, 5};
@@ -3534,6 +3573,47 @@ long double sum_ldouble_vector(LDble *vec);
 // ==========================================================================================
 // CUMSUM_TYPE_VEC FUNCTIONS
 
+/**
+ * This function will return an Char vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type Char
+ * /return return_vec A vector container of type Char
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec, 5);
+ * char a[5] = {1, 2, 3, 4, 5};
+ * insert_char_vector(&vec, a, 5, 0);
+ * Char cum_vec = cumsum_char_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+Char cumsum_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will return an UChar vector container that holds an array
+ * containing the cumulative sum of the values in the input array
+ *
+ * /param vec A vector container of type UChar
+ * /return return_vec A vector container of type UChar
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec, 5);
+ * unsigned char a[5] = {1, 2, 3, 4, 5};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * UChar cum_vec = cumsum_uchar_vector(&vec);
+ * PRINT(vum_vec);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+UChar cumsum_uchar_vector(UChar *vec);
+// ------------------------------------------------------------------------------------------
 /**
  * This function will return an Short vector container that holds an array
  * containing the cumulative sum of the values in the input array
@@ -3763,6 +3843,239 @@ Dble cumsum_double_vector(Dble *vec);
  * @endcode
  */
 LDble cumsum_ldouble_vector(LDble *vec);
+// ==========================================================================================
+// ==========================================================================================
+// AVERAGE_TYPE_VEC
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type Short
+ *
+ * /param vec A vector data structure of type Short
+ * /return avg The average value in the input data structure of type Short
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 5);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * float b = average_short_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_short_vector(&vec);
+ * @endcode
+ */
+float average_short_vector(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type UShort
+ *
+ * /param vec A vector data structure of type UShort
+ * /return avg The average value in the input data structure of type UShort
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 5);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * float b = average_ushort_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+float average_ushort_vector(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type Int
+ *
+ * /param vec A vector data structure of type Int
+ * /return avg The average value in the input data structure of type Int
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 5);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * float b = average_int_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_int_vector(&vec);
+ * @endcode
+ */
+float average_int_vector(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type UInt
+ *
+ * /param vec A vector data structure of type UInt
+ * /return avg The average value in the input data structure of type UInt
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 5);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * float b = average_uint_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+float average_uint_vector(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type LInt
+ *
+ * /param vec A vector data structure of type LInt
+ * /return avg The average value in the input data structure of type LInt
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 5);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * double b = average_long_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_long_vector(&vec);
+ * @endcode
+ */
+double average_long_vector(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type ULInt
+ *
+ * /param vec A vector data structure of type ULInt
+ * /return avg The average value in the input data structure of type ULInt
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 5);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * double b = average_ulong_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+double average_ulong_vector(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type LLInt
+ *
+ * /param vec A vector data structure of type LLInt
+ * /return avg The average value in the input data structure of type LLInt
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 5);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * long double b = average_llong_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+long double average_llong_vector(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type ULLInt
+ *
+ * /param vec A vector data structure of type ULLInt
+ * /return avg The average value in the input data structure of type ULLInt
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 5);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * long double b = average_ullong_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+long double average_ullong_vector(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type Flt
+ *
+ * /param vec A vector data structure of type Flt
+ * /return avg The average value in the input data structure of type Flt
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 5);
+ * float a[5] = {1, 2, 3, 4, 5};
+ * insert_float_vector(&vec, a, 5, 0);
+ * float b = average_float_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_float_vector(&vec);
+ * @endcode
+ */
+float average_float_vector(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type Dble
+ *
+ * /param vec A vector data structure of type Dble
+ * /return avg The average value in the input data structure of type Dble
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec, 5);
+ * double a[5] = {1, 2, 3, 4, 5};
+ * insert_double_vector(&vec, a, 5, 0);
+ * double b = average_double_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_double_vector(&vec);
+ * @endcode
+ */
+double average_double_vector(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return the average value of the data in a vector data structure
+ * of type LDble
+ *
+ * /param vec A vector data structure of type LDble
+ * /return avg The average value in the input data structure of type LDble
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 5);
+ * long double a[5] = {1, 2, 3, 4, 5};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * long double b = average_ldouble_vector(&vec);
+ * PRINT(b);
+ * // >> 3.00000
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+long double average_ldouble_vector(LDble *vec);
 // ==========================================================================================
 // ==========================================================================================
 // eof

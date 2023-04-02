@@ -2762,6 +2762,24 @@ void sort_string_vector(String *vec, size_t low, size_t high, sort_order order) 
 // ==========================================================================================
 // FREE_TYPE_VEC FUNCTIONS
 
+char sum_char_vector(Char *vec) {
+	char sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
+unsigned char sum_uchar_vector(UChar *vec) {
+	unsigned char sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+	}
+	return sum;
+}
+// ------------------------------------------------------------------------------------------
+
 short int sum_short_vector(Short *vec) {
 	short int sum = 0;
 	for (size_t i = 0; i < vec->active_length; i++) {
@@ -2862,6 +2880,30 @@ long double sum_ldouble_vector(LDble *vec) {
 // ==========================================================================================
 // ==========================================================================================
 // CUMSUM_TYPE_VEC FUNCTIONS
+
+Char cumsum_char_vector(Char *vec) {
+	Char new_vec;
+	init_char_vector(&new_vec, vec->active_length);
+	char sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_char_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// ------------------------------------------------------------------------------------------
+
+UChar cumsum_uchar_vector(UChar *vec) {
+	UChar new_vec;
+	init_uchar_vector(&new_vec, vec->active_length);
+	unsigned char sum = 0;
+	for (size_t i = 0; i < vec->active_length; i++) {
+		sum += vec->array[i];
+		push_uchar_vector(&new_vec, sum, new_vec.active_length);
+	}
+	return new_vec;
+}
+// -----------------------------------------------------------------------------------------
 
 Short cumsum_short_vector(Short *vec) {
 	Short new_vec;

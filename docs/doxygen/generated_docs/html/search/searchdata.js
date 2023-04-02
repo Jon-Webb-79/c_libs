@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "acdfimprsv",
   1: "s",
   2: "dmsv",
-  3: "cdfiprsv",
+  3: "acdfiprsv",
   4: "a",
   5: "ms",
   6: "dfrs",
