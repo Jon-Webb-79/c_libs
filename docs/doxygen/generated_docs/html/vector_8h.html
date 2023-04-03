@@ -96,6 +96,8 @@ Macros</h2></td></tr>
 <tr class="separator:a78b085b69ede6314aedfc346b480a078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77aa58ae761e2e9fe859c4ac316bec41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#a77aa58ae761e2e9fe859c4ac316bec41">INIT_ARRAY</a>(T,  arr,  aloc_len,  active_len)</td></tr>
 <tr class="separator:a77aa58ae761e2e9fe859c4ac316bec41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ea4c14f63edfd4d7c039a02ae1a65e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vector_8h.html#ae7ea4c14f63edfd4d7c039a02ae1a65e">TRIM</a>(T)</td></tr>
+<tr class="separator:ae7ea4c14f63edfd4d7c039a02ae1a65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -826,6 +828,55 @@ Functions</h2></td></tr>
 <div class="ttc" id="avector_8h_html_a78b085b69ede6314aedfc346b480a078"><div class="ttname"><a href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a></div><div class="ttdeci">#define INIT_VECTOR(T, length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00280">vector.h:280</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l00280">280</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
+
+</div>
+</div>
+<a id="ae7ea4c14f63edfd4d7c039a02ae1a65e" name="ae7ea4c14f63edfd4d7c039a02ae1a65e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ea4c14f63edfd4d7c039a02ae1a65e">&#9670;&nbsp;</a></span>TRIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRIM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                       _Generic( (T), Int8: Short: <a class="code hl_function" href="vector_8h.html#aeec337d3614f9c62cd652fee528e8f10">trim_short_vector</a>, \</div>
+<div class="line">                                       UShort: <a class="code hl_function" href="vector_8h.html#a394639166d53eacb53725cf548f596db">trim_ushort_vector</a>, \</div>
+<div class="line">                                       Int: <a class="code hl_function" href="vector_8h.html#a1365d9e27b0080e8e48d9809987e0824">trim_int_vector</a>, \</div>
+<div class="line">                                       UInt: <a class="code hl_function" href="vector_8h.html#aafc05a4201bf2e5129655a7d4db8819c">trim_uint_vector</a>, \</div>
+<div class="line">                                       LInt: <a class="code hl_function" href="vector_8h.html#a8e0993c9b72acdbb4eec8bdea1687fd2">trim_long_vector</a>, \</div>
+<div class="line">                                       ULInt: <a class="code hl_function" href="vector_8h.html#a2b44394f88268b15dfaf3640cb70f42f">trim_ulong_vector</a>, \</div>
+<div class="line">                                       LLInt: <a class="code hl_function" href="vector_8h.html#ad500a258d2da444ab4d9a0315a241ab9">trim_llong_vector</a>, \</div>
+<div class="line">                                       ULLInt: <a class="code hl_function" href="vector_8h.html#aa2e26e5c689daa0f13844939ead1e484">trim_ullong_vector</a>, \</div>
+<div class="line">                                       Flt: <a class="code hl_function" href="vector_8h.html#a78d86f1a5dc7e8f980fecfb2f8d12395">trim_float_vector</a>, \</div>
+<div class="line">                                       Dble: <a class="code hl_function" href="vector_8h.html#a4a91fca62c49f8628e3efdc3713be344">trim_double_vector</a>, \</div>
+<div class="line">                                       LDble: <a class="code hl_function" href="vector_8h.html#a7a50f85d6a874afbfdf345ba35b8a62e">trim_ldouble_vector</a>, \</div>
+<div class="line">                                       Char: <a class="code hl_function" href="vector_8h.html#a4e9cace11cfb849b013d15d09053b0bb">trim_char_vector</a>, \</div>
+<div class="line">                                       UChar: trim_uchar_vector, \</div>
+<div class="line">                                       Bool: <a class="code hl_function" href="vector_8h.html#ae838be1f19558e27f1c9ee40b7f0f368">trim_bool_vector</a>)(&amp;T)</div>
+<div class="ttc" id="avector_8h_html_a1365d9e27b0080e8e48d9809987e0824"><div class="ttname"><a href="vector_8h.html#a1365d9e27b0080e8e48d9809987e0824">trim_int_vector</a></div><div class="ttdeci">void trim_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04491">vector.c:4491</a></div></div>
+<div class="ttc" id="avector_8h_html_a2b44394f88268b15dfaf3640cb70f42f"><div class="ttname"><a href="vector_8h.html#a2b44394f88268b15dfaf3640cb70f42f">trim_ulong_vector</a></div><div class="ttdeci">void trim_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04527">vector.c:4527</a></div></div>
+<div class="ttc" id="avector_8h_html_a394639166d53eacb53725cf548f596db"><div class="ttname"><a href="vector_8h.html#a394639166d53eacb53725cf548f596db">trim_ushort_vector</a></div><div class="ttdeci">void trim_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04479">vector.c:4479</a></div></div>
+<div class="ttc" id="avector_8h_html_a4a91fca62c49f8628e3efdc3713be344"><div class="ttname"><a href="vector_8h.html#a4a91fca62c49f8628e3efdc3713be344">trim_double_vector</a></div><div class="ttdeci">void trim_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04575">vector.c:4575</a></div></div>
+<div class="ttc" id="avector_8h_html_a4e9cace11cfb849b013d15d09053b0bb"><div class="ttname"><a href="vector_8h.html#a4e9cace11cfb849b013d15d09053b0bb">trim_char_vector</a></div><div class="ttdeci">void trim_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04599">vector.c:4599</a></div></div>
+<div class="ttc" id="avector_8h_html_a78d86f1a5dc7e8f980fecfb2f8d12395"><div class="ttname"><a href="vector_8h.html#a78d86f1a5dc7e8f980fecfb2f8d12395">trim_float_vector</a></div><div class="ttdeci">void trim_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04563">vector.c:4563</a></div></div>
+<div class="ttc" id="avector_8h_html_a7a50f85d6a874afbfdf345ba35b8a62e"><div class="ttname"><a href="vector_8h.html#a7a50f85d6a874afbfdf345ba35b8a62e">trim_ldouble_vector</a></div><div class="ttdeci">void trim_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04587">vector.c:4587</a></div></div>
+<div class="ttc" id="avector_8h_html_a8e0993c9b72acdbb4eec8bdea1687fd2"><div class="ttname"><a href="vector_8h.html#a8e0993c9b72acdbb4eec8bdea1687fd2">trim_long_vector</a></div><div class="ttdeci">void trim_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04515">vector.c:4515</a></div></div>
+<div class="ttc" id="avector_8h_html_aa2e26e5c689daa0f13844939ead1e484"><div class="ttname"><a href="vector_8h.html#aa2e26e5c689daa0f13844939ead1e484">trim_ullong_vector</a></div><div class="ttdeci">void trim_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04551">vector.c:4551</a></div></div>
+<div class="ttc" id="avector_8h_html_aafc05a4201bf2e5129655a7d4db8819c"><div class="ttname"><a href="vector_8h.html#aafc05a4201bf2e5129655a7d4db8819c">trim_uint_vector</a></div><div class="ttdeci">void trim_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04503">vector.c:4503</a></div></div>
+<div class="ttc" id="avector_8h_html_ad500a258d2da444ab4d9a0315a241ab9"><div class="ttname"><a href="vector_8h.html#ad500a258d2da444ab4d9a0315a241ab9">trim_llong_vector</a></div><div class="ttdeci">void trim_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04539">vector.c:4539</a></div></div>
+<div class="ttc" id="avector_8h_html_ae838be1f19558e27f1c9ee40b7f0f368"><div class="ttname"><a href="vector_8h.html#ae838be1f19558e27f1c9ee40b7f0f368">trim_bool_vector</a></div><div class="ttdeci">void trim_bool_vector(Bool *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04611">vector.c:4611</a></div></div>
+<div class="ttc" id="avector_8h_html_aeec337d3614f9c62cd652fee528e8f10"><div class="ttname"><a href="vector_8h.html#aeec337d3614f9c62cd652fee528e8f10">trim_short_vector</a></div><div class="ttdeci">void trim_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04467">vector.c:4467</a></div></div>
+</div><!-- fragment --><p >Macro to trim a vecotr or array memory to minimum necessary value</p>
+<p >/param vec The vector to be trimmed. </p>
+
+<p class="definition">Definition at line <a class="el" href="vector_8h_source.html#l05738">5738</a> of file <a class="el" href="vector_8h_source.html">vector.h</a>.</p>
 
 </div>
 </div>

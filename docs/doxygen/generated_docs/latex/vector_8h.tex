@@ -18,6 +18,8 @@ struct \mbox{\hyperlink{structString}{String}}
 \#define \mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\+\_\+\+VECTOR}}(T,  length)
 \item 
 \#define \mbox{\hyperlink{vector_8h_a77aa58ae761e2e9fe859c4ac316bec41}{INIT\+\_\+\+ARRAY}}(T,  arr,  aloc\+\_\+len,  active\+\_\+len)
+\item 
+\#define \mbox{\hyperlink{vector_8h_ae7ea4c14f63edfd4d7c039a02ae1a65e}{TRIM}}(T)
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -685,6 +687,36 @@ This macro will allocate memory for an array and assign that memory to the array
  
 
 Definition at line \mbox{\hyperlink{vector_8h_source_l00280}{280}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
+
+\mbox{\Hypertarget{vector_8h_ae7ea4c14f63edfd4d7c039a02ae1a65e}\label{vector_8h_ae7ea4c14f63edfd4d7c039a02ae1a65e}} 
+\index{vector.h@{vector.h}!TRIM@{TRIM}}
+\index{TRIM@{TRIM}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{TRIM}{TRIM}}
+{\footnotesize\ttfamily \#define TRIM(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       \_Generic( (T), Int8: Short: \mbox{\hyperlink{vector_8h_aeec337d3614f9c62cd652fee528e8f10}{trim\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       UShort: \mbox{\hyperlink{vector_8h_a394639166d53eacb53725cf548f596db}{trim\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       Int: \mbox{\hyperlink{vector_8h_a1365d9e27b0080e8e48d9809987e0824}{trim\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       UInt: \mbox{\hyperlink{vector_8h_aafc05a4201bf2e5129655a7d4db8819c}{trim\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       LInt: \mbox{\hyperlink{vector_8h_a8e0993c9b72acdbb4eec8bdea1687fd2}{trim\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       ULInt: \mbox{\hyperlink{vector_8h_a2b44394f88268b15dfaf3640cb70f42f}{trim\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       LLInt: \mbox{\hyperlink{vector_8h_ad500a258d2da444ab4d9a0315a241ab9}{trim\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       ULLInt: \mbox{\hyperlink{vector_8h_aa2e26e5c689daa0f13844939ead1e484}{trim\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       Flt: \mbox{\hyperlink{vector_8h_a78d86f1a5dc7e8f980fecfb2f8d12395}{trim\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       Dble: \mbox{\hyperlink{vector_8h_a4a91fca62c49f8628e3efdc3713be344}{trim\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       LDble: \mbox{\hyperlink{vector_8h_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\_ldouble\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       Char: \mbox{\hyperlink{vector_8h_a4e9cace11cfb849b013d15d09053b0bb}{trim\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                       UChar: trim\_uchar\_vector, \(\backslash\)}
+\DoxyCodeLine{                                       Bool: \mbox{\hyperlink{vector_8h_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}})(\&T)}
+
+\end{DoxyCode}
+Macro to trim a vecotr or array memory to minimum necessary value
+
+/param vec The vector to be trimmed. 
+
+Definition at line \mbox{\hyperlink{vector_8h_source_l05738}{5738}} of file \mbox{\hyperlink{vector_8h_source}{vector.\+h}}.
 
 \mbox{\Hypertarget{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}\label{vector_8h_a84eaf8fe661d2d8eb9275491bc8329df}} 
 \index{vector.h@{vector.h}!VECTOR\_STRUCT@{VECTOR\_STRUCT}}

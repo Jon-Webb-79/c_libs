@@ -1472,10 +1472,27 @@ $(function() {
 <div class="line"><a id="l05721" name="l05721"></a><span class="lineno"> 5721</span><span class="comment">// --------------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l05722" name="l05722"></a><span class="lineno"> 5722</span> </div>
 <div class="line"><a id="l05729" name="l05729"></a><span class="lineno"> 5729</span><span class="keywordtype">void</span> <a class="code hl_function" href="vector_8h.html#ae838be1f19558e27f1c9ee40b7f0f368">trim_bool_vector</a>(Bool *vec);</div>
-<div class="line"><a id="l05730" name="l05730"></a><span class="lineno"> 5730</span> <span class="comment">// ==========================================================================================</span></div>
-<div class="line"><a id="l05731" name="l05731"></a><span class="lineno"> 5731</span> <span class="comment">// ==========================================================================================</span></div>
-<div class="line"><a id="l05732" name="l05732"></a><span class="lineno"> 5732</span><span class="preprocessor">#endif </span><span class="comment">/* vector_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l05733" name="l05733"></a><span class="lineno"> 5733</span><span class="comment">// eof</span></div>
+<div class="line"><a id="l05730" name="l05730"></a><span class="lineno"> 5730</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l05731" name="l05731"></a><span class="lineno"> 5731</span><span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l05732" name="l05732"></a><span class="lineno"> 5732</span> </div>
+<div class="line"><a id="l05738" name="l05738"></a><span class="lineno"><a class="line" href="vector_8h.html#ae7ea4c14f63edfd4d7c039a02ae1a65e"> 5738</a></span><span class="preprocessor">#define TRIM(T) _Generic( (T), Int8: Short: trim_short_vector, \</span></div>
+<div class="line"><a id="l05739" name="l05739"></a><span class="lineno"> 5739</span><span class="preprocessor">                                       UShort: trim_ushort_vector, \</span></div>
+<div class="line"><a id="l05740" name="l05740"></a><span class="lineno"> 5740</span><span class="preprocessor">                                       Int: trim_int_vector, \</span></div>
+<div class="line"><a id="l05741" name="l05741"></a><span class="lineno"> 5741</span><span class="preprocessor">                                       UInt: trim_uint_vector, \</span></div>
+<div class="line"><a id="l05742" name="l05742"></a><span class="lineno"> 5742</span><span class="preprocessor">                                       LInt: trim_long_vector, \</span></div>
+<div class="line"><a id="l05743" name="l05743"></a><span class="lineno"> 5743</span><span class="preprocessor">                                       ULInt: trim_ulong_vector, \</span></div>
+<div class="line"><a id="l05744" name="l05744"></a><span class="lineno"> 5744</span><span class="preprocessor">                                       LLInt: trim_llong_vector, \</span></div>
+<div class="line"><a id="l05745" name="l05745"></a><span class="lineno"> 5745</span><span class="preprocessor">                                       ULLInt: trim_ullong_vector, \</span></div>
+<div class="line"><a id="l05746" name="l05746"></a><span class="lineno"> 5746</span><span class="preprocessor">                                       Flt: trim_float_vector, \</span></div>
+<div class="line"><a id="l05747" name="l05747"></a><span class="lineno"> 5747</span><span class="preprocessor">                                       Dble: trim_double_vector, \</span></div>
+<div class="line"><a id="l05748" name="l05748"></a><span class="lineno"> 5748</span><span class="preprocessor">                                       LDble: trim_ldouble_vector, \</span></div>
+<div class="line"><a id="l05749" name="l05749"></a><span class="lineno"> 5749</span><span class="preprocessor">                                       Char: trim_char_vector, \</span></div>
+<div class="line"><a id="l05750" name="l05750"></a><span class="lineno"> 5750</span><span class="preprocessor">                                       UChar: trim_uchar_vector, \</span></div>
+<div class="line"><a id="l05751" name="l05751"></a><span class="lineno"> 5751</span><span class="preprocessor">                                       Bool: trim_bool_vector)(&amp;T)</span></div>
+<div class="line"><a id="l05752" name="l05752"></a><span class="lineno"> 5752</span> <span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l05753" name="l05753"></a><span class="lineno"> 5753</span> <span class="comment">// ==========================================================================================</span></div>
+<div class="line"><a id="l05754" name="l05754"></a><span class="lineno"> 5754</span><span class="preprocessor">#endif </span><span class="comment">/* vector_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l05755" name="l05755"></a><span class="lineno"> 5755</span><span class="comment">// eof</span></div>
 <div class="ttc" id="astructString_html"><div class="ttname"><a href="structString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00092">vector.h:93</a></div></div>
 <div class="ttc" id="astructString_html_a706ffaf2f520d46074dd99e7896d6673"><div class="ttname"><a href="structString.html#a706ffaf2f520d46074dd99e7896d6673">String::active_length</a></div><div class="ttdeci">size_t active_length</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00095">vector.h:95</a></div></div>
 <div class="ttc" id="astructString_html_a984d87136c3d76ab3145bdb65880a3fa"><div class="ttname"><a href="structString.html#a984d87136c3d76ab3145bdb65880a3fa">String::array</a></div><div class="ttdeci">char ** array</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00094">vector.h:94</a></div></div>

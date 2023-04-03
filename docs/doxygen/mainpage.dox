@@ -276,6 +276,7 @@
  * - `trim_ldouble_vector()`: Function to minimize allocated memory to minimum necessary value.
  * - `trim_bool_vector()`: Function to minimize allocated memory to minimum necessary value.
  * - `trim_string_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `TRIM()`: A Macro to minimize the allocated memory to the minimum necessary value for any data type listed above.
  *
  * \section license_sec License
  *
