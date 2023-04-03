@@ -278,21 +278,21 @@
  * - `trim_string_vector()`: Function to minimize allocated memory to minimum necessary value.
  * - `TRIM()`: A Macro to minimize the allocated memory to the minimum necessary value for any data type listed above.
  *
- * - `replace_char_vector()`: Function to replace a char value at a specific vector index with another.
- * - `replace_uchar_vector()`: Function to replace an unsigned char value at a specific vector index with another.
- * - `replace_short_vector()`: Function to replace a short integer value at a specific vector index with another.
- * - `replace_ushort_vector()`: Function to replace an unsigned short integer value at a specific vector index with another.
- * - `replace_int_vector()`: Function to replace a int value at a specific vector index with another.
- * - `replace_uint_vector()`: Function to replace an unsigned integer value at a specific vector index with another.
- * - `replace_long_vector()`: Function to replace a long int value at a specific vector index with another.
- * - `replace_ulong_vector()`: Function to replace an unsigned long integer value at a specific vector index with another.
- * - `replace_llong_vector()`: Function to replace a long long int value at a specific vector index with another.
- * - `replace_ullong_vector()`: Function to replace an unsigned long long integer value at a specific vector index with another.
- * - `replace_float_vector()`: Function to replace a float value at a specific vector index with another.
- * - `replace_double_vector()`: Function to replace an double value at a specific vector index with another.
- * - `replace_ldouble_vector()`: Function to replace a long double value at a specific vector index with another.
- * - `replace_bool_vector()`: Function to replace an bool value at a specific vector index with another.
- * - `replace_string_vector()`: Function to replace a string value at a specific vector index with another.
+ * - `replace_char_vector_index()`: Function to replace a char value at a specific vector index with another.
+ * - `replace_uchar_vector_index()`: Function to replace an unsigned char value at a specific vector index with another.
+ * - `replace_short_vector_index()`: Function to replace a short integer value at a specific vector index with another.
+ * - `replace_ushort_vector_index()`: Function to replace an unsigned short integer value at a specific vector index with another.
+ * - `replace_int_vector_index()`: Function to replace a int value at a specific vector index with another.
+ * - `replace_uint_vector_index()`: Function to replace an unsigned integer value at a specific vector index with another.
+ * - `replace_long_vector_index()`: Function to replace a long int value at a specific vector index with another.
+ * - `replace_ulong_vector_index()`: Function to replace an unsigned long integer value at a specific vector index with another.
+ * - `replace_llong_vector_index()`: Function to replace a long long int value at a specific vector index with another.
+ * - `replace_ullong_vector_index()`: Function to replace an unsigned long long integer value at a specific vector index with another.
+ * - `replace_float_vector_index()`: Function to replace a float value at a specific vector index with another.
+ * - `replace_double_vector_index()`: Function to replace an double value at a specific vector index with another.
+ * - `replace_ldouble_vector_index()`: Function to replace a long double value at a specific vector index with another.
+ * - `replace_bool_vector_index()`: Function to replace an bool value at a specific vector index with another.
+ * - `replace_string_vector_index()`: Function to replace a string value at a specific vector index with another.
  *
  * \section license_sec License
  *
