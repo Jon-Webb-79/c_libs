@@ -261,6 +261,22 @@
  * - `bool_vector_data()`: Function to retrieve data from a user specified index in a bool integer array or vector.
  * - `string_vector_data()`: Function to retrieve data from a user specified index in a string integer array or vector.
  *
+ * - `trim_char_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_uchar_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_short_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_ushort_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_int_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_uint_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_long_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_ulong_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_llong_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_ullong_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_float_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_double_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_ldouble_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_bool_vector()`: Function to minimize allocated memory to minimum necessary value.
+ * - `trim_string_vector()`: Function to minimize allocated memory to minimum necessary value.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

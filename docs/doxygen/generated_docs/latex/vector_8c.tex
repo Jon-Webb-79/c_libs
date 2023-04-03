@@ -559,6 +559,32 @@ Char \mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{copy\+\_\+cha
 Bool \mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{copy\+\_\+bool\+\_\+vector}} (Bool $\ast$vec)
 \item 
 \mbox{\hyperlink{structString}{String}} \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structString}{String}} $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{trim\+\_\+short\+\_\+vector}} (Short $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{trim\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{trim\+\_\+int\+\_\+vector}} (Int $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{trim\+\_\+uint\+\_\+vector}} (UInt $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{trim\+\_\+long\+\_\+vector}} (LInt $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{trim\+\_\+ulong\+\_\+vector}} (ULInt $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{trim\+\_\+llong\+\_\+vector}} (LLInt $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{trim\+\_\+ullong\+\_\+vector}} (ULLInt $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{trim\+\_\+float\+\_\+vector}} (Flt $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{trim\+\_\+double\+\_\+vector}} (Dble $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{trim\+\_\+char\+\_\+vector}} (Char $\ast$vec)
+\item 
+void \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\+\_\+bool\+\_\+vector}} (Bool $\ast$vec)
 \end{DoxyCompactItemize}
 
 
@@ -12884,6 +12910,344 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l02792}{2792}} of file \mbo
 
 Referenced by \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\+\_\+ushort\+\_\+vector()}}.
 
+\mbox{\Hypertarget{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}\label{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}} 
+\index{vector.c@{vector.c}!trim\_bool\_vector@{trim\_bool\_vector}}
+\index{trim\_bool\_vector@{trim\_bool\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_bool\_vector()}{trim\_bool\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+bool\+\_\+vector (\begin{DoxyParamCaption}\item[{Bool $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type Bool 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04611}{4611}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04611                                  \{}
+\DoxyCodeLine{04612     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{04613     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04614     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04615         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04616     \}}
+\DoxyCodeLine{04617     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04618     vec-\/>array = ptr;}
+\DoxyCodeLine{04619     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04620 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}\label{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}} 
+\index{vector.c@{vector.c}!trim\_char\_vector@{trim\_char\_vector}}
+\index{trim\_char\_vector@{trim\_char\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_char\_vector()}{trim\_char\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type Char 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04599}{4599}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04599                                  \{}
+\DoxyCodeLine{04600     \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{04601     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04602     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04603         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04604     \}}
+\DoxyCodeLine{04605     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04606     vec-\/>array = ptr;}
+\DoxyCodeLine{04607     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04608 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a4a91fca62c49f8628e3efdc3713be344}\label{vector_8c_a4a91fca62c49f8628e3efdc3713be344}} 
+\index{vector.c@{vector.c}!trim\_double\_vector@{trim\_double\_vector}}
+\index{trim\_double\_vector@{trim\_double\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_double\_vector()}{trim\_double\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type Dble 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04575}{4575}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04575                                    \{}
+\DoxyCodeLine{04576     \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{04577     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04578     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04579         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04580     \}}
+\DoxyCodeLine{04581     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04582     vec-\/>array = ptr;}
+\DoxyCodeLine{04583     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04584 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}\label{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}} 
+\index{vector.c@{vector.c}!trim\_float\_vector@{trim\_float\_vector}}
+\index{trim\_float\_vector@{trim\_float\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_float\_vector()}{trim\_float\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type Flt 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04563}{4563}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04563                                  \{}
+\DoxyCodeLine{04564     \textcolor{keywordtype}{float} *ptr = (\textcolor{keywordtype}{float} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{04565     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04566     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04567         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04568     \}}
+\DoxyCodeLine{04569     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04570     vec-\/>array = ptr;}
+\DoxyCodeLine{04571     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04572 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a1365d9e27b0080e8e48d9809987e0824}\label{vector_8c_a1365d9e27b0080e8e48d9809987e0824}} 
+\index{vector.c@{vector.c}!trim\_int\_vector@{trim\_int\_vector}}
+\index{trim\_int\_vector@{trim\_int\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_int\_vector()}{trim\_int\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type Int 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04491}{4491}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04491                                \{}
+\DoxyCodeLine{04492     \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{04493     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04494     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04495         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04496     \}}
+\DoxyCodeLine{04497     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04498     vec-\/>array = ptr;}
+\DoxyCodeLine{04499     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04500 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}\label{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}} 
+\index{vector.c@{vector.c}!trim\_ldouble\_vector@{trim\_ldouble\_vector}}
+\index{trim\_ldouble\_vector@{trim\_ldouble\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_ldouble\_vector()}{trim\_ldouble\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type LDble 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04587}{4587}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04587                                      \{}
+\DoxyCodeLine{04588     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}));}
+\DoxyCodeLine{04589     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04590     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04591         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04592     \}}
+\DoxyCodeLine{04593     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04594     vec-\/>array = ptr;}
+\DoxyCodeLine{04595     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04596 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}\label{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}} 
+\index{vector.c@{vector.c}!trim\_llong\_vector@{trim\_llong\_vector}}
+\index{trim\_llong\_vector@{trim\_llong\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_llong\_vector()}{trim\_llong\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+llong\+\_\+vector (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type LLInt 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04539}{4539}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04539                                    \{}
+\DoxyCodeLine{04540     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04541     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04542     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04543         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04544     \}}
+\DoxyCodeLine{04545     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04546     vec-\/>array = ptr;}
+\DoxyCodeLine{04547     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04548 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}\label{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}} 
+\index{vector.c@{vector.c}!trim\_long\_vector@{trim\_long\_vector}}
+\index{trim\_long\_vector@{trim\_long\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_long\_vector()}{trim\_long\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type LInt 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04515}{4515}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04515                                  \{}
+\DoxyCodeLine{04516     \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04517     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04518     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04519         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04520     \}}
+\DoxyCodeLine{04521     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04522     vec-\/>array = ptr;}
+\DoxyCodeLine{04523     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04524 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_aeec337d3614f9c62cd652fee528e8f10}\label{vector_8c_aeec337d3614f9c62cd652fee528e8f10}} 
+\index{vector.c@{vector.c}!trim\_short\_vector@{trim\_short\_vector}}
+\index{trim\_short\_vector@{trim\_short\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_short\_vector()}{trim\_short\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type Short 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04467}{4467}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04467                                    \{}
+\DoxyCodeLine{04468     \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));}
+\DoxyCodeLine{04469     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04470     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04471         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04472     \}}
+\DoxyCodeLine{04473     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04474     vec-\/>array = ptr;}
+\DoxyCodeLine{04475     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04476 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}\label{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}} 
+\index{vector.c@{vector.c}!trim\_uint\_vector@{trim\_uint\_vector}}
+\index{trim\_uint\_vector@{trim\_uint\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_uint\_vector()}{trim\_uint\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+uint\+\_\+vector (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type UInt 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04503}{4503}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04503                                  \{}
+\DoxyCodeLine{04504     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{04505     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04506     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04507         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04508     \}}
+\DoxyCodeLine{04509     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04510     vec-\/>array = ptr;}
+\DoxyCodeLine{04511     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04512 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_aa2e26e5c689daa0f13844939ead1e484}\label{vector_8c_aa2e26e5c689daa0f13844939ead1e484}} 
+\index{vector.c@{vector.c}!trim\_ullong\_vector@{trim\_ullong\_vector}}
+\index{trim\_ullong\_vector@{trim\_ullong\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_ullong\_vector()}{trim\_ullong\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+ullong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type ULLInt 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04551}{4551}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04551                                      \{}
+\DoxyCodeLine{04552     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04553     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04554     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04555         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04556     \}}
+\DoxyCodeLine{04557     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04558     vec-\/>array = ptr;}
+\DoxyCodeLine{04559     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04560 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}\label{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}} 
+\index{vector.c@{vector.c}!trim\_ulong\_vector@{trim\_ulong\_vector}}
+\index{trim\_ulong\_vector@{trim\_ulong\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_ulong\_vector()}{trim\_ulong\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+ulong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type ULInt 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04527}{4527}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04527                                    \{}
+\DoxyCodeLine{04528     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04529     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04530     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04531         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04532     \}}
+\DoxyCodeLine{04533     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04534     vec-\/>array = ptr;}
+\DoxyCodeLine{04535     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04536 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a394639166d53eacb53725cf548f596db}\label{vector_8c_a394639166d53eacb53725cf548f596db}} 
+\index{vector.c@{vector.c}!trim\_ushort\_vector@{trim\_ushort\_vector}}
+\index{trim\_ushort\_vector@{trim\_ushort\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_ushort\_vector()}{trim\_ushort\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+ushort\+\_\+vector (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec }\end{DoxyParamCaption})}
+
+This function will resize the memory allocated to a dynamically allocated vector to the minimum necessary size.
+
+/param vec A vector struct of type UShort 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04479}{4479}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04479                                      \{}
+\DoxyCodeLine{04480     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}));}
+\DoxyCodeLine{04481     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04482     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04483         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04484     \}}
+\DoxyCodeLine{04485     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04486     vec-\/>array = ptr;}
+\DoxyCodeLine{04487     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04488 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_ac6172e0e9433875fa34c0faaf8647c6c}\label{vector_8c_ac6172e0e9433875fa34c0faaf8647c6c}} 
 \index{vector.c@{vector.c}!uint\_vector\_data@{uint\_vector\_data}}
 \index{uint\_vector\_data@{uint\_vector\_data}!vector.c@{vector.c}}

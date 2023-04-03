@@ -4465,6 +4465,164 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04462}04462 \}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04463}04463 \textcolor{comment}{// ==========================================================================================}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04464}04464 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04465}04465 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04465}04465 \textcolor{comment}{// TRIM\_TYPE\_VECTOR FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04466}04466 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04467}\mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{04467}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{trim\_short\_vector}}(Short *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04468}04468     \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04469}04469     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04470}04470     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04471}04471         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04472}04472     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04473}04473     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04474}04474     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04475}04475     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04476}04476 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04477}04477 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04478}04478 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04479}\mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{04479}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{trim\_ushort\_vector}}(UShort *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04480}04480     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04481}04481     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04482}04482     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04483}04483         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04484}04484     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04485}04485     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04486}04486     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04487}04487     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04488}04488 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04489}04489 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04490}04490 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04491}\mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{04491}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{trim\_int\_vector}}(Int *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04492}04492     \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04493}04493     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04494}04494     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04495}04495         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04496}04496     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04497}04497     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04498}04498     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04499}04499     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04500}04500 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04501}04501 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04502}04502 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04503}\mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{04503}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{trim\_uint\_vector}}(UInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04504}04504     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04505}04505     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04506}04506     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04507}04507         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04508}04508     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04509}04509     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04510}04510     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04511}04511     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04512}04512 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04513}04513 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04514}04514 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04515}\mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{04515}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{trim\_long\_vector}}(LInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04516}04516     \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04517}04517     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04518}04518     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04519}04519         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04520}04520     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04521}04521     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04522}04522     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04523}04523     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04524}04524 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04525}04525 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04526}04526 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04527}\mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{04527}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{trim\_ulong\_vector}}(ULInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04528}04528     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04529}04529     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04530}04530     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04531}04531         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04532}04532     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04533}04533     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04534}04534     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04535}04535     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04536}04536 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04537}04537 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04538}04538 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04539}\mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{04539}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{trim\_llong\_vector}}(LLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04540}04540     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04541}04541     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04542}04542     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04543}04543         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04544}04544     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04545}04545     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04546}04546     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04547}04547     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04548}04548 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04549}04549 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04550}04550 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04551}\mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{04551}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{trim\_ullong\_vector}}(ULLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04552}04552     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04553}04553     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04554}04554     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04555}04555         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04556}04556     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04557}04557     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04558}04558     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04559}04559     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04560}04560 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04561}04561 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04562}04562 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04563}\mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{04563}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{trim\_float\_vector}}(Flt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04564}04564     \textcolor{keywordtype}{float} *ptr = (\textcolor{keywordtype}{float} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04565}04565     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04566}04566     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04567}04567         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04568}04568     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04569}04569     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04570}04570     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04571}04571     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04572}04572 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04573}04573 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04574}04574 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04575}\mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{04575}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{trim\_double\_vector}}(Dble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04576}04576     \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04577}04577     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04578}04578     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04579}04579         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04580}04580     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04581}04581     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04582}04582     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04583}04583     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04584}04584 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04585}04585 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04586}04586 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04587}\mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{04587}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\_ldouble\_vector}}(LDble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04588}04588     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04589}04589     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04590}04590     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04591}04591         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04592}04592     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04593}04593     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04594}04594     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04595}04595     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04596}04596 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04597}04597 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04598}04598 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04599}\mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{04599}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{trim\_char\_vector}}(Char *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04600}04600     \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04601}04601     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04602}04602     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04603}04603         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04604}04604     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04605}04605     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04606}04606     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04607}04607     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04608}04608 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04609}04609 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04610}04610 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04611}\mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{04611}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04612}04612     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04613}04613     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04614}04614     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04615}04615         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04616}04616     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04617}04617     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04618}04618     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04619}04619     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04620}04620 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04621}04621 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04622}04622 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04623}04623 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

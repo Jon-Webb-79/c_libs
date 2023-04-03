@@ -4462,4 +4462,162 @@ String copy_string_vector(String *vec) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TRIM_TYPE_VECTOR FUNCTIONS
+
+void trim_short_vector(Short *vec) {
+	short *ptr = (short *)realloc(vec->array, vec->active_length * sizeof(short));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_ushort_vector(UShort *vec) {
+	unsigned short *ptr = (unsigned short *)realloc(vec->array, vec->active_length * sizeof(unsigned short));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_int_vector(Int *vec) {
+	int *ptr = (int *)realloc(vec->array, vec->active_length * sizeof(int));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_uint_vector(UInt *vec) {
+	unsigned int *ptr = (unsigned int *)realloc(vec->array, vec->active_length * sizeof(unsigned int));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_long_vector(LInt *vec) {
+	long *ptr = (long *)realloc(vec->array, vec->active_length * sizeof(long));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_ulong_vector(ULInt *vec) {
+	unsigned long *ptr = (unsigned long *)realloc(vec->array, vec->active_length * sizeof(unsigned long));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_llong_vector(LLInt *vec) {
+	long long *ptr = (long long *)realloc(vec->array, vec->active_length * sizeof(long long));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_ullong_vector(ULLInt *vec) {
+	unsigned long long *ptr = (unsigned long long *)realloc(vec->array, vec->active_length * sizeof(unsigned long long));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_float_vector(Flt *vec) {
+	float *ptr = (float *)realloc(vec->array, vec->active_length * sizeof(float));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_double_vector(Dble *vec) {
+	double *ptr = (double *)realloc(vec->array, vec->active_length * sizeof(double));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_ldouble_vector(LDble *vec) {
+	long double *ptr = (long double *)realloc(vec->array, vec->active_length * sizeof(long double));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_char_vector(Char *vec) {
+	char *ptr = (char *)realloc(vec->array, vec->active_length * sizeof(char));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// --------------------------------------------------------------------------------
+
+void trim_bool_vector(Bool *vec) {
+	bool *ptr = (bool *)realloc(vec->array, vec->active_length * sizeof(bool));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

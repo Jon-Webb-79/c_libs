@@ -5608,6 +5608,125 @@ bool bool_vector_data(Bool *vec, size_t index);
  * @endcode
  */
 char* string_vector_data(String *vec, size_t index);
+// ==========================================================================================
+// ==========================================================================================
+// TRIM_TYPE_VECTOR FUNCTIONS
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type Short
+ */
+void trim_short_vector(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type UShort
+ */
+void trim_ushort_vector(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type Int
+ */
+void trim_int_vector(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type UInt
+ */
+void trim_uint_vector(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type LInt
+ */
+void trim_long_vector(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type ULInt
+ */
+void trim_ulong_vector(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type LLInt
+ */
+void trim_llong_vector(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type ULLInt
+ */
+void trim_ullong_vector(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type Flt
+ */
+void trim_float_vector(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type Dble
+ */
+void trim_double_vector(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type LDble
+ */
+void trim_ldouble_vector(LDble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type Char
+ */
+void trim_char_vector(Char *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type Bool
+ */
+void trim_bool_vector(Bool *vec);
  // ==========================================================================================
  // ==========================================================================================
 #endif /* vector_H */
