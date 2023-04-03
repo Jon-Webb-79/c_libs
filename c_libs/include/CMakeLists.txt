@@ -14,6 +14,10 @@
 add_library(include
     swap.c
 	swap.h
+	vector.c
+	vector.h
+	data_structures.c
+	data_structures.h
 )
 
 target_include_directories(include PUBLIC .)

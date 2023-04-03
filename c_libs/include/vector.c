@@ -742,6 +742,39 @@ int push_char_vector(Char *vec, char value, size_t index) {
 }
 // ------------------------------------------------------------------------------------------
 
+int push_uchar_vector(UChar *vec, unsigned char value, size_t index) {
+	if (index >= vec->active_length + 1) {
+		fprintf(stderr, "Index in fsize_tile %s on line %d is out of bounds\n", __FILE__, __LINE__);
+		return -1;
+	}
+	if ((vec->active_length + 1 > vec->allocated_length) && vec->dat_type == STATIC) {
+		fprintf(stderr, "Cannont extend static array allocation in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	// Allocate memory if necessary
+	if ((vec->active_length + 1 > vec->allocated_length) && vec->dat_type == DYNAMIC) {
+		size_t size = (vec->active_length + 1) * 2;
+		unsigned char *ptr = (unsigned char *)realloc(vec->array, size * sizeof(unsigned char));
+		// Verify that sufficient memory exists
+		if (ptr == NULL) {
+			fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+			free(ptr);
+			return -1;
+		}
+		// allocate memory
+		vec->array = ptr;
+		vec->allocated_length = size;
+	}
+	// Add variables and update metadata
+	memmove(((unsigned char *)vec->array) + (index + 1) * sizeof(unsigned char),
+			((unsigned char *)vec->array) + index * sizeof(unsigned char),
+			(vec->active_length - index) * sizeof(unsigned char));
+	vec->array[index] = value;
+	vec->active_length += 1;
+	return 1;
+}
+// ------------------------------------------------------------------------------------------
+
 int push_bool_vector(Bool *vec, bool value, size_t index) {
 	if (index >= vec->active_length + 1) {
 		fprintf(stderr, "Index in fsize_tile %s on line %d is out of bounds\n", __FILE__, __LINE__);

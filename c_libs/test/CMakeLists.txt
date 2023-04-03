@@ -18,6 +18,8 @@ add_executable(
   unit_test.c
   test_swap.c
   test_swap.h
+  test_vector.c
+  test_vector.h
 )
 target_link_libraries(
   unit_tests

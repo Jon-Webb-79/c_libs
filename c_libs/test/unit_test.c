@@ -20,6 +20,7 @@
 #include <cmocka.h>
 
 #include "test_swap.h"
+#include "test_vector.h"
 
 // Begin code
 int main(int argc, const char * argv[]) {
@@ -36,7 +37,8 @@ int main(int argc, const char * argv[]) {
 		cmocka_unit_test(test_swap_double),
 		cmocka_unit_test(test_swap_ldouble),
 		cmocka_unit_test(test_swap_char),
-		cmocka_unit_test(test_swap_bool)
+		cmocka_unit_test(test_swap_bool),
+		cmocka_unit_test(test_push_short)
 	};
 	return cmocka_run_group_tests(test_swap, NULL, NULL);
 }

@@ -105,6 +105,56 @@
 										                 Char: insert_char_vector, \
 														 UChar: insert_uchar_vector, \
 														 Bool: insert_bool_vector)(&T, elements, num_ind, index)
+// ==========================================================================================
+// ==========================================================================================
+// INSERT GENERIC OPERATOR
+
+/*
+ * This macro will insert an array of data into a vector container.  In addition, this
+ * function can also be used to push a scalar variable to a vector container at a user
+ * defined index.  While the user can insert a scalar or an array to any desired
+ * index, the function will run fastest when data is inserted at the next available
+ * index.  This macro only selects the correct function to execute the operation based
+ * on data type.  Therefore this macro does not increase memory usage, nor does it
+ * decrease code execution time.
+ *
+ * /param vec A vector struct container
+ * /param elements The array containing elements to be inserted
+ * /param num_ind The number of indices occupied by elements
+ * /param index The index where the array is to be submitted
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 8);
+ * PUSH(vec, 1, vec.active_length);
+ * PUSH(vec, 2, vec.active_length);
+ * PUSH(vec, 3, vec.active_length);
+ * PUSH(vec, 4, vec.active_length);
+ * PUSH(vec, 5, vec.active_length);
+ * int a[3] = {10, 9, 8}
+ * INSERT(vec, a, 3, 2);
+ * PRINT(vec);
+ * // [ 1, 2, 10, 9, 8, 3, 4, 5 ]
+ * @endcode
+ */
+#define FREE(T) _Generic( (T), Short: free_short_vector, \
+							   UShort: free_ushort_vector, \
+							   Int: free_int_vector, \
+							   UInt: free_uint_vector, \
+							   LInt: free_long_vector, \
+							   ULInt: free_ulong_vector, \
+							   LLInt: free_llong_vector, \
+							   ULLInt: free_ullong_vector, \
+							   Flt: free_float_vector, \
+							   Dble: free_double_vector, \
+							   LDble: free_ldouble_vector, \
+							   Char: free_char_vector, \
+							   UChar: free_uchar_vector, \
+							   Bool: free_bool_vector, \
+							   String: free_string_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+
 #endif /* data_structures_H */
 // ================================================================================
 // ================================================================================

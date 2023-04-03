@@ -5726,7 +5726,7 @@ void trim_char_vector(Char *vec);
  *
  * /param vec A vector struct of type UChar
  */
-void trim_char_vector(UChar *vec);
+void trim_uchar_vector(UChar *vec);
 // --------------------------------------------------------------------------------
 
 /**
