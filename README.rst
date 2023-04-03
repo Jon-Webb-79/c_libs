@@ -170,6 +170,32 @@ the above exampl is re-written as;
    // >> [ four, One, Two, Five ]
    FREE(vec);
 
+Insert
+======
+The ``INSERT(dtype vec, type *array, size_t size, size_t index)`` macro can be used to insert an ``array``,
+of length ``size`` to a specific ``index``
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   // Equivalent to init_float_vector(&vec, 20);
+   INIT_VECTOR(vec, 20);
+   // Equivalent to push_float_vector(&vec, 1, vec.active_length)
+   PUSH(vec, 1.1, vec.active_length);
+   PUSH(vec, 2.2, vec.active_length);
+   PUSH(vec, 5.5, vec.active_length);
+   PUSH(vec, 4.4, 0);
+   float a[4] = {10.9, 9.8, 8.7, 7.6};
+   INSERT(vec, a, 4, 2);
+   PRINT(vec);
+   // >> [ 4.4, 1.1, 10.9, 9.8, 8.7, 7.6, 2.2, 5.5 ]
+   FREE(vec);
+
+
 =====
 PRINT
 =====
