@@ -57,7 +57,7 @@ data type in memory.  Examples are shown below.
    int a = 3;
    int b = 4;
    // Macro below same as swap_int(&a, &b)
-   SWAP(a, b)
+   SWAP(a, b);
    printf("%d\n", a);
    printf("%d\n", b);
    // >> 4
@@ -65,7 +65,7 @@ data type in memory.  Examples are shown below.
 
    float c = 4.3;
    float e = 2.2;
-   // Macro below same as swap_float(*d, &e)
+   // Macro below same as swap_float(&d, &e)
    SWAP(c, e);
    printf("%f\n", d);
    printf("%f\n", e);
