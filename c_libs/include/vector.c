@@ -4302,4 +4302,164 @@ void range_ldouble_vector(LDble *vec, long double start, long double end,
 }
 // ==========================================================================================
 // ==========================================================================================
+// TYPE_VECTOR_DATA FUNCTIONS
+
+short int short_vector_data(Short *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+unsigned short int ushort_vector_data(UShort *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+int int_vector_data(Int *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+unsigned int uint_vector_data(UInt *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+long int long_vector_data(LInt *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+unsigned long int ulong_vector_data(ULInt *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+long long int llong_vector_data(LLInt *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+unsigned long long int ullong_vector_data(ULLInt *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+float float_vector_data(Flt *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+double double_vector_data(Dble *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+long double ldouble_vector_data(LDble *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+char char_vector_data(Char *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+bool bool_vector_data(Bool *vec, size_t index) { return vec->array[index]; }
+// --------------------------------------------------------------------------------
+
+char* string_vector_data(String *vec, size_t index) { return vec->array[index]; }
+// ==========================================================================================
+// ==========================================================================================
+// COPY_TYPE_VECTOR FUNCTIONS
+
+Short copy_short_vector(Short *vec) {
+	Short new_vec;
+	init_short_vector(&new_vec, vec->active_length);
+	insert_short_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+UShort copy_ushort_vector(UShort *vec) {
+	UShort new_vec;
+	init_ushort_vector(&new_vec, vec->active_length);
+	insert_ushort_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Int copy_int_vector(Int *vec) {
+	Int new_vec;
+	init_int_vector(&new_vec, vec->active_length);
+	insert_int_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+UInt copy_uint_vector(UInt *vec) {
+	UInt new_vec;
+	init_uint_vector(&new_vec, vec->active_length);
+	insert_uint_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+LInt copy_long_vector(LInt *vec) {
+	LInt new_vec;
+	init_long_vector(&new_vec, vec->active_length);
+	insert_long_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+ULInt copy_ulong_vector(ULInt *vec) {
+	ULInt new_vec;
+	init_ulong_vector(&new_vec, vec->active_length);
+	insert_ulong_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+LLInt copy_llong_vector(LLInt *vec) {
+	LLInt new_vec;
+	init_llong_vector(&new_vec, vec->active_length);
+	insert_llong_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+ULLInt copy_ullong_vector(ULLInt *vec) {
+	ULLInt new_vec;
+	init_ullong_vector(&new_vec, vec->active_length);
+	insert_ullong_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Flt copy_float_vector(Flt *vec) {
+	Flt new_vec;
+	init_float_vector(&new_vec, vec->active_length);
+	insert_float_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Dble copy_double_vector(Dble *vec) {
+	Dble new_vec;
+	init_double_vector(&new_vec, vec->active_length);
+	insert_double_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+LDble copy_ldouble_vector(LDble *vec) {
+	LDble new_vec;
+	init_ldouble_vector(&new_vec, vec->active_length);
+	insert_ldouble_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Char copy_char_vector(Char *vec) {
+	Char new_vec;
+	init_char_vector(&new_vec, vec->active_length);
+	insert_char_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+Bool copy_bool_vector(Bool *vec) {
+	Bool new_vec;
+	init_bool_vector(&new_vec, vec->active_length);
+	insert_bool_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
+// --------------------------------------------------------------------------------
+
+String copy_string_vector(String *vec) {
+	String new_vec;
+	init_string_vector(&new_vec);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_string_vector(&new_vec, vec->array[i], new_vec.active_length);
+	}
+	return new_vec;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

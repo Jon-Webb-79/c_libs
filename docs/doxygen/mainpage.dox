@@ -245,6 +245,22 @@
  * - `range_double_vector()`: Function to produce a range of double values as a vector.
  * - `range_ldouble_vector()`: Function to produce a range of long double values as a vector.
  *
+ * - `char_vector_data()`: Function to retrieve data from a user specified index in a char array or vector.
+ * - `uchar_vector_data()`: Function to retrieve data from a user specified index in a unsigned char array or vector.
+ * - `short_vector_data()`: Function to retrieve data from a user specified index in a short array or vector.
+ * - `ushort_vector_data()`: Function to retrieve data from a user specified index in a unsigned short array or vector.
+ * - `int_vector_data()`: Function to retrieve data from a user specified index in an integer array or vector.
+ * - `uint_vector_data()`: Function to retrieve data from a user specified index in a unsigned integer char array or vector.
+ * - `long_vector_data()`: Function to retrieve data from a user specified index in a long integer array or vector.
+ * - `ulong_vector_data()`: Function to retrieve data from a user specified index in a unsigned long integer array or vector.
+ * - `llong_vector_data()`: Function to retrieve data from a user specified index in a long long integer array or vector.
+ * - `ullong_vector_data()`: Function to retrieve data from a user specified index in a unsigned long long integer array or vector.
+ * - `float_vector_data()`: Function to retrieve data from a user specified index in a float array or vector.
+ * - `double_vector_data()`: Function to retrieve data from a user specified index in a double integer array or vector.
+ * - `ldouble_vector_data()`: Function to retrieve data from a user specified index in a long double array or vector.
+ * - `bool_vector_data()`: Function to retrieve data from a user specified index in a bool integer array or vector.
+ * - `string_vector_data()`: Function to retrieve data from a user specified index in a string integer array or vector.
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

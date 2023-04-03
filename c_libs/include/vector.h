@@ -2623,7 +2623,6 @@ void delete_bool_vector_duplicates(Bool *vec);
  * @endcode
  */
 void delete_string_vector_duplicates(String *vec);
-#endif /* vector_H */
 // ==========================================================================================
 // ==========================================================================================
 // REVERSE_TYPE_VEC FUCNTIONS
@@ -5190,14 +5189,426 @@ void range_double_vector(Dble *vec, double start, double end, double delta);
  *
  * @code
  * LDble vec;
- * init_ldouble_vector(&vec, 10);
+ * init_ldouble_vector(&vec, 10)
  * range_ldouble_vector(&vec, 2, 20, 2);
  * PRINT(vec);
  * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
  * free_ldouble_vector(&vec);
  * @endcode
  */
-void range_ldouble_vector(LDble *vec, long double start, long double end, long double delta);
+ void range_double_vector(Dble *vec, double start, double end, double delta);
 // ==========================================================================================
 // ==========================================================================================
+// COPY_TYPE_VECTOR FUNCTIONS
+
+/**
+ * This function will create and return a deep copy of an Short struct
+ *
+ * /param vec A vector struct of type Short
+ */
+Short copy_short_vector(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an UShort struct
+ *
+ * /param vec A vector struct of type UShort
+ */
+UShort copy_ushort_vector(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an Int struct
+ *
+ * /param vec A vector struct of type Int
+ */
+Int copy_int_vector(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an UInt struct
+ *
+ * /param vec A vector struct of type UInt
+ */
+UInt copy_uint_vector(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an LInt struct
+ *
+ * /param vec A vector struct of type LInt
+ */
+LInt copy_long_vector(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an ULInt struct
+ *
+ * /param vec A vector struct of type ULInt
+ */
+ULInt copy_ulong_vector(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an LLInt struct
+ *
+ * /param vec A vector struct of type LLInt
+ */
+LLInt copy_llong_vector(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an ULLInt struct
+ *
+ * /param vec A vector struct of type ULLInt
+ */
+ULLInt copy_ullong_vector(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an Flt struct
+ *
+ * /param vec A vector struct of type Flt
+ */
+Flt copy_float_vector(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an Dble struct
+ *
+ * /param vec A vector struct of type Dble
+ */
+Dble copy_double_vector(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an LDble struct
+ *
+ * /param vec A vector struct of type LDble
+ */
+LDble copy_ldouble_vector(LDble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an Char struct
+ *
+ * /param vec A vector struct of type Char
+ */
+Char copy_char_vector(Char *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an Bool struct
+ *
+ * /param vec A vector struct of type Bool
+ */
+Bool copy_bool_vector(Bool *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an String struct
+ *
+ * /param vec A vector struct of type String
+ */
+String copy_string_vector(String *vec);
+// ==========================================================================================
+// ==========================================================================================
+// TYPE_VECTOR_DATA FUNCTIONS
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type Short
+ *
+ * /param vec A linked list struct of type Short
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_vector(&vec, a, 5, 0);
+ * PRINT(short_vector_data(&vec, 2));
+ * // >> 3
+ * free_short_vector(&vec);
+ * @endcode
+ */
+short short_vector_data(Short *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type UShort
+ *
+ * /param vec A linked list struct of type UShort
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * PRINT(ushort_vector_data(&vec, 2));
+ * // >> 3
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+unsigned short int ushort_vector_data(UShort *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type Int
+ *
+ * /param vec A linked list struct of type Int
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_vector(&vec, a, 5, 0);
+ * PRINT(int_vector_data(&vec, 2));
+ * // >> 3
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int int_vector_data(Int *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type UInt
+ *
+ * /param vec A linked list struct of type UInt
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * PRINT(uint_vector_data(&vec, 2));
+ * // >> 3
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+unsigned int uint_vector_data(UInt *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type LInt
+ *
+ * /param vec A linked list struct of type LInt
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_vector(&vec, a, 5, 0);
+ * PRINT(long_vector_data(&vec, 2));
+ * // >> 3
+ * free_long_vector(&vec);
+ * @endcode
+ */
+long int long_vector_data(LInt *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type ULInt
+ *
+ * /param vec A linked list struct of type ULInt
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * PRINT(ulong_vector_data(&vec, 2));
+ * // >> 3
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+unsigned long int ulong_vector_data(ULInt *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type LLInt
+ *
+ * /param vec A linked list struct of type LLInt
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * PRINT(llong_vector_data(&vec, 2));
+ * // >> 3
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+long long int llong_vector_data(LLInt *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type ULLInt
+ *
+ * /param vec A linked list struct of type ULLInt
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * PRINT(ullong_vector_data(&vec, 2));
+ * // >> 3
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+unsigned long long int ullong_vector_data(ULLInt *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type Flt
+ *
+ * /param vec A linked list struct of type Flt
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec);
+ * float a[5] = {1, 2, 3, 4, 5};
+ * insert_float_vector(&vec, a, 5, 0);
+ * PRINT(float_vector_data(&vec, 2));
+ * // >> 3.000
+ * free_float_vector(&vec);
+ * @endcode
+ */
+float float_vector_data(Flt *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type Dble
+ *
+ * /param vec A linked list struct of type Dble
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec);
+ * double a[5] = {1, 2, 3, 4, 5};
+ * insert_double_vector(&vec, a, 5, 0);
+ * PRINT(double_vector_data(&vec, 2));
+ * // >> 3.000
+ * free_double_vector(&vec);
+ * @endcode
+ */
+double double_vector_data(Dble *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type LDble
+ *
+ * /param vec A linked list struct of type LDble
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec);
+ * long double a[5] = {1, 2, 3, 4, 5};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * PRINT(ldouble_vector_data(&vec, 2));
+ * // >> 3.000
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+long double ldouble_vector_data(LDble *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type Char
+ *
+ * /param vec A linked list struct of type Char
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec);
+ * char a[5] = {'a', 'b', 'c', 'd', 'e'};
+ * insert_char_vector(&vec, a, 5, 0);
+ * PRINT(char_vector_data(&vec, 2));
+ * // >> c
+ * free_char_vector(&vec);
+ * @endcode
+ */
+char char_vector_data(Char *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type Bool
+ *
+ * /param vec A linked list struct of type Bool
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * Bool vec;
+ * init_bool_vector(&vec);
+ * bool a[5] = {true, true, false, false, true};
+ * insert_bool_vector(&vec, a, 5, 0);
+ * PRINT(bool_vector_data(&vec, 2));
+ * // >> false
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+bool bool_vector_data(Bool *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type String
+ *
+ * /param vec A linked list struct of type String
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * String vec;
+ * init_string_vector(&vec);
+ * push_string_vector(&vec, "One", 0);
+ * push_string_vector(&vec, "Two", 1);
+ * push_string_vector(&vec, "Three", 2);
+ * PRINT(string_vector_data(&vec, 2));
+ * // >> Three
+ * free_string_vector(&vec);
+ * @endcode
+ */
+char* string_vector_data(String *vec, size_t index);
+ // ==========================================================================================
+ // ==========================================================================================
+#endif /* vector_H */
 // eof
