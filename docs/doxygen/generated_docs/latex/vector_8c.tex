@@ -584,7 +584,39 @@ void \mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\+\_\+ldo
 \item 
 void \mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{trim\+\_\+char\+\_\+vector}} (Char $\ast$vec)
 \item 
+void \mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{trim\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
+\item 
 void \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\+\_\+bool\+\_\+vector}} (Bool $\ast$vec)
+\item 
+int \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\+\_\+short\+\_\+vector\+\_\+index}} (Short $\ast$vec, short int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\+\_\+ushort\+\_\+vector\+\_\+index}} (UShort $\ast$vec, unsigned short int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\+\_\+int\+\_\+vector\+\_\+index}} (Int $\ast$vec, int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\+\_\+uint\+\_\+vector\+\_\+index}} (UInt $\ast$vec, unsigned int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\+\_\+long\+\_\+vector\+\_\+index}} (LInt $\ast$vec, long int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\+\_\+ulong\+\_\+vector\+\_\+index}} (ULInt $\ast$vec, unsigned long int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\+\_\+llong\+\_\+vector\+\_\+index}} (LLInt $\ast$vec, long long int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\+\_\+ullong\+\_\+vector\+\_\+index}} (ULLInt $\ast$vec, unsigned long long int new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\+\_\+float\+\_\+vector\+\_\+index}} (Flt $\ast$vec, float new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\+\_\+double\+\_\+vector\+\_\+index}} (Dble $\ast$vec, double new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\+\_\+ldouble\+\_\+vector\+\_\+index}} (LDble $\ast$vec, long double new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\+\_\+char\+\_\+vector\+\_\+index}} (Char $\ast$vec, char new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\+\_\+uchar\+\_\+vector\+\_\+index}} (UChar $\ast$vec, unsigned char new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\+\_\+bool\+\_\+vector\+\_\+index}} (Bool $\ast$vec, bool new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{replace\+\_\+string\+\_\+vector\+\_\+index}} (\mbox{\hyperlink{structString}{String}} $\ast$vec, char $\ast$new\+\_\+value, size\+\_\+t index)
 \end{DoxyCompactItemize}
 
 
@@ -9207,6 +9239,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l04199}{4199}} of file \mbo
 
 References \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\+\_\+ushort\+\_\+vector()}}.
 
+\mbox{\Hypertarget{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}\label{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}} 
+\index{vector.c@{vector.c}!replace\_bool\_vector\_index@{replace\_bool\_vector\_index}}
+\index{replace\_bool\_vector\_index@{replace\_bool\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_bool\_vector\_index()}{replace\_bool\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+bool\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{Bool $\ast$}]{vec,  }\item[{bool}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type Bool /param new\+\_\+value The replacement value of type bool /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Bool vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{bool} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5783a319298af13236def83e42f00799}{free\_bool\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04767}{4767}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04767                                                                        \{}
+\DoxyCodeLine{04768     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04769         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04770         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04771     \}}
+\DoxyCodeLine{04772     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04773     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04774 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_ab345b0d10cef3cb87e552791440398e9}\label{vector_8c_ab345b0d10cef3cb87e552791440398e9}} 
 \index{vector.c@{vector.c}!replace\_bool\_vector\_values@{replace\_bool\_vector\_values}}
 \index{replace\_bool\_vector\_values@{replace\_bool\_vector\_values}!vector.c@{vector.c}}
@@ -9243,6 +9313,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01604}{1604}} of file \mbo
 \DoxyCodeLine{01606         \textcolor{keywordflow}{if} (vec-\/>array[i] == old\_value) vec-\/>array[i] = new\_value;}
 \DoxyCodeLine{01607     \}}
 \DoxyCodeLine{01608 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}\label{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}} 
+\index{vector.c@{vector.c}!replace\_char\_vector\_index@{replace\_char\_vector\_index}}
+\index{replace\_char\_vector\_index@{replace\_char\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_char\_vector\_index()}{replace\_char\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+char\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec,  }\item[{char}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type Char /param new\+\_\+value The replacement value of type char /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Char vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{char} a[5] = \{\textcolor{charliteral}{'a'}, \textcolor{charliteral}{'b'}, \textcolor{charliteral}{'c'}, \textcolor{charliteral}{'d'}\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}}(\&vec, \textcolor{charliteral}{'q'}, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ a, b, q, d ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04747}{4747}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04747                                                                        \{}
+\DoxyCodeLine{04748     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04749         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04750         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04751     \}}
+\DoxyCodeLine{04752     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04753     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04754 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a8b7c3baf36c7ef6deca8011f2d622119}\label{vector_8c_a8b7c3baf36c7ef6deca8011f2d622119}} 
@@ -9283,6 +9391,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01590}{1590}} of file \mbo
 \DoxyCodeLine{01594 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}\label{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}} 
+\index{vector.c@{vector.c}!replace\_double\_vector\_index@{replace\_double\_vector\_index}}
+\index{replace\_double\_vector\_index@{replace\_double\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_double\_vector\_index()}{replace\_double\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+double\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec,  }\item[{double}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type Dble /param new\+\_\+value The replacement value of type unsigned double /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Dble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04727}{4727}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04727                                                                            \{}
+\DoxyCodeLine{04728     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04729         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04730         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04731     \}}
+\DoxyCodeLine{04732     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04733     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04734 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a141f86441673f219db9af026644dee3e}\label{vector_8c_a141f86441673f219db9af026644dee3e}} 
 \index{vector.c@{vector.c}!replace\_double\_vector\_values@{replace\_double\_vector\_values}}
 \index{replace\_double\_vector\_values@{replace\_double\_vector\_values}!vector.c@{vector.c}}
@@ -9319,6 +9465,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01576}{1576}} of file \mbo
 \DoxyCodeLine{01578         \textcolor{keywordflow}{if} (vec-\/>array[i] == old\_value) vec-\/>array[i] = new\_value;}
 \DoxyCodeLine{01579     \}}
 \DoxyCodeLine{01580 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a9a562517abca96c42b1b9fe69469915f}\label{vector_8c_a9a562517abca96c42b1b9fe69469915f}} 
+\index{vector.c@{vector.c}!replace\_float\_vector\_index@{replace\_float\_vector\_index}}
+\index{replace\_float\_vector\_index@{replace\_float\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_float\_vector\_index()}{replace\_float\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+float\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec,  }\item[{float}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type Flt /param new\+\_\+value The replacement value of type float /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Flt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04717}{4717}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04717                                                                         \{}
+\DoxyCodeLine{04718     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04719         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04720         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04721     \}}
+\DoxyCodeLine{04722     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04723     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04724 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_aafe1e760a31236df3e8d9b5d4fedf79e}\label{vector_8c_aafe1e760a31236df3e8d9b5d4fedf79e}} 
@@ -9359,6 +9543,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01569}{1569}} of file \mbo
 \DoxyCodeLine{01573 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}\label{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}} 
+\index{vector.c@{vector.c}!replace\_int\_vector\_index@{replace\_int\_vector\_index}}
+\index{replace\_int\_vector\_index@{replace\_int\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_int\_vector\_index()}{replace\_int\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+int\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec,  }\item[{int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type Int /param new\+\_\+value The replacement value of type int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04657}{4657}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04657                                                                     \{}
+\DoxyCodeLine{04658     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04659         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04660         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04661     \}}
+\DoxyCodeLine{04662     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04663     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04664 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a7670474ec5b862ec981a62daa995aa3b}\label{vector_8c_a7670474ec5b862ec981a62daa995aa3b}} 
 \index{vector.c@{vector.c}!replace\_int\_vector\_values@{replace\_int\_vector\_values}}
 \index{replace\_int\_vector\_values@{replace\_int\_vector\_values}!vector.c@{vector.c}}
@@ -9395,6 +9617,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01527}{1527}} of file \mbo
 \DoxyCodeLine{01529         \textcolor{keywordflow}{if} (vec-\/>array[i] == old\_value) vec-\/>array[i] = new\_value;}
 \DoxyCodeLine{01530     \}}
 \DoxyCodeLine{01531 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}\label{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}} 
+\index{vector.c@{vector.c}!replace\_ldouble\_vector\_index@{replace\_ldouble\_vector\_index}}
+\index{replace\_ldouble\_vector\_index@{replace\_ldouble\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_ldouble\_vector\_index()}{replace\_ldouble\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+ldouble\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec,  }\item[{long double}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type LDble /param new\+\_\+value The replacement value of type long double /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LDble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 5);}
+\DoxyCodeLine{ldouble a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04737}{4737}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04737                                                                                   \{}
+\DoxyCodeLine{04738     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04739         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04740         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04741     \}}
+\DoxyCodeLine{04742     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04743     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04744 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a344c029c451a00a0a90e20b34569db22}\label{vector_8c_a344c029c451a00a0a90e20b34569db22}} 
@@ -9435,6 +9695,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01583}{1583}} of file \mbo
 \DoxyCodeLine{01587 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}\label{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}} 
+\index{vector.c@{vector.c}!replace\_llong\_vector\_index@{replace\_llong\_vector\_index}}
+\index{replace\_llong\_vector\_index@{replace\_llong\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_llong\_vector\_index()}{replace\_llong\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+llong\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec,  }\item[{long long int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type LLInt /param new\+\_\+value The replacement value of type long long int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04697}{4697}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04697                                                                                   \{}
+\DoxyCodeLine{04698     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04699         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04700         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04701     \}}
+\DoxyCodeLine{04702     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04703     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04704 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a6fbef65375cd1143dadb2045d4a4cc82}\label{vector_8c_a6fbef65375cd1143dadb2045d4a4cc82}} 
 \index{vector.c@{vector.c}!replace\_llong\_vector\_values@{replace\_llong\_vector\_values}}
 \index{replace\_llong\_vector\_values@{replace\_llong\_vector\_values}!vector.c@{vector.c}}
@@ -9471,6 +9769,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01555}{1555}} of file \mbo
 \DoxyCodeLine{01557         \textcolor{keywordflow}{if} (vec-\/>array[i] == old\_value) vec-\/>array[i] = new\_value;}
 \DoxyCodeLine{01558     \}}
 \DoxyCodeLine{01559 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}\label{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}} 
+\index{vector.c@{vector.c}!replace\_long\_vector\_index@{replace\_long\_vector\_index}}
+\index{replace\_long\_vector\_index@{replace\_long\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_long\_vector\_index()}{replace\_long\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+long\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec,  }\item[{long int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type LInt /param new\+\_\+value The replacement value of type long int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04677}{4677}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04677                                                                            \{}
+\DoxyCodeLine{04678     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04679         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04680         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04681     \}}
+\DoxyCodeLine{04682     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04683     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04684 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a8f344f297fe759011551c5f2bb5e0161}\label{vector_8c_a8f344f297fe759011551c5f2bb5e0161}} 
@@ -9511,6 +9847,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01541}{1541}} of file \mbo
 \DoxyCodeLine{01545 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}\label{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}} 
+\index{vector.c@{vector.c}!replace\_short\_vector\_index@{replace\_short\_vector\_index}}
+\index{replace\_short\_vector\_index@{replace\_short\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_short\_vector\_index()}{replace\_short\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+short\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec,  }\item[{short int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type Short /param new\+\_\+value The replacement value of type short int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Short vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04637}{4637}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04637                                                                               \{}
+\DoxyCodeLine{04638     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04639         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04640         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04641     \}}
+\DoxyCodeLine{04642     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04643     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04644 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a6f10b6c383f01d0f64ccdbedcbf2f9c6}\label{vector_8c_a6f10b6c383f01d0f64ccdbedcbf2f9c6}} 
 \index{vector.c@{vector.c}!replace\_short\_vector\_values@{replace\_short\_vector\_values}}
 \index{replace\_short\_vector\_values@{replace\_short\_vector\_values}!vector.c@{vector.c}}
@@ -9549,6 +9923,50 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01513}{1513}} of file \mbo
 \DoxyCodeLine{01517 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}\label{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}} 
+\index{vector.c@{vector.c}!replace\_string\_vector\_index@{replace\_string\_vector\_index}}
+\index{replace\_string\_vector\_index@{replace\_string\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_string\_vector\_index()}{replace\_string\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+string\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structString}{String}} $\ast$}]{vec,  }\item[{char $\ast$}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type \mbox{\hyperlink{structString}{String}} /param new\+\_\+value The replacement value of type char$\ast$ /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structString}{String}} vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\&vec);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&vec, \textcolor{stringliteral}{"{}One"{}}, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&vec, \textcolor{stringliteral}{"{}Two"{}}, 1);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&vec, \textcolor{stringliteral}{"{}Three"{}}, 2);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&vec, \textcolor{stringliteral}{"{}Four"{}}, 3);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}(\&vec, \textcolor{stringliteral}{"{}Five"{}}, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ One, Two, Five, Four ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2975c4c7c36efebc98b926abfc4ba837}{free\_string\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04777}{4777}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04777                                                                             \{}
+\DoxyCodeLine{04778     \textcolor{keywordflow}{if} (index > vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}} || index < 0) \{}
+\DoxyCodeLine{04779         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04780         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04781     \}}
+\DoxyCodeLine{04782     vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index] = new\_value;}
+\DoxyCodeLine{04783     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04784 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{String\+::active\+\_\+length}}, and \mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{String\+::array}}.
+
 \mbox{\Hypertarget{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}\label{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}} 
 \index{vector.c@{vector.c}!replace\_string\_vector\_values@{replace\_string\_vector\_values}}
 \index{replace\_string\_vector\_values@{replace\_string\_vector\_values}!vector.c@{vector.c}}
@@ -9595,6 +10013,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01611}{1611}} of file \mbo
 
 References \mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{String\+::active\+\_\+length}}, \mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{String\+::array}}, \mbox{\hyperlink{vector_8c_a4db2688e1c0d0d477c8a7168d811956d}{pop\+\_\+string\+\_\+vector\+\_\+index()}}, and \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\+\_\+string\+\_\+vector()}}.
 
+\mbox{\Hypertarget{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}\label{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}} 
+\index{vector.c@{vector.c}!replace\_uchar\_vector\_index@{replace\_uchar\_vector\_index}}
+\index{replace\_uchar\_vector\_index@{replace\_uchar\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_uchar\_vector\_index()}{replace\_uchar\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+uchar\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec,  }\item[{unsigned char}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type UChar /param new\+\_\+value The replacement value of type unsigned char /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UChar vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} a[5] = \{\textcolor{charliteral}{'a'}, \textcolor{charliteral}{'b'}, \textcolor{charliteral}{'c'}, \textcolor{charliteral}{'d'}\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}}(\&vec, \textcolor{charliteral}{'q'}, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ a, b, q, d ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04757}{4757}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04757                                                                                   \{}
+\DoxyCodeLine{04758     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04759         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04760         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04761     \}}
+\DoxyCodeLine{04762     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04763     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04764 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a8b8b55713c6eeeba3f8bb8fbbb08ad10}\label{vector_8c_a8b8b55713c6eeeba3f8bb8fbbb08ad10}} 
 \index{vector.c@{vector.c}!replace\_uchar\_vector\_values@{replace\_uchar\_vector\_values}}
 \index{replace\_uchar\_vector\_values@{replace\_uchar\_vector\_values}!vector.c@{vector.c}}
@@ -9631,6 +10087,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01597}{1597}} of file \mbo
 \DoxyCodeLine{01599         \textcolor{keywordflow}{if} (vec-\/>array[i] == old\_value) vec-\/>array[i] = new\_value;}
 \DoxyCodeLine{01600     \}}
 \DoxyCodeLine{01601 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}\label{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}} 
+\index{vector.c@{vector.c}!replace\_uint\_vector\_index@{replace\_uint\_vector\_index}}
+\index{replace\_uint\_vector\_index@{replace\_uint\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_uint\_vector\_index()}{replace\_uint\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+uint\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec,  }\item[{unsigned int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type UInt /param new\+\_\+value The replacement value of type unsigned int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04667}{4667}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04667                                                                                \{}
+\DoxyCodeLine{04668     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04669         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04670         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04671     \}}
+\DoxyCodeLine{04672     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04673     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04674 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a9d98a8399e52f97b6771d676b3919319}\label{vector_8c_a9d98a8399e52f97b6771d676b3919319}} 
@@ -9671,6 +10165,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01534}{1534}} of file \mbo
 \DoxyCodeLine{01538 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}\label{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}} 
+\index{vector.c@{vector.c}!replace\_ullong\_vector\_index@{replace\_ullong\_vector\_index}}
+\index{replace\_ullong\_vector\_index@{replace\_ullong\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_ullong\_vector\_index()}{replace\_ullong\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+ullong\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec,  }\item[{unsigned long long int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type ULLInt /param new\+\_\+value The replacement value of type unsigned long long int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04707}{4707}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04707                                                                                              \{}
+\DoxyCodeLine{04708     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04709         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04710         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04711     \}}
+\DoxyCodeLine{04712     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04713     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04714 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_acdb36a4f7fabea5ff887469c25bcaac3}\label{vector_8c_acdb36a4f7fabea5ff887469c25bcaac3}} 
 \index{vector.c@{vector.c}!replace\_ullong\_vector\_values@{replace\_ullong\_vector\_values}}
 \index{replace\_ullong\_vector\_values@{replace\_ullong\_vector\_values}!vector.c@{vector.c}}
@@ -9709,6 +10241,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01562}{1562}} of file \mbo
 \DoxyCodeLine{01566 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_abc7605a0d1c96745f5a21cde7850d646}\label{vector_8c_abc7605a0d1c96745f5a21cde7850d646}} 
+\index{vector.c@{vector.c}!replace\_ulong\_vector\_index@{replace\_ulong\_vector\_index}}
+\index{replace\_ulong\_vector\_index@{replace\_ulong\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_ulong\_vector\_index()}{replace\_ulong\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+ulong\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec,  }\item[{unsigned long int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type ULInt /param new\+\_\+value The replacement value of type unsigned long int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04687}{4687}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04687                                                                                       \{}
+\DoxyCodeLine{04688     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04689         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04690         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04691     \}}
+\DoxyCodeLine{04692     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04693     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04694 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a3354495712d1e3910ca4e6a33ee1c1df}\label{vector_8c_a3354495712d1e3910ca4e6a33ee1c1df}} 
 \index{vector.c@{vector.c}!replace\_ulong\_vector\_values@{replace\_ulong\_vector\_values}}
 \index{replace\_ulong\_vector\_values@{replace\_ulong\_vector\_values}!vector.c@{vector.c}}
@@ -9745,6 +10315,44 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l01548}{1548}} of file \mbo
 \DoxyCodeLine{01550         \textcolor{keywordflow}{if} (vec-\/>array[i] == old\_value) vec-\/>array[i] = new\_value;}
 \DoxyCodeLine{01551     \}}
 \DoxyCodeLine{01552 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}\label{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}} 
+\index{vector.c@{vector.c}!replace\_ushort\_vector\_index@{replace\_ushort\_vector\_index}}
+\index{replace\_ushort\_vector\_index@{replace\_ushort\_vector\_index}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{replace\_ushort\_vector\_index()}{replace\_ushort\_vector\_index()}}
+{\footnotesize\ttfamily int replace\+\_\+ushort\+\_\+vector\+\_\+index (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec,  }\item[{unsigned short int}]{new\+\_\+value,  }\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+This function will replace the value of a vector or array at a user specified index. If the user specifies an index that is out of bounds, the function will return -\/1, or 1 if successfull.
+
+/param vec A vector or array of type UShort /param new\+\_\+value The replacement value of type unsigned short int /param index The index where a value will be replaced
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UShort vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}}(\&vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04647}{4647}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04647                                                                                          \{}
+\DoxyCodeLine{04648     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04649         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04650         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04651     \}}
+\DoxyCodeLine{04652     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04653     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04654 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a879f3876d14b47d940dbe55a1eec452e}\label{vector_8c_a879f3876d14b47d940dbe55a1eec452e}} 
@@ -12920,20 +13528,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Bool 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04611}{4611}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04623}{4623}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04611                                  \{}
-\DoxyCodeLine{04612     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
-\DoxyCodeLine{04613     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04614     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04615         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04616     \}}
-\DoxyCodeLine{04617     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04618     vec-\/>array = ptr;}
-\DoxyCodeLine{04619     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04620 \}}
+\DoxyCodeLine{04623                                  \{}
+\DoxyCodeLine{04624     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{04625     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04626     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04627         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04628     \}}
+\DoxyCodeLine{04629     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04630     vec-\/>array = ptr;}
+\DoxyCodeLine{04631     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04632 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}\label{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}} 
@@ -13142,6 +13750,30 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l04467}{4467}} of file \mbo
 \DoxyCodeLine{04474     vec-\/>array = ptr;}
 \DoxyCodeLine{04475     vec-\/>allocated\_length = vec-\/>active\_length;}
 \DoxyCodeLine{04476 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8c_a03a2814037d5194b5c291edca0155ae9}\label{vector_8c_a03a2814037d5194b5c291edca0155ae9}} 
+\index{vector.c@{vector.c}!trim\_uchar\_vector@{trim\_uchar\_vector}}
+\index{trim\_uchar\_vector@{trim\_uchar\_vector}!vector.c@{vector.c}}
+\doxysubsubsection{\texorpdfstring{trim\_uchar\_vector()}{trim\_uchar\_vector()}}
+{\footnotesize\ttfamily void trim\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04611}{4611}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04611                                    \{}
+\DoxyCodeLine{04612     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));}
+\DoxyCodeLine{04613     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04614     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04615         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04616     \}}
+\DoxyCodeLine{04617     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04618     vec-\/>array = ptr;}
+\DoxyCodeLine{04619     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04620 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}\label{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}} 

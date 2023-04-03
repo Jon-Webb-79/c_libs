@@ -5718,6 +5718,15 @@ void trim_ldouble_vector(LDble *vec);
  * /param vec A vector struct of type Char
  */
 void trim_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will resize the memory allocated to a dynamically allocated
+ * vector to the minimum necessary size.
+ *
+ * /param vec A vector struct of type UChar
+ */
+void trim_char_vector(UChar *vec);
 // --------------------------------------------------------------------------------
 
 /**
@@ -5727,7 +5736,378 @@ void trim_char_vector(Char *vec);
  * /param vec A vector struct of type Bool
  */
 void trim_bool_vector(Bool *vec);
- // ==========================================================================================
- // ==========================================================================================
+// ==========================================================================================
+// ==========================================================================================
+
+/**
+ * Macro to trim a vecotr or array memory to minimum necessary value
+ *
+ * /param vec The vector to be trimmed.
+ */
+#define TRIM(T) _Generic( (T), Int8: Short: trim_short_vector, \
+									   UShort: trim_ushort_vector, \
+									   Int: trim_int_vector, \
+									   UInt: trim_uint_vector, \
+									   LInt: trim_long_vector, \
+									   ULInt: trim_ulong_vector, \
+									   LLInt: trim_llong_vector, \
+									   ULLInt: trim_ullong_vector, \
+									   Flt: trim_float_vector, \
+									   Dble: trim_double_vector, \
+									   LDble: trim_ldouble_vector, \
+									   Char: trim_char_vector, \
+									   UChar: trim_uchar_vector, \
+									   Bool: trim_bool_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// REPLACE_TYPE_VECTOR_INDEX FUNCTIONS
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type Short
+ * /param new_value The replacement value of type short int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 5);
+ * short int a[5] = {1, 2, 3, 4};
+ * insert_short_vector(&vec, a, 5, 0);
+ * replace_short_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+int replace_short_vector_index(Short *vec, short int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type UShort
+ * /param new_value The replacement value of type unsigned short int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 5);
+ * unsigned short int a[5] = {1, 2, 3, 4};
+ * insert_ushort_vector(&vec, a, 5, 0);
+ * replace_ushort_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+int replace_ushort_vector_index(UShort *vec, unsigned short int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type Int
+ * /param new_value The replacement value of type int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 5);
+ * int a[5] = {1, 2, 3, 4};
+ * insert_int_vector(&vec, a, 5, 0);
+ * replace_int_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int replace_int_vector_index(Int *vec, int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type UInt
+ * /param new_value The replacement value of type unsigned int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 5);
+ * unsigned int a[5] = {1, 2, 3, 4};
+ * insert_uint_vector(&vec, a, 5, 0);
+ * replace_uint_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+int replace_uint_vector_index(UInt *vec, unsigned int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type LInt
+ * /param new_value The replacement value of type long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 5);
+ * long int a[5] = {1, 2, 3, 4};
+ * insert_long_vector(&vec, a, 5, 0);
+ * replace_long_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+int replace_long_vector_index(LInt *vec, long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type ULInt
+ * /param new_value The replacement value of type unsigned long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 5);
+ * unsigned long int a[5] = {1, 2, 3, 4};
+ * insert_ulong_vector(&vec, a, 5, 0);
+ * replace_ulong_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+int replace_ulong_vector_index(ULInt *vec, unsigned long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type LLInt
+ * /param new_value The replacement value of type long long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 5);
+ * long long int a[5] = {1, 2, 3, 4};
+ * insert_llong_vector(&vec, a, 5, 0);
+ * replace_llong_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+int replace_llong_vector_index(LLInt *vec, long long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type ULLInt
+ * /param new_value The replacement value of type unsigned long long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 5);
+ * unsigned long long int a[5] = {1, 2, 3, 4};
+ * insert_ullong_vector(&vec, a, 5, 0);
+ * replace_ullong_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+int replace_ullong_vector_index(ULLInt *vec, unsigned long long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type Flt
+ * /param new_value The replacement value of type float
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 5);
+ * float a[5] = {1, 2, 3, 4};
+ * insert_float_vector(&vec, a, 5, 0);
+ * replace_float_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+int replace_float_vector_index(Flt *vec, float new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type Dble
+ * /param new_value The replacement value of type unsigned double
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec, 5);
+ * double a[5] = {1, 2, 3, 4};
+ * insert_double_vector(&vec, a, 5, 0);
+ * replace_double_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+int replace_double_vector_index(Dble *vec, double new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type LDble
+ * /param new_value The replacement value of type long double
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 5);
+ * ldouble a[5] = {1, 2, 3, 4};
+ * insert_ldouble_vector(&vec, a, 5, 0);
+ * replace_ldouble_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+int replace_ldouble_vector_index(LDble *vec, long double new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type Bool
+ * /param new_value The replacement value of type bool
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * Bool vec;
+ * init_bool_vector(&vec, 5);
+ * bool a[5] = {1, 2, 3, 4};
+ * insert_bool_vector(&vec, a, 5, 0);
+ * replace_bool_vector_index(&vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+int replace_bool_vector_index(Bool *vec, bool new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type String
+ * /param new_value The replacement value of type char*
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * String vec;
+ * init_string_vector(&vec);
+ * push_string_vector(&vec, "One", 0);
+ * push_string_vector(&vec, "Two", 1);
+ * push_string_vector(&vec, "Three", 2);
+ * push_string_vector(&vec, "Four", 3);
+ * replace_ldouble_vector_index(&vec, "Five", 2);
+ * PRINT(vec);
+ * // >> [ One, Two, Five, Four ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+int replace_string_vector_index(String *vec, char *new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type Char
+ * /param new_value The replacement value of type char
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec, 5);
+ * char a[5] = {'a', 'b', 'c', 'd'};
+ * insert_char_vector(&vec, a, 5, 0);
+ * replace_char_vector_index(&vec, 'q', 2);
+ * PRINT(vec);
+ * // >> [ a, b, q, d ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+int replace_char_vector_index(Char *vec, char new_value, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a vector or array at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A vector or array of type UChar
+ * /param new_value The replacement value of type unsigned char
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec, 5);
+ * unsigned char a[5] = {'a', 'b', 'c', 'd'};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * replace_uchar_vector_index(&vec, 'q', 2);
+ * PRINT(vec);
+ * // >> [ a, b, q, d ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+int replace_uchar_vector_index(UChar *vec, unsigned char new_value, size_t index);
+// ==========================================================================================
+// ==========================================================================================
 #endif /* vector_H */
 // eof

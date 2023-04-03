@@ -4609,10 +4609,10 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04606}04606     vec-\/>array = ptr;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04607}04607     vec-\/>allocated\_length = vec-\/>active\_length;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04608}04608 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04609}04609 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04609}04609 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04610}04610 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04611}\mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{04611}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04612}04612     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04611}\mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{04611}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{trim\_uchar\_vector}}(UChar *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04612}04612     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04613}04613     \textcolor{comment}{// Verify that sufficient memory exists}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04614}04614     \textcolor{keywordflow}{if} (ptr == NULL) \{}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04615}04615         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
@@ -4621,8 +4621,172 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04618}04618     vec-\/>array = ptr;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04619}04619     vec-\/>allocated\_length = vec-\/>active\_length;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04620}04620 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04621}04621 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04622}04622 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04623}04623 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04621}04621 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04622}04622 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04623}\mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{04623}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04624}04624     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04625}04625     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04626}04626     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04627}04627         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04628}04628     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04629}04629     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04630}04630     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04631}04631     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04632}04632 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04633}04633 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04634}04634 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04635}04635 \textcolor{comment}{// REPLACE\_TYPE\_VECTOR\_INDEX}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04636}04636 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04637}\mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{04637}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04638}04638     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04639}04639         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04640}04640         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04641}04641     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04642}04642     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04643}04643     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04644}04644 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04645}04645 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04646}04646 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04647}\mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{04647}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04648}04648     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04649}04649         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04650}04650         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04651}04651     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04652}04652     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04653}04653     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04654}04654 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04655}04655 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04656}04656 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04657}\mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{04657}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}}(Int *vec, \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04658}04658     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04659}04659         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04660}04660         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04661}04661     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04662}04662     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04663}04663     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04664}04664 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04665}04665 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04666}04666 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04667}\mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{04667}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04668}04668     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04669}04669         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04670}04670         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04671}04671     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04672}04672     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04673}04673     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04674}04674 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04675}04675 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04676}04676 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04677}\mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{04677}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04678}04678     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04679}04679         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04680}04680         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04681}04681     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04682}04682     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04683}04683     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04684}04684 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04685}04685 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04686}04686 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04687}\mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{04687}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04688}04688     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04689}04689         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04690}04690         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04691}04691     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04692}04692     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04693}04693     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04694}04694 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04695}04695 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04696}04696 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04697}\mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{04697}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04698}04698     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04699}04699         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04700}04700         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04701}04701     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04702}04702     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04703}04703     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04704}04704 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04705}04705 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04706}04706 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04707}\mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{04707}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04708}04708     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04709}04709         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04710}04710         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04711}04711     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04712}04712     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04713}04713     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04714}04714 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04715}04715 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04716}04716 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04717}\mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{04717}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}}(Flt *vec, \textcolor{keywordtype}{float} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04718}04718     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04719}04719         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04720}04720         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04721}04721     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04722}04722     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04723}04723     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04724}04724 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04725}04725 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04726}04726 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04727}\mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{04727}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}}(Dble *vec, \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04728}04728     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04729}04729         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04730}04730         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04731}04731     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04732}04732     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04733}04733     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04734}04734 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04735}04735 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04736}04736 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04737}\mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{04737}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04738}04738     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04739}04739         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04740}04740         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04741}04741     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04742}04742     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04743}04743     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04744}04744 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04745}04745 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04746}04746 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04747}\mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{04747}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}}(Char *vec, \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04748}04748     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04749}04749         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04750}04750         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04751}04751     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04752}04752     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04753}04753     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04754}04754 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04755}04755 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04756}04756 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04757}\mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{04757}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04758}04758     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04759}04759         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04760}04760         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04761}04761     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04762}04762     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04763}04763     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04764}04764 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04765}04765 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04766}04766 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04767}\mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{04767}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}}(Bool *vec, \textcolor{keywordtype}{bool} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04768}04768     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04769}04769         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04770}04770         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04771}04771     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04772}04772     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04773}04773     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04774}04774 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04775}04775 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04776}04776 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04777}\mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{04777}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{replace\_string\_vector\_index}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{char} *new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04778}04778     \textcolor{keywordflow}{if} (index > vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}} || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04779}04779         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04780}04780         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04781}04781     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04782}04782     vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04783}04783     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04784}04784 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04785}04785 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04786}04786 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04787}04787 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

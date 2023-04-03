@@ -4606,6 +4606,18 @@ void trim_char_vector(Char *vec) {
 	vec->array = ptr;
 	vec->allocated_length = vec->active_length;
 }
+// ------------------------------------------------------------------------------------------
+
+void trim_uchar_vector(UChar *vec) {
+	unsigned char *ptr = (unsigned char *)realloc(vec->array, vec->active_length * sizeof(unsigned char));
+	// Verify that sufficient memory exists
+	if (ptr == NULL) {
+		fprintf(stderr, "Realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+	}
+	// allocate memory
+	vec->array = ptr;
+	vec->allocated_length = vec->active_length;
+}
 // --------------------------------------------------------------------------------
 
 void trim_bool_vector(Bool *vec) {
@@ -4617,6 +4629,158 @@ void trim_bool_vector(Bool *vec) {
 	// allocate memory
 	vec->array = ptr;
 	vec->allocated_length = vec->active_length;
+}
+// ==========================================================================================
+// ==========================================================================================
+// REPLACE_TYPE_VECTOR_INDEX
+
+int replace_short_vector_index(Short *vec, short int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ushort_vector_index(UShort *vec, unsigned short int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_int_vector_index(Int *vec, int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_uint_vector_index(UInt *vec, unsigned int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_long_vector_index(LInt *vec, long int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ulong_vector_index(ULInt *vec, unsigned long int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_llong_vector_index(LLInt *vec, long long int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ullong_vector_index(ULLInt *vec, unsigned long long int new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_float_vector_index(Flt *vec, float new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_double_vector_index(Dble *vec, double new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ldouble_vector_index(LDble *vec, long double new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_char_vector_index(Char *vec, char new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// ------------------------------------------------------------------------------------------
+
+int replace_uchar_vector_index(UChar *vec, unsigned char new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_bool_vector_index(Bool *vec, bool new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_string_vector_index(String *vec, char *new_value, size_t index) {
+	if (index > vec->active_length || index < 0) {
+		fprintf(stderr, "Index out of bounds in file %s on line %d\n", __FILE__, __LINE__);
+		return -1;
+	}
+	vec->array[index] = new_value;
+	return 1;
 }
 // ==========================================================================================
 // ==========================================================================================

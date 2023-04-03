@@ -1401,29 +1401,79 @@
 \DoxyCodeLine{\Hypertarget{vector_8h_source_l05712}05712 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8h_source_l05713}05713 }
 \DoxyCodeLine{\Hypertarget{vector_8h_source_l05720}05720 \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8h_a4e9cace11cfb849b013d15d09053b0bb}{trim\_char\_vector}}(Char *vec);}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05721}05721 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05721}05721 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8h_source_l05722}05722 }
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05729}05729 \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8h_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec);}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05730}05730 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05731}05731 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05732}05732 }
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05738}\mbox{\hyperlink{vector_8h_ae7ea4c14f63edfd4d7c039a02ae1a65e}{05738}} \textcolor{preprocessor}{\#define TRIM(T) \_Generic( (T), Int8: Short: trim\_short\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05739}05739 \textcolor{preprocessor}{                                       UShort: trim\_ushort\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05740}05740 \textcolor{preprocessor}{                                       Int: trim\_int\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05741}05741 \textcolor{preprocessor}{                                       UInt: trim\_uint\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05742}05742 \textcolor{preprocessor}{                                       LInt: trim\_long\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05743}05743 \textcolor{preprocessor}{                                       ULInt: trim\_ulong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05744}05744 \textcolor{preprocessor}{                                       LLInt: trim\_llong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05745}05745 \textcolor{preprocessor}{                                       ULLInt: trim\_ullong\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05746}05746 \textcolor{preprocessor}{                                       Flt: trim\_float\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05747}05747 \textcolor{preprocessor}{                                       Dble: trim\_double\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05748}05748 \textcolor{preprocessor}{                                       LDble: trim\_ldouble\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05749}05749 \textcolor{preprocessor}{                                       Char: trim\_char\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05750}05750 \textcolor{preprocessor}{                                       UChar: trim\_uchar\_vector, \(\backslash\)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05751}05751 \textcolor{preprocessor}{                                       Bool: trim\_bool\_vector)(\&T)}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05752}05752  \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05753}05753  \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05754}05754 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{\Hypertarget{vector_8h_source_l05755}05755 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05729}\mbox{\hyperlink{vector_8h_aac37342a15b278164955d12f2d67718c}{05729}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8h_a4e9cace11cfb849b013d15d09053b0bb}{trim\_char\_vector}}(UChar *vec);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05730}05730 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05731}05731 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05738}05738 \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8h_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05739}05739 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05740}05740 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05741}05741 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05747}\mbox{\hyperlink{vector_8h_ae7ea4c14f63edfd4d7c039a02ae1a65e}{05747}} \textcolor{preprocessor}{\#define TRIM(T) \_Generic( (T), Int8: Short: trim\_short\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05748}05748 \textcolor{preprocessor}{                                       UShort: trim\_ushort\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05749}05749 \textcolor{preprocessor}{                                       Int: trim\_int\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05750}05750 \textcolor{preprocessor}{                                       UInt: trim\_uint\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05751}05751 \textcolor{preprocessor}{                                       LInt: trim\_long\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05752}05752 \textcolor{preprocessor}{                                       ULInt: trim\_ulong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05753}05753 \textcolor{preprocessor}{                                       LLInt: trim\_llong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05754}05754 \textcolor{preprocessor}{                                       ULLInt: trim\_ullong\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05755}05755 \textcolor{preprocessor}{                                       Flt: trim\_float\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05756}05756 \textcolor{preprocessor}{                                       Dble: trim\_double\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05757}05757 \textcolor{preprocessor}{                                       LDble: trim\_ldouble\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05758}05758 \textcolor{preprocessor}{                                       Char: trim\_char\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05759}05759 \textcolor{preprocessor}{                                       UChar: trim\_uchar\_vector, \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05760}05760 \textcolor{preprocessor}{                                       Bool: trim\_bool\_vector)(\&T)}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05761}05761 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05762}05762 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05763}05763 \textcolor{comment}{// REPLACE\_TYPE\_VECTOR\_INDEX FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05764}05764 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05785}05785 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05786}05786 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05787}05787 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05808}05808 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05809}05809 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05810}05810 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05831}05831 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}}(Int *vec, \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05832}05832 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05833}05833 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05854}05854 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05855}05855 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05856}05856 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05877}05877 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05878}05878 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05879}05879 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05900}05900 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05901}05901 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05902}05902 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05923}05923 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05924}05924 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05925}05925 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05946}05946 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05947}05947 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05948}05948 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05969}05969 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}}(Flt *vec, \textcolor{keywordtype}{float} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05970}05970 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05971}05971 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05992}05992 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}}(Dble *vec, \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05993}05993 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l05994}05994 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06015}06015 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06016}06016 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06017}06017 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06038}06038 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}}(Bool *vec, \textcolor{keywordtype}{bool} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06039}06039 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06040}06040 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06063}06063 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a011a6f61257e9d5cc3296475ae8845ed}{replace\_string\_vector\_index}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{char} *new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06064}06064 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06065}06065 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06086}06086 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}}(Char *vec, \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06087}06087 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06088}06088 }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06109}06109 \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8h_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06110}06110 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06111}06111 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06112}06112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* vector\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l06113}06113 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}
