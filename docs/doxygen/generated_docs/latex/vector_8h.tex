@@ -650,6 +650,36 @@ int \mbox{\hyperlink{vector_8h_a011a6f61257e9d5cc3296475ae8845ed}{replace\+\_\+s
 int \mbox{\hyperlink{vector_8h_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\+\_\+char\+\_\+vector\+\_\+index}} (Char $\ast$vec, char new\+\_\+value, size\+\_\+t index)
 \item 
 int \mbox{\hyperlink{vector_8h_a9eaf5407b4c3a2f3db66ea179836beac}{replace\+\_\+uchar\+\_\+vector\+\_\+index}} (UChar $\ast$vec, unsigned char new\+\_\+value, size\+\_\+t index)
+\item 
+int \mbox{\hyperlink{vector_8h_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\+\_\+short\+\_\+vector}} (Short $\ast$vec, short int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a87921615a6088f8e15e74f796abd294e}{repeat\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec, unsigned short int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\+\_\+int\+\_\+vector}} (Int $\ast$vec, int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a1aa1df7f7e77404e77862ca75666165c}{repeat\+\_\+uint\+\_\+vector}} (UInt $\ast$vec, unsigned int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a1f0914c2c37de3b81b706c77be31e57a}{repeat\+\_\+long\+\_\+vector}} (LInt $\ast$vec, long int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a8c9c95f3e41bcaa00e99db959130c509}{repeat\+\_\+ulong\+\_\+vector}} (ULInt $\ast$vec, unsigned long int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a7c24fd593c9332ba1779b780b85cc893}{repeat\+\_\+llong\+\_\+vector}} (LLInt $\ast$vec, long long int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\+\_\+ullong\+\_\+vector}} (ULLInt $\ast$vec, unsigned long long int value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\+\_\+float\+\_\+vector}} (Flt $\ast$vec, float value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_ac2a03364dd0dc653854b1f70101514c6}{repeat\+\_\+double\+\_\+vector}} (Dble $\ast$vec, double value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec, long double value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a10df883121d1f71d331ae6ba273357f1}{repeat\+\_\+bool\+\_\+vector}} (Bool $\ast$vec, bool value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\+\_\+string\+\_\+vector}} (\mbox{\hyperlink{structString}{String}} $\ast$vec, char $\ast$value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\+\_\+char\+\_\+vector}} (Char $\ast$vec, char value, size\+\_\+t num)
+\item 
+int \mbox{\hyperlink{vector_8h_aa03b84f9a537aa95ab335f38448051a0}{repeat\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec, unsigned char value, size\+\_\+t num)
 \end{DoxyCompactItemize}
 
 
@@ -7619,6 +7649,10 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l00745}{745}} of file \mbox
 
 References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e0072e6ff1f4c3209d2fdd8730a}{DYNAMIC}}, and \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5ae55a36a850c67d46b3b3325de7fce0b8}{STATIC}}.
 
+
+
+Referenced by \mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\+\_\+bool\+\_\+vector()}}.
+
 \mbox{\Hypertarget{vector_8h_ab4f076e9a6e7d0795c2c3a0216c5c97e}\label{vector_8h_ab4f076e9a6e7d0795c2c3a0216c5c97e}} 
 \index{vector.h@{vector.h}!push\_char\_vector@{push\_char\_vector}}
 \index{push\_char\_vector@{push\_char\_vector}!vector.h@{vector.h}}
@@ -7670,7 +7704,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\+\_\+char\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\+\_\+char\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\+\_\+char\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_ab312c467d82a0fccc66cbb89a6b8de5c}\label{vector_8h_ab312c467d82a0fccc66cbb89a6b8de5c}} 
 \index{vector.h@{vector.h}!push\_double\_vector@{push\_double\_vector}}
@@ -7723,7 +7757,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\+\_\+double\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\+\_\+double\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\+\_\+double\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a31e02f437f4f9f43d1126e017ae1cac3}\label{vector_8h_a31e02f437f4f9f43d1126e017ae1cac3}} 
 \index{vector.h@{vector.h}!push\_float\_vector@{push\_float\_vector}}
@@ -7776,7 +7810,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+float\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\+\_\+float\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+float\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\+\_\+float\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\+\_\+float\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a6baf75dc56de293f3dbdc8ac40934980}\label{vector_8h_a6baf75dc56de293f3dbdc8ac40934980}} 
 \index{vector.h@{vector.h}!push\_int\_vector@{push\_int\_vector}}
@@ -7829,7 +7863,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\+\_\+int\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\+\_\+int\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\+\_\+int\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\+\_\+int\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\+\_\+int\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_ad001560a2793c40efb1c64532cefe2e2}\label{vector_8h_ad001560a2793c40efb1c64532cefe2e2}} 
 \index{vector.h@{vector.h}!push\_ldouble\_vector@{push\_ldouble\_vector}}
@@ -7882,7 +7916,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\+\_\+ldouble\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\+\_\+ldouble\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\+\_\+ldouble\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\+\_\+ldouble\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a93f7e28f97718d9d7c5c84df61c1466c}\label{vector_8h_a93f7e28f97718d9d7c5c84df61c1466c}} 
 \index{vector.h@{vector.h}!push\_llong\_vector@{push\_llong\_vector}}
@@ -7935,7 +7969,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\+\_\+llong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{range\+\_\+llong\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\+\_\+llong\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{range\+\_\+llong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\+\_\+llong\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a6135368684b7d740482cfc775417f255}\label{vector_8h_a6135368684b7d740482cfc775417f255}} 
 \index{vector.h@{vector.h}!push\_long\_vector@{push\_long\_vector}}
@@ -7988,7 +8022,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\+\_\+long\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\+\_\+long\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\+\_\+long\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\+\_\+long\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\+\_\+long\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a38068c17aa5cf7286175572d43219b8d}\label{vector_8h_a38068c17aa5cf7286175572d43219b8d}} 
 \index{vector.h@{vector.h}!push\_short\_vector@{push\_short\_vector}}
@@ -8041,7 +8075,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\+\_\+short\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\+\_\+short\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\+\_\+short\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a078616c26d55c1ddb2ec4c551298a4f8}\label{vector_8h_a078616c26d55c1ddb2ec4c551298a4f8}} 
 \index{vector.h@{vector.h}!push\_string\_vector@{push\_string\_vector}}
@@ -8101,7 +8135,7 @@ References \mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{Stri
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\+\_\+string\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}{replace\+\_\+string\+\_\+vector\+\_\+values()}}, and \mbox{\hyperlink{vector_8c_a6297710c0ac2122db93e47a260e96ad8}{reverse\+\_\+string\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\+\_\+string\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\+\_\+string\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}{replace\+\_\+string\+\_\+vector\+\_\+values()}}, and \mbox{\hyperlink{vector_8c_a6297710c0ac2122db93e47a260e96ad8}{reverse\+\_\+string\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_acc6fd3b434ba25d3473adff60160500b}\label{vector_8h_acc6fd3b434ba25d3473adff60160500b}} 
 \index{vector.h@{vector.h}!push\_uchar\_vector@{push\_uchar\_vector}}
@@ -8111,7 +8145,7 @@ Referenced by \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\+\_\+uchar\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\+\_\+uchar\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\+\_\+uchar\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\+\_\+uchar\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\+\_\+uchar\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a787fc2bba6112c4ede10d0ec14ab3825}\label{vector_8h_a787fc2bba6112c4ede10d0ec14ab3825}} 
 \index{vector.h@{vector.h}!push\_uint\_vector@{push\_uint\_vector}}
@@ -8164,7 +8198,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\+\_\+uint\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\+\_\+uint\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\+\_\+uint\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\+\_\+uint\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\+\_\+uint\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a3478a298e62d85cb93f11a78f64d6f80}\label{vector_8h_a3478a298e62d85cb93f11a78f64d6f80}} 
 \index{vector.h@{vector.h}!push\_ullong\_vector@{push\_ullong\_vector}}
@@ -8217,7 +8251,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\+\_\+ullong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\+\_\+ullong\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\+\_\+ullong\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\+\_\+ullong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\+\_\+ullong\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_aea5f95b56df2836ee553face60351e61}\label{vector_8h_aea5f95b56df2836ee553face60351e61}} 
 \index{vector.h@{vector.h}!push\_ulong\_vector@{push\_ulong\_vector}}
@@ -8270,7 +8304,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\+\_\+ulong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\+\_\+ulong\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\+\_\+ulong\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\+\_\+ulong\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\+\_\+ulong\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_a97670c026df2a05dda5b0c85ebeb4d69}\label{vector_8h_a97670c026df2a05dda5b0c85ebeb4d69}} 
 \index{vector.h@{vector.h}!push\_ushort\_vector@{push\_ushort\_vector}}
@@ -8323,7 +8357,7 @@ References \mbox{\hyperlink{vector_8h_ad756268621f03e4812b68792b291fff5aaac65e00
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\+\_\+ushort\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector()}}, \mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\+\_\+ushort\+\_\+vector()}}, and \mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\+\_\+ushort\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_ac3589c6090a8dc24ffe4211dbb42b15f}\label{vector_8h_ac3589c6090a8dc24ffe4211dbb42b15f}} 
 \index{vector.h@{vector.h}!range\_char\_vector@{range\_char\_vector}}
@@ -8815,6 +8849,606 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l04199}{4199}} of file \mbo
 \DoxyCodeLine{04205         advance += delta;}
 \DoxyCodeLine{04206     \}}
 \DoxyCodeLine{04207 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\+\_\+ushort\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a10df883121d1f71d331ae6ba273357f1}\label{vector_8h_a10df883121d1f71d331ae6ba273357f1}} 
+\index{vector.h@{vector.h}!repeat\_bool\_vector@{repeat\_bool\_vector}}
+\index{repeat\_bool\_vector@{repeat\_bool\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_bool\_vector()}{repeat\_bool\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+bool\+\_\+vector (\begin{DoxyParamCaption}\item[{Bool $\ast$}]{vec,  }\item[{bool}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type Bool /param value a value of type bool that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Bool vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\_bool\_vector}}(\&vec, \textcolor{keyword}{true}, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, true ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a5783a319298af13236def83e42f00799}{free\_bool\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04899}{4899}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04899                                                           \{}
+\DoxyCodeLine{04900     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04901     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04902         j = \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04903         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04904     \}}
+\DoxyCodeLine{04905     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04906 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\+\_\+bool\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}\label{vector_8h_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}} 
+\index{vector.h@{vector.h}!repeat\_char\_vector@{repeat\_char\_vector}}
+\index{repeat\_char\_vector@{repeat\_char\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_char\_vector()}{repeat\_char\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec,  }\item[{char}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type Char /param value a value of type char that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Char vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\_char\_vector}}(\&vec, \textcolor{charliteral}{'h'}, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ H, H, H, H, H ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04909}{4909}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04909                                                           \{}
+\DoxyCodeLine{04910     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04911     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04912         j = \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04913         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04914     \}}
+\DoxyCodeLine{04915     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04916 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\+\_\+char\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ac2a03364dd0dc653854b1f70101514c6}\label{vector_8h_ac2a03364dd0dc653854b1f70101514c6}} 
+\index{vector.h@{vector.h}!repeat\_double\_vector@{repeat\_double\_vector}}
+\index{repeat\_double\_vector@{repeat\_double\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_double\_vector()}{repeat\_double\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+double\+\_\+vector (\begin{DoxyParamCaption}\item[{Dble $\ast$}]{vec,  }\item[{double}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type Dble /param value a value of type double that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Dble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\_double\_vector}}(\&vec, 10., 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04879}{4879}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04879                                                               \{}
+\DoxyCodeLine{04880     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04881     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04882         j = \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04883         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04884     \}}
+\DoxyCodeLine{04885     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04886 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\+\_\+double\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a58a085c7febff1b1bd9e6ec90510b36a}\label{vector_8h_a58a085c7febff1b1bd9e6ec90510b36a}} 
+\index{vector.h@{vector.h}!repeat\_float\_vector@{repeat\_float\_vector}}
+\index{repeat\_float\_vector@{repeat\_float\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_float\_vector()}{repeat\_float\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+float\+\_\+vector (\begin{DoxyParamCaption}\item[{Flt $\ast$}]{vec,  }\item[{float}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type Flt /param value a value of type float that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Flt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\_float\_vector}}(\&vec, 10.f, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10.000, 10.000, 10.000, 10.000, 10.000 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04869}{4869}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04869                                                            \{}
+\DoxyCodeLine{04870     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04871     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04872         j = \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04873         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04874     \}}
+\DoxyCodeLine{04875     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04876 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\+\_\+float\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_aeb26b3546bef2bb8e5afc6a8c93d23a1}\label{vector_8h_aeb26b3546bef2bb8e5afc6a8c93d23a1}} 
+\index{vector.h@{vector.h}!repeat\_int\_vector@{repeat\_int\_vector}}
+\index{repeat\_int\_vector@{repeat\_int\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_int\_vector()}{repeat\_int\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+int\+\_\+vector (\begin{DoxyParamCaption}\item[{Int $\ast$}]{vec,  }\item[{int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type Int /param value a value of type int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\_int\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04809}{4809}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04809                                                        \{}
+\DoxyCodeLine{04810     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04811     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04812         j = \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04813         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04814     \}}
+\DoxyCodeLine{04815     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04816 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\+\_\+int\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a34a56cde6bc6f420f8b9063bf87232e1}\label{vector_8h_a34a56cde6bc6f420f8b9063bf87232e1}} 
+\index{vector.h@{vector.h}!repeat\_ldouble\_vector@{repeat\_ldouble\_vector}}
+\index{repeat\_ldouble\_vector@{repeat\_ldouble\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_ldouble\_vector()}{repeat\_ldouble\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec,  }\item[{long double}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type LDble /param value a value of type long double that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LDble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\_ldouble\_vector}}(\&vec, 10., 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04889}{4889}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04889                                                                      \{}
+\DoxyCodeLine{04890     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04891     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04892         j = \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04893         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04894     \}}
+\DoxyCodeLine{04895     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04896 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\+\_\+ldouble\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a7c24fd593c9332ba1779b780b85cc893}\label{vector_8h_a7c24fd593c9332ba1779b780b85cc893}} 
+\index{vector.h@{vector.h}!repeat\_llong\_vector@{repeat\_llong\_vector}}
+\index{repeat\_llong\_vector@{repeat\_llong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_llong\_vector()}{repeat\_llong\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+llong\+\_\+vector (\begin{DoxyParamCaption}\item[{LLInt $\ast$}]{vec,  }\item[{long long int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type LLInt /param value a value of type long long int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\_llong\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04849}{4849}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04849                                                                      \{}
+\DoxyCodeLine{04850     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04851     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04852         j = \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04853         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04854     \}}
+\DoxyCodeLine{04855     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04856 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\+\_\+llong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a1f0914c2c37de3b81b706c77be31e57a}\label{vector_8h_a1f0914c2c37de3b81b706c77be31e57a}} 
+\index{vector.h@{vector.h}!repeat\_long\_vector@{repeat\_long\_vector}}
+\index{repeat\_long\_vector@{repeat\_long\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_long\_vector()}{repeat\_long\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+long\+\_\+vector (\begin{DoxyParamCaption}\item[{LInt $\ast$}]{vec,  }\item[{long int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type LInt /param value a value of type long int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\_long\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04829}{4829}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04829                                                               \{}
+\DoxyCodeLine{04830     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04831     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04832         j = \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04833         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04834     \}}
+\DoxyCodeLine{04835     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04836 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\+\_\+long\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a1fbfbfeed7892cd604ac2175048a1ff3}\label{vector_8h_a1fbfbfeed7892cd604ac2175048a1ff3}} 
+\index{vector.h@{vector.h}!repeat\_short\_vector@{repeat\_short\_vector}}
+\index{repeat\_short\_vector@{repeat\_short\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_short\_vector()}{repeat\_short\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+short\+\_\+vector (\begin{DoxyParamCaption}\item[{Short $\ast$}]{vec,  }\item[{short int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type Short /param value a value of type short int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Short vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\_short\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04789}{4789}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04789                                                                  \{}
+\DoxyCodeLine{04790     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04791     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04792         j = \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04793         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04794     \}}
+\DoxyCodeLine{04795     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04796 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\+\_\+short\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a9f6bd7ebba53e2d4eb0b8e3d8931029c}\label{vector_8h_a9f6bd7ebba53e2d4eb0b8e3d8931029c}} 
+\index{vector.h@{vector.h}!repeat\_string\_vector@{repeat\_string\_vector}}
+\index{repeat\_string\_vector@{repeat\_string\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_string\_vector()}{repeat\_string\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+string\+\_\+vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structString}{String}} $\ast$}]{vec,  }\item[{char $\ast$}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type \mbox{\hyperlink{structString}{String}} /param value a value of type char$\ast$ that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structString}{String}} vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\_string\_vector}}(\&vec, \textcolor{stringliteral}{"{}Hello"{}}, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ Hello, Hello, Hello, Hello, Hello ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a2975c4c7c36efebc98b926abfc4ba837}{free\_string\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04929}{4929}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04929                                                                \{}
+\DoxyCodeLine{04930     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04931     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04932         j = \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(vec, value, vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
+\DoxyCodeLine{04933         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04934     \}}
+\DoxyCodeLine{04935     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04936 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{String\+::active\+\_\+length}}, and \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\+\_\+string\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_aa03b84f9a537aa95ab335f38448051a0}\label{vector_8h_aa03b84f9a537aa95ab335f38448051a0}} 
+\index{vector.h@{vector.h}!repeat\_uchar\_vector@{repeat\_uchar\_vector}}
+\index{repeat\_uchar\_vector@{repeat\_uchar\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_uchar\_vector()}{repeat\_uchar\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec,  }\item[{unsigned char}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type UChar /param value a value of type char that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UChar vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\_uchar\_vector}}(\&vec, \textcolor{charliteral}{'h'}, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ H, H, H, H, H ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04919}{4919}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04919                                                                      \{}
+\DoxyCodeLine{04920     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04921     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04922         j = \mbox{\hyperlink{vector_8h_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04923         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04924     \}}
+\DoxyCodeLine{04925     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04926 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8h_acc6fd3b434ba25d3473adff60160500b}{push\+\_\+uchar\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a1aa1df7f7e77404e77862ca75666165c}\label{vector_8h_a1aa1df7f7e77404e77862ca75666165c}} 
+\index{vector.h@{vector.h}!repeat\_uint\_vector@{repeat\_uint\_vector}}
+\index{repeat\_uint\_vector@{repeat\_uint\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_uint\_vector()}{repeat\_uint\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+uint\+\_\+vector (\begin{DoxyParamCaption}\item[{UInt $\ast$}]{vec,  }\item[{unsigned int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type UInt /param value a value of type unsigned int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\_uint\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04819}{4819}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04819                                                                   \{}
+\DoxyCodeLine{04820     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04821     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04822         j = \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04823         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04824     \}}
+\DoxyCodeLine{04825     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04826 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\+\_\+uint\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a6f8e17e6a8930bf7bf0f7422d65eeab5}\label{vector_8h_a6f8e17e6a8930bf7bf0f7422d65eeab5}} 
+\index{vector.h@{vector.h}!repeat\_ullong\_vector@{repeat\_ullong\_vector}}
+\index{repeat\_ullong\_vector@{repeat\_ullong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_ullong\_vector()}{repeat\_ullong\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+ullong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULLInt $\ast$}]{vec,  }\item[{unsigned long long int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type ULLInt /param value a value of type unsigned long long int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULLInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\_ullong\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04859}{4859}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04859                                                                                 \{}
+\DoxyCodeLine{04860     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04861     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04862         j = \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04863         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04864     \}}
+\DoxyCodeLine{04865     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04866 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\+\_\+ullong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a8c9c95f3e41bcaa00e99db959130c509}\label{vector_8h_a8c9c95f3e41bcaa00e99db959130c509}} 
+\index{vector.h@{vector.h}!repeat\_ulong\_vector@{repeat\_ulong\_vector}}
+\index{repeat\_ulong\_vector@{repeat\_ulong\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_ulong\_vector()}{repeat\_ulong\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+ulong\+\_\+vector (\begin{DoxyParamCaption}\item[{ULInt $\ast$}]{vec,  }\item[{unsigned long int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type ULInt /param value a value of type unsigned long int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ULInt vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\_ulong\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04839}{4839}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04839                                                                          \{}
+\DoxyCodeLine{04840     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04841     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04842         j = \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04843         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04844     \}}
+\DoxyCodeLine{04845     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04846 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\+\_\+ulong\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_a87921615a6088f8e15e74f796abd294e}\label{vector_8h_a87921615a6088f8e15e74f796abd294e}} 
+\index{vector.h@{vector.h}!repeat\_ushort\_vector@{repeat\_ushort\_vector}}
+\index{repeat\_ushort\_vector@{repeat\_ushort\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{repeat\_ushort\_vector()}{repeat\_ushort\_vector()}}
+{\footnotesize\ttfamily int repeat\+\_\+ushort\+\_\+vector (\begin{DoxyParamCaption}\item[{UShort $\ast$}]{vec,  }\item[{unsigned short int}]{value,  }\item[{size\+\_\+t}]{num }\end{DoxyParamCaption})}
+
+This function will repeat a user defined value in a vector or array data structure a user defined number of times.
+
+/param vec A vector or array data structure of type UShort /param value a value of type unsigned short int that be repeated /param num The number of times a value is to be repeated
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UShort vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\_ushort\_vector}}(\&vec, 10, 4);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{[ 10, 10, 10, 10, 10 ]}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04799}{4799}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04799                                                                             \{}
+\DoxyCodeLine{04800     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04801     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04802         j = \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04803         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04804     \}}
+\DoxyCodeLine{04805     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04806 \}}
 
 \end{DoxyCode}
 

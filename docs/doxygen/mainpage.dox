@@ -294,6 +294,25 @@
  * - `replace_bool_vector_index()`: Function to replace an bool value at a specific vector index with another.
  * - `replace_string_vector_index()`: Function to replace a string value at a specific vector index with another.
  *
+ * - `repeat_char_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_uchar_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_short_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_ushort_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_int_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_uint_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_long_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_ulong_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_llong_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_ullong_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_float_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_double_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_ldouble_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_bool_vector()`: Function to produce a vector of repeated values.
+ * - `repeat_string_vector()`: Function to produce a vector of repeated values.
+
+
+
+ *
  * \section license_sec License
  *
  * This library is released under the MIT License.

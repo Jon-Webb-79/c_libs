@@ -6109,5 +6109,307 @@ int replace_char_vector_index(Char *vec, char new_value, size_t index);
 int replace_uchar_vector_index(UChar *vec, unsigned char new_value, size_t index);
 // ==========================================================================================
 // ==========================================================================================
+// REPEAT_TYPE_VECTOR FUNCTIONS
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type Short
+ * /param value a value of type short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * Short vec;
+ * init_short_vector(&vec, 10);
+ * repeat_short_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_short_vector(&vec);
+ * @endcode
+ */
+int repeat_short_vector(Short *vec, short int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type UShort
+ * /param value a value of type unsigned short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * UShort vec;
+ * init_ushort_vector(&vec, 10);
+ * repeat_ushort_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ushort_vector(&vec);
+ * @endcode
+ */
+int repeat_ushort_vector(UShort *vec, unsigned short int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type Int
+ * /param value a value of type int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * Int vec;
+ * init_int_vector(&vec, 10);
+ * repeat_int_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_int_vector(&vec);
+ * @endcode
+ */
+int repeat_int_vector(Int *vec, int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type UInt
+ * /param value a value of type unsigned int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * UInt vec;
+ * init_uint_vector(&vec, 10);
+ * repeat_uint_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_uint_vector(&vec);
+ * @endcode
+ */
+int repeat_uint_vector(UInt *vec, unsigned int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type LInt
+ * /param value a value of type long int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * LInt vec;
+ * init_long_vector(&vec, 10);
+ * repeat_long_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_long_vector(&vec);
+ * @endcode
+ */
+int repeat_long_vector(LInt *vec, long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type ULInt
+ * /param value a value of type unsigned long int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * ULInt vec;
+ * init_ulong_vector(&vec, 10);
+ * repeat_ulong_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ulong_vector(&vec);
+ * @endcode
+ */
+int repeat_ulong_vector(ULInt *vec, unsigned long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type LLInt
+ * /param value a value of type long long int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * LLInt vec;
+ * init_llong_vector(&vec, 10);
+ * repeat_llong_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_llong_vector(&vec);
+ * @endcode
+ */
+int repeat_llong_vector(LLInt *vec, long long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type ULLInt
+ * /param value a value of type unsigned long long int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * ULLInt vec;
+ * init_ullong_vector(&vec, 10);
+ * repeat_ullong_vector(&vec, 10, 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ullong_vector(&vec);
+ * @endcode
+ */
+int repeat_ullong_vector(ULLInt *vec, unsigned long long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type Flt
+ * /param value a value of type float that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * Flt vec;
+ * init_float_vector(&vec, 10);
+ * repeat_float_vector(&vec, 10.f, 4);
+ * PRINT(vec);
+ * [ 10.000, 10.000, 10.000, 10.000, 10.000 ]
+ * free_float_vector(&vec);
+ * @endcode
+ */
+int repeat_float_vector(Flt *vec, float value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type Dble
+ * /param value a value of type double that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * Dble vec;
+ * init_double_vector(&vec, 10);
+ * repeat_double_vector(&vec, 10., 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_double_vector(&vec);
+ * @endcode
+ */
+int repeat_double_vector(Dble *vec, double value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type LDble
+ * /param value a value of type long double that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * LDble vec;
+ * init_ldouble_vector(&vec, 10);
+ * repeat_ldouble_vector(&vec, 10., 4);
+ * PRINT(vec);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ldouble_vector(&vec);
+ * @endcode
+ */
+int repeat_ldouble_vector(LDble *vec, long double value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type Bool
+ * /param value a value of type bool that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * Bool vec;
+ * init_bool_vector(&vec, 10);
+ * repeat_bool_vector(&vec, true, 4);
+ * PRINT(vec);
+ * [ true, true, true, true, true ]
+ * free_bool_vector(&vec);
+ * @endcode
+ */
+int repeat_bool_vector(Bool *vec, bool value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type String
+ * /param value a value of type char* that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * String vec;
+ * init_string_vector(&vec, 10);
+ * repeat_string_vector(&vec, "Hello", 4);
+ * PRINT(vec);
+ * [ Hello, Hello, Hello, Hello, Hello ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+int repeat_string_vector(String *vec, char* value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type Char
+ * /param value a value of type char that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * Char vec;
+ * init_char_vector(&vec, 10);
+ * repeat_char_vector(&vec, 'h', 4);
+ * PRINT(vec);
+ * [ H, H, H, H, H ]
+ * free_char_vector(&vec);
+ * @endcode
+ */
+int repeat_char_vector(Char *vec, char value, size_t num);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a vector or array
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type UChar
+ * /param value a value of type char that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec, 10);
+ * repeat_uchar_vector(&vec, 'h', 4);
+ * PRINT(vec);
+ * [ H, H, H, H, H ]
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+int repeat_uchar_vector(UChar *vec, unsigned char value, size_t num);
+// ==========================================================================================
+// ==========================================================================================
 #endif /* vector_H */
 // eof

@@ -4784,4 +4784,156 @@ int replace_string_vector_index(String *vec, char *new_value, size_t index) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// REPEAT_TYPE_VECTOR FUNCTIONS
+
+int repeat_short_vector(Short *vec, short int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_short_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ushort_vector(UShort *vec, unsigned short int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ushort_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_int_vector(Int *vec, int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_int_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_uint_vector(UInt *vec, unsigned int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_uint_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_long_vector(LInt *vec, long int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_long_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ulong_vector(ULInt *vec, unsigned long int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ulong_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_llong_vector(LLInt *vec, long long int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_llong_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ullong_vector(ULLInt *vec, unsigned long long int value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ullong_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_float_vector(Flt *vec, float value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_float_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_double_vector(Dble *vec, double value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_double_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ldouble_vector(LDble *vec, long double value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ldouble_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_bool_vector(Bool *vec, bool value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_bool_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_char_vector(Char *vec, char value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_char_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// ------------------------------------------------------------------------------------------
+
+int repeat_uchar_vector(UChar *vec, unsigned char value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_uchar_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_string_vector(String *vec, char *value, size_t num) {
+	int j;
+	for (size_t i = 0; i < num; i++) {
+		j = push_string_vector(vec, value, vec->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
