@@ -38,12 +38,14 @@ In order to download this repository from github, follow these instructions
 5. Build code.
 
    a. If you are using bash change to the following directory within the project ``c_libs/c_libs/scripts/bash``
+
       - build the code with the following command ``bash build.sh``
       - compile the test code with the following command ``bash compile.sh``
       - Navigate to the following directory ``c_libs/c_libs/build/test``
       - Verify code runs correctly with the following command ``./unit_tests``
 
    b. If you are using zsh change to the following directory within the project ``c_libs/c_libs/scripts/zsh``
+
       - build the code with the following command ``zsh build.zsh``
       - compile the test code with the following command ``zsh compile.zsh``
       - Navigate to the following directory ``c_libs/c_libs/build/test``
