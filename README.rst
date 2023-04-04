@@ -34,15 +34,21 @@ In order to download this repository from github, follow these instructions
 1. Ensure you have .git installed on your computer
 2. Ensure you have CMake version 3.22.2 or later versions installed on your computer
 3. Ensure have a clang 14.0.0 or gcc 12.2.1 compiler or later version installed on your computer
-4. Open a terminal (Bash, zsh, Linux, or DOS) and type ``close https://github.com/Jon-Webb-79/Project_Name.git project_name``
+4. Open a terminal (Bash, zsh, Linux, or DOS) and type ``git clone https://github.com/Jon-Webb-79/c_libs.git``
 5. Build code.
-   a. If you are using bash ``cd scripts/bash``
-      - ``bash build.sh``
-      - ``bash compile.sh``
-   b. If you are using zsh ``cd scripts/zsh``
-      - ``zsh build.zsh``
-      - ``zsh compile.zsh``
-   c. 
+
+   a. If you are using bash change to the following directory within the project ``c_libs/c_libs/scripts/bash``
+      - build the code with the following command ``bash build.sh``
+      - compile the test code with the following command ``bash compile.sh``
+      - Navigate to the following directory ``c_libs/c_libs/build/test``
+      - Verify code runs correctly with the following command ``./unit_tests``
+
+   b. If you are using zsh change to the following directory within the project ``c_libs/c_libs/scripts/zsh``
+      - build the code with the following command ``zsh build.zsh``
+      - compile the test code with the following command ``zsh compile.zsh``
+      - Navigate to the following directory ``c_libs/c_libs/build/test``
+      - Verify code runs correctly with the following command ``./unit_tests``
+
 5. Install as a library with the command ``xxxx``
 
 ****************
