@@ -216,7 +216,7 @@ when the container is instantiated.  An example is shown below.
 .. code-block:: c
 
    #include <stdio.h>
-   #include "array_ops.h"
+   #include "data_structures.h"
    #include "print.h"
 
    Flt arr;
@@ -238,7 +238,7 @@ shows how this would occur for the ``PUSH`` macro, and the same holds true for t
 .. code-block:: c
 
    #include <stdio.h>
-   #include "array_ops.h"
+   #include "data_structures.h"
    #include "print.h"
 
    Flt arr;
