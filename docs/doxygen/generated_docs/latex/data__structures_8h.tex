@@ -8,10 +8,41 @@
 \#define \mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(T,  value,  index)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(T,  elements,  num\+\_\+ind,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(T)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}\label{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}} 
+\index{data\_structures.h@{data\_structures.h}!FREE@{FREE}}
+\index{FREE@{FREE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{FREE}{FREE}}
+{\footnotesize\ttfamily \#define FREE(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               \_Generic( (T), Short: \mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               UShort: \mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               Int: \mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               UInt: \mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               LInt: \mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               ULInt: \mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               LLInt: \mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               ULLInt: \mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               Flt: \mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               Dble: \mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               LDble: \mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               Char: \mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               UChar: \mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               Bool: \mbox{\hyperlink{vector_8c_a5783a319298af13236def83e42f00799}{free\_bool\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                               \mbox{\hyperlink{structString}{String}}: \mbox{\hyperlink{vector_8c_a2975c4c7c36efebc98b926abfc4ba837}{free\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00141}{141}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
 \mbox{\Hypertarget{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}\label{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}} 
 \index{data\_structures.h@{data\_structures.h}!INSERT@{INSERT}}
 \index{INSERT@{INSERT}!data\_structures.h@{data\_structures.h}}
@@ -33,7 +64,8 @@
 \DoxyCodeLine{                                                         LDble: \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                                                         Char: \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                                                         UChar: \mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}, \(\backslash\)}
-\DoxyCodeLine{                                                         Bool: \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}})(\&T, elements, num\_ind, index)}
+\DoxyCodeLine{                                                         Bool: \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                         \mbox{\hyperlink{structString}{String}}: \mbox{\hyperlink{vector_8c_ac5498955b573e63b86b34a1fdd93e391}{insert\_string\_vector}})(\&T, elements, num\_ind, index)}
 
 \end{DoxyCode}
 
@@ -60,7 +92,7 @@ Definition at line \mbox{\hyperlink{data__structures_8h_source_l00094}{94}} of f
 \DoxyCodeLine{                                                         Dble: \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                                                         LDble: \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                                                         Char: \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}, \(\backslash\)}
-\DoxyCodeLine{                                                         UChar: \mbox{\hyperlink{vector_8h_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                         UChar: \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                                                         Bool: \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                                                         \mbox{\hyperlink{structString}{String}}: \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}})(\&T, value, index)}
 
