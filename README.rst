@@ -51,7 +51,7 @@ In order to download this repository from github, follow these instructions
       - Navigate to the following directory ``c_libs/c_libs/build/test``
       - Verify code runs correctly with the following command ``./unit_tests``
 
-5. Install as a library with the command ``xxxx``
+6. Install as a library with the command ``xxxx``
 
 ****************
 Library Elements
