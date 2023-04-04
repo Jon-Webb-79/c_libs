@@ -203,6 +203,52 @@ of length ``size`` to a specific ``index``
    // >> [ 4.4, 1.1, 10.9, 9.8, 8.7, 7.6, 2.2, 5.5 ]
    FREE(vec);
 
+Array
+=====
+The ``INIT_VECTOR`` macro acts as a container for a dynamically allocated vector; however, a developer can
+also use the ``void INIT_ARRAY(dtype vec, type arr, size_t allocated_length, size_t active_length)`` macro
+to initialize a container to manage a statically allocated array.  The term ``vec`` represents one of
+the preinstantiated data types, ``array`` is a pre-instantiated array of type ``type``, which should be
+consistent with ``dtype``.  ``allocated_length`` represents the number of allocated indices in the pre
+instantiated array, ``active_length`` represents the number of actively populated indices in the array,
+when the container is instantiated.  An example is shown below.
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "array_ops.h"
+   #include "print.h"
+
+   Flt arr;
+   float a[5] = {2.1, 3.4};
+   INIT_ARRAY(arr, a, 5, 2);
+   PRINT(vec);
+   // >> [ 2.1, 3.4 ]
+
+**NOTE:**  Unlike the vector data structure, a statically allocated array does not need to be freed
+once it is out of scope, hence their is no need to use the ``FREE`` macro.  The only interface
+difference, between the vector and array data structures are the init macros.  Other than the 
+``INIT_ARRAY`` versus ``INIT_VECTOR`` macros, the array data structure can use any function
+and array in the `Vector`_ section of this document. 
+
+However, if the user tries to allocate more data to an array structure than it was instantiated with, the
+function will return with a value of -1 and print an error to standard error.  The example below
+shows how this would occur for the ``PUSH`` macro, and the same holds true for the insert macro.
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "array_ops.h"
+   #include "print.h"
+
+   Flt arr;
+   float a[5] = {2.1, 3.4, 2.8};
+   INIT_ARRAY(arr, a, 5, 3);
+   PUSH(arr, 1.1f, arr.active_length);
+   PUSH(arr, 2.2f, arr.active_length);
+   // This push should overload the data structure and cause failure
+   PUSH(arr, 3.3f, arr.active_length);
+   // >> Cannot extend static array allocation in file xx, on line yy
 
 =====
 PRINT
