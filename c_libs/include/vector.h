@@ -576,7 +576,8 @@ void init_bool_array(Bool *vec, bool *arr, size_t allocated_length, size_t activ
 										           Dble: init_double_array, \
 										           LDble: init_ldouble_array, \
 										           Char: init_char_array, \
-												   UChar: init_uchar_array)(&T, arr, aloc_len, active_len)
+												   UChar: init_uchar_array, \
+												   Bool: init_bool_array)(&T, arr, aloc_len, active_len)
 // ==========================================================================================
 // ==========================================================================================
 

@@ -591,4 +591,202 @@ void test_insert_string_vec(void **state)
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST_INSERT_TYPE_ARR FUNCTIONS
+
+void test_insert_short_arr(void **state) {
+	(void) state;
+	Short arr;
+	short int a[5] = {1, 2, 3};
+	short int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	short int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_ushort_arr(void **state) {
+	(void) state;
+	UShort arr;
+	unsigned short int a[5] = {1, 2, 3};
+	unsigned short int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	unsigned short int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_int_arr(void **state) {
+	(void) state;
+	Int arr;
+	int a[5] = {1, 2, 3};
+	int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_uint_arr(void **state) {
+	(void) state;
+	UInt arr;
+	unsigned int a[5] = {1, 2, 3};
+	unsigned int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	unsigned int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_long_arr(void **state) {
+	(void) state;
+	LInt arr;
+	long int a[5] = {1, 2, 3};
+	long int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	long int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_ulong_arr(void **state) {
+	(void) state;
+	ULInt arr;
+	unsigned long int a[5] = {1, 2, 3};
+	unsigned long int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	unsigned long int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_llong_arr(void **state) {
+	(void) state;
+	LLInt arr;
+	long long int a[5] = {1, 2, 3};
+	long long int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	long long int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_ullong_arr(void **state) {
+	(void) state;
+	ULLInt arr;
+	unsigned long long int a[5] = {1, 2, 3};
+	unsigned long long int b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	unsigned long long int c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_char_arr(void **state) {
+	(void) state;
+	Char arr;
+	char a[5] = {1, 2, 3};
+	char b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	char c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_uchar_arr(void **state) {
+	(void) state;
+	UChar arr;
+	unsigned char a[5] = {1, 2, 3};
+	unsigned char b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	unsigned char c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_float_arr(void **state) {
+	(void) state;
+	Flt arr;
+	float a[5] = {1., 2., 3.};
+	float b[2] = {9., 10.};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	float c[5] = {9., 10., 1., 2., 3.};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_double_arr(void **state) {
+	(void) state;
+	Dble arr;
+	double a[5] = {1, 2, 3};
+	double b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	double c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_ldouble_arr(void **state) {
+	(void) state;
+	LDble arr;
+	long double a[5] = {1, 2, 3};
+	long double b[2] = {9, 10};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	long double c[5] = {9, 10, 1, 2, 3};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_insert_bool_arr(void **state) {
+	(void) state;
+	Bool arr;
+	bool a[5] = {true, true, true};
+	bool b[2] = {false, false};
+	INIT_ARRAY(arr, a, 5, 2);
+	INSERT(arr, b, 2, 0);
+	bool c[5] = {false, false, true, true, true};
+	for (size_t i = 0; i < arr.active_length; i++) {
+		assert_int_equal(c[i], arr.array[i]);
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

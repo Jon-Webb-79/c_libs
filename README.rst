@@ -211,7 +211,8 @@ to initialize a container to manage a statically allocated array.  The term ``ve
 the preinstantiated data types, ``array`` is a pre-instantiated array of type ``type``, which should be
 consistent with ``dtype``.  ``allocated_length`` represents the number of allocated indices in the pre
 instantiated array, ``active_length`` represents the number of actively populated indices in the array,
-when the container is instantiated.  An example is shown below.
+when the container is instantiated.  An example is shown below.  This macro does not work for the
+``String`` data type.
 
 .. code-block:: c
 

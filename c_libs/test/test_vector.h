@@ -66,6 +66,21 @@ void test_insert_string_vec(void **state);
 // ==========================================================================================
 // TEST_INSERT_ARRAY_TYPE FUNCTIONS
 
+void test_insert_short_arr(void **state);
+void test_insert_ushort_arr(void **state);
+void test_insert_int_arr(void **state);
+void test_insert_uint_arr(void **state);
+void test_insert_long_arr(void **state);
+void test_insert_ulong_arr(void **state);
+void test_insert_llong_arr(void **state);
+void test_insert_ullong_arr(void **state);
+void test_insert_char_arr(void **state);
+void test_insert_uchar_arr(void **state);
+void test_insert_float_arr(void **state);
+void test_insert_double_arr(void **state);
+void test_insert_ldouble_arr(void **state);
+void test_insert_bool_arr(void **state);
+void test_insert_string_arr(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================
