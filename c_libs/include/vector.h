@@ -1346,6 +1346,34 @@ int insert_uchar_vector(UChar *vec, unsigned char *elements, size_t num_indices,
  * @endcode
  */
 int insert_bool_vector(Bool *vec, bool *elements, size_t num_indices, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will allow a user to insert a scalar char or an array of bool
+ * values into a vector struct of String type.
+ *
+ * /param vec A vector struct of type String
+ * /param elements An array or scalar of type char*
+ * /param num_indices The number of data points in elements
+ * /param index The index where the scalar or array is to be inserted
+ *
+ * @code
+ * #include "vector.h"
+ * #include "print.h"*
+ *
+ * String vec;
+ * init_string_vector(vec);
+ * push_string_vector(vec, "One");
+ * push_string_vector(vec, "Two");
+ * push_string_vector(vec, "Three");
+ * char *a[3] = {"Four", "Five", "Six"};
+ * insert_string_vector(vec, a, 3, 1);
+ * PRINT(vec);
+ * // >> [ One, Four, Five, Six, Two, Three ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+int insert_string_vector(String *vec, char **elements, size_t num_indices, size_t index);
 // ==========================================================================================
 // ==========================================================================================
 // POP_VEC_INDEX prototypes

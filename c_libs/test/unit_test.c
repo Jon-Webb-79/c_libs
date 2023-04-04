@@ -55,7 +55,20 @@ const struct CMUnitTest tests_vector[] = {
     cmocka_unit_test(test_push_double),
 	cmocka_unit_test(test_push_ldouble),
     cmocka_unit_test(test_push_bool),
-	cmocka_unit_test(test_push_string)
+	cmocka_unit_test(test_push_string),
+	cmocka_unit_test(test_insert_short),
+    cmocka_unit_test(test_insert_ushort),
+	cmocka_unit_test(test_push_int),
+	cmocka_unit_test(test_insert_uint),
+	cmocka_unit_test(test_push_long),
+	cmocka_unit_test(test_insert_ulong),
+	cmocka_unit_test(test_push_llong),
+	cmocka_unit_test(test_insert_ullong),
+	cmocka_unit_test(test_push_float),
+	cmocka_unit_test(test_insert_double),
+	cmocka_unit_test(test_insert_ldouble),
+	cmocka_unit_test(test_insert_bool),
+	cmocka_unit_test(test_insert_string)
 };
 
 // Begin code

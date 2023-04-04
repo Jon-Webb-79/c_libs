@@ -104,7 +104,8 @@
 										                 LDble: insert_ldouble_vector, \
 										                 Char: insert_char_vector, \
 														 UChar: insert_uchar_vector, \
-														 Bool: insert_bool_vector)(&T, elements, num_ind, index)
+														 Bool: insert_bool_vector, \
+		                                                 String: insert_string_vector)(&T, elements, num_ind, index)
 // ==========================================================================================
 // ==========================================================================================
 // INSERT GENERIC OPERATOR

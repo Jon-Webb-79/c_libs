@@ -1332,6 +1332,33 @@ int insert_bool_vector(Bool *vec, bool *elements,
 	vec->active_length += num_indices;
 	return 1;
 }
+// ------------------------------------------------------------------------------------------
+
+int insert_string_vector(String *vec, char **values,
+		                 size_t length, size_t index) {
+	if (index > vec->active_length) {
+        fprintf(stderr, "String index out of range in file %s on line %d\n", __FILE__, __LINE__);
+        return -1;
+    }
+
+    char **resized = realloc(vec->array, sizeof(*vec->array) * (vec->active_length + length));
+    if (!resized) {
+        fprintf(stderr, "realloc failed in file %s on line %d\n", __FILE__, __LINE__);
+        return -1;
+    }
+    vec->array = resized;
+
+    if (index < vec->active_length) {
+        memmove(vec->array + index + length, vec->array + index, sizeof(*vec->array) * (vec->active_length - index));
+    }
+
+    for (size_t i = 0; i < length; i++) {
+        vec->array[index + i] = strdup(values[i]);
+    }
+
+    vec->active_length += length;
+	return 1;
+}
 // ==========================================================================================
 // ==========================================================================================
 /// pop_type_stack_index functions
