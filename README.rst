@@ -284,8 +284,7 @@ of a value (i.e. ``old``) with a new value (i.e. ``new``).
 
 .. code-block:: c
 
-   #include <stdio.h>
-   #include "array_ops.h"
+   #include "data_structures.h"
    #include "print.h"
 
    Int vec;
