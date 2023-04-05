@@ -789,4 +789,203 @@ void test_insert_bool_arr(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST_POP_TYPE_VEC FUNCTION
+
+void test_pop_short_vec(void **state) {
+	(void) state;
+	Short vec;
+	short int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	short int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_ushort_vec(void **state) {
+	(void) state;
+	UShort vec;
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	unsigned short int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_int_vec(void **state) {
+	(void) state;
+	Int vec;
+	int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_uint_vec(void **state) {
+	(void) state;
+	UInt vec;
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	unsigned int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_long_vec(void **state) {
+	(void) state;
+	LInt vec;
+	long int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_ulong_vec(void **state) {
+	(void) state;
+	ULInt vec;
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	unsigned long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_llong_vec(void **state) {
+	(void) state;
+	LLInt vec;
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	long long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_ullong_vec(void **state) {
+	(void) state;
+	ULLInt vec;
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	unsigned long long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_float_vec(void **state) {
+	(void) state;
+	Flt vec;
+	float a[5] = {1., 2., 3., 4., 5.};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	float b[4] = {1., 2., 4., 5.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(b[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_double_vec(void **state) {
+	(void) state;
+	Dble vec;
+	double a[5] = {1., 2., 3., 4., 5.};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	double b[4] = {1., 2., 4., 5.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(b[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_ldouble_vec(void **state) {
+	(void) state;
+	LDble vec;
+	long double a[5] = {1., 2., 3., 4., 5.};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	long double b[4] = {1., 2., 4., 5.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(b[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_bool_vec(void **state) {
+	(void) state;
+	Bool vec;
+	bool a[5] = {true, true, false, true, true};
+	INIT_VECTOR(vec, 5);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	bool b[4] = {true, true, true, true};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_pop_string_vec(void **state) {
+	(void) state;
+	String vec;
+	char *a[5] = {"One", "Two", "Three", "Four", "Five"};
+	init_string_vector(&vec);
+	INSERT(vec, a, 5, 0);
+	POP_INDEX(vec, 2);
+	char *b[4] = {"One", "Two", "Four", "Five"};
+	int cmp;
+	for (size_t i = 0; i < vec.active_length; i++) {
+		cmp = strcmp(b[i], vec.array[i]);
+		assert_int_equal(0, cmp);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

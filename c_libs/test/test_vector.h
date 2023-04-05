@@ -80,7 +80,26 @@ void test_insert_float_arr(void **state);
 void test_insert_double_arr(void **state);
 void test_insert_ldouble_arr(void **state);
 void test_insert_bool_arr(void **state);
-void test_insert_string_arr(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST_POP_TYPE_INDEX FUNCTIONS
+
+
+void test_pop_short_vec(void **state);
+void test_pop_ushort_vec(void **state);
+void test_pop_int_vec(void **state);
+void test_pop_uint_vec(void **state);
+void test_pop_long_vec(void **state);
+void test_pop_ulong_vec(void **state);
+void test_pop_llong_vec(void **state);
+void test_pop_ullong_vec(void **state);
+void test_pop_char_vec(void **state);
+void test_pop_uchar_vec(void **state);
+void test_pop_float_vec(void **state);
+void test_pop_double_vec(void **state);
+void test_pop_ldouble_vec(void **state);
+void test_pop_bool_vec(void **state);
+void test_pop_string_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

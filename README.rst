@@ -251,6 +251,26 @@ shows how this would occur for the ``PUSH`` macro, and the same holds true for t
    PUSH(arr, 3.3f, arr.active_length);
    // >> Cannot extend static array allocation in file xx, on line yy
 
+POP_INDEX
+=========
+The ``int POP_INDEX(vtype vec, size_t index)`` macro will remove the data at the user defined ``index``
+and decriment that ``active_length`` by 1.  If for some reason the function cannot succesfully perform
+its objective, it will print an error message to ``stderror`` and return an integer value of -1.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Dble vec;
+   INIT_VECTOR(vec, 5);
+   double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   INSERT(vec, a, 5, 0);
+   POP_INDEX(vec, 4);
+   PRINT(vec);
+   FREE(vec);
+   // >> [ 1.1, 2.2, 3.3, 4.4 ]
+
 =====
 PRINT
 =====

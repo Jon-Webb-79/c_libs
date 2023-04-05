@@ -156,7 +156,51 @@
 // ==========================================================================================
 // ==========================================================================================
 
+/*
+ * This macro will insert an array of data into a vector container.  In addition, this
+ * function can also be used to push a scalar variable to a vector container at a user
+ * defined index.  While the user can insert a scalar or an array to any desired
+ * index, the function will run fastest when data is inserted at the next available
+ * index.  This macro only selects the correct function to execute the operation based
+ * on data type.  Therefore this macro does not increase memory usage, nor does it
+ * decrease code execution time.
+ *
+ * /param vec A vector struct container
+ * /param T The array containing elements to be inserted
+ * /param y The index from where data is poppsed
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 8);
+ * PUSH(vec, 1, vec.active_length);
+ * PUSH(vec, 2, vec.active_length);
+ * PUSH(vec, 3, vec.active_length);
+ * PUSH(vec, 4, vec.active_length);
+ * PUSH(vec, 5, vec.active_length);
+ * POP_INDEX(vec, 2);
+ * PRINT(vec);
+ * // [ 1, 2, 4, 5 ]
+ * @endcode
+ */
+#define POP_INDEX(T, y) _Generic( (T), Short: pop_short_vector_index, \
+							   UShort: pop_ushort_vector_index, \
+							   Int: pop_int_vector_index, \
+							   UInt: pop_uint_vector_index, \
+							   LInt: pop_long_vector_index, \
+							   ULInt: pop_ulong_vector_index, \
+							   LLInt: pop_llong_vector_index, \
+							   ULLInt: pop_ullong_vector_index, \
+							   Flt: pop_float_vector_index, \
+							   Dble: pop_double_vector_index, \
+							   LDble: pop_ldouble_vector_index, \
+							   Char: pop_char_vector_index, \
+							   UChar: pop_uchar_vector_index, \
+							   Bool: pop_bool_vector_index, \
+							   String: pop_string_vector_index)(&T, y)
+// ==========================================================================================
+// ==========================================================================================
+
 #endif /* data_structures_H */
-// ================================================================================
-// ================================================================================
+// ==========================================================================================
+// ==========================================================================================
 // eof

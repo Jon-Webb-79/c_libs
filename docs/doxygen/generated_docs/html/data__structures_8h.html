@@ -85,6 +85,8 @@ Macros</h2></td></tr>
 <tr class="separator:a39f36b37e9611785d15e1691a628ab30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1603ab82164c2b586fb4e918dfe0787d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a1603ab82164c2b586fb4e918dfe0787d">FREE</a>(T)</td></tr>
 <tr class="separator:a1603ab82164c2b586fb4e918dfe0787d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7873976d8a344c5188e57dffb974056b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a7873976d8a344c5188e57dffb974056b">POP_INDEX</a>(T,  y)</td></tr>
+<tr class="separator:a7873976d8a344c5188e57dffb974056b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1603ab82164c2b586fb4e918dfe0787d" name="a1603ab82164c2b586fb4e918dfe0787d"></a>
@@ -207,6 +209,66 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8c_html_afccda80cf8e96d76846df29a256f6974"><div class="ttname"><a href="vector_8c.html#afccda80cf8e96d76846df29a256f6974">insert_ullong_vector</a></div><div class="ttdeci">int insert_ullong_vector(ULLInt *vec, unsigned long long int *elements, size_t num_indices, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01085">vector.c:1085</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00094">94</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="a7873976d8a344c5188e57dffb974056b" name="a7873976d8a344c5188e57dffb974056b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7873976d8a344c5188e57dffb974056b">&#9670;&nbsp;</a></span>POP_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POP_INDEX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                               _Generic( (T), Short: <a class="code hl_function" href="vector_8c.html#a90c0d394579f3950b22adabb66f153e9">pop_short_vector_index</a>, \</div>
+<div class="line">                               UShort: <a class="code hl_function" href="vector_8c.html#ab5f9826948a1e75b6ffa74b2e801f8c5">pop_ushort_vector_index</a>, \</div>
+<div class="line">                               Int: <a class="code hl_function" href="vector_8c.html#af0ecebd36b313d07d43f40698bd5508f">pop_int_vector_index</a>, \</div>
+<div class="line">                               UInt: <a class="code hl_function" href="vector_8c.html#aea61eee2cd7481c1d34d13ba4a27e669">pop_uint_vector_index</a>, \</div>
+<div class="line">                               LInt: <a class="code hl_function" href="vector_8c.html#ade7d072b4cbbed3560461122ff9bf2d1">pop_long_vector_index</a>, \</div>
+<div class="line">                               ULInt: <a class="code hl_function" href="vector_8c.html#aee6e8f2b009cc7205dfd8c143b8e9839">pop_ulong_vector_index</a>, \</div>
+<div class="line">                               LLInt: <a class="code hl_function" href="vector_8c.html#a6475916b10de913b8859fbd0b8312557">pop_llong_vector_index</a>, \</div>
+<div class="line">                               ULLInt: <a class="code hl_function" href="vector_8c.html#a52f4d32e9312b40967f4c0ee3de88e7a">pop_ullong_vector_index</a>, \</div>
+<div class="line">                               Flt: <a class="code hl_function" href="vector_8c.html#a7f179d98deb7852196afc7e3d26ef06d">pop_float_vector_index</a>, \</div>
+<div class="line">                               Dble: <a class="code hl_function" href="vector_8c.html#a8d2545eb603560d67e5c481075e5d0fc">pop_double_vector_index</a>, \</div>
+<div class="line">                               LDble: <a class="code hl_function" href="vector_8c.html#a3964e5480d290ac44a95680e52706f9d">pop_ldouble_vector_index</a>, \</div>
+<div class="line">                               Char: <a class="code hl_function" href="vector_8c.html#a4f9d1488d50bc3889fc04afc18fa9958">pop_char_vector_index</a>, \</div>
+<div class="line">                               UChar: <a class="code hl_function" href="vector_8c.html#a7527a193c89c32c07eba99e8abc08574">pop_uchar_vector_index</a>, \</div>
+<div class="line">                               Bool: <a class="code hl_function" href="vector_8c.html#a69479bf6e334f44f372305c8b1b13bb3">pop_bool_vector_index</a>, \</div>
+<div class="line">                               <a class="code hl_struct" href="structString.html">String</a>: <a class="code hl_function" href="vector_8c.html#a4db2688e1c0d0d477c8a7168d811956d">pop_string_vector_index</a>)(&amp;T, y)</div>
+<div class="ttc" id="avector_8c_html_a3964e5480d290ac44a95680e52706f9d"><div class="ttname"><a href="vector_8c.html#a3964e5480d290ac44a95680e52706f9d">pop_ldouble_vector_index</a></div><div class="ttdeci">int pop_ldouble_vector_index(LDble *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01496">vector.c:1496</a></div></div>
+<div class="ttc" id="avector_8c_html_a4db2688e1c0d0d477c8a7168d811956d"><div class="ttname"><a href="vector_8c.html#a4db2688e1c0d0d477c8a7168d811956d">pop_string_vector_index</a></div><div class="ttdeci">int pop_string_vector_index(String *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01547">vector.c:1547</a></div></div>
+<div class="ttc" id="avector_8c_html_a4f9d1488d50bc3889fc04afc18fa9958"><div class="ttname"><a href="vector_8c.html#a4f9d1488d50bc3889fc04afc18fa9958">pop_char_vector_index</a></div><div class="ttdeci">int pop_char_vector_index(Char *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01509">vector.c:1509</a></div></div>
+<div class="ttc" id="avector_8c_html_a52f4d32e9312b40967f4c0ee3de88e7a"><div class="ttname"><a href="vector_8c.html#a52f4d32e9312b40967f4c0ee3de88e7a">pop_ullong_vector_index</a></div><div class="ttdeci">int pop_ullong_vector_index(ULLInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01457">vector.c:1457</a></div></div>
+<div class="ttc" id="avector_8c_html_a6475916b10de913b8859fbd0b8312557"><div class="ttname"><a href="vector_8c.html#a6475916b10de913b8859fbd0b8312557">pop_llong_vector_index</a></div><div class="ttdeci">int pop_llong_vector_index(LLInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01444">vector.c:1444</a></div></div>
+<div class="ttc" id="avector_8c_html_a69479bf6e334f44f372305c8b1b13bb3"><div class="ttname"><a href="vector_8c.html#a69479bf6e334f44f372305c8b1b13bb3">pop_bool_vector_index</a></div><div class="ttdeci">int pop_bool_vector_index(Bool *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01534">vector.c:1534</a></div></div>
+<div class="ttc" id="avector_8c_html_a7527a193c89c32c07eba99e8abc08574"><div class="ttname"><a href="vector_8c.html#a7527a193c89c32c07eba99e8abc08574">pop_uchar_vector_index</a></div><div class="ttdeci">int pop_uchar_vector_index(UChar *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01521">vector.c:1521</a></div></div>
+<div class="ttc" id="avector_8c_html_a7f179d98deb7852196afc7e3d26ef06d"><div class="ttname"><a href="vector_8c.html#a7f179d98deb7852196afc7e3d26ef06d">pop_float_vector_index</a></div><div class="ttdeci">int pop_float_vector_index(Flt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01470">vector.c:1470</a></div></div>
+<div class="ttc" id="avector_8c_html_a8d2545eb603560d67e5c481075e5d0fc"><div class="ttname"><a href="vector_8c.html#a8d2545eb603560d67e5c481075e5d0fc">pop_double_vector_index</a></div><div class="ttdeci">int pop_double_vector_index(Dble *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01483">vector.c:1483</a></div></div>
+<div class="ttc" id="avector_8c_html_a90c0d394579f3950b22adabb66f153e9"><div class="ttname"><a href="vector_8c.html#a90c0d394579f3950b22adabb66f153e9">pop_short_vector_index</a></div><div class="ttdeci">int pop_short_vector_index(Short *vec, size_t index)</div><div class="ttdoc">pop_type_stack_index functions</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01366">vector.c:1366</a></div></div>
+<div class="ttc" id="avector_8c_html_ab5f9826948a1e75b6ffa74b2e801f8c5"><div class="ttname"><a href="vector_8c.html#ab5f9826948a1e75b6ffa74b2e801f8c5">pop_ushort_vector_index</a></div><div class="ttdeci">int pop_ushort_vector_index(UShort *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01379">vector.c:1379</a></div></div>
+<div class="ttc" id="avector_8c_html_ade7d072b4cbbed3560461122ff9bf2d1"><div class="ttname"><a href="vector_8c.html#ade7d072b4cbbed3560461122ff9bf2d1">pop_long_vector_index</a></div><div class="ttdeci">int pop_long_vector_index(LInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01418">vector.c:1418</a></div></div>
+<div class="ttc" id="avector_8c_html_aea61eee2cd7481c1d34d13ba4a27e669"><div class="ttname"><a href="vector_8c.html#aea61eee2cd7481c1d34d13ba4a27e669">pop_uint_vector_index</a></div><div class="ttdeci">int pop_uint_vector_index(UInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01405">vector.c:1405</a></div></div>
+<div class="ttc" id="avector_8c_html_aee6e8f2b009cc7205dfd8c143b8e9839"><div class="ttname"><a href="vector_8c.html#aee6e8f2b009cc7205dfd8c143b8e9839">pop_ulong_vector_index</a></div><div class="ttdeci">int pop_ulong_vector_index(ULInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01431">vector.c:1431</a></div></div>
+<div class="ttc" id="avector_8c_html_af0ecebd36b313d07d43f40698bd5508f"><div class="ttname"><a href="vector_8c.html#af0ecebd36b313d07d43f40698bd5508f">pop_int_vector_index</a></div><div class="ttdeci">int pop_int_vector_index(Int *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01392">vector.c:1392</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00185">185</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>
