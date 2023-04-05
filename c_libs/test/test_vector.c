@@ -988,4 +988,315 @@ void test_pop_string_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+ // TEST_REPLACE_TYPE_VALUES_VEC FUNCTIONS
+
+void test_replace_short_values_vec(void **state)
+{
+	(void) state;
+	short int correct[5] = {2, 2, 2, 4, 2};
+	Short vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ushort_values_vec(void **state)
+{
+	(void) state;
+	unsigned short int correct[5] = {2, 2, 2, 4, 2};
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_int_values_vec(void **state)
+{
+	(void) state;
+	int correct[5] = {2, 2, 2, 4, 2};
+	Int vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_uint_values_vec(void **state)
+{
+	(void) state;
+	unsigned int correct[5] = {2, 2, 2, 4, 2};
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_long_values_vec(void **state)
+{
+	(void) state;
+	long int correct[5] = {2, 2, 2, 4, 2};
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ulong_values_vec(void **state)
+{
+	(void) state;
+	unsigned long int correct[5] = {2, 2, 2, 4, 2};
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_llong_values_vec(void **state)
+{
+	(void) state;
+	long long int correct[5] = {2, 2, 2, 4, 2};
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ullong_values_vec(void **state)
+{
+	(void) state;
+	unsigned long long int correct[5] = {2, 2, 2, 4, 2};
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 1, vec.active_length);
+
+	REPLACE_VALUES(vec, 1, 2);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(correct[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_float_values_vec(void **state)
+{
+	(void) state;
+	float correct[5] = {2., 2., 2., 4., 2.};
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1.f, vec.active_length);
+	PUSH(vec, 2.f, vec.active_length);
+	PUSH(vec, 1.f, vec.active_length);
+	PUSH(vec, 4.f, vec.active_length);
+	PUSH(vec, 1.f, vec.active_length);
+
+	REPLACE_VALUES(vec, 1.f, 2.f);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(correct[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_double_values_vec(void **state)
+{
+	(void) state;
+	double correct[5] = {2., 2., 2., 4., 2.};
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1., vec.active_length);
+	PUSH(vec, 2., vec.active_length);
+	PUSH(vec, 1., vec.active_length);
+	PUSH(vec, 4., vec.active_length);
+	PUSH(vec, 1., vec.active_length);
+
+	REPLACE_VALUES(vec, 1., 2.);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(correct[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ldouble_values_vec(void **state)
+{
+	(void) state;
+	long double correct[5] = {2., 2., 2., 4., 2.};
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 1., vec.active_length);
+	PUSH(vec, 2., vec.active_length);
+	PUSH(vec, 1., vec.active_length);
+	PUSH(vec, 4., vec.active_length);
+	PUSH(vec, 1., vec.active_length);
+
+	REPLACE_VALUES(vec, 1., 2.);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(correct[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_char_values_vec(void **state)
+{
+	(void) state;
+	char correct[5] = {'b', 'b', 'b','b', 'b'};
+	Char vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'b', vec.active_length);
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'a', vec.active_length);
+
+	REPLACE_VALUES(vec, 'a', 'b');
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(correct[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_uchar_values_vec(void **state)
+{
+	(void) state;
+	unsigned char correct[5] = {'b', 'b', 'b','b', 'b'};
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'b', vec.active_length);
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'a', vec.active_length);
+
+	REPLACE_VALUES(vec, 'a', 'b');
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(correct[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_bool_values_vec(void **state)
+{
+	(void) state;
+	bool correct[5] = {true, true, true, true, true};
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+
+	PUSH(vec, true, vec.active_length);
+	PUSH(vec, false, vec.active_length);
+	PUSH(vec, true, vec.active_length);
+	PUSH(vec, false, vec.active_length);
+	PUSH(vec, false, vec.active_length);
+
+	REPLACE_VALUES(vec, false, true);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(correct[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_string_values_vec(void **state) {
+	String vec;
+	init_string_vector(&vec);
+	PUSH(vec, "Hello", vec.active_length);
+	PUSH(vec, "Goodbye", vec.active_length);
+	PUSH(vec, "Hello", vec.active_length);
+	PUSH(vec, "Goodbye", vec.active_length);
+	REPLACE_VALUES(vec, "Hello", "Goodbye");
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(strcmp("Goodbye", vec.array[i]) == 0);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

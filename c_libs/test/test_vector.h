@@ -84,7 +84,6 @@ void test_insert_bool_arr(void **state);
 // ==========================================================================================
 // TEST_POP_TYPE_INDEX FUNCTIONS
 
-
 void test_pop_short_vec(void **state);
 void test_pop_ushort_vec(void **state);
 void test_pop_int_vec(void **state);
@@ -100,6 +99,27 @@ void test_pop_double_vec(void **state);
 void test_pop_ldouble_vec(void **state);
 void test_pop_bool_vec(void **state);
 void test_pop_string_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST_REPLACE_TYPE_VALUES_VEC FUNCTIONS
+
+void test_replace_short_values_vec(void **state);
+void test_replace_ushort_values_vec(void **state);
+void test_replace_int_values_vec(void **state);
+void test_replace_uint_values_vec(void **state);
+void test_replace_long_values_vec(void **state);
+void test_replace_ulong_values_vec(void **state);
+void test_replace_llong_values_vec(void **state);
+void test_replace_ullong_values_vec(void **state);
+void test_replace_char_values_vec(void **state);
+void test_replace_uchar_values_vec(void **state);
+void test_replace_float_values_vec(void **state);
+void test_replace_double_values_vec(void **state);
+void test_replace_ldouble_values_vec(void **state);
+void test_replace_bool_values_vec(void **state);
+void test_replace_string_values_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
 
 #endif /* test_vector_H */
 // ==========================================================================================

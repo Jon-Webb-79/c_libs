@@ -12,6 +12,8 @@
 \#define \mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(T)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_a7873976d8a344c5188e57dffb974056b}{POP\+\_\+\+INDEX}}(T,  y)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}{REPLACE\+\_\+\+VALUES}}(T,  old,  new)
 \end{DoxyCompactItemize}
 
 
@@ -131,4 +133,54 @@ Definition at line \mbox{\hyperlink{data__structures_8h_source_l00185}{185}} of 
 
 
 Definition at line \mbox{\hyperlink{data__structures_8h_source_l00047}{47}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\mbox{\Hypertarget{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}\label{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}} 
+\index{data\_structures.h@{data\_structures.h}!REPLACE\_VALUES@{REPLACE\_VALUES}}
+\index{REPLACE\_VALUES@{REPLACE\_VALUES}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REPLACE\_VALUES}{REPLACE\_VALUES}}
+{\footnotesize\ttfamily \#define REPLACE\+\_\+\+VALUES(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{old,  }\item[{}]{new }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   \_Generic( (T), Short: \mbox{\hyperlink{vector_8c_a6f10b6c383f01d0f64ccdbedcbf2f9c6}{replace\_short\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UShort: \mbox{\hyperlink{vector_8c_a879f3876d14b47d940dbe55a1eec452e}{replace\_ushort\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Int: \mbox{\hyperlink{vector_8c_a7670474ec5b862ec981a62daa995aa3b}{replace\_int\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UInt: \mbox{\hyperlink{vector_8c_a9d98a8399e52f97b6771d676b3919319}{replace\_uint\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LInt: \mbox{\hyperlink{vector_8c_a8f344f297fe759011551c5f2bb5e0161}{replace\_long\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   ULInt: \mbox{\hyperlink{vector_8c_a3354495712d1e3910ca4e6a33ee1c1df}{replace\_ulong\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LLInt: \mbox{\hyperlink{vector_8c_a6fbef65375cd1143dadb2045d4a4cc82}{replace\_llong\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   ULLInt: \mbox{\hyperlink{vector_8c_acdb36a4f7fabea5ff887469c25bcaac3}{replace\_ullong\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Flt: \mbox{\hyperlink{vector_8c_aafe1e760a31236df3e8d9b5d4fedf79e}{replace\_float\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Dble: \mbox{\hyperlink{vector_8c_a141f86441673f219db9af026644dee3e}{replace\_double\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LDble: \mbox{\hyperlink{vector_8c_a344c029c451a00a0a90e20b34569db22}{replace\_ldouble\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Char: \mbox{\hyperlink{vector_8c_a8b7c3baf36c7ef6deca8011f2d622119}{replace\_char\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UChar: \mbox{\hyperlink{vector_8c_a8b8b55713c6eeeba3f8bb8fbbb08ad10}{replace\_uchar\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Bool: \mbox{\hyperlink{vector_8c_ab345b0d10cef3cb87e552791440398e9}{replace\_bool\_vector\_values}}, \(\backslash\)}
+\DoxyCodeLine{                                                   \mbox{\hyperlink{structString}{String}}: \mbox{\hyperlink{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}{replace\_string\_vector\_values}})(\&T, old, \textcolor{keyword}{new})}
+
+\end{DoxyCode}
+This macro will replace all instances of a value in an array with a new value. This macro merely selects the applicable function based on the data type of input variables. Therefore this macro will not increase memory usage, nor with it reduce execution time.
+
+/param vec A vector struct /param old\+\_\+value The value to be replaced, if it exists in the array /param new\+\_\+value The value that will replace the old value
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{IVector vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 5);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 1, vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 2, vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 1, vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 4, vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 1, vec.active\_length);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}{REPLACE\_VALUES}}(vec, 1, 2);}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec.active\_length; i++) \{}
+\DoxyCodeLine{    printf(\textcolor{stringliteral}{"{}\% PRId32 "{}}\(\backslash\)n\textcolor{stringliteral}{"{}, vec.array[i]);}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{// 2 2 2 4 2}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00231}{231}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
 

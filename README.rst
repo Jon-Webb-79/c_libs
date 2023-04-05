@@ -244,7 +244,9 @@ shows how this would occur for the ``PUSH`` macro, and the same holds true for t
 
    Flt arr;
    float a[5] = {2.1, 3.4, 2.8};
+   // Same as init_float_arrat(&arr, a, 5, 3);
    INIT_ARRAY(arr, a, 5, 3);
+   // Same as push_float_vector(&vec, 1.1f, arr.active_length);
    PUSH(arr, 1.1f, arr.active_length);
    PUSH(arr, 2.2f, arr.active_length);
    // This push should overload the data structure and cause failure
@@ -263,13 +265,41 @@ its objective, it will print an error message to ``stderror`` and return an inte
    #include "print.h"
 
    Dble vec;
+   // Same as init_double_vector(&vec, 5);
    INIT_VECTOR(vec, 5);
    double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   // Same as insert_double_vector(&vec, a, 5, 0);
    INSERT(vec, a, 5, 0);
+   // Same as pop_double_vector(&vec, 4);
    POP_INDEX(vec, 4);
    PRINT(vec);
+   // Same as free_double_vector(&vec);
    FREE(vec);
    // >> [ 1.1, 2.2, 3.3, 4.4 ]
+
+REPLACE_VALUES
+==============
+The ``REPLACE_VALUES(vtype vec, type old, type new)`` macro allows a user replace all instances
+of a value (i.e. ``old``) with a new value (i.e. ``new``).
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "array_ops.h"
+   #include "print.h"
+
+   Int vec;
+   // Same as init_int_vector(&vec, 20);
+   INIT_VECTOR(vec, 20);
+   int a[7] = {1, 1, 2, 3, 4, 1, 5};
+   // Same as insert_int_vector(&vec, a, 7, 0);
+   INSERT(vec, a, 7, 0);
+   // Same as replace_int_vector_values(&vec, 1, 3);
+   REPLACE_VALUES(vec, 1, 3);
+   PRINT(vec);
+   // Same as free_int_vector(&vec);
+   FREE(vec);
+   // >> [ 3, 3, 2, 3, 4, 3, 5 ]
 
 =====
 PRINT

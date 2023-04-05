@@ -87,6 +87,8 @@ Macros</h2></td></tr>
 <tr class="separator:a1603ab82164c2b586fb4e918dfe0787d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7873976d8a344c5188e57dffb974056b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a7873976d8a344c5188e57dffb974056b">POP_INDEX</a>(T,  y)</td></tr>
 <tr class="separator:a7873976d8a344c5188e57dffb974056b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad9b6661bf67c0b5cc43ddcbd39c206"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#abad9b6661bf67c0b5cc43ddcbd39c206">REPLACE_VALUES</a>(T,  old,  new)</td></tr>
+<tr class="separator:abad9b6661bf67c0b5cc43ddcbd39c206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a1603ab82164c2b586fb4e918dfe0787d" name="a1603ab82164c2b586fb4e918dfe0787d"></a>
@@ -335,6 +337,90 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8c_html_aea5f95b56df2836ee553face60351e61"><div class="ttname"><a href="vector_8c.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a></div><div class="ttdeci">int push_ulong_vector(ULInt *vec, unsigned long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00514">vector.c:514</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00047">47</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="abad9b6661bf67c0b5cc43ddcbd39c206" name="abad9b6661bf67c0b5cc43ddcbd39c206"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad9b6661bf67c0b5cc43ddcbd39c206">&#9670;&nbsp;</a></span>REPLACE_VALUES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REPLACE_VALUES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">old, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">new&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                                   _Generic( (T), Short: <a class="code hl_function" href="vector_8c.html#a6f10b6c383f01d0f64ccdbedcbf2f9c6">replace_short_vector_values</a>, \</div>
+<div class="line">                                                   UShort: <a class="code hl_function" href="vector_8c.html#a879f3876d14b47d940dbe55a1eec452e">replace_ushort_vector_values</a>, \</div>
+<div class="line">                                                   Int: <a class="code hl_function" href="vector_8c.html#a7670474ec5b862ec981a62daa995aa3b">replace_int_vector_values</a>, \</div>
+<div class="line">                                                   UInt: <a class="code hl_function" href="vector_8c.html#a9d98a8399e52f97b6771d676b3919319">replace_uint_vector_values</a>, \</div>
+<div class="line">                                                   LInt: <a class="code hl_function" href="vector_8c.html#a8f344f297fe759011551c5f2bb5e0161">replace_long_vector_values</a>, \</div>
+<div class="line">                                                   ULInt: <a class="code hl_function" href="vector_8c.html#a3354495712d1e3910ca4e6a33ee1c1df">replace_ulong_vector_values</a>, \</div>
+<div class="line">                                                   LLInt: <a class="code hl_function" href="vector_8c.html#a6fbef65375cd1143dadb2045d4a4cc82">replace_llong_vector_values</a>, \</div>
+<div class="line">                                                   ULLInt: <a class="code hl_function" href="vector_8c.html#acdb36a4f7fabea5ff887469c25bcaac3">replace_ullong_vector_values</a>, \</div>
+<div class="line">                                                   Flt: <a class="code hl_function" href="vector_8c.html#aafe1e760a31236df3e8d9b5d4fedf79e">replace_float_vector_values</a>, \</div>
+<div class="line">                                                   Dble: <a class="code hl_function" href="vector_8c.html#a141f86441673f219db9af026644dee3e">replace_double_vector_values</a>, \</div>
+<div class="line">                                                   LDble: <a class="code hl_function" href="vector_8c.html#a344c029c451a00a0a90e20b34569db22">replace_ldouble_vector_values</a>, \</div>
+<div class="line">                                                   Char: <a class="code hl_function" href="vector_8c.html#a8b7c3baf36c7ef6deca8011f2d622119">replace_char_vector_values</a>, \</div>
+<div class="line">                                                   UChar: <a class="code hl_function" href="vector_8c.html#a8b8b55713c6eeeba3f8bb8fbbb08ad10">replace_uchar_vector_values</a>, \</div>
+<div class="line">                                                   Bool: <a class="code hl_function" href="vector_8c.html#ab345b0d10cef3cb87e552791440398e9">replace_bool_vector_values</a>, \</div>
+<div class="line">                                                   <a class="code hl_struct" href="structString.html">String</a>: <a class="code hl_function" href="vector_8c.html#a1556bb53212c3c454a2ddb3f4c2f4c8a">replace_string_vector_values</a>)(&amp;T, old, <span class="keyword">new</span>)</div>
+<div class="ttc" id="avector_8c_html_a141f86441673f219db9af026644dee3e"><div class="ttname"><a href="vector_8c.html#a141f86441673f219db9af026644dee3e">replace_double_vector_values</a></div><div class="ttdeci">void replace_double_vector_values(Dble *vec, double old_value, double new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01636">vector.c:1636</a></div></div>
+<div class="ttc" id="avector_8c_html_a1556bb53212c3c454a2ddb3f4c2f4c8a"><div class="ttname"><a href="vector_8c.html#a1556bb53212c3c454a2ddb3f4c2f4c8a">replace_string_vector_values</a></div><div class="ttdeci">void replace_string_vector_values(String *vec, char *old_value, char *new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01671">vector.c:1671</a></div></div>
+<div class="ttc" id="avector_8c_html_a3354495712d1e3910ca4e6a33ee1c1df"><div class="ttname"><a href="vector_8c.html#a3354495712d1e3910ca4e6a33ee1c1df">replace_ulong_vector_values</a></div><div class="ttdeci">void replace_ulong_vector_values(ULInt *vec, unsigned long int old_value, unsigned long int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01608">vector.c:1608</a></div></div>
+<div class="ttc" id="avector_8c_html_a344c029c451a00a0a90e20b34569db22"><div class="ttname"><a href="vector_8c.html#a344c029c451a00a0a90e20b34569db22">replace_ldouble_vector_values</a></div><div class="ttdeci">void replace_ldouble_vector_values(LDble *vec, long double old_value, long double new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01643">vector.c:1643</a></div></div>
+<div class="ttc" id="avector_8c_html_a6f10b6c383f01d0f64ccdbedcbf2f9c6"><div class="ttname"><a href="vector_8c.html#a6f10b6c383f01d0f64ccdbedcbf2f9c6">replace_short_vector_values</a></div><div class="ttdeci">void replace_short_vector_values(Short *vec, short int old_value, short int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01573">vector.c:1573</a></div></div>
+<div class="ttc" id="avector_8c_html_a6fbef65375cd1143dadb2045d4a4cc82"><div class="ttname"><a href="vector_8c.html#a6fbef65375cd1143dadb2045d4a4cc82">replace_llong_vector_values</a></div><div class="ttdeci">void replace_llong_vector_values(LLInt *vec, long long int old_value, long long int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01615">vector.c:1615</a></div></div>
+<div class="ttc" id="avector_8c_html_a7670474ec5b862ec981a62daa995aa3b"><div class="ttname"><a href="vector_8c.html#a7670474ec5b862ec981a62daa995aa3b">replace_int_vector_values</a></div><div class="ttdeci">void replace_int_vector_values(Int *vec, int old_value, int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01587">vector.c:1587</a></div></div>
+<div class="ttc" id="avector_8c_html_a879f3876d14b47d940dbe55a1eec452e"><div class="ttname"><a href="vector_8c.html#a879f3876d14b47d940dbe55a1eec452e">replace_ushort_vector_values</a></div><div class="ttdeci">void replace_ushort_vector_values(UShort *vec, unsigned short int old_value, unsigned short int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01580">vector.c:1580</a></div></div>
+<div class="ttc" id="avector_8c_html_a8b7c3baf36c7ef6deca8011f2d622119"><div class="ttname"><a href="vector_8c.html#a8b7c3baf36c7ef6deca8011f2d622119">replace_char_vector_values</a></div><div class="ttdeci">void replace_char_vector_values(Char *vec, char old_value, char new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01650">vector.c:1650</a></div></div>
+<div class="ttc" id="avector_8c_html_a8b8b55713c6eeeba3f8bb8fbbb08ad10"><div class="ttname"><a href="vector_8c.html#a8b8b55713c6eeeba3f8bb8fbbb08ad10">replace_uchar_vector_values</a></div><div class="ttdeci">void replace_uchar_vector_values(UChar *vec, unsigned char old_value, unsigned char new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01657">vector.c:1657</a></div></div>
+<div class="ttc" id="avector_8c_html_a8f344f297fe759011551c5f2bb5e0161"><div class="ttname"><a href="vector_8c.html#a8f344f297fe759011551c5f2bb5e0161">replace_long_vector_values</a></div><div class="ttdeci">void replace_long_vector_values(LInt *vec, long int old_value, long int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01601">vector.c:1601</a></div></div>
+<div class="ttc" id="avector_8c_html_a9d98a8399e52f97b6771d676b3919319"><div class="ttname"><a href="vector_8c.html#a9d98a8399e52f97b6771d676b3919319">replace_uint_vector_values</a></div><div class="ttdeci">void replace_uint_vector_values(UInt *vec, unsigned int old_value, unsigned int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01594">vector.c:1594</a></div></div>
+<div class="ttc" id="avector_8c_html_aafe1e760a31236df3e8d9b5d4fedf79e"><div class="ttname"><a href="vector_8c.html#aafe1e760a31236df3e8d9b5d4fedf79e">replace_float_vector_values</a></div><div class="ttdeci">void replace_float_vector_values(Flt *vec, float old_value, float new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01629">vector.c:1629</a></div></div>
+<div class="ttc" id="avector_8c_html_ab345b0d10cef3cb87e552791440398e9"><div class="ttname"><a href="vector_8c.html#ab345b0d10cef3cb87e552791440398e9">replace_bool_vector_values</a></div><div class="ttdeci">void replace_bool_vector_values(Bool *vec, bool old_value, char new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01664">vector.c:1664</a></div></div>
+<div class="ttc" id="avector_8c_html_acdb36a4f7fabea5ff887469c25bcaac3"><div class="ttname"><a href="vector_8c.html#acdb36a4f7fabea5ff887469c25bcaac3">replace_ullong_vector_values</a></div><div class="ttdeci">void replace_ullong_vector_values(ULLInt *vec, unsigned long long int old_value, unsigned long long int new_value)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01622">vector.c:1622</a></div></div>
+</div><!-- fragment --><p >This macro will replace all instances of a value in an array with a new value. This macro merely selects the applicable function based on the data type of input variables. Therefore this macro will not increase memory usage, nor with it reduce execution time.</p>
+<p >/param vec A vector struct /param old_value The value to be replaced, if it exists in the array /param new_value The value that will replace the old value</p>
+<div class="fragment"><div class="line">IVector vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 5);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 1, vec.active_length);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 2, vec.active_length);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 1, vec.active_length);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 4, vec.active_length);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 1, vec.active_length);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#abad9b6661bf67c0b5cc43ddcbd39c206">REPLACE_VALUES</a>(vec, 1, 2);</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; vec.active_length; i++) {</div>
+<div class="line">    printf(<span class="stringliteral">&quot;% PRId32 &quot;</span>\n<span class="stringliteral">&quot;, vec.array[i]);</span></div>
+<div class="line"><span class="stringliteral">}</span></div>
+<div class="line"><span class="stringliteral">// 2 2 2 4 2</span></div>
+<div class="ttc" id="adata__structures_8h_html_a3fee9a7b57ea204e4220ef2bd0700db5"><div class="ttname"><a href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a></div><div class="ttdeci">#define PUSH(T, value, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00047">data_structures.h:47</a></div></div>
+<div class="ttc" id="adata__structures_8h_html_abad9b6661bf67c0b5cc43ddcbd39c206"><div class="ttname"><a href="data__structures_8h.html#abad9b6661bf67c0b5cc43ddcbd39c206">REPLACE_VALUES</a></div><div class="ttdeci">#define REPLACE_VALUES(T, old, new)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00231">data_structures.h:231</a></div></div>
+<div class="ttc" id="avector_8h_html_a78b085b69ede6314aedfc346b480a078"><div class="ttname"><a href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a></div><div class="ttdeci">#define INIT_VECTOR(T, length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00280">vector.h:280</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00231">231</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>

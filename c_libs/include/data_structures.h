@@ -199,6 +199,52 @@
 							   String: pop_string_vector_index)(&T, y)
 // ==========================================================================================
 // ==========================================================================================
+// REPLACE_VALUES MACRO
+
+/**
+ * This macro will replace all instances of a value in an array with a new value.
+ * This macro merely selects the applicable function based on the data type
+ * of input variables.  Therefore this macro will not increase memory usage,
+ * nor with it reduce execution time.
+ *
+ * /param vec A vector struct
+ * /param old_value The value to be replaced, if it exists in the array
+ * /param new_value The value that will replace the old value
+ *
+ * @code
+ * IVector vec;
+ * INIT_VECTOR(vec, 5);
+ * PUSH(vec, 1, vec.active_length);
+ * PUSH(vec, 2, vec.active_length);
+ * PUSH(vec, 1, vec.active_length);
+ * PUSH(vec, 4, vec.active_length);
+ * PUSH(vec, 1, vec.active_length);
+ *
+ * REPLACE_VALUES(vec, 1, 2);
+ * for (size_t i = 0; i < vec.active_length; i++) {
+ *     printf("% PRId32 "\n", vec.array[i]);
+ * }
+ * // 2 2 2 4 2
+ * @endcode
+ */
+
+#define REPLACE_VALUES(T, old, new) _Generic( (T), Short: replace_short_vector_values, \
+										           UShort: replace_ushort_vector_values, \
+										           Int: replace_int_vector_values, \
+										           UInt: replace_uint_vector_values, \
+										           LInt: replace_long_vector_values, \
+										           ULInt: replace_ulong_vector_values, \
+										           LLInt: replace_llong_vector_values, \
+										           ULLInt: replace_ullong_vector_values, \
+										           Flt: replace_float_vector_values, \
+										           Dble: replace_double_vector_values, \
+										           LDble: replace_ldouble_vector_values, \
+										           Char: replace_char_vector_values, \
+												   UChar: replace_uchar_vector_values, \
+												   Bool: replace_bool_vector_values, \
+												   String: replace_string_vector_values)(&T, old, new)
+// ==========================================================================================
+// ==========================================================================================
 
 #endif /* data_structures_H */
 // ==========================================================================================
