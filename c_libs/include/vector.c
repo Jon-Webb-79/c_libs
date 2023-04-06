@@ -2020,6 +2020,18 @@ void delete_char_vector_duplicates(Char *vec) {
 		}
 	}
 }
+// ------------------------------------------------------------------------------------------
+
+void delete_uchar_vector_duplicates(UChar *vec) {
+	for (size_t i = 0; i < vec->active_length - 1; i++) {
+		for (size_t j = i + 1; j < vec->active_length; j++) {
+			if (vec->array[j] == vec->array[i]) {
+				pop_uchar_vector_index(vec, j);
+				j--;
+			}
+		}
+	}
+}
 // --------------------------------------------------------------------------------
 
 void delete_bool_vector_duplicates(Bool *vec) {

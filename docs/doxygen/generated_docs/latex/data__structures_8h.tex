@@ -14,10 +14,56 @@
 \#define \mbox{\hyperlink{data__structures_8h_a7873976d8a344c5188e57dffb974056b}{POP\+\_\+\+INDEX}}(T,  y)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}{REPLACE\+\_\+\+VALUES}}(T,  old,  new)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}{DELETE\+\_\+\+DUPLICATES}}(T)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}\label{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}} 
+\index{data\_structures.h@{data\_structures.h}!DELETE\_DUPLICATES@{DELETE\_DUPLICATES}}
+\index{DELETE\_DUPLICATES@{DELETE\_DUPLICATES}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{DELETE\_DUPLICATES}{DELETE\_DUPLICATES}}
+{\footnotesize\ttfamily \#define DELETE\+\_\+\+DUPLICATES(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            \_Generic( (T), Short: \mbox{\hyperlink{vector_8c_a35b16d98a38d37826ee118f4860d680a}{delete\_short\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            UShort: \mbox{\hyperlink{vector_8c_a372a58405f86fa4ef22f53af37408017}{delete\_ushort\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            Int: \mbox{\hyperlink{vector_8c_a68a325016f45777566e1eae4b15c4238}{delete\_int\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            UInt: \mbox{\hyperlink{vector_8c_ab5a49e7e86d86796744395431d475f74}{delete\_uint\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            LInt: \mbox{\hyperlink{vector_8c_a10ee633f27cbd6252d41ffd0761f6392}{delete\_long\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            ULInt: \mbox{\hyperlink{vector_8c_aa7b0890be4e8157712930fedaf437c8a}{delete\_ulong\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            LLInt: \mbox{\hyperlink{vector_8c_a8f895e83e3b4e24dfdd253508da61875}{delete\_llong\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            ULLInt: \mbox{\hyperlink{vector_8c_a91794ceff19b304073f15ca82fe38b0b}{delete\_ullong\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            Flt: \mbox{\hyperlink{vector_8c_a49e7b8e0e17f4570f95875965ea8c2d6}{delete\_float\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            Dble: \mbox{\hyperlink{vector_8c_a0bf0ceecb4ef742811c3b2ed8384d432}{delete\_double\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            LDble: \mbox{\hyperlink{vector_8c_a915b5e5eff06f5a04ff068c94cdcffb4}{delete\_ldouble\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            Char: \mbox{\hyperlink{vector_8c_a5a01cb2f66c78b55858a0941ad9459af}{delete\_char\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            UChar: \mbox{\hyperlink{vector_8c_a51740972d62e96e248d8a07eb65e48aa}{delete\_uchar\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            Bool: \mbox{\hyperlink{vector_8c_a1fe7315ba2394e61b43b99bfc765bd75}{delete\_bool\_vector\_duplicates}}, \(\backslash\)}
+\DoxyCodeLine{                                            \mbox{\hyperlink{structString}{String}}: \mbox{\hyperlink{vector_8c_a1b3482060f9c607f98dbef4845db335f}{delete\_string\_vector\_duplicates}})(\&T)}
+
+\end{DoxyCode}
+This macro will delete all duplicate values in a data structure with exception of the original value
+
+/param T The struct container
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int8 vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 6);}
+\DoxyCodeLine{int8\_t a[6] = \{1, 1, 2, 2, 3, 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 6, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}{DELETE\_DUPLICATES}}(vec);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 3 ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00266}{266}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
 \mbox{\Hypertarget{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}\label{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}} 
 \index{data\_structures.h@{data\_structures.h}!FREE@{FREE}}
 \index{FREE@{FREE}!data\_structures.h@{data\_structures.h}}

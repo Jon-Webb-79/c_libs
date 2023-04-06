@@ -245,6 +245,41 @@
 												   String: replace_string_vector_values)(&T, old, new)
 // ==========================================================================================
 // ==========================================================================================
+// DELETE_TYPE_DUPLICATES OPERATOR
+
+/**
+ * This macro will delete all duplicate values in a data structure with exception
+ * of the original value
+ *
+ * /param T The struct container
+ *
+ * @code
+ * Int8 vec;
+ * INIT_VECTOR(vec, 6);
+ * int8_t a[6] = {1, 1, 2, 2, 3, 3};
+ * INSERT(vec, a, 6, 0);
+ * DELETE_DUPLICATES(vec);
+ * PRINT(vec);
+ * // >> [ 1, 2, 3 ]
+ * @endcode
+ */
+#define DELETE_DUPLICATES(T) _Generic( (T), Short: delete_short_vector_duplicates, \
+										    UShort: delete_ushort_vector_duplicates, \
+										    Int: delete_int_vector_duplicates, \
+										    UInt: delete_uint_vector_duplicates, \
+										    LInt: delete_long_vector_duplicates, \
+										    ULInt: delete_ulong_vector_duplicates, \
+										    LLInt: delete_llong_vector_duplicates, \
+										    ULLInt: delete_ullong_vector_duplicates, \
+										    Flt: delete_float_vector_duplicates, \
+										    Dble: delete_double_vector_duplicates, \
+										    LDble: delete_ldouble_vector_duplicates, \
+										    Char: delete_char_vector_duplicates, \
+											UChar: delete_uchar_vector_duplicates, \
+										    Bool: delete_bool_vector_duplicates, \
+										    String: delete_string_vector_duplicates)(&T)
+// ==========================================================================================
+// ==========================================================================================
 
 #endif /* data_structures_H */
 // ==========================================================================================

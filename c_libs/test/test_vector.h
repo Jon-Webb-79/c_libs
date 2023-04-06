@@ -120,6 +120,25 @@ void test_replace_bool_values_vec(void **state);
 void test_replace_string_values_vec(void **state);
 // ==========================================================================================
 // ==========================================================================================
+// TEST_DELETE_TYPE_DUP_VEC
+
+void test_delete_short_dup_vec(void **state);
+void test_delete_ushort_dup_vec(void **state);
+void test_delete_int_dup_vec(void **state);
+void test_delete_uint_dup_vec(void **state);
+void test_delete_long_dup_vec(void **state);
+void test_delete_ulong_dup_vec(void **state);
+void test_delete_llong_dup_vec(void **state);
+void test_delete_ullong_dup_vec(void **state);
+void test_delete_float_dup_vec(void **state);
+void test_delete_double_dup_vec(void **state);
+void test_delete_ldouble_dup_vec(void **state);
+void test_delete_char_dup_vec(void **state);
+void test_delete_uchar_dup_vec(void **state);
+void test_delete_bool_dup_vec(void **state);
+void test_delete_string_dup_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
 
 #endif /* test_vector_H */
 // ==========================================================================================

@@ -300,6 +300,31 @@ of a value (i.e. ``old``) with a new value (i.e. ``new``).
    FREE(vec);
    // >> [ 3, 3, 2, 3, 4, 3, 5 ]
 
+DELETE_DUPLICATES
+=================
+The ``DELETE_DUPLICATES(vec)`` macro will delete preserve the first instance of a value
+in a stack structure and delete all other instances.  The Macro will conduct compile time data
+checking to ensure that the type of ``vec`` matches one of the pre-defined types in
+Section `VECTOR_STRUCT`_.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   // Same as init_int_vector(&vec. 5);
+   INIT_VECTOR(vec, 5);
+   int a[6] = {1, 1, 2, 2, 3, 3};
+   // Same as insert_int_vector(&vec, a, 6, 0);
+   INSERT(vec, a, 6, 0);
+   // Same as delete_int_vector_duplicates(&vec);
+   DELETE_DUPLICATES(vec)
+   PRINT(vec);
+   // >> [ 1, 2, 3 ]
+   // Same as free_int_vector(&vec);
+   FREE(vec);
+
 =====
 PRINT
 =====

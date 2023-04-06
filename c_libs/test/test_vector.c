@@ -1299,4 +1299,221 @@ void test_replace_string_values_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+
+void test_delete_short_dup_vec(void **state) {
+	short int a[6] = {1, 1, 2, 2, 3, 3};
+	Short vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	short int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ushort_dup_vec(void **state) {
+	unsigned short int a[6] = {1, 1, 2, 2, 3, 3};
+	UShort vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	unsigned short int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_int_dup_vec(void **state) {
+	int a[6] = {1, 1, 2, 2, 3, 3};
+	Int vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_uint_dup_vec(void **state) {
+	unsigned int a[6] = {1, 1, 2, 2, 3, 3};
+	UInt vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	unsigned int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_long_dup_vec(void **state) {
+	long int a[6] = {1, 1, 2, 2, 3, 3};
+	LInt vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	long int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ulong_dup_vec(void **state) {
+	unsigned long int a[6] = {1, 1, 2, 2, 3, 3};
+	ULInt vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	unsigned long int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_llong_dup_vec(void **state) {
+	long long int a[6] = {1, 1, 2, 2, 3, 3};
+	LLInt vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	long long int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ullong_dup_vec(void **state) {
+	unsigned long long int a[6] = {1, 1, 2, 2, 3, 3};
+	ULLInt vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	unsigned long long int b[3] = {1, 2, 3};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_float_dup_vec(void **state) {
+	float a[6] = {1., 1., 2., 2., 3., 3.};
+	Flt vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	float b[3] = {1., 2., 3.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_double_dup_vec(void **state) {
+	double a[6] = {1., 1., 2., 2., 3., 3.};
+	Dble vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	double b[3] = {1., 2., 3.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ldouble_dup_vec(void **state) {
+	long double a[6] = {1., 1., 2., 2., 3., 3.};
+	LDble vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	long double b[3] = {1., 2., 3.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_char_dup_vec(void **state) {
+	char a[6] = {'a', 'a', 'b', 'b', 'c', 'c'};
+	Char vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	char b[3] = {'a', 'b', 'c'};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_delete_uchar_dup_vec(void **state) {
+	unsigned char a[6] = {'a', 'a', 'b', 'b', 'c', 'c'};
+	UChar vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	unsigned char b[3] = {'a', 'b', 'c'};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_string_dup_vec(void **state) {
+	char *a[] = {"One", "Two", "Three"};
+	int test;
+	String vec;
+	init_string_vector(&vec);
+	PUSH(vec, "One", 0);
+	PUSH(vec, "One", 1);
+	PUSH(vec, "Two", 2);
+	PUSH(vec, "Two", 3);
+	PUSH(vec, "Three", 4);
+	PUSH(vec, "Three", 5);
+	DELETE_DUPLICATES(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		test = strcmp(a[i], vec.array[i]);
+		assert_int_equal(test, 0);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_delete_bool_dup_vec(void **state) {
+	bool a[6] = {true, true, false, false, true, false};
+	Bool vec;
+	INIT_VECTOR(vec, 6);
+	INSERT(vec, a, 6, 0);
+	DELETE_DUPLICATES(vec);
+	bool b[2] = {true, false};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(vec.array[i], b[i]);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
