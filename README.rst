@@ -303,9 +303,7 @@ of a value (i.e. ``old``) with a new value (i.e. ``new``).
 DELETE_DUPLICATES
 =================
 The ``DELETE_DUPLICATES(vec)`` macro will delete preserve the first instance of a value
-in a stack structure and delete all other instances.  The Macro will conduct compile time data
-checking to ensure that the type of ``vec`` matches one of the pre-defined types in
-Section `VECTOR_STRUCT`_.
+in a stack structure and delete all other instances.
 
 .. code-block:: c
 
