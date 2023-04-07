@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector_5fstruct_0',['VECTOR_STRUCT',['../vector_8h.html#a84eaf8fe661d2d8eb9275491bc8329df',1,'vector.h']]]
+  ['trim_0',['TRIM',['../vector_8h.html#ae7ea4c14f63edfd4d7c039a02ae1a65e',1,'vector.h']]]
 ];

@@ -209,6 +209,23 @@ void test_cumsum_double_vec(void **state);
 void test_cumsum_ldouble_vec(void **state);
 void test_cumsum_char_vec(void **state);
 void test_cumsum_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST AVERAGE_TYPE FUNCTIONS
+
+void test_average_short_vec(void **state);
+void test_average_ushort_vec(void **state);
+void test_average_int_vec(void **state);
+void test_average_uint_vec(void **state);
+void test_average_long_vec(void **state);
+void test_average_ulong_vec(void **state);
+void test_average_llong_vec(void **state);
+void test_average_ullong_vec(void **state);
+void test_average_float_vec(void **state);
+void test_average_double_vec(void **state);
+void test_average_ldouble_vec(void **state);
+void test_average_char_vec(void **state);
+void test_average_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

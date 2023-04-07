@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cumsum_0',['CUMSUM',['../data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c',1,'data_structures.h']]]
+  ['average_0',['AVERAGE',['../data__structures_8h.html#a81794266d48f7e352116d53be0fda9fc',1,'data_structures.h']]]
 ];

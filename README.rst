@@ -415,6 +415,28 @@ The ``vtype sum_array = CUMSUM(vtype vec)`` macro will return an array containin
    // >> [ 1, 3, 6, 10, 15 ]
    FREE(vec);
 
+AVERAGE
+=======
+The ``type avg= AVERAGE(dtype vec)`` macro will calculate and return the average or mean value of the elements
+of a vector data structure. **NOTE:** This macro does not work with the ``Bool`` or ``String`` data types.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   // Same as init_float_vector(&vec, 5);
+   INIT_VECTOR(vec, 5);
+   float a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+   // Same as insert_float_vector(&vec, a, 5, 0);
+   INSERT(vec, a, 5, 0);
+   // Same as float avg = average_float_vector(&vec);
+   float avg = AVERAGE(vec);
+   PRINT(avg);
+   // 3.328
+   FREE(vec);
+
 =====
 PRINT
 =====

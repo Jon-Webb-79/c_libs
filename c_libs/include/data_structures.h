@@ -420,6 +420,39 @@
 								 Char: cumsum_char_vector, \
 								 UChar: cumsum_uchar_vector, \
 								 LDble: cumsum_ldouble_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// AVERAGE MACRO
+
+/**
+ * This macro will return the average value of a data structure.  The macro
+ * will return the appropriate data type depending on the input data type.
+ *
+ * /param T The input data structure
+ *
+ * @code
+ * Dble vec;
+ * INIT_VECTOR(vec, 5);
+ * double a[5] = {3.45, 2.18. 8.17, 0.56, 2.28};
+ * INSERT(vec, a, 5, 0);
+ * double avg = AVERAGE(vec);
+ * PRINT(avg);
+ * // >> 3.328
+ * @endcode
+ */
+#define AVERAGE(T) _Generic( (T), Char: average_char_vector, \
+		                          UChar: average_uchar_vector, \
+							      Short: average_short_vector, \
+							      UShort: average_ushort_vector, \
+								  Int: average_int_vector, \
+							      UInt: average_uint_vector, \
+								  LInt: average_long_vector, \
+								  ULInt: average_ulong_vector, \
+								  LLInt: average_llong_vector, \
+								  ULLInt: average_ullong_vector, \
+								  Flt: average_float_vector, \
+						          Dble: average_double_vector, \
+								  LDble: average_ldouble_vector)(&T)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

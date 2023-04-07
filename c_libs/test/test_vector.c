@@ -2319,4 +2319,149 @@ void test_cumsum_uchar_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST AVERAGE_TYPE FUNCTIONS
+
+void test_average_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	double avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	double avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long double avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long double avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	float a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.328f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+	INSERT(vec, a, 5, 0);
+	double avg = AVERAGE(vec);
+	assert_float_equal(3.328f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+	INSERT(vec, a, 5, 0);
+	long double avg = AVERAGE(vec);
+	assert_float_equal(3.328f, avg, 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_average_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_average_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float avg = AVERAGE(vec);
+	assert_float_equal(3.000f, avg, 1.0e-3);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

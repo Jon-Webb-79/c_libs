@@ -101,8 +101,68 @@ Macros</h2></td></tr>
 <tr class="separator:ab2bc3cf2085b7ef95514abd7c78341de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67d6348b4a31d319108c5b915592e8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c">CUMSUM</a>(T)</td></tr>
 <tr class="separator:ad67d6348b4a31d319108c5b915592e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81794266d48f7e352116d53be0fda9fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a81794266d48f7e352116d53be0fda9fc">AVERAGE</a>(T)</td></tr>
+<tr class="separator:a81794266d48f7e352116d53be0fda9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a81794266d48f7e352116d53be0fda9fc" name="a81794266d48f7e352116d53be0fda9fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81794266d48f7e352116d53be0fda9fc">&#9670;&nbsp;</a></span>AVERAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVERAGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                  _Generic( (T), Char: <a class="code hl_function" href="vector_8c.html#a0a47e22454ec90b6c959915dbc3c87a6">average_char_vector</a>, \</div>
+<div class="line">                                  UChar: <a class="code hl_function" href="vector_8c.html#ad821bfcf3659a78a11a5c9c7fd72a277">average_uchar_vector</a>, \</div>
+<div class="line">                                  Short: <a class="code hl_function" href="vector_8c.html#a5a553d82722c04ec4b613014fa1d0688">average_short_vector</a>, \</div>
+<div class="line">                                  UShort: <a class="code hl_function" href="vector_8c.html#a96018578b7bce5eb04f4b4dbbd63b582">average_ushort_vector</a>, \</div>
+<div class="line">                                  Int: <a class="code hl_function" href="vector_8c.html#a2e384c1e58cf1f6486ae0a8bc2e46379">average_int_vector</a>, \</div>
+<div class="line">                                  UInt: <a class="code hl_function" href="vector_8c.html#a35959e6bd4010b04681750611d00a7b7">average_uint_vector</a>, \</div>
+<div class="line">                                  LInt: <a class="code hl_function" href="vector_8c.html#ad1feee1c2712401a20fbe6699f5c4bc7">average_long_vector</a>, \</div>
+<div class="line">                                  ULInt: <a class="code hl_function" href="vector_8c.html#aa94c4a725c6ab558c748baa93b652363">average_ulong_vector</a>, \</div>
+<div class="line">                                  LLInt: <a class="code hl_function" href="vector_8c.html#ae3782b50d088b4488da3a8283670ffcc">average_llong_vector</a>, \</div>
+<div class="line">                                  ULLInt: <a class="code hl_function" href="vector_8c.html#abb879670618c44d1259b4cb689d36698">average_ullong_vector</a>, \</div>
+<div class="line">                                  Flt: <a class="code hl_function" href="vector_8c.html#a95e8f18d7457adb1784ca850c7afa01e">average_float_vector</a>, \</div>
+<div class="line">                                  Dble: <a class="code hl_function" href="vector_8c.html#ab0985989db7774a2f4ccf0f6bc7fd0ed">average_double_vector</a>, \</div>
+<div class="line">                                  LDble: <a class="code hl_function" href="vector_8c.html#a136fac1692146b0fc1dd1f548b6a07a4">average_ldouble_vector</a>)(&amp;T)</div>
+<div class="ttc" id="avector_8c_html_a0a47e22454ec90b6c959915dbc3c87a6"><div class="ttname"><a href="vector_8c.html#a0a47e22454ec90b6c959915dbc3c87a6">average_char_vector</a></div><div class="ttdeci">char average_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03154">vector.c:3154</a></div></div>
+<div class="ttc" id="avector_8c_html_a136fac1692146b0fc1dd1f548b6a07a4"><div class="ttname"><a href="vector_8c.html#a136fac1692146b0fc1dd1f548b6a07a4">average_ldouble_vector</a></div><div class="ttdeci">long double average_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03237">vector.c:3237</a></div></div>
+<div class="ttc" id="avector_8c_html_a2e384c1e58cf1f6486ae0a8bc2e46379"><div class="ttname"><a href="vector_8c.html#a2e384c1e58cf1f6486ae0a8bc2e46379">average_int_vector</a></div><div class="ttdeci">float average_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03181">vector.c:3181</a></div></div>
+<div class="ttc" id="avector_8c_html_a35959e6bd4010b04681750611d00a7b7"><div class="ttname"><a href="vector_8c.html#a35959e6bd4010b04681750611d00a7b7">average_uint_vector</a></div><div class="ttdeci">float average_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03188">vector.c:3188</a></div></div>
+<div class="ttc" id="avector_8c_html_a5a553d82722c04ec4b613014fa1d0688"><div class="ttname"><a href="vector_8c.html#a5a553d82722c04ec4b613014fa1d0688">average_short_vector</a></div><div class="ttdeci">float average_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03167">vector.c:3167</a></div></div>
+<div class="ttc" id="avector_8c_html_a95e8f18d7457adb1784ca850c7afa01e"><div class="ttname"><a href="vector_8c.html#a95e8f18d7457adb1784ca850c7afa01e">average_float_vector</a></div><div class="ttdeci">float average_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03223">vector.c:3223</a></div></div>
+<div class="ttc" id="avector_8c_html_a96018578b7bce5eb04f4b4dbbd63b582"><div class="ttname"><a href="vector_8c.html#a96018578b7bce5eb04f4b4dbbd63b582">average_ushort_vector</a></div><div class="ttdeci">float average_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03174">vector.c:3174</a></div></div>
+<div class="ttc" id="avector_8c_html_aa94c4a725c6ab558c748baa93b652363"><div class="ttname"><a href="vector_8c.html#aa94c4a725c6ab558c748baa93b652363">average_ulong_vector</a></div><div class="ttdeci">double average_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03202">vector.c:3202</a></div></div>
+<div class="ttc" id="avector_8c_html_ab0985989db7774a2f4ccf0f6bc7fd0ed"><div class="ttname"><a href="vector_8c.html#ab0985989db7774a2f4ccf0f6bc7fd0ed">average_double_vector</a></div><div class="ttdeci">double average_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03230">vector.c:3230</a></div></div>
+<div class="ttc" id="avector_8c_html_abb879670618c44d1259b4cb689d36698"><div class="ttname"><a href="vector_8c.html#abb879670618c44d1259b4cb689d36698">average_ullong_vector</a></div><div class="ttdeci">long double average_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03216">vector.c:3216</a></div></div>
+<div class="ttc" id="avector_8c_html_ad1feee1c2712401a20fbe6699f5c4bc7"><div class="ttname"><a href="vector_8c.html#ad1feee1c2712401a20fbe6699f5c4bc7">average_long_vector</a></div><div class="ttdeci">double average_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03195">vector.c:3195</a></div></div>
+<div class="ttc" id="avector_8c_html_ad821bfcf3659a78a11a5c9c7fd72a277"><div class="ttname"><a href="vector_8c.html#ad821bfcf3659a78a11a5c9c7fd72a277">average_uchar_vector</a></div><div class="ttdeci">unsigned char average_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03161">vector.c:3161</a></div></div>
+<div class="ttc" id="avector_8c_html_ae3782b50d088b4488da3a8283670ffcc"><div class="ttname"><a href="vector_8c.html#ae3782b50d088b4488da3a8283670ffcc">average_llong_vector</a></div><div class="ttdeci">long double average_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l03209">vector.c:3209</a></div></div>
+</div><!-- fragment --><p >This macro will return the average value of a data structure. The macro will return the appropriate data type depending on the input data type.</p>
+<p >/param T The input data structure</p>
+<div class="fragment"><div class="line">Dble vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 5);</div>
+<div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18. 8.17, 0.56, 2.28};</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
+<div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_define" href="data__structures_8h.html#a81794266d48f7e352116d53be0fda9fc">AVERAGE</a>(vec);</div>
+<div class="line">PRINT(avg);</div>
+<div class="line"><span class="comment">// &gt;&gt; 3.328</span></div>
+<div class="ttc" id="adata__structures_8h_html_a39f36b37e9611785d15e1691a628ab30"><div class="ttname"><a href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a></div><div class="ttdeci">#define INSERT(T, elements, num_ind, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00094">data_structures.h:94</a></div></div>
+<div class="ttc" id="adata__structures_8h_html_a81794266d48f7e352116d53be0fda9fc"><div class="ttname"><a href="data__structures_8h.html#a81794266d48f7e352116d53be0fda9fc">AVERAGE</a></div><div class="ttdeci">#define AVERAGE(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00443">data_structures.h:443</a></div></div>
+<div class="ttc" id="avector_8h_html_a78b085b69ede6314aedfc346b480a078"><div class="ttname"><a href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a></div><div class="ttdeci">#define INIT_VECTOR(T, length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00280">vector.h:280</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00443">443</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
 <a id="ad67d6348b4a31d319108c5b915592e8c" name="ad67d6348b4a31d319108c5b915592e8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad67d6348b4a31d319108c5b915592e8c">&#9670;&nbsp;</a></span>CUMSUM</h2>
 
@@ -153,9 +213,7 @@ Macros</h2></td></tr>
 <div class="line">Int cum_vec = <a class="code hl_define" href="data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c">CUMSUM</a>(vec);</div>
 <div class="line">PRINT(cum_vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 1, 3, 6, 10, 15 ]</span></div>
-<div class="ttc" id="adata__structures_8h_html_a39f36b37e9611785d15e1691a628ab30"><div class="ttname"><a href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a></div><div class="ttdeci">#define INSERT(T, elements, num_ind, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00094">data_structures.h:94</a></div></div>
 <div class="ttc" id="adata__structures_8h_html_ad67d6348b4a31d319108c5b915592e8c"><div class="ttname"><a href="data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c">CUMSUM</a></div><div class="ttdeci">#define CUMSUM(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00410">data_structures.h:410</a></div></div>
-<div class="ttc" id="avector_8h_html_a78b085b69ede6314aedfc346b480a078"><div class="ttname"><a href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a></div><div class="ttdeci">#define INIT_VECTOR(T, length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00280">vector.h:280</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00410">410</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
