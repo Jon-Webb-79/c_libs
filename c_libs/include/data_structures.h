@@ -280,6 +280,42 @@
 										    String: delete_string_vector_duplicates)(&T)
 // ==========================================================================================
 // ==========================================================================================
+// REVERSE MACRO
+
+/**
+ * This macro will reverse the order of a data structure
+ *
+ * /param vec A data structure of the appropriate type
+ *
+ * @code
+ * Int8 vec;
+ * INIT_VECTOR(vec, 5)
+ * PUSH(vec, 1);
+ * PUSH(vec, 2);
+ * PUSH(vec, 3);
+ * PUSH(vec, 4);
+ * PUSH(vec, 5)
+ * REVERSE(vec);
+ * PRINT(vec);
+ * [5, 4, 3, 2, 1 ]
+ * FREE(vec);
+ * @endcode
+ */
+#define REVERSE(T) _Generic( (T), Short: reverse_short_vector, \
+								  UShort: reverse_ushort_vector, \
+								  Int: reverse_int_vector, \
+								  UInt: reverse_uint_vector, \
+								  LInt: reverse_long_vector, \
+							      ULInt: reverse_ulong_vector, \
+								  LLInt: reverse_llong_vector, \
+								  ULLInt: reverse_ullong_vector, \
+								  Flt: reverse_float_vector, \
+								  Dble: reverse_double_vector, \
+								  LDble: reverse_ldouble_vector, \
+								  Char: reverse_char_vector, \
+								  UChar: reverse_uchar_vector, \
+								  Bool: reverse_bool_vector, \
+                                  String: reverse_string_vector)(&T)
 
 #endif /* data_structures_H */
 // ==========================================================================================

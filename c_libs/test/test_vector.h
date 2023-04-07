@@ -139,7 +139,23 @@ void test_delete_bool_dup_vec(void **state);
 void test_delete_string_dup_vec(void **state);
 // ==========================================================================================
 // ==========================================================================================
+// TEST REVERSE_TYPE FUNCTIONS
 
+void test_reverse_short_vec(void **state);
+void test_reverse_ushort_vec(void **state);
+void test_reverse_int_vec(void **state);
+void test_reverse_uint_vec(void **state);
+void test_reverse_long_vec(void **state);
+void test_reverse_ulong_vec(void **state);
+void test_reverse_llong_vec(void **state);
+void test_reverse_ullong_vec(void **state);
+void test_reverse_float_vec(void **state);
+void test_reverse_double_vec(void **state);
+void test_reverse_ldouble_vec(void **state);
+void test_reverse_char_vec(void **state);
+void test_reverse_uchar_vec(void **state);
+void test_reverse_bool_vec(void **state);
+void test_reverse_string_vec(void **state);
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================

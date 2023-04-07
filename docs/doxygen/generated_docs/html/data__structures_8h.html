@@ -91,6 +91,8 @@ Macros</h2></td></tr>
 <tr class="separator:abad9b6661bf67c0b5cc43ddcbd39c206"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a846efd03c9d323e9b03d70331276d47a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a846efd03c9d323e9b03d70331276d47a">DELETE_DUPLICATES</a>(T)</td></tr>
 <tr class="separator:a846efd03c9d323e9b03d70331276d47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f2dc1bcc130da5504af4d09d54864c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#ae5f2dc1bcc130da5504af4d09d54864c">REVERSE</a>(T)</td></tr>
+<tr class="separator:ae5f2dc1bcc130da5504af4d09d54864c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a846efd03c9d323e9b03d70331276d47a" name="a846efd03c9d323e9b03d70331276d47a"></a>
@@ -484,6 +486,71 @@ Macros</h2></td></tr>
 <div class="ttc" id="adata__structures_8h_html_abad9b6661bf67c0b5cc43ddcbd39c206"><div class="ttname"><a href="data__structures_8h.html#abad9b6661bf67c0b5cc43ddcbd39c206">REPLACE_VALUES</a></div><div class="ttdeci">#define REPLACE_VALUES(T, old, new)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00231">data_structures.h:231</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00231">231</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="ae5f2dc1bcc130da5504af4d09d54864c" name="ae5f2dc1bcc130da5504af4d09d54864c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f2dc1bcc130da5504af4d09d54864c">&#9670;&nbsp;</a></span>REVERSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REVERSE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                  _Generic( (T), Short: <a class="code hl_function" href="vector_8c.html#a6388f663263c0c5a219bc2da551d0584">reverse_short_vector</a>, \</div>
+<div class="line">                                  UShort: <a class="code hl_function" href="vector_8c.html#a15f75e9b6b4192aa83d95635419865da">reverse_ushort_vector</a>, \</div>
+<div class="line">                                  Int: <a class="code hl_function" href="vector_8c.html#a0ee6d80508a610096b84893a0edd7e82">reverse_int_vector</a>, \</div>
+<div class="line">                                  UInt: <a class="code hl_function" href="vector_8c.html#a58e127cf5386ca2152ebafcf4dbb8bbd">reverse_uint_vector</a>, \</div>
+<div class="line">                                  LInt: <a class="code hl_function" href="vector_8c.html#a0d89b67e906a169f63e1bfc679df018f">reverse_long_vector</a>, \</div>
+<div class="line">                                  ULInt: <a class="code hl_function" href="vector_8c.html#a6196a5bfffe22d6493b2bda77a9340fb">reverse_ulong_vector</a>, \</div>
+<div class="line">                                  LLInt: <a class="code hl_function" href="vector_8c.html#a3247bcffd4ad7a9f75c9a2e88ff7bd81">reverse_llong_vector</a>, \</div>
+<div class="line">                                  ULLInt: <a class="code hl_function" href="vector_8c.html#aa77d55a8f5e4ab149edb6c75d98a94ce">reverse_ullong_vector</a>, \</div>
+<div class="line">                                  Flt: <a class="code hl_function" href="vector_8c.html#a086bbd995dc83d50532944330a44c450">reverse_float_vector</a>, \</div>
+<div class="line">                                  Dble: <a class="code hl_function" href="vector_8c.html#a628e48950294512d38556f8b194284d4">reverse_double_vector</a>, \</div>
+<div class="line">                                  LDble: <a class="code hl_function" href="vector_8c.html#a8a72b2219830bacf2a5ec926241ed924">reverse_ldouble_vector</a>, \</div>
+<div class="line">                                  Char: <a class="code hl_function" href="vector_8c.html#a06faa32f223a79c02cb771b19cc02a07">reverse_char_vector</a>, \</div>
+<div class="line">                                  UChar: <a class="code hl_function" href="vector_8c.html#a42deacd361fac959a84262a54ebddcb0">reverse_uchar_vector</a>, \</div>
+<div class="line">                                  Bool: <a class="code hl_function" href="vector_8c.html#a9b58a773830487b8a8f1973221e93366">reverse_bool_vector</a>, \</div>
+<div class="line">                                  <a class="code hl_struct" href="structString.html">String</a>: <a class="code hl_function" href="vector_8c.html#a6297710c0ac2122db93e47a260e96ad8">reverse_string_vector</a>)(&amp;T)</div>
+<div class="ttc" id="avector_8c_html_a06faa32f223a79c02cb771b19cc02a07"><div class="ttname"><a href="vector_8c.html#a06faa32f223a79c02cb771b19cc02a07">reverse_char_vector</a></div><div class="ttdeci">void reverse_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02232">vector.c:2232</a></div></div>
+<div class="ttc" id="avector_8c_html_a086bbd995dc83d50532944330a44c450"><div class="ttname"><a href="vector_8c.html#a086bbd995dc83d50532944330a44c450">reverse_float_vector</a></div><div class="ttdeci">void reverse_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02187">vector.c:2187</a></div></div>
+<div class="ttc" id="avector_8c_html_a0d89b67e906a169f63e1bfc679df018f"><div class="ttname"><a href="vector_8c.html#a0d89b67e906a169f63e1bfc679df018f">reverse_long_vector</a></div><div class="ttdeci">void reverse_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02127">vector.c:2127</a></div></div>
+<div class="ttc" id="avector_8c_html_a0ee6d80508a610096b84893a0edd7e82"><div class="ttname"><a href="vector_8c.html#a0ee6d80508a610096b84893a0edd7e82">reverse_int_vector</a></div><div class="ttdeci">void reverse_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02095">vector.c:2095</a></div></div>
+<div class="ttc" id="avector_8c_html_a15f75e9b6b4192aa83d95635419865da"><div class="ttname"><a href="vector_8c.html#a15f75e9b6b4192aa83d95635419865da">reverse_ushort_vector</a></div><div class="ttdeci">void reverse_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02080">vector.c:2080</a></div></div>
+<div class="ttc" id="avector_8c_html_a3247bcffd4ad7a9f75c9a2e88ff7bd81"><div class="ttname"><a href="vector_8c.html#a3247bcffd4ad7a9f75c9a2e88ff7bd81">reverse_llong_vector</a></div><div class="ttdeci">void reverse_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02157">vector.c:2157</a></div></div>
+<div class="ttc" id="avector_8c_html_a42deacd361fac959a84262a54ebddcb0"><div class="ttname"><a href="vector_8c.html#a42deacd361fac959a84262a54ebddcb0">reverse_uchar_vector</a></div><div class="ttdeci">void reverse_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02247">vector.c:2247</a></div></div>
+<div class="ttc" id="avector_8c_html_a58e127cf5386ca2152ebafcf4dbb8bbd"><div class="ttname"><a href="vector_8c.html#a58e127cf5386ca2152ebafcf4dbb8bbd">reverse_uint_vector</a></div><div class="ttdeci">void reverse_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02110">vector.c:2110</a></div></div>
+<div class="ttc" id="avector_8c_html_a6196a5bfffe22d6493b2bda77a9340fb"><div class="ttname"><a href="vector_8c.html#a6196a5bfffe22d6493b2bda77a9340fb">reverse_ulong_vector</a></div><div class="ttdeci">void reverse_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02142">vector.c:2142</a></div></div>
+<div class="ttc" id="avector_8c_html_a628e48950294512d38556f8b194284d4"><div class="ttname"><a href="vector_8c.html#a628e48950294512d38556f8b194284d4">reverse_double_vector</a></div><div class="ttdeci">void reverse_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02202">vector.c:2202</a></div></div>
+<div class="ttc" id="avector_8c_html_a6297710c0ac2122db93e47a260e96ad8"><div class="ttname"><a href="vector_8c.html#a6297710c0ac2122db93e47a260e96ad8">reverse_string_vector</a></div><div class="ttdeci">void reverse_string_vector(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02277">vector.c:2277</a></div></div>
+<div class="ttc" id="avector_8c_html_a6388f663263c0c5a219bc2da551d0584"><div class="ttname"><a href="vector_8c.html#a6388f663263c0c5a219bc2da551d0584">reverse_short_vector</a></div><div class="ttdeci">void reverse_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02065">vector.c:2065</a></div></div>
+<div class="ttc" id="avector_8c_html_a8a72b2219830bacf2a5ec926241ed924"><div class="ttname"><a href="vector_8c.html#a8a72b2219830bacf2a5ec926241ed924">reverse_ldouble_vector</a></div><div class="ttdeci">void reverse_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02217">vector.c:2217</a></div></div>
+<div class="ttc" id="avector_8c_html_a9b58a773830487b8a8f1973221e93366"><div class="ttname"><a href="vector_8c.html#a9b58a773830487b8a8f1973221e93366">reverse_bool_vector</a></div><div class="ttdeci">void reverse_bool_vector(Bool *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02262">vector.c:2262</a></div></div>
+<div class="ttc" id="avector_8c_html_aa77d55a8f5e4ab149edb6c75d98a94ce"><div class="ttname"><a href="vector_8c.html#aa77d55a8f5e4ab149edb6c75d98a94ce">reverse_ullong_vector</a></div><div class="ttdeci">void reverse_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02172">vector.c:2172</a></div></div>
+</div><!-- fragment --><p >This macro will reverse the order of a data structure</p>
+<p >/param vec A data structure of the appropriate type</p>
+<div class="fragment"><div class="line">Int8 vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 5)</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 1);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 2);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 3);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 4);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 5)</div>
+<div class="line"><a class="code hl_enumvalue" href="vector_8h.html#af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9">REVERSE</a>(vec);</div>
+<div class="line">PRINT(vec);</div>
+<div class="line">[5, 4, 3, 2, 1 ]</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a1603ab82164c2b586fb4e918dfe0787d">FREE</a>(vec);</div>
+<div class="ttc" id="adata__structures_8h_html_a1603ab82164c2b586fb4e918dfe0787d"><div class="ttname"><a href="data__structures_8h.html#a1603ab82164c2b586fb4e918dfe0787d">FREE</a></div><div class="ttdeci">#define FREE(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00141">data_structures.h:141</a></div></div>
+<div class="ttc" id="avector_8h_html_af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9"><div class="ttname"><a href="vector_8h.html#af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9">REVERSE</a></div><div class="ttdeci">@ REVERSE</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00051">vector.h:50</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00304">304</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>

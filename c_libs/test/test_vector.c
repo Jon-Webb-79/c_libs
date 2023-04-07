@@ -1516,4 +1516,262 @@ void test_delete_bool_dup_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST REVERSE_TYPE FUNCTIONS
+
+void test_reverse_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	short int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	unsigned short int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	unsigned int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	long int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	unsigned long int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	long long int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1, vec.active_length);
+	PUSH(vec, 2, vec.active_length);
+	PUSH(vec, 3, vec.active_length);
+	PUSH(vec, 4, vec.active_length);
+	PUSH(vec, 5, vec.active_length);
+	REVERSE(vec);
+	unsigned long long int a[5] = {5, 4, 3, 2, 1};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1.f, vec.active_length);
+	PUSH(vec, 2.f, vec.active_length);
+	PUSH(vec, 3.f, vec.active_length);
+	PUSH(vec, 4.f, vec.active_length);
+	PUSH(vec, 5.f, vec.active_length);
+	REVERSE(vec);
+	float a[5] = {5., 4., 3., 2., 1.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(a[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1., vec.active_length);
+	PUSH(vec, 2., vec.active_length);
+	PUSH(vec, 3., vec.active_length);
+	PUSH(vec, 4., vec.active_length);
+	PUSH(vec, 5., vec.active_length);
+	REVERSE(vec);
+	double a[5] = {5., 4., 3., 2., 1.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 1., vec.active_length);
+	PUSH(vec, 2., vec.active_length);
+	PUSH(vec, 3., vec.active_length);
+	PUSH(vec, 4., vec.active_length);
+	PUSH(vec, 5., vec.active_length);
+	REVERSE(vec);
+	long double a[5] = {5., 4., 3., 2., 1.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(a[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'b', vec.active_length);
+	PUSH(vec, 'c', vec.active_length);
+	PUSH(vec, 'd', vec.active_length);
+	PUSH(vec, 'e', vec.active_length);
+	REVERSE(vec);
+	char a[5] = {'e', 'd', 'c', 'b', 'a'};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(a[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_reverse_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, 'a', vec.active_length);
+	PUSH(vec, 'b', vec.active_length);
+	PUSH(vec, 'c', vec.active_length);
+	PUSH(vec, 'd', vec.active_length);
+	PUSH(vec, 'e', vec.active_length);
+	REVERSE(vec);
+	unsigned char a[5] = {'e', 'd', 'c', 'b', 'a'};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(a[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_reverse_bool_vec(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 5);
+	PUSH(vec, true, vec.active_length);
+	PUSH(vec, true, vec.active_length);
+	PUSH(vec, false, vec.active_length);
+	PUSH(vec, false, vec.active_length);
+	PUSH(vec, false, vec.active_length);
+	REVERSE(vec);
+	bool a[5] = {false, false, false, true, true};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(a[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_string_vec(void **state) {
+	char *a[] = {"Four", "Three", "Two", "One"};
+	int test;
+	String vec;
+	init_string_vector(&vec);
+	PUSH(vec, "One", vec.active_length);
+	PUSH(vec, "Two", vec.active_length);
+	PUSH(vec, "Three", vec.active_length);
+	PUSH(vec, "Four", vec.active_length);
+	REVERSE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		test = strcmp(a[i], vec.array[i]);
+		assert_int_equal(0, test);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

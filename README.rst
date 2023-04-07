@@ -323,6 +323,24 @@ in a stack structure and delete all other instances.
    // Same as free_int_vector(&vec);
    FREE(vec);
 
+REVERSE
+=======
+The ``REVERSE_VEC(vtype vec)`` macro will reverse the order of the data in a stack structure.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   REVERSE(vec)
+   PRINT(vec);
+   // >> [ 5, 4, 3, 2, 1 ]
+   FREE(vec);
+
 =====
 PRINT
 =====
