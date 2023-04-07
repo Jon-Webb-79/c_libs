@@ -175,6 +175,23 @@ void test_sort_char_vec(void **state);
 void test_sort_uchar_vec(void **state);
 void test_sort_bool_vec(void **state);
 void test_sort_string_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST SUM_TYPE_VEC FUNCTIONS
+
+void test_sum_short_vec(void **state);
+void test_sum_ushort_vec(void **state);
+void test_sum_int_vec(void **state);
+void test_sum_uint_vec(void **state);
+void test_sum_long_vec(void **state);
+void test_sum_ulong_vec(void **state);
+void test_sum_llong_vec(void **state);
+void test_sum_ullong_vec(void **state);
+void test_sum_float_vec(void **state);
+void test_sum_double_vec(void **state);
+void test_sum_ldouble_vec(void **state);
+void test_sum_char_vec(void **state);
+void test_sum_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

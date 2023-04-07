@@ -355,7 +355,38 @@
  * @endcode
  */
 #define SORT(T, order) IS_SORT_TYPE((T), (0), (T.active_length-1), (order))
+// ==========================================================================================
+// ==========================================================================================
+// SUM MACRO
 
+/**
+ * This macro will return the sum of data in a data structure
+ *
+ * /param T An appropriate data structure
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 4);
+ * int a[4] = {1, 2, 3, 4};
+ * INSERT(vec, a, 4, 0);
+ * int b = SUM(vec);
+ * PRINT(b);
+ * // >> 10
+ * @endcode
+ */
+#define SUM(T) _Generic( (T), Short: sum_short_vector, \
+							  UShort: sum_ushort_vector, \
+							  Int: sum_int_vector, \
+							  UInt: sum_uint_vector, \
+							  LInt: sum_long_vector, \
+							  ULInt: sum_ulong_vector, \
+							  LLInt: sum_llong_vector, \
+							  ULLInt: sum_ullong_vector, \
+							  Flt: sum_float_vector, \
+						      Dble: sum_double_vector, \
+							  Char: sum_char_vector, \
+							  UChar: sum_uchar_vector, \
+							  LDble: sum_ldouble_vector)(&T)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

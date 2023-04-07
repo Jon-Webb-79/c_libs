@@ -371,6 +371,28 @@ This macro is not implemented for Bool data types.
    // >> [ 5.5, 4.4, 3.3, 2.2, 1.1 ]
    FREE(vec);
 
+SUM
+===
+The ``type sum = SUM(vtype vec)`` macro will return the sum of the values in a data structure
+**NOTE:** This macro does not work with the ``Char``, ``Bool`` or ``String`` data types.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   // Same as init_int_vector(&vec, 5);
+   INIT_VECTOR(vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   // Same as insert_int_vector(&vec, a, 5, 0);
+   INSERT(vec, a, 5, 0);
+   // Same as int b = sum_int_vector(&vec);
+   int b = SUM(vec);
+   PRINT(b);
+   // >> 15
+   FREE(vec);
+
 =====
 PRINT
 =====

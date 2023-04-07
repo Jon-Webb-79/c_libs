@@ -97,6 +97,8 @@ Macros</h2></td></tr>
 <tr class="separator:a4b57fe13cd381d593ef6790b5dacff6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd435328ac67b6ab76355c6a90ae0ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a3bd435328ac67b6ab76355c6a90ae0ab">SORT</a>(T,  order)&#160;&#160;&#160;<a class="el" href="data__structures_8h.html#a4b57fe13cd381d593ef6790b5dacff6e">IS_SORT_TYPE</a>((T), (0), (T.active_length-1), (order))</td></tr>
 <tr class="separator:a3bd435328ac67b6ab76355c6a90ae0ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2bc3cf2085b7ef95514abd7c78341de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#ab2bc3cf2085b7ef95514abd7c78341de">SUM</a>(T)</td></tr>
+<tr class="separator:ab2bc3cf2085b7ef95514abd7c78341de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a846efd03c9d323e9b03d70331276d47a" name="a846efd03c9d323e9b03d70331276d47a"></a>
@@ -669,6 +671,62 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8h_html_af40f59df20b550c793c470752e457636aa26736999186daf8146f809e863712a1"><div class="ttname"><a href="vector_8h.html#af40f59df20b550c793c470752e457636aa26736999186daf8146f809e863712a1">FORWARD</a></div><div class="ttdeci">@ FORWARD</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00049">vector.h:49</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00357">357</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="ab2bc3cf2085b7ef95514abd7c78341de" name="ab2bc3cf2085b7ef95514abd7c78341de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2bc3cf2085b7ef95514abd7c78341de">&#9670;&nbsp;</a></span>SUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SUM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                              _Generic( (T), Short: <a class="code hl_function" href="vector_8c.html#a54d410de6d79f482b3d560bcb78fd2ff">sum_short_vector</a>, \</div>
+<div class="line">                              UShort: <a class="code hl_function" href="vector_8c.html#a67f48de636722d00447f21d5040f8d81">sum_ushort_vector</a>, \</div>
+<div class="line">                              Int: <a class="code hl_function" href="vector_8c.html#aaf01dd9c2caec4100d4315bd8d525a30">sum_int_vector</a>, \</div>
+<div class="line">                              UInt: <a class="code hl_function" href="vector_8c.html#a791fe9c8f9bd1d04158b01c3aa022edd">sum_uint_vector</a>, \</div>
+<div class="line">                              LInt: <a class="code hl_function" href="vector_8c.html#af2ca62fb5fa87cccef8750d24b3979da">sum_long_vector</a>, \</div>
+<div class="line">                              ULInt: <a class="code hl_function" href="vector_8c.html#a3233da20e23c20659dd5aba81307b58d">sum_ulong_vector</a>, \</div>
+<div class="line">                              LLInt: <a class="code hl_function" href="vector_8c.html#a838510507e7f386e844fd1e5e3ae494a">sum_llong_vector</a>, \</div>
+<div class="line">                              ULLInt: <a class="code hl_function" href="vector_8c.html#af1cc1dfd0470ab00fc1537ebcbb5c089">sum_ullong_vector</a>, \</div>
+<div class="line">                              Flt: <a class="code hl_function" href="vector_8c.html#ab9177b68251ddf43f4a245afd559e462">sum_float_vector</a>, \</div>
+<div class="line">                              Dble: <a class="code hl_function" href="vector_8c.html#a98a70f4f173d451a1ff5357f4779289d">sum_double_vector</a>, \</div>
+<div class="line">                              Char: <a class="code hl_function" href="vector_8c.html#a0684e2f1aee143f1769dd8ff908c852c">sum_char_vector</a>, \</div>
+<div class="line">                              UChar: <a class="code hl_function" href="vector_8c.html#a643cb8d97c368f436a0010dacfca2401">sum_uchar_vector</a>, \</div>
+<div class="line">                              LDble: <a class="code hl_function" href="vector_8c.html#af2df2f0fe19814004ab61a91521d7b21">sum_ldouble_vector</a>)(&amp;T)</div>
+<div class="ttc" id="avector_8c_html_a0684e2f1aee143f1769dd8ff908c852c"><div class="ttname"><a href="vector_8c.html#a0684e2f1aee143f1769dd8ff908c852c">sum_char_vector</a></div><div class="ttdeci">char sum_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02877">vector.c:2877</a></div></div>
+<div class="ttc" id="avector_8c_html_a3233da20e23c20659dd5aba81307b58d"><div class="ttname"><a href="vector_8c.html#a3233da20e23c20659dd5aba81307b58d">sum_ulong_vector</a></div><div class="ttdeci">unsigned long int sum_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02940">vector.c:2940</a></div></div>
+<div class="ttc" id="avector_8c_html_a54d410de6d79f482b3d560bcb78fd2ff"><div class="ttname"><a href="vector_8c.html#a54d410de6d79f482b3d560bcb78fd2ff">sum_short_vector</a></div><div class="ttdeci">short int sum_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02895">vector.c:2895</a></div></div>
+<div class="ttc" id="avector_8c_html_a643cb8d97c368f436a0010dacfca2401"><div class="ttname"><a href="vector_8c.html#a643cb8d97c368f436a0010dacfca2401">sum_uchar_vector</a></div><div class="ttdeci">unsigned char sum_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02886">vector.c:2886</a></div></div>
+<div class="ttc" id="avector_8c_html_a67f48de636722d00447f21d5040f8d81"><div class="ttname"><a href="vector_8c.html#a67f48de636722d00447f21d5040f8d81">sum_ushort_vector</a></div><div class="ttdeci">unsigned short int sum_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02904">vector.c:2904</a></div></div>
+<div class="ttc" id="avector_8c_html_a791fe9c8f9bd1d04158b01c3aa022edd"><div class="ttname"><a href="vector_8c.html#a791fe9c8f9bd1d04158b01c3aa022edd">sum_uint_vector</a></div><div class="ttdeci">unsigned int sum_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02922">vector.c:2922</a></div></div>
+<div class="ttc" id="avector_8c_html_a838510507e7f386e844fd1e5e3ae494a"><div class="ttname"><a href="vector_8c.html#a838510507e7f386e844fd1e5e3ae494a">sum_llong_vector</a></div><div class="ttdeci">long long int sum_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02949">vector.c:2949</a></div></div>
+<div class="ttc" id="avector_8c_html_a98a70f4f173d451a1ff5357f4779289d"><div class="ttname"><a href="vector_8c.html#a98a70f4f173d451a1ff5357f4779289d">sum_double_vector</a></div><div class="ttdeci">double sum_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02976">vector.c:2976</a></div></div>
+<div class="ttc" id="avector_8c_html_aaf01dd9c2caec4100d4315bd8d525a30"><div class="ttname"><a href="vector_8c.html#aaf01dd9c2caec4100d4315bd8d525a30">sum_int_vector</a></div><div class="ttdeci">int sum_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02913">vector.c:2913</a></div></div>
+<div class="ttc" id="avector_8c_html_ab9177b68251ddf43f4a245afd559e462"><div class="ttname"><a href="vector_8c.html#ab9177b68251ddf43f4a245afd559e462">sum_float_vector</a></div><div class="ttdeci">float sum_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02967">vector.c:2967</a></div></div>
+<div class="ttc" id="avector_8c_html_af1cc1dfd0470ab00fc1537ebcbb5c089"><div class="ttname"><a href="vector_8c.html#af1cc1dfd0470ab00fc1537ebcbb5c089">sum_ullong_vector</a></div><div class="ttdeci">unsigned long long int sum_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02958">vector.c:2958</a></div></div>
+<div class="ttc" id="avector_8c_html_af2ca62fb5fa87cccef8750d24b3979da"><div class="ttname"><a href="vector_8c.html#af2ca62fb5fa87cccef8750d24b3979da">sum_long_vector</a></div><div class="ttdeci">long int sum_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02931">vector.c:2931</a></div></div>
+<div class="ttc" id="avector_8c_html_af2df2f0fe19814004ab61a91521d7b21"><div class="ttname"><a href="vector_8c.html#af2df2f0fe19814004ab61a91521d7b21">sum_ldouble_vector</a></div><div class="ttdeci">long double sum_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02985">vector.c:2985</a></div></div>
+</div><!-- fragment --><p >This macro will return the sum of data in a data structure</p>
+<p >/param T An appropriate data structure</p>
+<div class="fragment"><div class="line">Int vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 4);</div>
+<div class="line"><span class="keywordtype">int</span> a[4] = {1, 2, 3, 4};</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 4, 0);</div>
+<div class="line"><span class="keywordtype">int</span> b = <a class="code hl_define" href="data__structures_8h.html#ab2bc3cf2085b7ef95514abd7c78341de">SUM</a>(vec);</div>
+<div class="line">PRINT(b);</div>
+<div class="line"><span class="comment">// &gt;&gt; 10</span></div>
+<div class="ttc" id="adata__structures_8h_html_ab2bc3cf2085b7ef95514abd7c78341de"><div class="ttname"><a href="data__structures_8h.html#ab2bc3cf2085b7ef95514abd7c78341de">SUM</a></div><div class="ttdeci">#define SUM(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00377">data_structures.h:377</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00377">377</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>

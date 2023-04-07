@@ -22,6 +22,8 @@
 \#define \mbox{\hyperlink{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}{IS\+\_\+\+SORT\+\_\+\+TYPE}}(T,  low,  high,  order)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab}{SORT}}(T,  order)~\mbox{\hyperlink{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}{IS\+\_\+\+SORT\+\_\+\+TYPE}}((T), (0), (T.\+active\+\_\+length-\/1), (order))
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}{SUM}}(T)
 \end{DoxyCompactItemize}
 
 
@@ -338,4 +340,46 @@ This macro will sort a data structure in forward or reverse order
  
 
 Definition at line \mbox{\hyperlink{data__structures_8h_source_l00357}{357}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\mbox{\Hypertarget{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}\label{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}} 
+\index{data\_structures.h@{data\_structures.h}!SUM@{SUM}}
+\index{SUM@{SUM}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{SUM}{SUM}}
+{\footnotesize\ttfamily \#define SUM(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              \_Generic( (T), Short: \mbox{\hyperlink{vector_8c_a54d410de6d79f482b3d560bcb78fd2ff}{sum\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              UShort: \mbox{\hyperlink{vector_8c_a67f48de636722d00447f21d5040f8d81}{sum\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              Int: \mbox{\hyperlink{vector_8c_aaf01dd9c2caec4100d4315bd8d525a30}{sum\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              UInt: \mbox{\hyperlink{vector_8c_a791fe9c8f9bd1d04158b01c3aa022edd}{sum\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              LInt: \mbox{\hyperlink{vector_8c_af2ca62fb5fa87cccef8750d24b3979da}{sum\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              ULInt: \mbox{\hyperlink{vector_8c_a3233da20e23c20659dd5aba81307b58d}{sum\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              LLInt: \mbox{\hyperlink{vector_8c_a838510507e7f386e844fd1e5e3ae494a}{sum\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              ULLInt: \mbox{\hyperlink{vector_8c_af1cc1dfd0470ab00fc1537ebcbb5c089}{sum\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              Flt: \mbox{\hyperlink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              Dble: \mbox{\hyperlink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              Char: \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              UChar: \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                              LDble: \mbox{\hyperlink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will return the sum of data in a data structure
+
+/param T An appropriate data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 4);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[4] = \{1, 2, 3, 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 4, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} b = \mbox{\hyperlink{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}{SUM}}(vec);}
+\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\textcolor{comment}{// >> 10}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00377}{377}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
 
