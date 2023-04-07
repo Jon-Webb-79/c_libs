@@ -2770,6 +2770,46 @@ void sort_char_vector(Char *vec, size_t low, size_t high, sort_order order) {
 }
 // ------------------------------------------------------------------------------------------
 
+size_t partition_bool_vec(bool *arr, size_t low, size_t high, sort_order order) {
+	int i = low;
+    int j = high;
+    char pivot = arr[low];
+    while (i < j)
+    {
+        while (i < high && pivot >= arr[i] && order == FORWARD)
+            i++;
+        while (j > low && pivot < arr[j] && order == FORWARD)
+            j--;
+		while (i < high && pivot <= arr[i] && order == REVERSE)
+			i++;
+		while (j > low && pivot > arr[j] && order == REVERSE)
+			j--;
+        if (i < j) {
+			bool *a = &arr[i];
+			bool *b = &arr[j];
+			bool temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+    }
+			bool *a = &arr[low];
+			bool *b = &arr[j];
+			bool temp = *a;
+			*a = *b;
+			*b = temp;
+    return j;
+}
+
+void sort_bool_vector(Bool *vec, size_t low, size_t high, sort_order order) {
+	if (low < high)
+	{
+		size_t pivot = partition_bool_vec(vec->array, low, high, order);
+		sort_bool_vector(vec, low, pivot - 1, order);
+		sort_bool_vector(vec, pivot + 1, high, order);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
 size_t partition_uchar_vec(unsigned char *arr, size_t low, size_t high, sort_order order) {
 	int i = low;
     int j = high;

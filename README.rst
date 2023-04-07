@@ -325,7 +325,7 @@ in a stack structure and delete all other instances.
 
 REVERSE
 =======
-The ``REVERSE_VEC(vtype vec)`` macro will reverse the order of the data in a stack structure.
+The ``REVERSE_VEC(dtype vec)`` macro will reverse the order of the data in a stack structure.
 
 .. code-block:: c
 
@@ -333,12 +333,42 @@ The ``REVERSE_VEC(vtype vec)`` macro will reverse the order of the data in a sta
    #include "print.h"
 
    Int vec;
+   // Same as init_int_vector(&vec, 5_;
    INIT_VECTOR(vec, 5);
    int a[5] = {1, 2, 3, 4, 5};
+   // Same as insert_int_vector(&vec, a, 5, 0);
    INSERT(vec, a, 5, 0);
+   // Same as reverse_int_vector(&vec);
    REVERSE(vec)
    PRINT(vec);
    // >> [ 5, 4, 3, 2, 1 ]
+   FREE(vec);
+
+SORT
+====
+The ``SORT(dtype vec, sort_order order)`` macro will sort a data structure in forward or reverse order.
+The term ``order`` is an enum that can either be ``FORWARD`` for a forward sort or ``REVERSE`` for a reverse sort.
+This macro is not implemented for Bool data types.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   // Same as init_float_vector(&vec, 5);
+   INIT_VECTOR(vec, 5);
+   float a[5] = {3.3, 1.1, 2.2, 5.5, 4.4};
+   // Same as insert_float_vector(&vec, a, 5, 0);
+   INSERT(vec, a, 5, 0);
+   // Same as insert_float_vector(&vec, FORWARD, 0);
+   SORT(vec, FORWARD)
+   PRINT(vec);
+   // >> [ 1.1, 2.2, 3.3, 4.4, 5.5 ]
+   // Same as insert_float_vector(&vec, REVERSE, 0);
+   SORT(vec, REVERSE);
+   PRINT(vec);
+   // >> [ 5.5, 4.4, 3.3, 2.2, 1.1 ]
    FREE(vec);
 
 =====

@@ -3286,7 +3286,7 @@ void sort_char_vector(Char *vec, size_t low, size_t high, sort_order order);
 // ------------------------------------------------------------------------------------------
 
 /**
- * This function will sort a vector data structure of type Char in
+ * This function will sort a vector data structure of type UChar in
  * forward or reverse order
  *
  * /param vec A vector data structure of type UChar
@@ -3311,6 +3311,34 @@ void sort_char_vector(Char *vec, size_t low, size_t high, sort_order order);
  * @endcode
  */
 void sort_uchar_vector(UChar *vec, size_t low, size_t high, sort_order order);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will sort a vector data structure of type Bool in
+ * forward or reverse order
+ *
+ * /param vec A vector data structure of type Bool
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * Bool vec;
+ * init_bool_vector(vec, 5);
+ * bool a[5] = {true, false, true, false, true};
+ * insert_bool_vector(&vec, a, 5, 0);
+ * sort_bool_vector(&vec, 0, 5, FORWARD);
+ * PRINT(vec);
+ * // >> [ true, true, true, false, false ]
+ * sort_bool_vector(&vec, 0, 5, REVERSE);
+ * PRINT(vec);
+ * // >> [ false, false, true, true, true ]
+ * free_bool_vector(&vec);
+ * FREE(vec);
+ * @endcode
+ */
+void sort_bool_vector(Bool *vec, size_t low, size_t high, sort_order order);
 // ------------------------------------------------------------------------------------------
 
 /**

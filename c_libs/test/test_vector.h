@@ -156,6 +156,26 @@ void test_reverse_char_vec(void **state);
 void test_reverse_uchar_vec(void **state);
 void test_reverse_bool_vec(void **state);
 void test_reverse_string_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST SORT_TYPE_VEC FUNCTIONS
+
+void test_sort_short_vec(void **state);
+void test_sort_ushort_vec(void **state);
+void test_sort_int_vec(void **state);
+void test_sort_uint_vec(void **state);
+void test_sort_long_vec(void **state);
+void test_sort_ulong_vec(void **state);
+void test_sort_llong_vec(void **state);
+void test_sort_ullong_vec(void **state);
+void test_sort_float_vec(void **state);
+void test_sort_double_vec(void **state);
+void test_sort_ldouble_vec(void **state);
+void test_sort_char_vec(void **state);
+void test_sort_uchar_vec(void **state);
+void test_sort_bool_vec(void **state);
+void test_sort_string_vec(void **state);
+
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================

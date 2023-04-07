@@ -1774,4 +1774,220 @@ void test_reverse_string_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+
+void test_sort_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	short int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	unsigned short int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	unsigned int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	long int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	unsigned long int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	long long int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	unsigned long long int b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(b[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	float a[5] = {2., 5., 3., 1., 4.};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	float b[5] = {1., 2., 3., 4., 5.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(b[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {2, 5, 3, 1, 4};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	double b[5] = {1, 2, 3, 4, 5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+	 	assert_float_equal(b[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {2., 5., 3., 1., 4.};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	long double b[5] = {1., 2., 3., 4., 5.};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(b[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {'b', 'e', 'c', 'a', 'd'};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	char b[5] = {'a', 'b', 'c', 'd', 'e'};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(b[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_sort_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {'b', 'e', 'c', 'a', 'd'};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	unsigned char b[5] = {'a', 'b', 'c', 'd', 'e'};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(b[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_sort_bool_vec(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 5);
+	bool a[5] = {true, false, true, false, true};
+	INSERT(vec, a, 5, 0);
+	SORT(vec, FORWARD);
+	bool b[5] = {true, true, true, false, false};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_true(b[i] == vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_string_vec(void **state) {
+	String vec;
+	init_string_vector(&vec);
+	PUSH(vec, "Xylaphone", 0);
+	PUSH(vec, "Apple", 1);
+	PUSH(vec, "Cucumber", 2);
+	PUSH(vec, "Banana", 3);
+    PUSH(vec, "Zuchini", 4);
+	SORT(vec, FORWARD);
+	const char* arr[] = {"Apple", "Banana", "Cucumber", "Xylaphone", "Zuchini"};
+	int test;
+	for (size_t i = 0; i < vec.active_length; i++) {
+		test = strcmp(arr[i], vec.array[i]);
+		assert_int_equal(test, 0);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

@@ -316,6 +316,45 @@
 								  UChar: reverse_uchar_vector, \
 								  Bool: reverse_bool_vector, \
                                   String: reverse_string_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+
+#define IS_SORT_TYPE(T, low, high, order) _Generic( (T), Short: sort_short_vector, \
+										                 UShort: sort_ushort_vector, \
+										                 Int: sort_int_vector, \
+										                 UInt: sort_uint_vector, \
+										                 LInt: sort_long_vector, \
+										                 ULInt: sort_ulong_vector, \
+										                 LLInt: sort_llong_vector, \
+										                 ULLInt: sort_ullong_vector, \
+										                 Flt: sort_float_vector, \
+										                 Dble: sort_double_vector, \
+										                 LDble: sort_ldouble_vector, \
+										                 Char: sort_char_vector, \
+														 UChar: sort_uchar_vector, \
+														 Bool: sort_bool_vector, \
+														 String: sort_string_vector)(&T, low, high, order)
+// --------------------------------------------------------------------------------
+// SORT MACRO
+
+/**
+ * This macro will sort a data structure in forward or reverse order
+ *
+ * /param T The data structure to be sorted
+ * /para  order FORWARD for a forward sort and REVERSE for a reverse sort
+ *
+ * @code
+ * Flt vec;
+ * INIT_VECTOR(vec, 5);
+ * float a[5] = {3.4, 1.1, 2.2, 5.4, 4.3};
+ * INSERT(vec, a, 5, 0);
+ * SORT(vec, FORWARD);
+ * // >> [ 1.1, 2.2, 3.4, 4.3, 5.4 ]
+ * SORT(vec, REVERSE);
+ * // >> [ 5.4, 4.3, 3.4, 2.2, 1.1 ]
+ * @endcode
+ */
+#define SORT(T, order) IS_SORT_TYPE((T), (0), (T.active_length-1), (order))
 
 #endif /* data_structures_H */
 // ==========================================================================================
