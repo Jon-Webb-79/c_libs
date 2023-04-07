@@ -453,6 +453,39 @@
 								  Flt: average_float_vector, \
 						          Dble: average_double_vector, \
 								  LDble: average_ldouble_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// STDEV MACRO
+
+/**
+ * This macro will calculate the standard deviation of the values in a data
+ * structure
+ *
+ * /param T The input data structure
+ *
+ * @code
+ * Dble vec;
+ * INIT_VECTOR(vec, 5);
+ * double a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+ * INSERT(vec, a, 5, 0);
+ * double stdev = STDEV(vec);
+ * PRINT(stdev);
+ * // >> 2.89559
+ * @endcode
+ */
+#define STDEV(T) _Generic( (T), Char: stdev_char_vector, \
+		                        UChar: stdev_uchar_vector, \
+							    Short: stdev_short_vector, \
+							    UShort: stdev_ushort_vector, \
+								Int: stdev_int_vector, \
+							    UInt: stdev_uint_vector, \
+								LInt: stdev_long_vector, \
+								ULInt: stdev_ulong_vector, \
+								LLInt: stdev_llong_vector, \
+								ULLInt: stdev_ullong_vector, \
+								Flt: stdev_float_vector, \
+						        Dble: stdev_double_vector, \
+								LDble: stdev_ldouble_vector)(&T)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

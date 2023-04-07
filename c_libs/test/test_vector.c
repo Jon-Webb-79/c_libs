@@ -2464,4 +2464,149 @@ void test_average_uchar_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST STDEV_TYPE_VEC FUNCTIONS
+
+void test_stdev_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	double stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	double stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long double stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long double stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	float a[5] = {3.417, 2.222, 1.870, 9.123, 1.234};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(3.20246, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {3.417, 2.222, 1.870, 9.123, 1.234};
+	INSERT(vec, a, 5, 0);
+	double stdev = STDEV(vec);
+	assert_float_equal(3.20246, stdev, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {3.417, 2.222, 1.870, 9.123, 1.234};
+	INSERT(vec, a, 5, 0);
+	long double stdev = STDEV(vec);
+	assert_float_equal(3.20246, stdev, 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_stdev_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_stdev_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	float stdev = STDEV(vec);
+	assert_float_equal(1.581130, stdev, 1.0e-3);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

@@ -3246,22 +3246,22 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03243}03243 \textcolor{comment}{// ==========================================================================================}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03244}03244 \textcolor{comment}{// STDEV\_TYPE\_VEC FUNCTIONS}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03245}03245 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03246}\mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{03246}} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{stdev\_char\_vector}}(Char *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03247}03247     \textcolor{keywordtype}{char} average = \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}}(vec);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03248}03248     \textcolor{keywordtype}{char} var = 0.0;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03249}03249     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03246}\mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{03246}} \textcolor{keywordtype}{float} \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\_char\_vector}}(Char *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03247}03247     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}}(vec);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03248}03248     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03249}03249     \textcolor{keywordtype}{float} value;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03250}03250     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03251}03251         value = (float)vec-\/>array[i];}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03252}03252         var += ((value -\/ average) * (value -\/ average));}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03253}03253     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03254}03254     \textcolor{keywordtype}{char} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03254}03254     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03255}03255 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03256}03256     \textcolor{keywordtype}{char} number = interm;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03257}03257     \textcolor{keywordtype}{char} start = 0.0f, end = number;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03258}03258     \textcolor{keywordtype}{char} mid;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03256}03256     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03257}03257     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03258}03258     \textcolor{keywordtype}{float} mid;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03259}03259 }
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03260}03260     \textcolor{comment}{// To store the answer}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03261}03261     \textcolor{keywordtype}{char} ans = 0.;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03261}03261     \textcolor{keywordtype}{float} ans = 0.;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03262}03262     \textcolor{comment}{// To find integral part of square}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03263}03263     \textcolor{comment}{// root of number}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03264}03264     \textcolor{keywordflow}{while} (start <= end) \{}
@@ -3304,22 +3304,22 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03301}03301 \}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03302}03302 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03303}03303 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03304}\mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{03304}} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\_uchar\_vector}}(UChar *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03305}03305     \textcolor{keywordtype}{char} average = \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}}(vec);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03306}03306     \textcolor{keywordtype}{char} var = 0.0;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03307}03307     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03304}\mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{03304}} \textcolor{keywordtype}{float} \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\_uchar\_vector}}(UChar *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03305}03305     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}}(vec);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03306}03306     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03307}03307     \textcolor{keywordtype}{float} value;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03308}03308     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03309}03309         value = (float)vec-\/>array[i];}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03310}03310         var += ((value -\/ average) * (value -\/ average));}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03311}03311     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03312}03312     \textcolor{keywordtype}{char} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03312}03312     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03313}03313 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03314}03314     \textcolor{keywordtype}{char} number = interm;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03315}03315     \textcolor{keywordtype}{char} start = 0.0f, end = number;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03316}03316     \textcolor{keywordtype}{char} mid;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03314}03314     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03315}03315     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03316}03316     \textcolor{keywordtype}{float} mid;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03317}03317 }
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03318}03318     \textcolor{comment}{// To store the answer}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l03319}03319     \textcolor{keywordtype}{char} ans = 0.;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l03319}03319     \textcolor{keywordtype}{float} ans = 0.;}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03320}03320     \textcolor{comment}{// To find integral part of square}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03321}03321     \textcolor{comment}{// root of number}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l03322}03322     \textcolor{keywordflow}{while} (start <= end) \{}

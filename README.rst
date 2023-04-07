@@ -437,6 +437,28 @@ of a vector data structure. **NOTE:** This macro does not work with the ``Bool``
    // 3.328
    FREE(vec);
 
+STDEV
+=====
+The ``type stdev = STDEV(vtype vec)`` macro will calculate and return the standard deviation of the values in
+a vector data structure. **NOTE:** This macro does not work with hte ``Bool`` or ``String`` data types.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   // Same as init_float_vector(&vec, 5);
+   INIT_VECTOR(vec, 5);
+   float a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+   // Same as insert_float_vector(&vec, a, 5, 0);
+   INSERT(vec, a, 5, 0);
+   // Same as float stdev = stdev_float_vector(&vec);
+   float stdev = STDEV(vec);
+   PRINT(avg);
+   // 3.19682
+   FREE(vec);
+
 =====
 PRINT
 =====

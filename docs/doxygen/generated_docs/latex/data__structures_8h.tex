@@ -28,6 +28,8 @@
 \#define \mbox{\hyperlink{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}{CUMSUM}}(T)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_a81794266d48f7e352116d53be0fda9fc}{AVERAGE}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}{STDEV}}(T)
 \end{DoxyCompactItemize}
 
 
@@ -428,6 +430,48 @@ This macro will sort a data structure in forward or reverse order
  
 
 Definition at line \mbox{\hyperlink{data__structures_8h_source_l00357}{357}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\mbox{\Hypertarget{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}\label{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}} 
+\index{data\_structures.h@{data\_structures.h}!STDEV@{STDEV}}
+\index{STDEV@{STDEV}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{STDEV}{STDEV}}
+{\footnotesize\ttfamily \#define STDEV(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                \_Generic( (T), Char: \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                UChar: \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                Short: \mbox{\hyperlink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                UShort: \mbox{\hyperlink{vector_8c_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                Int: \mbox{\hyperlink{vector_8c_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                UInt: \mbox{\hyperlink{vector_8c_a2a72fa8e25403401326d07853c45c7fe}{stdev\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                LInt: \mbox{\hyperlink{vector_8c_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                ULInt: \mbox{\hyperlink{vector_8c_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                LLInt: \mbox{\hyperlink{vector_8c_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                ULLInt: \mbox{\hyperlink{vector_8c_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                Flt: \mbox{\hyperlink{vector_8c_abb791f292ea37822fa3c8f20749b8571}{stdev\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                Dble: \mbox{\hyperlink{vector_8c_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                LDble: \mbox{\hyperlink{vector_8c_abf8b31942231ba26f9f5d4729cdd5370}{stdev\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will calculate the standard deviation of the values in a data structure
+
+/param T The input data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Dble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.45, 2.18, 8.17, 0.56, 2.28\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}{STDEV}}(vec);}
+\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\textcolor{comment}{// >> 2.89559}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00476}{476}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
 
 \mbox{\Hypertarget{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}\label{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}} 
 \index{data\_structures.h@{data\_structures.h}!SUM@{SUM}}

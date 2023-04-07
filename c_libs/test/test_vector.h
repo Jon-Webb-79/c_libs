@@ -226,6 +226,23 @@ void test_average_double_vec(void **state);
 void test_average_ldouble_vec(void **state);
 void test_average_char_vec(void **state);
 void test_average_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST STDEV_TYPE_VEC FUNCTIONS
+
+void test_stdev_short_vec(void **state);
+void test_stdev_ushort_vec(void **state);
+void test_stdev_int_vec(void **state);
+void test_stdev_uint_vec(void **state);
+void test_stdev_long_vec(void **state);
+void test_stdev_ulong_vec(void **state);
+void test_stdev_llong_vec(void **state);
+void test_stdev_ullong_vec(void **state);
+void test_stdev_float_vec(void **state);
+void test_stdev_double_vec(void **state);
+void test_stdev_ldouble_vec(void **state);
+void test_stdev_char_vec(void **state);
+void test_stdev_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

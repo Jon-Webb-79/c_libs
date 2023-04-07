@@ -412,9 +412,9 @@ double \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\+\_
 \item 
 long double \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec)
 \item 
-char \mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{stdev\+\_\+char\+\_\+vector}} (Char $\ast$vec)
+float \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\+\_\+char\+\_\+vector}} (Char $\ast$vec)
 \item 
-char \mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
+float \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\+\_\+uchar\+\_\+vector}} (UChar $\ast$vec)
 \item 
 float \mbox{\hyperlink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\+\_\+short\+\_\+vector}} (Short $\ast$vec)
 \item 
@@ -702,7 +702,7 @@ References \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\+\_
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{stdev\+\_\+char\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\+\_\+char\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}\label{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}} 
 \index{vector.c@{vector.c}!average\_double\_vector@{average\_double\_vector}}
@@ -1046,7 +1046,7 @@ References \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\+\_
 
 
 
-Referenced by \mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\+\_\+uchar\+\_\+vector()}}.
+Referenced by \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\+\_\+uchar\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8c_a35959e6bd4010b04681750611d00a7b7}\label{vector_8c_a35959e6bd4010b04681750611d00a7b7}} 
 \index{vector.c@{vector.c}!average\_uint\_vector@{average\_uint\_vector}}
@@ -12693,11 +12693,11 @@ References \mbox{\hyperlink{vector_8c_ac3a8bea84161a65f8360d4eeb093cbd3}{partiti
 
 Referenced by \mbox{\hyperlink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\+\_\+ushort\+\_\+vector()}}.
 
-\mbox{\Hypertarget{vector_8c_ac1aed2328b69191a30927c16c7986299}\label{vector_8c_ac1aed2328b69191a30927c16c7986299}} 
+\mbox{\Hypertarget{vector_8c_a918b7824d676e70026969bf6af72dba7}\label{vector_8c_a918b7824d676e70026969bf6af72dba7}} 
 \index{vector.c@{vector.c}!stdev\_char\_vector@{stdev\_char\_vector}}
 \index{stdev\_char\_vector@{stdev\_char\_vector}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{stdev\_char\_vector()}{stdev\_char\_vector()}}
-{\footnotesize\ttfamily char stdev\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float stdev\+\_\+char\+\_\+vector (\begin{DoxyParamCaption}\item[{Char $\ast$}]{vec }\end{DoxyParamCaption})}
 
 This function wil calculate the standard deviation for the values in a vector container.
 
@@ -12709,7 +12709,7 @@ This function wil calculate the standard deviation for the values in a vector co
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&vec, 10);}
 \DoxyCodeLine{\textcolor{keywordtype}{char} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&vec, a, 10, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{char} stdev = \mbox{\hyperlink{vector_8c_ac1aed2328b69191a30927c16c7986299}{stdev\_char\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\_char\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(stdev);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}}(\&vec);}
@@ -12721,22 +12721,22 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l03246}{3246}} of file \mbo
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{03246                                   \{}
-\DoxyCodeLine{03247     \textcolor{keywordtype}{char} average = \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}}(vec);}
-\DoxyCodeLine{03248     \textcolor{keywordtype}{char} var = 0.0;}
-\DoxyCodeLine{03249     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{03246                                    \{}
+\DoxyCodeLine{03247     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}}(vec);}
+\DoxyCodeLine{03248     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03249     \textcolor{keywordtype}{float} value;}
 \DoxyCodeLine{03250     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
 \DoxyCodeLine{03251         value = (float)vec-\/>array[i];}
 \DoxyCodeLine{03252         var += ((value -\/ average) * (value -\/ average));}
 \DoxyCodeLine{03253     \}}
-\DoxyCodeLine{03254     \textcolor{keywordtype}{char} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03254     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
 \DoxyCodeLine{03255 }
-\DoxyCodeLine{03256     \textcolor{keywordtype}{char} number = interm;}
-\DoxyCodeLine{03257     \textcolor{keywordtype}{char} start = 0.0f, end = number;}
-\DoxyCodeLine{03258     \textcolor{keywordtype}{char} mid;}
+\DoxyCodeLine{03256     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03257     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{03258     \textcolor{keywordtype}{float} mid;}
 \DoxyCodeLine{03259 }
 \DoxyCodeLine{03260     \textcolor{comment}{// To store the answer}}
-\DoxyCodeLine{03261     \textcolor{keywordtype}{char} ans = 0.;}
+\DoxyCodeLine{03261     \textcolor{keywordtype}{float} ans = 0.;}
 \DoxyCodeLine{03262     \textcolor{comment}{// To find integral part of square}}
 \DoxyCodeLine{03263     \textcolor{comment}{// root of number}}
 \DoxyCodeLine{03264     \textcolor{keywordflow}{while} (start <= end) \{}
@@ -13413,11 +13413,11 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l03362}{3362}} of file \mbo
 
 References \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\+\_\+short\+\_\+vector()}}.
 
-\mbox{\Hypertarget{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}\label{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}} 
+\mbox{\Hypertarget{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}\label{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}} 
 \index{vector.c@{vector.c}!stdev\_uchar\_vector@{stdev\_uchar\_vector}}
 \index{stdev\_uchar\_vector@{stdev\_uchar\_vector}!vector.c@{vector.c}}
 \doxysubsubsection{\texorpdfstring{stdev\_uchar\_vector()}{stdev\_uchar\_vector()}}
-{\footnotesize\ttfamily char stdev\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float stdev\+\_\+uchar\+\_\+vector (\begin{DoxyParamCaption}\item[{UChar $\ast$}]{vec }\end{DoxyParamCaption})}
 
 This function wil calculate the standard deviation for the values in a vector container.
 
@@ -13429,7 +13429,7 @@ This function wil calculate the standard deviation for the values in a vector co
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&vec, 10);}
 \DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} a[10] = \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&vec, a, 10, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} stdev = \mbox{\hyperlink{vector_8c_a22f3e8ba5b20b60e38c8f039a5c9c3fd}{stdev\_uchar\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{float} stdev = \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\_uchar\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(stdev);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.2076}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}}(\&vec);}
@@ -13441,22 +13441,22 @@ Definition at line \mbox{\hyperlink{vector_8c_source_l03304}{3304}} of file \mbo
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{03304                                     \{}
-\DoxyCodeLine{03305     \textcolor{keywordtype}{char} average = \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}}(vec);}
-\DoxyCodeLine{03306     \textcolor{keywordtype}{char} var = 0.0;}
-\DoxyCodeLine{03307     \textcolor{keywordtype}{char} value;}
+\DoxyCodeLine{03304                                      \{}
+\DoxyCodeLine{03305     \textcolor{keywordtype}{float} average = \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}}(vec);}
+\DoxyCodeLine{03306     \textcolor{keywordtype}{float} var = 0.0;}
+\DoxyCodeLine{03307     \textcolor{keywordtype}{float} value;}
 \DoxyCodeLine{03308     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>active\_length; i++) \{}
 \DoxyCodeLine{03309         value = (float)vec-\/>array[i];}
 \DoxyCodeLine{03310         var += ((value -\/ average) * (value -\/ average));}
 \DoxyCodeLine{03311     \}}
-\DoxyCodeLine{03312     \textcolor{keywordtype}{char} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
+\DoxyCodeLine{03312     \textcolor{keywordtype}{float} interm = (1.0f / ((float)vec-\/>active\_length -\/ 1.0f)) * var;}
 \DoxyCodeLine{03313 }
-\DoxyCodeLine{03314     \textcolor{keywordtype}{char} number = interm;}
-\DoxyCodeLine{03315     \textcolor{keywordtype}{char} start = 0.0f, end = number;}
-\DoxyCodeLine{03316     \textcolor{keywordtype}{char} mid;}
+\DoxyCodeLine{03314     \textcolor{keywordtype}{float} number = interm;}
+\DoxyCodeLine{03315     \textcolor{keywordtype}{float} start = 0.0f, end = number;}
+\DoxyCodeLine{03316     \textcolor{keywordtype}{float} mid;}
 \DoxyCodeLine{03317 }
 \DoxyCodeLine{03318     \textcolor{comment}{// To store the answer}}
-\DoxyCodeLine{03319     \textcolor{keywordtype}{char} ans = 0.;}
+\DoxyCodeLine{03319     \textcolor{keywordtype}{float} ans = 0.;}
 \DoxyCodeLine{03320     \textcolor{comment}{// To find integral part of square}}
 \DoxyCodeLine{03321     \textcolor{comment}{// root of number}}
 \DoxyCodeLine{03322     \textcolor{keywordflow}{while} (start <= end) \{}

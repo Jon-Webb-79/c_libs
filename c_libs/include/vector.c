@@ -3243,22 +3243,22 @@ long double average_ldouble_vector(LDble *vec) {
 // ==========================================================================================
 // STDEV_TYPE_VEC FUNCTIONS
 
-char stdev_char_vector(Char *vec) {
-	char average = average_char_vector(vec);
-	char var = 0.0;
-	char value;
+float stdev_char_vector(Char *vec) {
+	float average = average_char_vector(vec);
+	float var = 0.0;
+	float value;
 	for (size_t i = 0; i < vec->active_length; i++) {
 		value = (float)vec->array[i];
 		var += ((value - average) * (value - average));
 	}
-	char interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
 
-	char number = interm;
-    char start = 0.0f, end = number;
-    char mid;
+	float number = interm;
+    float start = 0.0f, end = number;
+    float mid;
 
     // To store the answer
-    char ans = 0.;
+    float ans = 0.;
     // To find integral part of square
     // root of number
     while (start <= end) {
@@ -3301,22 +3301,22 @@ char stdev_char_vector(Char *vec) {
 }
 // ------------------------------------------------------------------------------------------
 
-char stdev_uchar_vector(UChar *vec) {
-	char average = average_uchar_vector(vec);
-	char var = 0.0;
-	char value;
+float stdev_uchar_vector(UChar *vec) {
+	float average = average_uchar_vector(vec);
+	float var = 0.0;
+	float value;
 	for (size_t i = 0; i < vec->active_length; i++) {
 		value = (float)vec->array[i];
 		var += ((value - average) * (value - average));
 	}
-	char interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
+	float interm = (1.0f / ((float)vec->active_length - 1.0f)) * var;
 
-	char number = interm;
-    char start = 0.0f, end = number;
-    char mid;
+	float number = interm;
+    float start = 0.0f, end = number;
+    float mid;
 
     // To store the answer
-    char ans = 0.;
+    float ans = 0.;
     // To find integral part of square
     // root of number
     while (start <= end) {

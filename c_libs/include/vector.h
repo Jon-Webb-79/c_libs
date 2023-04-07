@@ -4189,13 +4189,13 @@ long double average_ldouble_vector(LDble *vec);
  * init_char_vector(&vec, 10);
  * char a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
  * insert_char_vector(&vec, a, 10, 0);
- * char stdev = stdev_char_vector(&vec);
+ * float stdev = stdev_char_vector(&vec);
  * PRINT(stdev);
  * // >> 3.2076
  * free_char_vector(&vec);
  * @endcode
  */
-char stdev_char_vector(Char *vec);
+float stdev_char_vector(Char *vec);
 // ------------------------------------------------------------------------------------------
 
 /**
@@ -4209,13 +4209,13 @@ char stdev_char_vector(Char *vec);
  * init_uchar_vector(&vec, 10);
  * unsigned char a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
  * insert_uchar_vector(&vec, a, 10, 0);
- * unsigned char stdev = stdev_uchar_vector(&vec);
+ * float stdev = stdev_uchar_vector(&vec);
  * PRINT(stdev);
  * // >> 3.2076
  * free_uchar_vector(&vec);
  * @endcode
  */
-char stdev_uchar_vector(UChar *vec);
+float stdev_uchar_vector(UChar *vec);
 // ------------------------------------------------------------------------------------------
 /**
  * This function wil calculate the standard deviation for the values in a vector
