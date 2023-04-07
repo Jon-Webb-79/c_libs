@@ -2135,4 +2135,188 @@ void test_sum_uchar_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST CUMSUM_TYPE_VEC FUNCTIONS
+
+void test_cumsum_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	Short new_vec = CUMSUM(vec);
+	short int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	UShort new_vec = CUMSUM(vec);
+	unsigned short int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	Int new_vec = CUMSUM(vec);
+	int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	UInt new_vec = CUMSUM(vec);
+	unsigned int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	LInt new_vec = CUMSUM(vec);
+	long int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	ULInt new_vec = CUMSUM(vec);
+	unsigned long int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	LLInt new_vec = CUMSUM(vec);
+	long long int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	ULLInt new_vec = CUMSUM(vec);
+	unsigned long long int b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+    float a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	Flt new_vec = CUMSUM(vec);
+	float b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_float_equal(b[i], new_vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	Dble new_vec = CUMSUM(vec);
+	double b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_float_equal(b[i], new_vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	LDble new_vec = CUMSUM(vec);
+	long double b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_float_equal(b[i], new_vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_cumsum_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	Char new_vec = CUMSUM(vec);
+	char b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_cumsum_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	UChar new_vec = CUMSUM(vec);
+	unsigned char b[5] = {1, 3, 6, 10, 15};
+	for (size_t i = 0; i < 5; i++) {
+		assert_int_equal(b[i], new_vec.array[i]);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

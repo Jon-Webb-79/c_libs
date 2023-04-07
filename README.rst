@@ -374,7 +374,7 @@ This macro is not implemented for Bool data types.
 SUM
 ===
 The ``type sum = SUM(vtype vec)`` macro will return the sum of the values in a data structure
-**NOTE:** This macro does not work with the ``Char``, ``Bool`` or ``String`` data types.
+**NOTE:** This macro does not work with the ``Bool`` or ``String`` data types.
 
 .. code-block:: c
 
@@ -391,6 +391,28 @@ The ``type sum = SUM(vtype vec)`` macro will return the sum of the values in a d
    int b = SUM(vec);
    PRINT(b);
    // >> 15
+   FREE(vec);
+
+CUMSUM
+======
+The ``vtype sum_array = CUMSUM(vtype vec)`` macro will return an array containing the cumulative sum of the data structure
+**Note:** This macro does not work with the ``Bool`` or ``String`` data type.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   // Same as init_int_vector(&vec, 5);
+   INIT_VECTOR(vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   // Same as insert_int_vector(&vec, a, 5, 0);
+   INSERT(vec, a, 5, 0);
+   // Same as int b = cumsum_int_vector(&vec);
+   int b = CUMSUM(vec);
+   PRINT(b);
+   // >> [ 1, 3, 6, 10, 15 ]
    FREE(vec);
 
 =====

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['delete_5fduplicates_0',['DELETE_DUPLICATES',['../data__structures_8h.html#a846efd03c9d323e9b03d70331276d47a',1,'data_structures.h']]]
+  ['cumsum_0',['CUMSUM',['../data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c',1,'data_structures.h']]]
 ];

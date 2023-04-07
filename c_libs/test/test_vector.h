@@ -192,6 +192,23 @@ void test_sum_double_vec(void **state);
 void test_sum_ldouble_vec(void **state);
 void test_sum_char_vec(void **state);
 void test_sum_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST CUMSUM_TYPE_VEC FUNCTIONS
+
+void test_cumsum_short_vec(void **state);
+void test_cumsum_ushort_vec(void **state);
+void test_cumsum_int_vec(void **state);
+void test_cumsum_uint_vec(void **state);
+void test_cumsum_long_vec(void **state);
+void test_cumsum_ulong_vec(void **state);
+void test_cumsum_llong_vec(void **state);
+void test_cumsum_ullong_vec(void **state);
+void test_cumsum_float_vec(void **state);
+void test_cumsum_double_vec(void **state);
+void test_cumsum_ldouble_vec(void **state);
+void test_cumsum_char_vec(void **state);
+void test_cumsum_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

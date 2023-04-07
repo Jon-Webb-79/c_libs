@@ -387,6 +387,39 @@
 							  Char: sum_char_vector, \
 							  UChar: sum_uchar_vector, \
 							  LDble: sum_ldouble_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+
+/**
+ * This macro will return a data structure of the same type as the input
+ * data structure that contains the cumulative sum of the input structure
+ *
+ * /param T The input data structure
+ * /return return_T The output data structure
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 5);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * INSERT(vec, a, 5, 0);
+ * Int cum_vec = CUMSUM(vec);
+ * PRINT(cum_vec);
+ * // >> [ 1, 3, 6, 10, 15 ]
+ * @endcode
+ */
+#define CUMSUM(T) _Generic( (T), Short: cumsum_short_vector, \
+							     UShort: cumsum_ushort_vector, \
+								 Int: cumsum_int_vector, \
+							     UInt: cumsum_uint_vector, \
+								 LInt: cumsum_long_vector, \
+								 ULInt: cumsum_ulong_vector, \
+								 LLInt: cumsum_llong_vector, \
+								 ULLInt: cumsum_ullong_vector, \
+								 Flt: cumsum_float_vector, \
+						         Dble: cumsum_double_vector, \
+								 Char: cumsum_char_vector, \
+								 UChar: cumsum_uchar_vector, \
+								 LDble: cumsum_ldouble_vector)(&T)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

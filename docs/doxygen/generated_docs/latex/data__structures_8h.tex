@@ -24,10 +24,54 @@
 \#define \mbox{\hyperlink{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab}{SORT}}(T,  order)~\mbox{\hyperlink{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}{IS\+\_\+\+SORT\+\_\+\+TYPE}}((T), (0), (T.\+active\+\_\+length-\/1), (order))
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}{SUM}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}{CUMSUM}}(T)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}\label{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}} 
+\index{data\_structures.h@{data\_structures.h}!CUMSUM@{CUMSUM}}
+\index{CUMSUM@{CUMSUM}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{CUMSUM}{CUMSUM}}
+{\footnotesize\ttfamily \#define CUMSUM(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                 \_Generic( (T), Short: \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 UShort: \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 Int: \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 UInt: \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 LInt: \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 ULInt: \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 LLInt: \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 ULLInt: \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 Flt: \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 Dble: \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 Char: \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 UChar: \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                 LDble: \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will return a data structure of the same type as the input data structure that contains the cumulative sum of the input structure
+
+/param T The input data structure /return return\+\_\+T The output data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
+\DoxyCodeLine{Int cum\_vec = \mbox{\hyperlink{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}{CUMSUM}}(vec);}
+\DoxyCodeLine{PRINT(cum\_vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 3, 6, 10, 15 ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00410}{410}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
 \mbox{\Hypertarget{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}\label{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}} 
 \index{data\_structures.h@{data\_structures.h}!DELETE\_DUPLICATES@{DELETE\_DUPLICATES}}
 \index{DELETE\_DUPLICATES@{DELETE\_DUPLICATES}!data\_structures.h@{data\_structures.h}}
