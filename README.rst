@@ -611,5 +611,26 @@ value a user defined number of times within a vector or array data structure.
 =====
 PRINT
 =====
-To be described later.
+This header file contains several macros, but only the ``PRINT(x)`` macro is meant to be accesable by
+the user.  For this macro, the variable ``x`` can be any of the ANSI C data types.
+Finally, this macro can accept up to 8 input variables, and will advance to the next line once all, 1 through 8
+input fields have been printed to the screen.  The example below demonstrates how the macro prints a stack
+data structure and a scalar variable, as well as multiple inputs.
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   int a[] = {1, 2, 3, 4, 5};
+   insert_int_stack(vec, a, 5, 0);
+   PRINT(vec);
+   PRINT(3.2f);
+   PRINT("This is the final answer: ", 3.2f, " ", vec);
+   // The output should look like
+   // [1, 2, 3, 4, 5 ]
+   // 3.20000
+   // This is the final answer: 3.20000 [1, 2, 3, 4, 5 ]
 
