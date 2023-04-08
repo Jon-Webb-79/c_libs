@@ -5253,7 +5253,7 @@ void range_double_vector(Dble *vec, double start, double end, double delta);
  * free_ldouble_vector(&vec);
  * @endcode
  */
- void range_double_vector(Dble *vec, double start, double end, double delta);
+ void range_ldouble_vector(LDble *vec, long double start, long double end, long double delta);
 // ==========================================================================================
 // ==========================================================================================
 // COPY_TYPE_VECTOR FUNCTIONS

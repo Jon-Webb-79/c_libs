@@ -2899,4 +2899,165 @@ void test_min_uchar_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST RANGE_TYPE_VEC FUNCTIONS
+
+void test_range_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	short int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	unsigned short a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	unsigned int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	unsigned long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	long long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	unsigned long long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2.5, 37.5, 2.5);
+	float a[15] = {2.5, 5.0, 7.5, 10, 12.5, 15.0, 17.5, 20.0,
+	               22.5, 25.0, 27.5, 30.0, 32.5, 35.0, 37.5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(a[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2.5, 37.5, 2.5);
+	double a[15] = {2.5, 5.0, 7.5, 10, 12.5, 15.0, 17.5, 20.0,
+	               22.5, 25.0, 27.5, 30.0, 32.5, 35.0, 37.5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(a[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2.5, 37.5, 2.5);
+	long double a[15] = {2.5, 5.0, 7.5, 10, 12.5, 15.0, 17.5, 20.0,
+	               22.5, 25.0, 27.5, 30.0, 32.5, 35.0, 37.5};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(a[i], vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_range_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	char a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_range_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 10);
+	RANGE(vec, 2, 20, 2);
+	unsigned char a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(a[i], vec.array[i]);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

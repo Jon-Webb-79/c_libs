@@ -550,7 +550,40 @@
 							  Flt: min_float_vector, \
 						      Dble: min_double_vector, \
 							  LDble: min_ldouble_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// MAC MACRO
 
+/**
+ * This macro will insert a range of values between start and end into a data
+ * structure.
+ *
+ * /param T The data structure
+ * /param start The start point
+ * /param end The end point
+ * /param The delta between data points
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 10);
+ * RANGE(vec, 2, 20, 2);
+ * PRINT(vec);
+ * // >> [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * @endcode
+ */
+#define RANGE(T, start, end, delta) _Generic( (T), Char: range_char_vector, \
+		                                           UChar: range_uchar_vector, \
+							                       Short: range_short_vector, \
+							                       UShort: range_ushort_vector, \
+									               Int: range_int_vector, \
+							                       UInt: range_uint_vector, \
+									               LInt: range_long_vector, \
+									               ULInt: range_ulong_vector, \
+									               LLInt: range_llong_vector, \
+									               ULLInt: range_ullong_vector, \
+									               Flt: range_float_vector, \
+						                           Dble: range_double_vector, \
+									               LDble: range_ldouble_vector)(&T, start, end, delta)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

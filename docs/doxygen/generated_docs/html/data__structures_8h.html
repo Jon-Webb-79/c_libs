@@ -109,6 +109,8 @@ Macros</h2></td></tr>
 <tr class="separator:a895002453bd9037c335520131a642372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab01356067636aa7d12aad9a9302f37a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7">MIN</a>(T)</td></tr>
 <tr class="separator:ab01356067636aa7d12aad9a9302f37a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c03354ef846fed0c21ad5802407c42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(T,  start,  end,  delta)</td></tr>
+<tr class="separator:a67c03354ef846fed0c21ad5802407c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a81794266d48f7e352116d53be0fda9fc" name="a81794266d48f7e352116d53be0fda9fc"></a>
@@ -563,7 +565,7 @@ Macros</h2></td></tr>
 <div class="line">                              ULLInt: <a class="code hl_function" href="vector_8c.html#a10aea428d676da30abd474d11dbab300">min_ullong_vector</a>, \</div>
 <div class="line">                              Flt: <a class="code hl_function" href="vector_8c.html#a37e7749c40c9ecefb35c6f677e6e2786">min_float_vector</a>, \</div>
 <div class="line">                              Dble: <a class="code hl_function" href="vector_8c.html#ac870c654ea8b8143650fb8504880d80a">min_double_vector</a>, \</div>
-<div class="line">                              LDble: <a class="code hl_function" href="vector_8h.html#af3eef7302375a05b37b3ae4e0d8251a8">min_ldouble_vector</a>)(&amp;T)</div>
+<div class="line">                              LDble: <a class="code hl_function" href="vector_8c.html#af3eef7302375a05b37b3ae4e0d8251a8">min_ldouble_vector</a>)(&amp;T)</div>
 <div class="ttc" id="avector_8c_html_a10aea428d676da30abd474d11dbab300"><div class="ttname"><a href="vector_8c.html#a10aea428d676da30abd474d11dbab300">min_ullong_vector</a></div><div class="ttdeci">unsigned long long int min_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04246">vector.c:4246</a></div></div>
 <div class="ttc" id="avector_8c_html_a1dbc7c797a21eb6c44d009cb497b50ae"><div class="ttname"><a href="vector_8c.html#a1dbc7c797a21eb6c44d009cb497b50ae">min_uchar_vector</a></div><div class="ttdeci">unsigned char min_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04158">vector.c:4158</a></div></div>
 <div class="ttc" id="avector_8c_html_a21be2c6c074005bfa1c33603299f3181"><div class="ttname"><a href="vector_8c.html#a21be2c6c074005bfa1c33603299f3181">min_short_vector</a></div><div class="ttdeci">short int min_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04169">vector.c:4169</a></div></div>
@@ -576,7 +578,7 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8c_html_aaff52778fc2f05ace6de3570530e9068"><div class="ttname"><a href="vector_8c.html#aaff52778fc2f05ace6de3570530e9068">min_long_vector</a></div><div class="ttdeci">long int min_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04213">vector.c:4213</a></div></div>
 <div class="ttc" id="avector_8c_html_ac870c654ea8b8143650fb8504880d80a"><div class="ttname"><a href="vector_8c.html#ac870c654ea8b8143650fb8504880d80a">min_double_vector</a></div><div class="ttdeci">double min_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04268">vector.c:4268</a></div></div>
 <div class="ttc" id="avector_8c_html_ad1a7c046cbcac65a71e5442ec5680bdc"><div class="ttname"><a href="vector_8c.html#ad1a7c046cbcac65a71e5442ec5680bdc">min_llong_vector</a></div><div class="ttdeci">long long int min_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04235">vector.c:4235</a></div></div>
-<div class="ttc" id="avector_8h_html_af3eef7302375a05b37b3ae4e0d8251a8"><div class="ttname"><a href="vector_8h.html#af3eef7302375a05b37b3ae4e0d8251a8">min_ldouble_vector</a></div><div class="ttdeci">long double min_ldouble_vector(LDble *vec)</div></div>
+<div class="ttc" id="avector_8c_html_af3eef7302375a05b37b3ae4e0d8251a8"><div class="ttname"><a href="vector_8c.html#af3eef7302375a05b37b3ae4e0d8251a8">min_ldouble_vector</a></div><div class="ttdeci">long double min_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04279">vector.c:4279</a></div></div>
 </div><!-- fragment --><p >This macro will calculate the max value in a data structure</p>
 <p >/param T The input data structure</p>
 <div class="fragment"><div class="line">Dble vec;</div>
@@ -715,6 +717,82 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8c_html_aea5f95b56df2836ee553face60351e61"><div class="ttname"><a href="vector_8c.html#aea5f95b56df2836ee553face60351e61">push_ulong_vector</a></div><div class="ttdeci">int push_ulong_vector(ULInt *vec, unsigned long int value, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l00514">vector.c:514</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00047">47</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="a67c03354ef846fed0c21ad5802407c42" name="a67c03354ef846fed0c21ad5802407c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c03354ef846fed0c21ad5802407c42">&#9670;&nbsp;</a></span>RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RANGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">start, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">end, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">delta&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                                   _Generic( (T), Char: <a class="code hl_function" href="vector_8c.html#ac3589c6090a8dc24ffe4211dbb42b15f">range_char_vector</a>, \</div>
+<div class="line">                                                   UChar: <a class="code hl_function" href="vector_8c.html#a14f0626112aa000e6739a14556f761ed">range_uchar_vector</a>, \</div>
+<div class="line">                                                   Short: <a class="code hl_function" href="vector_8c.html#adb305706da4585539cd057cfa0ec0e2c">range_short_vector</a>, \</div>
+<div class="line">                                                   UShort: <a class="code hl_function" href="vector_8c.html#a062892c86bd6a4934d91c804684cf755">range_ushort_vector</a>, \</div>
+<div class="line">                                                   Int: <a class="code hl_function" href="vector_8c.html#a184898353e0603cd18372448c8a842e4">range_int_vector</a>, \</div>
+<div class="line">                                                   UInt: <a class="code hl_function" href="vector_8c.html#adce9ffbf72bc5678dbd702bf9840f363">range_uint_vector</a>, \</div>
+<div class="line">                                                   LInt: <a class="code hl_function" href="vector_8c.html#aed9932998976a7d3ce615075dd5af09b">range_long_vector</a>, \</div>
+<div class="line">                                                   ULInt: <a class="code hl_function" href="vector_8c.html#a4fe9caa2febfe85a1107394d8b42c348">range_ulong_vector</a>, \</div>
+<div class="line">                                                   LLInt: <a class="code hl_function" href="vector_8c.html#afa81d739815cef7056167d48361e0891">range_llong_vector</a>, \</div>
+<div class="line">                                                   ULLInt: <a class="code hl_function" href="vector_8c.html#a6b8d5f1723a1e5e9a0d03da80e93b68e">range_ullong_vector</a>, \</div>
+<div class="line">                                                   Flt: <a class="code hl_function" href="vector_8c.html#a85d0392c18b7db31c0a14bc2aa13448c">range_float_vector</a>, \</div>
+<div class="line">                                                   Dble: <a class="code hl_function" href="vector_8c.html#a636afa2f2e2af7dbbd34b7cb42d11163">range_double_vector</a>, \</div>
+<div class="line">                                                   LDble: <a class="code hl_function" href="vector_8c.html#ae5505a9a69a6701bcafa4b92eb06055f">range_ldouble_vector</a>)(&amp;T, start, end, delta)</div>
+<div class="ttc" id="avector_8c_html_a062892c86bd6a4934d91c804684cf755"><div class="ttname"><a href="vector_8c.html#a062892c86bd6a4934d91c804684cf755">range_ushort_vector</a></div><div class="ttdeci">void range_ushort_vector(UShort *vec, unsigned short int start, unsigned short int end, unsigned short int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04322">vector.c:4322</a></div></div>
+<div class="ttc" id="avector_8c_html_a14f0626112aa000e6739a14556f761ed"><div class="ttname"><a href="vector_8c.html#a14f0626112aa000e6739a14556f761ed">range_uchar_vector</a></div><div class="ttdeci">void range_uchar_vector(UChar *vec, unsigned char start, unsigned char end, unsigned char delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04302">vector.c:4302</a></div></div>
+<div class="ttc" id="avector_8c_html_a184898353e0603cd18372448c8a842e4"><div class="ttname"><a href="vector_8c.html#a184898353e0603cd18372448c8a842e4">range_int_vector</a></div><div class="ttdeci">void range_int_vector(Int *vec, int start, int end, int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04333">vector.c:4333</a></div></div>
+<div class="ttc" id="avector_8c_html_a4fe9caa2febfe85a1107394d8b42c348"><div class="ttname"><a href="vector_8c.html#a4fe9caa2febfe85a1107394d8b42c348">range_ulong_vector</a></div><div class="ttdeci">void range_ulong_vector(ULInt *vec, unsigned long int start, unsigned long int end, unsigned long int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04364">vector.c:4364</a></div></div>
+<div class="ttc" id="avector_8c_html_a636afa2f2e2af7dbbd34b7cb42d11163"><div class="ttname"><a href="vector_8c.html#a636afa2f2e2af7dbbd34b7cb42d11163">range_double_vector</a></div><div class="ttdeci">void range_double_vector(Dble *vec, double start, double end, double delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04406">vector.c:4406</a></div></div>
+<div class="ttc" id="avector_8c_html_a6b8d5f1723a1e5e9a0d03da80e93b68e"><div class="ttname"><a href="vector_8c.html#a6b8d5f1723a1e5e9a0d03da80e93b68e">range_ullong_vector</a></div><div class="ttdeci">void range_ullong_vector(ULLInt *vec, unsigned long long int start, unsigned long long int end, unsigned long long int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04385">vector.c:4385</a></div></div>
+<div class="ttc" id="avector_8c_html_a85d0392c18b7db31c0a14bc2aa13448c"><div class="ttname"><a href="vector_8c.html#a85d0392c18b7db31c0a14bc2aa13448c">range_float_vector</a></div><div class="ttdeci">void range_float_vector(Flt *vec, float start, float end, float delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04396">vector.c:4396</a></div></div>
+<div class="ttc" id="avector_8c_html_ac3589c6090a8dc24ffe4211dbb42b15f"><div class="ttname"><a href="vector_8c.html#ac3589c6090a8dc24ffe4211dbb42b15f">range_char_vector</a></div><div class="ttdeci">void range_char_vector(Char *vec, char start, char end, char delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04292">vector.c:4292</a></div></div>
+<div class="ttc" id="avector_8c_html_adb305706da4585539cd057cfa0ec0e2c"><div class="ttname"><a href="vector_8c.html#adb305706da4585539cd057cfa0ec0e2c">range_short_vector</a></div><div class="ttdeci">void range_short_vector(Short *vec, short int start, short int end, short int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04312">vector.c:4312</a></div></div>
+<div class="ttc" id="avector_8c_html_adce9ffbf72bc5678dbd702bf9840f363"><div class="ttname"><a href="vector_8c.html#adce9ffbf72bc5678dbd702bf9840f363">range_uint_vector</a></div><div class="ttdeci">void range_uint_vector(UInt *vec, unsigned int start, unsigned int end, unsigned int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04343">vector.c:4343</a></div></div>
+<div class="ttc" id="avector_8c_html_ae5505a9a69a6701bcafa4b92eb06055f"><div class="ttname"><a href="vector_8c.html#ae5505a9a69a6701bcafa4b92eb06055f">range_ldouble_vector</a></div><div class="ttdeci">void range_ldouble_vector(LDble *vec, long double start, long double end, long double delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04417">vector.c:4417</a></div></div>
+<div class="ttc" id="avector_8c_html_aed9932998976a7d3ce615075dd5af09b"><div class="ttname"><a href="vector_8c.html#aed9932998976a7d3ce615075dd5af09b">range_long_vector</a></div><div class="ttdeci">void range_long_vector(LInt *vec, long int start, long int end, long int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04354">vector.c:4354</a></div></div>
+<div class="ttc" id="avector_8c_html_afa81d739815cef7056167d48361e0891"><div class="ttname"><a href="vector_8c.html#afa81d739815cef7056167d48361e0891">range_llong_vector</a></div><div class="ttdeci">void range_llong_vector(LLInt *vec, long long int start, long long int end, long long int delta)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04375">vector.c:4375</a></div></div>
+</div><!-- fragment --><p >This macro will insert a range of values between start and end into a data structure.</p>
+<p >/param T The data structure /param start The start point /param end The end point /param The delta between data points</p>
+<div class="fragment"><div class="line">Int vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 10);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(vec, 2, 20, 2);</div>
+<div class="line">PRINT(vec);</div>
+<div class="line"><span class="comment">// &gt;&gt; [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]</span></div>
+<div class="ttc" id="adata__structures_8h_html_a67c03354ef846fed0c21ad5802407c42"><div class="ttname"><a href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a></div><div class="ttdeci">#define RANGE(T, start, end, delta)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00574">data_structures.h:574</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00574">574</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>

@@ -277,6 +277,23 @@ void test_min_double_vec(void **state);
 void test_min_ldouble_vec(void **state);
 void test_min_char_vec(void **state);
 void test_min_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST RANGE_TYPE_VEC FUNCTIONS
+
+void test_range_short_vec(void **state);
+void test_range_ushort_vec(void **state);
+void test_range_int_vec(void **state);
+void test_range_uint_vec(void **state);
+void test_range_long_vec(void **state);
+void test_range_ulong_vec(void **state);
+void test_range_llong_vec(void **state);
+void test_range_ullong_vec(void **state);
+void test_range_float_vec(void **state);
+void test_range_double_vec(void **state);
+void test_range_ldouble_vec(void **state);
+void test_range_char_vec(void **state);
+void test_range_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

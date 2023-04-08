@@ -541,6 +541,8 @@ void \mbox{\hyperlink{vector_8h_a85d0392c18b7db31c0a14bc2aa13448c}{range\+\_\+fl
 \item 
 void \mbox{\hyperlink{vector_8h_a636afa2f2e2af7dbbd34b7cb42d11163}{range\+\_\+double\+\_\+vector}} (Dble $\ast$vec, double start, double end, double delta)
 \item 
+void \mbox{\hyperlink{vector_8h_ae5505a9a69a6701bcafa4b92eb06055f}{range\+\_\+ldouble\+\_\+vector}} (LDble $\ast$vec, long double start, long double end, long double delta)
+\item 
 Short \mbox{\hyperlink{vector_8h_ab88c9075f7ac94dd8656a8eec4a14a94}{copy\+\_\+short\+\_\+vector}} (Short $\ast$vec)
 \item 
 UShort \mbox{\hyperlink{vector_8h_af70602cee86af9597513bc67b2878244}{copy\+\_\+ushort\+\_\+vector}} (UShort $\ast$vec)
@@ -1459,11 +1461,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04455}{4455}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04466}{4466}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04455 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04466 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_aa99d3902c062bd4e5e31b85ccd8867bb}\label{vector_8h_aa99d3902c062bd4e5e31b85ccd8867bb}} 
@@ -1489,11 +1491,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04452}{4452}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04463}{4463}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04452 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04463 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a2e6c2d82128d66d5fe6800ee6ad9d277}\label{vector_8h_a2e6c2d82128d66d5fe6800ee6ad9d277}} 
@@ -1506,16 +1508,16 @@ This function will create and return a deep copy of an Bool struct
 
 /param vec A vector struct of type Bool 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04559}{4559}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04570}{4570}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04559                                  \{}
-\DoxyCodeLine{04560     Bool new\_vec;}
-\DoxyCodeLine{04561     \mbox{\hyperlink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04562     \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04563     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04564 \}}
+\DoxyCodeLine{04570                                  \{}
+\DoxyCodeLine{04571     Bool new\_vec;}
+\DoxyCodeLine{04572     \mbox{\hyperlink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04573     \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04574     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04575 \}}
 
 \end{DoxyCode}
 
@@ -1532,16 +1534,16 @@ This function will create and return a deep copy of an Char struct
 
 /param vec A vector struct of type Char 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04551}{4551}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04562}{4562}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04551                                  \{}
-\DoxyCodeLine{04552     Char new\_vec;}
-\DoxyCodeLine{04553     \mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04554     \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04555     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04556 \}}
+\DoxyCodeLine{04562                                  \{}
+\DoxyCodeLine{04563     Char new\_vec;}
+\DoxyCodeLine{04564     \mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04565     \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04566     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04567 \}}
 
 \end{DoxyCode}
 
@@ -1558,16 +1560,16 @@ This function will create and return a deep copy of an Dble struct
 
 /param vec A vector struct of type Dble 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04535}{4535}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04546}{4546}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04535                                    \{}
-\DoxyCodeLine{04536     Dble new\_vec;}
-\DoxyCodeLine{04537     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04538     \mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04539     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04540 \}}
+\DoxyCodeLine{04546                                    \{}
+\DoxyCodeLine{04547     Dble new\_vec;}
+\DoxyCodeLine{04548     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04549     \mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04550     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04551 \}}
 
 \end{DoxyCode}
 
@@ -1584,16 +1586,16 @@ This function will create and return a deep copy of an Flt struct
 
 /param vec A vector struct of type Flt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04527}{4527}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04538}{4538}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04527                                 \{}
-\DoxyCodeLine{04528     Flt new\_vec;}
-\DoxyCodeLine{04529     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04530     \mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04531     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04532 \}}
+\DoxyCodeLine{04538                                 \{}
+\DoxyCodeLine{04539     Flt new\_vec;}
+\DoxyCodeLine{04540     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04541     \mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04542     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04543 \}}
 
 \end{DoxyCode}
 
@@ -1610,16 +1612,16 @@ This function will create and return a deep copy of an Int struct
 
 /param vec A vector struct of type Int 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04479}{4479}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04490}{4490}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04479                               \{}
-\DoxyCodeLine{04480     Int new\_vec;}
-\DoxyCodeLine{04481     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04482     \mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04483     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04484 \}}
+\DoxyCodeLine{04490                               \{}
+\DoxyCodeLine{04491     Int new\_vec;}
+\DoxyCodeLine{04492     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04493     \mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04494     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04495 \}}
 
 \end{DoxyCode}
 
@@ -1636,16 +1638,16 @@ This function will create and return a deep copy of an LDble struct
 
 /param vec A vector struct of type LDble 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04543}{4543}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04554}{4554}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04543                                       \{}
-\DoxyCodeLine{04544     LDble new\_vec;}
-\DoxyCodeLine{04545     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04546     \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04547     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04548 \}}
+\DoxyCodeLine{04554                                       \{}
+\DoxyCodeLine{04555     LDble new\_vec;}
+\DoxyCodeLine{04556     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04557     \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04558     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04559 \}}
 
 \end{DoxyCode}
 
@@ -1662,16 +1664,16 @@ This function will create and return a deep copy of an LLInt struct
 
 /param vec A vector struct of type LLInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04511}{4511}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04522}{4522}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04511                                     \{}
-\DoxyCodeLine{04512     LLInt new\_vec;}
-\DoxyCodeLine{04513     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04514     \mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04515     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04516 \}}
+\DoxyCodeLine{04522                                     \{}
+\DoxyCodeLine{04523     LLInt new\_vec;}
+\DoxyCodeLine{04524     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04525     \mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04526     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04527 \}}
 
 \end{DoxyCode}
 
@@ -1688,16 +1690,16 @@ This function will create and return a deep copy of an LInt struct
 
 /param vec A vector struct of type LInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04495}{4495}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04506}{4506}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04495                                  \{}
-\DoxyCodeLine{04496     LInt new\_vec;}
-\DoxyCodeLine{04497     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04498     \mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04499     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04500 \}}
+\DoxyCodeLine{04506                                  \{}
+\DoxyCodeLine{04507     LInt new\_vec;}
+\DoxyCodeLine{04508     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04509     \mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04510     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04511 \}}
 
 \end{DoxyCode}
 
@@ -1714,16 +1716,16 @@ This function will create and return a deep copy of an Short struct
 
 /param vec A vector struct of type Short 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04463}{4463}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04474}{4474}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04463                                     \{}
-\DoxyCodeLine{04464     Short new\_vec;}
-\DoxyCodeLine{04465     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04466     \mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04467     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04468 \}}
+\DoxyCodeLine{04474                                     \{}
+\DoxyCodeLine{04475     Short new\_vec;}
+\DoxyCodeLine{04476     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04477     \mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04478     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04479 \}}
 
 \end{DoxyCode}
 
@@ -1740,18 +1742,18 @@ This function will create and return a deep copy of an \mbox{\hyperlink{structSt
 
 /param vec A vector struct of type \mbox{\hyperlink{structString}{String}} 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04567}{4567}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04578}{4578}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04567                                        \{}
-\DoxyCodeLine{04568     \mbox{\hyperlink{structString}{String}} new\_vec;}
-\DoxyCodeLine{04569     \mbox{\hyperlink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\&new\_vec);}
-\DoxyCodeLine{04570     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}}; i++) \{}
-\DoxyCodeLine{04571         \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&new\_vec, vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[i], new\_vec.\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
-\DoxyCodeLine{04572     \}}
-\DoxyCodeLine{04573     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04574 \}}
+\DoxyCodeLine{04578                                        \{}
+\DoxyCodeLine{04579     \mbox{\hyperlink{structString}{String}} new\_vec;}
+\DoxyCodeLine{04580     \mbox{\hyperlink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\&new\_vec);}
+\DoxyCodeLine{04581     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}}; i++) \{}
+\DoxyCodeLine{04582         \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&new\_vec, vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[i], new\_vec.\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
+\DoxyCodeLine{04583     \}}
+\DoxyCodeLine{04584     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04585 \}}
 
 \end{DoxyCode}
 
@@ -1768,16 +1770,16 @@ This function will create and return a deep copy of an UInt struct
 
 /param vec A vector struct of type UInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04487}{4487}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04498}{4498}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04487                                  \{}
-\DoxyCodeLine{04488     UInt new\_vec;}
-\DoxyCodeLine{04489     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04490     \mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04491     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04492 \}}
+\DoxyCodeLine{04498                                  \{}
+\DoxyCodeLine{04499     UInt new\_vec;}
+\DoxyCodeLine{04500     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04501     \mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04502     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04503 \}}
 
 \end{DoxyCode}
 
@@ -1794,16 +1796,16 @@ This function will create and return a deep copy of an ULLInt struct
 
 /param vec A vector struct of type ULLInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04519}{4519}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04530}{4530}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04519                                        \{}
-\DoxyCodeLine{04520     ULLInt new\_vec;}
-\DoxyCodeLine{04521     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04522     \mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04523     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04524 \}}
+\DoxyCodeLine{04530                                        \{}
+\DoxyCodeLine{04531     ULLInt new\_vec;}
+\DoxyCodeLine{04532     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04533     \mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04534     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04535 \}}
 
 \end{DoxyCode}
 
@@ -1820,16 +1822,16 @@ This function will create and return a deep copy of an ULInt struct
 
 /param vec A vector struct of type ULInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04503}{4503}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04514}{4514}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04503                                     \{}
-\DoxyCodeLine{04504     ULInt new\_vec;}
-\DoxyCodeLine{04505     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04506     \mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04507     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04508 \}}
+\DoxyCodeLine{04514                                     \{}
+\DoxyCodeLine{04515     ULInt new\_vec;}
+\DoxyCodeLine{04516     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04517     \mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04518     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04519 \}}
 
 \end{DoxyCode}
 
@@ -1846,16 +1848,16 @@ This function will create and return a deep copy of an UShort struct
 
 /param vec A vector struct of type UShort 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04471}{4471}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04482}{4482}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04471                                        \{}
-\DoxyCodeLine{04472     UShort new\_vec;}
-\DoxyCodeLine{04473     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{04474     \mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{04475     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{04476 \}}
+\DoxyCodeLine{04482                                        \{}
+\DoxyCodeLine{04483     UShort new\_vec;}
+\DoxyCodeLine{04484     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{04485     \mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{04486     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{04487 \}}
 
 \end{DoxyCode}
 
@@ -3178,11 +3180,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04446}{4446}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04457}{4457}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04446 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04457 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a84fbf5e526da1adcad6858a643df2462}\label{vector_8h_a84fbf5e526da1adcad6858a643df2462}} 
@@ -3208,11 +3210,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04443}{4443}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04454}{4454}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04443 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04454 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a5783a319298af13236def83e42f00799}\label{vector_8h_a5783a319298af13236def83e42f00799}} 
@@ -5848,11 +5850,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04425}{4425}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04436}{4436}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04425 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04436 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a4ff7d557d90612b873092b0b9dd82b15}\label{vector_8h_a4ff7d557d90612b873092b0b9dd82b15}} 
@@ -5878,11 +5880,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04449}{4449}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04460}{4460}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04449 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04460 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ac368c61f3aceee6f22f7fdfd9c6866bc}\label{vector_8h_ac368c61f3aceee6f22f7fdfd9c6866bc}} 
@@ -5908,11 +5910,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04437}{4437}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04448}{4448}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04437 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04448 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a78c08d70ca4769c5fa2e4d87bcd35f4e}\label{vector_8h_a78c08d70ca4769c5fa2e4d87bcd35f4e}} 
@@ -5938,11 +5940,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04431}{4431}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04442}{4442}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04431 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04442 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ac45503684793e5582c2bdac1d7d52ba3}\label{vector_8h_ac45503684793e5582c2bdac1d7d52ba3}} 
@@ -6624,13 +6626,30 @@ This function will determine the min value in a vector data structure of type LD
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 5);}
 \DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} a[5] = \{ 1., 2., 3., 4., 5.\};}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&vec, a, 5, 0);}
-\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} min = \mbox{\hyperlink{vector_8h_af3eef7302375a05b37b3ae4e0d8251a8}{min\_ldouble\_vector}}(\&vec);}
+\DoxyCodeLine{\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} min = \mbox{\hyperlink{vector_8c_af3eef7302375a05b37b3ae4e0d8251a8}{min\_ldouble\_vector}}(\&vec);}
 \DoxyCodeLine{PRINT(max);}
 \DoxyCodeLine{\textcolor{comment}{// >> 1}}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
 
 \end{DoxyCode}
- \mbox{\Hypertarget{vector_8h_ad1a7c046cbcac65a71e5442ec5680bdc}\label{vector_8h_ad1a7c046cbcac65a71e5442ec5680bdc}} 
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04279}{4279}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04279                                            \{}
+\DoxyCodeLine{04280     \textcolor{keywordflow}{if} (vec-\/>active\_length == 1) \textcolor{keywordflow}{return} vec-\/>array[0];}
+\DoxyCodeLine{04281 }
+\DoxyCodeLine{04282     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} max = vec-\/>array[0];}
+\DoxyCodeLine{04283     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 1; i < vec-\/>active\_length; i++) \{}
+\DoxyCodeLine{04284         \textcolor{keywordflow}{if} (max > vec-\/>array[i]) max = vec-\/>array[i];}
+\DoxyCodeLine{04285     \}}
+\DoxyCodeLine{04286     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{04287 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vector_8h_ad1a7c046cbcac65a71e5442ec5680bdc}\label{vector_8h_ad1a7c046cbcac65a71e5442ec5680bdc}} 
 \index{vector.h@{vector.h}!min\_llong\_vector@{min\_llong\_vector}}
 \index{min\_llong\_vector@{min\_llong\_vector}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{min\_llong\_vector()}{min\_llong\_vector()}}
@@ -8518,18 +8537,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04281}{4281}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04292}{4292}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04281                                                                     \{}
-\DoxyCodeLine{04282     \textcolor{keywordtype}{char} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04283     \textcolor{keywordtype}{char} advance = start;}
-\DoxyCodeLine{04284     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04285         \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04286         advance += delta;}
-\DoxyCodeLine{04287     \}}
-\DoxyCodeLine{04288 \}}
+\DoxyCodeLine{04292                                                                     \{}
+\DoxyCodeLine{04293     \textcolor{keywordtype}{char} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04294     \textcolor{keywordtype}{char} advance = start;}
+\DoxyCodeLine{04295     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04296         \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04297         advance += delta;}
+\DoxyCodeLine{04298     \}}
+\DoxyCodeLine{04299 \}}
 
 \end{DoxyCode}
 
@@ -8556,36 +8575,20 @@ This function will add a range of data points to a vector data structure that st
 \DoxyCodeLine{\mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}}(\&vec);}
 
 \end{DoxyCode}
-
-
-This function will add a range of data points to a vector data structure that start at a user defined data point and ends at another, or the nearest data point.
-
-/param vec A vector data structure of type LDble /param start The start point /param end The end point /param delta The difference between each data point
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{LDble vec;}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 10)}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\_ldouble\_vector}}(\&vec, 2, 20, 2);}
-\DoxyCodeLine{PRINT(vec);}
-\DoxyCodeLine{\textcolor{comment}{// [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]}}
-\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
-
-\end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04395}{4395}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04406}{4406}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04396                                     \{}
-\DoxyCodeLine{04397     \textcolor{keywordtype}{double} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04398     \textcolor{keywordtype}{double} advance = start;}
-\DoxyCodeLine{04399     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04400         \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04401         advance += delta;}
-\DoxyCodeLine{04402     \}}
-\DoxyCodeLine{04403 \}}
+\DoxyCodeLine{04407                                     \{}
+\DoxyCodeLine{04408     \textcolor{keywordtype}{double} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04409     \textcolor{keywordtype}{double} advance = start;}
+\DoxyCodeLine{04410     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04411         \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04412         advance += delta;}
+\DoxyCodeLine{04413     \}}
+\DoxyCodeLine{04414 \}}
 
 \end{DoxyCode}
 
@@ -8614,18 +8617,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04385}{4385}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04396}{4396}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04385                                                                        \{}
-\DoxyCodeLine{04386     \textcolor{keywordtype}{float} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04387     \textcolor{keywordtype}{float} advance = start;}
-\DoxyCodeLine{04388     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04389         \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04390         advance += delta;}
-\DoxyCodeLine{04391     \}}
-\DoxyCodeLine{04392 \}}
+\DoxyCodeLine{04396                                                                        \{}
+\DoxyCodeLine{04397     \textcolor{keywordtype}{float} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04398     \textcolor{keywordtype}{float} advance = start;}
+\DoxyCodeLine{04399     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04400         \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04401         advance += delta;}
+\DoxyCodeLine{04402     \}}
+\DoxyCodeLine{04403 \}}
 
 \end{DoxyCode}
 
@@ -8654,23 +8657,63 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04322}{4322}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04333}{4333}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04322                                                                \{}
-\DoxyCodeLine{04323     \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04324     \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04325     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04326         \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04327         advance += delta;}
-\DoxyCodeLine{04328     \}}
-\DoxyCodeLine{04329 \}}
+\DoxyCodeLine{04333                                                                \{}
+\DoxyCodeLine{04334     \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04335     \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04336     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04337         \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04338         advance += delta;}
+\DoxyCodeLine{04339     \}}
+\DoxyCodeLine{04340 \}}
 
 \end{DoxyCode}
 
 
 References \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\+\_\+int\+\_\+vector()}}.
+
+\mbox{\Hypertarget{vector_8h_ae5505a9a69a6701bcafa4b92eb06055f}\label{vector_8h_ae5505a9a69a6701bcafa4b92eb06055f}} 
+\index{vector.h@{vector.h}!range\_ldouble\_vector@{range\_ldouble\_vector}}
+\index{range\_ldouble\_vector@{range\_ldouble\_vector}!vector.h@{vector.h}}
+\doxysubsubsection{\texorpdfstring{range\_ldouble\_vector()}{range\_ldouble\_vector()}}
+{\footnotesize\ttfamily void range\+\_\+ldouble\+\_\+vector (\begin{DoxyParamCaption}\item[{LDble $\ast$}]{vec,  }\item[{long double}]{start,  }\item[{long double}]{end,  }\item[{long double}]{delta }\end{DoxyParamCaption})}
+
+This function will add a range of data points to a vector data structure that start at a user defined data point and ends at another, or the nearest data point.
+
+/param vec A vector data structure of type LDble /param start The start point /param end The end point /param delta The difference between each data point
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{LDble vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&vec, 10)}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\_ldouble\_vector}}(\&vec, 2, 20, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}}(\&vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{vector_8c_source_l04417}{4417}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{04418                                           \{}
+\DoxyCodeLine{04419     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04420     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} advance = start;}
+\DoxyCodeLine{04421     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04422         \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04423         advance += delta;}
+\DoxyCodeLine{04424     \}}
+\DoxyCodeLine{04425 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\+\_\+ldouble\+\_\+vector()}}.
 
 \mbox{\Hypertarget{vector_8h_afa81d739815cef7056167d48361e0891}\label{vector_8h_afa81d739815cef7056167d48361e0891}} 
 \index{vector.h@{vector.h}!range\_llong\_vector@{range\_llong\_vector}}
@@ -8694,18 +8737,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04364}{4364}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04375}{4375}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04364                                                                                                  \{}
-\DoxyCodeLine{04365     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04366     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04367     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04368         \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04369         advance += delta;}
-\DoxyCodeLine{04370     \}}
-\DoxyCodeLine{04371 \}}
+\DoxyCodeLine{04375                                                                                                  \{}
+\DoxyCodeLine{04376     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04377     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04378     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04379         \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04380         advance += delta;}
+\DoxyCodeLine{04381     \}}
+\DoxyCodeLine{04382 \}}
 
 \end{DoxyCode}
 
@@ -8734,18 +8777,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04343}{4343}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04354}{4354}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04343                                                                                 \{}
-\DoxyCodeLine{04344     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04345     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04346     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04347         \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04348         advance += delta;}
-\DoxyCodeLine{04349     \}}
-\DoxyCodeLine{04350 \}}
+\DoxyCodeLine{04354                                                                                 \{}
+\DoxyCodeLine{04355     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04356     \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04357     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04358         \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04359         advance += delta;}
+\DoxyCodeLine{04360     \}}
+\DoxyCodeLine{04361 \}}
 
 \end{DoxyCode}
 
@@ -8774,18 +8817,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04301}{4301}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04312}{4312}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04301                                                                                      \{}
-\DoxyCodeLine{04302     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04303     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04304     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04305         \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04306         advance += delta;}
-\DoxyCodeLine{04307     \}}
-\DoxyCodeLine{04308 \}}
+\DoxyCodeLine{04312                                                                                      \{}
+\DoxyCodeLine{04313     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04314     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04315     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04316         \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04317         advance += delta;}
+\DoxyCodeLine{04318     \}}
+\DoxyCodeLine{04319 \}}
 
 \end{DoxyCode}
 
@@ -8814,18 +8857,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04291}{4291}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04302}{4302}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04291                                                                                                  \{}
-\DoxyCodeLine{04292     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04293     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} advance = start;}
-\DoxyCodeLine{04294     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04295         \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04296         advance += delta;}
-\DoxyCodeLine{04297     \}}
-\DoxyCodeLine{04298 \}}
+\DoxyCodeLine{04302                                                                                                  \{}
+\DoxyCodeLine{04303     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04304     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} advance = start;}
+\DoxyCodeLine{04305     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04306         \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04307         advance += delta;}
+\DoxyCodeLine{04308     \}}
+\DoxyCodeLine{04309 \}}
 
 \end{DoxyCode}
 
@@ -8854,18 +8897,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04332}{4332}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04343}{4343}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04333                                         \{}
-\DoxyCodeLine{04334     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04335     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04336     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04337         \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04338         advance += delta;}
-\DoxyCodeLine{04339     \}}
-\DoxyCodeLine{04340 \}}
+\DoxyCodeLine{04344                                         \{}
+\DoxyCodeLine{04345     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04346     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04347     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04348         \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04349         advance += delta;}
+\DoxyCodeLine{04350     \}}
+\DoxyCodeLine{04351 \}}
 
 \end{DoxyCode}
 
@@ -8894,18 +8937,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04374}{4374}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04385}{4385}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04375                                                    \{}
-\DoxyCodeLine{04376     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04377     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04378     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04379         \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04380         advance += delta;}
-\DoxyCodeLine{04381     \}}
-\DoxyCodeLine{04382 \}}
+\DoxyCodeLine{04386                                                    \{}
+\DoxyCodeLine{04387     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04388     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04389     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04390         \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04391         advance += delta;}
+\DoxyCodeLine{04392     \}}
+\DoxyCodeLine{04393 \}}
 
 \end{DoxyCode}
 
@@ -8934,18 +8977,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04353}{4353}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04364}{4364}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04354                                               \{}
-\DoxyCodeLine{04355     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04356     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04357     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04358         \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04359         advance += delta;}
-\DoxyCodeLine{04360     \}}
-\DoxyCodeLine{04361 \}}
+\DoxyCodeLine{04365                                               \{}
+\DoxyCodeLine{04366     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04367     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04368     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04369         \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04370         advance += delta;}
+\DoxyCodeLine{04371     \}}
+\DoxyCodeLine{04372 \}}
 
 \end{DoxyCode}
 
@@ -8974,18 +9017,18 @@ This function will add a range of data points to a vector data structure that st
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04311}{4311}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04322}{4322}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04312                                                 \{}
-\DoxyCodeLine{04313     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
-\DoxyCodeLine{04314     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} advance = start;}
-\DoxyCodeLine{04315     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
-\DoxyCodeLine{04316         \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, advance, vec-\/>active\_length);}
-\DoxyCodeLine{04317         advance += delta;}
-\DoxyCodeLine{04318     \}}
-\DoxyCodeLine{04319 \}}
+\DoxyCodeLine{04323                                                 \{}
+\DoxyCodeLine{04324     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} num = (end -\/ start) / delta;}
+\DoxyCodeLine{04325     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} advance = start;}
+\DoxyCodeLine{04326     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num + 1; i++) \{}
+\DoxyCodeLine{04327         \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, advance, vec-\/>active\_length);}
+\DoxyCodeLine{04328         advance += delta;}
+\DoxyCodeLine{04329     \}}
+\DoxyCodeLine{04330 \}}
 
 \end{DoxyCode}
 
@@ -9014,18 +9057,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l05011}{5011}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l05022}{5022}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{05011                                                           \{}
-\DoxyCodeLine{05012     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{05013     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{05014         j = \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{05015         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{05016     \}}
-\DoxyCodeLine{05017     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{05018 \}}
+\DoxyCodeLine{05022                                                           \{}
+\DoxyCodeLine{05023     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{05024     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{05025         j = \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{05026         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{05027     \}}
+\DoxyCodeLine{05028     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{05029 \}}
 
 \end{DoxyCode}
 
@@ -9054,18 +9097,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l05021}{5021}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l05032}{5032}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{05021                                                           \{}
-\DoxyCodeLine{05022     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{05023     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{05024         j = \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{05025         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{05026     \}}
-\DoxyCodeLine{05027     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{05028 \}}
+\DoxyCodeLine{05032                                                           \{}
+\DoxyCodeLine{05033     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{05034     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{05035         j = \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{05036         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{05037     \}}
+\DoxyCodeLine{05038     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{05039 \}}
 
 \end{DoxyCode}
 
@@ -9094,18 +9137,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04991}{4991}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l05002}{5002}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04991                                                               \{}
-\DoxyCodeLine{04992     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04993     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04994         j = \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04995         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04996     \}}
-\DoxyCodeLine{04997     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04998 \}}
+\DoxyCodeLine{05002                                                               \{}
+\DoxyCodeLine{05003     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{05004     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{05005         j = \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{05006         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{05007     \}}
+\DoxyCodeLine{05008     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{05009 \}}
 
 \end{DoxyCode}
 
@@ -9134,18 +9177,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04981}{4981}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04992}{4992}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04981                                                            \{}
-\DoxyCodeLine{04982     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04983     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04984         j = \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04985         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04986     \}}
-\DoxyCodeLine{04987     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04988 \}}
+\DoxyCodeLine{04992                                                            \{}
+\DoxyCodeLine{04993     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04994     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04995         j = \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04996         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04997     \}}
+\DoxyCodeLine{04998     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04999 \}}
 
 \end{DoxyCode}
 
@@ -9174,18 +9217,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04921}{4921}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04932}{4932}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04921                                                        \{}
-\DoxyCodeLine{04922     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04923     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04924         j = \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04925         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04926     \}}
-\DoxyCodeLine{04927     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04928 \}}
+\DoxyCodeLine{04932                                                        \{}
+\DoxyCodeLine{04933     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04934     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04935         j = \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04936         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04937     \}}
+\DoxyCodeLine{04938     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04939 \}}
 
 \end{DoxyCode}
 
@@ -9214,18 +9257,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l05001}{5001}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l05012}{5012}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{05001                                                                      \{}
-\DoxyCodeLine{05002     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{05003     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{05004         j = \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{05005         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{05006     \}}
-\DoxyCodeLine{05007     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{05008 \}}
+\DoxyCodeLine{05012                                                                      \{}
+\DoxyCodeLine{05013     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{05014     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{05015         j = \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{05016         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{05017     \}}
+\DoxyCodeLine{05018     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{05019 \}}
 
 \end{DoxyCode}
 
@@ -9254,18 +9297,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04961}{4961}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04972}{4972}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04961                                                                      \{}
-\DoxyCodeLine{04962     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04963     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04964         j = \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04965         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04966     \}}
-\DoxyCodeLine{04967     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04968 \}}
+\DoxyCodeLine{04972                                                                      \{}
+\DoxyCodeLine{04973     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04974     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04975         j = \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04976         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04977     \}}
+\DoxyCodeLine{04978     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04979 \}}
 
 \end{DoxyCode}
 
@@ -9294,18 +9337,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04941}{4941}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04952}{4952}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04941                                                               \{}
-\DoxyCodeLine{04942     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04943     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04944         j = \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04945         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04946     \}}
-\DoxyCodeLine{04947     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04948 \}}
+\DoxyCodeLine{04952                                                               \{}
+\DoxyCodeLine{04953     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04954     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04955         j = \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04956         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04957     \}}
+\DoxyCodeLine{04958     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04959 \}}
 
 \end{DoxyCode}
 
@@ -9334,18 +9377,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04901}{4901}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04912}{4912}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04901                                                                  \{}
-\DoxyCodeLine{04902     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04903     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04904         j = \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04905         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04906     \}}
-\DoxyCodeLine{04907     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04908 \}}
+\DoxyCodeLine{04912                                                                  \{}
+\DoxyCodeLine{04913     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04914     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04915         j = \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04916         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04917     \}}
+\DoxyCodeLine{04918     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04919 \}}
 
 \end{DoxyCode}
 
@@ -9374,18 +9417,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l05041}{5041}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l05052}{5052}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{05041                                                                \{}
-\DoxyCodeLine{05042     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{05043     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{05044         j = \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(vec, value, vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
-\DoxyCodeLine{05045         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{05046     \}}
-\DoxyCodeLine{05047     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{05048 \}}
+\DoxyCodeLine{05052                                                                \{}
+\DoxyCodeLine{05053     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{05054     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{05055         j = \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(vec, value, vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
+\DoxyCodeLine{05056         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{05057     \}}
+\DoxyCodeLine{05058     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{05059 \}}
 
 \end{DoxyCode}
 
@@ -9414,18 +9457,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l05031}{5031}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l05042}{5042}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{05031                                                                      \{}
-\DoxyCodeLine{05032     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{05033     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{05034         j = \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{05035         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{05036     \}}
-\DoxyCodeLine{05037     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{05038 \}}
+\DoxyCodeLine{05042                                                                      \{}
+\DoxyCodeLine{05043     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{05044     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{05045         j = \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{05046         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{05047     \}}
+\DoxyCodeLine{05048     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{05049 \}}
 
 \end{DoxyCode}
 
@@ -9454,18 +9497,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04931}{4931}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04942}{4942}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04931                                                                   \{}
-\DoxyCodeLine{04932     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04933     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04934         j = \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04935         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04936     \}}
-\DoxyCodeLine{04937     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04938 \}}
+\DoxyCodeLine{04942                                                                   \{}
+\DoxyCodeLine{04943     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04944     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04945         j = \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04946         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04947     \}}
+\DoxyCodeLine{04948     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04949 \}}
 
 \end{DoxyCode}
 
@@ -9494,18 +9537,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04971}{4971}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04982}{4982}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04971                                                                                 \{}
-\DoxyCodeLine{04972     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04973     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04974         j = \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04975         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04976     \}}
-\DoxyCodeLine{04977     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04978 \}}
+\DoxyCodeLine{04982                                                                                 \{}
+\DoxyCodeLine{04983     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04984     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04985         j = \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04986         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04987     \}}
+\DoxyCodeLine{04988     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04989 \}}
 
 \end{DoxyCode}
 
@@ -9534,18 +9577,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04951}{4951}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04962}{4962}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04951                                                                          \{}
-\DoxyCodeLine{04952     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04953     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04954         j = \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04955         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04956     \}}
-\DoxyCodeLine{04957     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04958 \}}
+\DoxyCodeLine{04962                                                                          \{}
+\DoxyCodeLine{04963     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04964     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04965         j = \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04966         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04967     \}}
+\DoxyCodeLine{04968     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04969 \}}
 
 \end{DoxyCode}
 
@@ -9574,18 +9617,18 @@ This function will repeat a user defined value in a vector or array data structu
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04911}{4911}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04922}{4922}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04911                                                                             \{}
-\DoxyCodeLine{04912     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{04913     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{04914         j = \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{04915         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04916     \}}
-\DoxyCodeLine{04917     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04918 \}}
+\DoxyCodeLine{04922                                                                             \{}
+\DoxyCodeLine{04923     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{04924     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{04925         j = \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{04926         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04927     \}}
+\DoxyCodeLine{04928     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04929 \}}
 
 \end{DoxyCode}
 
@@ -9616,18 +9659,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04879}{4879}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04890}{4890}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04879                                                                        \{}
-\DoxyCodeLine{04880     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04881         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04882         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04883     \}}
-\DoxyCodeLine{04884     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04885     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04886 \}}
+\DoxyCodeLine{04890                                                                        \{}
+\DoxyCodeLine{04891     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04892         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04893         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04894     \}}
+\DoxyCodeLine{04895     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04896     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04897 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ab345b0d10cef3cb87e552791440398e9}\label{vector_8h_ab345b0d10cef3cb87e552791440398e9}} 
@@ -9692,18 +9735,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04859}{4859}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04870}{4870}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04859                                                                        \{}
-\DoxyCodeLine{04860     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04861         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04862         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04863     \}}
-\DoxyCodeLine{04864     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04865     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04866 \}}
+\DoxyCodeLine{04870                                                                        \{}
+\DoxyCodeLine{04871     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04872         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04873         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04874     \}}
+\DoxyCodeLine{04875     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04876     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04877 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a8b7c3baf36c7ef6deca8011f2d622119}\label{vector_8h_a8b7c3baf36c7ef6deca8011f2d622119}} 
@@ -9768,18 +9811,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04839}{4839}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04850}{4850}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04839                                                                            \{}
-\DoxyCodeLine{04840     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04841         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04842         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04843     \}}
-\DoxyCodeLine{04844     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04845     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04846 \}}
+\DoxyCodeLine{04850                                                                            \{}
+\DoxyCodeLine{04851     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04852         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04853         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04854     \}}
+\DoxyCodeLine{04855     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04856     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04857 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a141f86441673f219db9af026644dee3e}\label{vector_8h_a141f86441673f219db9af026644dee3e}} 
@@ -9844,18 +9887,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04829}{4829}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04840}{4840}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04829                                                                         \{}
-\DoxyCodeLine{04830     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04831         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04832         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04833     \}}
-\DoxyCodeLine{04834     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04835     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04836 \}}
+\DoxyCodeLine{04840                                                                         \{}
+\DoxyCodeLine{04841     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04842         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04843         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04844     \}}
+\DoxyCodeLine{04845     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04846     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04847 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_aafe1e760a31236df3e8d9b5d4fedf79e}\label{vector_8h_aafe1e760a31236df3e8d9b5d4fedf79e}} 
@@ -9920,18 +9963,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04769}{4769}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04780}{4780}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04769                                                                     \{}
-\DoxyCodeLine{04770     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04771         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04772         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04773     \}}
-\DoxyCodeLine{04774     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04775     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04776 \}}
+\DoxyCodeLine{04780                                                                     \{}
+\DoxyCodeLine{04781     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04782         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04783         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04784     \}}
+\DoxyCodeLine{04785     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04786     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04787 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a7670474ec5b862ec981a62daa995aa3b}\label{vector_8h_a7670474ec5b862ec981a62daa995aa3b}} 
@@ -9996,18 +10039,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04849}{4849}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04860}{4860}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04849                                                                                   \{}
-\DoxyCodeLine{04850     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04851         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04852         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04853     \}}
-\DoxyCodeLine{04854     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04855     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04856 \}}
+\DoxyCodeLine{04860                                                                                   \{}
+\DoxyCodeLine{04861     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04862         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04863         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04864     \}}
+\DoxyCodeLine{04865     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04866     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04867 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a344c029c451a00a0a90e20b34569db22}\label{vector_8h_a344c029c451a00a0a90e20b34569db22}} 
@@ -10072,18 +10115,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04809}{4809}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04820}{4820}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04809                                                                                   \{}
-\DoxyCodeLine{04810     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04811         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04812         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04813     \}}
-\DoxyCodeLine{04814     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04815     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04816 \}}
+\DoxyCodeLine{04820                                                                                   \{}
+\DoxyCodeLine{04821     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04822         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04823         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04824     \}}
+\DoxyCodeLine{04825     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04826     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04827 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a6fbef65375cd1143dadb2045d4a4cc82}\label{vector_8h_a6fbef65375cd1143dadb2045d4a4cc82}} 
@@ -10148,18 +10191,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04789}{4789}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04800}{4800}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04789                                                                            \{}
-\DoxyCodeLine{04790     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04791         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04792         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04793     \}}
-\DoxyCodeLine{04794     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04795     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04796 \}}
+\DoxyCodeLine{04800                                                                            \{}
+\DoxyCodeLine{04801     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04802         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04803         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04804     \}}
+\DoxyCodeLine{04805     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04806     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04807 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a8f344f297fe759011551c5f2bb5e0161}\label{vector_8h_a8f344f297fe759011551c5f2bb5e0161}} 
@@ -10224,18 +10267,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04749}{4749}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04760}{4760}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04749                                                                               \{}
-\DoxyCodeLine{04750     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04751         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04752         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04753     \}}
-\DoxyCodeLine{04754     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04755     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04756 \}}
+\DoxyCodeLine{04760                                                                               \{}
+\DoxyCodeLine{04761     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04762         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04763         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04764     \}}
+\DoxyCodeLine{04765     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04766     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04767 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a6f10b6c383f01d0f64ccdbedcbf2f9c6}\label{vector_8h_a6f10b6c383f01d0f64ccdbedcbf2f9c6}} 
@@ -10302,18 +10345,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04889}{4889}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04900}{4900}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04889                                                                             \{}
-\DoxyCodeLine{04890     \textcolor{keywordflow}{if} (index > vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}} || index < 0) \{}
-\DoxyCodeLine{04891         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04892         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04893     \}}
-\DoxyCodeLine{04894     vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index] = new\_value;}
-\DoxyCodeLine{04895     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04896 \}}
+\DoxyCodeLine{04900                                                                             \{}
+\DoxyCodeLine{04901     \textcolor{keywordflow}{if} (index > vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}} || index < 0) \{}
+\DoxyCodeLine{04902         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04903         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04904     \}}
+\DoxyCodeLine{04905     vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index] = new\_value;}
+\DoxyCodeLine{04906     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04907 \}}
 
 \end{DoxyCode}
 
@@ -10390,18 +10433,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04869}{4869}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04880}{4880}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04869                                                                                   \{}
-\DoxyCodeLine{04870     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04871         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04872         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04873     \}}
-\DoxyCodeLine{04874     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04875     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04876 \}}
+\DoxyCodeLine{04880                                                                                   \{}
+\DoxyCodeLine{04881     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04882         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04883         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04884     \}}
+\DoxyCodeLine{04885     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04886     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04887 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a8b8b55713c6eeeba3f8bb8fbbb08ad10}\label{vector_8h_a8b8b55713c6eeeba3f8bb8fbbb08ad10}} 
@@ -10466,18 +10509,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04779}{4779}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04790}{4790}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04779                                                                                \{}
-\DoxyCodeLine{04780     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04781         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04782         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04783     \}}
-\DoxyCodeLine{04784     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04785     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04786 \}}
+\DoxyCodeLine{04790                                                                                \{}
+\DoxyCodeLine{04791     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04792         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04793         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04794     \}}
+\DoxyCodeLine{04795     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04796     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04797 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a9d98a8399e52f97b6771d676b3919319}\label{vector_8h_a9d98a8399e52f97b6771d676b3919319}} 
@@ -10542,18 +10585,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04819}{4819}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04830}{4830}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04819                                                                                              \{}
-\DoxyCodeLine{04820     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04821         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04822         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04823     \}}
-\DoxyCodeLine{04824     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04825     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04826 \}}
+\DoxyCodeLine{04830                                                                                              \{}
+\DoxyCodeLine{04831     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04832         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04833         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04834     \}}
+\DoxyCodeLine{04835     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04836     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04837 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_acdb36a4f7fabea5ff887469c25bcaac3}\label{vector_8h_acdb36a4f7fabea5ff887469c25bcaac3}} 
@@ -10618,18 +10661,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04799}{4799}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04810}{4810}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04799                                                                                       \{}
-\DoxyCodeLine{04800     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04801         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04802         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04803     \}}
-\DoxyCodeLine{04804     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04805     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04806 \}}
+\DoxyCodeLine{04810                                                                                       \{}
+\DoxyCodeLine{04811     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04812         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04813         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04814     \}}
+\DoxyCodeLine{04815     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04816     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04817 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a3354495712d1e3910ca4e6a33ee1c1df}\label{vector_8h_a3354495712d1e3910ca4e6a33ee1c1df}} 
@@ -10694,18 +10737,18 @@ This function will replace the value of a vector or array at a user specified in
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04759}{4759}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04770}{4770}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04759                                                                                          \{}
-\DoxyCodeLine{04760     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{04761         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04762         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{04763     \}}
-\DoxyCodeLine{04764     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{04765     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{04766 \}}
+\DoxyCodeLine{04770                                                                                          \{}
+\DoxyCodeLine{04771     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{04772         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04773         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{04774     \}}
+\DoxyCodeLine{04775     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{04776     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{04777 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a879f3876d14b47d940dbe55a1eec452e}\label{vector_8h_a879f3876d14b47d940dbe55a1eec452e}} 
@@ -11421,11 +11464,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04419}{4419}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04430}{4430}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04419 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04430 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a68744cde4b7c17a0305d9cf512494a20}\label{vector_8h_a68744cde4b7c17a0305d9cf512494a20}} 
@@ -13353,11 +13396,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04458}{4458}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04469}{4469}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04458 \{ \textcolor{keywordflow}{return} vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index]; \}}
+\DoxyCodeLine{04469 \{ \textcolor{keywordflow}{return} vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index]; \}}
 
 \end{DoxyCode}
 
@@ -13907,20 +13950,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Bool 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04735}{4735}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04746}{4746}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04735                                  \{}
-\DoxyCodeLine{04736     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
-\DoxyCodeLine{04737     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04738     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04739         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04740     \}}
-\DoxyCodeLine{04741     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04742     vec-\/>array = ptr;}
-\DoxyCodeLine{04743     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04744 \}}
+\DoxyCodeLine{04746                                  \{}
+\DoxyCodeLine{04747     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{04748     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04749     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04750         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04751     \}}
+\DoxyCodeLine{04752     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04753     vec-\/>array = ptr;}
+\DoxyCodeLine{04754     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04755 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a4e9cace11cfb849b013d15d09053b0bb}\label{vector_8h_a4e9cace11cfb849b013d15d09053b0bb}} 
@@ -13933,20 +13976,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Char 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04711}{4711}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04722}{4722}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04711                                  \{}
-\DoxyCodeLine{04712     \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
-\DoxyCodeLine{04713     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04714     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04715         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04716     \}}
-\DoxyCodeLine{04717     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04718     vec-\/>array = ptr;}
-\DoxyCodeLine{04719     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04720 \}}
+\DoxyCodeLine{04722                                  \{}
+\DoxyCodeLine{04723     \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{04724     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04725     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04726         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04727     \}}
+\DoxyCodeLine{04728     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04729     vec-\/>array = ptr;}
+\DoxyCodeLine{04730     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04731 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a4a91fca62c49f8628e3efdc3713be344}\label{vector_8h_a4a91fca62c49f8628e3efdc3713be344}} 
@@ -13959,20 +14002,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Dble 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04687}{4687}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04698}{4698}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04687                                    \{}
-\DoxyCodeLine{04688     \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
-\DoxyCodeLine{04689     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04690     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04691         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04692     \}}
-\DoxyCodeLine{04693     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04694     vec-\/>array = ptr;}
-\DoxyCodeLine{04695     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04696 \}}
+\DoxyCodeLine{04698                                    \{}
+\DoxyCodeLine{04699     \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{04700     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04701     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04702         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04703     \}}
+\DoxyCodeLine{04704     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04705     vec-\/>array = ptr;}
+\DoxyCodeLine{04706     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04707 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a78d86f1a5dc7e8f980fecfb2f8d12395}\label{vector_8h_a78d86f1a5dc7e8f980fecfb2f8d12395}} 
@@ -13985,20 +14028,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Flt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04675}{4675}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04686}{4686}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04675                                  \{}
-\DoxyCodeLine{04676     \textcolor{keywordtype}{float} *ptr = (\textcolor{keywordtype}{float} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
-\DoxyCodeLine{04677     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04678     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04679         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04680     \}}
-\DoxyCodeLine{04681     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04682     vec-\/>array = ptr;}
-\DoxyCodeLine{04683     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04684 \}}
+\DoxyCodeLine{04686                                  \{}
+\DoxyCodeLine{04687     \textcolor{keywordtype}{float} *ptr = (\textcolor{keywordtype}{float} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{04688     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04689     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04690         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04691     \}}
+\DoxyCodeLine{04692     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04693     vec-\/>array = ptr;}
+\DoxyCodeLine{04694     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04695 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a1365d9e27b0080e8e48d9809987e0824}\label{vector_8h_a1365d9e27b0080e8e48d9809987e0824}} 
@@ -14011,20 +14054,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Int 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04603}{4603}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04614}{4614}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04603                                \{}
-\DoxyCodeLine{04604     \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{04605     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04606     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04607         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04608     \}}
-\DoxyCodeLine{04609     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04610     vec-\/>array = ptr;}
-\DoxyCodeLine{04611     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04612 \}}
+\DoxyCodeLine{04614                                \{}
+\DoxyCodeLine{04615     \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{04616     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04617     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04618         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04619     \}}
+\DoxyCodeLine{04620     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04621     vec-\/>array = ptr;}
+\DoxyCodeLine{04622     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04623 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a7a50f85d6a874afbfdf345ba35b8a62e}\label{vector_8h_a7a50f85d6a874afbfdf345ba35b8a62e}} 
@@ -14037,20 +14080,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type LDble 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04699}{4699}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04710}{4710}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04699                                      \{}
-\DoxyCodeLine{04700     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}));}
-\DoxyCodeLine{04701     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04702     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04703         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04704     \}}
-\DoxyCodeLine{04705     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04706     vec-\/>array = ptr;}
-\DoxyCodeLine{04707     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04708 \}}
+\DoxyCodeLine{04710                                      \{}
+\DoxyCodeLine{04711     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}));}
+\DoxyCodeLine{04712     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04713     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04714         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04715     \}}
+\DoxyCodeLine{04716     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04717     vec-\/>array = ptr;}
+\DoxyCodeLine{04718     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04719 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ad500a258d2da444ab4d9a0315a241ab9}\label{vector_8h_ad500a258d2da444ab4d9a0315a241ab9}} 
@@ -14063,20 +14106,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type LLInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04651}{4651}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04662}{4662}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04651                                    \{}
-\DoxyCodeLine{04652     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{04653     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04654     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04655         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04656     \}}
-\DoxyCodeLine{04657     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04658     vec-\/>array = ptr;}
-\DoxyCodeLine{04659     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04660 \}}
+\DoxyCodeLine{04662                                    \{}
+\DoxyCodeLine{04663     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04664     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04665     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04666         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04667     \}}
+\DoxyCodeLine{04668     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04669     vec-\/>array = ptr;}
+\DoxyCodeLine{04670     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04671 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a8e0993c9b72acdbb4eec8bdea1687fd2}\label{vector_8h_a8e0993c9b72acdbb4eec8bdea1687fd2}} 
@@ -14089,20 +14132,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type LInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04627}{4627}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04638}{4638}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04627                                  \{}
-\DoxyCodeLine{04628     \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long}));}
-\DoxyCodeLine{04629     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04630     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04631         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04632     \}}
-\DoxyCodeLine{04633     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04634     vec-\/>array = ptr;}
-\DoxyCodeLine{04635     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04636 \}}
+\DoxyCodeLine{04638                                  \{}
+\DoxyCodeLine{04639     \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04640     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04641     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04642         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04643     \}}
+\DoxyCodeLine{04644     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04645     vec-\/>array = ptr;}
+\DoxyCodeLine{04646     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04647 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_aeec337d3614f9c62cd652fee528e8f10}\label{vector_8h_aeec337d3614f9c62cd652fee528e8f10}} 
@@ -14115,20 +14158,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type Short 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04579}{4579}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04590}{4590}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04579                                    \{}
-\DoxyCodeLine{04580     \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));}
-\DoxyCodeLine{04581     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04582     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04583         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04584     \}}
-\DoxyCodeLine{04585     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04586     vec-\/>array = ptr;}
-\DoxyCodeLine{04587     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04588 \}}
+\DoxyCodeLine{04590                                    \{}
+\DoxyCodeLine{04591     \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));}
+\DoxyCodeLine{04592     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04593     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04594         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04595     \}}
+\DoxyCodeLine{04596     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04597     vec-\/>array = ptr;}
+\DoxyCodeLine{04598     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04599 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a03a2814037d5194b5c291edca0155ae9}\label{vector_8h_a03a2814037d5194b5c291edca0155ae9}} 
@@ -14141,20 +14184,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type UChar 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04723}{4723}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04734}{4734}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04723                                    \{}
-\DoxyCodeLine{04724     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));}
-\DoxyCodeLine{04725     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04726     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04727         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04728     \}}
-\DoxyCodeLine{04729     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04730     vec-\/>array = ptr;}
-\DoxyCodeLine{04731     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04732 \}}
+\DoxyCodeLine{04734                                    \{}
+\DoxyCodeLine{04735     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));}
+\DoxyCodeLine{04736     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04737     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04738         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04739     \}}
+\DoxyCodeLine{04740     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04741     vec-\/>array = ptr;}
+\DoxyCodeLine{04742     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04743 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_aafc05a4201bf2e5129655a7d4db8819c}\label{vector_8h_aafc05a4201bf2e5129655a7d4db8819c}} 
@@ -14167,20 +14210,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type UInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04615}{4615}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04626}{4626}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04615                                  \{}
-\DoxyCodeLine{04616     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
-\DoxyCodeLine{04617     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04618     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04619         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04620     \}}
-\DoxyCodeLine{04621     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04622     vec-\/>array = ptr;}
-\DoxyCodeLine{04623     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04624 \}}
+\DoxyCodeLine{04626                                  \{}
+\DoxyCodeLine{04627     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{04628     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04629     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04630         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04631     \}}
+\DoxyCodeLine{04632     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04633     vec-\/>array = ptr;}
+\DoxyCodeLine{04634     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04635 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_aa2e26e5c689daa0f13844939ead1e484}\label{vector_8h_aa2e26e5c689daa0f13844939ead1e484}} 
@@ -14193,20 +14236,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type ULLInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04663}{4663}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04674}{4674}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04663                                      \{}
-\DoxyCodeLine{04664     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{04665     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04666     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04667         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04668     \}}
-\DoxyCodeLine{04669     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04670     vec-\/>array = ptr;}
-\DoxyCodeLine{04671     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04672 \}}
+\DoxyCodeLine{04674                                      \{}
+\DoxyCodeLine{04675     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04676     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04677     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04678         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04679     \}}
+\DoxyCodeLine{04680     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04681     vec-\/>array = ptr;}
+\DoxyCodeLine{04682     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04683 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a2b44394f88268b15dfaf3640cb70f42f}\label{vector_8h_a2b44394f88268b15dfaf3640cb70f42f}} 
@@ -14219,20 +14262,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type ULInt 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04639}{4639}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04650}{4650}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04639                                    \{}
-\DoxyCodeLine{04640     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{04641     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04642     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04643         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04644     \}}
-\DoxyCodeLine{04645     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04646     vec-\/>array = ptr;}
-\DoxyCodeLine{04647     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04648 \}}
+\DoxyCodeLine{04650                                    \{}
+\DoxyCodeLine{04651     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{04652     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04653     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04654         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04655     \}}
+\DoxyCodeLine{04656     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04657     vec-\/>array = ptr;}
+\DoxyCodeLine{04658     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04659 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a394639166d53eacb53725cf548f596db}\label{vector_8h_a394639166d53eacb53725cf548f596db}} 
@@ -14245,20 +14288,20 @@ This function will resize the memory allocated to a dynamically allocated vector
 
 /param vec A vector struct of type UShort 
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04591}{4591}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04602}{4602}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04591                                      \{}
-\DoxyCodeLine{04592     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}));}
-\DoxyCodeLine{04593     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{04594     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{04595         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{04596     \}}
-\DoxyCodeLine{04597     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{04598     vec-\/>array = ptr;}
-\DoxyCodeLine{04599     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{04600 \}}
+\DoxyCodeLine{04602                                      \{}
+\DoxyCodeLine{04603     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}));}
+\DoxyCodeLine{04604     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{04605     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{04606         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{04607     \}}
+\DoxyCodeLine{04608     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{04609     vec-\/>array = ptr;}
+\DoxyCodeLine{04610     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{04611 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ac6172e0e9433875fa34c0faaf8647c6c}\label{vector_8h_ac6172e0e9433875fa34c0faaf8647c6c}} 
@@ -14284,11 +14327,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04428}{4428}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04439}{4439}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04428 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04439 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a401a9795be5292f8c20fb032218c4b1a}\label{vector_8h_a401a9795be5292f8c20fb032218c4b1a}} 
@@ -14314,11 +14357,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04440}{4440}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04451}{4451}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04440 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04451 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ae7aed886f0e33fc044d7d7bafcea088b}\label{vector_8h_ae7aed886f0e33fc044d7d7bafcea088b}} 
@@ -14344,11 +14387,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04434}{4434}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04445}{4445}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04434 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04445 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_ae64308782a33a82a606c6463d0511a19}\label{vector_8h_ae64308782a33a82a606c6463d0511a19}} 
@@ -14374,11 +14417,11 @@ This function will retireve the data from a user specified index in a vector or 
 \end{DoxyCode}
  
 
-Definition at line \mbox{\hyperlink{vector_8c_source_l04422}{4422}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
+Definition at line \mbox{\hyperlink{vector_8c_source_l04433}{4433}} of file \mbox{\hyperlink{vector_8c_source}{vector.\+c}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{04422 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{04433 \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{vector_8h_a2543513836c5661ccdd157851a7088b8}\label{vector_8h_a2543513836c5661ccdd157851a7088b8}} 

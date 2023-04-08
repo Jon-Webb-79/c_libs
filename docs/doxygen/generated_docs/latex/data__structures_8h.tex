@@ -34,6 +34,8 @@
 \#define \mbox{\hyperlink{data__structures_8h_a895002453bd9037c335520131a642372}{MAX}}(T)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_ab01356067636aa7d12aad9a9302f37a7}{MIN}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(T,  start,  end,  delta)
 \end{DoxyCompactItemize}
 
 
@@ -315,7 +317,7 @@ Definition at line \mbox{\hyperlink{data__structures_8h_source_l00508}{508}} of 
 \DoxyCodeLine{                              ULLInt: \mbox{\hyperlink{vector_8c_a10aea428d676da30abd474d11dbab300}{min\_ullong\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                              Flt: \mbox{\hyperlink{vector_8c_a37e7749c40c9ecefb35c6f677e6e2786}{min\_float\_vector}}, \(\backslash\)}
 \DoxyCodeLine{                              Dble: \mbox{\hyperlink{vector_8c_ac870c654ea8b8143650fb8504880d80a}{min\_double\_vector}}, \(\backslash\)}
-\DoxyCodeLine{                              LDble: \mbox{\hyperlink{vector_8h_af3eef7302375a05b37b3ae4e0d8251a8}{min\_ldouble\_vector}})(\&T)}
+\DoxyCodeLine{                              LDble: \mbox{\hyperlink{vector_8c_af3eef7302375a05b37b3ae4e0d8251a8}{min\_ldouble\_vector}})(\&T)}
 
 \end{DoxyCode}
 This macro will calculate the max value in a data structure
@@ -394,6 +396,46 @@ Definition at line \mbox{\hyperlink{data__structures_8h_source_l00185}{185}} of 
 
 
 Definition at line \mbox{\hyperlink{data__structures_8h_source_l00047}{47}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\mbox{\Hypertarget{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}\label{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}} 
+\index{data\_structures.h@{data\_structures.h}!RANGE@{RANGE}}
+\index{RANGE@{RANGE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{RANGE}{RANGE}}
+{\footnotesize\ttfamily \#define RANGE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{start,  }\item[{}]{end,  }\item[{}]{delta }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   \_Generic( (T), Char: \mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UChar: \mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Short: \mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UShort: \mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Int: \mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   UInt: \mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LInt: \mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   ULInt: \mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LLInt: \mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{range\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   ULLInt: \mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Flt: \mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   Dble: \mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                                   LDble: \mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\_ldouble\_vector}})(\&T, start, end, delta)}
+
+\end{DoxyCode}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param start The start point /param end The end point /param The delta between data points
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(vec, 2, 20, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00574}{574}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
 
 \mbox{\Hypertarget{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}\label{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}} 
 \index{data\_structures.h@{data\_structures.h}!REPLACE\_VALUES@{REPLACE\_VALUES}}
