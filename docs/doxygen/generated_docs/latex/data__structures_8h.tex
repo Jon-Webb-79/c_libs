@@ -42,6 +42,8 @@
 \#define \mbox{\hyperlink{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2}{IDATA}}(T,  index)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}{REPLACE\+\_\+\+INDEX}}(T,  new\+\_\+val,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}{REPEAT}}(T,  val,  num)
 \end{DoxyCompactItemize}
 
 
@@ -530,6 +532,49 @@ This macro will insert a range of values between start and end into a data struc
  
 
 Definition at line \mbox{\hyperlink{data__structures_8h_source_l00574}{574}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\mbox{\Hypertarget{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}\label{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}} 
+\index{data\_structures.h@{data\_structures.h}!REPEAT@{REPEAT}}
+\index{REPEAT@{REPEAT}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REPEAT}{REPEAT}}
+{\footnotesize\ttfamily \#define REPEAT(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{val,  }\item[{}]{num }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           \_Generic( (T), UChar: \mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\_uchar\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           Short: \mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\_short\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           UShort: \mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\_ushort\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           Int: \mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\_int\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           UInt: \mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\_uint\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           LInt: \mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\_long\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           ULInt: \mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\_ulong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           LLInt: \mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\_llong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           ULLInt: \mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\_ullong\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           Flt: \mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\_float\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           Dble: \mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\_double\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           LDble: \mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\_ldouble\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           Char: \mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\_char\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           Bool: \mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\_bool\_vector}}, \(\backslash\)}
+\DoxyCodeLine{                                           \mbox{\hyperlink{structString}{String}}: \mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\_string\_vector}})(\&T, val, num)}
+
+\end{DoxyCode}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param val The value to be repeats /param num The number of times a value is repeats
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 10);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}{REPEAT}}(vec, 10, 5);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 10, 10, 10, 10, 10 ]}}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00717}{717}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
 
 \mbox{\Hypertarget{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}\label{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}} 
 \index{data\_structures.h@{data\_structures.h}!REPLACE\_INDEX@{REPLACE\_INDEX}}

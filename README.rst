@@ -577,8 +577,7 @@ that is out of bounds. **NOTE:** This does not work with the ``String`` data typ
 
 .. code-block:: c
 
-   #include <stdio.h>
-   #include "array_ops.h"
+   #include "data_structures.h"
    #include "print.h"
 
    Int vec;
@@ -588,6 +587,25 @@ that is out of bounds. **NOTE:** This does not work with the ``String`` data typ
    REPLACE_INDEX(vec, 10, 2)
    PRINT(vec);
    // >> [ 1, 2, 10, 4, 5 ]
+   FREE(vec);
+
+REPEAT
+======
+The ``REPEAT(dtype vec, type value, size_t num)`` macro and it associated functions will repeat a
+value a user defined number of times within a vector or array data structure.
+
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   INIT_VECTOR(vec, 15);
+   REPEAT(vec, 10, 5);
+   // same as repeat_float_vector(&vec, 10, 5);
+   PRINT(vec);
+   // >> [ 10, 10, 10, 10, 10 ]
    FREE(vec);
 
 =====

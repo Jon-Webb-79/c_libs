@@ -693,7 +693,42 @@
 									                    LDble: replace_ldouble_vector_index, \
 											            Char: replace_char_vector_index, \
 											            Bool: replace_bool_vector_index)(&T, new_val, index)
+// ==========================================================================================
+// ==========================================================================================
+// REPEAT MACRO
 
+/**
+ * This macro will insert a range of values between start and end into a data
+ * structure.
+ *
+ * /param T The data structure
+ * /param val The value to be repeats
+ * /param num The number of times a value is repeats
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 10);
+ * REPEAT(vec, 10, 5);
+ * PRINT(vec);
+ * // >> [ 10, 10, 10, 10, 10 ]
+ * FREE(vec);
+ * @endcode
+ */
+#define REPEAT(T, val, num) _Generic( (T), UChar: repeat_uchar_vector, \
+							               Short: repeat_short_vector, \
+							               UShort: repeat_ushort_vector, \
+									       Int: repeat_int_vector, \
+							               UInt: repeat_uint_vector, \
+									       LInt: repeat_long_vector, \
+									       ULInt: repeat_ulong_vector, \
+									       LLInt: repeat_llong_vector, \
+									       ULLInt: repeat_ullong_vector, \
+									       Flt: repeat_float_vector, \
+						                   Dble: repeat_double_vector, \
+									       LDble: repeat_ldouble_vector, \
+										   Char: repeat_char_vector, \
+										   Bool: repeat_bool_vector, \
+										   String: repeat_string_vector)(&T, val, num)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

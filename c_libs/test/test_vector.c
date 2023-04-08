@@ -3723,4 +3723,173 @@ void test_replace_index_bool_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST_REPEAT_TYPE_VEC FUNCTIONS
+
+void test_repeat_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(1, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1., 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_float_equal(1., vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_float_equal(1., vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, 1, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_float_equal(1., vec.array[i], 1.0e-3);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_bool_vec(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 20);
+	REPEAT(vec, true, 20);
+	for (size_t i = 0; i < 20; i++) {
+		assert_int_equal(true, vec.array[i]);
+	}
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_repeat_string_vec(void **state) {
+	String vec;
+	init_string_vector(&vec);
+	REPEAT(vec, "One", 20);
+	int cmp;
+	for (size_t i = 0; i < 20; i++) {
+		cmp = strcmp("One", vec.array[i]);
+		assert_int_equal(0, cmp);
+	}
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

@@ -368,6 +368,25 @@ void test_replace_index_float_vec(void **state);
 void test_replace_index_double_vec(void **state);
 void test_replace_index_ldouble_vec(void **state);
 void test_replace_index_bool_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST_REPEAT_TYPE_VEC FUNCTIONS
+
+void test_repeat_char_vec(void **state);
+void test_repeat_uchar_vec(void **state);
+void test_repeat_short_vec(void **state);
+void test_repeat_ushort_vec(void **state);
+void test_repeat_int_vec(void **state);
+void test_repeat_uint_vec(void **state);
+void test_repeat_long_vec(void **state);
+void test_repeat_ulong_vec(void **state);
+void test_repeat_llong_vec(void **state);
+void test_repeat_ullong_vec(void **state);
+void test_repeat_float_vec(void **state);
+void test_repeat_double_vec(void **state);
+void test_repeat_ldouble_vec(void **state);
+void test_repeat_bool_vec(void **state);
+void test_repeat_string_vec(void **state);
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================
