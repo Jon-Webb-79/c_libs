@@ -658,6 +658,41 @@
 									   String: string_vector_data)(&T, index)
 // ==========================================================================================
 // ==========================================================================================
+// REPLACE_INDEX
+
+/**
+ * This macro will insert a range of values between start and end into a data
+ * structure.
+ *
+ * /param T The data structure
+ * /param start The start point
+ * /param end The end point
+ * /param The delta between data points
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 10);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * INSERT(vec, a, 5, 0);
+ * REPLACE_INDEX(vec, 10, 2);
+ * PRINT(vec);
+ * // >> [ 1, 2, 10, 4, 5 ]
+ * @endcode
+ */
+#define REPLACE_INDEX(T, new_val, index) _Generic( (T), UChar: replace_uchar_vector_index, \
+							                            Short: replace_short_vector_index, \
+							                            UShort: replace_ushort_vector_index, \
+									                    Int: replace_int_vector_index, \
+							                            UInt: replace_uint_vector_index, \
+									                    LInt: replace_long_vector_index, \
+									                    ULInt: replace_ulong_vector_index, \
+									                    LLInt: replace_llong_vector_index, \
+									                    ULLInt: replace_ullong_vector_index, \
+									                    Flt: replace_float_vector_index, \
+						                                Dble: replace_double_vector_index, \
+									                    LDble: replace_ldouble_vector_index, \
+											            Char: replace_char_vector_index, \
+											            Bool: replace_bool_vector_index)(&T, new_val, index)
 
 #endif /* data_structures_H */
 // ==========================================================================================

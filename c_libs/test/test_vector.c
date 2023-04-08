@@ -3567,4 +3567,160 @@ void test_trim_bool_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST_REPLACE_TYPE_INDEX_VEC
+
+void test_replace_index_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10, 2);
+	assert_int_equal(10, vec.array[2]);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	float a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10., 2);
+	assert_float_equal(10., vec.array[2], 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10., 2);
+	assert_float_equal(10., vec.array[2], 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, 10., 2);
+	assert_float_equal(10., vec.array[2], 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_replace_index_bool_vec(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 5);
+	bool a[5] = {true, false, true, false, true};
+	INSERT(vec, a, 5, 0);
+	REPLACE_INDEX(vec, false, 2);
+	assert_int_equal(false, vec.array[2]);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

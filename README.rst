@@ -568,6 +568,28 @@ necessary size.
    // >> Final allocation: 4
    FREE(vec);
 
+REPLACE_INDEX
+=============
+The ``int = REPLACE_INDEX(dtype vec, type new_value, size_t index)`` is used to replace a value
+in a vector or array at a specified index.  While this can be achieved by other methods, this
+macro and its associated functions allow the method to fail nicely if the user enters an index
+that is out of bounds. **NOTE:** This does not work with the ``String`` data type.
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "array_ops.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 15);
+   int a[5] = {1, 2, 3, 4, 5}
+   INSERT(vec, a, 5, 0);
+   REPLACE_INDEX(vec, 10, 2)
+   PRINT(vec);
+   // >> [ 1, 2, 10, 4, 5 ]
+   FREE(vec);
+
 =====
 PRINT
 =====

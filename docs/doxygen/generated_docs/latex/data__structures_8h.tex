@@ -40,6 +40,8 @@
 \#define \mbox{\hyperlink{data__structures_8h_a0ba1f915ff0895a09d1dfe31f5c728f3}{COPY}}(T)
 \item 
 \#define \mbox{\hyperlink{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2}{IDATA}}(T,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}{REPLACE\+\_\+\+INDEX}}(T,  new\+\_\+val,  index)
 \end{DoxyCompactItemize}
 
 
@@ -528,6 +530,49 @@ This macro will insert a range of values between start and end into a data struc
  
 
 Definition at line \mbox{\hyperlink{data__structures_8h_source_l00574}{574}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\mbox{\Hypertarget{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}\label{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}} 
+\index{data\_structures.h@{data\_structures.h}!REPLACE\_INDEX@{REPLACE\_INDEX}}
+\index{REPLACE\_INDEX@{REPLACE\_INDEX}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REPLACE\_INDEX}{REPLACE\_INDEX}}
+{\footnotesize\ttfamily \#define REPLACE\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{new\+\_\+val,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                        \_Generic( (T), UChar: \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        Short: \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        UShort: \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        Int: \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        UInt: \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        LInt: \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        ULInt: \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        LLInt: \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        ULLInt: \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        Flt: \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        Dble: \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        LDble: \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        Char: \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}}, \(\backslash\)}
+\DoxyCodeLine{                                                        Bool: \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}})(\&T, new\_val, index)}
+
+\end{DoxyCode}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param start The start point /param end The end point /param The delta between data points
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}{REPLACE\_INDEX}}(vec, 10, 2);}
+\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4, 5 ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00682}{682}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
 
 \mbox{\Hypertarget{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}\label{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}} 
 \index{data\_structures.h@{data\_structures.h}!REPLACE\_VALUES@{REPLACE\_VALUES}}

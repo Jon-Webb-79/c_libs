@@ -350,7 +350,24 @@ void test_trim_float_vec(void **state);
 void test_trim_double_vec(void **state);
 void test_trim_ldouble_vec(void **state);
 void test_trim_bool_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST_REPLACE_TYPE_VECTOR FUNCTIONS
 
+void test_replace_index_char_vec(void **state);
+void test_replace_index_uchar_vec(void **state);
+void test_replace_index_short_vec(void **state);
+void test_replace_index_ushort_vec(void **state);
+void test_replace_index_int_vec(void **state);
+void test_replace_index_uint_vec(void **state);
+void test_replace_index_long_vec(void **state);
+void test_replace_index_ulong_vec(void **state);
+void test_replace_index_llong_vec(void **state);
+void test_replace_index_ullong_vec(void **state);
+void test_replace_index_float_vec(void **state);
+void test_replace_index_double_vec(void **state);
+void test_replace_index_ldouble_vec(void **state);
+void test_replace_index_bool_vec(void **state);
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================
