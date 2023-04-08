@@ -5630,6 +5630,27 @@ long double ldouble_vector_data(LDble *vec, size_t index);
  * @endcode
  */
 char char_vector_data(Char *vec, size_t index);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * vector or array of type UChar
+ *
+ * /param vec A linked list struct of type UChar
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * UChar vec;
+ * init_uchar_vector(&vec);
+ * unsigned char a[5] = {'a', 'b', 'c', 'd', 'e'};
+ * insert_uchar_vector(&vec, a, 5, 0);
+ * PRINT(uchar_vector_data(&vec, 2));
+ * // >> c
+ * free_uchar_vector(&vec);
+ * @endcode
+ */
+unsigned char uchar_vector_data(UChar *vec, size_t index);
 // --------------------------------------------------------------------------------
 
 /**

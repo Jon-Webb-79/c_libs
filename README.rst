@@ -524,6 +524,29 @@ The ``type = COPY(type vec)`` macro will produce a deep copy of a vector data st
    //      27.5, 30.0, 32.5, 35.0, 37.5 ]
    FREE(vec);
 
+IDATA
+=====
+The ``type = IDATA(dtype vec, size_t index)`` macro can be used to extract data from a specific index in the
+array.  The same functionality can be achieved via the ``array`` attribute; however, this macro provided
+commonality with other data structures.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   // Same as init_float_vector(&vec, 15);
+   INIT_VECTOR(vec, 15);
+   // Same as range_float_vector(&vec, 2.5, 37.5, 2.5);
+   RANGE(vec, 2.5, 37.5, 2.5);
+   // Same as float value = float_vector_data(&vec, 2);
+   float value = IDATA(vec, 2);
+   PRINT(value);
+   // >> 7.50000
+   // Can also be achieved with float value = vec.array[2];
+   FREE(vec);
+
 =====
 PRINT
 =====

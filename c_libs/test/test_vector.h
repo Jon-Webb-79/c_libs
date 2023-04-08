@@ -313,6 +313,26 @@ void test_copy_char_vec(void **state);
 void test_copy_uchar_vec(void **state);
 void test_copy_bool_vec(void **state);
 void test_copy_string_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST TYPE_VEC_DATA FUNCTIONS
+
+void test_char_vec_data(void **state);
+void test_uchar_vec_data(void **state);
+void test_short_vec_data(void **state);
+void test_ushort_vec_data(void **state);
+void test_int_vec_data(void **state);
+void test_uint_vec_data(void **state);
+void test_long_vec_data(void **state);
+void test_ulong_vec_data(void **state);
+void test_llong_vec_data(void **state);
+void test_ullong_vec_data(void **state);
+void test_float_vec_data(void **state);
+void test_double_vec_data(void **state);
+void test_ldouble_vec_data(void **state);
+void test_bool_vec_data(void **state);
+void test_string_vec_data(void **state);
+
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================

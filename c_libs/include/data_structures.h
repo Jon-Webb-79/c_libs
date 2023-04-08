@@ -619,7 +619,43 @@
 							   Char: copy_char_vector, \
 							   Bool: copy_bool_vector, \
 							   String: copy_string_vector)(&T)
+/// ==========================================================================================
+/// ==========================================================================================
+// IDATA MACRO
 
+/**
+ * This macro will insert a range of values between start and end into a data
+ * structure.
+ *
+ * /param T The data structure
+ * /param start The start point
+ * /param end The end point
+ * /param The delta between data points
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 10);
+ * RANGE(vec, 2, 20, 2);
+ * int a = IDATA(vec, 3);
+ * PRINT(a);
+ * // >> 8
+ * @endcode
+ */
+#define IDATA(T, index) _Generic( (T), Char: char_vector_data, \
+		                               UChar: uchar_vector_data, \
+							           Short: short_vector_data, \
+							           UShort: ushort_vector_data, \
+									   Int: int_vector_data, \
+							           UInt: uint_vector_data, \
+									   LInt: long_vector_data, \
+									   ULInt: ulong_vector_data, \
+									   LLInt: llong_vector_data, \
+									   ULLInt: ullong_vector_data, \
+									   Flt: float_vector_data, \
+						               Dble: double_vector_data, \
+									   LDble: ldouble_vector_data, \
+									   Bool: bool_vector_data, \
+									   String: string_vector_data)(&T, index)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

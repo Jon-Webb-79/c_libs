@@ -3244,4 +3244,171 @@ void test_copy_string_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+
+void test_char_vec_data(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+    char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	char b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_uchar_vec_data(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+    unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned char b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_short_vec_data(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+    short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	short int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ushort_vec_data(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+    unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned short int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_int_vec_data(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+    int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_uint_vec_data(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+    unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_long_vec_data(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+    long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ulong_vec_data(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+    unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned long int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_llong_vec_data(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+    long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long long int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ullong_vec_data(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+    unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned long long int b = IDATA(vec, 2);
+	assert_int_equal(b, 3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_float_vec_data(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+    float a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	float b = IDATA(vec, 2);
+	assert_float_equal(b, 3.f, 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_double_vec_data(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+    double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	double b = IDATA(vec, 2);
+	assert_float_equal(b, 3., 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ldouble_vec_data(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+    long double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	long double b = IDATA(vec, 2);
+	assert_float_equal(b, 3., 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_bool_vec_data(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 5);
+    bool a[5] = {true, true, false, false, true};
+	INSERT(vec, a, 5, 0);
+	bool b = IDATA(vec, 2);
+	assert_int_equal(b, false);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_string_vec_data(void **state) {
+	String vec;
+	init_string_vector(&vec);
+    char *a[5] = {"One",  "Two", "Three", "Four", "Five"};
+	INSERT(vec, a, 5, 0);
+	char *b = IDATA(vec, 2);
+	int cmp = strcmp(b, "Three");
+	assert_int_equal(cmp, 0);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

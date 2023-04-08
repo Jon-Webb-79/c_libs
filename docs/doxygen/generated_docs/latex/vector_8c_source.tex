@@ -4464,604 +4464,615 @@
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04461}04461 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04462}04462 }
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04463}\mbox{\hyperlink{vector_8c_aa99d3902c062bd4e5e31b85ccd8867bb}{04463}} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_aa99d3902c062bd4e5e31b85ccd8867bb}{char\_vector\_data}}(Char *vec, \textcolor{keywordtype}{size\_t} index) \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04464}04464 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04464}04464 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04465}04465 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04466}\mbox{\hyperlink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{04466}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{bool\_vector\_data}}(Bool *vec, \textcolor{keywordtype}{size\_t} index) \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04466}\mbox{\hyperlink{vector_8c_a5ec8248dfe94805dce29484cf23b9db5}{04466}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{vector_8c_a5ec8248dfe94805dce29484cf23b9db5}{uchar\_vector\_data}}(UChar *vec, \textcolor{keywordtype}{size\_t} index) \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04467}04467 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{vector_8c_source_l04468}04468 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04469}\mbox{\hyperlink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{04469}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{string\_vector\_data}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{size\_t} index) \{ \textcolor{keywordflow}{return} vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index]; \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04470}04470 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04471}04471 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04472}04472 \textcolor{comment}{// COPY\_TYPE\_VECTOR FUNCTIONS}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04473}04473 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04474}\mbox{\hyperlink{vector_8c_ab88c9075f7ac94dd8656a8eec4a14a94}{04474}} Short \mbox{\hyperlink{vector_8c_ab88c9075f7ac94dd8656a8eec4a14a94}{copy\_short\_vector}}(Short *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04475}04475     Short new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04476}04476     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04477}04477     \mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04478}04478     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04479}04479 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04480}04480 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04481}04481 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04482}\mbox{\hyperlink{vector_8c_af70602cee86af9597513bc67b2878244}{04482}} UShort \mbox{\hyperlink{vector_8c_af70602cee86af9597513bc67b2878244}{copy\_ushort\_vector}}(UShort *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04483}04483     UShort new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04484}04484     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04485}04485     \mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04486}04486     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04487}04487 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04488}04488 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04489}04489 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04490}\mbox{\hyperlink{vector_8c_a5fd73621c9da27949814495f00a3296f}{04490}} Int \mbox{\hyperlink{vector_8c_a5fd73621c9da27949814495f00a3296f}{copy\_int\_vector}}(Int *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04491}04491     Int new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04492}04492     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04493}04493     \mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04494}04494     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04495}04495 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04496}04496 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04497}04497 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04498}\mbox{\hyperlink{vector_8c_a6bf7c67135858a07103fff23436b7d77}{04498}} UInt \mbox{\hyperlink{vector_8c_a6bf7c67135858a07103fff23436b7d77}{copy\_uint\_vector}}(UInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04499}04499     UInt new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04500}04500     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04501}04501     \mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04502}04502     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04503}04503 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04504}04504 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04505}04505 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04506}\mbox{\hyperlink{vector_8c_abc614587816c37e5dfd70c2a832da165}{04506}} LInt \mbox{\hyperlink{vector_8c_abc614587816c37e5dfd70c2a832da165}{copy\_long\_vector}}(LInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04507}04507     LInt new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04508}04508     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04509}04509     \mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04510}04510     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04511}04511 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04512}04512 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04513}04513 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04514}\mbox{\hyperlink{vector_8c_a31f85f1454385a608eebc7d150417b7c}{04514}} ULInt \mbox{\hyperlink{vector_8c_a31f85f1454385a608eebc7d150417b7c}{copy\_ulong\_vector}}(ULInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04515}04515     ULInt new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04516}04516     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04517}04517     \mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04518}04518     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04519}04519 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04520}04520 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04521}04521 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04522}\mbox{\hyperlink{vector_8c_a2a8c6a77d383c5251686fc600c829005}{04522}} LLInt \mbox{\hyperlink{vector_8c_a2a8c6a77d383c5251686fc600c829005}{copy\_llong\_vector}}(LLInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04523}04523     LLInt new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04524}04524     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04525}04525     \mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04526}04526     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04527}04527 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04528}04528 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04529}04529 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04530}\mbox{\hyperlink{vector_8c_abe7076983c8f386b305b615137dcd249}{04530}} ULLInt \mbox{\hyperlink{vector_8c_abe7076983c8f386b305b615137dcd249}{copy\_ullong\_vector}}(ULLInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04531}04531     ULLInt new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04532}04532     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04533}04533     \mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04534}04534     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04535}04535 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04536}04536 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04537}04537 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04538}\mbox{\hyperlink{vector_8c_a440353dc4ac989fb88b34e7f5649dd05}{04538}} Flt \mbox{\hyperlink{vector_8c_a440353dc4ac989fb88b34e7f5649dd05}{copy\_float\_vector}}(Flt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04539}04539     Flt new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04540}04540     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04541}04541     \mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04542}04542     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04543}04543 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04544}04544 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04545}04545 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04546}\mbox{\hyperlink{vector_8c_a2d51a8a92a5c0e73345ade59b126ff35}{04546}} Dble \mbox{\hyperlink{vector_8c_a2d51a8a92a5c0e73345ade59b126ff35}{copy\_double\_vector}}(Dble *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04547}04547     Dble new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04548}04548     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04549}04549     \mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04550}04550     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04551}04551 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04552}04552 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04553}04553 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04554}\mbox{\hyperlink{vector_8c_a3fa3120b9c06e25fc840f90c7e10c5a6}{04554}} LDble \mbox{\hyperlink{vector_8c_a3fa3120b9c06e25fc840f90c7e10c5a6}{copy\_ldouble\_vector}}(LDble *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04555}04555     LDble new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04556}04556     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04557}04557     \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04558}04558     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04559}04559 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04560}04560 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04561}04561 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04562}\mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{04562}} Char \mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{copy\_char\_vector}}(Char *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04563}04563     Char new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04564}04564     \mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04565}04565     \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04566}04566     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04567}04567 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04568}04568 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04569}04569 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04570}\mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{04570}} Bool \mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{copy\_bool\_vector}}(Bool *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04571}04571     Bool new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04572}04572     \mbox{\hyperlink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(\&new\_vec, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04573}04573     \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04574}04574     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04575}04575 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04576}04576 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04577}04577 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04578}\mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{04578}} \mbox{\hyperlink{structString}{String}} \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\_string\_vector}}(\mbox{\hyperlink{structString}{String}} *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04579}04579     \mbox{\hyperlink{structString}{String}} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04580}04580     \mbox{\hyperlink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\&new\_vec);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04581}04581     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}}; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04582}04582         \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&new\_vec, vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[i], new\_vec.\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04583}04583     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04584}04584     \textcolor{keywordflow}{return} new\_vec;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04585}04585 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04586}04586 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04587}04587 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04588}04588 \textcolor{comment}{// TRIM\_TYPE\_VECTOR FUNCTIONS}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04589}04589 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04590}\mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{04590}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{trim\_short\_vector}}(Short *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04591}04591     \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04592}04592     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04593}04593     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04594}04594         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04595}04595     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04596}04596     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04597}04597     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04598}04598     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04599}04599 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04600}04600 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04601}04601 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04602}\mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{04602}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{trim\_ushort\_vector}}(UShort *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04603}04603     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04604}04604     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04605}04605     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04606}04606         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04607}04607     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04608}04608     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04609}04609     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04610}04610     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04611}04611 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04612}04612 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04613}04613 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04614}\mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{04614}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{trim\_int\_vector}}(Int *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04615}04615     \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04616}04616     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04617}04617     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04618}04618         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04619}04619     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04620}04620     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04621}04621     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04622}04622     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04623}04623 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04624}04624 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04625}04625 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04626}\mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{04626}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{trim\_uint\_vector}}(UInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04627}04627     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04628}04628     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04629}04629     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04630}04630         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04631}04631     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04632}04632     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04633}04633     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04634}04634     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04635}04635 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04636}04636 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04637}04637 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04638}\mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{04638}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{trim\_long\_vector}}(LInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04639}04639     \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04640}04640     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04641}04641     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04642}04642         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04643}04643     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04644}04644     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04645}04645     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04646}04646     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04647}04647 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04648}04648 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04649}04649 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04650}\mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{04650}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{trim\_ulong\_vector}}(ULInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04651}04651     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04652}04652     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04653}04653     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04654}04654         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04655}04655     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04656}04656     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04657}04657     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04658}04658     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04659}04659 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04660}04660 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04661}04661 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04662}\mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{04662}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{trim\_llong\_vector}}(LLInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04663}04663     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04664}04664     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04665}04665     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04666}04666         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04667}04667     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04668}04668     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04669}04669     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04670}04670     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04671}04671 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04672}04672 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04673}04673 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04674}\mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{04674}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{trim\_ullong\_vector}}(ULLInt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04675}04675     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04676}04676     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04677}04677     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04678}04678         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04679}04679     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04680}04680     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04681}04681     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04682}04682     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04683}04683 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04684}04684 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04685}04685 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04686}\mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{04686}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{trim\_float\_vector}}(Flt *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04687}04687     \textcolor{keywordtype}{float} *ptr = (\textcolor{keywordtype}{float} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04688}04688     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04689}04689     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04690}04690         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04691}04691     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04692}04692     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04693}04693     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04694}04694     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04695}04695 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04696}04696 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04697}04697 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04698}\mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{04698}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{trim\_double\_vector}}(Dble *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04699}04699     \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04700}04700     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04701}04701     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04702}04702         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04703}04703     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04704}04704     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04705}04705     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04706}04706     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04707}04707 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04708}04708 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04709}04709 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04710}\mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{04710}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\_ldouble\_vector}}(LDble *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04711}04711     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04712}04712     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04713}04713     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04714}04714         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04715}04715     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04716}04716     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04717}04717     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04718}04718     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04719}04719 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04720}04720 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04721}04721 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04722}\mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{04722}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{trim\_char\_vector}}(Char *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04723}04723     \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04724}04724     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04725}04725     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04726}04726         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04727}04727     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04728}04728     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04729}04729     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04730}04730     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04731}04731 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04732}04732 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04733}04733 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04734}\mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{04734}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{trim\_uchar\_vector}}(UChar *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04735}04735     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04736}04736     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04737}04737     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04738}04738         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04739}04739     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04740}04740     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04741}04741     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04742}04742     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04743}04743 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04744}04744 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04745}04745 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04746}\mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{04746}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04747}04747     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04748}04748     \textcolor{comment}{// Verify that sufficient memory exists}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04749}04749     \textcolor{keywordflow}{if} (ptr == NULL) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04750}04750         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04751}04751     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04752}04752     \textcolor{comment}{// allocate memory}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04753}04753     vec-\/>array = ptr;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04754}04754     vec-\/>allocated\_length = vec-\/>active\_length;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04755}04755 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04756}04756 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04757}04757 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04758}04758 \textcolor{comment}{// REPLACE\_TYPE\_VECTOR\_INDEX}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04759}04759 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04760}\mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{04760}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04761}04761     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04762}04762         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04763}04763         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04764}04764     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04765}04765     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04766}04766     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04767}04767 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04768}04768 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04769}04769 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04770}\mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{04770}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04771}04771     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04772}04772         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04773}04773         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04774}04774     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04775}04775     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04776}04776     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04777}04777 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04778}04778 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04779}04779 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04780}\mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{04780}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}}(Int *vec, \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04781}04781     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04782}04782         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04783}04783         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04784}04784     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04785}04785     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04786}04786     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04787}04787 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04788}04788 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04789}04789 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04790}\mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{04790}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04791}04791     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04792}04792         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04793}04793         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04794}04794     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04795}04795     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04796}04796     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04797}04797 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04798}04798 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04799}04799 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04800}\mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{04800}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04801}04801     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04802}04802         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04803}04803         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04804}04804     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04805}04805     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04806}04806     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04807}04807 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04808}04808 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04809}04809 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04810}\mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{04810}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04811}04811     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04812}04812         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04813}04813         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04814}04814     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04815}04815     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04816}04816     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04817}04817 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04818}04818 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04819}04819 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04820}\mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{04820}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04821}04821     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04822}04822         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04823}04823         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04824}04824     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04825}04825     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04826}04826     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04827}04827 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04828}04828 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04829}04829 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04830}\mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{04830}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04831}04831     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04832}04832         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04833}04833         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04834}04834     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04835}04835     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04836}04836     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04837}04837 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04838}04838 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04839}04839 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04840}\mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{04840}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}}(Flt *vec, \textcolor{keywordtype}{float} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04841}04841     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04842}04842         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04843}04843         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04844}04844     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04845}04845     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04846}04846     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04847}04847 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04848}04848 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04849}04849 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04850}\mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{04850}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}}(Dble *vec, \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04851}04851     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04852}04852         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04853}04853         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04854}04854     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04855}04855     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04856}04856     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04857}04857 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04858}04858 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04859}04859 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04860}\mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{04860}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04861}04861     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04862}04862         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04863}04863         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04864}04864     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04865}04865     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04866}04866     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04867}04867 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04868}04868 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04869}04869 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04870}\mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{04870}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}}(Char *vec, \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04871}04871     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04872}04872         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04873}04873         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04874}04874     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04875}04875     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04876}04876     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04877}04877 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04878}04878 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04879}04879 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04880}\mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{04880}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04881}04881     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04882}04882         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04883}04883         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04884}04884     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04885}04885     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04886}04886     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04887}04887 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04888}04888 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04889}04889 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04890}\mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{04890}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}}(Bool *vec, \textcolor{keywordtype}{bool} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04891}04891     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04892}04892         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04893}04893         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04894}04894     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04895}04895     vec-\/>array[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04896}04896     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04897}04897 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04898}04898 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04899}04899 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04900}\mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{04900}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{replace\_string\_vector\_index}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{char} *new\_value, \textcolor{keywordtype}{size\_t} index) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04901}04901     \textcolor{keywordflow}{if} (index > vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}} || index < 0) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04902}04902         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04903}04903         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04904}04904     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04905}04905     vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index] = new\_value;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04906}04906     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04907}04907 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04908}04908 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04909}04909 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04910}04910 \textcolor{comment}{// REPEAT\_TYPE\_VECTOR FUNCTIONS}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04911}04911 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04912}\mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{04912}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\_short\_vector}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04913}04913     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04914}04914     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04915}04915         j = \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04916}04916         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04917}04917     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04918}04918     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04919}04919 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04920}04920 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04921}04921 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04922}\mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{04922}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\_ushort\_vector}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04923}04923     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04924}04924     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04925}04925         j = \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04926}04926         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04927}04927     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04928}04928     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04929}04929 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04930}04930 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04931}04931 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04932}\mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{04932}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\_int\_vector}}(Int *vec, \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04933}04933     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04934}04934     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04935}04935         j = \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04936}04936         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04937}04937     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04938}04938     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04939}04939 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04940}04940 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04941}04941 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04942}\mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{04942}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\_uint\_vector}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04943}04943     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04944}04944     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04945}04945         j = \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04946}04946         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04947}04947     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04948}04948     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04949}04949 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04950}04950 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04951}04951 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04952}\mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{04952}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\_long\_vector}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04953}04953     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04954}04954     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04955}04955         j = \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04956}04956         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04957}04957     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04958}04958     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04959}04959 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04960}04960 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04961}04961 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04962}\mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{04962}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\_ulong\_vector}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04963}04963     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04964}04964     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04965}04965         j = \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04966}04966         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04967}04967     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04968}04968     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04969}04969 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04970}04970 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04971}04971 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04972}\mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{04972}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\_llong\_vector}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04973}04973     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04974}04974     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04975}04975         j = \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04976}04976         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04977}04977     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04978}04978     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04979}04979 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04980}04980 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04981}04981 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04982}\mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{04982}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\_ullong\_vector}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04983}04983     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04984}04984     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04985}04985         j = \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04986}04986         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04987}04987     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04988}04988     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04989}04989 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04990}04990 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04991}04991 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04992}\mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{04992}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\_float\_vector}}(Flt *vec, \textcolor{keywordtype}{float} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04993}04993     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04994}04994     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04995}04995         j = \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04996}04996         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04997}04997     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04998}04998     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l04999}04999 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05000}05000 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05001}05001 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05002}\mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{05002}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\_double\_vector}}(Dble *vec, \textcolor{keywordtype}{double} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05003}05003     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05004}05004     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05005}05005         j = \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05006}05006         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05007}05007     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05008}05008     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05009}05009 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05010}05010 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05011}05011 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05012}\mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{05012}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\_ldouble\_vector}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05013}05013     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05014}05014     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05015}05015         j = \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05016}05016         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05017}05017     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05018}05018     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05019}05019 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05020}05020 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05021}05021 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05022}\mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{05022}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\_bool\_vector}}(Bool *vec, \textcolor{keywordtype}{bool} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05023}05023     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05024}05024     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05025}05025         j = \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05026}05026         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05027}05027     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05028}05028     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05029}05029 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05030}05030 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05031}05031 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05032}\mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{05032}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\_char\_vector}}(Char *vec, \textcolor{keywordtype}{char} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05033}05033     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05034}05034     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05035}05035         j = \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05036}05036         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05037}05037     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05038}05038     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05039}05039 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05040}05040 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05041}05041 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05042}\mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{05042}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\_uchar\_vector}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05043}05043     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05044}05044     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05045}05045         j = \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, value, vec-\/>active\_length);}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05046}05046         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05047}05047     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05048}05048     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05049}05049 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05050}05050 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05051}05051 }
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05052}\mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{05052}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\_string\_vector}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{char} *value, \textcolor{keywordtype}{size\_t} num) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05053}05053     \textcolor{keywordtype}{int} j;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05054}05054     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05055}05055         j = \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(vec, value, vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05056}05056         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05057}05057     \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05058}05058     \textcolor{keywordflow}{return} 1;}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05059}05059 \}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05060}05060 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05061}05061 \textcolor{comment}{// ==========================================================================================}}
-\DoxyCodeLine{\Hypertarget{vector_8c_source_l05062}05062 \textcolor{comment}{// eof}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04469}\mbox{\hyperlink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{04469}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{bool\_vector\_data}}(Bool *vec, \textcolor{keywordtype}{size\_t} index) \{ \textcolor{keywordflow}{return} vec-\/>array[index]; \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04470}04470 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04471}04471 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04472}\mbox{\hyperlink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{04472}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{string\_vector\_data}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{size\_t} index) \{ \textcolor{keywordflow}{return} vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index]; \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04473}04473 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04474}04474 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04475}04475 \textcolor{comment}{// COPY\_TYPE\_VECTOR FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04476}04476 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04477}\mbox{\hyperlink{vector_8c_ab88c9075f7ac94dd8656a8eec4a14a94}{04477}} Short \mbox{\hyperlink{vector_8c_ab88c9075f7ac94dd8656a8eec4a14a94}{copy\_short\_vector}}(Short *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04478}04478     Short new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04479}04479     \mbox{\hyperlink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\_short\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04480}04480     \mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04481}04481     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04482}04482 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04483}04483 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04484}04484 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04485}\mbox{\hyperlink{vector_8c_af70602cee86af9597513bc67b2878244}{04485}} UShort \mbox{\hyperlink{vector_8c_af70602cee86af9597513bc67b2878244}{copy\_ushort\_vector}}(UShort *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04486}04486     UShort new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04487}04487     \mbox{\hyperlink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\_ushort\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04488}04488     \mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04489}04489     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04490}04490 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04491}04491 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04492}04492 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04493}\mbox{\hyperlink{vector_8c_a5fd73621c9da27949814495f00a3296f}{04493}} Int \mbox{\hyperlink{vector_8c_a5fd73621c9da27949814495f00a3296f}{copy\_int\_vector}}(Int *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04494}04494     Int new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04495}04495     \mbox{\hyperlink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\_int\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04496}04496     \mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04497}04497     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04498}04498 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04499}04499 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04500}04500 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04501}\mbox{\hyperlink{vector_8c_a6bf7c67135858a07103fff23436b7d77}{04501}} UInt \mbox{\hyperlink{vector_8c_a6bf7c67135858a07103fff23436b7d77}{copy\_uint\_vector}}(UInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04502}04502     UInt new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04503}04503     \mbox{\hyperlink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\_uint\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04504}04504     \mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04505}04505     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04506}04506 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04507}04507 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04508}04508 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04509}\mbox{\hyperlink{vector_8c_abc614587816c37e5dfd70c2a832da165}{04509}} LInt \mbox{\hyperlink{vector_8c_abc614587816c37e5dfd70c2a832da165}{copy\_long\_vector}}(LInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04510}04510     LInt new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04511}04511     \mbox{\hyperlink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\_long\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04512}04512     \mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04513}04513     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04514}04514 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04515}04515 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04516}04516 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04517}\mbox{\hyperlink{vector_8c_a31f85f1454385a608eebc7d150417b7c}{04517}} ULInt \mbox{\hyperlink{vector_8c_a31f85f1454385a608eebc7d150417b7c}{copy\_ulong\_vector}}(ULInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04518}04518     ULInt new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04519}04519     \mbox{\hyperlink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\_ulong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04520}04520     \mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04521}04521     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04522}04522 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04523}04523 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04524}04524 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04525}\mbox{\hyperlink{vector_8c_a2a8c6a77d383c5251686fc600c829005}{04525}} LLInt \mbox{\hyperlink{vector_8c_a2a8c6a77d383c5251686fc600c829005}{copy\_llong\_vector}}(LLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04526}04526     LLInt new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04527}04527     \mbox{\hyperlink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\_llong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04528}04528     \mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04529}04529     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04530}04530 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04531}04531 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04532}04532 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04533}\mbox{\hyperlink{vector_8c_abe7076983c8f386b305b615137dcd249}{04533}} ULLInt \mbox{\hyperlink{vector_8c_abe7076983c8f386b305b615137dcd249}{copy\_ullong\_vector}}(ULLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04534}04534     ULLInt new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04535}04535     \mbox{\hyperlink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\_ullong\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04536}04536     \mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04537}04537     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04538}04538 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04539}04539 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04540}04540 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04541}\mbox{\hyperlink{vector_8c_a440353dc4ac989fb88b34e7f5649dd05}{04541}} Flt \mbox{\hyperlink{vector_8c_a440353dc4ac989fb88b34e7f5649dd05}{copy\_float\_vector}}(Flt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04542}04542     Flt new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04543}04543     \mbox{\hyperlink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\_float\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04544}04544     \mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04545}04545     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04546}04546 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04547}04547 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04548}04548 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04549}\mbox{\hyperlink{vector_8c_a2d51a8a92a5c0e73345ade59b126ff35}{04549}} Dble \mbox{\hyperlink{vector_8c_a2d51a8a92a5c0e73345ade59b126ff35}{copy\_double\_vector}}(Dble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04550}04550     Dble new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04551}04551     \mbox{\hyperlink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\_double\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04552}04552     \mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04553}04553     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04554}04554 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04555}04555 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04556}04556 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04557}\mbox{\hyperlink{vector_8c_a3fa3120b9c06e25fc840f90c7e10c5a6}{04557}} LDble \mbox{\hyperlink{vector_8c_a3fa3120b9c06e25fc840f90c7e10c5a6}{copy\_ldouble\_vector}}(LDble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04558}04558     LDble new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04559}04559     \mbox{\hyperlink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\_ldouble\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04560}04560     \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04561}04561     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04562}04562 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04563}04563 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04564}04564 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04565}\mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{04565}} Char \mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{copy\_char\_vector}}(Char *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04566}04566     Char new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04567}04567     \mbox{\hyperlink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\_char\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04568}04568     \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04569}04569     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04570}04570 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04571}04571 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04572}04572 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04573}\mbox{\hyperlink{vector_8c_ac3e7f4298d195586bfc0cf8b0fc1a053}{04573}} UChar \mbox{\hyperlink{vector_8c_ac3e7f4298d195586bfc0cf8b0fc1a053}{copy\_uchar\_vector}}(UChar *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04574}04574     UChar new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04575}04575     \mbox{\hyperlink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\_uchar\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04576}04576     \mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04577}04577     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04578}04578 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04579}04579 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04580}04580 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04581}\mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{04581}} Bool \mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{copy\_bool\_vector}}(Bool *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04582}04582     Bool new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04583}04583     \mbox{\hyperlink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\_bool\_vector}}(\&new\_vec, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04584}04584     \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}}(\&new\_vec, vec-\/>array, vec-\/>active\_length, 0);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04585}04585     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04586}04586 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04587}04587 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04588}04588 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04589}\mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{04589}} \mbox{\hyperlink{structString}{String}} \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\_string\_vector}}(\mbox{\hyperlink{structString}{String}} *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04590}04590     \mbox{\hyperlink{structString}{String}} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04591}04591     \mbox{\hyperlink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\_string\_vector}}(\&new\_vec);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04592}04592     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04593}04593         \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(\&new\_vec, vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[i], new\_vec.\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04594}04594     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04595}04595     \textcolor{keywordflow}{return} new\_vec;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04596}04596 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04597}04597 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04598}04598 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04599}04599 \textcolor{comment}{// TRIM\_TYPE\_VECTOR FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04600}04600 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04601}\mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{04601}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{trim\_short\_vector}}(Short *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04602}04602     \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04603}04603     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04604}04604     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04605}04605         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04606}04606     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04607}04607     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04608}04608     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04609}04609     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04610}04610 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04611}04611 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04612}04612 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04613}\mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{04613}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a394639166d53eacb53725cf548f596db}{trim\_ushort\_vector}}(UShort *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04614}04614     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04615}04615     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04616}04616     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04617}04617         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04618}04618     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04619}04619     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04620}04620     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04621}04621     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04622}04622 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04623}04623 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04624}04624 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04625}\mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{04625}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{trim\_int\_vector}}(Int *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04626}04626     \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04627}04627     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04628}04628     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04629}04629         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04630}04630     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04631}04631     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04632}04632     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04633}04633     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04634}04634 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04635}04635 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04636}04636 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04637}\mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{04637}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{trim\_uint\_vector}}(UInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04638}04638     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04639}04639     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04640}04640     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04641}04641         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04642}04642     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04643}04643     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04644}04644     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04645}04645     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04646}04646 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04647}04647 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04648}04648 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04649}\mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{04649}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{trim\_long\_vector}}(LInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04650}04650     \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04651}04651     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04652}04652     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04653}04653         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04654}04654     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04655}04655     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04656}04656     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04657}04657     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04658}04658 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04659}04659 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04660}04660 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04661}\mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{04661}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{trim\_ulong\_vector}}(ULInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04662}04662     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04663}04663     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04664}04664     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04665}04665         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04666}04666     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04667}04667     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04668}04668     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04669}04669     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04670}04670 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04671}04671 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04672}04672 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04673}\mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{04673}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{trim\_llong\_vector}}(LLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04674}04674     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04675}04675     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04676}04676     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04677}04677         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04678}04678     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04679}04679     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04680}04680     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04681}04681     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04682}04682 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04683}04683 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04684}04684 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04685}\mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{04685}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{trim\_ullong\_vector}}(ULLInt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04686}04686     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04687}04687     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04688}04688     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04689}04689         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04690}04690     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04691}04691     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04692}04692     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04693}04693     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04694}04694 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04695}04695 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04696}04696 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04697}\mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{04697}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{trim\_float\_vector}}(Flt *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04698}04698     \textcolor{keywordtype}{float} *ptr = (\textcolor{keywordtype}{float} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04699}04699     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04700}04700     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04701}04701         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04702}04702     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04703}04703     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04704}04704     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04705}04705     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04706}04706 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04707}04707 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04708}04708 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04709}\mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{04709}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{trim\_double\_vector}}(Dble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04710}04710     \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04711}04711     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04712}04712     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04713}04713         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04714}04714     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04715}04715     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04716}04716     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04717}04717     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04718}04718 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04719}04719 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04720}04720 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04721}\mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{04721}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\_ldouble\_vector}}(LDble *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04722}04722     \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *ptr = (\textcolor{keywordtype}{long} \textcolor{keywordtype}{double} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{long} \textcolor{keywordtype}{double}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04723}04723     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04724}04724     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04725}04725         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04726}04726     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04727}04727     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04728}04728     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04729}04729     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04730}04730 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04731}04731 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04732}04732 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04733}\mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{04733}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{trim\_char\_vector}}(Char *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04734}04734     \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04735}04735     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04736}04736     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04737}04737         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04738}04738     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04739}04739     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04740}04740     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04741}04741     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04742}04742 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04743}04743 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04744}04744 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04745}\mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{04745}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{trim\_uchar\_vector}}(UChar *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04746}04746     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ptr = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04747}04747     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04748}04748     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04749}04749         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04750}04750     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04751}04751     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04752}04752     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04753}04753     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04754}04754 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04755}04755 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04756}04756 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04757}\mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{04757}} \textcolor{keywordtype}{void} \mbox{\hyperlink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\_bool\_vector}}(Bool *vec) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04758}04758     \textcolor{keywordtype}{bool} *ptr = (\textcolor{keywordtype}{bool} *)realloc(vec-\/>array, vec-\/>active\_length * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04759}04759     \textcolor{comment}{// Verify that sufficient memory exists}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04760}04760     \textcolor{keywordflow}{if} (ptr == NULL) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04761}04761         fprintf(stderr, \textcolor{stringliteral}{"{}Realloc failed in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04762}04762     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04763}04763     \textcolor{comment}{// allocate memory}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04764}04764     vec-\/>array = ptr;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04765}04765     vec-\/>allocated\_length = vec-\/>active\_length;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04766}04766 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04767}04767 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04768}04768 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04769}04769 \textcolor{comment}{// REPLACE\_TYPE\_VECTOR\_INDEX}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04770}04770 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04771}\mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{04771}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04772}04772     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04773}04773         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04774}04774         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04775}04775     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04776}04776     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04777}04777     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04778}04778 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04779}04779 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04780}04780 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04781}\mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{04781}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04782}04782     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04783}04783         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04784}04784         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04785}04785     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04786}04786     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04787}04787     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04788}04788 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04789}04789 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04790}04790 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04791}\mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{04791}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}}(Int *vec, \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04792}04792     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04793}04793         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04794}04794         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04795}04795     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04796}04796     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04797}04797     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04798}04798 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04799}04799 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04800}04800 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04801}\mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{04801}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04802}04802     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04803}04803         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04804}04804         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04805}04805     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04806}04806     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04807}04807     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04808}04808 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04809}04809 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04810}04810 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04811}\mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{04811}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04812}04812     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04813}04813         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04814}04814         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04815}04815     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04816}04816     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04817}04817     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04818}04818 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04819}04819 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04820}04820 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04821}\mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{04821}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04822}04822     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04823}04823         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04824}04824         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04825}04825     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04826}04826     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04827}04827     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04828}04828 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04829}04829 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04830}04830 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04831}\mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{04831}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04832}04832     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04833}04833         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04834}04834         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04835}04835     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04836}04836     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04837}04837     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04838}04838 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04839}04839 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04840}04840 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04841}\mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{04841}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04842}04842     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04843}04843         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04844}04844         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04845}04845     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04846}04846     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04847}04847     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04848}04848 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04849}04849 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04850}04850 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04851}\mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{04851}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}}(Flt *vec, \textcolor{keywordtype}{float} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04852}04852     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04853}04853         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04854}04854         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04855}04855     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04856}04856     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04857}04857     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04858}04858 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04859}04859 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04860}04860 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04861}\mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{04861}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}}(Dble *vec, \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04862}04862     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04863}04863         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04864}04864         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04865}04865     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04866}04866     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04867}04867     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04868}04868 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04869}04869 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04870}04870 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04871}\mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{04871}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04872}04872     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04873}04873         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04874}04874         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04875}04875     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04876}04876     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04877}04877     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04878}04878 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04879}04879 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04880}04880 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04881}\mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{04881}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}}(Char *vec, \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04882}04882     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04883}04883         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04884}04884         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04885}04885     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04886}04886     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04887}04887     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04888}04888 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04889}04889 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04890}04890 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04891}\mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{04891}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04892}04892     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04893}04893         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04894}04894         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04895}04895     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04896}04896     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04897}04897     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04898}04898 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04899}04899 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04900}04900 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04901}\mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{04901}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}}(Bool *vec, \textcolor{keywordtype}{bool} new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04902}04902     \textcolor{keywordflow}{if} (index > vec-\/>active\_length || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04903}04903         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04904}04904         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04905}04905     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04906}04906     vec-\/>array[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04907}04907     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04908}04908 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04909}04909 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04910}04910 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04911}\mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{04911}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{replace\_string\_vector\_index}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{char} *new\_value, \textcolor{keywordtype}{size\_t} index) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04912}04912     \textcolor{keywordflow}{if} (index > vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}} || index < 0) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04913}04913         fprintf(stderr, \textcolor{stringliteral}{"{}Index out of bounds in file \%s on line \%d\(\backslash\)n"{}}, \_\_FILE\_\_, \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04914}04914         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04915}04915     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04916}04916     vec-\/>\mbox{\hyperlink{structString_a984d87136c3d76ab3145bdb65880a3fa}{array}}[index] = new\_value;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04917}04917     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04918}04918 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04919}04919 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04920}04920 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04921}04921 \textcolor{comment}{// REPEAT\_TYPE\_VECTOR FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04922}04922 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04923}\mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{04923}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\_short\_vector}}(Short *vec, \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04924}04924     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04925}04925     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04926}04926         j = \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04927}04927         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04928}04928     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04929}04929     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04930}04930 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04931}04931 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04932}04932 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04933}\mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{04933}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\_ushort\_vector}}(UShort *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04934}04934     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04935}04935     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04936}04936         j = \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04937}04937         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04938}04938     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04939}04939     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04940}04940 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04941}04941 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04942}04942 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04943}\mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{04943}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\_int\_vector}}(Int *vec, \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04944}04944     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04945}04945     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04946}04946         j = \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04947}04947         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04948}04948     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04949}04949     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04950}04950 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04951}04951 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04952}04952 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04953}\mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{04953}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\_uint\_vector}}(UInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04954}04954     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04955}04955     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04956}04956         j = \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04957}04957         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04958}04958     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04959}04959     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04960}04960 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04961}04961 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04962}04962 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04963}\mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{04963}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\_long\_vector}}(LInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04964}04964     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04965}04965     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04966}04966         j = \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04967}04967         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04968}04968     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04969}04969     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04970}04970 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04971}04971 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04972}04972 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04973}\mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{04973}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\_ulong\_vector}}(ULInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04974}04974     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04975}04975     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04976}04976         j = \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04977}04977         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04978}04978     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04979}04979     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04980}04980 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04981}04981 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04982}04982 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04983}\mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{04983}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\_llong\_vector}}(LLInt *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04984}04984     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04985}04985     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04986}04986         j = \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04987}04987         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04988}04988     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04989}04989     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04990}04990 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04991}04991 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04992}04992 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04993}\mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{04993}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\_ullong\_vector}}(ULLInt *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04994}04994     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04995}04995     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04996}04996         j = \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04997}04997         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04998}04998     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l04999}04999     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05000}05000 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05001}05001 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05002}05002 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05003}\mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{05003}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\_float\_vector}}(Flt *vec, \textcolor{keywordtype}{float} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05004}05004     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05005}05005     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05006}05006         j = \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05007}05007         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05008}05008     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05009}05009     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05010}05010 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05011}05011 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05012}05012 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05013}\mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{05013}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\_double\_vector}}(Dble *vec, \textcolor{keywordtype}{double} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05014}05014     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05015}05015     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05016}05016         j = \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05017}05017         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05018}05018     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05019}05019     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05020}05020 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05021}05021 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05022}05022 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05023}\mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{05023}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\_ldouble\_vector}}(LDble *vec, \textcolor{keywordtype}{long} \textcolor{keywordtype}{double} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05024}05024     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05025}05025     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05026}05026         j = \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05027}05027         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05028}05028     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05029}05029     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05030}05030 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05031}05031 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05032}05032 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05033}\mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{05033}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\_bool\_vector}}(Bool *vec, \textcolor{keywordtype}{bool} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05034}05034     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05035}05035     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05036}05036         j = \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05037}05037         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05038}05038     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05039}05039     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05040}05040 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05041}05041 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05042}05042 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05043}\mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{05043}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\_char\_vector}}(Char *vec, \textcolor{keywordtype}{char} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05044}05044     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05045}05045     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05046}05046         j = \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05047}05047         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05048}05048     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05049}05049     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05050}05050 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05051}05051 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05052}05052 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05053}\mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{05053}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\_uchar\_vector}}(UChar *vec, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05054}05054     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05055}05055     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05056}05056         j = \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}}(vec, value, vec-\/>active\_length);}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05057}05057         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05058}05058     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05059}05059     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05060}05060 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05061}05061 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05062}05062 }
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05063}\mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{05063}} \textcolor{keywordtype}{int} \mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\_string\_vector}}(\mbox{\hyperlink{structString}{String}} *vec, \textcolor{keywordtype}{char} *value, \textcolor{keywordtype}{size\_t} num) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05064}05064     \textcolor{keywordtype}{int} j;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05065}05065     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < num; i++) \{}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05066}05066         j = \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}}(vec, value, vec-\/>\mbox{\hyperlink{structString_a706ffaf2f520d46074dd99e7896d6673}{active\_length}});}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05067}05067         \textcolor{keywordflow}{if} (j < 0) \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05068}05068     \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05069}05069     \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05070}05070 \}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05071}05071 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05072}05072 \textcolor{comment}{// ==========================================================================================}}
+\DoxyCodeLine{\Hypertarget{vector_8c_source_l05073}05073 \textcolor{comment}{// eof}}
 
 \end{DoxyCode}

@@ -111,6 +111,10 @@ Macros</h2></td></tr>
 <tr class="separator:ab01356067636aa7d12aad9a9302f37a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67c03354ef846fed0c21ad5802407c42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(T,  start,  end,  delta)</td></tr>
 <tr class="separator:a67c03354ef846fed0c21ad5802407c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba1f915ff0895a09d1dfe31f5c728f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a0ba1f915ff0895a09d1dfe31f5c728f3">COPY</a>(T)</td></tr>
+<tr class="separator:a0ba1f915ff0895a09d1dfe31f5c728f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc515116896ddef6d83c6afbabf74d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a2cc515116896ddef6d83c6afbabf74d2">IDATA</a>(T,  index)</td></tr>
+<tr class="separator:a2cc515116896ddef6d83c6afbabf74d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a81794266d48f7e352116d53be0fda9fc" name="a81794266d48f7e352116d53be0fda9fc"></a>
@@ -168,6 +172,67 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8h_html_a78b085b69ede6314aedfc346b480a078"><div class="ttname"><a href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a></div><div class="ttdeci">#define INIT_VECTOR(T, length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00280">vector.h:280</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00443">443</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="a0ba1f915ff0895a09d1dfe31f5c728f3" name="a0ba1f915ff0895a09d1dfe31f5c728f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba1f915ff0895a09d1dfe31f5c728f3">&#9670;&nbsp;</a></span>COPY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COPY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                               _Generic( (T), UChar: <a class="code hl_function" href="vector_8c.html#ac3e7f4298d195586bfc0cf8b0fc1a053">copy_uchar_vector</a>, \</div>
+<div class="line">                               Short: <a class="code hl_function" href="vector_8c.html#ab88c9075f7ac94dd8656a8eec4a14a94">copy_short_vector</a>, \</div>
+<div class="line">                               UShort: <a class="code hl_function" href="vector_8c.html#af70602cee86af9597513bc67b2878244">copy_ushort_vector</a>, \</div>
+<div class="line">                               Int: <a class="code hl_function" href="vector_8c.html#a5fd73621c9da27949814495f00a3296f">copy_int_vector</a>, \</div>
+<div class="line">                               UInt: <a class="code hl_function" href="vector_8c.html#a6bf7c67135858a07103fff23436b7d77">copy_uint_vector</a>, \</div>
+<div class="line">                               LInt: <a class="code hl_function" href="vector_8c.html#abc614587816c37e5dfd70c2a832da165">copy_long_vector</a>, \</div>
+<div class="line">                               ULInt: <a class="code hl_function" href="vector_8c.html#a31f85f1454385a608eebc7d150417b7c">copy_ulong_vector</a>, \</div>
+<div class="line">                               LLInt: <a class="code hl_function" href="vector_8c.html#a2a8c6a77d383c5251686fc600c829005">copy_llong_vector</a>, \</div>
+<div class="line">                               ULLInt: <a class="code hl_function" href="vector_8c.html#abe7076983c8f386b305b615137dcd249">copy_ullong_vector</a>, \</div>
+<div class="line">                               Flt: <a class="code hl_function" href="vector_8c.html#a440353dc4ac989fb88b34e7f5649dd05">copy_float_vector</a>, \</div>
+<div class="line">                               Dble: <a class="code hl_function" href="vector_8c.html#a2d51a8a92a5c0e73345ade59b126ff35">copy_double_vector</a>, \</div>
+<div class="line">                               LDble: <a class="code hl_function" href="vector_8c.html#a3fa3120b9c06e25fc840f90c7e10c5a6">copy_ldouble_vector</a>, \</div>
+<div class="line">                               Char: <a class="code hl_function" href="vector_8c.html#a430a540aea6caac8002281b9a2ddbf7a">copy_char_vector</a>, \</div>
+<div class="line">                               Bool: <a class="code hl_function" href="vector_8c.html#a2e6c2d82128d66d5fe6800ee6ad9d277">copy_bool_vector</a>, \</div>
+<div class="line">                               <a class="code hl_struct" href="structString.html">String</a>: <a class="code hl_function" href="vector_8c.html#a2cb84d3851679202a04f76066bc80a6e">copy_string_vector</a>)(&amp;T)</div>
+<div class="ttc" id="astructString_html"><div class="ttname"><a href="structString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00092">vector.h:93</a></div></div>
+<div class="ttc" id="avector_8c_html_a2a8c6a77d383c5251686fc600c829005"><div class="ttname"><a href="vector_8c.html#a2a8c6a77d383c5251686fc600c829005">copy_llong_vector</a></div><div class="ttdeci">LLInt copy_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04525">vector.c:4525</a></div></div>
+<div class="ttc" id="avector_8c_html_a2cb84d3851679202a04f76066bc80a6e"><div class="ttname"><a href="vector_8c.html#a2cb84d3851679202a04f76066bc80a6e">copy_string_vector</a></div><div class="ttdeci">String copy_string_vector(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04589">vector.c:4589</a></div></div>
+<div class="ttc" id="avector_8c_html_a2d51a8a92a5c0e73345ade59b126ff35"><div class="ttname"><a href="vector_8c.html#a2d51a8a92a5c0e73345ade59b126ff35">copy_double_vector</a></div><div class="ttdeci">Dble copy_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04549">vector.c:4549</a></div></div>
+<div class="ttc" id="avector_8c_html_a2e6c2d82128d66d5fe6800ee6ad9d277"><div class="ttname"><a href="vector_8c.html#a2e6c2d82128d66d5fe6800ee6ad9d277">copy_bool_vector</a></div><div class="ttdeci">Bool copy_bool_vector(Bool *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04581">vector.c:4581</a></div></div>
+<div class="ttc" id="avector_8c_html_a31f85f1454385a608eebc7d150417b7c"><div class="ttname"><a href="vector_8c.html#a31f85f1454385a608eebc7d150417b7c">copy_ulong_vector</a></div><div class="ttdeci">ULInt copy_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04517">vector.c:4517</a></div></div>
+<div class="ttc" id="avector_8c_html_a3fa3120b9c06e25fc840f90c7e10c5a6"><div class="ttname"><a href="vector_8c.html#a3fa3120b9c06e25fc840f90c7e10c5a6">copy_ldouble_vector</a></div><div class="ttdeci">LDble copy_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04557">vector.c:4557</a></div></div>
+<div class="ttc" id="avector_8c_html_a430a540aea6caac8002281b9a2ddbf7a"><div class="ttname"><a href="vector_8c.html#a430a540aea6caac8002281b9a2ddbf7a">copy_char_vector</a></div><div class="ttdeci">Char copy_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04565">vector.c:4565</a></div></div>
+<div class="ttc" id="avector_8c_html_a440353dc4ac989fb88b34e7f5649dd05"><div class="ttname"><a href="vector_8c.html#a440353dc4ac989fb88b34e7f5649dd05">copy_float_vector</a></div><div class="ttdeci">Flt copy_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04541">vector.c:4541</a></div></div>
+<div class="ttc" id="avector_8c_html_a5fd73621c9da27949814495f00a3296f"><div class="ttname"><a href="vector_8c.html#a5fd73621c9da27949814495f00a3296f">copy_int_vector</a></div><div class="ttdeci">Int copy_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04493">vector.c:4493</a></div></div>
+<div class="ttc" id="avector_8c_html_a6bf7c67135858a07103fff23436b7d77"><div class="ttname"><a href="vector_8c.html#a6bf7c67135858a07103fff23436b7d77">copy_uint_vector</a></div><div class="ttdeci">UInt copy_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04501">vector.c:4501</a></div></div>
+<div class="ttc" id="avector_8c_html_ab88c9075f7ac94dd8656a8eec4a14a94"><div class="ttname"><a href="vector_8c.html#ab88c9075f7ac94dd8656a8eec4a14a94">copy_short_vector</a></div><div class="ttdeci">Short copy_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04477">vector.c:4477</a></div></div>
+<div class="ttc" id="avector_8c_html_abc614587816c37e5dfd70c2a832da165"><div class="ttname"><a href="vector_8c.html#abc614587816c37e5dfd70c2a832da165">copy_long_vector</a></div><div class="ttdeci">LInt copy_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04509">vector.c:4509</a></div></div>
+<div class="ttc" id="avector_8c_html_abe7076983c8f386b305b615137dcd249"><div class="ttname"><a href="vector_8c.html#abe7076983c8f386b305b615137dcd249">copy_ullong_vector</a></div><div class="ttdeci">ULLInt copy_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04533">vector.c:4533</a></div></div>
+<div class="ttc" id="avector_8c_html_ac3e7f4298d195586bfc0cf8b0fc1a053"><div class="ttname"><a href="vector_8c.html#ac3e7f4298d195586bfc0cf8b0fc1a053">copy_uchar_vector</a></div><div class="ttdeci">UChar copy_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04573">vector.c:4573</a></div></div>
+<div class="ttc" id="avector_8c_html_af70602cee86af9597513bc67b2878244"><div class="ttname"><a href="vector_8c.html#af70602cee86af9597513bc67b2878244">copy_ushort_vector</a></div><div class="ttdeci">UShort copy_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04485">vector.c:4485</a></div></div>
+</div><!-- fragment --><p >This macro will create a deep copy of a data structure</p>
+<p >/param T The data structure /retur structure The deep copy of a data structure</p>
+<div class="fragment"><div class="line">Int vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 10);</div>
+<div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
+<div class="line">Int new_vec = <a class="code hl_define" href="data__structures_8h.html#a0ba1f915ff0895a09d1dfe31f5c728f3">COPY</a>(vec);</div>
+<div class="line">PRINT(new_vec);</div>
+<div class="line"><span class="comment">// &gt;&gt; [ 1, 2, 3, 4, 5 ]</span></div>
+<div class="ttc" id="adata__structures_8h_html_a0ba1f915ff0895a09d1dfe31f5c728f3"><div class="ttname"><a href="data__structures_8h.html#a0ba1f915ff0895a09d1dfe31f5c728f3">COPY</a></div><div class="ttdeci">#define COPY(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00607">data_structures.h:607</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00607">607</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>
@@ -257,7 +322,6 @@ Macros</h2></td></tr>
 <div class="line">                                            UChar: <a class="code hl_function" href="vector_8c.html#a51740972d62e96e248d8a07eb65e48aa">delete_uchar_vector_duplicates</a>, \</div>
 <div class="line">                                            Bool: <a class="code hl_function" href="vector_8c.html#a1fe7315ba2394e61b43b99bfc765bd75">delete_bool_vector_duplicates</a>, \</div>
 <div class="line">                                            <a class="code hl_struct" href="structString.html">String</a>: <a class="code hl_function" href="vector_8c.html#a1b3482060f9c607f98dbef4845db335f">delete_string_vector_duplicates</a>)(&amp;T)</div>
-<div class="ttc" id="astructString_html"><div class="ttname"><a href="structString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00092">vector.h:93</a></div></div>
 <div class="ttc" id="avector_8c_html_a0bf0ceecb4ef742811c3b2ed8384d432"><div class="ttname"><a href="vector_8c.html#a0bf0ceecb4ef742811c3b2ed8384d432">delete_double_vector_duplicates</a></div><div class="ttdeci">void delete_double_vector_duplicates(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01989">vector.c:1989</a></div></div>
 <div class="ttc" id="avector_8c_html_a10ee633f27cbd6252d41ffd0761f6392"><div class="ttname"><a href="vector_8c.html#a10ee633f27cbd6252d41ffd0761f6392">delete_long_vector_duplicates</a></div><div class="ttdeci">void delete_long_vector_duplicates(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01929">vector.c:1929</a></div></div>
 <div class="ttc" id="avector_8c_html_a1b3482060f9c607f98dbef4845db335f"><div class="ttname"><a href="vector_8c.html#a1b3482060f9c607f98dbef4845db335f">delete_string_vector_duplicates</a></div><div class="ttdeci">void delete_string_vector_duplicates(String *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02049">vector.c:2049</a></div></div>
@@ -335,6 +399,78 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8c_html_afef1cb622b3f54256849a3b5446a7af4"><div class="ttname"><a href="vector_8c.html#afef1cb622b3f54256849a3b5446a7af4">free_char_vector</a></div><div class="ttdeci">void free_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l01828">vector.c:1828</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00141">141</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="a2cc515116896ddef6d83c6afbabf74d2" name="a2cc515116896ddef6d83c6afbabf74d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc515116896ddef6d83c6afbabf74d2">&#9670;&nbsp;</a></span>IDATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDATA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                       _Generic( (T), Char: <a class="code hl_function" href="vector_8c.html#aa99d3902c062bd4e5e31b85ccd8867bb">char_vector_data</a>, \</div>
+<div class="line">                                       UChar: <a class="code hl_function" href="vector_8c.html#a5ec8248dfe94805dce29484cf23b9db5">uchar_vector_data</a>, \</div>
+<div class="line">                                       Short: <a class="code hl_function" href="vector_8c.html#a34d64d0cfc6dc0e1e5b3ab4d685f9b17">short_vector_data</a>, \</div>
+<div class="line">                                       UShort: <a class="code hl_function" href="vector_8c.html#ae64308782a33a82a606c6463d0511a19">ushort_vector_data</a>, \</div>
+<div class="line">                                       Int: <a class="code hl_function" href="vector_8c.html#a3804e8951d833849ea5c7333b832bf1e">int_vector_data</a>, \</div>
+<div class="line">                                       UInt: <a class="code hl_function" href="vector_8c.html#ac6172e0e9433875fa34c0faaf8647c6c">uint_vector_data</a>, \</div>
+<div class="line">                                       LInt: <a class="code hl_function" href="vector_8c.html#a78c08d70ca4769c5fa2e4d87bcd35f4e">long_vector_data</a>, \</div>
+<div class="line">                                       ULInt: <a class="code hl_function" href="vector_8c.html#ae7aed886f0e33fc044d7d7bafcea088b">ulong_vector_data</a>, \</div>
+<div class="line">                                       LLInt: <a class="code hl_function" href="vector_8c.html#ac368c61f3aceee6f22f7fdfd9c6866bc">llong_vector_data</a>, \</div>
+<div class="line">                                       ULLInt: <a class="code hl_function" href="vector_8c.html#a401a9795be5292f8c20fb032218c4b1a">ullong_vector_data</a>, \</div>
+<div class="line">                                       Flt: <a class="code hl_function" href="vector_8c.html#a84fbf5e526da1adcad6858a643df2462">float_vector_data</a>, \</div>
+<div class="line">                                       Dble: <a class="code hl_function" href="vector_8c.html#a1c5e11f6eff0482afd6666532c1c150f">double_vector_data</a>, \</div>
+<div class="line">                                       LDble: <a class="code hl_function" href="vector_8c.html#a4ff7d557d90612b873092b0b9dd82b15">ldouble_vector_data</a>, \</div>
+<div class="line">                                       Bool: <a class="code hl_function" href="vector_8c.html#ab8ec8940661d127593fab26f02d3961a">bool_vector_data</a>, \</div>
+<div class="line">                                       <a class="code hl_struct" href="structString.html">String</a>: <a class="code hl_function" href="vector_8c.html#a1cb0a8bfe346307c5d842d15ffacbc0c">string_vector_data</a>)(&amp;T, index)</div>
+<div class="ttc" id="avector_8c_html_a1c5e11f6eff0482afd6666532c1c150f"><div class="ttname"><a href="vector_8c.html#a1c5e11f6eff0482afd6666532c1c150f">double_vector_data</a></div><div class="ttdeci">double double_vector_data(Dble *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04457">vector.c:4457</a></div></div>
+<div class="ttc" id="avector_8c_html_a1cb0a8bfe346307c5d842d15ffacbc0c"><div class="ttname"><a href="vector_8c.html#a1cb0a8bfe346307c5d842d15ffacbc0c">string_vector_data</a></div><div class="ttdeci">char * string_vector_data(String *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04472">vector.c:4472</a></div></div>
+<div class="ttc" id="avector_8c_html_a34d64d0cfc6dc0e1e5b3ab4d685f9b17"><div class="ttname"><a href="vector_8c.html#a34d64d0cfc6dc0e1e5b3ab4d685f9b17">short_vector_data</a></div><div class="ttdeci">short int short_vector_data(Short *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04430">vector.c:4430</a></div></div>
+<div class="ttc" id="avector_8c_html_a3804e8951d833849ea5c7333b832bf1e"><div class="ttname"><a href="vector_8c.html#a3804e8951d833849ea5c7333b832bf1e">int_vector_data</a></div><div class="ttdeci">int int_vector_data(Int *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04436">vector.c:4436</a></div></div>
+<div class="ttc" id="avector_8c_html_a401a9795be5292f8c20fb032218c4b1a"><div class="ttname"><a href="vector_8c.html#a401a9795be5292f8c20fb032218c4b1a">ullong_vector_data</a></div><div class="ttdeci">unsigned long long int ullong_vector_data(ULLInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04451">vector.c:4451</a></div></div>
+<div class="ttc" id="avector_8c_html_a4ff7d557d90612b873092b0b9dd82b15"><div class="ttname"><a href="vector_8c.html#a4ff7d557d90612b873092b0b9dd82b15">ldouble_vector_data</a></div><div class="ttdeci">long double ldouble_vector_data(LDble *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04460">vector.c:4460</a></div></div>
+<div class="ttc" id="avector_8c_html_a5ec8248dfe94805dce29484cf23b9db5"><div class="ttname"><a href="vector_8c.html#a5ec8248dfe94805dce29484cf23b9db5">uchar_vector_data</a></div><div class="ttdeci">unsigned char uchar_vector_data(UChar *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04466">vector.c:4466</a></div></div>
+<div class="ttc" id="avector_8c_html_a78c08d70ca4769c5fa2e4d87bcd35f4e"><div class="ttname"><a href="vector_8c.html#a78c08d70ca4769c5fa2e4d87bcd35f4e">long_vector_data</a></div><div class="ttdeci">long int long_vector_data(LInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04442">vector.c:4442</a></div></div>
+<div class="ttc" id="avector_8c_html_a84fbf5e526da1adcad6858a643df2462"><div class="ttname"><a href="vector_8c.html#a84fbf5e526da1adcad6858a643df2462">float_vector_data</a></div><div class="ttdeci">float float_vector_data(Flt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04454">vector.c:4454</a></div></div>
+<div class="ttc" id="avector_8c_html_aa99d3902c062bd4e5e31b85ccd8867bb"><div class="ttname"><a href="vector_8c.html#aa99d3902c062bd4e5e31b85ccd8867bb">char_vector_data</a></div><div class="ttdeci">char char_vector_data(Char *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04463">vector.c:4463</a></div></div>
+<div class="ttc" id="avector_8c_html_ab8ec8940661d127593fab26f02d3961a"><div class="ttname"><a href="vector_8c.html#ab8ec8940661d127593fab26f02d3961a">bool_vector_data</a></div><div class="ttdeci">bool bool_vector_data(Bool *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04469">vector.c:4469</a></div></div>
+<div class="ttc" id="avector_8c_html_ac368c61f3aceee6f22f7fdfd9c6866bc"><div class="ttname"><a href="vector_8c.html#ac368c61f3aceee6f22f7fdfd9c6866bc">llong_vector_data</a></div><div class="ttdeci">long long int llong_vector_data(LLInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04448">vector.c:4448</a></div></div>
+<div class="ttc" id="avector_8c_html_ac6172e0e9433875fa34c0faaf8647c6c"><div class="ttname"><a href="vector_8c.html#ac6172e0e9433875fa34c0faaf8647c6c">uint_vector_data</a></div><div class="ttdeci">unsigned int uint_vector_data(UInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04439">vector.c:4439</a></div></div>
+<div class="ttc" id="avector_8c_html_ae64308782a33a82a606c6463d0511a19"><div class="ttname"><a href="vector_8c.html#ae64308782a33a82a606c6463d0511a19">ushort_vector_data</a></div><div class="ttdeci">unsigned short int ushort_vector_data(UShort *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04433">vector.c:4433</a></div></div>
+<div class="ttc" id="avector_8c_html_ae7aed886f0e33fc044d7d7bafcea088b"><div class="ttname"><a href="vector_8c.html#ae7aed886f0e33fc044d7d7bafcea088b">ulong_vector_data</a></div><div class="ttdeci">unsigned long int ulong_vector_data(ULInt *vec, size_t index)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04445">vector.c:4445</a></div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md0"></a>
+==========================================================================================</h1>
+<p >This macro will insert a range of values between start and end into a data structure.</p>
+<p >/param T The data structure /param start The start point /param end The end point /param The delta between data points</p>
+<div class="fragment"><div class="line">Int vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 10);</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(vec, 2, 20, 2);</div>
+<div class="line"><span class="keywordtype">int</span> a = <a class="code hl_define" href="data__structures_8h.html#a2cc515116896ddef6d83c6afbabf74d2">IDATA</a>(vec, 3);</div>
+<div class="line">PRINT(a);</div>
+<div class="line"><span class="comment">// &gt;&gt; 8</span></div>
+<div class="ttc" id="adata__structures_8h_html_a2cc515116896ddef6d83c6afbabf74d2"><div class="ttname"><a href="data__structures_8h.html#a2cc515116896ddef6d83c6afbabf74d2">IDATA</a></div><div class="ttdeci">#define IDATA(T, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00644">data_structures.h:644</a></div></div>
+<div class="ttc" id="adata__structures_8h_html_a67c03354ef846fed0c21ad5802407c42"><div class="ttname"><a href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a></div><div class="ttdeci">#define RANGE(T, start, end, delta)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00574">data_structures.h:574</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00644">644</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>
@@ -790,7 +926,6 @@ Macros</h2></td></tr>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(vec, 2, 20, 2);</div>
 <div class="line">PRINT(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]</span></div>
-<div class="ttc" id="adata__structures_8h_html_a67c03354ef846fed0c21ad5802407c42"><div class="ttname"><a href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a></div><div class="ttdeci">#define RANGE(T, start, end, delta)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00574">data_structures.h:574</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00574">574</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 

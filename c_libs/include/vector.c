@@ -4461,6 +4461,9 @@ long double ldouble_vector_data(LDble *vec, size_t index) { return vec->array[in
 // --------------------------------------------------------------------------------
 
 char char_vector_data(Char *vec, size_t index) { return vec->array[index]; }
+// ------------------------------------------------------------------------------------------
+
+unsigned char uchar_vector_data(UChar *vec, size_t index) { return vec->array[index]; }
 // --------------------------------------------------------------------------------
 
 bool bool_vector_data(Bool *vec, size_t index) { return vec->array[index]; }
