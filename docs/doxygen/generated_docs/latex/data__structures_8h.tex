@@ -82,7 +82,7 @@ This macro will return the average value of a data structure. The macro will ret
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.45, 2.18. 8.17, 0.56, 2.28\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} avg = \mbox{\hyperlink{data__structures_8h_a81794266d48f7e352116d53be0fda9fc}{AVERAGE}}(vec);}
-\DoxyCodeLine{PRINT(avg);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(avg);}
 \DoxyCodeLine{\textcolor{comment}{// >> 3.328}}
 
 \end{DoxyCode}
@@ -126,7 +126,7 @@ This macro will create a deep copy of a data structure
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{Int new\_vec = \mbox{\hyperlink{data__structures_8h_a0ba1f915ff0895a09d1dfe31f5c728f3}{COPY}}(vec);}
-\DoxyCodeLine{PRINT(new\_vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(new\_vec);}
 \DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 3, 4, 5 ]}}
 
 \end{DoxyCode}
@@ -168,7 +168,7 @@ This macro will return a data structure of the same type as the input data struc
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{Int cum\_vec = \mbox{\hyperlink{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}{CUMSUM}}(vec);}
-\DoxyCodeLine{PRINT(cum\_vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(cum\_vec);}
 \DoxyCodeLine{\textcolor{comment}{// >> [ 1, 3, 6, 10, 15 ]}}
 
 \end{DoxyCode}
@@ -212,7 +212,7 @@ This macro will delete all duplicate values in a data structure with exception o
 \DoxyCodeLine{int8\_t a[6] = \{1, 1, 2, 2, 3, 3\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 6, 0);}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}{DELETE\_DUPLICATES}}(vec);}
-\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
 \DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 3 ]}}
 
 \end{DoxyCode}
@@ -285,7 +285,7 @@ This macro will insert a range of values between start and end into a data struc
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 10);}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(vec, 2, 20, 2);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} a = \mbox{\hyperlink{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2}{IDATA}}(vec, 3);}
-\DoxyCodeLine{PRINT(a);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(a);}
 \DoxyCodeLine{\textcolor{comment}{// >> 8}}
 
 \end{DoxyCode}
@@ -385,7 +385,7 @@ This macro will calculate the max value in a data structure
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.45, 2.18, 8.17, 0.56, 2.28\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} max = \mbox{\hyperlink{data__structures_8h_a895002453bd9037c335520131a642372}{MAX}}(vec);}
-\DoxyCodeLine{PRINT(max);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(max);}
 \DoxyCodeLine{\textcolor{comment}{// >> 8.17}}
 
 \end{DoxyCode}
@@ -427,7 +427,7 @@ This macro will calculate the max value in a data structure
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.45, 2.18, 8.17, 0.56, 2.28\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} min = \mbox{\hyperlink{data__structures_8h_ab01356067636aa7d12aad9a9302f37a7}{MIN}}(vec);}
-\DoxyCodeLine{PRINT(max);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(max);}
 \DoxyCodeLine{\textcolor{comment}{// >> 0.56}}
 
 \end{DoxyCode}
@@ -525,7 +525,7 @@ This macro will insert a range of values between start and end into a data struc
 \DoxyCodeLine{Int vec;}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 10);}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(vec, 2, 20, 2);}
-\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
 \DoxyCodeLine{\textcolor{comment}{// >> [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]}}
 
 \end{DoxyCode}
@@ -567,7 +567,7 @@ This macro will insert a range of values between start and end into a data struc
 \DoxyCodeLine{Int vec;}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec, 10);}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}{REPEAT}}(vec, 10, 5);}
-\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
 \DoxyCodeLine{\textcolor{comment}{// >> [ 10, 10, 10, 10, 10 ]}}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(vec);}
 
@@ -611,7 +611,7 @@ This macro will insert a range of values between start and end into a data struc
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[5] = \{1, 2, 3, 4, 5\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}{REPLACE\_INDEX}}(vec, 10, 2);}
-\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
 \DoxyCodeLine{\textcolor{comment}{// >> [ 1, 2, 10, 4, 5 ]}}
 
 \end{DoxyCode}
@@ -708,7 +708,7 @@ This macro will reverse the order of a data structure
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 4);}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec, 5)}
 \DoxyCodeLine{\mbox{\hyperlink{vector_8h_af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9}{REVERSE}}(vec);}
-\DoxyCodeLine{PRINT(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
 \DoxyCodeLine{[5, 4, 3, 2, 1 ]}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(vec);}
 
@@ -777,7 +777,7 @@ This macro will calculate the standard deviation of the values in a data structu
 \DoxyCodeLine{\textcolor{keywordtype}{double} a[5] = \{3.45, 2.18, 8.17, 0.56, 2.28\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 5, 0);}
 \DoxyCodeLine{\textcolor{keywordtype}{double} stdev = \mbox{\hyperlink{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}{STDEV}}(vec);}
-\DoxyCodeLine{PRINT(stdev);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(stdev);}
 \DoxyCodeLine{\textcolor{comment}{// >> 2.89559}}
 
 \end{DoxyCode}
@@ -819,7 +819,7 @@ This macro will return the sum of data in a data structure
 \DoxyCodeLine{\textcolor{keywordtype}{int} a[4] = \{1, 2, 3, 4\};}
 \DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec, a, 4, 0);}
 \DoxyCodeLine{\textcolor{keywordtype}{int} b = \mbox{\hyperlink{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}{SUM}}(vec);}
-\DoxyCodeLine{PRINT(b);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(b);}
 \DoxyCodeLine{\textcolor{comment}{// >> 10}}
 
 \end{DoxyCode}

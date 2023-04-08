@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['sort_0',['SORT',['../data__structures_8h.html#a3bd435328ac67b6ab76355c6a90ae0ab',1,'data_structures.h']]],
-  ['stdev_1',['STDEV',['../data__structures_8h.html#a381b9ae37cb75fb74f0a95939eda186e',1,'data_structures.h']]],
-  ['sum_2',['SUM',['../data__structures_8h.html#ab2bc3cf2085b7ef95514abd7c78341de',1,'data_structures.h']]],
-  ['swap_3',['SWAP',['../swap_8h.html#aac9153aee4bdb92701df902e06a74eb3',1,'swap.h']]]
+  ['range_0',['RANGE',['../data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42',1,'data_structures.h']]],
+  ['repeat_1',['REPEAT',['../data__structures_8h.html#a2ca463425145b4a1d1989a92ac937e7e',1,'data_structures.h']]],
+  ['replace_5findex_2',['REPLACE_INDEX',['../data__structures_8h.html#a6fbf1f61f351633bf0504cff6b630a3d',1,'data_structures.h']]],
+  ['replace_5fvalues_3',['REPLACE_VALUES',['../data__structures_8h.html#abad9b6661bf67c0b5cc43ddcbd39c206',1,'data_structures.h']]],
+  ['reverse_4',['REVERSE',['../data__structures_8h.html#ae5f2dc1bcc130da5504af4d09d54864c',1,'data_structures.h']]]
 ];

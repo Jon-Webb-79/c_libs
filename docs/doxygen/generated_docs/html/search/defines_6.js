@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pop_5findex_0',['POP_INDEX',['../data__structures_8h.html#a7873976d8a344c5188e57dffb974056b',1,'data_structures.h']]],
-  ['push_1',['PUSH',['../data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5',1,'data_structures.h']]]
+  ['max_0',['MAX',['../data__structures_8h.html#a895002453bd9037c335520131a642372',1,'data_structures.h']]],
+  ['min_1',['MIN',['../data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7',1,'data_structures.h']]]
 ];

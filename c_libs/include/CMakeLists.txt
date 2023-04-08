@@ -16,6 +16,8 @@ add_library( include
 	swap.h
 	vector.c
 	vector.h
+	print.c
+	print.h
 	data_structures.c
 	data_structures.h
 )

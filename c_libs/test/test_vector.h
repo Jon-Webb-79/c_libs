@@ -25,6 +25,7 @@
 #include <string.h>
 
 #include "../include/data_structures.h"
+#include "../include/print.h"
 
 // TEST_PUSH_TYPE FUNCTIONS
 

@@ -169,10 +169,11 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18. 8.17, 0.56, 2.28};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line"><span class="keywordtype">double</span> avg = <a class="code hl_define" href="data__structures_8h.html#a81794266d48f7e352116d53be0fda9fc">AVERAGE</a>(vec);</div>
-<div class="line">PRINT(avg);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(avg);</div>
 <div class="line"><span class="comment">// &gt;&gt; 3.328</span></div>
 <div class="ttc" id="adata__structures_8h_html_a39f36b37e9611785d15e1691a628ab30"><div class="ttname"><a href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a></div><div class="ttdeci">#define INSERT(T, elements, num_ind, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00094">data_structures.h:94</a></div></div>
 <div class="ttc" id="adata__structures_8h_html_a81794266d48f7e352116d53be0fda9fc"><div class="ttname"><a href="data__structures_8h.html#a81794266d48f7e352116d53be0fda9fc">AVERAGE</a></div><div class="ttdeci">#define AVERAGE(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00443">data_structures.h:443</a></div></div>
+<div class="ttc" id="aprint_8h_html_a15bb631053a1fce9c5470701900984c7"><div class="ttname"><a href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a></div><div class="ttdeci">#define PRINT(...)</div><div class="ttdef"><b>Definition:</b> <a href="print_8h_source.html#l00214">print.h:214</a></div></div>
 <div class="ttc" id="avector_8h_html_a78b085b69ede6314aedfc346b480a078"><div class="ttname"><a href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a></div><div class="ttdeci">#define INIT_VECTOR(T, length)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00280">vector.h:280</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00443">443</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
@@ -232,7 +233,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line">Int new_vec = <a class="code hl_define" href="data__structures_8h.html#a0ba1f915ff0895a09d1dfe31f5c728f3">COPY</a>(vec);</div>
-<div class="line">PRINT(new_vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(new_vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 1, 2, 3, 4, 5 ]</span></div>
 <div class="ttc" id="adata__structures_8h_html_a0ba1f915ff0895a09d1dfe31f5c728f3"><div class="ttname"><a href="data__structures_8h.html#a0ba1f915ff0895a09d1dfe31f5c728f3">COPY</a></div><div class="ttdeci">#define COPY(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00607">data_structures.h:607</a></div></div>
 </div><!-- fragment --> 
@@ -288,7 +289,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line">Int cum_vec = <a class="code hl_define" href="data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c">CUMSUM</a>(vec);</div>
-<div class="line">PRINT(cum_vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(cum_vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 1, 3, 6, 10, 15 ]</span></div>
 <div class="ttc" id="adata__structures_8h_html_ad67d6348b4a31d319108c5b915592e8c"><div class="ttname"><a href="data__structures_8h.html#ad67d6348b4a31d319108c5b915592e8c">CUMSUM</a></div><div class="ttdeci">#define CUMSUM(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00410">data_structures.h:410</a></div></div>
 </div><!-- fragment --> 
@@ -348,7 +349,7 @@ Macros</h2></td></tr>
 <div class="line">int8_t a[6] = {1, 1, 2, 2, 3, 3};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 6, 0);</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a846efd03c9d323e9b03d70331276d47a">DELETE_DUPLICATES</a>(vec);</div>
-<div class="line">PRINT(vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 1, 2, 3 ]</span></div>
 <div class="ttc" id="adata__structures_8h_html_a846efd03c9d323e9b03d70331276d47a"><div class="ttname"><a href="data__structures_8h.html#a846efd03c9d323e9b03d70331276d47a">DELETE_DUPLICATES</a></div><div class="ttdeci">#define DELETE_DUPLICATES(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00266">data_structures.h:266</a></div></div>
 </div><!-- fragment --> 
@@ -469,7 +470,7 @@ Macros</h2></td></tr>
 <div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 10);</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(vec, 2, 20, 2);</div>
 <div class="line"><span class="keywordtype">int</span> a = <a class="code hl_define" href="data__structures_8h.html#a2cc515116896ddef6d83c6afbabf74d2">IDATA</a>(vec, 3);</div>
-<div class="line">PRINT(a);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(a);</div>
 <div class="line"><span class="comment">// &gt;&gt; 8</span></div>
 <div class="ttc" id="adata__structures_8h_html_a2cc515116896ddef6d83c6afbabf74d2"><div class="ttname"><a href="data__structures_8h.html#a2cc515116896ddef6d83c6afbabf74d2">IDATA</a></div><div class="ttdeci">#define IDATA(T, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00644">data_structures.h:644</a></div></div>
 <div class="ttc" id="adata__structures_8h_html_a67c03354ef846fed0c21ad5802407c42"><div class="ttname"><a href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a></div><div class="ttdeci">#define RANGE(T, start, end, delta)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00574">data_structures.h:574</a></div></div>
@@ -670,7 +671,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line"><span class="keywordtype">double</span> max = <a class="code hl_define" href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a>(vec);</div>
-<div class="line">PRINT(max);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(max);</div>
 <div class="line"><span class="comment">// &gt;&gt; 8.17</span></div>
 <div class="ttc" id="adata__structures_8h_html_a895002453bd9037c335520131a642372"><div class="ttname"><a href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a></div><div class="ttdeci">#define MAX(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00508">data_structures.h:508</a></div></div>
 </div><!-- fragment --> 
@@ -726,7 +727,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line"><span class="keywordtype">double</span> min = <a class="code hl_define" href="data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7">MIN</a>(vec);</div>
-<div class="line">PRINT(max);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(max);</div>
 <div class="line"><span class="comment">// &gt;&gt; 0.56</span></div>
 <div class="ttc" id="adata__structures_8h_html_ab01356067636aa7d12aad9a9302f37a7"><div class="ttname"><a href="data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7">MIN</a></div><div class="ttdeci">#define MIN(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00540">data_structures.h:540</a></div></div>
 </div><!-- fragment --> 
@@ -928,7 +929,7 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line">Int vec;</div>
 <div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 10);</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a67c03354ef846fed0c21ad5802407c42">RANGE</a>(vec, 2, 20, 2);</div>
-<div class="line">PRINT(vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]</span></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00574">574</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
@@ -1001,7 +1002,7 @@ Macros</h2></td></tr>
 <div class="fragment"><div class="line">Int vec;</div>
 <div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 10);</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a2ca463425145b4a1d1989a92ac937e7e">REPEAT</a>(vec, 10, 5);</div>
-<div class="line">PRINT(vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 10, 10, 10, 10, 10 ]</span></div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a1603ab82164c2b586fb4e918dfe0787d">FREE</a>(vec);</div>
 <div class="ttc" id="adata__structures_8h_html_a1603ab82164c2b586fb4e918dfe0787d"><div class="ttname"><a href="data__structures_8h.html#a1603ab82164c2b586fb4e918dfe0787d">FREE</a></div><div class="ttdeci">#define FREE(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00141">data_structures.h:141</a></div></div>
@@ -1077,7 +1078,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> a[5] = {1, 2, 3, 4, 5};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a6fbf1f61f351633bf0504cff6b630a3d">REPLACE_INDEX</a>(vec, 10, 2);</div>
-<div class="line">PRINT(vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(vec);</div>
 <div class="line"><span class="comment">// &gt;&gt; [ 1, 2, 10, 4, 5 ]</span></div>
 <div class="ttc" id="adata__structures_8h_html_a6fbf1f61f351633bf0504cff6b630a3d"><div class="ttname"><a href="data__structures_8h.html#a6fbf1f61f351633bf0504cff6b630a3d">REPLACE_INDEX</a></div><div class="ttdeci">#define REPLACE_INDEX(T, new_val, index)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00682">data_structures.h:682</a></div></div>
 </div><!-- fragment --> 
@@ -1223,7 +1224,7 @@ Macros</h2></td></tr>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 4);</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a3fee9a7b57ea204e4220ef2bd0700db5">PUSH</a>(vec, 5)</div>
 <div class="line"><a class="code hl_enumvalue" href="vector_8h.html#af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9">REVERSE</a>(vec);</div>
-<div class="line">PRINT(vec);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(vec);</div>
 <div class="line">[5, 4, 3, 2, 1 ]</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a1603ab82164c2b586fb4e918dfe0787d">FREE</a>(vec);</div>
 <div class="ttc" id="avector_8h_html_af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9"><div class="ttname"><a href="vector_8h.html#af40f59df20b550c793c470752e457636a906b7cc20b42994dda4da492767c1de9">REVERSE</a></div><div class="ttdeci">@ REVERSE</div><div class="ttdef"><b>Definition:</b> <a href="vector_8h_source.html#l00051">vector.h:50</a></div></div>
@@ -1322,7 +1323,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
 <div class="line"><span class="keywordtype">double</span> stdev = <a class="code hl_define" href="data__structures_8h.html#a381b9ae37cb75fb74f0a95939eda186e">STDEV</a>(vec);</div>
-<div class="line">PRINT(stdev);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(stdev);</div>
 <div class="line"><span class="comment">// &gt;&gt; 2.89559</span></div>
 <div class="ttc" id="adata__structures_8h_html_a381b9ae37cb75fb74f0a95939eda186e"><div class="ttname"><a href="data__structures_8h.html#a381b9ae37cb75fb74f0a95939eda186e">STDEV</a></div><div class="ttdeci">#define STDEV(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00476">data_structures.h:476</a></div></div>
 </div><!-- fragment --> 
@@ -1378,7 +1379,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="keywordtype">int</span> a[4] = {1, 2, 3, 4};</div>
 <div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 4, 0);</div>
 <div class="line"><span class="keywordtype">int</span> b = <a class="code hl_define" href="data__structures_8h.html#ab2bc3cf2085b7ef95514abd7c78341de">SUM</a>(vec);</div>
-<div class="line">PRINT(b);</div>
+<div class="line"><a class="code hl_define" href="print_8h.html#a15bb631053a1fce9c5470701900984c7">PRINT</a>(b);</div>
 <div class="line"><span class="comment">// &gt;&gt; 10</span></div>
 <div class="ttc" id="adata__structures_8h_html_ab2bc3cf2085b7ef95514abd7c78341de"><div class="ttname"><a href="data__structures_8h.html#ab2bc3cf2085b7ef95514abd7c78341de">SUM</a></div><div class="ttdeci">#define SUM(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00377">data_structures.h:377</a></div></div>
 </div><!-- fragment --> 
