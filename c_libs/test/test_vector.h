@@ -332,6 +332,24 @@ void test_double_vec_data(void **state);
 void test_ldouble_vec_data(void **state);
 void test_bool_vec_data(void **state);
 void test_string_vec_data(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST_TRIM_TYPE_VECTOR FUNCTIONS
+
+void test_trim_char_vec(void **state);
+void test_trim_uchar_vec(void **state);
+void test_trim_short_vec(void **state);
+void test_trim_ushort_vec(void **state);
+void test_trim_int_vec(void **state);
+void test_trim_uint_vec(void **state);
+void test_trim_long_vec(void **state);
+void test_trim_ulong_vec(void **state);
+void test_trim_llong_vec(void **state);
+void test_trim_ullong_vec(void **state);
+void test_trim_float_vec(void **state);
+void test_trim_double_vec(void **state);
+void test_trim_ldouble_vec(void **state);
+void test_trim_bool_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

@@ -547,6 +547,27 @@ commonality with other data structures.
    // Can also be achieved with float value = vec.array[2];
    FREE(vec);
 
+TRIM
+====
+The ``TRIM(type vec)`` macro will trim the size of a dynamically allocated array to the minimum
+necessary size.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   INIT_VECTOR(vec, 15);
+   float a[4] = {1.1, 2.2, 3.3, 4.4}
+   INSERT(vec, a, 4, 0);
+   PRINT("Initial allocation: ", vec->allocated_length);
+   TRIM(vec);
+   PRINT("Final allocation: ", vec->allocated_length);
+   // >> Initial allocation: 15
+   // >> Final allocation: 4
+   FREE(vec);
+
 =====
 PRINT
 =====

@@ -5830,20 +5830,20 @@ void trim_bool_vector(Bool *vec);
  *
  * /param vec The vector to be trimmed.
  */
-#define TRIM(T) _Generic( (T), Int8: Short: trim_short_vector, \
-									   UShort: trim_ushort_vector, \
-									   Int: trim_int_vector, \
-									   UInt: trim_uint_vector, \
-									   LInt: trim_long_vector, \
-									   ULInt: trim_ulong_vector, \
-									   LLInt: trim_llong_vector, \
-									   ULLInt: trim_ullong_vector, \
-									   Flt: trim_float_vector, \
-									   Dble: trim_double_vector, \
-									   LDble: trim_ldouble_vector, \
-									   Char: trim_char_vector, \
-									   UChar: trim_uchar_vector, \
-									   Bool: trim_bool_vector)(&T)
+#define TRIM(T) _Generic( (T), Short: trim_short_vector, \
+							   UShort: trim_ushort_vector, \
+							   Int: trim_int_vector, \
+							   UInt: trim_uint_vector, \
+							   LInt: trim_long_vector, \
+							   ULInt: trim_ulong_vector, \
+							   LLInt: trim_llong_vector, \
+							   ULLInt: trim_ullong_vector, \
+							   Flt: trim_float_vector, \
+							   Dble: trim_double_vector, \
+							   LDble: trim_ldouble_vector, \
+							   Char: trim_char_vector, \
+							   UChar: trim_uchar_vector, \
+							   Bool: trim_bool_vector)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // REPLACE_TYPE_VECTOR_INDEX FUNCTIONS

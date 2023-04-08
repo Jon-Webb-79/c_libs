@@ -3411,4 +3411,160 @@ void test_string_vec_data(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST_TRIM_TYPE_VEC
+
+void test_trim_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 20);
+	char a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 20);
+	unsigned char a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 20);
+	short int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 20);
+	unsigned short int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 20);
+	int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 20);
+	unsigned int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 20);
+	long int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 20);
+	unsigned long int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 20);
+	long long int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 20);
+	unsigned long long int a[3] = {1, 2, 3};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 20);
+	float a[3] = {1., 2., 3.};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 20);
+	double a[3] = {1., 2., 3.};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 20);
+	long double a[3] = {1., 2., 3.};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_trim_bool_vec(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 20);
+	bool a[3] = {true, false, true};
+	INSERT(vec, a, 3, 0);
+	TRIM(vec);
+	assert_int_equal(3, vec.allocated_length);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof
