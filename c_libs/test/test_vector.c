@@ -3071,6 +3071,8 @@ void test_copy_short_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3083,6 +3085,8 @@ void test_copy_ushort_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3095,6 +3099,8 @@ void test_copy_char_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3107,6 +3113,8 @@ void test_copy_uchar_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3119,6 +3127,8 @@ void test_copy_int_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3131,6 +3141,8 @@ void test_copy_uint_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3143,6 +3155,8 @@ void test_copy_long_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3155,6 +3169,8 @@ void test_copy_ulong_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3167,6 +3183,8 @@ void test_copy_llong_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3179,6 +3197,8 @@ void test_copy_ullong_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3191,6 +3211,8 @@ void test_copy_float_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_float_equal(a[i], vec2.array[i], 1.0e-3);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3203,6 +3225,8 @@ void test_copy_double_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_float_equal(a[i], vec2.array[i], 1.0e-3);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3215,6 +3239,8 @@ void test_copy_ldouble_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_float_equal(a[i], vec2.array[i], 1.0e-3);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3227,6 +3253,8 @@ void test_copy_bool_vec(void **state) {
 	for (size_t i = 0; i < vec2.active_length; i++) {
 		assert_int_equal(a[i], vec2.array[i]);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ------------------------------------------------------------------------------------------
 
@@ -3241,6 +3269,8 @@ void test_copy_string_vec(void **state) {
 		cmp = strcmp(a[i], vec2.array[i]);
 		assert_int_equal(cmp, 0);
 	}
+	FREE(vec1);
+	FREE(vec2);
 }
 // ==========================================================================================
 // ==========================================================================================
