@@ -107,6 +107,8 @@ Macros</h2></td></tr>
 <tr class="separator:a381b9ae37cb75fb74f0a95939eda186e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a895002453bd9037c335520131a642372"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a>(T)</td></tr>
 <tr class="separator:a895002453bd9037c335520131a642372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01356067636aa7d12aad9a9302f37a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7">MIN</a>(T)</td></tr>
+<tr class="separator:ab01356067636aa7d12aad9a9302f37a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a81794266d48f7e352116d53be0fda9fc" name="a81794266d48f7e352116d53be0fda9fc"></a>
@@ -531,6 +533,62 @@ Macros</h2></td></tr>
 <div class="ttc" id="adata__structures_8h_html_a895002453bd9037c335520131a642372"><div class="ttname"><a href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a></div><div class="ttdeci">#define MAX(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00508">data_structures.h:508</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00508">508</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="ab01356067636aa7d12aad9a9302f37a7" name="ab01356067636aa7d12aad9a9302f37a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01356067636aa7d12aad9a9302f37a7">&#9670;&nbsp;</a></span>MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                              _Generic( (T), Char: <a class="code hl_function" href="vector_8c.html#a891486b9b55a8c3ac25a1225553fb0c7">min_char_vector</a>, \</div>
+<div class="line">                              UChar: <a class="code hl_function" href="vector_8c.html#a1dbc7c797a21eb6c44d009cb497b50ae">min_uchar_vector</a>, \</div>
+<div class="line">                              Short: <a class="code hl_function" href="vector_8c.html#a21be2c6c074005bfa1c33603299f3181">min_short_vector</a>, \</div>
+<div class="line">                              UShort: <a class="code hl_function" href="vector_8c.html#a3b2bb12ccbe4e256ec4da071673dd601">min_ushort_vector</a>, \</div>
+<div class="line">                              Int: <a class="code hl_function" href="vector_8c.html#aad99e117541f381f0c14f5620507f6e1">min_int_vector</a>, \</div>
+<div class="line">                              UInt: <a class="code hl_function" href="vector_8c.html#a449905d346deae4f4a83314c592a5b80">min_uint_vector</a>, \</div>
+<div class="line">                              LInt: <a class="code hl_function" href="vector_8c.html#aaff52778fc2f05ace6de3570530e9068">min_long_vector</a>, \</div>
+<div class="line">                              ULInt: <a class="code hl_function" href="vector_8c.html#a98b9ea464f1a6e1012f3aae9031a8a13">min_ulong_vector</a>, \</div>
+<div class="line">                              LLInt: <a class="code hl_function" href="vector_8c.html#ad1a7c046cbcac65a71e5442ec5680bdc">min_llong_vector</a>, \</div>
+<div class="line">                              ULLInt: <a class="code hl_function" href="vector_8c.html#a10aea428d676da30abd474d11dbab300">min_ullong_vector</a>, \</div>
+<div class="line">                              Flt: <a class="code hl_function" href="vector_8c.html#a37e7749c40c9ecefb35c6f677e6e2786">min_float_vector</a>, \</div>
+<div class="line">                              Dble: <a class="code hl_function" href="vector_8c.html#ac870c654ea8b8143650fb8504880d80a">min_double_vector</a>, \</div>
+<div class="line">                              LDble: <a class="code hl_function" href="vector_8h.html#af3eef7302375a05b37b3ae4e0d8251a8">min_ldouble_vector</a>)(&amp;T)</div>
+<div class="ttc" id="avector_8c_html_a10aea428d676da30abd474d11dbab300"><div class="ttname"><a href="vector_8c.html#a10aea428d676da30abd474d11dbab300">min_ullong_vector</a></div><div class="ttdeci">unsigned long long int min_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04246">vector.c:4246</a></div></div>
+<div class="ttc" id="avector_8c_html_a1dbc7c797a21eb6c44d009cb497b50ae"><div class="ttname"><a href="vector_8c.html#a1dbc7c797a21eb6c44d009cb497b50ae">min_uchar_vector</a></div><div class="ttdeci">unsigned char min_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04158">vector.c:4158</a></div></div>
+<div class="ttc" id="avector_8c_html_a21be2c6c074005bfa1c33603299f3181"><div class="ttname"><a href="vector_8c.html#a21be2c6c074005bfa1c33603299f3181">min_short_vector</a></div><div class="ttdeci">short int min_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04169">vector.c:4169</a></div></div>
+<div class="ttc" id="avector_8c_html_a37e7749c40c9ecefb35c6f677e6e2786"><div class="ttname"><a href="vector_8c.html#a37e7749c40c9ecefb35c6f677e6e2786">min_float_vector</a></div><div class="ttdeci">float min_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04257">vector.c:4257</a></div></div>
+<div class="ttc" id="avector_8c_html_a3b2bb12ccbe4e256ec4da071673dd601"><div class="ttname"><a href="vector_8c.html#a3b2bb12ccbe4e256ec4da071673dd601">min_ushort_vector</a></div><div class="ttdeci">unsigned short int min_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04180">vector.c:4180</a></div></div>
+<div class="ttc" id="avector_8c_html_a449905d346deae4f4a83314c592a5b80"><div class="ttname"><a href="vector_8c.html#a449905d346deae4f4a83314c592a5b80">min_uint_vector</a></div><div class="ttdeci">unsigned int min_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04202">vector.c:4202</a></div></div>
+<div class="ttc" id="avector_8c_html_a891486b9b55a8c3ac25a1225553fb0c7"><div class="ttname"><a href="vector_8c.html#a891486b9b55a8c3ac25a1225553fb0c7">min_char_vector</a></div><div class="ttdeci">char min_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04147">vector.c:4147</a></div></div>
+<div class="ttc" id="avector_8c_html_a98b9ea464f1a6e1012f3aae9031a8a13"><div class="ttname"><a href="vector_8c.html#a98b9ea464f1a6e1012f3aae9031a8a13">min_ulong_vector</a></div><div class="ttdeci">unsigned long int min_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04224">vector.c:4224</a></div></div>
+<div class="ttc" id="avector_8c_html_aad99e117541f381f0c14f5620507f6e1"><div class="ttname"><a href="vector_8c.html#aad99e117541f381f0c14f5620507f6e1">min_int_vector</a></div><div class="ttdeci">int min_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04191">vector.c:4191</a></div></div>
+<div class="ttc" id="avector_8c_html_aaff52778fc2f05ace6de3570530e9068"><div class="ttname"><a href="vector_8c.html#aaff52778fc2f05ace6de3570530e9068">min_long_vector</a></div><div class="ttdeci">long int min_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04213">vector.c:4213</a></div></div>
+<div class="ttc" id="avector_8c_html_ac870c654ea8b8143650fb8504880d80a"><div class="ttname"><a href="vector_8c.html#ac870c654ea8b8143650fb8504880d80a">min_double_vector</a></div><div class="ttdeci">double min_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04268">vector.c:4268</a></div></div>
+<div class="ttc" id="avector_8c_html_ad1a7c046cbcac65a71e5442ec5680bdc"><div class="ttname"><a href="vector_8c.html#ad1a7c046cbcac65a71e5442ec5680bdc">min_llong_vector</a></div><div class="ttdeci">long long int min_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04235">vector.c:4235</a></div></div>
+<div class="ttc" id="avector_8h_html_af3eef7302375a05b37b3ae4e0d8251a8"><div class="ttname"><a href="vector_8h.html#af3eef7302375a05b37b3ae4e0d8251a8">min_ldouble_vector</a></div><div class="ttdeci">long double min_ldouble_vector(LDble *vec)</div></div>
+</div><!-- fragment --><p >This macro will calculate the max value in a data structure</p>
+<p >/param T The input data structure</p>
+<div class="fragment"><div class="line">Dble vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 5);</div>
+<div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
+<div class="line"><span class="keywordtype">double</span> min = <a class="code hl_define" href="data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7">MIN</a>(vec);</div>
+<div class="line">PRINT(max);</div>
+<div class="line"><span class="comment">// &gt;&gt; 0.56</span></div>
+<div class="ttc" id="adata__structures_8h_html_ab01356067636aa7d12aad9a9302f37a7"><div class="ttname"><a href="data__structures_8h.html#ab01356067636aa7d12aad9a9302f37a7">MIN</a></div><div class="ttdeci">#define MIN(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00540">data_structures.h:540</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00540">540</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>

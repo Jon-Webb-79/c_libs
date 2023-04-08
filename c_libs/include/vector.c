@@ -4274,6 +4274,17 @@ double min_double_vector(Dble *vec) {
 	}
 	return max;
 }
+// ------------------------------------------------------------------------------------------
+
+long double min_ldouble_vector(LDble *vec) {
+	if (vec->active_length == 1) return vec->array[0];
+
+	long double max = vec->array[0];
+	for (size_t i = 1; i < vec->active_length; i++) {
+		if (max > vec->array[i]) max = vec->array[i];
+	}
+	return max;
+}
 // ==========================================================================================
 // ==========================================================================================
 // RANGE_TYPE_VEC FUNCTIONS

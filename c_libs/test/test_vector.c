@@ -2754,4 +2754,149 @@ void test_max_uchar_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST_MIN_TYPE_VEC FUNCTIONS
+
+void test_min_short_vec(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	short int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ushort_vec(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned short int max = MAX(vec);
+	assert_int_equal(max, 5);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_int_vec(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_uint_vec(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_long_vec(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ulong_vec(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned long int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_llong_vec(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	long long int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ullong_vec(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned long long int max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_float_vec(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	float a[5] = {2.18, 2.02, 3.05, 4.18, 0.87};
+	INSERT(vec, a, 5, 0);
+	float max = MIN(vec);
+	assert_float_equal(max, 0.87, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_double_vec(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {2.18, 2.02, 3.05, 4.18, 0.87};
+	INSERT(vec, a, 5, 0);
+	double max = MIN(vec);
+	assert_float_equal(max, 0.87, 1.0e-3);
+	FREE(vec);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ldouble_vec(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {2.18, 2.02, 3.05, 4.18, 0.87};
+	INSERT(vec, a, 5, 0);
+	long double max = MIN(vec);
+	assert_float_equal(max, 0.87, 1.0e-3);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_min_char_vec(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	char max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_min_uchar_vec(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	unsigned char max = MIN(vec);
+	assert_int_equal(max, 1);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

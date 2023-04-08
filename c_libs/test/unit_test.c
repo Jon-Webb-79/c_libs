@@ -216,7 +216,20 @@ const struct CMUnitTest tests_vector[] = {
 	cmocka_unit_test(test_max_ullong_vec),
 	cmocka_unit_test(test_max_float_vec),
 	cmocka_unit_test(test_max_double_vec),
-	cmocka_unit_test(test_max_ldouble_vec)
+	cmocka_unit_test(test_max_ldouble_vec),
+	cmocka_unit_test(test_min_char_vec),
+	cmocka_unit_test(test_min_uchar_vec),
+	cmocka_unit_test(test_min_short_vec),
+	cmocka_unit_test(test_min_ushort_vec),
+	cmocka_unit_test(test_min_int_vec),
+	cmocka_unit_test(test_min_uint_vec),
+	cmocka_unit_test(test_min_long_vec),
+	cmocka_unit_test(test_min_ulong_vec),
+	cmocka_unit_test(test_min_llong_vec),
+	cmocka_unit_test(test_min_ullong_vec),
+	cmocka_unit_test(test_min_float_vec),
+	cmocka_unit_test(test_min_double_vec),
+	cmocka_unit_test(test_min_ldouble_vec)
 };
 
 // Begin code

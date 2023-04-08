@@ -518,6 +518,39 @@
 							  Flt: max_float_vector, \
 						      Dble: max_double_vector, \
 							  LDble: max_ldouble_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// MIN MACRO
+
+/**
+ * This macro will calculate the max value in a data structure
+ *
+ * /param T The input data structure
+ *
+ * @code
+ * Dble vec;
+ * INIT_VECTOR(vec, 5);
+ * double a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+ * INSERT(vec, a, 5, 0);
+ * double min = MIN(vec);
+ * PRINT(max);
+ * // >> 0.56
+ * @endcode
+ */
+#define MIN(T) _Generic( (T), Char: min_char_vector, \
+		                      UChar: min_uchar_vector, \
+							  Short: min_short_vector, \
+							  UShort: min_ushort_vector, \
+							  Int: min_int_vector, \
+							  UInt: min_uint_vector, \
+							  LInt: min_long_vector, \
+							  ULInt: min_ulong_vector, \
+							  LLInt: min_llong_vector, \
+							  ULLInt: min_ullong_vector, \
+							  Flt: min_float_vector, \
+						      Dble: min_double_vector, \
+							  LDble: min_ldouble_vector)(&T)
+
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

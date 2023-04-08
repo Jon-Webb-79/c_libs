@@ -260,6 +260,23 @@ void test_max_double_vec(void **state);
 void test_max_ldouble_vec(void **state);
 void test_max_char_vec(void **state);
 void test_max_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST MIN_TYPE_VEC FUNCTIONS
+
+void test_min_short_vec(void **state);
+void test_min_ushort_vec(void **state);
+void test_min_int_vec(void **state);
+void test_min_uint_vec(void **state);
+void test_min_long_vec(void **state);
+void test_min_ulong_vec(void **state);
+void test_min_llong_vec(void **state);
+void test_min_ullong_vec(void **state);
+void test_min_float_vec(void **state);
+void test_min_double_vec(void **state);
+void test_min_ldouble_vec(void **state);
+void test_min_char_vec(void **state);
+void test_min_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================
