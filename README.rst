@@ -503,6 +503,27 @@ will fail in compile time if the user tries to user a ``Bool``, or ``String`` da
    //      27.5, 30.0, 32.5, 35.0, 37.5 ]
    FREE(vec);
 
+COPY
+====
+The ``type = COPY(type vec)`` macro will produce a deep copy of a vector data structure.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   // Same as init_float_vector(&vec, 15);
+   INIT_VECTOR(vec, 15);
+   // Same as range_float_vector(&vec, 2.5, 37.5, 2.5);
+   RANGE(vec, 2.5, 37.5, 2.5)
+   // Same as float new_vec = copy_float_vector(&vec);
+   Flt new_vec = COPY(vec);
+   PRINT(new_vec);
+   // >> [ 2.5, 5.0, 7.5, 10.0, 12.5, 15.0, 17.5, 20.0, 22.5, 25.0,
+   //      27.5, 30.0, 32.5, 35.0, 37.5 ]
+   FREE(vec);
+
 =====
 PRINT
 =====

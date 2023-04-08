@@ -5352,6 +5352,14 @@ LDble copy_ldouble_vector(LDble *vec);
  * /param vec A vector struct of type Char
  */
 Char copy_char_vector(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an UChar struct
+ *
+ * /param vec A vector struct of type UChar
+ */
+UChar copy_uchar_vector(UChar *vec);
 // --------------------------------------------------------------------------------
 
 /**

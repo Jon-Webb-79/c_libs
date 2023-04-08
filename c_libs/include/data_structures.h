@@ -584,6 +584,42 @@
 									               Flt: range_float_vector, \
 						                           Dble: range_double_vector, \
 									               LDble: range_ldouble_vector)(&T, start, end, delta)
+// ==========================================================================================
+// ==========================================================================================
+// COPY MACRO
+
+/**
+ * This macro will create a deep copy of a data structure
+ *
+ * /param T The data structure
+ * /retur structure The deep copy of a data structure
+ *
+ * @code
+ * Int vec;
+ * INIT_VECTOR(vec, 10);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * INSERT(vec, a, 5, 0);
+ * Int new_vec = COPY(vec);
+ * PRINT(new_vec);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * @endcode
+ */
+#define COPY(T) _Generic( (T), UChar: copy_uchar_vector, \
+							   Short: copy_short_vector, \
+							   UShort: copy_ushort_vector, \
+							   Int: copy_int_vector, \
+							   UInt: copy_uint_vector, \
+							   LInt: copy_long_vector, \
+							   ULInt: copy_ulong_vector, \
+							   LLInt: copy_llong_vector, \
+							   ULLInt: copy_ullong_vector, \
+							   Flt: copy_float_vector, \
+						       Dble: copy_double_vector, \
+							   LDble: copy_ldouble_vector, \
+							   Char: copy_char_vector, \
+							   Bool: copy_bool_vector, \
+							   String: copy_string_vector)(&T)
+
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

@@ -3060,4 +3060,188 @@ void test_range_uchar_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+// TEST COPY_TYPE_VEC FUNCTIONS
+
+void test_copy_short_vec(void **state) {
+    Short vec1;
+	INIT_VECTOR(vec1, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	Short vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_ushort_vec(void **state) {
+    UShort vec1;
+	INIT_VECTOR(vec1, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	UShort vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_char_vec(void **state) {
+    Char vec1;
+	INIT_VECTOR(vec1, 5);
+	char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	Char vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_uchar_vec(void **state) {
+    UChar vec1;
+	INIT_VECTOR(vec1, 5);
+	unsigned char a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	UChar vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_int_vec(void **state) {
+    Int vec1;
+	INIT_VECTOR(vec1, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	Int vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_uint_vec(void **state) {
+    UInt vec1;
+	INIT_VECTOR(vec1, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	UInt vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_long_vec(void **state) {
+    LInt vec1;
+	INIT_VECTOR(vec1, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	LInt vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_ulong_vec(void **state) {
+    ULInt vec1;
+	INIT_VECTOR(vec1, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	ULInt vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_llong_vec(void **state) {
+    LLInt vec1;
+	INIT_VECTOR(vec1, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	LLInt vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_ullong_vec(void **state) {
+    ULLInt vec1;
+	INIT_VECTOR(vec1, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec1, a, 5, 0);
+	ULLInt vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_float_vec(void **state) {
+    Flt vec1;
+	INIT_VECTOR(vec1, 5);
+	float a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec1, a, 5, 0);
+	Flt vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_float_equal(a[i], vec2.array[i], 1.0e-3);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_double_vec(void **state) {
+    Dble vec1;
+	INIT_VECTOR(vec1, 5);
+	double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec1, a, 5, 0);
+	Dble vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_float_equal(a[i], vec2.array[i], 1.0e-3);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_ldouble_vec(void **state) {
+    LDble vec1;
+	INIT_VECTOR(vec1, 5);
+	long double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec1, a, 5, 0);
+	LDble vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_float_equal(a[i], vec2.array[i], 1.0e-3);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_bool_vec(void **state) {
+    Bool vec1;
+	INIT_VECTOR(vec1, 5);
+	bool a[5] = {true, false, true, false, true};
+	INSERT(vec1, a, 5, 0);
+	Bool vec2 = COPY(vec1);
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		assert_int_equal(a[i], vec2.array[i]);
+	}
+}
+// ------------------------------------------------------------------------------------------
+
+void test_copy_string_vec(void **state) {
+    String vec1;
+	init_string_vector(&vec1);
+	char *a[5] = {"One", "Two", "Three", "Four", "Five"};
+	INSERT(vec1, a, 5, 0);
+	String vec2 = COPY(vec1);
+	int cmp;
+	for (size_t i = 0; i < vec2.active_length; i++) {
+		cmp = strcmp(a[i], vec2.array[i]);
+		assert_int_equal(cmp, 0);
+	}
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

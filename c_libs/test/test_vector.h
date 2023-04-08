@@ -294,7 +294,25 @@ void test_range_double_vec(void **state);
 void test_range_ldouble_vec(void **state);
 void test_range_char_vec(void **state);
 void test_range_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST COPY_TYPE_VEC FUNCTIONS
 
+void test_copy_short_vec(void **state);
+void test_copy_ushort_vec(void **state);
+void test_copy_int_vec(void **state);
+void test_copy_uint_vec(void **state);
+void test_copy_long_vec(void **state);
+void test_copy_ulong_vec(void **state);
+void test_copy_llong_vec(void **state);
+void test_copy_ullong_vec(void **state);
+void test_copy_float_vec(void **state);
+void test_copy_double_vec(void **state);
+void test_copy_ldouble_vec(void **state);
+void test_copy_char_vec(void **state);
+void test_copy_uchar_vec(void **state);
+void test_copy_bool_vec(void **state);
+void test_copy_string_vec(void **state);
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================

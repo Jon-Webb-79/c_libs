@@ -4565,6 +4565,14 @@ Char copy_char_vector(Char *vec) {
 	insert_char_vector(&new_vec, vec->array, vec->active_length, 0);
 	return new_vec;
 }
+// ------------------------------------------------------------------------------------------
+
+UChar copy_uchar_vector(UChar *vec) {
+	UChar new_vec;
+	init_uchar_vector(&new_vec, vec->active_length);
+	insert_uchar_vector(&new_vec, vec->array, vec->active_length, 0);
+	return new_vec;
+}
 // --------------------------------------------------------------------------------
 
 Bool copy_bool_vector(Bool *vec) {
