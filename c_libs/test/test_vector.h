@@ -243,6 +243,23 @@ void test_stdev_double_vec(void **state);
 void test_stdev_ldouble_vec(void **state);
 void test_stdev_char_vec(void **state);
 void test_stdev_uchar_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST MAX_TYPE_VEC FUNCTIONS
+
+void test_max_short_vec(void **state);
+void test_max_ushort_vec(void **state);
+void test_max_int_vec(void **state);
+void test_max_uint_vec(void **state);
+void test_max_long_vec(void **state);
+void test_max_ulong_vec(void **state);
+void test_max_llong_vec(void **state);
+void test_max_ullong_vec(void **state);
+void test_max_float_vec(void **state);
+void test_max_double_vec(void **state);
+void test_max_ldouble_vec(void **state);
+void test_max_char_vec(void **state);
+void test_max_uchar_vec(void **state);
 
 #endif /* test_vector_H */
 // ==========================================================================================

@@ -486,6 +486,38 @@
 								Flt: stdev_float_vector, \
 						        Dble: stdev_double_vector, \
 								LDble: stdev_ldouble_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// MAC MACRO
+
+/**
+ * This macro will calculate the max value in a data structure
+ *
+ * /param T The input data structure
+ *
+ * @code
+ * Dble vec;
+ * INIT_VECTOR(vec, 5);
+ * double a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+ * INSERT(vec, a, 5, 0);
+ * double max = MAX(vec);
+ * PRINT(max);
+ * // >> 8.17
+ * @endcode
+ */
+#define MAX(T) _Generic( (T), Char: max_char_vector, \
+		                      UChar: max_uchar_vector, \
+							  Short: max_short_vector, \
+							  UShort: max_ushort_vector, \
+							  Int: max_int_vector, \
+							  UInt: max_uint_vector, \
+							  LInt: max_long_vector, \
+							  ULInt: max_ulong_vector, \
+							  LLInt: max_llong_vector, \
+							  ULLInt: max_ullong_vector, \
+							  Flt: max_float_vector, \
+						      Dble: max_double_vector, \
+							  LDble: max_ldouble_vector)(&T)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

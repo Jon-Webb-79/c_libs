@@ -459,6 +459,30 @@ a vector data structure. **NOTE:** This macro does not work with hte ``Bool`` or
    // 3.19682
    FREE(vec);
 
+MAX/MIN
+=======
+The macros ``type max = MAX(vtype vec)`` and ``type min = MIN(vtype vec)`` will return the minimum and maximum
+value in a vector data structure.  This function will fail in compile time if the user tries to enter
+``Bool``, or ``String`` data type.
+
+.. code-block:: c
+
+   #include <stdio.h>
+   #include "array_ops.h"
+   #include "print.h"
+
+   Flt vec;
+   INIT_VECTOR(vec, 5);
+   float a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};
+   INSERT(vec, a, 5, 0);
+   float max = MAX(vec);
+   PRINT(max);
+   // 3.45
+   float min = MIN(vec);
+   PRINT(min);
+   // >> 0.56
+   FREE(vec);
+
 =====
 PRINT
 =====

@@ -105,6 +105,8 @@ Macros</h2></td></tr>
 <tr class="separator:a81794266d48f7e352116d53be0fda9fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a381b9ae37cb75fb74f0a95939eda186e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a381b9ae37cb75fb74f0a95939eda186e">STDEV</a>(T)</td></tr>
 <tr class="separator:a381b9ae37cb75fb74f0a95939eda186e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895002453bd9037c335520131a642372"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a>(T)</td></tr>
+<tr class="separator:a895002453bd9037c335520131a642372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a81794266d48f7e352116d53be0fda9fc" name="a81794266d48f7e352116d53be0fda9fc"></a>
@@ -473,6 +475,62 @@ Macros</h2></td></tr>
 <div class="ttc" id="avector_8c_html_aead9f94df495db661d185ef0363ec1d6"><div class="ttname"><a href="vector_8c.html#aead9f94df495db661d185ef0363ec1d6">sort_string_vector</a></div><div class="ttdeci">void sort_string_vector(String *vec, size_t low, size_t high, sort_order order)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l02867">vector.c:2867</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00322">322</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
+
+</div>
+</div>
+<a id="a895002453bd9037c335520131a642372" name="a895002453bd9037c335520131a642372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895002453bd9037c335520131a642372">&#9670;&nbsp;</a></span>MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">T</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                              _Generic( (T), Char: <a class="code hl_function" href="vector_8c.html#ac45503684793e5582c2bdac1d7d52ba3">max_char_vector</a>, \</div>
+<div class="line">                              UChar: <a class="code hl_function" href="vector_8c.html#a20c0c3f6f0baca86dd48608bbf4fb02e">max_uchar_vector</a>, \</div>
+<div class="line">                              Short: <a class="code hl_function" href="vector_8c.html#a9322308e4f52e03ae336549fd42b7934">max_short_vector</a>, \</div>
+<div class="line">                              UShort: <a class="code hl_function" href="vector_8c.html#a60d805f5dc29474286fb04c939b5c509">max_ushort_vector</a>, \</div>
+<div class="line">                              Int: <a class="code hl_function" href="vector_8c.html#a2b015405abe5287fffe31e5dc0e31808">max_int_vector</a>, \</div>
+<div class="line">                              UInt: <a class="code hl_function" href="vector_8c.html#a174988fd6cd94257cb6332b91429839d">max_uint_vector</a>, \</div>
+<div class="line">                              LInt: <a class="code hl_function" href="vector_8c.html#a3b06accf11f120a22aec6d59ed16d9db">max_long_vector</a>, \</div>
+<div class="line">                              ULInt: <a class="code hl_function" href="vector_8c.html#ab73b0a00fcc4f391123628e2913a19bb">max_ulong_vector</a>, \</div>
+<div class="line">                              LLInt: <a class="code hl_function" href="vector_8c.html#a812e8c27f2970204cc8460728d13c96f">max_llong_vector</a>, \</div>
+<div class="line">                              ULLInt: <a class="code hl_function" href="vector_8c.html#a1960c8508e6fe43960e240626c497764">max_ullong_vector</a>, \</div>
+<div class="line">                              Flt: <a class="code hl_function" href="vector_8c.html#a6a09841dc59b5a463a167ee7c2911efe">max_float_vector</a>, \</div>
+<div class="line">                              Dble: <a class="code hl_function" href="vector_8c.html#a2da642346c710d417636ad41cd99b9a9">max_double_vector</a>, \</div>
+<div class="line">                              LDble: <a class="code hl_function" href="vector_8c.html#adcda6720fac922e691d3bf4927edb42a">max_ldouble_vector</a>)(&amp;T)</div>
+<div class="ttc" id="avector_8c_html_a174988fd6cd94257cb6332b91429839d"><div class="ttname"><a href="vector_8c.html#a174988fd6cd94257cb6332b91429839d">max_uint_vector</a></div><div class="ttdeci">unsigned int max_uint_vector(UInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04057">vector.c:4057</a></div></div>
+<div class="ttc" id="avector_8c_html_a1960c8508e6fe43960e240626c497764"><div class="ttname"><a href="vector_8c.html#a1960c8508e6fe43960e240626c497764">max_ullong_vector</a></div><div class="ttdeci">unsigned long long int max_ullong_vector(ULLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04101">vector.c:4101</a></div></div>
+<div class="ttc" id="avector_8c_html_a20c0c3f6f0baca86dd48608bbf4fb02e"><div class="ttname"><a href="vector_8c.html#a20c0c3f6f0baca86dd48608bbf4fb02e">max_uchar_vector</a></div><div class="ttdeci">unsigned char max_uchar_vector(UChar *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04013">vector.c:4013</a></div></div>
+<div class="ttc" id="avector_8c_html_a2b015405abe5287fffe31e5dc0e31808"><div class="ttname"><a href="vector_8c.html#a2b015405abe5287fffe31e5dc0e31808">max_int_vector</a></div><div class="ttdeci">int max_int_vector(Int *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04046">vector.c:4046</a></div></div>
+<div class="ttc" id="avector_8c_html_a2da642346c710d417636ad41cd99b9a9"><div class="ttname"><a href="vector_8c.html#a2da642346c710d417636ad41cd99b9a9">max_double_vector</a></div><div class="ttdeci">double max_double_vector(Dble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04123">vector.c:4123</a></div></div>
+<div class="ttc" id="avector_8c_html_a3b06accf11f120a22aec6d59ed16d9db"><div class="ttname"><a href="vector_8c.html#a3b06accf11f120a22aec6d59ed16d9db">max_long_vector</a></div><div class="ttdeci">long int max_long_vector(LInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04068">vector.c:4068</a></div></div>
+<div class="ttc" id="avector_8c_html_a60d805f5dc29474286fb04c939b5c509"><div class="ttname"><a href="vector_8c.html#a60d805f5dc29474286fb04c939b5c509">max_ushort_vector</a></div><div class="ttdeci">unsigned short int max_ushort_vector(UShort *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04035">vector.c:4035</a></div></div>
+<div class="ttc" id="avector_8c_html_a6a09841dc59b5a463a167ee7c2911efe"><div class="ttname"><a href="vector_8c.html#a6a09841dc59b5a463a167ee7c2911efe">max_float_vector</a></div><div class="ttdeci">float max_float_vector(Flt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04112">vector.c:4112</a></div></div>
+<div class="ttc" id="avector_8c_html_a812e8c27f2970204cc8460728d13c96f"><div class="ttname"><a href="vector_8c.html#a812e8c27f2970204cc8460728d13c96f">max_llong_vector</a></div><div class="ttdeci">long long int max_llong_vector(LLInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04090">vector.c:4090</a></div></div>
+<div class="ttc" id="avector_8c_html_a9322308e4f52e03ae336549fd42b7934"><div class="ttname"><a href="vector_8c.html#a9322308e4f52e03ae336549fd42b7934">max_short_vector</a></div><div class="ttdeci">short int max_short_vector(Short *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04024">vector.c:4024</a></div></div>
+<div class="ttc" id="avector_8c_html_ab73b0a00fcc4f391123628e2913a19bb"><div class="ttname"><a href="vector_8c.html#ab73b0a00fcc4f391123628e2913a19bb">max_ulong_vector</a></div><div class="ttdeci">unsigned long int max_ulong_vector(ULInt *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04079">vector.c:4079</a></div></div>
+<div class="ttc" id="avector_8c_html_ac45503684793e5582c2bdac1d7d52ba3"><div class="ttname"><a href="vector_8c.html#ac45503684793e5582c2bdac1d7d52ba3">max_char_vector</a></div><div class="ttdeci">char max_char_vector(Char *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04002">vector.c:4002</a></div></div>
+<div class="ttc" id="avector_8c_html_adcda6720fac922e691d3bf4927edb42a"><div class="ttname"><a href="vector_8c.html#adcda6720fac922e691d3bf4927edb42a">max_ldouble_vector</a></div><div class="ttdeci">long double max_ldouble_vector(LDble *vec)</div><div class="ttdef"><b>Definition:</b> <a href="vector_8c_source.html#l04134">vector.c:4134</a></div></div>
+</div><!-- fragment --><p >This macro will calculate the max value in a data structure</p>
+<p >/param T The input data structure</p>
+<div class="fragment"><div class="line">Dble vec;</div>
+<div class="line"><a class="code hl_define" href="vector_8h.html#a78b085b69ede6314aedfc346b480a078">INIT_VECTOR</a>(vec, 5);</div>
+<div class="line"><span class="keywordtype">double</span> a[5] = {3.45, 2.18, 8.17, 0.56, 2.28};</div>
+<div class="line"><a class="code hl_define" href="data__structures_8h.html#a39f36b37e9611785d15e1691a628ab30">INSERT</a>(vec, a, 5, 0);</div>
+<div class="line"><span class="keywordtype">double</span> max = <a class="code hl_define" href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a>(vec);</div>
+<div class="line">PRINT(max);</div>
+<div class="line"><span class="comment">// &gt;&gt; 8.17</span></div>
+<div class="ttc" id="adata__structures_8h_html_a895002453bd9037c335520131a642372"><div class="ttname"><a href="data__structures_8h.html#a895002453bd9037c335520131a642372">MAX</a></div><div class="ttdeci">#define MAX(T)</div><div class="ttdef"><b>Definition:</b> <a href="data__structures_8h_source.html#l00508">data_structures.h:508</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="data__structures_8h_source.html#l00508">508</a> of file <a class="el" href="data__structures_8h_source.html">data_structures.h</a>.</p>
 
 </div>
 </div>
