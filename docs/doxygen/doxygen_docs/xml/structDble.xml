@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structDble" kind="struct" language="C++" prot="public">
+    <compoundname>Dble</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structDble_1a581ba4d948776393590092041ca3a2e6" prot="public" static="no" mutable="no">
+        <type>double *</type>
+        <definition>double* Dble::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <qualifiedname>Dble::array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="86" column="23" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a2d51a8a92a5c0e73345ade59b126ff35" compoundref="vector_8c" startline="4549" endline="4554">copy_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ae8512eab3bf15409bda6bce1d6ec0380" compoundref="vector_8c" startline="3128" endline="3137">cumsum_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a0bf0ceecb4ef742811c3b2ed8384d432" compoundref="vector_8c" startline="1989" endline="1998">delete_double_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a1c5e11f6eff0482afd6666532c1c150f" compoundref="vector_8c" startline="4457" endline="4457">double_vector_data</referencedby>
+        <referencedby refid="vector_8c_1a0d9577d0256e0e006d1c55a12ba1bffd" compoundref="vector_8c" startline="1802" endline="1812">free_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1f590cad5f66c4caded12d7cd92675b" compoundref="vector_8c" startline="308" endline="313">init_double_array</referencedby>
+        <referencedby refid="vector_8c_1a2c0735f69da8e40535b5ecceace1a399" compoundref="vector_8c" startline="152" endline="164">init_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1e86e2b45b0339cc18ba5b35bf01132" compoundref="vector_8c" startline="1157" endline="1190">insert_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a2da642346c710d417636ad41cd99b9a9" compoundref="vector_8c" startline="4123" endline="4131">max_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ac870c654ea8b8143650fb8504880d80a" compoundref="vector_8c" startline="4268" endline="4276">min_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a8d2545eb603560d67e5c481075e5d0fc" compoundref="vector_8c" startline="1483" endline="1493">pop_double_vector_index</referencedby>
+        <referencedby refid="print_8c_1ace9eeb8267215fd743662d3dcd5e9214" compoundref="print_8c" startline="231" endline="250">print_vdble</referencedby>
+        <referencedby refid="vector_8c_1ab312c467d82a0fccc66cbb89a6b8de5c" compoundref="vector_8c" startline="646" endline="676">push_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a25c9a8f29ce2515cf260c9a50745fc69" compoundref="vector_8c" startline="4861" endline="4868">replace_double_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a141f86441673f219db9af026644dee3e" compoundref="vector_8c" startline="1636" endline="1640">replace_double_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a628e48950294512d38556f8b194284d4" compoundref="vector_8c" startline="2202" endline="2214">reverse_double_vector</referencedby>
+        <referencedby refid="vector_8c_1aa461bbfa3be53bc5dc4c56c94fb7fa62" compoundref="vector_8c" startline="2683" endline="2690">sort_double_vector</referencedby>
+        <referencedby refid="vector_8c_1aa05c06bd35f0e74c8a07ef0257a8aa67" compoundref="vector_8c" startline="3884" endline="3939">stdev_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a98a70f4f173d451a1ff5357f4779289d" compoundref="vector_8c" startline="2976" endline="2982">sum_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a4a91fca62c49f8628e3efdc3713be344" compoundref="vector_8c" startline="4709" endline="4718">trim_double_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structDble_1a83cb29dfe09183032473cc7ffe005f5d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Dble::allocated_length</definition>
+        <argsstring></argsstring>
+        <name>allocated_length</name>
+        <qualifiedname>Dble::allocated_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="86" column="36" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a0d9577d0256e0e006d1c55a12ba1bffd" compoundref="vector_8c" startline="1802" endline="1812">free_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1f590cad5f66c4caded12d7cd92675b" compoundref="vector_8c" startline="308" endline="313">init_double_array</referencedby>
+        <referencedby refid="vector_8c_1a2c0735f69da8e40535b5ecceace1a399" compoundref="vector_8c" startline="152" endline="164">init_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1e86e2b45b0339cc18ba5b35bf01132" compoundref="vector_8c" startline="1157" endline="1190">insert_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ab312c467d82a0fccc66cbb89a6b8de5c" compoundref="vector_8c" startline="646" endline="676">push_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a4a91fca62c49f8628e3efdc3713be344" compoundref="vector_8c" startline="4709" endline="4718">trim_double_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structDble_1afffcb8f62c1716ac8bf2449666f4fa9d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Dble::active_length</definition>
+        <argsstring></argsstring>
+        <name>active_length</name>
+        <qualifiedname>Dble::active_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="86" column="60" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="vector_8c_1ab0985989db7774a2f4ccf0f6bc7fd0ed" compoundref="vector_8c" startline="3230" endline="3234">average_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a2d51a8a92a5c0e73345ade59b126ff35" compoundref="vector_8c" startline="4549" endline="4554">copy_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ae8512eab3bf15409bda6bce1d6ec0380" compoundref="vector_8c" startline="3128" endline="3137">cumsum_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a0bf0ceecb4ef742811c3b2ed8384d432" compoundref="vector_8c" startline="1989" endline="1998">delete_double_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a0d9577d0256e0e006d1c55a12ba1bffd" compoundref="vector_8c" startline="1802" endline="1812">free_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1f590cad5f66c4caded12d7cd92675b" compoundref="vector_8c" startline="308" endline="313">init_double_array</referencedby>
+        <referencedby refid="vector_8c_1a2c0735f69da8e40535b5ecceace1a399" compoundref="vector_8c" startline="152" endline="164">init_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1e86e2b45b0339cc18ba5b35bf01132" compoundref="vector_8c" startline="1157" endline="1190">insert_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a2da642346c710d417636ad41cd99b9a9" compoundref="vector_8c" startline="4123" endline="4131">max_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ac870c654ea8b8143650fb8504880d80a" compoundref="vector_8c" startline="4268" endline="4276">min_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a8d2545eb603560d67e5c481075e5d0fc" compoundref="vector_8c" startline="1483" endline="1493">pop_double_vector_index</referencedby>
+        <referencedby refid="print_8c_1ace9eeb8267215fd743662d3dcd5e9214" compoundref="print_8c" startline="231" endline="250">print_vdble</referencedby>
+        <referencedby refid="vector_8c_1ab312c467d82a0fccc66cbb89a6b8de5c" compoundref="vector_8c" startline="646" endline="676">push_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a636afa2f2e2af7dbbd34b7cb42d11163" compoundref="vector_8c" startline="4406" endline="4414">range_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ac2a03364dd0dc653854b1f70101514c6" compoundref="vector_8c" startline="5013" endline="5020">repeat_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a25c9a8f29ce2515cf260c9a50745fc69" compoundref="vector_8c" startline="4861" endline="4868">replace_double_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a141f86441673f219db9af026644dee3e" compoundref="vector_8c" startline="1636" endline="1640">replace_double_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a628e48950294512d38556f8b194284d4" compoundref="vector_8c" startline="2202" endline="2214">reverse_double_vector</referencedby>
+        <referencedby refid="vector_8c_1aa05c06bd35f0e74c8a07ef0257a8aa67" compoundref="vector_8c" startline="3884" endline="3939">stdev_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a98a70f4f173d451a1ff5357f4779289d" compoundref="vector_8c" startline="2976" endline="2982">sum_double_vector</referencedby>
+        <referencedby refid="vector_8c_1a4a91fca62c49f8628e3efdc3713be344" compoundref="vector_8c" startline="4709" endline="4718">trim_double_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structDble_1a593e6de4412f110b4ffe6fd87a62aa56" prot="public" static="no" mutable="no">
+        <type><ref refid="vector_8h_1ad756268621f03e4812b68792b291fff5" kindref="member">mem_type</ref></type>
+        <definition>mem_type Dble::dat_type</definition>
+        <argsstring></argsstring>
+        <name>dat_type</name>
+        <qualifiedname>Dble::dat_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="86" column="83" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a0d9577d0256e0e006d1c55a12ba1bffd" compoundref="vector_8c" startline="1802" endline="1812">free_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1f590cad5f66c4caded12d7cd92675b" compoundref="vector_8c" startline="308" endline="313">init_double_array</referencedby>
+        <referencedby refid="vector_8c_1a2c0735f69da8e40535b5ecceace1a399" compoundref="vector_8c" startline="152" endline="164">init_double_vector</referencedby>
+        <referencedby refid="vector_8c_1af1e86e2b45b0339cc18ba5b35bf01132" compoundref="vector_8c" startline="1157" endline="1190">insert_double_vector</referencedby>
+        <referencedby refid="vector_8c_1ab312c467d82a0fccc66cbb89a6b8de5c" compoundref="vector_8c" startline="646" endline="676">push_double_vector</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="86" column="1" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="86" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structDble_1afffcb8f62c1716ac8bf2449666f4fa9d" prot="public" virt="non-virtual"><scope>Dble</scope><name>active_length</name></member>
+      <member refid="structDble_1a83cb29dfe09183032473cc7ffe005f5d" prot="public" virt="non-virtual"><scope>Dble</scope><name>allocated_length</name></member>
+      <member refid="structDble_1a581ba4d948776393590092041ca3a2e6" prot="public" virt="non-virtual"><scope>Dble</scope><name>array</name></member>
+      <member refid="structDble_1a593e6de4412f110b4ffe6fd87a62aa56" prot="public" virt="non-virtual"><scope>Dble</scope><name>dat_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

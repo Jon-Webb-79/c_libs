@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structFlt" kind="struct" language="C++" prot="public">
+    <compoundname>Flt</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFlt_1a87e7b6ad39c028b824e732662b798ae8" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* Flt::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <qualifiedname>Flt::array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="85" column="22" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a440353dc4ac989fb88b34e7f5649dd05" compoundref="vector_8c" startline="4541" endline="4546">copy_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a9ddb912a129b46a9a2f2d147b4a1ddc8" compoundref="vector_8c" startline="3116" endline="3125">cumsum_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a49e7b8e0e17f4570f95875965ea8c2d6" compoundref="vector_8c" startline="1977" endline="1986">delete_float_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a84fbf5e526da1adcad6858a643df2462" compoundref="vector_8c" startline="4454" endline="4454">float_vector_data</referencedby>
+        <referencedby refid="vector_8c_1aa0efda9f361b9e9219f5afc379c7e6cc" compoundref="vector_8c" startline="1789" endline="1799">free_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a5fcc9ae29ce6bd76060856b388992240" compoundref="vector_8c" startline="300" endline="305">init_float_array</referencedby>
+        <referencedby refid="vector_8c_1a92bba70874a1570bd9c87a2a7385af35" compoundref="vector_8c" startline="137" endline="149">init_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a17ee89c38df38d9d1d5b0cb2e33266d1" compoundref="vector_8c" startline="1121" endline="1154">insert_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a6a09841dc59b5a463a167ee7c2911efe" compoundref="vector_8c" startline="4112" endline="4120">max_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a37e7749c40c9ecefb35c6f677e6e2786" compoundref="vector_8c" startline="4257" endline="4265">min_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a7f179d98deb7852196afc7e3d26ef06d" compoundref="vector_8c" startline="1470" endline="1480">pop_float_vector_index</referencedby>
+        <referencedby refid="print_8c_1a1b802bc15c06ceedbd94e033cad224ef" compoundref="print_8c" startline="209" endline="228">print_vfloat</referencedby>
+        <referencedby refid="vector_8c_1a31e02f437f4f9f43d1126e017ae1cac3" compoundref="vector_8c" startline="613" endline="643">push_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a9a562517abca96c42b1b9fe69469915f" compoundref="vector_8c" startline="4851" endline="4858">replace_float_vector_index</referencedby>
+        <referencedby refid="vector_8c_1aafe1e760a31236df3e8d9b5d4fedf79e" compoundref="vector_8c" startline="1629" endline="1633">replace_float_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a086bbd995dc83d50532944330a44c450" compoundref="vector_8c" startline="2187" endline="2199">reverse_float_vector</referencedby>
+        <referencedby refid="vector_8c_1aa3e927c35eb4eb79cb87d6df026e01a1" compoundref="vector_8c" startline="2643" endline="2650">sort_float_vector</referencedby>
+        <referencedby refid="vector_8c_1abb791f292ea37822fa3c8f20749b8571" compoundref="vector_8c" startline="3826" endline="3881">stdev_float_vector</referencedby>
+        <referencedby refid="vector_8c_1ab9177b68251ddf43f4a245afd559e462" compoundref="vector_8c" startline="2967" endline="2973">sum_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a78d86f1a5dc7e8f980fecfb2f8d12395" compoundref="vector_8c" startline="4697" endline="4706">trim_float_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFlt_1a917603eeaae1fb22accbfc8d9252a389" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Flt::allocated_length</definition>
+        <argsstring></argsstring>
+        <name>allocated_length</name>
+        <qualifiedname>Flt::allocated_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="85" column="35" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="vector_8c_1aa0efda9f361b9e9219f5afc379c7e6cc" compoundref="vector_8c" startline="1789" endline="1799">free_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a5fcc9ae29ce6bd76060856b388992240" compoundref="vector_8c" startline="300" endline="305">init_float_array</referencedby>
+        <referencedby refid="vector_8c_1a92bba70874a1570bd9c87a2a7385af35" compoundref="vector_8c" startline="137" endline="149">init_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a17ee89c38df38d9d1d5b0cb2e33266d1" compoundref="vector_8c" startline="1121" endline="1154">insert_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a31e02f437f4f9f43d1126e017ae1cac3" compoundref="vector_8c" startline="613" endline="643">push_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a78d86f1a5dc7e8f980fecfb2f8d12395" compoundref="vector_8c" startline="4697" endline="4706">trim_float_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFlt_1a2fa1599d2472633868a9aef0ae510754" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Flt::active_length</definition>
+        <argsstring></argsstring>
+        <name>active_length</name>
+        <qualifiedname>Flt::active_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="85" column="59" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a95e8f18d7457adb1784ca850c7afa01e" compoundref="vector_8c" startline="3223" endline="3227">average_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a440353dc4ac989fb88b34e7f5649dd05" compoundref="vector_8c" startline="4541" endline="4546">copy_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a9ddb912a129b46a9a2f2d147b4a1ddc8" compoundref="vector_8c" startline="3116" endline="3125">cumsum_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a49e7b8e0e17f4570f95875965ea8c2d6" compoundref="vector_8c" startline="1977" endline="1986">delete_float_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1aa0efda9f361b9e9219f5afc379c7e6cc" compoundref="vector_8c" startline="1789" endline="1799">free_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a5fcc9ae29ce6bd76060856b388992240" compoundref="vector_8c" startline="300" endline="305">init_float_array</referencedby>
+        <referencedby refid="vector_8c_1a92bba70874a1570bd9c87a2a7385af35" compoundref="vector_8c" startline="137" endline="149">init_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a17ee89c38df38d9d1d5b0cb2e33266d1" compoundref="vector_8c" startline="1121" endline="1154">insert_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a6a09841dc59b5a463a167ee7c2911efe" compoundref="vector_8c" startline="4112" endline="4120">max_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a37e7749c40c9ecefb35c6f677e6e2786" compoundref="vector_8c" startline="4257" endline="4265">min_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a7f179d98deb7852196afc7e3d26ef06d" compoundref="vector_8c" startline="1470" endline="1480">pop_float_vector_index</referencedby>
+        <referencedby refid="print_8c_1a1b802bc15c06ceedbd94e033cad224ef" compoundref="print_8c" startline="209" endline="228">print_vfloat</referencedby>
+        <referencedby refid="vector_8c_1a31e02f437f4f9f43d1126e017ae1cac3" compoundref="vector_8c" startline="613" endline="643">push_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a85d0392c18b7db31c0a14bc2aa13448c" compoundref="vector_8c" startline="4396" endline="4403">range_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a58a085c7febff1b1bd9e6ec90510b36a" compoundref="vector_8c" startline="5003" endline="5010">repeat_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a9a562517abca96c42b1b9fe69469915f" compoundref="vector_8c" startline="4851" endline="4858">replace_float_vector_index</referencedby>
+        <referencedby refid="vector_8c_1aafe1e760a31236df3e8d9b5d4fedf79e" compoundref="vector_8c" startline="1629" endline="1633">replace_float_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a086bbd995dc83d50532944330a44c450" compoundref="vector_8c" startline="2187" endline="2199">reverse_float_vector</referencedby>
+        <referencedby refid="vector_8c_1abb791f292ea37822fa3c8f20749b8571" compoundref="vector_8c" startline="3826" endline="3881">stdev_float_vector</referencedby>
+        <referencedby refid="vector_8c_1ab9177b68251ddf43f4a245afd559e462" compoundref="vector_8c" startline="2967" endline="2973">sum_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a78d86f1a5dc7e8f980fecfb2f8d12395" compoundref="vector_8c" startline="4697" endline="4706">trim_float_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structFlt_1ad98ce16bf2fff8b16351042bd4135629" prot="public" static="no" mutable="no">
+        <type><ref refid="vector_8h_1ad756268621f03e4812b68792b291fff5" kindref="member">mem_type</ref></type>
+        <definition>mem_type Flt::dat_type</definition>
+        <argsstring></argsstring>
+        <name>dat_type</name>
+        <qualifiedname>Flt::dat_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="85" column="82" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="vector_8c_1aa0efda9f361b9e9219f5afc379c7e6cc" compoundref="vector_8c" startline="1789" endline="1799">free_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a5fcc9ae29ce6bd76060856b388992240" compoundref="vector_8c" startline="300" endline="305">init_float_array</referencedby>
+        <referencedby refid="vector_8c_1a92bba70874a1570bd9c87a2a7385af35" compoundref="vector_8c" startline="137" endline="149">init_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a17ee89c38df38d9d1d5b0cb2e33266d1" compoundref="vector_8c" startline="1121" endline="1154">insert_float_vector</referencedby>
+        <referencedby refid="vector_8c_1a31e02f437f4f9f43d1126e017ae1cac3" compoundref="vector_8c" startline="613" endline="643">push_float_vector</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="85" column="1" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="85" bodyend="85"/>
+    <listofallmembers>
+      <member refid="structFlt_1a2fa1599d2472633868a9aef0ae510754" prot="public" virt="non-virtual"><scope>Flt</scope><name>active_length</name></member>
+      <member refid="structFlt_1a917603eeaae1fb22accbfc8d9252a389" prot="public" virt="non-virtual"><scope>Flt</scope><name>allocated_length</name></member>
+      <member refid="structFlt_1a87e7b6ad39c028b824e732662b798ae8" prot="public" virt="non-virtual"><scope>Flt</scope><name>array</name></member>
+      <member refid="structFlt_1ad98ce16bf2fff8b16351042bd4135629" prot="public" virt="non-virtual"><scope>Flt</scope><name>dat_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

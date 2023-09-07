@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structULInt" kind="struct" language="C++" prot="public">
+    <compoundname>ULInt</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structULInt_1aa9fd315970b6f4f3e04f1b061b5d444e" prot="public" static="no" mutable="no">
+        <type>unsigned long int *</type>
+        <definition>unsigned long int* ULInt::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <qualifiedname>ULInt::array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="82" column="34" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a31f85f1454385a608eebc7d150417b7c" compoundref="vector_8c" startline="4517" endline="4522">copy_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1ae856339059aa7e6f5db1d5bd7de43306" compoundref="vector_8c" startline="3080" endline="3089">cumsum_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aa7b0890be4e8157712930fedaf437c8a" compoundref="vector_8c" startline="1941" endline="1950">delete_ulong_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a9a05407a3434648f10f4416a7874150d" compoundref="vector_8c" startline="1750" endline="1760">free_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1acdf31865e9c36adc693dd7fa7fadcacc" compoundref="vector_8c" startline="276" endline="281">init_ulong_array</referencedby>
+        <referencedby refid="vector_8c_1af08098b392c0ff01db799bff9c83a521" compoundref="vector_8c" startline="93" endline="105">init_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aa419c32bb276bfe866787e1744669b94" compoundref="vector_8c" startline="1013" endline="1046">insert_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1ab73b0a00fcc4f391123628e2913a19bb" compoundref="vector_8c" startline="4079" endline="4087">max_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a98b9ea464f1a6e1012f3aae9031a8a13" compoundref="vector_8c" startline="4224" endline="4232">min_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aee6e8f2b009cc7205dfd8c143b8e9839" compoundref="vector_8c" startline="1431" endline="1441">pop_ulong_vector_index</referencedby>
+        <referencedby refid="print_8c_1ad7e952d652fc3101cb3e6da0b97bf3bd" compoundref="print_8c" startline="143" endline="162">print_vulint</referencedby>
+        <referencedby refid="vector_8c_1aea5f95b56df2836ee553face60351e61" compoundref="vector_8c" startline="514" endline="544">push_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1abc7605a0d1c96745f5a21cde7850d646" compoundref="vector_8c" startline="4821" endline="4828">replace_ulong_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a3354495712d1e3910ca4e6a33ee1c1df" compoundref="vector_8c" startline="1608" endline="1612">replace_ulong_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a6196a5bfffe22d6493b2bda77a9340fb" compoundref="vector_8c" startline="2142" endline="2154">reverse_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1adf53d931d4b9c3ab9d62298b6d3df5cd" compoundref="vector_8c" startline="2523" endline="2530">sort_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a3cd9fa1fbe73338e380ccc9b98a6b768" compoundref="vector_8c" startline="3652" endline="3707">stdev_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a3233da20e23c20659dd5aba81307b58d" compoundref="vector_8c" startline="2940" endline="2946">sum_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a2b44394f88268b15dfaf3640cb70f42f" compoundref="vector_8c" startline="4661" endline="4670">trim_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1ae7aed886f0e33fc044d7d7bafcea088b" compoundref="vector_8c" startline="4445" endline="4445">ulong_vector_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structULInt_1acf325510e03976f12c116ad68c4998ec" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ULInt::allocated_length</definition>
+        <argsstring></argsstring>
+        <name>allocated_length</name>
+        <qualifiedname>ULInt::allocated_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="82" column="47" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a9a05407a3434648f10f4416a7874150d" compoundref="vector_8c" startline="1750" endline="1760">free_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1acdf31865e9c36adc693dd7fa7fadcacc" compoundref="vector_8c" startline="276" endline="281">init_ulong_array</referencedby>
+        <referencedby refid="vector_8c_1af08098b392c0ff01db799bff9c83a521" compoundref="vector_8c" startline="93" endline="105">init_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aa419c32bb276bfe866787e1744669b94" compoundref="vector_8c" startline="1013" endline="1046">insert_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aea5f95b56df2836ee553face60351e61" compoundref="vector_8c" startline="514" endline="544">push_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a2b44394f88268b15dfaf3640cb70f42f" compoundref="vector_8c" startline="4661" endline="4670">trim_ulong_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structULInt_1acef5b8ecd93a66f86d4d82464795895f" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ULInt::active_length</definition>
+        <argsstring></argsstring>
+        <name>active_length</name>
+        <qualifiedname>ULInt::active_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="82" column="71" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="vector_8c_1aa94c4a725c6ab558c748baa93b652363" compoundref="vector_8c" startline="3202" endline="3206">average_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a31f85f1454385a608eebc7d150417b7c" compoundref="vector_8c" startline="4517" endline="4522">copy_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1ae856339059aa7e6f5db1d5bd7de43306" compoundref="vector_8c" startline="3080" endline="3089">cumsum_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aa7b0890be4e8157712930fedaf437c8a" compoundref="vector_8c" startline="1941" endline="1950">delete_ulong_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a9a05407a3434648f10f4416a7874150d" compoundref="vector_8c" startline="1750" endline="1760">free_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1acdf31865e9c36adc693dd7fa7fadcacc" compoundref="vector_8c" startline="276" endline="281">init_ulong_array</referencedby>
+        <referencedby refid="vector_8c_1af08098b392c0ff01db799bff9c83a521" compoundref="vector_8c" startline="93" endline="105">init_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aa419c32bb276bfe866787e1744669b94" compoundref="vector_8c" startline="1013" endline="1046">insert_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1ab73b0a00fcc4f391123628e2913a19bb" compoundref="vector_8c" startline="4079" endline="4087">max_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a98b9ea464f1a6e1012f3aae9031a8a13" compoundref="vector_8c" startline="4224" endline="4232">min_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aee6e8f2b009cc7205dfd8c143b8e9839" compoundref="vector_8c" startline="1431" endline="1441">pop_ulong_vector_index</referencedby>
+        <referencedby refid="print_8c_1ad7e952d652fc3101cb3e6da0b97bf3bd" compoundref="print_8c" startline="143" endline="162">print_vulint</referencedby>
+        <referencedby refid="vector_8c_1aea5f95b56df2836ee553face60351e61" compoundref="vector_8c" startline="514" endline="544">push_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a4fe9caa2febfe85a1107394d8b42c348" compoundref="vector_8c" startline="4364" endline="4372">range_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a8c9c95f3e41bcaa00e99db959130c509" compoundref="vector_8c" startline="4973" endline="4980">repeat_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1abc7605a0d1c96745f5a21cde7850d646" compoundref="vector_8c" startline="4821" endline="4828">replace_ulong_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a3354495712d1e3910ca4e6a33ee1c1df" compoundref="vector_8c" startline="1608" endline="1612">replace_ulong_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a6196a5bfffe22d6493b2bda77a9340fb" compoundref="vector_8c" startline="2142" endline="2154">reverse_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a3cd9fa1fbe73338e380ccc9b98a6b768" compoundref="vector_8c" startline="3652" endline="3707">stdev_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a3233da20e23c20659dd5aba81307b58d" compoundref="vector_8c" startline="2940" endline="2946">sum_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1a2b44394f88268b15dfaf3640cb70f42f" compoundref="vector_8c" startline="4661" endline="4670">trim_ulong_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structULInt_1abbab1a9c205c4d86fcc53c55174d1515" prot="public" static="no" mutable="no">
+        <type><ref refid="vector_8h_1ad756268621f03e4812b68792b291fff5" kindref="member">mem_type</ref></type>
+        <definition>mem_type ULInt::dat_type</definition>
+        <argsstring></argsstring>
+        <name>dat_type</name>
+        <qualifiedname>ULInt::dat_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="82" column="94" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a9a05407a3434648f10f4416a7874150d" compoundref="vector_8c" startline="1750" endline="1760">free_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1acdf31865e9c36adc693dd7fa7fadcacc" compoundref="vector_8c" startline="276" endline="281">init_ulong_array</referencedby>
+        <referencedby refid="vector_8c_1af08098b392c0ff01db799bff9c83a521" compoundref="vector_8c" startline="93" endline="105">init_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aa419c32bb276bfe866787e1744669b94" compoundref="vector_8c" startline="1013" endline="1046">insert_ulong_vector</referencedby>
+        <referencedby refid="vector_8c_1aea5f95b56df2836ee553face60351e61" compoundref="vector_8c" startline="514" endline="544">push_ulong_vector</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="82" column="1" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="82" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structULInt_1acef5b8ecd93a66f86d4d82464795895f" prot="public" virt="non-virtual"><scope>ULInt</scope><name>active_length</name></member>
+      <member refid="structULInt_1acf325510e03976f12c116ad68c4998ec" prot="public" virt="non-virtual"><scope>ULInt</scope><name>allocated_length</name></member>
+      <member refid="structULInt_1aa9fd315970b6f4f3e04f1b061b5d444e" prot="public" virt="non-virtual"><scope>ULInt</scope><name>array</name></member>
+      <member refid="structULInt_1abbab1a9c205c4d86fcc53c55174d1515" prot="public" virt="non-virtual"><scope>ULInt</scope><name>dat_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -30,8 +30,8 @@
  * A collection of human readable integer representations that describe how
  * memory is allocated to a vector or array
  *
- * \param DYNAMIC An integer representing dynamic memory allocation on the heap
- * \param STATIC An integer representing static memory allocation on the stack
+ * @param DYNAMIC An integer representing dynamic memory allocation on the heap
+ * @param STATIC An integer representing static memory allocation on the stack
  */
 typedef enum
 {
@@ -52,13 +52,15 @@ typedef enum
 // ==========================================================================================
 
 /**
+ * @brief Create a struct for managing dynamic or static arrays
+ *
  * This macro will produce a struct that is specifically designed to track all
  * attributes necessary for the maintenance of a dynamically, or statically allocated
  * array.  The macro has an attribute to a pointer for the array, allocated_length,
  * active_length, and mem_type.
  *
- * /param type The data type that will be assigned to the array pointer
- * /param dtype The name to be given to the typedef for the struct
+ * @param type The data type that will be assigned to the array pointer
+ * @param dtype The name to be given to the typedef for the struct
  *
  * @code
  * // code to create a struct of type IntVector
@@ -98,35 +100,37 @@ typedef struct
 // ==========================================================================================
 // INIT_VECTOR FUNCTIONS
 
-/*
- * This function initialize a vector struct of type Short to containt a
- * dynamically allocated array of length.
+/**
+ * @brief A function used to initialize a short integer vector struct
  *
- * /param vec A Vector struct of type Short
- * /param length The initial guess for the number of indices in the dynamically
+ * @param vec A Vector struct of type Short
+ * @param length The initial guess for the number of indices in the dynamically
  *               allocated array.
+ * @return 1 if the struct is sucesfully initialized, -1 otherwise, with a stderr message
+ *
  */
 int init_short_vector(Short *vec, size_t length);
 // ------------------------------------------------------------------------------------------
 
-/*
- * This function initialize a vector struct of type UShort to containt a
- * dynamically allocated array of length.
+/**
+ * @brief A function to initiaize an unsigned short vector struct
  *
- * /param vec A Vector struct of type UShort
- * /param length The initial guess for the number of indices in the dynamically
+ * @param vec A Vector struct of type UShort
+ * @param length The initial guess for the number of indices in the dynamically
  *               allocated array.
+ * @return 1 if the struct is sucesfully initialized, -1 otherwise, with a stderr message
+ *
  */
 int init_ushort_vector(UShort *vec, size_t length);
 // ------------------------------------------------------------------------------------------
 
-/*
- * This function initialize a vector struct of type Int to containt a
- * dynamically allocated array of length.
+/**
+ * @brief A function to initiaize an unsigned short vector struct
  *
- * /param vec A Vector struct of type Int
- * /param length The initial guess for the number of indices in the dynamically
+ * @param vec A Vector struct of type Int
+ * @param length The initial guess for the number of indices in the dynamically
  *               allocated array.
+ * @return 1 if the struct is sucesfully initialized, -1 otherwise, with a stderr message
  */
 int init_int_vector(Int *vec, size_t length);
 // ------------------------------------------------------------------------------------------
@@ -262,14 +266,14 @@ int init_string_vector(String *vec);
 // ------------------------------------------------------------------------------------------
 
 /**
- * This macro will allocate memory for an array and assign that memory to the
+ * @brief This macro will allocate memory for an array and assign that memory to the
  * array pointer variable in a struct.  The macro will also assign the number of
  * allocated indices to allocated_length and assign active_length a size of 0.
  * This function requires the input of a struct instantiated with the VECTOR_STRUCT
  * method.
  *
- * /param vec A vector instantiated with the VECTOR_STRUCT macro.
- * /length The length of the array as a size_t variable
+ * @param vec A vector instantiated with the VECTOR_STRUCT macro.
+ * @length The length of the array as a size_t variable
  *
  * @code
  * // Initialize a dynamically allocated Integer vector with 0 indices

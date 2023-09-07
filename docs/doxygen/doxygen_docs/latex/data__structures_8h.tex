@@ -1,0 +1,1175 @@
+\doxysection{/home/jonwebb/\+Code\+\_\+\+Dev/\+C/c\+\_\+libs/c\+\_\+libs/include/data\+\_\+structures.h File Reference}
+\hypertarget{data__structures_8h}{}\label{data__structures_8h}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/data\_structures.h@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/data\_structures.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}vector.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(T,  value,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(T,  elements,  num\+\_\+ind,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a7873976d8a344c5188e57dffb974056b}{POP\+\_\+\+INDEX}}(T,  y)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}{REPLACE\+\_\+\+VALUES}}(T,  old,  new)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}{DELETE\+\_\+\+DUPLICATES}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_ae5f2dc1bcc130da5504af4d09d54864c}{REVERSE}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}{IS\+\_\+\+SORT\+\_\+\+TYPE}}(T,  low,  high,  order)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab}{SORT}}(T,  order)~\mbox{\hyperlink{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}{IS\+\_\+\+SORT\+\_\+\+TYPE}}((T), (0), (T.\+active\+\_\+length-\/1), (order))
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}{SUM}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}{CUMSUM}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a81794266d48f7e352116d53be0fda9fc}{AVERAGE}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}{STDEV}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a895002453bd9037c335520131a642372}{MAX}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_ab01356067636aa7d12aad9a9302f37a7}{MIN}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(T,  start,  end,  delta)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a0ba1f915ff0895a09d1dfe31f5c728f3}{COPY}}(T)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2}{IDATA}}(T,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}{REPLACE\+\_\+\+INDEX}}(T,  new\+\_\+val,  index)
+\item 
+\#define \mbox{\hyperlink{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}{REPEAT}}(T,  val,  num)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{data__structures_8h_a81794266d48f7e352116d53be0fda9fc}\label{data__structures_8h_a81794266d48f7e352116d53be0fda9fc} 
+\index{data\_structures.h@{data\_structures.h}!AVERAGE@{AVERAGE}}
+\index{AVERAGE@{AVERAGE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{AVERAGE}{AVERAGE}}
+{\footnotesize\ttfamily \#define AVERAGE(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will return the average value of a data structure. The macro will return the appropriate data type depending on the input data type.
+
+/param T The input data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structDble}{Dble}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ a[5]\ =\ \{3.45,\ 2.18.\ 8.17,\ 0.56,\ 2.28\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ avg\ =\ \mbox{\hyperlink{data__structures_8h_a81794266d48f7e352116d53be0fda9fc}{AVERAGE}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(avg);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ 3.328}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00443}{443}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a0ba1f915ff0895a09d1dfe31f5c728f3}\label{data__structures_8h_a0ba1f915ff0895a09d1dfe31f5c728f3} 
+\index{data\_structures.h@{data\_structures.h}!COPY@{COPY}}
+\index{COPY@{COPY}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{COPY}{COPY}}
+{\footnotesize\ttfamily \#define COPY(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_ac3e7f4298d195586bfc0cf8b0fc1a053}{copy\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_ab88c9075f7ac94dd8656a8eec4a14a94}{copy\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_af70602cee86af9597513bc67b2878244}{copy\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a5fd73621c9da27949814495f00a3296f}{copy\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a6bf7c67135858a07103fff23436b7d77}{copy\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_abc614587816c37e5dfd70c2a832da165}{copy\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a31f85f1454385a608eebc7d150417b7c}{copy\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a2a8c6a77d383c5251686fc600c829005}{copy\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_abe7076983c8f386b305b615137dcd249}{copy\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a440353dc4ac989fb88b34e7f5649dd05}{copy\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a2d51a8a92a5c0e73345ade59b126ff35}{copy\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a3fa3120b9c06e25fc840f90c7e10c5a6}{copy\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{copy\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{copy\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will create a deep copy of a data structure
+
+/param T The data structure /retur structure The deep copy of a data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ a[5]\ =\ \{1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ new\_vec\ =\ \mbox{\hyperlink{data__structures_8h_a0ba1f915ff0895a09d1dfe31f5c728f3}{COPY}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(new\_vec);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 1,\ 2,\ 3,\ 4,\ 5\ ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00607}{607}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_ac3e7f4298d195586bfc0cf8b0fc1a053}{copy\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_ab88c9075f7ac94dd8656a8eec4a14a94}{copy\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_af70602cee86af9597513bc67b2878244}{copy\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a5fd73621c9da27949814495f00a3296f}{copy\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a6bf7c67135858a07103fff23436b7d77}{copy\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_abc614587816c37e5dfd70c2a832da165}{copy\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a31f85f1454385a608eebc7d150417b7c}{copy\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a2a8c6a77d383c5251686fc600c829005}{copy\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_abe7076983c8f386b305b615137dcd249}{copy\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a440353dc4ac989fb88b34e7f5649dd05}{copy\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a2d51a8a92a5c0e73345ade59b126ff35}{copy\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a3fa3120b9c06e25fc840f90c7e10c5a6}{copy\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a430a540aea6caac8002281b9a2ddbf7a}{copy\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a2e6c2d82128d66d5fe6800ee6ad9d277}{copy\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a2cb84d3851679202a04f76066bc80a6e}{copy\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}\label{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c} 
+\index{data\_structures.h@{data\_structures.h}!CUMSUM@{CUMSUM}}
+\index{CUMSUM@{CUMSUM}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{CUMSUM}{CUMSUM}}
+{\footnotesize\ttfamily \#define CUMSUM(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will return a data structure of the same type as the input data structure that contains the cumulative sum of the input structure
+
+/param T The input data structure /return return\+\_\+T The output data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ a[5]\ =\ \{1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ cum\_vec\ =\ \mbox{\hyperlink{data__structures_8h_ad67d6348b4a31d319108c5b915592e8c}{CUMSUM}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(cum\_vec);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 1,\ 3,\ 6,\ 10,\ 15\ ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00410}{410}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a2850df1b78d17fd2e45847e8bf1e51c2}{cumsum\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_ae0f64fd00879ff39b5ffbca0e80c197b}{cumsum\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}\label{data__structures_8h_a846efd03c9d323e9b03d70331276d47a} 
+\index{data\_structures.h@{data\_structures.h}!DELETE\_DUPLICATES@{DELETE\_DUPLICATES}}
+\index{DELETE\_DUPLICATES@{DELETE\_DUPLICATES}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{DELETE\_DUPLICATES}{DELETE\_DUPLICATES}}
+{\footnotesize\ttfamily \#define DELETE\+\_\+\+DUPLICATES(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a35b16d98a38d37826ee118f4860d680a}{delete\_short\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a372a58405f86fa4ef22f53af37408017}{delete\_ushort\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a68a325016f45777566e1eae4b15c4238}{delete\_int\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_ab5a49e7e86d86796744395431d475f74}{delete\_uint\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a10ee633f27cbd6252d41ffd0761f6392}{delete\_long\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aa7b0890be4e8157712930fedaf437c8a}{delete\_ulong\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a8f895e83e3b4e24dfdd253508da61875}{delete\_llong\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a91794ceff19b304073f15ca82fe38b0b}{delete\_ullong\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a49e7b8e0e17f4570f95875965ea8c2d6}{delete\_float\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a0bf0ceecb4ef742811c3b2ed8384d432}{delete\_double\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a915b5e5eff06f5a04ff068c94cdcffb4}{delete\_ldouble\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a5a01cb2f66c78b55858a0941ad9459af}{delete\_char\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a51740972d62e96e248d8a07eb65e48aa}{delete\_uchar\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a1fe7315ba2394e61b43b99bfc765bd75}{delete\_bool\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a1b3482060f9c607f98dbef4845db335f}{delete\_string\_vector\_duplicates}})(\&T)}
+
+\end{DoxyCode}
+This macro will delete all duplicate values in a data structure with exception of the original value
+
+/param T The struct container
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int8\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 6);}
+\DoxyCodeLine{int8\_t\ a[6]\ =\ \{1,\ 1,\ 2,\ 2,\ 3,\ 3\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 6,\ 0);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a846efd03c9d323e9b03d70331276d47a}{DELETE\_DUPLICATES}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 1,\ 2,\ 3\ ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00266}{266}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a35b16d98a38d37826ee118f4860d680a}{delete\_short\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a372a58405f86fa4ef22f53af37408017}{delete\_ushort\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a68a325016f45777566e1eae4b15c4238}{delete\_int\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_ab5a49e7e86d86796744395431d475f74}{delete\_uint\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a10ee633f27cbd6252d41ffd0761f6392}{delete\_long\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aa7b0890be4e8157712930fedaf437c8a}{delete\_ulong\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a8f895e83e3b4e24dfdd253508da61875}{delete\_llong\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a91794ceff19b304073f15ca82fe38b0b}{delete\_ullong\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a49e7b8e0e17f4570f95875965ea8c2d6}{delete\_float\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a0bf0ceecb4ef742811c3b2ed8384d432}{delete\_double\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a915b5e5eff06f5a04ff068c94cdcffb4}{delete\_ldouble\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a5a01cb2f66c78b55858a0941ad9459af}{delete\_char\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a51740972d62e96e248d8a07eb65e48aa}{delete\_uchar\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a1fe7315ba2394e61b43b99bfc765bd75}{delete\_bool\_vector\_duplicates}},\ \(\backslash\)}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a1b3482060f9c607f98dbef4845db335f}{delete\_string\_vector\_duplicates}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}\label{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d} 
+\index{data\_structures.h@{data\_structures.h}!FREE@{FREE}}
+\index{FREE@{FREE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{FREE}{FREE}}
+{\footnotesize\ttfamily \#define FREE(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a5783a319298af13236def83e42f00799}{free\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a2975c4c7c36efebc98b926abfc4ba837}{free\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00141}{141}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a8a383d2299a326d3c0ded94c19d73393}{free\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a3765cd4f6e59bada679e05ea6dacfff5}{free\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_ab2c13b705440e4d4d53825bb16929ff6}{free\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a6195f400606be104b4461cd9876f93ce}{free\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_af1ab528ebf7f47a278e3be3b02e9acee}{free\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a9a05407a3434648f10f4416a7874150d}{free\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_af92bc034e6f34814eea1008629f41ef9}{free\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a605f038b309fb25e53f637c9e9b6e4bd}{free\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_aa0efda9f361b9e9219f5afc379c7e6cc}{free\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a0d9577d0256e0e006d1c55a12ba1bffd}{free\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a89e6af78e123543fefe3333963de0e83}{free\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_afef1cb622b3f54256849a3b5446a7af4}{free\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a9f3fcb3deda563d834c9d3d13f097268}{free\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a5783a319298af13236def83e42f00799}{free\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a2975c4c7c36efebc98b926abfc4ba837}{free\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2}\label{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2} 
+\index{data\_structures.h@{data\_structures.h}!IDATA@{IDATA}}
+\index{IDATA@{IDATA}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{IDATA}{IDATA}}
+{\footnotesize\ttfamily \#define IDATA(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_aa99d3902c062bd4e5e31b85ccd8867bb}{char\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a5ec8248dfe94805dce29484cf23b9db5}{uchar\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a34d64d0cfc6dc0e1e5b3ab4d685f9b17}{short\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_ae64308782a33a82a606c6463d0511a19}{ushort\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a3804e8951d833849ea5c7333b832bf1e}{int\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_ac6172e0e9433875fa34c0faaf8647c6c}{uint\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a78c08d70ca4769c5fa2e4d87bcd35f4e}{long\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_ae7aed886f0e33fc044d7d7bafcea088b}{ulong\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ac368c61f3aceee6f22f7fdfd9c6866bc}{llong\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a401a9795be5292f8c20fb032218c4b1a}{ullong\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a84fbf5e526da1adcad6858a643df2462}{float\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a1c5e11f6eff0482afd6666532c1c150f}{double\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a4ff7d557d90612b873092b0b9dd82b15}{ldouble\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{bool\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{string\_vector\_data}})(\&T,\ index)}
+
+\end{DoxyCode}
+\hypertarget{data__structures_8h_autotoc_md0}{}\doxysubsection{\texorpdfstring{==========================================================================================}{==========================================================================================}}\label{data__structures_8h_autotoc_md0}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param start The start point /param end The end point /param The delta between data points
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 10);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(vec,\ 2,\ 20,\ 2);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ a\ =\ \mbox{\hyperlink{data__structures_8h_a2cc515116896ddef6d83c6afbabf74d2}{IDATA}}(vec,\ 3);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(a);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ 8}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00644}{644}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_aa99d3902c062bd4e5e31b85ccd8867bb}{char\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a5ec8248dfe94805dce29484cf23b9db5}{uchar\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a34d64d0cfc6dc0e1e5b3ab4d685f9b17}{short\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_ae64308782a33a82a606c6463d0511a19}{ushort\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a3804e8951d833849ea5c7333b832bf1e}{int\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_ac6172e0e9433875fa34c0faaf8647c6c}{uint\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a78c08d70ca4769c5fa2e4d87bcd35f4e}{long\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_ae7aed886f0e33fc044d7d7bafcea088b}{ulong\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ac368c61f3aceee6f22f7fdfd9c6866bc}{llong\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a401a9795be5292f8c20fb032218c4b1a}{ullong\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a84fbf5e526da1adcad6858a643df2462}{float\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a1c5e11f6eff0482afd6666532c1c150f}{double\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a4ff7d557d90612b873092b0b9dd82b15}{ldouble\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{bool\_vector\_data}},\ \(\backslash\)}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{string\_vector\_data}})(\&T,\ index)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}\label{data__structures_8h_a39f36b37e9611785d15e1691a628ab30} 
+\index{data\_structures.h@{data\_structures.h}!INSERT@{INSERT}}
+\index{INSERT@{INSERT}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{INSERT}{INSERT}}
+{\footnotesize\ttfamily \#define INSERT(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{elements,  }\item[{}]{num\+\_\+ind,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_ac5498955b573e63b86b34a1fdd93e391}{insert\_string\_vector}})(\&T,\ elements,\ num\_ind,\ index)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00094}{94}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a2ed595a869e30a4c834c1d2cf5b934ee}{insert\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_aa8495c3a316b6d93c8697d194c86fc2b}{insert\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a0acf8b86d4a95be517c7af80f8eff4ac}{insert\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_ad78d40537dece17df4f506fd6ba7dc34}{insert\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ab5d840518e5e7bbd9ed243681b7124f7}{insert\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aa419c32bb276bfe866787e1744669b94}{insert\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a9817d90055331624db7529c5d74a80ad}{insert\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_afccda80cf8e96d76846df29a256f6974}{insert\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a17ee89c38df38d9d1d5b0cb2e33266d1}{insert\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_af1e86e2b45b0339cc18ba5b35bf01132}{insert\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a0ec3e3b802f62c5f9cdd9b7d197bd4a1}{insert\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a9e9db9d87d5a9f3bb6dae1ba5668ef12}{insert\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_ae5b1c45f4d2083c6d87f217646609a2d}{insert\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_ab344e3b36aa397f037cb2c573e1d3aff}{insert\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_ac5498955b573e63b86b34a1fdd93e391}{insert\_string\_vector}})(\&T,\ elements,\ num\_ind,\ index)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}\label{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e} 
+\index{data\_structures.h@{data\_structures.h}!IS\_SORT\_TYPE@{IS\_SORT\_TYPE}}
+\index{IS\_SORT\_TYPE@{IS\_SORT\_TYPE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{IS\_SORT\_TYPE}{IS\_SORT\_TYPE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SORT\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{low,  }\item[{}]{high,  }\item[{}]{order }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a04f50afe6c127edeea202b08ad65f36a}{sort\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a722d90a04d08a5ece84ba7a2b8d04d6d}{sort\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a451f6cb1a5b4b2e77c1170c85656c3c6}{sort\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a573e6f77db28f1a05eefd8a982f850c7}{sort\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_adf53d931d4b9c3ab9d62298b6d3df5cd}{sort\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ab1183f9c1a6c8a6d60b4457421e3072a}{sort\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a3d45fbf7b754bf4bad8be3cbb6241a84}{sort\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_aa3e927c35eb4eb79cb87d6df026e01a1}{sort\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_aa461bbfa3be53bc5dc4c56c94fb7fa62}{sort\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a3745eaf35ed1dfbae01e83d5b93e185d}{sort\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a0c29cab75728310a3b5b78681af2df21}{sort\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a88af2cb1285800957b1de71e783ee93a}{sort\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a68744cde4b7c17a0305d9cf512494a20}{sort\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_aead9f94df495db661d185ef0363ec1d6}{sort\_string\_vector}})(\&T,\ low,\ high,\ order)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00322}{322}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a04f50afe6c127edeea202b08ad65f36a}{sort\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a722d90a04d08a5ece84ba7a2b8d04d6d}{sort\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a451f6cb1a5b4b2e77c1170c85656c3c6}{sort\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a573e6f77db28f1a05eefd8a982f850c7}{sort\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_adf53d931d4b9c3ab9d62298b6d3df5cd}{sort\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ab1183f9c1a6c8a6d60b4457421e3072a}{sort\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a3d45fbf7b754bf4bad8be3cbb6241a84}{sort\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_aa3e927c35eb4eb79cb87d6df026e01a1}{sort\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_aa461bbfa3be53bc5dc4c56c94fb7fa62}{sort\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a3745eaf35ed1dfbae01e83d5b93e185d}{sort\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a0c29cab75728310a3b5b78681af2df21}{sort\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a88af2cb1285800957b1de71e783ee93a}{sort\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a68744cde4b7c17a0305d9cf512494a20}{sort\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_aead9f94df495db661d185ef0363ec1d6}{sort\_string\_vector}})(\&T,\ low,\ high,\ order)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a895002453bd9037c335520131a642372}\label{data__structures_8h_a895002453bd9037c335520131a642372} 
+\index{data\_structures.h@{data\_structures.h}!MAX@{MAX}}
+\index{MAX@{MAX}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define MAX(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_ac45503684793e5582c2bdac1d7d52ba3}{max\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a20c0c3f6f0baca86dd48608bbf4fb02e}{max\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a9322308e4f52e03ae336549fd42b7934}{max\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a60d805f5dc29474286fb04c939b5c509}{max\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a2b015405abe5287fffe31e5dc0e31808}{max\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a174988fd6cd94257cb6332b91429839d}{max\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a3b06accf11f120a22aec6d59ed16d9db}{max\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_ab73b0a00fcc4f391123628e2913a19bb}{max\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a812e8c27f2970204cc8460728d13c96f}{max\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a1960c8508e6fe43960e240626c497764}{max\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a6a09841dc59b5a463a167ee7c2911efe}{max\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a2da642346c710d417636ad41cd99b9a9}{max\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_adcda6720fac922e691d3bf4927edb42a}{max\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will calculate the max value in a data structure
+
+/param T The input data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structDble}{Dble}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ a[5]\ =\ \{3.45,\ 2.18,\ 8.17,\ 0.56,\ 2.28\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ max\ =\ \mbox{\hyperlink{data__structures_8h_a895002453bd9037c335520131a642372}{MAX}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(max);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ 8.17}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00508}{508}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_ac45503684793e5582c2bdac1d7d52ba3}{max\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a20c0c3f6f0baca86dd48608bbf4fb02e}{max\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a9322308e4f52e03ae336549fd42b7934}{max\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a60d805f5dc29474286fb04c939b5c509}{max\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a2b015405abe5287fffe31e5dc0e31808}{max\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a174988fd6cd94257cb6332b91429839d}{max\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a3b06accf11f120a22aec6d59ed16d9db}{max\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_ab73b0a00fcc4f391123628e2913a19bb}{max\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a812e8c27f2970204cc8460728d13c96f}{max\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a1960c8508e6fe43960e240626c497764}{max\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a6a09841dc59b5a463a167ee7c2911efe}{max\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a2da642346c710d417636ad41cd99b9a9}{max\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_adcda6720fac922e691d3bf4927edb42a}{max\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_ab01356067636aa7d12aad9a9302f37a7}\label{data__structures_8h_ab01356067636aa7d12aad9a9302f37a7} 
+\index{data\_structures.h@{data\_structures.h}!MIN@{MIN}}
+\index{MIN@{MIN}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define MIN(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a891486b9b55a8c3ac25a1225553fb0c7}{min\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a1dbc7c797a21eb6c44d009cb497b50ae}{min\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a21be2c6c074005bfa1c33603299f3181}{min\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a3b2bb12ccbe4e256ec4da071673dd601}{min\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aad99e117541f381f0c14f5620507f6e1}{min\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a449905d346deae4f4a83314c592a5b80}{min\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_aaff52778fc2f05ace6de3570530e9068}{min\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a98b9ea464f1a6e1012f3aae9031a8a13}{min\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ad1a7c046cbcac65a71e5442ec5680bdc}{min\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a10aea428d676da30abd474d11dbab300}{min\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a37e7749c40c9ecefb35c6f677e6e2786}{min\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ac870c654ea8b8143650fb8504880d80a}{min\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_af3eef7302375a05b37b3ae4e0d8251a8}{min\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will calculate the max value in a data structure
+
+/param T The input data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structDble}{Dble}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ a[5]\ =\ \{3.45,\ 2.18,\ 8.17,\ 0.56,\ 2.28\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ min\ =\ \mbox{\hyperlink{data__structures_8h_ab01356067636aa7d12aad9a9302f37a7}{MIN}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(max);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ 0.56}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00540}{540}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a891486b9b55a8c3ac25a1225553fb0c7}{min\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a1dbc7c797a21eb6c44d009cb497b50ae}{min\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a21be2c6c074005bfa1c33603299f3181}{min\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a3b2bb12ccbe4e256ec4da071673dd601}{min\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aad99e117541f381f0c14f5620507f6e1}{min\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a449905d346deae4f4a83314c592a5b80}{min\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_aaff52778fc2f05ace6de3570530e9068}{min\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a98b9ea464f1a6e1012f3aae9031a8a13}{min\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_ad1a7c046cbcac65a71e5442ec5680bdc}{min\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a10aea428d676da30abd474d11dbab300}{min\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a37e7749c40c9ecefb35c6f677e6e2786}{min\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ac870c654ea8b8143650fb8504880d80a}{min\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_af3eef7302375a05b37b3ae4e0d8251a8}{min\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a7873976d8a344c5188e57dffb974056b}\label{data__structures_8h_a7873976d8a344c5188e57dffb974056b} 
+\index{data\_structures.h@{data\_structures.h}!POP\_INDEX@{POP\_INDEX}}
+\index{POP\_INDEX@{POP\_INDEX}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{POP\_INDEX}{POP\_INDEX}}
+{\footnotesize\ttfamily \#define POP\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a90c0d394579f3950b22adabb66f153e9}{pop\_short\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_ab5f9826948a1e75b6ffa74b2e801f8c5}{pop\_ushort\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_af0ecebd36b313d07d43f40698bd5508f}{pop\_int\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_aea61eee2cd7481c1d34d13ba4a27e669}{pop\_uint\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ade7d072b4cbbed3560461122ff9bf2d1}{pop\_long\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aee6e8f2b009cc7205dfd8c143b8e9839}{pop\_ulong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a6475916b10de913b8859fbd0b8312557}{pop\_llong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a52f4d32e9312b40967f4c0ee3de88e7a}{pop\_ullong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a7f179d98deb7852196afc7e3d26ef06d}{pop\_float\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a8d2545eb603560d67e5c481075e5d0fc}{pop\_double\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a3964e5480d290ac44a95680e52706f9d}{pop\_ldouble\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a4f9d1488d50bc3889fc04afc18fa9958}{pop\_char\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a7527a193c89c32c07eba99e8abc08574}{pop\_uchar\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a69479bf6e334f44f372305c8b1b13bb3}{pop\_bool\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a4db2688e1c0d0d477c8a7168d811956d}{pop\_string\_vector\_index}})(\&T,\ y)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00185}{185}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a90c0d394579f3950b22adabb66f153e9}{pop\_short\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_ab5f9826948a1e75b6ffa74b2e801f8c5}{pop\_ushort\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_af0ecebd36b313d07d43f40698bd5508f}{pop\_int\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_aea61eee2cd7481c1d34d13ba4a27e669}{pop\_uint\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ade7d072b4cbbed3560461122ff9bf2d1}{pop\_long\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aee6e8f2b009cc7205dfd8c143b8e9839}{pop\_ulong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a6475916b10de913b8859fbd0b8312557}{pop\_llong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a52f4d32e9312b40967f4c0ee3de88e7a}{pop\_ullong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a7f179d98deb7852196afc7e3d26ef06d}{pop\_float\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a8d2545eb603560d67e5c481075e5d0fc}{pop\_double\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a3964e5480d290ac44a95680e52706f9d}{pop\_ldouble\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a4f9d1488d50bc3889fc04afc18fa9958}{pop\_char\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a7527a193c89c32c07eba99e8abc08574}{pop\_uchar\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a69479bf6e334f44f372305c8b1b13bb3}{pop\_bool\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a4db2688e1c0d0d477c8a7168d811956d}{pop\_string\_vector\_index}})(\&T,\ y)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}\label{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5} 
+\index{data\_structures.h@{data\_structures.h}!PUSH@{PUSH}}
+\index{PUSH@{PUSH}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{PUSH}{PUSH}}
+{\footnotesize\ttfamily \#define PUSH(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{value,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}})(\&T,\ value,\ index)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00047}{47}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a6135368684b7d740482cfc775417f255}{push\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\_string\_vector}})(\&T,\ value,\ index)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}\label{data__structures_8h_a67c03354ef846fed0c21ad5802407c42} 
+\index{data\_structures.h@{data\_structures.h}!RANGE@{RANGE}}
+\index{RANGE@{RANGE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{RANGE}{RANGE}}
+{\footnotesize\ttfamily \#define RANGE(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{start,  }\item[{}]{end,  }\item[{}]{delta }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{range\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\_ldouble\_vector}})(\&T,\ start,\ end,\ delta)}
+
+\end{DoxyCode}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param start The start point /param end The end point /param The delta between data points
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 10);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a67c03354ef846fed0c21ad5802407c42}{RANGE}}(vec,\ 2,\ 20,\ 2);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 2,\ 4,\ 6,\ 8,\ 10,\ 12,\ 14,\ 16,\ 18,\ 20\ ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00574}{574}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_afa81d739815cef7056167d48361e0891}{range\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\_ldouble\_vector}})(\&T,\ start,\ end,\ delta)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}\label{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e} 
+\index{data\_structures.h@{data\_structures.h}!REPEAT@{REPEAT}}
+\index{REPEAT@{REPEAT}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REPEAT}{REPEAT}}
+{\footnotesize\ttfamily \#define REPEAT(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{val,  }\item[{}]{num }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\_string\_vector}})(\&T,\ val,\ num)}
+
+\end{DoxyCode}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param val The value to be repeats /param num The number of times a value is repeats
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 10);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a2ca463425145b4a1d1989a92ac937e7e}{REPEAT}}(vec,\ 10,\ 5);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 10,\ 10,\ 10,\ 10,\ 10\ ]}}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00717}{717}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\_string\_vector}})(\&T,\ val,\ num)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}\label{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d} 
+\index{data\_structures.h@{data\_structures.h}!REPLACE\_INDEX@{REPLACE\_INDEX}}
+\index{REPLACE\_INDEX@{REPLACE\_INDEX}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REPLACE\_INDEX}{REPLACE\_INDEX}}
+{\footnotesize\ttfamily \#define REPLACE\+\_\+\+INDEX(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{new\+\_\+val,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}})(\&T,\ new\_val,\ index)}
+
+\end{DoxyCode}
+This macro will insert a range of values between start and end into a data structure.
+
+/param T The data structure /param start The start point /param end The end point /param The delta between data points
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 10);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ a[5]\ =\ \{1,\ 2,\ 3,\ 4,\ 5\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a6fbf1f61f351633bf0504cff6b630a3d}{REPLACE\_INDEX}}(vec,\ 10,\ 2);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 1,\ 2,\ 10,\ 4,\ 5\ ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00682}{682}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\_uchar\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\_short\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\_ushort\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\_int\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\_uint\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\_long\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\_ulong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\_llong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\_ullong\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\_float\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\_double\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\_ldouble\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\_char\_vector\_index}},\ \(\backslash\)}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\_bool\_vector\_index}})(\&T,\ new\_val,\ index)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}\label{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206} 
+\index{data\_structures.h@{data\_structures.h}!REPLACE\_VALUES@{REPLACE\_VALUES}}
+\index{REPLACE\_VALUES@{REPLACE\_VALUES}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REPLACE\_VALUES}{REPLACE\_VALUES}}
+{\footnotesize\ttfamily \#define REPLACE\+\_\+\+VALUES(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{old,  }\item[{}]{new }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a6f10b6c383f01d0f64ccdbedcbf2f9c6}{replace\_short\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a879f3876d14b47d940dbe55a1eec452e}{replace\_ushort\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a7670474ec5b862ec981a62daa995aa3b}{replace\_int\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a9d98a8399e52f97b6771d676b3919319}{replace\_uint\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a8f344f297fe759011551c5f2bb5e0161}{replace\_long\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a3354495712d1e3910ca4e6a33ee1c1df}{replace\_ulong\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a6fbef65375cd1143dadb2045d4a4cc82}{replace\_llong\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_acdb36a4f7fabea5ff887469c25bcaac3}{replace\_ullong\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_aafe1e760a31236df3e8d9b5d4fedf79e}{replace\_float\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a141f86441673f219db9af026644dee3e}{replace\_double\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a344c029c451a00a0a90e20b34569db22}{replace\_ldouble\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a8b7c3baf36c7ef6deca8011f2d622119}{replace\_char\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a8b8b55713c6eeeba3f8bb8fbbb08ad10}{replace\_uchar\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_ab345b0d10cef3cb87e552791440398e9}{replace\_bool\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}{replace\_string\_vector\_values}})(\&T,\ old,\ new)}
+
+\end{DoxyCode}
+This macro will replace all instances of a value in an array with a new value. This macro merely selects the applicable function based on the data type of input variables. Therefore this macro will not increase memory usage, nor with it reduce execution time.
+
+/param vec A vector struct /param old\+\_\+value The value to be replaced, if it exists in the array /param new\+\_\+value The value that will replace the old value
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{IVector\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 1,\ vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 2,\ vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 1,\ vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 4,\ vec.active\_length);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 1,\ vec.active\_length);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_abad9b6661bf67c0b5cc43ddcbd39c206}{REPLACE\_VALUES}}(vec,\ 1,\ 2);}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ vec.active\_length;\ i++)\ \{}
+\DoxyCodeLine{\ \ \ \ printf(\textcolor{stringliteral}{"{}\%\ PRId32\ "{}}\(\backslash\)n\textcolor{stringliteral}{"{},\ vec.array[i]);}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+\DoxyCodeLine{\textcolor{stringliteral}{//\ 2\ 2\ 2\ 4\ 2}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00231}{231}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a6f10b6c383f01d0f64ccdbedcbf2f9c6}{replace\_short\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a879f3876d14b47d940dbe55a1eec452e}{replace\_ushort\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a7670474ec5b862ec981a62daa995aa3b}{replace\_int\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a9d98a8399e52f97b6771d676b3919319}{replace\_uint\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a8f344f297fe759011551c5f2bb5e0161}{replace\_long\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a3354495712d1e3910ca4e6a33ee1c1df}{replace\_ulong\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a6fbef65375cd1143dadb2045d4a4cc82}{replace\_llong\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_acdb36a4f7fabea5ff887469c25bcaac3}{replace\_ullong\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_aafe1e760a31236df3e8d9b5d4fedf79e}{replace\_float\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a141f86441673f219db9af026644dee3e}{replace\_double\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a344c029c451a00a0a90e20b34569db22}{replace\_ldouble\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a8b7c3baf36c7ef6deca8011f2d622119}{replace\_char\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a8b8b55713c6eeeba3f8bb8fbbb08ad10}{replace\_uchar\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_ab345b0d10cef3cb87e552791440398e9}{replace\_bool\_vector\_values}},\ \(\backslash\)}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a1556bb53212c3c454a2ddb3f4c2f4c8a}{replace\_string\_vector\_values}})(\&T,\ old,\ \textcolor{keyword}{new})}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_ae5f2dc1bcc130da5504af4d09d54864c}\label{data__structures_8h_ae5f2dc1bcc130da5504af4d09d54864c} 
+\index{data\_structures.h@{data\_structures.h}!REVERSE@{REVERSE}}
+\index{REVERSE@{REVERSE}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{REVERSE}{REVERSE}}
+{\footnotesize\ttfamily \#define REVERSE(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a6388f663263c0c5a219bc2da551d0584}{reverse\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a15f75e9b6b4192aa83d95635419865da}{reverse\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a0ee6d80508a610096b84893a0edd7e82}{reverse\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a58e127cf5386ca2152ebafcf4dbb8bbd}{reverse\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a0d89b67e906a169f63e1bfc679df018f}{reverse\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a6196a5bfffe22d6493b2bda77a9340fb}{reverse\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a3247bcffd4ad7a9f75c9a2e88ff7bd81}{reverse\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_aa77d55a8f5e4ab149edb6c75d98a94ce}{reverse\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a086bbd995dc83d50532944330a44c450}{reverse\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a628e48950294512d38556f8b194284d4}{reverse\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a8a72b2219830bacf2a5ec926241ed924}{reverse\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a06faa32f223a79c02cb771b19cc02a07}{reverse\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a42deacd361fac959a84262a54ebddcb0}{reverse\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a9b58a773830487b8a8f1973221e93366}{reverse\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a6297710c0ac2122db93e47a260e96ad8}{reverse\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will reverse the order of a data structure
+
+/param vec A data structure of the appropriate type
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Int8\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5)}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 1);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 2);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 3);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 4);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3fee9a7b57ea204e4220ef2bd0700db5}{PUSH}}(vec,\ 5)}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_ae5f2dc1bcc130da5504af4d09d54864c}{REVERSE}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(vec);}
+\DoxyCodeLine{[5,\ 4,\ 3,\ 2,\ 1\ ]}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a1603ab82164c2b586fb4e918dfe0787d}{FREE}}(vec);}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00304}{304}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a6388f663263c0c5a219bc2da551d0584}{reverse\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a15f75e9b6b4192aa83d95635419865da}{reverse\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_a0ee6d80508a610096b84893a0edd7e82}{reverse\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a58e127cf5386ca2152ebafcf4dbb8bbd}{reverse\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_a0d89b67e906a169f63e1bfc679df018f}{reverse\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a6196a5bfffe22d6493b2bda77a9340fb}{reverse\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a3247bcffd4ad7a9f75c9a2e88ff7bd81}{reverse\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_aa77d55a8f5e4ab149edb6c75d98a94ce}{reverse\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_a086bbd995dc83d50532944330a44c450}{reverse\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a628e48950294512d38556f8b194284d4}{reverse\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_a8a72b2219830bacf2a5ec926241ed924}{reverse\_ldouble\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a06faa32f223a79c02cb771b19cc02a07}{reverse\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a42deacd361fac959a84262a54ebddcb0}{reverse\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structBool}{Bool}}:\ \mbox{\hyperlink{vector_8c_a9b58a773830487b8a8f1973221e93366}{reverse\_bool\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structString}{String}}:\ \mbox{\hyperlink{vector_8c_a6297710c0ac2122db93e47a260e96ad8}{reverse\_string\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab}\label{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab} 
+\index{data\_structures.h@{data\_structures.h}!SORT@{SORT}}
+\index{SORT@{SORT}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{SORT}{SORT}}
+{\footnotesize\ttfamily \#define SORT(\begin{DoxyParamCaption}\item[{}]{T,  }\item[{}]{order }\end{DoxyParamCaption})~\mbox{\hyperlink{data__structures_8h_a4b57fe13cd381d593ef6790b5dacff6e}{IS\+\_\+\+SORT\+\_\+\+TYPE}}((T), (0), (T.\+active\+\_\+length-\/1), (order))}
+
+This macro will sort a data structure in forward or reverse order
+
+/param T The data structure to be sorted /para order FORWARD for a forward sort and REVERSE for a reverse sort
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structFlt}{Flt}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{float}\ a[5]\ =\ \{3.4,\ 1.1,\ 2.2,\ 5.4,\ 4.3\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab}{SORT}}(vec,\ \mbox{\hyperlink{vector_8h_af40f59df20b550c793c470752e457636aa26736999186daf8146f809e863712a1}{FORWARD}});}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 1.1,\ 2.2,\ 3.4,\ 4.3,\ 5.4\ ]}}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a3bd435328ac67b6ab76355c6a90ae0ab}{SORT}}(vec,\ \mbox{\hyperlink{data__structures_8h_ae5f2dc1bcc130da5504af4d09d54864c}{REVERSE}});}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ [\ 5.4,\ 4.3,\ 3.4,\ 2.2,\ 1.1\ ]}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00357}{357}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+\Hypertarget{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}\label{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e} 
+\index{data\_structures.h@{data\_structures.h}!STDEV@{STDEV}}
+\index{STDEV@{STDEV}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{STDEV}{STDEV}}
+{\footnotesize\ttfamily \#define STDEV(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a2a72fa8e25403401326d07853c45c7fe}{stdev\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_abb791f292ea37822fa3c8f20749b8571}{stdev\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_abf8b31942231ba26f9f5d4729cdd5370}{stdev\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will calculate the standard deviation of the values in a data structure
+
+/param T The input data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structDble}{Dble}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 5);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ a[5]\ =\ \{3.45,\ 2.18,\ 8.17,\ 0.56,\ 2.28\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 5,\ 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ stdev\ =\ \mbox{\hyperlink{data__structures_8h_a381b9ae37cb75fb74f0a95939eda186e}{STDEV}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(stdev);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ 2.89559}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00476}{476}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a2a72fa8e25403401326d07853c45c7fe}{stdev\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_abb791f292ea37822fa3c8f20749b8571}{stdev\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_abf8b31942231ba26f9f5d4729cdd5370}{stdev\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+\Hypertarget{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}\label{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de} 
+\index{data\_structures.h@{data\_structures.h}!SUM@{SUM}}
+\index{SUM@{SUM}!data\_structures.h@{data\_structures.h}}
+\doxysubsubsection{\texorpdfstring{SUM}{SUM}}
+{\footnotesize\ttfamily \#define SUM(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_Generic(\ (T),\ \mbox{\hyperlink{structShort}{Short}}:\ \mbox{\hyperlink{vector_8c_a54d410de6d79f482b3d560bcb78fd2ff}{sum\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a67f48de636722d00447f21d5040f8d81}{sum\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aaf01dd9c2caec4100d4315bd8d525a30}{sum\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a791fe9c8f9bd1d04158b01c3aa022edd}{sum\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_af2ca62fb5fa87cccef8750d24b3979da}{sum\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a3233da20e23c20659dd5aba81307b58d}{sum\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a838510507e7f386e844fd1e5e3ae494a}{sum\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_af1cc1dfd0470ab00fc1537ebcbb5c089}{sum\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}
+This macro will return the sum of data in a data structure
+
+/param T An appropriate data structure
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structInt}{Int}}\ vec;}
+\DoxyCodeLine{\mbox{\hyperlink{vector_8h_a78b085b69ede6314aedfc346b480a078}{INIT\_VECTOR}}(vec,\ 4);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ a[4]\ =\ \{1,\ 2,\ 3,\ 4\};}
+\DoxyCodeLine{\mbox{\hyperlink{data__structures_8h_a39f36b37e9611785d15e1691a628ab30}{INSERT}}(vec,\ a,\ 4,\ 0);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ b\ =\ \mbox{\hyperlink{data__structures_8h_ab2bc3cf2085b7ef95514abd7c78341de}{SUM}}(vec);}
+\DoxyCodeLine{\mbox{\hyperlink{print_8h_a15bb631053a1fce9c5470701900984c7}{PRINT}}(b);}
+\DoxyCodeLine{\textcolor{comment}{//\ >>\ 10}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{data__structures_8h_source_l00377}{377}} of file \mbox{\hyperlink{data__structures_8h_source}{data\+\_\+structures.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{vector_8c_a54d410de6d79f482b3d560bcb78fd2ff}{sum\_short\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUShort}{UShort}}:\ \mbox{\hyperlink{vector_8c_a67f48de636722d00447f21d5040f8d81}{sum\_ushort\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structInt}{Int}}:\ \mbox{\hyperlink{vector_8c_aaf01dd9c2caec4100d4315bd8d525a30}{sum\_int\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUInt}{UInt}}:\ \mbox{\hyperlink{vector_8c_a791fe9c8f9bd1d04158b01c3aa022edd}{sum\_uint\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLInt}{LInt}}:\ \mbox{\hyperlink{vector_8c_af2ca62fb5fa87cccef8750d24b3979da}{sum\_long\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULInt}{ULInt}}:\ \mbox{\hyperlink{vector_8c_a3233da20e23c20659dd5aba81307b58d}{sum\_ulong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLLInt}{LLInt}}:\ \mbox{\hyperlink{vector_8c_a838510507e7f386e844fd1e5e3ae494a}{sum\_llong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structULLInt}{ULLInt}}:\ \mbox{\hyperlink{vector_8c_af1cc1dfd0470ab00fc1537ebcbb5c089}{sum\_ullong\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structFlt}{Flt}}:\ \mbox{\hyperlink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\_float\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structDble}{Dble}}:\ \mbox{\hyperlink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\_double\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChar}{Char}}:\ \mbox{\hyperlink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\_char\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUChar}{UChar}}:\ \mbox{\hyperlink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\_uchar\_vector}},\ \(\backslash\)}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structLDble}{LDble}}:\ \mbox{\hyperlink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\_ldouble\_vector}})(\&T)}
+
+\end{DoxyCode}

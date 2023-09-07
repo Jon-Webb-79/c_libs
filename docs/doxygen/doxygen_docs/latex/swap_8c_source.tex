@@ -1,0 +1,124 @@
+\doxysection{swap.\+c}
+\hypertarget{swap_8c_source}{}\label{swap_8c_source}\index{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/swap.c@{/home/jonwebb/Code\_Dev/C/c\_libs/c\_libs/include/swap.c}}
+\mbox{\hyperlink{swap_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00001}00001\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00002}00002\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00003}00003\ \textcolor{comment}{//\ -\/\ File:\ \ \ \ swap.c}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00004}00004\ \textcolor{comment}{//\ -\/\ Purpose:\ Describe\ the\ file\ purpose\ here}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00005}00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00006}00006\ \textcolor{comment}{//\ Source\ Metadata}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00007}00007\ \textcolor{comment}{//\ -\/\ Author:\ \ Jonathan\ A.\ Webb}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00008}00008\ \textcolor{comment}{//\ -\/\ Date:\ \ \ \ March\ 28,\ 2023}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00009}00009\ \textcolor{comment}{//\ -\/\ Version:\ 1.0}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00010}00010\ \textcolor{comment}{//\ -\/\ Copyright:\ Copyright\ 2022,\ Jon\ Webb\ Inc.}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00011}00011\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00012}00012\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00013}00013\ \textcolor{comment}{//\ Include\ modules\ here}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{swap_8h}{swap.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00016}00016\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00017}00017\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00018}00018\ \textcolor{comment}{//\ SWAP\ FUNCTIONS}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00020}\mbox{\hyperlink{swap_8c_a99803287c0fa88fd89efa65c71a74a39}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a99803287c0fa88fd89efa65c71a74a39}{swap\_uchar}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00022}00022\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00023}00023\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00025}00025\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00027}\mbox{\hyperlink{swap_8c_a67d6114e177ee4d85994ff482b1329cc}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a67d6114e177ee4d85994ff482b1329cc}{swap\_short}}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00029}00029\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00030}00030\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00032}00032\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00034}\mbox{\hyperlink{swap_8c_a7946c35a5344cd2a139d81e5d807c877}{00034}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a7946c35a5344cd2a139d81e5d807c877}{swap\_ushort}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00036}00036\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00037}00037\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00039}00039\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00041}\mbox{\hyperlink{swap_8c_a10ec5db73aebdd0d7508b49e72770ef4}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a10ec5db73aebdd0d7508b49e72770ef4}{swap\_int}}(\textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00043}00043\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00044}00044\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00046}00046\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00048}\mbox{\hyperlink{swap_8c_ad0c2579d9b7805b5ff6102ddc6f2ef85}{00048}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_ad0c2579d9b7805b5ff6102ddc6f2ef85}{swap\_uint}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00050}00050\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00051}00051\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00053}00053\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00055}\mbox{\hyperlink{swap_8c_a0f866f8d63bc72771d9700427d483767}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a0f866f8d63bc72771d9700427d483767}{swap\_long}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00057}00057\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00058}00058\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00060}00060\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00062}\mbox{\hyperlink{swap_8c_a54c3802c0ad98c4d033bd66be679ab6b}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a54c3802c0ad98c4d033bd66be679ab6b}{swap\_ulong}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00064}00064\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00065}00065\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00067}00067\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00069}\mbox{\hyperlink{swap_8c_a88fe4609428512028b7284547f316ae5}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a88fe4609428512028b7284547f316ae5}{swap\_llong}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00071}00071\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00072}00072\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00074}00074\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00076}\mbox{\hyperlink{swap_8c_a7ff2f756663b834f0fb747ef72a00211}{00076}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a7ff2f756663b834f0fb747ef72a00211}{swap\_ullong}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *a,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00078}00078\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00079}00079\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00081}00081\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00083}\mbox{\hyperlink{swap_8c_a09cf214b72d833078d15069e39feda2e}{00083}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a09cf214b72d833078d15069e39feda2e}{swap\_float}}(\textcolor{keywordtype}{float}\ *a,\ \textcolor{keywordtype}{float}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{float}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00085}00085\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00086}00086\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00088}00088\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00090}\mbox{\hyperlink{swap_8c_abfa4eebba539e060400a6a7fe746614e}{00090}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_abfa4eebba539e060400a6a7fe746614e}{swap\_double}}(\textcolor{keywordtype}{double}\ *a,\ \textcolor{keywordtype}{double}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{double}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00092}00092\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00093}00093\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00095}00095\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00097}\mbox{\hyperlink{swap_8c_a37e67cc39114f8a2b8020266bbf69d99}{00097}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a37e67cc39114f8a2b8020266bbf69d99}{swap\_ldouble}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ *a,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00099}00099\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00100}00100\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00102}00102\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00104}\mbox{\hyperlink{swap_8c_a30ac4d4001cfea5cd988c8697c5756be}{00104}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a30ac4d4001cfea5cd988c8697c5756be}{swap\_char}}(\textcolor{keywordtype}{char}\ *a,\ \textcolor{keywordtype}{char}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00105}00105\ \ \ \ \ \textcolor{keywordtype}{char}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00106}00106\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00107}00107\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00109}00109\ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00111}\mbox{\hyperlink{swap_8c_a8a2a44625c90172a99a93e5cc1dba005}{00111}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{swap_8c_a8a2a44625c90172a99a93e5cc1dba005}{swap\_bool}}(\textcolor{keywordtype}{bool}\ *a,\ \textcolor{keywordtype}{bool}\ *b)\ \{}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00112}00112\ \ \ \ \ \textcolor{keywordtype}{bool}\ temp\ =\ *a;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00113}00113\ \ \ \ \ *a\ =\ *b;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00114}00114\ \ \ \ \ *b\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00116}00116\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00117}00117\ \textcolor{comment}{//\ ================================================================================}}
+\DoxyCodeLine{\Hypertarget{swap_8c_source_l00118}00118\ \textcolor{comment}{//\ eof}}
+
+\end{DoxyCode}

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structShort" kind="struct" language="C++" prot="public">
+    <compoundname>Short</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structShort_1a04935e9b7f598fb961b481224a73351e" prot="public" static="no" mutable="no">
+        <type>short *</type>
+        <definition>short* Short::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <qualifiedname>Short::array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="77" column="22" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="vector_8c_1ab88c9075f7ac94dd8656a8eec4a14a94" compoundref="vector_8c" startline="4477" endline="4482">copy_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a588f2bea0a2ac3d8bf87184d873a2804" compoundref="vector_8c" startline="3020" endline="3029">cumsum_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a35b16d98a38d37826ee118f4860d680a" compoundref="vector_8c" startline="1881" endline="1890">delete_short_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a8a383d2299a326d3c0ded94c19d73393" compoundref="vector_8c" startline="1685" endline="1695">free_short_vector</referencedby>
+        <referencedby refid="vector_8c_1acb7b3bcd9252ad84ea9d05436f57bd6c" compoundref="vector_8c" startline="236" endline="241">init_short_array</referencedby>
+        <referencedby refid="vector_8c_1a749211e8a46a8b2297b3c6ebb78aed0e" compoundref="vector_8c" startline="18" endline="30">init_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a2ed595a869e30a4c834c1d2cf5b934ee" compoundref="vector_8c" startline="833" endline="866">insert_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a9322308e4f52e03ae336549fd42b7934" compoundref="vector_8c" startline="4024" endline="4032">max_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a21be2c6c074005bfa1c33603299f3181" compoundref="vector_8c" startline="4169" endline="4177">min_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a90c0d394579f3950b22adabb66f153e9" compoundref="vector_8c" startline="1366" endline="1376">pop_short_vector_index</referencedby>
+        <referencedby refid="print_8c_1a2a0d52224624824540d0990005b5e4d9" compoundref="print_8c" startline="37" endline="56">print_vshort</referencedby>
+        <referencedby refid="vector_8c_1a38068c17aa5cf7286175572d43219b8d" compoundref="vector_8c" startline="349" endline="379">push_short_vector</referencedby>
+        <referencedby refid="vector_8c_1ab1de3c266f8b9ed02a1d6ce573da1f9a" compoundref="vector_8c" startline="4771" endline="4778">replace_short_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a6f10b6c383f01d0f64ccdbedcbf2f9c6" compoundref="vector_8c" startline="1573" endline="1577">replace_short_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a6388f663263c0c5a219bc2da551d0584" compoundref="vector_8c" startline="2065" endline="2077">reverse_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a34d64d0cfc6dc0e1e5b3ab4d685f9b17" compoundref="vector_8c" startline="4430" endline="4430">short_vector_data</referencedby>
+        <referencedby refid="vector_8c_1a04f50afe6c127edeea202b08ad65f36a" compoundref="vector_8c" startline="2323" endline="2330">sort_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a193f4372f93ae17ab490841af7e508c3" compoundref="vector_8c" startline="3362" endline="3417">stdev_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a54d410de6d79f482b3d560bcb78fd2ff" compoundref="vector_8c" startline="2895" endline="2901">sum_short_vector</referencedby>
+        <referencedby refid="vector_8c_1aeec337d3614f9c62cd652fee528e8f10" compoundref="vector_8c" startline="4601" endline="4610">trim_short_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structShort_1af0b6f4e61e69b8a2f74d42b09b421d88" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Short::allocated_length</definition>
+        <argsstring></argsstring>
+        <name>allocated_length</name>
+        <qualifiedname>Short::allocated_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="77" column="35" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a8a383d2299a326d3c0ded94c19d73393" compoundref="vector_8c" startline="1685" endline="1695">free_short_vector</referencedby>
+        <referencedby refid="vector_8c_1acb7b3bcd9252ad84ea9d05436f57bd6c" compoundref="vector_8c" startline="236" endline="241">init_short_array</referencedby>
+        <referencedby refid="vector_8c_1a749211e8a46a8b2297b3c6ebb78aed0e" compoundref="vector_8c" startline="18" endline="30">init_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a2ed595a869e30a4c834c1d2cf5b934ee" compoundref="vector_8c" startline="833" endline="866">insert_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a38068c17aa5cf7286175572d43219b8d" compoundref="vector_8c" startline="349" endline="379">push_short_vector</referencedby>
+        <referencedby refid="vector_8c_1aeec337d3614f9c62cd652fee528e8f10" compoundref="vector_8c" startline="4601" endline="4610">trim_short_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structShort_1acbbd74e6339b5e0398be80890927ea67" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Short::active_length</definition>
+        <argsstring></argsstring>
+        <name>active_length</name>
+        <qualifiedname>Short::active_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="77" column="59" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a5a553d82722c04ec4b613014fa1d0688" compoundref="vector_8c" startline="3167" endline="3171">average_short_vector</referencedby>
+        <referencedby refid="vector_8c_1ab88c9075f7ac94dd8656a8eec4a14a94" compoundref="vector_8c" startline="4477" endline="4482">copy_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a588f2bea0a2ac3d8bf87184d873a2804" compoundref="vector_8c" startline="3020" endline="3029">cumsum_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a35b16d98a38d37826ee118f4860d680a" compoundref="vector_8c" startline="1881" endline="1890">delete_short_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a8a383d2299a326d3c0ded94c19d73393" compoundref="vector_8c" startline="1685" endline="1695">free_short_vector</referencedby>
+        <referencedby refid="vector_8c_1acb7b3bcd9252ad84ea9d05436f57bd6c" compoundref="vector_8c" startline="236" endline="241">init_short_array</referencedby>
+        <referencedby refid="vector_8c_1a749211e8a46a8b2297b3c6ebb78aed0e" compoundref="vector_8c" startline="18" endline="30">init_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a2ed595a869e30a4c834c1d2cf5b934ee" compoundref="vector_8c" startline="833" endline="866">insert_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a9322308e4f52e03ae336549fd42b7934" compoundref="vector_8c" startline="4024" endline="4032">max_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a21be2c6c074005bfa1c33603299f3181" compoundref="vector_8c" startline="4169" endline="4177">min_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a90c0d394579f3950b22adabb66f153e9" compoundref="vector_8c" startline="1366" endline="1376">pop_short_vector_index</referencedby>
+        <referencedby refid="print_8c_1a2a0d52224624824540d0990005b5e4d9" compoundref="print_8c" startline="37" endline="56">print_vshort</referencedby>
+        <referencedby refid="vector_8c_1a38068c17aa5cf7286175572d43219b8d" compoundref="vector_8c" startline="349" endline="379">push_short_vector</referencedby>
+        <referencedby refid="vector_8c_1adb305706da4585539cd057cfa0ec0e2c" compoundref="vector_8c" startline="4312" endline="4319">range_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a1fbfbfeed7892cd604ac2175048a1ff3" compoundref="vector_8c" startline="4923" endline="4930">repeat_short_vector</referencedby>
+        <referencedby refid="vector_8c_1ab1de3c266f8b9ed02a1d6ce573da1f9a" compoundref="vector_8c" startline="4771" endline="4778">replace_short_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a6f10b6c383f01d0f64ccdbedcbf2f9c6" compoundref="vector_8c" startline="1573" endline="1577">replace_short_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a6388f663263c0c5a219bc2da551d0584" compoundref="vector_8c" startline="2065" endline="2077">reverse_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a193f4372f93ae17ab490841af7e508c3" compoundref="vector_8c" startline="3362" endline="3417">stdev_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a54d410de6d79f482b3d560bcb78fd2ff" compoundref="vector_8c" startline="2895" endline="2901">sum_short_vector</referencedby>
+        <referencedby refid="vector_8c_1aeec337d3614f9c62cd652fee528e8f10" compoundref="vector_8c" startline="4601" endline="4610">trim_short_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structShort_1a20b9c526866b593e8e1ecdc49515e642" prot="public" static="no" mutable="no">
+        <type><ref refid="vector_8h_1ad756268621f03e4812b68792b291fff5" kindref="member">mem_type</ref></type>
+        <definition>mem_type Short::dat_type</definition>
+        <argsstring></argsstring>
+        <name>dat_type</name>
+        <qualifiedname>Short::dat_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="77" column="82" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a8a383d2299a326d3c0ded94c19d73393" compoundref="vector_8c" startline="1685" endline="1695">free_short_vector</referencedby>
+        <referencedby refid="vector_8c_1acb7b3bcd9252ad84ea9d05436f57bd6c" compoundref="vector_8c" startline="236" endline="241">init_short_array</referencedby>
+        <referencedby refid="vector_8c_1a749211e8a46a8b2297b3c6ebb78aed0e" compoundref="vector_8c" startline="18" endline="30">init_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a2ed595a869e30a4c834c1d2cf5b934ee" compoundref="vector_8c" startline="833" endline="866">insert_short_vector</referencedby>
+        <referencedby refid="vector_8c_1a38068c17aa5cf7286175572d43219b8d" compoundref="vector_8c" startline="349" endline="379">push_short_vector</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="77" column="1" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="77" bodyend="77"/>
+    <listofallmembers>
+      <member refid="structShort_1acbbd74e6339b5e0398be80890927ea67" prot="public" virt="non-virtual"><scope>Short</scope><name>active_length</name></member>
+      <member refid="structShort_1af0b6f4e61e69b8a2f74d42b09b421d88" prot="public" virt="non-virtual"><scope>Short</scope><name>allocated_length</name></member>
+      <member refid="structShort_1a04935e9b7f598fb961b481224a73351e" prot="public" virt="non-virtual"><scope>Short</scope><name>array</name></member>
+      <member refid="structShort_1a20b9c526866b593e8e1ecdc49515e642" prot="public" virt="non-virtual"><scope>Short</scope><name>dat_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="print_8h" kind="file" language="C++">
+    <compoundname>print.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="vector_8h" local="yes">vector.h</includes>
+    <includedby refid="print_8c" local="yes">/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>swap.h</label>
+        <link refid="swap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c</label>
+        <link refid="print_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" prot="public" static="no">
+        <name>PRNT_LENGTH</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="23" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1aa189d8cb2484952182136c0475b11579" prot="public" static="no">
+        <name>IS_ITYPE_VALID</name>
+        <param><defname>T</defname></param>
+        <initializer>		                                 _Generic( (T), long int: true, \
+		                                 unsigned long int: true, \
+									     long long int: true, \
+									     unsigned long long int: true, \
+									     float: true, \
+									     double: true, \
+									     long double: true, \
+									     char: true, \
+										 bool: true, \
+										 unsigned char: true, \
+									     char*: true, \
+										 Flt: true, \
+										 Dble: true, \
+										 LDble: true, \
+										 Int: true, \
+										 UInt: true, \
+										 Short: true, \
+										 UShort: true, \
+										 LInt: true, \
+										 ULInt: true, \
+										 LLInt: true, \
+										 ULLInt: true, \
+										 Char: true, \
+										 Bool: true, \
+										 String: true, \
+										 default: false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="29" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="29" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" prot="public" static="no">
+        <name>ITYPE_FORMAT</name>
+        <param><defname>T</defname></param>
+        <initializer>		                               _Generic( (T), unsigned char: <ref refid="print_8h_1a12e5b67b156923d8f1c0647cd5606f20" kindref="member">print_uachar</ref>, \
+		                               long int: <ref refid="print_8c_1a6f89221b13ec0882c700f88c623113a3" kindref="member">print_long</ref>, \
+									   unsigned long int: <ref refid="print_8c_1ab5a44eddd18370fb6ef9aaf3e8d359d9" kindref="member">print_ullong</ref>, \
+									   long long int: <ref refid="print_8c_1afb26dd7a6cb52b95ecd16aa445fc9239" kindref="member">print_llong</ref>, \
+									   unsigned long long int: <ref refid="print_8c_1ab5a44eddd18370fb6ef9aaf3e8d359d9" kindref="member">print_ullong</ref>, \
+									   float: <ref refid="print_8c_1ae263043922f2154fed0757f8c9af61bb" kindref="member">print_float</ref>, \
+									   double: <ref refid="print_8c_1ac5ed0163987cb3330a169f59080685ca" kindref="member">print_double</ref>, \
+									   long double: <ref refid="print_8c_1a54070cc5f0b3732b440b5ef02373376f" kindref="member">print_longdouble</ref>, \
+									   char: <ref refid="print_8c_1ac678a2f116551899cfc1a5e8cf648c14" kindref="member">print_char</ref>, \
+									   bool: <ref refid="print_8c_1aebfb9d4b007ae9d63b0f794881005c85" kindref="member">print_bool</ref>, \
+									   char*: <ref refid="print_8c_1a860a00528dade9ef415370817eabf5ff" kindref="member">print_string</ref>, \
+									   Int: <ref refid="print_8c_1a9a41c83694e3b241942d8970fd6745ff" kindref="member">print_vint</ref>, \
+									   UInt: <ref refid="print_8c_1af0a82c6bf6c3d184686915db6a7f29b3" kindref="member">print_vuint</ref>, \
+                                       Short: <ref refid="print_8c_1a2a0d52224624824540d0990005b5e4d9" kindref="member">print_vshort</ref>, \
+                                       UShort: <ref refid="print_8c_1af34cc1667a589100d6c609f9387cbe2a" kindref="member">print_vushort</ref>, \
+                                       LInt: <ref refid="print_8c_1ae911ee475c83d5068afc57a6a5c1411a" kindref="member">print_vlint</ref>, \
+                                       ULInt: <ref refid="print_8c_1ad7e952d652fc3101cb3e6da0b97bf3bd" kindref="member">print_vulint</ref>, \
+                                       LLInt: <ref refid="print_8c_1aaf6b0ca85e9949e33b1fe7032013737f" kindref="member">print_vllint</ref>, \
+                                       ULLInt: <ref refid="print_8c_1a4669814d3bc34ea00aeb82d518de638c" kindref="member">print_vullint</ref>, \
+                                       Flt: <ref refid="print_8c_1a1b802bc15c06ceedbd94e033cad224ef" kindref="member">print_vfloat</ref>, \
+                                       Dble: <ref refid="print_8c_1ace9eeb8267215fd743662d3dcd5e9214" kindref="member">print_vdble</ref>, \
+						               Char: <ref refid="print_8c_1a6b984360c08f810691957e80aef53706" kindref="member">print_achar</ref>, \
+                                       UChar: <ref refid="print_8h_1a12e5b67b156923d8f1c0647cd5606f20" kindref="member">print_uachar</ref>, \
+									   Bool: <ref refid="print_8c_1aa03507dd0302ea7b35a3214359834e07" kindref="member">print_vbool</ref>, \
+                                       LDble: <ref refid="print_8c_1a9225ee1244d3fb8bbd2f8a187374c970" kindref="member">print_vldble</ref>, \
+                                       String: <ref refid="print_8c_1a3da5a00b1052067cae81971c1ee7d7e3" kindref="member">print_vstring</ref>)(T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="96" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="96" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a39a8a7a028f67802d45cc3c762960a6f" prot="public" static="no">
+        <name>PRINT1</name>
+        <param><defname>a</defname></param>
+        <initializer>	do {															\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="124" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a8c6063c51bf958b2049ecd745fbb2504" prot="public" static="no">
+        <name>PRINT2</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>	do {														\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="130" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="130" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1ae84e0a75aae0e8a840d3e82deb03938f" prot="public" static="no">
+        <name>PRINT3</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>	do {													\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(c)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(c);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="137" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="137" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a10767a6ce3e526cd750946b63f47130e" prot="public" static="no">
+        <name>PRINT4</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <initializer>	do {													\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(c)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(c);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(d)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(d);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="145" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="145" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1aa861bcfa629405821f226882d152b2f1" prot="public" static="no">
+        <name>PRINT5</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <param><defname>e</defname></param>
+        <initializer>	do {												\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(c)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(c);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(d)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(d);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(e)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(e);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="154" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="154" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a0b6b49945d462d6df995f536d11fd768" prot="public" static="no">
+        <name>PRINT6</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <param><defname>e</defname></param>
+        <param><defname>f</defname></param>
+        <initializer>	do {											\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(c)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(c);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(d)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(d);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(e)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(e);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(f)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(f);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="164" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="164" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1ac672c921cc913e36af08db2968d2223d" prot="public" static="no">
+        <name>PRINT7</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <param><defname>e</defname></param>
+        <param><defname>f</defname></param>
+        <param><defname>g</defname></param>
+        <initializer>	do {										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(c)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(c);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(d)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(d);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(e)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(e);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(f)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(f);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(g)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(g);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="175" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="175" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a7f2cb61bf6177ef5618940b6e766c756" prot="public" static="no">
+        <name>PRINT8</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>d</defname></param>
+        <param><defname>e</defname></param>
+        <param><defname>f</defname></param>
+        <param><defname>g</defname></param>
+        <param><defname>h</defname></param>
+        <initializer>	do {										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(a)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(a);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(b)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(b);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(c)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(c);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(d)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(d);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(e)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(e);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(f)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(f);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(g)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(g);										\
+	if (<ref refid="print_8h_1aa189d8cb2484952182136c0475b11579" kindref="member">IS_ITYPE_VALID</ref>(h)) <ref refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" kindref="member">ITYPE_FORMAT</ref>(h);										\
+	printf(&quot;\n&quot;);																\
+} while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="187" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="187" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1af309810a54a19e8ab5462815a479d15a" prot="public" static="no">
+        <name>GET_MACRO</name>
+        <param><defname>_1</defname></param>
+        <param><defname>_2</defname></param>
+        <param><defname>_3</defname></param>
+        <param><defname>_4</defname></param>
+        <param><defname>_5</defname></param>
+        <param><defname>_6</defname></param>
+        <param><defname>_7</defname></param>
+        <param><defname>_8</defname></param>
+        <param><defname>NAME</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>NAME</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="200" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="print_8h_1a15bb631053a1fce9c5470701900984c7" prot="public" static="no">
+        <name>PRINT</name>
+        <param><defname>...</defname></param>
+        <initializer><ref refid="print_8h_1af309810a54a19e8ab5462815a479d15a" kindref="member">GET_MACRO</ref>(__VA_ARGS__, <ref refid="print_8h_1a7f2cb61bf6177ef5618940b6e766c756" kindref="member">PRINT8</ref>, <ref refid="print_8h_1ac672c921cc913e36af08db2968d2223d" kindref="member">PRINT7</ref>, <ref refid="print_8h_1a0b6b49945d462d6df995f536d11fd768" kindref="member">PRINT6</ref>, <ref refid="print_8h_1aa861bcfa629405821f226882d152b2f1" kindref="member">PRINT5</ref>, <ref refid="print_8h_1a10767a6ce3e526cd750946b63f47130e" kindref="member">PRINT4</ref>, <ref refid="print_8h_1ae84e0a75aae0e8a840d3e82deb03938f" kindref="member">PRINT3</ref>, <ref refid="print_8h_1a8c6063c51bf958b2049ecd745fbb2504" kindref="member">PRINT2</ref>, <ref refid="print_8h_1a39a8a7a028f67802d45cc3c762960a6f" kindref="member">PRINT1</ref>)(__VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will print up to 8 arguments of any data type without requiring the user implement a specific format. Unfortunately the present version of this Macro does not allow a user to tailor the format of the print function</para>
+<para><programlisting><codeline><highlight class="normal">float<sp/>p<sp/>=<sp/>3.14;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;The<sp/>value<sp/>of<sp/>pi<sp/>is<sp/>&quot;,<sp/>pi);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>The<sp/>value<sp/>of<sp/>pi<sp/>is<sp/>3.14000</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="214" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="print_8h_1a97ec9dc33067858546ad853dc0cbd8fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_short</definition>
+        <argsstring>(short x)</argsstring>
+        <name>print_short</name>
+        <param>
+          <type>short</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="61" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="18" bodyend="18" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="61" declcolumn="6"/>
+        <referencedby refid="print_8c_1a2a0d52224624824540d0990005b5e4d9" compoundref="print_8c" startline="37" endline="56">print_vshort</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ab118e99637388dfae3ccf27c654628d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_ushort</definition>
+        <argsstring>(unsigned short x)</argsstring>
+        <name>print_ushort</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="62" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="19" bodyend="19" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="62" declcolumn="6"/>
+        <referencedby refid="print_8c_1af34cc1667a589100d6c609f9387cbe2a" compoundref="print_8c" startline="59" endline="78">print_vushort</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a1fd303ab55a5d1e49ac9ae3c3ce10321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_int</definition>
+        <argsstring>(int x)</argsstring>
+        <name>print_int</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="63" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="20" bodyend="20" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="63" declcolumn="6"/>
+        <referencedby refid="print_8c_1a9a41c83694e3b241942d8970fd6745ff" compoundref="print_8c" startline="81" endline="100">print_vint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a574c5bc64e4638eb13d9ad7c88c6fbcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_uint</definition>
+        <argsstring>(unsigned int x)</argsstring>
+        <name>print_uint</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="64" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="21" bodyend="21" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="64" declcolumn="6"/>
+        <referencedby refid="print_8c_1af0a82c6bf6c3d184686915db6a7f29b3" compoundref="print_8c" startline="103" endline="118">print_vuint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a6f89221b13ec0882c700f88c623113a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_long</definition>
+        <argsstring>(long int x)</argsstring>
+        <name>print_long</name>
+        <param>
+          <type>long int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="65" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="22" bodyend="22" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="65" declcolumn="6"/>
+        <referencedby refid="print_8c_1ae911ee475c83d5068afc57a6a5c1411a" compoundref="print_8c" startline="121" endline="140">print_vlint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ad2bfa6bf3fb70b1015bac866fdad267b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_ulong</definition>
+        <argsstring>(unsigned long int x)</argsstring>
+        <name>print_ulong</name>
+        <param>
+          <type>unsigned long int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="66" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="23" bodyend="23" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="66" declcolumn="6"/>
+        <referencedby refid="print_8c_1ad7e952d652fc3101cb3e6da0b97bf3bd" compoundref="print_8c" startline="143" endline="162">print_vulint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1afb26dd7a6cb52b95ecd16aa445fc9239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_llong</definition>
+        <argsstring>(long long int x)</argsstring>
+        <name>print_llong</name>
+        <param>
+          <type>long long int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="67" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="24" bodyend="24" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="67" declcolumn="6"/>
+        <referencedby refid="print_8c_1aaf6b0ca85e9949e33b1fe7032013737f" compoundref="print_8c" startline="165" endline="184">print_vllint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ab5a44eddd18370fb6ef9aaf3e8d359d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_ullong</definition>
+        <argsstring>(unsigned long long int x)</argsstring>
+        <name>print_ullong</name>
+        <param>
+          <type>unsigned long long int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="68" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="25" bodyend="25" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="68" declcolumn="6"/>
+        <referencedby refid="print_8c_1a4669814d3bc34ea00aeb82d518de638c" compoundref="print_8c" startline="187" endline="206">print_vullint</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ae263043922f2154fed0757f8c9af61bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_float</definition>
+        <argsstring>(float x)</argsstring>
+        <name>print_float</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="69" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="26" bodyend="26" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="69" declcolumn="6"/>
+        <referencedby refid="print_8c_1a1b802bc15c06ceedbd94e033cad224ef" compoundref="print_8c" startline="209" endline="228">print_vfloat</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ac5ed0163987cb3330a169f59080685ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_double</definition>
+        <argsstring>(double x)</argsstring>
+        <name>print_double</name>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="70" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="27" bodyend="27" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="70" declcolumn="6"/>
+        <referencedby refid="print_8c_1ace9eeb8267215fd743662d3dcd5e9214" compoundref="print_8c" startline="231" endline="250">print_vdble</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a54070cc5f0b3732b440b5ef02373376f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_longdouble</definition>
+        <argsstring>(long double x)</argsstring>
+        <name>print_longdouble</name>
+        <param>
+          <type>long double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="71" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="28" bodyend="28" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="71" declcolumn="6"/>
+        <referencedby refid="print_8c_1a9225ee1244d3fb8bbd2f8a187374c970" compoundref="print_8c" startline="253" endline="272">print_vldble</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ac678a2f116551899cfc1a5e8cf648c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_char</definition>
+        <argsstring>(char x)</argsstring>
+        <name>print_char</name>
+        <param>
+          <type>char</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="72" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="29" bodyend="29" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="72" declcolumn="6"/>
+        <referencedby refid="print_8c_1a6b984360c08f810691957e80aef53706" compoundref="print_8c" startline="275" endline="294">print_achar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ab95583f0586df0ae6cf38986debe821c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_uchar</definition>
+        <argsstring>(unsigned char x)</argsstring>
+        <name>print_uchar</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="73" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="30" bodyend="30" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1aebfb9d4b007ae9d63b0f794881005c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_bool</definition>
+        <argsstring>(bool x)</argsstring>
+        <name>print_bool</name>
+        <param>
+          <type>bool</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="74" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="31" bodyend="31" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="74" declcolumn="6"/>
+        <referencedby refid="print_8c_1aa03507dd0302ea7b35a3214359834e07" compoundref="print_8c" startline="297" endline="316">print_vbool</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a860a00528dade9ef415370817eabf5ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_string</definition>
+        <argsstring>(char *x)</argsstring>
+        <name>print_string</name>
+        <param>
+          <type>char *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="75" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="32" bodyend="32" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="75" declcolumn="6"/>
+        <referencedby refid="print_8c_1a3da5a00b1052067cae81971c1ee7d7e3" compoundref="print_8c" startline="319" endline="338">print_vstring</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a2a0d52224624824540d0990005b5e4d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vshort</definition>
+        <argsstring>(Short x)</argsstring>
+        <name>print_vshort</name>
+        <param>
+          <type><ref refid="structShort" kindref="compound">Short</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="78" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="37" bodyend="56" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="78" declcolumn="6"/>
+        <references refid="structShort_1acbbd74e6339b5e0398be80890927ea67" compoundref="vector_8h" startline="77">Short::active_length</references>
+        <references refid="structShort_1a04935e9b7f598fb961b481224a73351e" compoundref="vector_8h" startline="77">Short::array</references>
+        <references refid="print_8c_1a97ec9dc33067858546ad853dc0cbd8fa" compoundref="print_8c" startline="18" endline="18">print_short</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1af34cc1667a589100d6c609f9387cbe2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vushort</definition>
+        <argsstring>(UShort x)</argsstring>
+        <name>print_vushort</name>
+        <param>
+          <type><ref refid="structUShort" kindref="compound">UShort</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="79" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="59" bodyend="78" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="79" declcolumn="6"/>
+        <references refid="structUShort_1ac29248ce011dce670f4471a571e94002" compoundref="vector_8h" startline="78">UShort::active_length</references>
+        <references refid="structUShort_1a2dda197933e737c731ad2643f47fd431" compoundref="vector_8h" startline="78">UShort::array</references>
+        <references refid="print_8c_1ab118e99637388dfae3ccf27c654628d3" compoundref="print_8c" startline="19" endline="19">print_ushort</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a9a41c83694e3b241942d8970fd6745ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vint</definition>
+        <argsstring>(Int x)</argsstring>
+        <name>print_vint</name>
+        <param>
+          <type><ref refid="structInt" kindref="compound">Int</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="80" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="81" bodyend="100" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="80" declcolumn="6"/>
+        <references refid="structInt_1af876a5749646fd07a6966461e2d67a1a" compoundref="vector_8h" startline="79">Int::active_length</references>
+        <references refid="structInt_1a0bee150d7ac85db061a8eadbeaaf341f" compoundref="vector_8h" startline="79">Int::array</references>
+        <references refid="print_8c_1a1fd303ab55a5d1e49ac9ae3c3ce10321" compoundref="print_8c" startline="20" endline="20">print_int</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1af0a82c6bf6c3d184686915db6a7f29b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vuint</definition>
+        <argsstring>(UInt x)</argsstring>
+        <name>print_vuint</name>
+        <param>
+          <type><ref refid="structUInt" kindref="compound">UInt</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="81" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="103" bodyend="118" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="81" declcolumn="6"/>
+        <references refid="structUInt_1a674db00cf632dbe64f92bdfcbaa274ec" compoundref="vector_8h" startline="80">UInt::active_length</references>
+        <references refid="structUInt_1a9da46a4a94b40c6fb93093e54d5038df" compoundref="vector_8h" startline="80">UInt::array</references>
+        <references refid="print_8c_1a574c5bc64e4638eb13d9ad7c88c6fbcb" compoundref="print_8c" startline="21" endline="21">print_uint</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ae911ee475c83d5068afc57a6a5c1411a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vlint</definition>
+        <argsstring>(LInt x)</argsstring>
+        <name>print_vlint</name>
+        <param>
+          <type><ref refid="structLInt" kindref="compound">LInt</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="82" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="121" bodyend="140" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="82" declcolumn="6"/>
+        <references refid="structLInt_1aed77ebed11b13b3fcbe367eaa774cbca" compoundref="vector_8h" startline="81">LInt::active_length</references>
+        <references refid="structLInt_1a5fda7e772b70cd9b754e2b24f4489018" compoundref="vector_8h" startline="81">LInt::array</references>
+        <references refid="print_8c_1a6f89221b13ec0882c700f88c623113a3" compoundref="print_8c" startline="22" endline="22">print_long</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ad7e952d652fc3101cb3e6da0b97bf3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vulint</definition>
+        <argsstring>(ULInt x)</argsstring>
+        <name>print_vulint</name>
+        <param>
+          <type><ref refid="structULInt" kindref="compound">ULInt</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="83" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="143" bodyend="162" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="83" declcolumn="6"/>
+        <references refid="structULInt_1acef5b8ecd93a66f86d4d82464795895f" compoundref="vector_8h" startline="82">ULInt::active_length</references>
+        <references refid="structULInt_1aa9fd315970b6f4f3e04f1b061b5d444e" compoundref="vector_8h" startline="82">ULInt::array</references>
+        <references refid="print_8c_1ad2bfa6bf3fb70b1015bac866fdad267b" compoundref="print_8c" startline="23" endline="23">print_ulong</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1aaf6b0ca85e9949e33b1fe7032013737f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vllint</definition>
+        <argsstring>(LLInt x)</argsstring>
+        <name>print_vllint</name>
+        <param>
+          <type><ref refid="structLLInt" kindref="compound">LLInt</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="84" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="165" bodyend="184" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="84" declcolumn="6"/>
+        <references refid="structLLInt_1a28859bb1fe518cff33b31b69deb08ca4" compoundref="vector_8h" startline="83">LLInt::active_length</references>
+        <references refid="structLLInt_1ab754b9860df1677a3ea8e1808cd412ae" compoundref="vector_8h" startline="83">LLInt::array</references>
+        <references refid="print_8c_1afb26dd7a6cb52b95ecd16aa445fc9239" compoundref="print_8c" startline="24" endline="24">print_llong</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a4669814d3bc34ea00aeb82d518de638c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vullint</definition>
+        <argsstring>(ULLInt x)</argsstring>
+        <name>print_vullint</name>
+        <param>
+          <type><ref refid="structULLInt" kindref="compound">ULLInt</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="85" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="187" bodyend="206" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="85" declcolumn="6"/>
+        <references refid="structULLInt_1ac482706169eaadbdf2211aa54bf63d2b" compoundref="vector_8h" startline="84">ULLInt::active_length</references>
+        <references refid="structULLInt_1a356fe553bcfe6a502a0ad1c10c7774a0" compoundref="vector_8h" startline="84">ULLInt::array</references>
+        <references refid="print_8c_1ab5a44eddd18370fb6ef9aaf3e8d359d9" compoundref="print_8c" startline="25" endline="25">print_ullong</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a1b802bc15c06ceedbd94e033cad224ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vfloat</definition>
+        <argsstring>(Flt x)</argsstring>
+        <name>print_vfloat</name>
+        <param>
+          <type><ref refid="structFlt" kindref="compound">Flt</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="86" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="209" bodyend="228" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="86" declcolumn="6"/>
+        <references refid="structFlt_1a2fa1599d2472633868a9aef0ae510754" compoundref="vector_8h" startline="85">Flt::active_length</references>
+        <references refid="structFlt_1a87e7b6ad39c028b824e732662b798ae8" compoundref="vector_8h" startline="85">Flt::array</references>
+        <references refid="print_8c_1ae263043922f2154fed0757f8c9af61bb" compoundref="print_8c" startline="26" endline="26">print_float</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1ace9eeb8267215fd743662d3dcd5e9214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vdble</definition>
+        <argsstring>(Dble x)</argsstring>
+        <name>print_vdble</name>
+        <param>
+          <type><ref refid="structDble" kindref="compound">Dble</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="87" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="231" bodyend="250" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="87" declcolumn="6"/>
+        <references refid="structDble_1afffcb8f62c1716ac8bf2449666f4fa9d" compoundref="vector_8h" startline="86">Dble::active_length</references>
+        <references refid="structDble_1a581ba4d948776393590092041ca3a2e6" compoundref="vector_8h" startline="86">Dble::array</references>
+        <references refid="print_8c_1ac5ed0163987cb3330a169f59080685ca" compoundref="print_8c" startline="27" endline="27">print_double</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a9225ee1244d3fb8bbd2f8a187374c970" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vldble</definition>
+        <argsstring>(LDble x)</argsstring>
+        <name>print_vldble</name>
+        <param>
+          <type><ref refid="structLDble" kindref="compound">LDble</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="88" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="253" bodyend="272" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="88" declcolumn="6"/>
+        <references refid="structLDble_1a57fae05b26ff167c0242e48e751c1646" compoundref="vector_8h" startline="87">LDble::active_length</references>
+        <references refid="structLDble_1a100e4d029269084cfc49f13c1ba8e0e7" compoundref="vector_8h" startline="87">LDble::array</references>
+        <references refid="print_8c_1a54070cc5f0b3732b440b5ef02373376f" compoundref="print_8c" startline="28" endline="28">print_longdouble</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a6b984360c08f810691957e80aef53706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_achar</definition>
+        <argsstring>(Char x)</argsstring>
+        <name>print_achar</name>
+        <param>
+          <type><ref refid="structChar" kindref="compound">Char</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="89" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="275" bodyend="294" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="89" declcolumn="6"/>
+        <references refid="structChar_1a1b23d7524f08c6dc4e32bf1f1bf204c8" compoundref="vector_8h" startline="88">Char::active_length</references>
+        <references refid="structChar_1a8c919e2af7a18c4d3a8baec732c98a67" compoundref="vector_8h" startline="88">Char::array</references>
+        <references refid="print_8c_1ac678a2f116551899cfc1a5e8cf648c14" compoundref="print_8c" startline="29" endline="29">print_char</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a12e5b67b156923d8f1c0647cd5606f20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_uachar</definition>
+        <argsstring>(UChar x)</argsstring>
+        <name>print_uachar</name>
+        <param>
+          <type><ref refid="structUChar" kindref="compound">UChar</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="90" column="6" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1aa03507dd0302ea7b35a3214359834e07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vbool</definition>
+        <argsstring>(Bool x)</argsstring>
+        <name>print_vbool</name>
+        <param>
+          <type><ref refid="structBool" kindref="compound">Bool</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="91" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="297" bodyend="316" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="91" declcolumn="6"/>
+        <references refid="structBool_1a5445f6ef94d239208dc797c289fded75" compoundref="vector_8h" startline="90">Bool::active_length</references>
+        <references refid="structBool_1aa91d9d8bfa9100cf5576cfdb1672cee2" compoundref="vector_8h" startline="90">Bool::array</references>
+        <references refid="print_8c_1aebfb9d4b007ae9d63b0f794881005c85" compoundref="print_8c" startline="31" endline="31">print_bool</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      <memberdef kind="function" id="print_8h_1a3da5a00b1052067cae81971c1ee7d7e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_vstring</definition>
+        <argsstring>(String x)</argsstring>
+        <name>print_vstring</name>
+        <param>
+          <type><ref refid="structString" kindref="compound">String</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" line="92" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c" bodystart="319" bodyend="338" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h" declline="92" declcolumn="6"/>
+        <references refid="structString_1a706ffaf2f520d46074dd99e7896d6673" compoundref="vector_8h" startline="97">String::active_length</references>
+        <references refid="structString_1a984d87136c3d76ab3145bdb65880a3fa" compoundref="vector_8h" startline="96">String::array</references>
+        <references refid="print_8c_1a860a00528dade9ef415370817eabf5ff" compoundref="print_8c" startline="32" endline="32">print_string</references>
+        <references refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" compoundref="print_8h" startline="23">PRNT_LENGTH</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>File:<sp/><sp/><sp/><sp/>print.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Purpose:<sp/>Describe<sp/>the<sp/>file<sp/>purpose<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Source<sp/>Metadata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Author:<sp/><sp/>Jonathan<sp/>A.<sp/>Webb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Date:<sp/><sp/><sp/><sp/>April<sp/>08,<sp/>2023</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Version:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Copyright:<sp/>Copyright<sp/>2022,<sp/>Jon<sp/>Webb<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Include<sp/>modules<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>print_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>print_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8h" kindref="compound">vector.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>the<sp/>number<sp/>of<sp/>data<sp/>points<sp/>to<sp/>be<sp/>printed<sp/>in<sp/>an<sp/>array<sp/>before<sp/>advancing</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>to<sp/>the<sp/>next<sp/>line<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="print_8h_1aef9c5ff01ca8d0b5e6979b8ec61034f5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRNT_LENGTH<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>This<sp/>Macro<sp/>tests<sp/>for<sp/>the<sp/>type<sp/>of<sp/>data<sp/>being<sp/>passed,<sp/>and<sp/>returns<sp/>a<sp/>boolean</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>describing<sp/>the<sp/>validity<sp/>of<sp/>the<sp/>data<sp/>type</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="print_8h_1aa189d8cb2484952182136c0475b11579" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_ITYPE_VALID(T)<sp/>_Generic(<sp/>(T),<sp/>long<sp/>int:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>int:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>long<sp/>int:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>int:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>double:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>char:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char*:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>true,<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>default:<sp/>false)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>print<sp/>functions<sp/>to<sp/>support<sp/>macros.<sp/><sp/>These<sp/>should<sp/>not<sp/>be<sp/>called<sp/>be<sp/>the<sp/>potential</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>code<sp/>users,<sp/>but<sp/>instead<sp/>enables<sp/>the<sp/>Macros.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Scalar<sp/>print<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a97ec9dc33067858546ad853dc0cbd8fa" kindref="member">print_short</ref>(</highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ab118e99637388dfae3ccf27c654628d3" kindref="member">print_ushort</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a1fd303ab55a5d1e49ac9ae3c3ce10321" kindref="member">print_int</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a574c5bc64e4638eb13d9ad7c88c6fbcb" kindref="member">print_uint</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a6f89221b13ec0882c700f88c623113a3" kindref="member">print_long</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ad2bfa6bf3fb70b1015bac866fdad267b" kindref="member">print_ulong</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1afb26dd7a6cb52b95ecd16aa445fc9239" kindref="member">print_llong</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ab5a44eddd18370fb6ef9aaf3e8d359d9" kindref="member">print_ullong</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ae263043922f2154fed0757f8c9af61bb" kindref="member">print_float</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ac5ed0163987cb3330a169f59080685ca" kindref="member">print_double</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a54070cc5f0b3732b440b5ef02373376f" kindref="member">print_longdouble</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ac678a2f116551899cfc1a5e8cf648c14" kindref="member">print_char</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ab95583f0586df0ae6cf38986debe821c" kindref="member">print_uchar</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1aebfb9d4b007ae9d63b0f794881005c85" kindref="member">print_bool</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>x);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a860a00528dade9ef415370817eabf5ff" kindref="member">print_string</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*x);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vector<sp/>data<sp/>structure<sp/>print<sp/>statements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a2a0d52224624824540d0990005b5e4d9" kindref="member">print_vshort</ref>(<ref refid="structShort" kindref="compound">Short</ref><sp/>x);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1af34cc1667a589100d6c609f9387cbe2a" kindref="member">print_vushort</ref>(<ref refid="structUShort" kindref="compound">UShort</ref><sp/>x);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a9a41c83694e3b241942d8970fd6745ff" kindref="member">print_vint</ref>(<ref refid="structInt" kindref="compound">Int</ref><sp/>x);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1af0a82c6bf6c3d184686915db6a7f29b3" kindref="member">print_vuint</ref>(<ref refid="structUInt" kindref="compound">UInt</ref><sp/>x);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ae911ee475c83d5068afc57a6a5c1411a" kindref="member">print_vlint</ref>(<ref refid="structLInt" kindref="compound">LInt</ref><sp/>x);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ad7e952d652fc3101cb3e6da0b97bf3bd" kindref="member">print_vulint</ref>(<ref refid="structULInt" kindref="compound">ULInt</ref><sp/>x);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1aaf6b0ca85e9949e33b1fe7032013737f" kindref="member">print_vllint</ref>(<ref refid="structLLInt" kindref="compound">LLInt</ref><sp/>x);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a4669814d3bc34ea00aeb82d518de638c" kindref="member">print_vullint</ref>(<ref refid="structULLInt" kindref="compound">ULLInt</ref><sp/>x);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a1b802bc15c06ceedbd94e033cad224ef" kindref="member">print_vfloat</ref>(<ref refid="structFlt" kindref="compound">Flt</ref><sp/>x);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1ace9eeb8267215fd743662d3dcd5e9214" kindref="member">print_vdble</ref>(<ref refid="structDble" kindref="compound">Dble</ref><sp/>x);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a9225ee1244d3fb8bbd2f8a187374c970" kindref="member">print_vldble</ref>(<ref refid="structLDble" kindref="compound">LDble</ref><sp/>x);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a6b984360c08f810691957e80aef53706" kindref="member">print_achar</ref>(<ref refid="structChar" kindref="compound">Char</ref><sp/>x);</highlight></codeline>
+<codeline lineno="90" refid="print_8h_1a12e5b67b156923d8f1c0647cd5606f20" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a12e5b67b156923d8f1c0647cd5606f20" kindref="member">print_uachar</ref>(<ref refid="structUChar" kindref="compound">UChar</ref><sp/>x);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1aa03507dd0302ea7b35a3214359834e07" kindref="member">print_vbool</ref>(<ref refid="structBool" kindref="compound">Bool</ref><sp/>x);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print_8h_1a3da5a00b1052067cae81971c1ee7d7e3" kindref="member">print_vstring</ref>(<ref refid="structString" kindref="compound">String</ref><sp/>x);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Begin<sp/>macros<sp/>that<sp/>uses<sp/>the<sp/>various<sp/>print<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="print_8h_1a142df92ecf9cfc57c89e0e39803c8170" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ITYPE_FORMAT(T)<sp/>_Generic(<sp/>(T),<sp/>unsigned<sp/>char:<sp/>print_uachar,<sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>int:<sp/>print_long,<sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>int:<sp/>print_ullong,<sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>long<sp/>int:<sp/>print_llong,<sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>int:<sp/>print_ullong,<sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float:<sp/>print_float,<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double:<sp/>print_double,<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>double:<sp/>print_longdouble,<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char:<sp/>print_char,<sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool:<sp/>print_bool,<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char*:<sp/>print_string,<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>print_vint,<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>print_vuint,<sp/>\</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>print_vshort,<sp/>\</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>print_vushort,<sp/>\</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>print_vlint,<sp/>\</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>print_vulint,<sp/>\</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>print_vllint,<sp/>\</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>print_vullint,<sp/>\</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>print_vfloat,<sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>print_vdble,<sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>print_achar,<sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>print_uachar,<sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>print_vbool,<sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>print_vldble,<sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>print_vstring)(T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="print_8h_1a39a8a7a028f67802d45cc3c762960a6f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT1(a)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="print_8h_1a8c6063c51bf958b2049ecd745fbb2504" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT2(a,<sp/>b)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="print_8h_1ae84e0a75aae0e8a840d3e82deb03938f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT3(a,<sp/>b,<sp/>c)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="138"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="140"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(c))<sp/>ITYPE_FORMAT(c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="print_8h_1a10767a6ce3e526cd750946b63f47130e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT4(a,<sp/>b,<sp/>c,<sp/>d)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(c))<sp/>ITYPE_FORMAT(c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(d))<sp/>ITYPE_FORMAT(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="print_8h_1aa861bcfa629405821f226882d152b2f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT5(a,<sp/>b,<sp/>c,<sp/>d,<sp/>e)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(c))<sp/>ITYPE_FORMAT(c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(d))<sp/>ITYPE_FORMAT(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(e))<sp/>ITYPE_FORMAT(e);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="161"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="print_8h_1a0b6b49945d462d6df995f536d11fd768" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT6(a,<sp/>b,<sp/>c,<sp/>d,<sp/>e,<sp/>f)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(c))<sp/>ITYPE_FORMAT(c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(d))<sp/>ITYPE_FORMAT(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="169"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(e))<sp/>ITYPE_FORMAT(e);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(f))<sp/>ITYPE_FORMAT(f);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="172"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="print_8h_1ac672c921cc913e36af08db2968d2223d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT7(a,<sp/>b,<sp/>c,<sp/>d,<sp/>e,<sp/>f,<sp/>g)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(c))<sp/>ITYPE_FORMAT(c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(d))<sp/>ITYPE_FORMAT(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(e))<sp/>ITYPE_FORMAT(e);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(f))<sp/>ITYPE_FORMAT(f);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(g))<sp/>ITYPE_FORMAT(g);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="print_8h_1a7f2cb61bf6177ef5618940b6e766c756" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT8(a,<sp/>b,<sp/>c,<sp/>d,<sp/>e,<sp/>f,<sp/>g,<sp/>h)<sp/>do<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(a))<sp/>ITYPE_FORMAT(a);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(b))<sp/>ITYPE_FORMAT(b);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(c))<sp/>ITYPE_FORMAT(c);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(d))<sp/>ITYPE_FORMAT(d);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(e))<sp/>ITYPE_FORMAT(e);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(f))<sp/>ITYPE_FORMAT(f);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="194"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(g))<sp/>ITYPE_FORMAT(g);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(IS_ITYPE_VALID(h))<sp/>ITYPE_FORMAT(h);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>printf(&quot;\n&quot;);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor">}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="print_8h_1af309810a54a19e8ab5462815a479d15a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_MACRO(_1,_2,_3,_4,_5,_6,_7,_8,NAME,...)<sp/>NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="print_8h_1a15bb631053a1fce9c5470701900984c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PRINT(...)<sp/>GET_MACRO(__VA_ARGS__,<sp/>PRINT8,<sp/>PRINT7,<sp/>PRINT6,<sp/>PRINT5,<sp/>PRINT4,<sp/>PRINT3,<sp/>PRINT2,<sp/>PRINT1)(__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>print_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//<sp/>eof</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h"/>
+  </compounddef>
+</doxygen>

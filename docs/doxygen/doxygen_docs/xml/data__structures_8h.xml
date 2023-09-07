@@ -1,0 +1,1218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="data__structures_8h" kind="file" language="C++">
+    <compoundname>data_structures.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes refid="vector_8h" local="yes">vector.h</includes>
+    <includedby refid="data__structures_8c" local="yes">/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h</label>
+        <link refid="data__structures_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>swap.h</label>
+        <link refid="swap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.c</label>
+        <link refid="data__structures_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h</label>
+        <link refid="data__structures_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="data__structures_8h_1a3fee9a7b57ea204e4220ef2bd0700db5" prot="public" static="no">
+        <name>PUSH</name>
+        <param><defname>T</defname></param>
+        <param><defname>value</defname></param>
+        <param><defname>index</defname></param>
+        <initializer>										                 _Generic( (T), Short: <ref refid="vector_8c_1a38068c17aa5cf7286175572d43219b8d" kindref="member">push_short_vector</ref>, \
+										                 UShort: <ref refid="vector_8c_1a97670c026df2a05dda5b0c85ebeb4d69" kindref="member">push_ushort_vector</ref>, \
+										                 Int: <ref refid="vector_8c_1a6baf75dc56de293f3dbdc8ac40934980" kindref="member">push_int_vector</ref>, \
+										                 UInt: <ref refid="vector_8c_1a787fc2bba6112c4ede10d0ec14ab3825" kindref="member">push_uint_vector</ref>, \
+										                 LInt: <ref refid="vector_8c_1a6135368684b7d740482cfc775417f255" kindref="member">push_long_vector</ref>, \
+										                 ULInt: <ref refid="vector_8c_1aea5f95b56df2836ee553face60351e61" kindref="member">push_ulong_vector</ref>, \
+										                 LLInt: <ref refid="vector_8c_1a93f7e28f97718d9d7c5c84df61c1466c" kindref="member">push_llong_vector</ref>, \
+										                 ULLInt: <ref refid="vector_8c_1a3478a298e62d85cb93f11a78f64d6f80" kindref="member">push_ullong_vector</ref>, \
+										                 Flt: <ref refid="vector_8c_1a31e02f437f4f9f43d1126e017ae1cac3" kindref="member">push_float_vector</ref>, \
+										                 Dble: <ref refid="vector_8c_1ab312c467d82a0fccc66cbb89a6b8de5c" kindref="member">push_double_vector</ref>, \
+										                 LDble: <ref refid="vector_8c_1ad001560a2793c40efb1c64532cefe2e2" kindref="member">push_ldouble_vector</ref>, \
+										                 Char: <ref refid="vector_8c_1ab4f076e9a6e7d0795c2c3a0216c5c97e" kindref="member">push_char_vector</ref>, \
+														 UChar: <ref refid="vector_8c_1acc6fd3b434ba25d3473adff60160500b" kindref="member">push_uchar_vector</ref>, \
+														 Bool: <ref refid="vector_8c_1a66a1a1c291efbab607defa13421167dc" kindref="member">push_bool_vector</ref>, \
+														 String: <ref refid="vector_8c_1a078616c26d55c1ddb2ec4c551298a4f8" kindref="member">push_string_vector</ref>)(&amp;T, value, index)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="47" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="47" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a39f36b37e9611785d15e1691a628ab30" prot="public" static="no">
+        <name>INSERT</name>
+        <param><defname>T</defname></param>
+        <param><defname>elements</defname></param>
+        <param><defname>num_ind</defname></param>
+        <param><defname>index</defname></param>
+        <initializer>										                 _Generic( (T), Short: <ref refid="vector_8c_1a2ed595a869e30a4c834c1d2cf5b934ee" kindref="member">insert_short_vector</ref>, \
+										                 UShort: <ref refid="vector_8c_1aa8495c3a316b6d93c8697d194c86fc2b" kindref="member">insert_ushort_vector</ref>, \
+										                 Int: <ref refid="vector_8c_1a0acf8b86d4a95be517c7af80f8eff4ac" kindref="member">insert_int_vector</ref>, \
+										                 UInt: <ref refid="vector_8c_1ad78d40537dece17df4f506fd6ba7dc34" kindref="member">insert_uint_vector</ref>, \
+										                 LInt: <ref refid="vector_8c_1ab5d840518e5e7bbd9ed243681b7124f7" kindref="member">insert_long_vector</ref>, \
+										                 ULInt: <ref refid="vector_8c_1aa419c32bb276bfe866787e1744669b94" kindref="member">insert_ulong_vector</ref>, \
+										                 LLInt: <ref refid="vector_8c_1a9817d90055331624db7529c5d74a80ad" kindref="member">insert_llong_vector</ref>, \
+										                 ULLInt: <ref refid="vector_8c_1afccda80cf8e96d76846df29a256f6974" kindref="member">insert_ullong_vector</ref>, \
+										                 Flt: <ref refid="vector_8c_1a17ee89c38df38d9d1d5b0cb2e33266d1" kindref="member">insert_float_vector</ref>, \
+										                 Dble: <ref refid="vector_8c_1af1e86e2b45b0339cc18ba5b35bf01132" kindref="member">insert_double_vector</ref>, \
+										                 LDble: <ref refid="vector_8c_1a0ec3e3b802f62c5f9cdd9b7d197bd4a1" kindref="member">insert_ldouble_vector</ref>, \
+										                 Char: <ref refid="vector_8c_1a9e9db9d87d5a9f3bb6dae1ba5668ef12" kindref="member">insert_char_vector</ref>, \
+														 UChar: <ref refid="vector_8c_1ae5b1c45f4d2083c6d87f217646609a2d" kindref="member">insert_uchar_vector</ref>, \
+														 Bool: <ref refid="vector_8c_1ab344e3b36aa397f037cb2c573e1d3aff" kindref="member">insert_bool_vector</ref>, \
+		                                                 String: <ref refid="vector_8c_1ac5498955b573e63b86b34a1fdd93e391" kindref="member">insert_string_vector</ref>)(&amp;T, elements, num_ind, index)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="94" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="94" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a1603ab82164c2b586fb4e918dfe0787d" prot="public" static="no">
+        <name>FREE</name>
+        <param><defname>T</defname></param>
+        <initializer>							   _Generic( (T), Short: <ref refid="vector_8c_1a8a383d2299a326d3c0ded94c19d73393" kindref="member">free_short_vector</ref>, \
+							   UShort: <ref refid="vector_8c_1a3765cd4f6e59bada679e05ea6dacfff5" kindref="member">free_ushort_vector</ref>, \
+							   Int: <ref refid="vector_8c_1ab2c13b705440e4d4d53825bb16929ff6" kindref="member">free_int_vector</ref>, \
+							   UInt: <ref refid="vector_8c_1a6195f400606be104b4461cd9876f93ce" kindref="member">free_uint_vector</ref>, \
+							   LInt: <ref refid="vector_8c_1af1ab528ebf7f47a278e3be3b02e9acee" kindref="member">free_long_vector</ref>, \
+							   ULInt: <ref refid="vector_8c_1a9a05407a3434648f10f4416a7874150d" kindref="member">free_ulong_vector</ref>, \
+							   LLInt: <ref refid="vector_8c_1af92bc034e6f34814eea1008629f41ef9" kindref="member">free_llong_vector</ref>, \
+							   ULLInt: <ref refid="vector_8c_1a605f038b309fb25e53f637c9e9b6e4bd" kindref="member">free_ullong_vector</ref>, \
+							   Flt: <ref refid="vector_8c_1aa0efda9f361b9e9219f5afc379c7e6cc" kindref="member">free_float_vector</ref>, \
+							   Dble: <ref refid="vector_8c_1a0d9577d0256e0e006d1c55a12ba1bffd" kindref="member">free_double_vector</ref>, \
+							   LDble: <ref refid="vector_8c_1a89e6af78e123543fefe3333963de0e83" kindref="member">free_ldouble_vector</ref>, \
+							   Char: <ref refid="vector_8c_1afef1cb622b3f54256849a3b5446a7af4" kindref="member">free_char_vector</ref>, \
+							   UChar: <ref refid="vector_8c_1a9f3fcb3deda563d834c9d3d13f097268" kindref="member">free_uchar_vector</ref>, \
+							   Bool: <ref refid="vector_8c_1a5783a319298af13236def83e42f00799" kindref="member">free_bool_vector</ref>, \
+							   String: <ref refid="vector_8c_1a2975c4c7c36efebc98b926abfc4ba837" kindref="member">free_string_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="141" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="141" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a7873976d8a344c5188e57dffb974056b" prot="public" static="no">
+        <name>POP_INDEX</name>
+        <param><defname>T</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>							   _Generic( (T), Short: <ref refid="vector_8c_1a90c0d394579f3950b22adabb66f153e9" kindref="member">pop_short_vector_index</ref>, \
+							   UShort: <ref refid="vector_8c_1ab5f9826948a1e75b6ffa74b2e801f8c5" kindref="member">pop_ushort_vector_index</ref>, \
+							   Int: <ref refid="vector_8c_1af0ecebd36b313d07d43f40698bd5508f" kindref="member">pop_int_vector_index</ref>, \
+							   UInt: <ref refid="vector_8c_1aea61eee2cd7481c1d34d13ba4a27e669" kindref="member">pop_uint_vector_index</ref>, \
+							   LInt: <ref refid="vector_8c_1ade7d072b4cbbed3560461122ff9bf2d1" kindref="member">pop_long_vector_index</ref>, \
+							   ULInt: <ref refid="vector_8c_1aee6e8f2b009cc7205dfd8c143b8e9839" kindref="member">pop_ulong_vector_index</ref>, \
+							   LLInt: <ref refid="vector_8c_1a6475916b10de913b8859fbd0b8312557" kindref="member">pop_llong_vector_index</ref>, \
+							   ULLInt: <ref refid="vector_8c_1a52f4d32e9312b40967f4c0ee3de88e7a" kindref="member">pop_ullong_vector_index</ref>, \
+							   Flt: <ref refid="vector_8c_1a7f179d98deb7852196afc7e3d26ef06d" kindref="member">pop_float_vector_index</ref>, \
+							   Dble: <ref refid="vector_8c_1a8d2545eb603560d67e5c481075e5d0fc" kindref="member">pop_double_vector_index</ref>, \
+							   LDble: <ref refid="vector_8c_1a3964e5480d290ac44a95680e52706f9d" kindref="member">pop_ldouble_vector_index</ref>, \
+							   Char: <ref refid="vector_8c_1a4f9d1488d50bc3889fc04afc18fa9958" kindref="member">pop_char_vector_index</ref>, \
+							   UChar: <ref refid="vector_8c_1a7527a193c89c32c07eba99e8abc08574" kindref="member">pop_uchar_vector_index</ref>, \
+							   Bool: <ref refid="vector_8c_1a69479bf6e334f44f372305c8b1b13bb3" kindref="member">pop_bool_vector_index</ref>, \
+							   String: <ref refid="vector_8c_1a4db2688e1c0d0d477c8a7168d811956d" kindref="member">pop_string_vector_index</ref>)(&amp;T, y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="185" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="185" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1abad9b6661bf67c0b5cc43ddcbd39c206" prot="public" static="no">
+        <name>REPLACE_VALUES</name>
+        <param><defname>T</defname></param>
+        <param><defname>old</defname></param>
+        <param><defname>new</defname></param>
+        <initializer>										           _Generic( (T), Short: <ref refid="vector_8c_1a6f10b6c383f01d0f64ccdbedcbf2f9c6" kindref="member">replace_short_vector_values</ref>, \
+										           UShort: <ref refid="vector_8c_1a879f3876d14b47d940dbe55a1eec452e" kindref="member">replace_ushort_vector_values</ref>, \
+										           Int: <ref refid="vector_8c_1a7670474ec5b862ec981a62daa995aa3b" kindref="member">replace_int_vector_values</ref>, \
+										           UInt: <ref refid="vector_8c_1a9d98a8399e52f97b6771d676b3919319" kindref="member">replace_uint_vector_values</ref>, \
+										           LInt: <ref refid="vector_8c_1a8f344f297fe759011551c5f2bb5e0161" kindref="member">replace_long_vector_values</ref>, \
+										           ULInt: <ref refid="vector_8c_1a3354495712d1e3910ca4e6a33ee1c1df" kindref="member">replace_ulong_vector_values</ref>, \
+										           LLInt: <ref refid="vector_8c_1a6fbef65375cd1143dadb2045d4a4cc82" kindref="member">replace_llong_vector_values</ref>, \
+										           ULLInt: <ref refid="vector_8c_1acdb36a4f7fabea5ff887469c25bcaac3" kindref="member">replace_ullong_vector_values</ref>, \
+										           Flt: <ref refid="vector_8c_1aafe1e760a31236df3e8d9b5d4fedf79e" kindref="member">replace_float_vector_values</ref>, \
+										           Dble: <ref refid="vector_8c_1a141f86441673f219db9af026644dee3e" kindref="member">replace_double_vector_values</ref>, \
+										           LDble: <ref refid="vector_8c_1a344c029c451a00a0a90e20b34569db22" kindref="member">replace_ldouble_vector_values</ref>, \
+										           Char: <ref refid="vector_8c_1a8b7c3baf36c7ef6deca8011f2d622119" kindref="member">replace_char_vector_values</ref>, \
+												   UChar: <ref refid="vector_8c_1a8b8b55713c6eeeba3f8bb8fbbb08ad10" kindref="member">replace_uchar_vector_values</ref>, \
+												   Bool: <ref refid="vector_8c_1ab345b0d10cef3cb87e552791440398e9" kindref="member">replace_bool_vector_values</ref>, \
+												   String: <ref refid="vector_8c_1a1556bb53212c3c454a2ddb3f4c2f4c8a" kindref="member">replace_string_vector_values</ref>)(&amp;T, old, new)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will replace all instances of a value in an array with a new value. This macro merely selects the applicable function based on the data type of input variables. Therefore this macro will not increase memory usage, nor with it reduce execution time.</para>
+<para>/param vec A vector struct /param old_value The value to be replaced, if it exists in the array /param new_value The value that will replace the old value</para>
+<para><programlisting><codeline><highlight class="normal">IVector<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>2,<sp/>vec.active_length);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>4,<sp/>vec.active_length);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REPLACE_VALUES(vec,<sp/>1,<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(size_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>vec.active_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(&quot;%<sp/>PRId32<sp/>&quot;\n&quot;,<sp/>vec.array[i]);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>2<sp/>2<sp/>2<sp/>4<sp/>2</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="231" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="231" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a846efd03c9d323e9b03d70331276d47a" prot="public" static="no">
+        <name>DELETE_DUPLICATES</name>
+        <param><defname>T</defname></param>
+        <initializer>										    _Generic( (T), Short: <ref refid="vector_8c_1a35b16d98a38d37826ee118f4860d680a" kindref="member">delete_short_vector_duplicates</ref>, \
+										    UShort: <ref refid="vector_8c_1a372a58405f86fa4ef22f53af37408017" kindref="member">delete_ushort_vector_duplicates</ref>, \
+										    Int: <ref refid="vector_8c_1a68a325016f45777566e1eae4b15c4238" kindref="member">delete_int_vector_duplicates</ref>, \
+										    UInt: <ref refid="vector_8c_1ab5a49e7e86d86796744395431d475f74" kindref="member">delete_uint_vector_duplicates</ref>, \
+										    LInt: <ref refid="vector_8c_1a10ee633f27cbd6252d41ffd0761f6392" kindref="member">delete_long_vector_duplicates</ref>, \
+										    ULInt: <ref refid="vector_8c_1aa7b0890be4e8157712930fedaf437c8a" kindref="member">delete_ulong_vector_duplicates</ref>, \
+										    LLInt: <ref refid="vector_8c_1a8f895e83e3b4e24dfdd253508da61875" kindref="member">delete_llong_vector_duplicates</ref>, \
+										    ULLInt: <ref refid="vector_8c_1a91794ceff19b304073f15ca82fe38b0b" kindref="member">delete_ullong_vector_duplicates</ref>, \
+										    Flt: <ref refid="vector_8c_1a49e7b8e0e17f4570f95875965ea8c2d6" kindref="member">delete_float_vector_duplicates</ref>, \
+										    Dble: <ref refid="vector_8c_1a0bf0ceecb4ef742811c3b2ed8384d432" kindref="member">delete_double_vector_duplicates</ref>, \
+										    LDble: <ref refid="vector_8c_1a915b5e5eff06f5a04ff068c94cdcffb4" kindref="member">delete_ldouble_vector_duplicates</ref>, \
+										    Char: <ref refid="vector_8c_1a5a01cb2f66c78b55858a0941ad9459af" kindref="member">delete_char_vector_duplicates</ref>, \
+											UChar: <ref refid="vector_8c_1a51740972d62e96e248d8a07eb65e48aa" kindref="member">delete_uchar_vector_duplicates</ref>, \
+										    Bool: <ref refid="vector_8c_1a1fe7315ba2394e61b43b99bfc765bd75" kindref="member">delete_bool_vector_duplicates</ref>, \
+										    String: <ref refid="vector_8c_1a1b3482060f9c607f98dbef4845db335f" kindref="member">delete_string_vector_duplicates</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will delete all duplicate values in a data structure with exception of the original value</para>
+<para>/param T The struct container</para>
+<para><programlisting><codeline><highlight class="normal">Int8<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>6);</highlight></codeline>
+<codeline><highlight class="normal">int8_t<sp/>a[6]<sp/>=<sp/>{1,<sp/>1,<sp/>2,<sp/>2,<sp/>3,<sp/>3};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>6,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">DELETE_DUPLICATES(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(vec);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>1,<sp/>2,<sp/>3<sp/>]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="266" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="266" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1ae5f2dc1bcc130da5504af4d09d54864c" prot="public" static="no">
+        <name>REVERSE</name>
+        <param><defname>T</defname></param>
+        <initializer>								  _Generic( (T), Short: <ref refid="vector_8c_1a6388f663263c0c5a219bc2da551d0584" kindref="member">reverse_short_vector</ref>, \
+								  UShort: <ref refid="vector_8c_1a15f75e9b6b4192aa83d95635419865da" kindref="member">reverse_ushort_vector</ref>, \
+								  Int: <ref refid="vector_8c_1a0ee6d80508a610096b84893a0edd7e82" kindref="member">reverse_int_vector</ref>, \
+								  UInt: <ref refid="vector_8c_1a58e127cf5386ca2152ebafcf4dbb8bbd" kindref="member">reverse_uint_vector</ref>, \
+								  LInt: <ref refid="vector_8c_1a0d89b67e906a169f63e1bfc679df018f" kindref="member">reverse_long_vector</ref>, \
+							      ULInt: <ref refid="vector_8c_1a6196a5bfffe22d6493b2bda77a9340fb" kindref="member">reverse_ulong_vector</ref>, \
+								  LLInt: <ref refid="vector_8c_1a3247bcffd4ad7a9f75c9a2e88ff7bd81" kindref="member">reverse_llong_vector</ref>, \
+								  ULLInt: <ref refid="vector_8c_1aa77d55a8f5e4ab149edb6c75d98a94ce" kindref="member">reverse_ullong_vector</ref>, \
+								  Flt: <ref refid="vector_8c_1a086bbd995dc83d50532944330a44c450" kindref="member">reverse_float_vector</ref>, \
+								  Dble: <ref refid="vector_8c_1a628e48950294512d38556f8b194284d4" kindref="member">reverse_double_vector</ref>, \
+								  LDble: <ref refid="vector_8c_1a8a72b2219830bacf2a5ec926241ed924" kindref="member">reverse_ldouble_vector</ref>, \
+								  Char: <ref refid="vector_8c_1a06faa32f223a79c02cb771b19cc02a07" kindref="member">reverse_char_vector</ref>, \
+								  UChar: <ref refid="vector_8c_1a42deacd361fac959a84262a54ebddcb0" kindref="member">reverse_uchar_vector</ref>, \
+								  Bool: <ref refid="vector_8c_1a9b58a773830487b8a8f1973221e93366" kindref="member">reverse_bool_vector</ref>, \
+                                  String: <ref refid="vector_8c_1a6297710c0ac2122db93e47a260e96ad8" kindref="member">reverse_string_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will reverse the order of a data structure</para>
+<para>/param vec A data structure of the appropriate type</para>
+<para><programlisting><codeline><highlight class="normal">Int8<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5)</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>1);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>3);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>4);</highlight></codeline>
+<codeline><highlight class="normal">PUSH(vec,<sp/>5)</highlight></codeline>
+<codeline><highlight class="normal">REVERSE(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(vec);</highlight></codeline>
+<codeline><highlight class="normal">[5,<sp/>4,<sp/>3,<sp/>2,<sp/>1<sp/>]</highlight></codeline>
+<codeline><highlight class="normal">FREE(vec);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="304" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="304" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a4b57fe13cd381d593ef6790b5dacff6e" prot="public" static="no">
+        <name>IS_SORT_TYPE</name>
+        <param><defname>T</defname></param>
+        <param><defname>low</defname></param>
+        <param><defname>high</defname></param>
+        <param><defname>order</defname></param>
+        <initializer>										                 _Generic( (T), Short: <ref refid="vector_8c_1a04f50afe6c127edeea202b08ad65f36a" kindref="member">sort_short_vector</ref>, \
+										                 UShort: <ref refid="vector_8c_1a68df688dc04c74d9e826b629ef0f98c3" kindref="member">sort_ushort_vector</ref>, \
+										                 Int: <ref refid="vector_8c_1a722d90a04d08a5ece84ba7a2b8d04d6d" kindref="member">sort_int_vector</ref>, \
+										                 UInt: <ref refid="vector_8c_1a451f6cb1a5b4b2e77c1170c85656c3c6" kindref="member">sort_uint_vector</ref>, \
+										                 LInt: <ref refid="vector_8c_1a573e6f77db28f1a05eefd8a982f850c7" kindref="member">sort_long_vector</ref>, \
+										                 ULInt: <ref refid="vector_8c_1adf53d931d4b9c3ab9d62298b6d3df5cd" kindref="member">sort_ulong_vector</ref>, \
+										                 LLInt: <ref refid="vector_8c_1ab1183f9c1a6c8a6d60b4457421e3072a" kindref="member">sort_llong_vector</ref>, \
+										                 ULLInt: <ref refid="vector_8c_1a3d45fbf7b754bf4bad8be3cbb6241a84" kindref="member">sort_ullong_vector</ref>, \
+										                 Flt: <ref refid="vector_8c_1aa3e927c35eb4eb79cb87d6df026e01a1" kindref="member">sort_float_vector</ref>, \
+										                 Dble: <ref refid="vector_8c_1aa461bbfa3be53bc5dc4c56c94fb7fa62" kindref="member">sort_double_vector</ref>, \
+										                 LDble: <ref refid="vector_8c_1a3745eaf35ed1dfbae01e83d5b93e185d" kindref="member">sort_ldouble_vector</ref>, \
+										                 Char: <ref refid="vector_8c_1a0c29cab75728310a3b5b78681af2df21" kindref="member">sort_char_vector</ref>, \
+														 UChar: <ref refid="vector_8c_1a88af2cb1285800957b1de71e783ee93a" kindref="member">sort_uchar_vector</ref>, \
+														 Bool: <ref refid="vector_8c_1a68744cde4b7c17a0305d9cf512494a20" kindref="member">sort_bool_vector</ref>, \
+														 String: <ref refid="vector_8c_1aead9f94df495db661d185ef0363ec1d6" kindref="member">sort_string_vector</ref>)(&amp;T, low, high, order)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="322" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="322" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a3bd435328ac67b6ab76355c6a90ae0ab" prot="public" static="no">
+        <name>SORT</name>
+        <param><defname>T</defname></param>
+        <param><defname>order</defname></param>
+        <initializer><ref refid="data__structures_8h_1a4b57fe13cd381d593ef6790b5dacff6e" kindref="member">IS_SORT_TYPE</ref>((T), (0), (T.active_length-1), (order))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will sort a data structure in forward or reverse order</para>
+<para>/param T The data structure to be sorted /para order FORWARD for a forward sort and REVERSE for a reverse sort</para>
+<para><programlisting><codeline><highlight class="normal">Flt<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>a[5]<sp/>=<sp/>{3.4,<sp/>1.1,<sp/>2.2,<sp/>5.4,<sp/>4.3};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">SORT(vec,<sp/>FORWARD);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>1.1,<sp/>2.2,<sp/>3.4,<sp/>4.3,<sp/>5.4<sp/>]</highlight></codeline>
+<codeline><highlight class="normal">SORT(vec,<sp/>REVERSE);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>5.4,<sp/>4.3,<sp/>3.4,<sp/>2.2,<sp/>1.1<sp/>]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="357" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1ab2bc3cf2085b7ef95514abd7c78341de" prot="public" static="no">
+        <name>SUM</name>
+        <param><defname>T</defname></param>
+        <initializer>							  _Generic( (T), Short: <ref refid="vector_8c_1a54d410de6d79f482b3d560bcb78fd2ff" kindref="member">sum_short_vector</ref>, \
+							  UShort: <ref refid="vector_8c_1a67f48de636722d00447f21d5040f8d81" kindref="member">sum_ushort_vector</ref>, \
+							  Int: <ref refid="vector_8c_1aaf01dd9c2caec4100d4315bd8d525a30" kindref="member">sum_int_vector</ref>, \
+							  UInt: <ref refid="vector_8c_1a791fe9c8f9bd1d04158b01c3aa022edd" kindref="member">sum_uint_vector</ref>, \
+							  LInt: <ref refid="vector_8c_1af2ca62fb5fa87cccef8750d24b3979da" kindref="member">sum_long_vector</ref>, \
+							  ULInt: <ref refid="vector_8c_1a3233da20e23c20659dd5aba81307b58d" kindref="member">sum_ulong_vector</ref>, \
+							  LLInt: <ref refid="vector_8c_1a838510507e7f386e844fd1e5e3ae494a" kindref="member">sum_llong_vector</ref>, \
+							  ULLInt: <ref refid="vector_8c_1af1cc1dfd0470ab00fc1537ebcbb5c089" kindref="member">sum_ullong_vector</ref>, \
+							  Flt: <ref refid="vector_8c_1ab9177b68251ddf43f4a245afd559e462" kindref="member">sum_float_vector</ref>, \
+						      Dble: <ref refid="vector_8c_1a98a70f4f173d451a1ff5357f4779289d" kindref="member">sum_double_vector</ref>, \
+							  Char: <ref refid="vector_8c_1a0684e2f1aee143f1769dd8ff908c852c" kindref="member">sum_char_vector</ref>, \
+							  UChar: <ref refid="vector_8c_1a643cb8d97c368f436a0010dacfca2401" kindref="member">sum_uchar_vector</ref>, \
+							  LDble: <ref refid="vector_8c_1af2df2f0fe19814004ab61a91521d7b21" kindref="member">sum_ldouble_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will return the sum of data in a data structure</para>
+<para>/param T An appropriate data structure</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>4);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>a[4]<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>4,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>b<sp/>=<sp/>SUM(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>10</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="377" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="377" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1ad67d6348b4a31d319108c5b915592e8c" prot="public" static="no">
+        <name>CUMSUM</name>
+        <param><defname>T</defname></param>
+        <initializer>							     _Generic( (T), Short: <ref refid="vector_8c_1a588f2bea0a2ac3d8bf87184d873a2804" kindref="member">cumsum_short_vector</ref>, \
+							     UShort: <ref refid="vector_8c_1a94f7fe260f499b1a18150332e1a0e427" kindref="member">cumsum_ushort_vector</ref>, \
+								 Int: <ref refid="vector_8c_1acaf8f7f369483e4dcb9a7af53e79492c" kindref="member">cumsum_int_vector</ref>, \
+							     UInt: <ref refid="vector_8c_1abe44138d94c38f7d65d62f63dddf668b" kindref="member">cumsum_uint_vector</ref>, \
+								 LInt: <ref refid="vector_8c_1aacdbfadbd42e44ba909b315b43152012" kindref="member">cumsum_long_vector</ref>, \
+								 ULInt: <ref refid="vector_8c_1ae856339059aa7e6f5db1d5bd7de43306" kindref="member">cumsum_ulong_vector</ref>, \
+								 LLInt: <ref refid="vector_8c_1a531b30e8b67bc20cad9865cc3d8afe50" kindref="member">cumsum_llong_vector</ref>, \
+								 ULLInt: <ref refid="vector_8c_1a07bde722230b2f57f1b14304054d1d6a" kindref="member">cumsum_ullong_vector</ref>, \
+								 Flt: <ref refid="vector_8c_1a9ddb912a129b46a9a2f2d147b4a1ddc8" kindref="member">cumsum_float_vector</ref>, \
+						         Dble: <ref refid="vector_8c_1ae8512eab3bf15409bda6bce1d6ec0380" kindref="member">cumsum_double_vector</ref>, \
+								 Char: <ref refid="vector_8c_1a877296aab1e625bc7b103322f6b93b14" kindref="member">cumsum_char_vector</ref>, \
+								 UChar: <ref refid="vector_8c_1a2850df1b78d17fd2e45847e8bf1e51c2" kindref="member">cumsum_uchar_vector</ref>, \
+								 LDble: <ref refid="vector_8c_1ae0f64fd00879ff39b5ffbca0e80c197b" kindref="member">cumsum_ldouble_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will return a data structure of the same type as the input data structure that contains the cumulative sum of the input structure</para>
+<para>/param T The input data structure /return return_T The output data structure</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>a[5]<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">Int<sp/>cum_vec<sp/>=<sp/>CUMSUM(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(cum_vec);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>1,<sp/>3,<sp/>6,<sp/>10,<sp/>15<sp/>]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="410" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="410" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a81794266d48f7e352116d53be0fda9fc" prot="public" static="no">
+        <name>AVERAGE</name>
+        <param><defname>T</defname></param>
+        <initializer>		                          _Generic( (T), Char: <ref refid="vector_8c_1a0a47e22454ec90b6c959915dbc3c87a6" kindref="member">average_char_vector</ref>, \
+		                          UChar: <ref refid="vector_8c_1ad821bfcf3659a78a11a5c9c7fd72a277" kindref="member">average_uchar_vector</ref>, \
+							      Short: <ref refid="vector_8c_1a5a553d82722c04ec4b613014fa1d0688" kindref="member">average_short_vector</ref>, \
+							      UShort: <ref refid="vector_8c_1a96018578b7bce5eb04f4b4dbbd63b582" kindref="member">average_ushort_vector</ref>, \
+								  Int: <ref refid="vector_8c_1a2e384c1e58cf1f6486ae0a8bc2e46379" kindref="member">average_int_vector</ref>, \
+							      UInt: <ref refid="vector_8c_1a35959e6bd4010b04681750611d00a7b7" kindref="member">average_uint_vector</ref>, \
+								  LInt: <ref refid="vector_8c_1ad1feee1c2712401a20fbe6699f5c4bc7" kindref="member">average_long_vector</ref>, \
+								  ULInt: <ref refid="vector_8c_1aa94c4a725c6ab558c748baa93b652363" kindref="member">average_ulong_vector</ref>, \
+								  LLInt: <ref refid="vector_8c_1ae3782b50d088b4488da3a8283670ffcc" kindref="member">average_llong_vector</ref>, \
+								  ULLInt: <ref refid="vector_8c_1abb879670618c44d1259b4cb689d36698" kindref="member">average_ullong_vector</ref>, \
+								  Flt: <ref refid="vector_8c_1a95e8f18d7457adb1784ca850c7afa01e" kindref="member">average_float_vector</ref>, \
+						          Dble: <ref refid="vector_8c_1ab0985989db7774a2f4ccf0f6bc7fd0ed" kindref="member">average_double_vector</ref>, \
+								  LDble: <ref refid="vector_8c_1a136fac1692146b0fc1dd1f548b6a07a4" kindref="member">average_ldouble_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will return the average value of a data structure. The macro will return the appropriate data type depending on the input data type.</para>
+<para>/param T The input data structure</para>
+<para><programlisting><codeline><highlight class="normal">Dble<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>a[5]<sp/>=<sp/>{3.45,<sp/>2.18.<sp/>8.17,<sp/>0.56,<sp/>2.28};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>avg<sp/>=<sp/>AVERAGE(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(avg);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>3.328</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="443" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="443" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a381b9ae37cb75fb74f0a95939eda186e" prot="public" static="no">
+        <name>STDEV</name>
+        <param><defname>T</defname></param>
+        <initializer>		                        _Generic( (T), Char: <ref refid="vector_8c_1a918b7824d676e70026969bf6af72dba7" kindref="member">stdev_char_vector</ref>, \
+		                        UChar: <ref refid="vector_8c_1a9315ed5e7e8966f095ee8d334c5e10a4" kindref="member">stdev_uchar_vector</ref>, \
+							    Short: <ref refid="vector_8c_1a193f4372f93ae17ab490841af7e508c3" kindref="member">stdev_short_vector</ref>, \
+							    UShort: <ref refid="vector_8c_1ae0c29568372c468d83c1a5f33d4c60c6" kindref="member">stdev_ushort_vector</ref>, \
+								Int: <ref refid="vector_8c_1aa469dd50aa2a8cd43ad5c577016145e8" kindref="member">stdev_int_vector</ref>, \
+							    UInt: <ref refid="vector_8c_1a2a72fa8e25403401326d07853c45c7fe" kindref="member">stdev_uint_vector</ref>, \
+								LInt: <ref refid="vector_8c_1ab875bc51d7595b4e6fe536770cfe62c5" kindref="member">stdev_long_vector</ref>, \
+								ULInt: <ref refid="vector_8c_1a3cd9fa1fbe73338e380ccc9b98a6b768" kindref="member">stdev_ulong_vector</ref>, \
+								LLInt: <ref refid="vector_8c_1a5b29dc6f20528b67a4a53208c5beefe7" kindref="member">stdev_llong_vector</ref>, \
+								ULLInt: <ref refid="vector_8c_1a9cb0b02a7bedef69397ef758fd36baa6" kindref="member">stdev_ullong_vector</ref>, \
+								Flt: <ref refid="vector_8c_1abb791f292ea37822fa3c8f20749b8571" kindref="member">stdev_float_vector</ref>, \
+						        Dble: <ref refid="vector_8c_1aa05c06bd35f0e74c8a07ef0257a8aa67" kindref="member">stdev_double_vector</ref>, \
+								LDble: <ref refid="vector_8c_1abf8b31942231ba26f9f5d4729cdd5370" kindref="member">stdev_ldouble_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will calculate the standard deviation of the values in a data structure</para>
+<para>/param T The input data structure</para>
+<para><programlisting><codeline><highlight class="normal">Dble<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>a[5]<sp/>=<sp/>{3.45,<sp/>2.18,<sp/>8.17,<sp/>0.56,<sp/>2.28};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>stdev<sp/>=<sp/>STDEV(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(stdev);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>2.89559</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="476" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="476" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a895002453bd9037c335520131a642372" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>T</defname></param>
+        <initializer>		                      _Generic( (T), Char: <ref refid="vector_8c_1ac45503684793e5582c2bdac1d7d52ba3" kindref="member">max_char_vector</ref>, \
+		                      UChar: <ref refid="vector_8c_1a20c0c3f6f0baca86dd48608bbf4fb02e" kindref="member">max_uchar_vector</ref>, \
+							  Short: <ref refid="vector_8c_1a9322308e4f52e03ae336549fd42b7934" kindref="member">max_short_vector</ref>, \
+							  UShort: <ref refid="vector_8c_1a60d805f5dc29474286fb04c939b5c509" kindref="member">max_ushort_vector</ref>, \
+							  Int: <ref refid="vector_8c_1a2b015405abe5287fffe31e5dc0e31808" kindref="member">max_int_vector</ref>, \
+							  UInt: <ref refid="vector_8c_1a174988fd6cd94257cb6332b91429839d" kindref="member">max_uint_vector</ref>, \
+							  LInt: <ref refid="vector_8c_1a3b06accf11f120a22aec6d59ed16d9db" kindref="member">max_long_vector</ref>, \
+							  ULInt: <ref refid="vector_8c_1ab73b0a00fcc4f391123628e2913a19bb" kindref="member">max_ulong_vector</ref>, \
+							  LLInt: <ref refid="vector_8c_1a812e8c27f2970204cc8460728d13c96f" kindref="member">max_llong_vector</ref>, \
+							  ULLInt: <ref refid="vector_8c_1a1960c8508e6fe43960e240626c497764" kindref="member">max_ullong_vector</ref>, \
+							  Flt: <ref refid="vector_8c_1a6a09841dc59b5a463a167ee7c2911efe" kindref="member">max_float_vector</ref>, \
+						      Dble: <ref refid="vector_8c_1a2da642346c710d417636ad41cd99b9a9" kindref="member">max_double_vector</ref>, \
+							  LDble: <ref refid="vector_8c_1adcda6720fac922e691d3bf4927edb42a" kindref="member">max_ldouble_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will calculate the max value in a data structure</para>
+<para>/param T The input data structure</para>
+<para><programlisting><codeline><highlight class="normal">Dble<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>a[5]<sp/>=<sp/>{3.45,<sp/>2.18,<sp/>8.17,<sp/>0.56,<sp/>2.28};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>max<sp/>=<sp/>MAX(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(max);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>8.17</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="508" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="508" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1ab01356067636aa7d12aad9a9302f37a7" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>T</defname></param>
+        <initializer>		                      _Generic( (T), Char: <ref refid="vector_8c_1a891486b9b55a8c3ac25a1225553fb0c7" kindref="member">min_char_vector</ref>, \
+		                      UChar: <ref refid="vector_8c_1a1dbc7c797a21eb6c44d009cb497b50ae" kindref="member">min_uchar_vector</ref>, \
+							  Short: <ref refid="vector_8c_1a21be2c6c074005bfa1c33603299f3181" kindref="member">min_short_vector</ref>, \
+							  UShort: <ref refid="vector_8c_1a3b2bb12ccbe4e256ec4da071673dd601" kindref="member">min_ushort_vector</ref>, \
+							  Int: <ref refid="vector_8c_1aad99e117541f381f0c14f5620507f6e1" kindref="member">min_int_vector</ref>, \
+							  UInt: <ref refid="vector_8c_1a449905d346deae4f4a83314c592a5b80" kindref="member">min_uint_vector</ref>, \
+							  LInt: <ref refid="vector_8c_1aaff52778fc2f05ace6de3570530e9068" kindref="member">min_long_vector</ref>, \
+							  ULInt: <ref refid="vector_8c_1a98b9ea464f1a6e1012f3aae9031a8a13" kindref="member">min_ulong_vector</ref>, \
+							  LLInt: <ref refid="vector_8c_1ad1a7c046cbcac65a71e5442ec5680bdc" kindref="member">min_llong_vector</ref>, \
+							  ULLInt: <ref refid="vector_8c_1a10aea428d676da30abd474d11dbab300" kindref="member">min_ullong_vector</ref>, \
+							  Flt: <ref refid="vector_8c_1a37e7749c40c9ecefb35c6f677e6e2786" kindref="member">min_float_vector</ref>, \
+						      Dble: <ref refid="vector_8c_1ac870c654ea8b8143650fb8504880d80a" kindref="member">min_double_vector</ref>, \
+							  LDble: <ref refid="vector_8c_1af3eef7302375a05b37b3ae4e0d8251a8" kindref="member">min_ldouble_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will calculate the max value in a data structure</para>
+<para>/param T The input data structure</para>
+<para><programlisting><codeline><highlight class="normal">Dble<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>a[5]<sp/>=<sp/>{3.45,<sp/>2.18,<sp/>8.17,<sp/>0.56,<sp/>2.28};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>min<sp/>=<sp/>MIN(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(max);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>0.56</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="540" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="540" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a67c03354ef846fed0c21ad5802407c42" prot="public" static="no">
+        <name>RANGE</name>
+        <param><defname>T</defname></param>
+        <param><defname>start</defname></param>
+        <param><defname>end</defname></param>
+        <param><defname>delta</defname></param>
+        <initializer>		                                           _Generic( (T), Char: <ref refid="vector_8c_1ac3589c6090a8dc24ffe4211dbb42b15f" kindref="member">range_char_vector</ref>, \
+		                                           UChar: <ref refid="vector_8c_1a14f0626112aa000e6739a14556f761ed" kindref="member">range_uchar_vector</ref>, \
+							                       Short: <ref refid="vector_8c_1adb305706da4585539cd057cfa0ec0e2c" kindref="member">range_short_vector</ref>, \
+							                       UShort: <ref refid="vector_8c_1a062892c86bd6a4934d91c804684cf755" kindref="member">range_ushort_vector</ref>, \
+									               Int: <ref refid="vector_8c_1a184898353e0603cd18372448c8a842e4" kindref="member">range_int_vector</ref>, \
+							                       UInt: <ref refid="vector_8c_1adce9ffbf72bc5678dbd702bf9840f363" kindref="member">range_uint_vector</ref>, \
+									               LInt: <ref refid="vector_8c_1aed9932998976a7d3ce615075dd5af09b" kindref="member">range_long_vector</ref>, \
+									               ULInt: <ref refid="vector_8c_1a4fe9caa2febfe85a1107394d8b42c348" kindref="member">range_ulong_vector</ref>, \
+									               LLInt: <ref refid="vector_8c_1afa81d739815cef7056167d48361e0891" kindref="member">range_llong_vector</ref>, \
+									               ULLInt: <ref refid="vector_8c_1a6b8d5f1723a1e5e9a0d03da80e93b68e" kindref="member">range_ullong_vector</ref>, \
+									               Flt: <ref refid="vector_8c_1a85d0392c18b7db31c0a14bc2aa13448c" kindref="member">range_float_vector</ref>, \
+						                           Dble: <ref refid="vector_8c_1a636afa2f2e2af7dbbd34b7cb42d11163" kindref="member">range_double_vector</ref>, \
+									               LDble: <ref refid="vector_8c_1ae5505a9a69a6701bcafa4b92eb06055f" kindref="member">range_ldouble_vector</ref>)(&amp;T, start, end, delta)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will insert a range of values between start and end into a data structure.</para>
+<para>/param T The data structure /param start The start point /param end The end point /param The delta between data points</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal">RANGE(vec,<sp/>2,<sp/>20,<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(vec);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>2,<sp/>4,<sp/>6,<sp/>8,<sp/>10,<sp/>12,<sp/>14,<sp/>16,<sp/>18,<sp/>20<sp/>]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="574" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="574" bodyend="586"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a0ba1f915ff0895a09d1dfe31f5c728f3" prot="public" static="no">
+        <name>COPY</name>
+        <param><defname>T</defname></param>
+        <initializer>							   _Generic( (T), UChar: <ref refid="vector_8c_1ac3e7f4298d195586bfc0cf8b0fc1a053" kindref="member">copy_uchar_vector</ref>, \
+							   Short: <ref refid="vector_8c_1ab88c9075f7ac94dd8656a8eec4a14a94" kindref="member">copy_short_vector</ref>, \
+							   UShort: <ref refid="vector_8c_1af70602cee86af9597513bc67b2878244" kindref="member">copy_ushort_vector</ref>, \
+							   Int: <ref refid="vector_8c_1a5fd73621c9da27949814495f00a3296f" kindref="member">copy_int_vector</ref>, \
+							   UInt: <ref refid="vector_8c_1a6bf7c67135858a07103fff23436b7d77" kindref="member">copy_uint_vector</ref>, \
+							   LInt: <ref refid="vector_8c_1abc614587816c37e5dfd70c2a832da165" kindref="member">copy_long_vector</ref>, \
+							   ULInt: <ref refid="vector_8c_1a31f85f1454385a608eebc7d150417b7c" kindref="member">copy_ulong_vector</ref>, \
+							   LLInt: <ref refid="vector_8c_1a2a8c6a77d383c5251686fc600c829005" kindref="member">copy_llong_vector</ref>, \
+							   ULLInt: <ref refid="vector_8c_1abe7076983c8f386b305b615137dcd249" kindref="member">copy_ullong_vector</ref>, \
+							   Flt: <ref refid="vector_8c_1a440353dc4ac989fb88b34e7f5649dd05" kindref="member">copy_float_vector</ref>, \
+						       Dble: <ref refid="vector_8c_1a2d51a8a92a5c0e73345ade59b126ff35" kindref="member">copy_double_vector</ref>, \
+							   LDble: <ref refid="vector_8c_1a3fa3120b9c06e25fc840f90c7e10c5a6" kindref="member">copy_ldouble_vector</ref>, \
+							   Char: <ref refid="vector_8c_1a430a540aea6caac8002281b9a2ddbf7a" kindref="member">copy_char_vector</ref>, \
+							   Bool: <ref refid="vector_8c_1a2e6c2d82128d66d5fe6800ee6ad9d277" kindref="member">copy_bool_vector</ref>, \
+							   String: <ref refid="vector_8c_1a2cb84d3851679202a04f76066bc80a6e" kindref="member">copy_string_vector</ref>)(&amp;T)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will create a deep copy of a data structure</para>
+<para>/param T The data structure /retur structure The deep copy of a data structure</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>a[5]<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">Int<sp/>new_vec<sp/>=<sp/>COPY(vec);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(new_vec);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>1,<sp/>2,<sp/>3,<sp/>4,<sp/>5<sp/>]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="607" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="607" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a2cc515116896ddef6d83c6afbabf74d2" prot="public" static="no">
+        <name>IDATA</name>
+        <param><defname>T</defname></param>
+        <param><defname>index</defname></param>
+        <initializer>		                               _Generic( (T), Char: <ref refid="vector_8c_1aa99d3902c062bd4e5e31b85ccd8867bb" kindref="member">char_vector_data</ref>, \
+		                               UChar: <ref refid="vector_8c_1a5ec8248dfe94805dce29484cf23b9db5" kindref="member">uchar_vector_data</ref>, \
+							           Short: <ref refid="vector_8c_1a34d64d0cfc6dc0e1e5b3ab4d685f9b17" kindref="member">short_vector_data</ref>, \
+							           UShort: <ref refid="vector_8c_1ae64308782a33a82a606c6463d0511a19" kindref="member">ushort_vector_data</ref>, \
+									   Int: <ref refid="vector_8c_1a3804e8951d833849ea5c7333b832bf1e" kindref="member">int_vector_data</ref>, \
+							           UInt: <ref refid="vector_8c_1ac6172e0e9433875fa34c0faaf8647c6c" kindref="member">uint_vector_data</ref>, \
+									   LInt: <ref refid="vector_8c_1a78c08d70ca4769c5fa2e4d87bcd35f4e" kindref="member">long_vector_data</ref>, \
+									   ULInt: <ref refid="vector_8c_1ae7aed886f0e33fc044d7d7bafcea088b" kindref="member">ulong_vector_data</ref>, \
+									   LLInt: <ref refid="vector_8c_1ac368c61f3aceee6f22f7fdfd9c6866bc" kindref="member">llong_vector_data</ref>, \
+									   ULLInt: <ref refid="vector_8c_1a401a9795be5292f8c20fb032218c4b1a" kindref="member">ullong_vector_data</ref>, \
+									   Flt: <ref refid="vector_8c_1a84fbf5e526da1adcad6858a643df2462" kindref="member">float_vector_data</ref>, \
+						               Dble: <ref refid="vector_8c_1a1c5e11f6eff0482afd6666532c1c150f" kindref="member">double_vector_data</ref>, \
+									   LDble: <ref refid="vector_8c_1a4ff7d557d90612b873092b0b9dd82b15" kindref="member">ldouble_vector_data</ref>, \
+									   Bool: <ref refid="vector_8c_1ab8ec8940661d127593fab26f02d3961a" kindref="member">bool_vector_data</ref>, \
+									   String: <ref refid="vector_8c_1a1cb0a8bfe346307c5d842d15ffacbc0c" kindref="member">string_vector_data</ref>)(&amp;T, index)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<sect1 id="data__structures_8h_1autotoc_md0">
+<title>==========================================================================================</title>
+<para>This macro will insert a range of values between start and end into a data structure.</para>
+<para>/param T The data structure /param start The start point /param end The end point /param The delta between data points</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal">RANGE(vec,<sp/>2,<sp/>20,<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>a<sp/>=<sp/>IDATA(vec,<sp/>3);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(a);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>8</highlight></codeline>
+</programlisting> </para>
+</sect1>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="644" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="644" bodyend="658"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a6fbf1f61f351633bf0504cff6b630a3d" prot="public" static="no">
+        <name>REPLACE_INDEX</name>
+        <param><defname>T</defname></param>
+        <param><defname>new_val</defname></param>
+        <param><defname>index</defname></param>
+        <initializer>							                            _Generic( (T), UChar: <ref refid="vector_8c_1a9eaf5407b4c3a2f3db66ea179836beac" kindref="member">replace_uchar_vector_index</ref>, \
+							                            Short: <ref refid="vector_8c_1ab1de3c266f8b9ed02a1d6ce573da1f9a" kindref="member">replace_short_vector_index</ref>, \
+							                            UShort: <ref refid="vector_8c_1a7bcc2cf2fbaf836342d35f0afa29eb74" kindref="member">replace_ushort_vector_index</ref>, \
+									                    Int: <ref refid="vector_8c_1a0e1744a0448c4e5dd1131593efb609b8" kindref="member">replace_int_vector_index</ref>, \
+							                            UInt: <ref refid="vector_8c_1aa1fc20f1e5fbd217726f0fd27b8b6ed7" kindref="member">replace_uint_vector_index</ref>, \
+									                    LInt: <ref refid="vector_8c_1a4ea2e9f2401e9cd4d1cbdbec1e149aba" kindref="member">replace_long_vector_index</ref>, \
+									                    ULInt: <ref refid="vector_8c_1abc7605a0d1c96745f5a21cde7850d646" kindref="member">replace_ulong_vector_index</ref>, \
+									                    LLInt: <ref refid="vector_8c_1a3743c4611f8d5bc6f7b50d138349e419" kindref="member">replace_llong_vector_index</ref>, \
+									                    ULLInt: <ref refid="vector_8c_1aec90d973d5ddfd94b2be73686077c4cb" kindref="member">replace_ullong_vector_index</ref>, \
+									                    Flt: <ref refid="vector_8c_1a9a562517abca96c42b1b9fe69469915f" kindref="member">replace_float_vector_index</ref>, \
+						                                Dble: <ref refid="vector_8c_1a25c9a8f29ce2515cf260c9a50745fc69" kindref="member">replace_double_vector_index</ref>, \
+									                    LDble: <ref refid="vector_8c_1a81d619ab6affe5d8ffa3e79c099c9bb8" kindref="member">replace_ldouble_vector_index</ref>, \
+											            Char: <ref refid="vector_8c_1a5f8e0b70e42100f1ef36d8ba5f9115bf" kindref="member">replace_char_vector_index</ref>, \
+											            Bool: <ref refid="vector_8c_1aadfbe9f5e5b78204f55c342826be1cd5" kindref="member">replace_bool_vector_index</ref>)(&amp;T, new_val, index)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will insert a range of values between start and end into a data structure.</para>
+<para>/param T The data structure /param start The start point /param end The end point /param The delta between data points</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>a[5]<sp/>=<sp/>{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5};</highlight></codeline>
+<codeline><highlight class="normal">INSERT(vec,<sp/>a,<sp/>5,<sp/>0);</highlight></codeline>
+<codeline><highlight class="normal">REPLACE_INDEX(vec,<sp/>10,<sp/>2);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(vec);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>1,<sp/>2,<sp/>10,<sp/>4,<sp/>5<sp/>]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="682" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="682" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="define" id="data__structures_8h_1a2ca463425145b4a1d1989a92ac937e7e" prot="public" static="no">
+        <name>REPEAT</name>
+        <param><defname>T</defname></param>
+        <param><defname>val</defname></param>
+        <param><defname>num</defname></param>
+        <initializer>							               _Generic( (T), UChar: <ref refid="vector_8c_1aa03b84f9a537aa95ab335f38448051a0" kindref="member">repeat_uchar_vector</ref>, \
+							               Short: <ref refid="vector_8c_1a1fbfbfeed7892cd604ac2175048a1ff3" kindref="member">repeat_short_vector</ref>, \
+							               UShort: <ref refid="vector_8c_1a87921615a6088f8e15e74f796abd294e" kindref="member">repeat_ushort_vector</ref>, \
+									       Int: <ref refid="vector_8c_1aeb26b3546bef2bb8e5afc6a8c93d23a1" kindref="member">repeat_int_vector</ref>, \
+							               UInt: <ref refid="vector_8c_1a1aa1df7f7e77404e77862ca75666165c" kindref="member">repeat_uint_vector</ref>, \
+									       LInt: <ref refid="vector_8c_1a1f0914c2c37de3b81b706c77be31e57a" kindref="member">repeat_long_vector</ref>, \
+									       ULInt: <ref refid="vector_8c_1a8c9c95f3e41bcaa00e99db959130c509" kindref="member">repeat_ulong_vector</ref>, \
+									       LLInt: <ref refid="vector_8c_1a7c24fd593c9332ba1779b780b85cc893" kindref="member">repeat_llong_vector</ref>, \
+									       ULLInt: <ref refid="vector_8c_1a6f8e17e6a8930bf7bf0f7422d65eeab5" kindref="member">repeat_ullong_vector</ref>, \
+									       Flt: <ref refid="vector_8c_1a58a085c7febff1b1bd9e6ec90510b36a" kindref="member">repeat_float_vector</ref>, \
+						                   Dble: <ref refid="vector_8c_1ac2a03364dd0dc653854b1f70101514c6" kindref="member">repeat_double_vector</ref>, \
+									       LDble: <ref refid="vector_8c_1a34a56cde6bc6f420f8b9063bf87232e1" kindref="member">repeat_ldouble_vector</ref>, \
+										   Char: <ref refid="vector_8c_1aece15dcc8e9d3cf0fa0cb65c0b7a05f2" kindref="member">repeat_char_vector</ref>, \
+										   Bool: <ref refid="vector_8c_1a10df883121d1f71d331ae6ba273357f1" kindref="member">repeat_bool_vector</ref>, \
+										   String: <ref refid="vector_8c_1a9f6bd7ebba53e2d4eb0b8e3d8931029c" kindref="member">repeat_string_vector</ref>)(&amp;T, val, num)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will insert a range of values between start and end into a data structure.</para>
+<para>/param T The data structure /param val The value to be repeats /param num The number of times a value is repeats</para>
+<para><programlisting><codeline><highlight class="normal">Int<sp/>vec;</highlight></codeline>
+<codeline><highlight class="normal">INIT_VECTOR(vec,<sp/>10);</highlight></codeline>
+<codeline><highlight class="normal">REPEAT(vec,<sp/>10,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(vec);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>[<sp/>10,<sp/>10,<sp/>10,<sp/>10,<sp/>10<sp/>]</highlight></codeline>
+<codeline><highlight class="normal">FREE(vec);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" line="717" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h" bodystart="717" bodyend="731"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>File:<sp/><sp/><sp/><sp/>data_structures.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Purpose:<sp/>Describe<sp/>the<sp/>file<sp/>purpose<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Source<sp/>Metadata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Author:<sp/><sp/>Jonathan<sp/>A.<sp/>Webb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Date:<sp/><sp/><sp/><sp/>March<sp/>31,<sp/>2023</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Version:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Copyright:<sp/>Copyright<sp/>2022,<sp/>Jon<sp/>Webb<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Include<sp/>modules<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>data_structures_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>data_structures_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8h" kindref="compound">vector.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PUSH<sp/>GENERIC<sp/>OPERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>This<sp/>macro<sp/>will<sp/>push<sp/>a<sp/>scalar<sp/>data<sp/>point<sp/>to<sp/>a<sp/>user<sp/>defined<sp/>index<sp/>within<sp/>an</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>existing<sp/>vector.<sp/><sp/>The<sp/>macro<sp/>only<sp/>selects<sp/>the<sp/>correct<sp/>function,<sp/>and<sp/>therefore</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>does<sp/>not<sp/>incease<sp/>memory<sp/>usage<sp/>or<sp/>decrease<sp/>code<sp/>execution<sp/>time.<sp/><sp/>While<sp/>the<sp/>user</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>can<sp/>push<sp/>data<sp/>to<sp/>any<sp/>index,<sp/>the<sp/>macro<sp/>will<sp/>execute<sp/>fastest<sp/>when<sp/>the<sp/>user</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>pushes<sp/>data<sp/>to<sp/>the<sp/>next<sp/>available<sp/>index.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>/param<sp/>vec<sp/>A<sp/>vector<sp/>struct<sp/>container</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>/param<sp/>value<sp/>The<sp/>data<sp/>point<sp/>to<sp/>be<sp/>pushed<sp/>to<sp/>the<sp/>vector</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>/param<sp/>index<sp/>The<sp/>index<sp/>where<sp/>data<sp/>is<sp/>to<sp/>be<sp/>inserted</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>@code</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>Int<sp/>vec;</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>INIT_VECTOR(vec,<sp/>20);</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>2,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>3,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>10,<sp/>0);</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>for<sp/>(size_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>vec.active_length;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>printf(&quot;%d\n&quot;,<sp/>vec.array[i]);</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>//<sp/>&gt;&gt;<sp/>10<sp/>1<sp/>2<sp/>3</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>@endcode</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="data__structures_8h_1a3fee9a7b57ea204e4220ef2bd0700db5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUSH(T,<sp/>value,<sp/>index)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>push_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>push_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>push_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>push_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>push_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>push_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>push_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>push_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>push_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>push_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>push_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>push_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>push_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>push_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>push_string_vector)(&amp;T,<sp/>value,<sp/>index)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>INSERT<sp/>GENERIC<sp/>OPERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*<sp/>This<sp/>macro<sp/>will<sp/>insert<sp/>an<sp/>array<sp/>of<sp/>data<sp/>into<sp/>a<sp/>vector<sp/>container.<sp/><sp/>In<sp/>addition,<sp/>this</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*<sp/>function<sp/>can<sp/>also<sp/>be<sp/>used<sp/>to<sp/>push<sp/>a<sp/>scalar<sp/>variable<sp/>to<sp/>a<sp/>vector<sp/>container<sp/>at<sp/>a<sp/>user</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*<sp/>defined<sp/>index.<sp/><sp/>While<sp/>the<sp/>user<sp/>can<sp/>insert<sp/>a<sp/>scalar<sp/>or<sp/>an<sp/>array<sp/>to<sp/>any<sp/>desired</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>*<sp/>index,<sp/>the<sp/>function<sp/>will<sp/>run<sp/>fastest<sp/>when<sp/>data<sp/>is<sp/>inserted<sp/>at<sp/>the<sp/>next<sp/>available</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/>index.<sp/><sp/>This<sp/>macro<sp/>only<sp/>selects<sp/>the<sp/>correct<sp/>function<sp/>to<sp/>execute<sp/>the<sp/>operation<sp/>based</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/>on<sp/>data<sp/>type.<sp/><sp/>Therefore<sp/>this<sp/>macro<sp/>does<sp/>not<sp/>increase<sp/>memory<sp/>usage,<sp/>nor<sp/>does<sp/>it</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*<sp/>decrease<sp/>code<sp/>execution<sp/>time.</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*<sp/>/param<sp/>vec<sp/>A<sp/>vector<sp/>struct<sp/>container</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/>/param<sp/>elements<sp/>The<sp/>array<sp/>containing<sp/>elements<sp/>to<sp/>be<sp/>inserted</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*<sp/>/param<sp/>num_ind<sp/>The<sp/>number<sp/>of<sp/>indices<sp/>occupied<sp/>by<sp/>elements</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*<sp/>/param<sp/>index<sp/>The<sp/>index<sp/>where<sp/>the<sp/>array<sp/>is<sp/>to<sp/>be<sp/>submitted</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*<sp/>@code</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*<sp/>Int<sp/>vec;</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>INIT_VECTOR(vec,<sp/>8);</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>2,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>3,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>4,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>5,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/>*<sp/>int<sp/>a[3]<sp/>=<sp/>{10,<sp/>9,<sp/>8}</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/>*<sp/>INSERT(vec,<sp/>a,<sp/>3,<sp/>2);</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/>*<sp/>PRINT(vec);</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*<sp/>//<sp/>[<sp/>1,<sp/>2,<sp/>10,<sp/>9,<sp/>8,<sp/>3,<sp/>4,<sp/>5<sp/>]</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*<sp/>@endcode</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="data__structures_8h_1a39f36b37e9611785d15e1691a628ab30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INSERT(T,<sp/>elements,<sp/>num_ind,<sp/>index)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>insert_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>insert_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>insert_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>insert_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>insert_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>insert_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>insert_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>insert_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>insert_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>insert_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>insert_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>insert_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>insert_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>insert_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>insert_string_vector)(&amp;T,<sp/>elements,<sp/>num_ind,<sp/>index)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>INSERT<sp/>GENERIC<sp/>OPERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/>*<sp/>This<sp/>macro<sp/>will<sp/>insert<sp/>an<sp/>array<sp/>of<sp/>data<sp/>into<sp/>a<sp/>vector<sp/>container.<sp/><sp/>In<sp/>addition,<sp/>this</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/>*<sp/>function<sp/>can<sp/>also<sp/>be<sp/>used<sp/>to<sp/>push<sp/>a<sp/>scalar<sp/>variable<sp/>to<sp/>a<sp/>vector<sp/>container<sp/>at<sp/>a<sp/>user</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/>defined<sp/>index.<sp/><sp/>While<sp/>the<sp/>user<sp/>can<sp/>insert<sp/>a<sp/>scalar<sp/>or<sp/>an<sp/>array<sp/>to<sp/>any<sp/>desired</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*<sp/>index,<sp/>the<sp/>function<sp/>will<sp/>run<sp/>fastest<sp/>when<sp/>data<sp/>is<sp/>inserted<sp/>at<sp/>the<sp/>next<sp/>available</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/>index.<sp/><sp/>This<sp/>macro<sp/>only<sp/>selects<sp/>the<sp/>correct<sp/>function<sp/>to<sp/>execute<sp/>the<sp/>operation<sp/>based</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*<sp/>on<sp/>data<sp/>type.<sp/><sp/>Therefore<sp/>this<sp/>macro<sp/>does<sp/>not<sp/>increase<sp/>memory<sp/>usage,<sp/>nor<sp/>does<sp/>it</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>*<sp/>decrease<sp/>code<sp/>execution<sp/>time.</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*<sp/>/param<sp/>vec<sp/>A<sp/>vector<sp/>struct<sp/>container</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*<sp/>/param<sp/>elements<sp/>The<sp/>array<sp/>containing<sp/>elements<sp/>to<sp/>be<sp/>inserted</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/>/param<sp/>num_ind<sp/>The<sp/>number<sp/>of<sp/>indices<sp/>occupied<sp/>by<sp/>elements</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/>/param<sp/>index<sp/>The<sp/>index<sp/>where<sp/>the<sp/>array<sp/>is<sp/>to<sp/>be<sp/>submitted</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*<sp/>@code</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/>Int<sp/>vec;</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*<sp/>INIT_VECTOR(vec,<sp/>8);</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>2,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>3,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>4,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>5,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/>*<sp/>int<sp/>a[3]<sp/>=<sp/>{10,<sp/>9,<sp/>8}</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/>*<sp/>INSERT(vec,<sp/>a,<sp/>3,<sp/>2);</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/>*<sp/>PRINT(vec);</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>*<sp/>//<sp/>[<sp/>1,<sp/>2,<sp/>10,<sp/>9,<sp/>8,<sp/>3,<sp/>4,<sp/>5<sp/>]</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>*<sp/>@endcode</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="data__structures_8h_1a1603ab82164c2b586fb4e918dfe0787d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FREE(T)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>free_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>free_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>free_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>free_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>free_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>free_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>free_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>free_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>free_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>free_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>free_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>free_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>free_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>free_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>free_string_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>*<sp/>This<sp/>macro<sp/>will<sp/>insert<sp/>an<sp/>array<sp/>of<sp/>data<sp/>into<sp/>a<sp/>vector<sp/>container.<sp/><sp/>In<sp/>addition,<sp/>this</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*<sp/>function<sp/>can<sp/>also<sp/>be<sp/>used<sp/>to<sp/>push<sp/>a<sp/>scalar<sp/>variable<sp/>to<sp/>a<sp/>vector<sp/>container<sp/>at<sp/>a<sp/>user</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/>*<sp/>defined<sp/>index.<sp/><sp/>While<sp/>the<sp/>user<sp/>can<sp/>insert<sp/>a<sp/>scalar<sp/>or<sp/>an<sp/>array<sp/>to<sp/>any<sp/>desired</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/>*<sp/>index,<sp/>the<sp/>function<sp/>will<sp/>run<sp/>fastest<sp/>when<sp/>data<sp/>is<sp/>inserted<sp/>at<sp/>the<sp/>next<sp/>available</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/>*<sp/>index.<sp/><sp/>This<sp/>macro<sp/>only<sp/>selects<sp/>the<sp/>correct<sp/>function<sp/>to<sp/>execute<sp/>the<sp/>operation<sp/>based</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/>*<sp/>on<sp/>data<sp/>type.<sp/><sp/>Therefore<sp/>this<sp/>macro<sp/>does<sp/>not<sp/>increase<sp/>memory<sp/>usage,<sp/>nor<sp/>does<sp/>it</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/>*<sp/>decrease<sp/>code<sp/>execution<sp/>time.</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/>*<sp/>/param<sp/>vec<sp/>A<sp/>vector<sp/>struct<sp/>container</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>*<sp/>/param<sp/>T<sp/>The<sp/>array<sp/>containing<sp/>elements<sp/>to<sp/>be<sp/>inserted</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*<sp/>/param<sp/>y<sp/>The<sp/>index<sp/>from<sp/>where<sp/>data<sp/>is<sp/>poppsed</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/>@code</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>Int<sp/>vec;</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*<sp/>INIT_VECTOR(vec,<sp/>8);</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>1,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="176"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>2,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="177"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>3,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>4,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/>*<sp/>PUSH(vec,<sp/>5,<sp/>vec.active_length);</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>*<sp/>POP_INDEX(vec,<sp/>2);</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/>*<sp/>PRINT(vec);</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/>*<sp/>//<sp/>[<sp/>1,<sp/>2,<sp/>4,<sp/>5<sp/>]</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/>*<sp/>@endcode</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="data__structures_8h_1a7873976d8a344c5188e57dffb974056b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POP_INDEX(T,<sp/>y)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>pop_short_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>pop_ushort_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="187"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>pop_int_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>pop_uint_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>pop_long_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>pop_ulong_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>pop_llong_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>pop_ullong_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>pop_float_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="194"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>pop_double_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>pop_ldouble_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>pop_char_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>pop_uchar_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>pop_bool_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>pop_string_vector_index)(&amp;T,<sp/>y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REPLACE_VALUES<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="data__structures_8h_1abad9b6661bf67c0b5cc43ddcbd39c206" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REPLACE_VALUES(T,<sp/>old,<sp/>new)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>replace_short_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>replace_ushort_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>replace_int_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="234"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>replace_uint_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>replace_long_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>replace_ulong_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>replace_llong_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>replace_ullong_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>replace_float_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>replace_double_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>replace_ldouble_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="242"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>replace_char_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="243"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>replace_uchar_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="244"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>replace_bool_vector_values,<sp/>\</highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>replace_string_vector_values)(&amp;T,<sp/>old,<sp/>new)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DELETE_TYPE_DUPLICATES<sp/>OPERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="data__structures_8h_1a846efd03c9d323e9b03d70331276d47a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DELETE_DUPLICATES(T)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>delete_short_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>delete_ushort_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="268"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>delete_int_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="269"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>delete_uint_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>delete_long_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="271"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>delete_ulong_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="272"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>delete_llong_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="273"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>delete_ullong_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="274"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>delete_float_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="275"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>delete_double_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>delete_ldouble_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="277"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>delete_char_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="278"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>delete_uchar_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="279"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>delete_bool_vector_duplicates,<sp/>\</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>delete_string_vector_duplicates)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REVERSE<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="data__structures_8h_1ae5f2dc1bcc130da5504af4d09d54864c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REVERSE(T)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>reverse_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="305"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>reverse_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="306"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>reverse_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="307"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>reverse_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="308"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>reverse_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="309"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>reverse_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="310"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>reverse_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="311"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>reverse_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="312"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>reverse_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="313"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>reverse_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="314"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>reverse_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="315"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>reverse_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="316"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>reverse_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="317"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>reverse_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="318"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>reverse_string_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="data__structures_8h_1a4b57fe13cd381d593ef6790b5dacff6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IS_SORT_TYPE(T,<sp/>low,<sp/>high,<sp/>order)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>sort_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="323"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>sort_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="324"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>sort_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="325"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>sort_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="326"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>sort_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="327"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>sort_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="328"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>sort_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="329"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>sort_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="330"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>sort_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="331"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>sort_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="332"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>sort_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="333"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>sort_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="334"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>sort_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="335"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>sort_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="336"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>sort_string_vector)(&amp;T,<sp/>low,<sp/>high,<sp/>order)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SORT<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357" refid="data__structures_8h_1a3bd435328ac67b6ab76355c6a90ae0ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SORT(T,<sp/>order)<sp/>IS_SORT_TYPE((T),<sp/>(0),<sp/>(T.active_length-1),<sp/>(order))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SUM<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="data__structures_8h_1ab2bc3cf2085b7ef95514abd7c78341de" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUM(T)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>sum_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="378"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>sum_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="379"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>sum_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="380"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>sum_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="381"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>sum_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="382"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>sum_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="383"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>sum_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="384"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>sum_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="385"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>sum_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="386"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>sum_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="387"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>sum_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="388"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>sum_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="389"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>sum_ldouble_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="data__structures_8h_1ad67d6348b4a31d319108c5b915592e8c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUMSUM(T)<sp/>_Generic(<sp/>(T),<sp/>Short:<sp/>cumsum_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="411"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>cumsum_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="412"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>cumsum_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="413"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>cumsum_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="414"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>cumsum_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="415"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>cumsum_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="416"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>cumsum_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="417"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>cumsum_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="418"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>cumsum_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="419"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>cumsum_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="420"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>cumsum_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="421"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>cumsum_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="422"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>cumsum_ldouble_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AVERAGE<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443" refid="data__structures_8h_1a81794266d48f7e352116d53be0fda9fc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AVERAGE(T)<sp/>_Generic(<sp/>(T),<sp/>Char:<sp/>average_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="444"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>average_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="445"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>average_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="446"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>average_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="447"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>average_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="448"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>average_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="449"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>average_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="450"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>average_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="451"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>average_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="452"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>average_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="453"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>average_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="454"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>average_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="455"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>average_ldouble_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STDEV<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476" refid="data__structures_8h_1a381b9ae37cb75fb74f0a95939eda186e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STDEV(T)<sp/>_Generic(<sp/>(T),<sp/>Char:<sp/>stdev_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="477"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>stdev_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="478"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>stdev_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="479"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>stdev_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="480"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>stdev_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="481"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>stdev_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="482"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>stdev_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="483"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>stdev_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="484"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>stdev_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="485"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>stdev_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="486"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>stdev_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="487"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>stdev_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="488"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>stdev_ldouble_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MAC<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="508" refid="data__structures_8h_1a895002453bd9037c335520131a642372" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(T)<sp/>_Generic(<sp/>(T),<sp/>Char:<sp/>max_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="509"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>max_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="510"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>max_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="511"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>max_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="512"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>max_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="513"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>max_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="514"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>max_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="515"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>max_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="516"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>max_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="517"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>max_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="518"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>max_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="519"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>max_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="520"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>max_ldouble_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MIN<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540" refid="data__structures_8h_1ab01356067636aa7d12aad9a9302f37a7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(T)<sp/>_Generic(<sp/>(T),<sp/>Char:<sp/>min_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="541"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>min_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="542"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>min_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="543"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>min_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="544"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>min_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="545"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>min_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="546"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>min_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="547"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>min_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="548"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>min_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="549"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>min_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="550"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>min_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="551"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>min_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="552"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>min_ldouble_vector)(&amp;T)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MAC<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574" refid="data__structures_8h_1a67c03354ef846fed0c21ad5802407c42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RANGE(T,<sp/>start,<sp/>end,<sp/>delta)<sp/>_Generic(<sp/>(T),<sp/>Char:<sp/>range_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="575"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>range_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="576"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>range_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="577"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>range_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="578"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>range_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="579"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>range_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="580"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>range_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="581"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>range_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="582"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>range_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="583"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>range_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="584"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>range_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="585"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>range_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="586"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>range_ldouble_vector)(&amp;T,<sp/>start,<sp/>end,<sp/>delta)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="588"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight><highlight class="comment">//<sp/>COPY<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607" refid="data__structures_8h_1a0ba1f915ff0895a09d1dfe31f5c728f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COPY(T)<sp/>_Generic(<sp/>(T),<sp/>UChar:<sp/>copy_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="608"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>copy_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="609"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>copy_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="610"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>copy_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="611"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>copy_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="612"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>copy_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="613"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>copy_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="614"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>copy_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="615"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>copy_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="616"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>copy_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="617"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>copy_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="618"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>copy_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="619"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>copy_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="620"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>copy_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="621"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>copy_string_vector)(&amp;T)</highlight></codeline>
+<codeline lineno="624"><highlight class="comment">//<sp/>IDATA<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"></highlight></codeline>
+<codeline lineno="644" refid="data__structures_8h_1a2cc515116896ddef6d83c6afbabf74d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IDATA(T,<sp/>index)<sp/>_Generic(<sp/>(T),<sp/>Char:<sp/>char_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="645"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UChar:<sp/>uchar_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="646"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>short_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="647"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>ushort_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="648"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>int_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="649"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>uint_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="650"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>long_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="651"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>ulong_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="652"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>llong_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="653"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>ullong_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="654"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>float_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="655"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>double_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="656"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>ldouble_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="657"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>bool_vector_data,<sp/>\</highlight></codeline>
+<codeline lineno="658"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>string_vector_data)(&amp;T,<sp/>index)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REPLACE_INDEX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+<codeline lineno="682" refid="data__structures_8h_1a6fbf1f61f351633bf0504cff6b630a3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REPLACE_INDEX(T,<sp/>new_val,<sp/>index)<sp/>_Generic(<sp/>(T),<sp/>UChar:<sp/>replace_uchar_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="683"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>replace_short_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="684"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>replace_ushort_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="685"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>replace_int_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="686"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>replace_uint_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="687"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>replace_long_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="688"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>replace_ulong_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="689"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>replace_llong_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="690"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>replace_ullong_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="691"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>replace_float_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="692"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>replace_double_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="693"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>replace_ldouble_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="694"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>replace_char_vector_index,<sp/>\</highlight></codeline>
+<codeline lineno="695"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>replace_bool_vector_index)(&amp;T,<sp/>new_val,<sp/>index)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="696"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight><highlight class="comment">//<sp/>REPEAT<sp/>MACRO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight></codeline>
+<codeline lineno="717" refid="data__structures_8h_1a2ca463425145b4a1d1989a92ac937e7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REPEAT(T,<sp/>val,<sp/>num)<sp/>_Generic(<sp/>(T),<sp/>UChar:<sp/>repeat_uchar_vector,<sp/>\</highlight></codeline>
+<codeline lineno="718"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short:<sp/>repeat_short_vector,<sp/>\</highlight></codeline>
+<codeline lineno="719"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UShort:<sp/>repeat_ushort_vector,<sp/>\</highlight></codeline>
+<codeline lineno="720"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Int:<sp/>repeat_int_vector,<sp/>\</highlight></codeline>
+<codeline lineno="721"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UInt:<sp/>repeat_uint_vector,<sp/>\</highlight></codeline>
+<codeline lineno="722"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LInt:<sp/>repeat_long_vector,<sp/>\</highlight></codeline>
+<codeline lineno="723"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULInt:<sp/>repeat_ulong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="724"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LLInt:<sp/>repeat_llong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="725"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ULLInt:<sp/>repeat_ullong_vector,<sp/>\</highlight></codeline>
+<codeline lineno="726"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Flt:<sp/>repeat_float_vector,<sp/>\</highlight></codeline>
+<codeline lineno="727"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Dble:<sp/>repeat_double_vector,<sp/>\</highlight></codeline>
+<codeline lineno="728"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LDble:<sp/>repeat_ldouble_vector,<sp/>\</highlight></codeline>
+<codeline lineno="729"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Char:<sp/>repeat_char_vector,<sp/>\</highlight></codeline>
+<codeline lineno="730"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Bool:<sp/>repeat_bool_vector,<sp/>\</highlight></codeline>
+<codeline lineno="731"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String:<sp/>repeat_string_vector)(&amp;T,<sp/>val,<sp/>num)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>data_structures_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight><highlight class="comment">//<sp/>eof</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structUChar" kind="struct" language="C++" prot="public">
+    <compoundname>UChar</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structUChar_1acf5b94473575f93947d914fcc915fde5" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* UChar::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <qualifiedname>UChar::array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="89" column="30" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="vector_8c_1ac3e7f4298d195586bfc0cf8b0fc1a053" compoundref="vector_8c" startline="4573" endline="4578">copy_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a2850df1b78d17fd2e45847e8bf1e51c2" compoundref="vector_8c" startline="3008" endline="3017">cumsum_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a51740972d62e96e248d8a07eb65e48aa" compoundref="vector_8c" startline="2025" endline="2034">delete_uchar_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a9f3fcb3deda563d834c9d3d13f097268" compoundref="vector_8c" startline="1841" endline="1851">free_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a2f22fc4866a5c4e5ba5cc10fbf73bb5e" compoundref="vector_8c" startline="332" endline="337">init_uchar_array</referencedby>
+        <referencedby refid="vector_8c_1a9289ec52674f95ebf45ac81b70dfdc67" compoundref="vector_8c" startline="197" endline="209">init_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1ae5b1c45f4d2083c6d87f217646609a2d" compoundref="vector_8c" startline="1265" endline="1298">insert_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a20c0c3f6f0baca86dd48608bbf4fb02e" compoundref="vector_8c" startline="4013" endline="4021">max_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a1dbc7c797a21eb6c44d009cb497b50ae" compoundref="vector_8c" startline="4158" endline="4166">min_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a7527a193c89c32c07eba99e8abc08574" compoundref="vector_8c" startline="1521" endline="1531">pop_uchar_vector_index</referencedby>
+        <referencedby refid="vector_8c_1acc6fd3b434ba25d3473adff60160500b" compoundref="vector_8c" startline="745" endline="775">push_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a9eaf5407b4c3a2f3db66ea179836beac" compoundref="vector_8c" startline="4891" endline="4898">replace_uchar_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a8b8b55713c6eeeba3f8bb8fbbb08ad10" compoundref="vector_8c" startline="1657" endline="1661">replace_uchar_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a42deacd361fac959a84262a54ebddcb0" compoundref="vector_8c" startline="2247" endline="2259">reverse_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a88af2cb1285800957b1de71e783ee93a" compoundref="vector_8c" startline="2843" endline="2850">sort_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a9315ed5e7e8966f095ee8d334c5e10a4" compoundref="vector_8c" startline="3304" endline="3359">stdev_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a643cb8d97c368f436a0010dacfca2401" compoundref="vector_8c" startline="2886" endline="2892">sum_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a03a2814037d5194b5c291edca0155ae9" compoundref="vector_8c" startline="4745" endline="4754">trim_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a5ec8248dfe94805dce29484cf23b9db5" compoundref="vector_8c" startline="4466" endline="4466">uchar_vector_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structUChar_1a69ec79fc44d9f3b1455705e24a819f4b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t UChar::allocated_length</definition>
+        <argsstring></argsstring>
+        <name>allocated_length</name>
+        <qualifiedname>UChar::allocated_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="89" column="43" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a9f3fcb3deda563d834c9d3d13f097268" compoundref="vector_8c" startline="1841" endline="1851">free_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a2f22fc4866a5c4e5ba5cc10fbf73bb5e" compoundref="vector_8c" startline="332" endline="337">init_uchar_array</referencedby>
+        <referencedby refid="vector_8c_1a9289ec52674f95ebf45ac81b70dfdc67" compoundref="vector_8c" startline="197" endline="209">init_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1ae5b1c45f4d2083c6d87f217646609a2d" compoundref="vector_8c" startline="1265" endline="1298">insert_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1acc6fd3b434ba25d3473adff60160500b" compoundref="vector_8c" startline="745" endline="775">push_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a03a2814037d5194b5c291edca0155ae9" compoundref="vector_8c" startline="4745" endline="4754">trim_uchar_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structUChar_1ad5f4ad3198262dd20c82eaab936228cd" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t UChar::active_length</definition>
+        <argsstring></argsstring>
+        <name>active_length</name>
+        <qualifiedname>UChar::active_length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="89" column="67" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="vector_8c_1ad821bfcf3659a78a11a5c9c7fd72a277" compoundref="vector_8c" startline="3161" endline="3165">average_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1ac3e7f4298d195586bfc0cf8b0fc1a053" compoundref="vector_8c" startline="4573" endline="4578">copy_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a2850df1b78d17fd2e45847e8bf1e51c2" compoundref="vector_8c" startline="3008" endline="3017">cumsum_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a51740972d62e96e248d8a07eb65e48aa" compoundref="vector_8c" startline="2025" endline="2034">delete_uchar_vector_duplicates</referencedby>
+        <referencedby refid="vector_8c_1a9f3fcb3deda563d834c9d3d13f097268" compoundref="vector_8c" startline="1841" endline="1851">free_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a2f22fc4866a5c4e5ba5cc10fbf73bb5e" compoundref="vector_8c" startline="332" endline="337">init_uchar_array</referencedby>
+        <referencedby refid="vector_8c_1a9289ec52674f95ebf45ac81b70dfdc67" compoundref="vector_8c" startline="197" endline="209">init_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1ae5b1c45f4d2083c6d87f217646609a2d" compoundref="vector_8c" startline="1265" endline="1298">insert_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a20c0c3f6f0baca86dd48608bbf4fb02e" compoundref="vector_8c" startline="4013" endline="4021">max_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a1dbc7c797a21eb6c44d009cb497b50ae" compoundref="vector_8c" startline="4158" endline="4166">min_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a7527a193c89c32c07eba99e8abc08574" compoundref="vector_8c" startline="1521" endline="1531">pop_uchar_vector_index</referencedby>
+        <referencedby refid="vector_8c_1acc6fd3b434ba25d3473adff60160500b" compoundref="vector_8c" startline="745" endline="775">push_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a14f0626112aa000e6739a14556f761ed" compoundref="vector_8c" startline="4302" endline="4309">range_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1aa03b84f9a537aa95ab335f38448051a0" compoundref="vector_8c" startline="5053" endline="5060">repeat_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a9eaf5407b4c3a2f3db66ea179836beac" compoundref="vector_8c" startline="4891" endline="4898">replace_uchar_vector_index</referencedby>
+        <referencedby refid="vector_8c_1a8b8b55713c6eeeba3f8bb8fbbb08ad10" compoundref="vector_8c" startline="1657" endline="1661">replace_uchar_vector_values</referencedby>
+        <referencedby refid="vector_8c_1a42deacd361fac959a84262a54ebddcb0" compoundref="vector_8c" startline="2247" endline="2259">reverse_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a9315ed5e7e8966f095ee8d334c5e10a4" compoundref="vector_8c" startline="3304" endline="3359">stdev_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a643cb8d97c368f436a0010dacfca2401" compoundref="vector_8c" startline="2886" endline="2892">sum_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a03a2814037d5194b5c291edca0155ae9" compoundref="vector_8c" startline="4745" endline="4754">trim_uchar_vector</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structUChar_1aa1ea52fa832c84586784bb36c1617e44" prot="public" static="no" mutable="no">
+        <type><ref refid="vector_8h_1ad756268621f03e4812b68792b291fff5" kindref="member">mem_type</ref></type>
+        <definition>mem_type UChar::dat_type</definition>
+        <argsstring></argsstring>
+        <name>dat_type</name>
+        <qualifiedname>UChar::dat_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="89" column="90" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="vector_8c_1a9f3fcb3deda563d834c9d3d13f097268" compoundref="vector_8c" startline="1841" endline="1851">free_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1a2f22fc4866a5c4e5ba5cc10fbf73bb5e" compoundref="vector_8c" startline="332" endline="337">init_uchar_array</referencedby>
+        <referencedby refid="vector_8c_1a9289ec52674f95ebf45ac81b70dfdc67" compoundref="vector_8c" startline="197" endline="209">init_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1ae5b1c45f4d2083c6d87f217646609a2d" compoundref="vector_8c" startline="1265" endline="1298">insert_uchar_vector</referencedby>
+        <referencedby refid="vector_8c_1acc6fd3b434ba25d3473adff60160500b" compoundref="vector_8c" startline="745" endline="775">push_uchar_vector</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" line="89" column="1" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h" bodystart="89" bodyend="89"/>
+    <listofallmembers>
+      <member refid="structUChar_1ad5f4ad3198262dd20c82eaab936228cd" prot="public" virt="non-virtual"><scope>UChar</scope><name>active_length</name></member>
+      <member refid="structUChar_1a69ec79fc44d9f3b1455705e24a819f4b" prot="public" virt="non-virtual"><scope>UChar</scope><name>allocated_length</name></member>
+      <member refid="structUChar_1acf5b94473575f93947d914fcc915fde5" prot="public" virt="non-virtual"><scope>UChar</scope><name>array</name></member>
+      <member refid="structUChar_1aa1ea52fa832c84586784bb36c1617e44" prot="public" virt="non-virtual"><scope>UChar</scope><name>dat_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

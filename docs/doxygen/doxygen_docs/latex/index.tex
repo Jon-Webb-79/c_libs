@@ -1,0 +1,291 @@
+\chapter{C Libraries}
+\hypertarget{index}{}\label{index}\index{C Libraries@{C Libraries}}
+This library contains pre-\/defined data structures, random number generators, and file readers programmed in the C language. The libraries contain functions ang generic operators to simplify the user interface. The generic operators do not increase memory usage or decrease execution time like traditional operators, but instead feed the pre-\/compiler with the appropriate function definition based on data type. This allows a type generic interface.\hypertarget{index_install_sec}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{index_install_sec}
+This library has been tested on the clang 14.\+0.\+0, and the gcc 12.\+2.\+1 compilers. Use the following process to install this library
+\begin{DoxyEnumerate}
+\item Ensure that gcc 12.\+2.\+1 or clang 14.\+0.\+0 or later compilers are installed on your computer
+\item Clone the library with the following command clone {\ttfamily \href{https://github.com/Jon-Webb-79/c_libs}{\texttt{ https\+://github.\+com/\+Jon-\/\+Webb-\/79/c\+\_\+libs}}} ~\newline
+
+\item Install locally as a library with the command {\ttfamily xxx}
+\end{DoxyEnumerate}\hypertarget{index_files_sec}{}\doxysection{\texorpdfstring{Files}{Files}}\label{index_files_sec}
+This library contains the following header files and contents
+
+
+\begin{DoxyEnumerate}
+\item \doxylink{swap_8h}{swap.\+h} This header file contains functions and macros that can be used to swap data in memory. This file contains the following functions.
+\end{DoxyEnumerate}
+
+The library provides the following functions\+:
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{swap_8c_a30ac4d4001cfea5cd988c8697c5756be}{swap\+\_\+char()}}\+: Swaps two char values in memory.
+\item {\ttfamily \doxylink{swap_8c_a99803287c0fa88fd89efa65c71a74a39}{swap\+\_\+uchar()}}\+: Swaps two unsinged char values in memory.
+\item {\ttfamily \doxylink{swap_8c_a67d6114e177ee4d85994ff482b1329cc}{swap\+\_\+short()}}\+: Swaps two short integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a7946c35a5344cd2a139d81e5d807c877}{swap\+\_\+ushort()}}\+: Swaps two unsigned short integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a10ec5db73aebdd0d7508b49e72770ef4}{swap\+\_\+int()}}\+: Swaps two integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_ad0c2579d9b7805b5ff6102ddc6f2ef85}{swap\+\_\+uint()}}\+: Swaps two unsigned integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a0f866f8d63bc72771d9700427d483767}{swap\+\_\+long()}}\+: Swaps two long integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a54c3802c0ad98c4d033bd66be679ab6b}{swap\+\_\+ulong()}}\+: Swaps two unsigned long integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a88fe4609428512028b7284547f316ae5}{swap\+\_\+llong()}}\+: Swaps two long long integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a7ff2f756663b834f0fb747ef72a00211}{swap\+\_\+ullong()}}\+: Swaps two unsigned long long integer values in memory.
+\item {\ttfamily \doxylink{swap_8c_a09cf214b72d833078d15069e39feda2e}{swap\+\_\+float()}}\+: Swaps two float values in memory.
+\item {\ttfamily \doxylink{swap_8c_abfa4eebba539e060400a6a7fe746614e}{swap\+\_\+double()}}\+: Swaps two double values in memory.
+\item {\ttfamily \doxylink{swap_8c_a37e67cc39114f8a2b8020266bbf69d99}{swap\+\_\+ldouble()}}\+: Swaps two long double values in memory.
+\item {\ttfamily \doxylink{swap_8c_a8a2a44625c90172a99a93e5cc1dba005}{swap\+\_\+bool()}}\+: Swaps two bool values in memory.
+\end{DoxyItemize}
+
+This file also contains the following macros.
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{swap_8h_aac9153aee4bdb92701df902e06a74eb3}{SWAP()}}\+: Swaps data of any type listed aboved in a single macro.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item \doxylink{vector_8h}{vector.\+h} This header file contains functions and macros that can be used to instantiate and execute a dynamically and statically allocated array. {\bfseries{NOTE\+:}} The contents of this file can also be accessed via the data\+\_\+structure.\+h file. The \doxylink{vector_8h}{vector.\+h} file contains the following functions.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{vector_8c_aecde718777430d31ec254f8a4f40cce0}{init\+\_\+char\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type char.
+\item {\ttfamily \doxylink{vector_8c_a9289ec52674f95ebf45ac81b70dfdc67}{init\+\_\+uchar\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type unsigned char.
+\item {\ttfamily \doxylink{vector_8c_a749211e8a46a8b2297b3c6ebb78aed0e}{init\+\_\+short\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type short int.
+\item {\ttfamily \doxylink{vector_8c_aa63398bdb55f97b891b93404a89de14d}{init\+\_\+ushort\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type unsigned short int.
+\item {\ttfamily \doxylink{vector_8c_a9fdb6c5fdd9f0d5a3bfb751f9e82968e}{init\+\_\+int\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type int.
+\item {\ttfamily \doxylink{vector_8c_a9d8eb1d9ce65365d7b044fe684387a3f}{init\+\_\+uint\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type unsigned int.
+\item {\ttfamily \doxylink{vector_8c_ac59c5fed0f4cd6b9aaf4c87b7a997bd3}{init\+\_\+long\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type long int.
+\item {\ttfamily \doxylink{vector_8c_af08098b392c0ff01db799bff9c83a521}{init\+\_\+ulong\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type unsigned long int.
+\item {\ttfamily \doxylink{vector_8c_a65eda538d3c07a8beb1475c1a214ff67}{init\+\_\+llong\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type long long int.
+\item {\ttfamily \doxylink{vector_8c_ab05d31d34c87d8d6cd76f48539bf367f}{init\+\_\+ullong\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type unsigned long long int.
+\item {\ttfamily \doxylink{vector_8c_a92bba70874a1570bd9c87a2a7385af35}{init\+\_\+float\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type float.
+\item {\ttfamily \doxylink{vector_8c_a2c0735f69da8e40535b5ecceace1a399}{init\+\_\+double\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type double.
+\item {\ttfamily \doxylink{vector_8c_a79d9f9d1d1cb31d09620bc5cdc73e94e}{init\+\_\+ldouble\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type long double
+\item {\ttfamily \doxylink{vector_8c_a2e1ea608c0b9b0768ba61facb8df913f}{init\+\_\+bool\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type bool.
+\item {\ttfamily \doxylink{vector_8c_ad5c4c9d8676c13f1f381b0b6c1119c4d}{init\+\_\+string\+\_\+vector()}}\+: Initializes a dynamically allocated vector of type string.
+\item {\ttfamily \doxylink{vector_8c_ab4f076e9a6e7d0795c2c3a0216c5c97e}{push\+\_\+char\+\_\+vector()}}\+: Function to push a char variable to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_acc6fd3b434ba25d3473adff60160500b}{push\+\_\+uchar\+\_\+vector()}}\+: Function to push an unsigned char variable to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a38068c17aa5cf7286175572d43219b8d}{push\+\_\+short\+\_\+vector()}}\+: Function to push a short integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a97670c026df2a05dda5b0c85ebeb4d69}{push\+\_\+ushort\+\_\+vector()}}\+: Function to push an unsigned short integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a6baf75dc56de293f3dbdc8ac40934980}{push\+\_\+int\+\_\+vector()}}\+: Function to push an integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a787fc2bba6112c4ede10d0ec14ab3825}{push\+\_\+uint\+\_\+vector()}}\+: Function to push an unsigned integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a6135368684b7d740482cfc775417f255}{push\+\_\+long\+\_\+vector()}}\+: Function to push a long integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_aea5f95b56df2836ee553face60351e61}{push\+\_\+ulong\+\_\+vector()}}\+: Function to push an unsligned long integer to a vector or array.
+\item `\doxylink{vector_8c_a93f7e28f97718d9d7c5c84df61c1466c}{push\+\_\+llong\+\_\+vector()}'\+: Function to push a long long integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a3478a298e62d85cb93f11a78f64d6f80}{push\+\_\+ullong\+\_\+vector()}}\+: Function to push an unsigned long long integer to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a31e02f437f4f9f43d1126e017ae1cac3}{push\+\_\+float\+\_\+vector()}}\+: Function to push a float value to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_ab312c467d82a0fccc66cbb89a6b8de5c}{push\+\_\+double\+\_\+vector()}}\+: Function to push a double value to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_ad001560a2793c40efb1c64532cefe2e2}{push\+\_\+ldouble\+\_\+vector()}}\+: Function to push a long double value to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a66a1a1c291efbab607defa13421167dc}{push\+\_\+bool\+\_\+vector()}}\+: Function to push a bool value to a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a078616c26d55c1ddb2ec4c551298a4f8}{push\+\_\+string\+\_\+vector()}}\+: Function to push a string value to a vector or array.
+\item {\ttfamily pop\+\_\+char\+\_\+vector()}\+: Function to delete a char value from a vector or array.
+\item {\ttfamily pop\+\_\+uchar\+\_\+vector()}\+: Function to delete an unsigned char value from a vector or array.
+\item {\ttfamily pop\+\_\+short\+\_\+vector()}\+: Function to delete a short value from a vector or array.
+\item {\ttfamily pop\+\_\+ushort\+\_\+vector()}\+: Function to delete an unsigned short value from a vector or array.
+\item {\ttfamily pop\+\_\+int\+\_\+vector()}\+: Function to delete an integer value from a vector or array.
+\item {\ttfamily pop\+\_\+uint\+\_\+vector()}\+: Function to delete an unsigned integer value from a vector or array.
+\item {\ttfamily pop\+\_\+long\+\_\+vector()}\+: Function to delete a long integer from a vector or array.
+\item {\ttfamily pop\+\_\+ulong\+\_\+vector()}\+: Function to delete an unsigned long integer from a vector or array.
+\item {\ttfamily pop\+\_\+llong\+\_\+vector()}\+: Function to delete a long long integer from a vector or array.
+\item {\ttfamily pop\+\_\+ullong\+\_\+vector()}\+: Function to delete an unsinged long long integer from a vector or array.
+\item {\ttfamily pop\+\_\+float\+\_\+vector()}\+: Function to delete a float value from a vector or array.
+\item {\ttfamily pop\+\_\+double\+\_\+vector()}\+: Function to delete a double value from a vector or array.
+\item {\ttfamily pop\+\_\+ldouble\+\_\+vector()}\+: Function to delete a long double value from a vector or array.
+\item {\ttfamily pop\+\_\+bool\+\_\+vector()}\+: Function to delete a bool value from a vector or array.
+\item {\ttfamily pop\+\_\+string\+\_\+vector()}\+: Function to delete a string value from a vector or array.
+\item {\ttfamily replace\+\_\+char\+\_\+vector()}\+: Function to replace a char value with another in a vector or array.
+\item {\ttfamily replace\+\_\+uchar\+\_\+vector()}\+: Function to replace an unsigned char value with another in a vector or array.
+\item {\ttfamily replace\+\_\+short\+\_\+vector()}\+: Function to replace a short value with another in a vector or array.
+\item {\ttfamily replace\+\_\+ushort\+\_\+vector()}\+: Function to replace an unsigned short value with another in a vector or array.
+\item {\ttfamily replace\+\_\+int\+\_\+vector()}\+: Function to replace an integer value with another in a vector or array.
+\item {\ttfamily replace\+\_\+uint\+\_\+vector()}\+: Function to replace an unsigned integer value with another in a vector or array.
+\item {\ttfamily replace\+\_\+long\+\_\+vector()}\+: Function to replace a long integer value with another in a vector or array.
+\item {\ttfamily replace\+\_\+ulong\+\_\+vector()}\+: Function to replace an unsigned long long vector with another in a vector or array.
+\item {\ttfamily replace\+\_\+llong\+\_\+vector()}\+: Function to replace a long long integer value with another in a vector or array.
+\item {\ttfamily replace\+\_\+ullong\+\_\+vector()}\+: Function to replace an unsigned long long vector with another in a vector or array.
+\item {\ttfamily replace\+\_\+float\+\_\+vector()}\+: Function to replace a float value with another in a vector or array.
+\item {\ttfamily replace\+\_\+double\+\_\+vector()}\+: Function to replace a double value with another in a vector or array.
+\item {\ttfamily replace\+\_\+ldouble\+\_\+vector()}\+: Function to replace a long double value with another in a vector or array.
+\item {\ttfamily replace\+\_\+bool\+\_\+vector()}\+: Function to replace a bool value with another in a vector or array.
+\item {\ttfamily replace\+\_\+string\+\_\+vector()}\+: Function to replace a string value with another in a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a06faa32f223a79c02cb771b19cc02a07}{reverse\+\_\+char\+\_\+vector()}}\+: Function to reverse the order of a char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a42deacd361fac959a84262a54ebddcb0}{reverse\+\_\+uchar\+\_\+vector()}}\+: Function to reverse the order of an unsigned char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a6388f663263c0c5a219bc2da551d0584}{reverse\+\_\+short\+\_\+vector()}}\+: Function to reverse the order of a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a15f75e9b6b4192aa83d95635419865da}{reverse\+\_\+ushort\+\_\+vector()}}\+: Function to reverse the order of an unsigned short integer vector or array.
+\item {\ttfamily reveree\+\_\+int\+\_\+vector()}\+: Function to reverse the order of an integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a58e127cf5386ca2152ebafcf4dbb8bbd}{reverse\+\_\+uint\+\_\+vector()}}\+: Functin to reverse the order of an unsigned integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a0d89b67e906a169f63e1bfc679df018f}{reverse\+\_\+long\+\_\+vector()}}\+: Function to reverse the order of a long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a6196a5bfffe22d6493b2bda77a9340fb}{reverse\+\_\+ulong\+\_\+vector()}}\+: Function to reverse the order of an unsigned long interger vector or array.
+\item {\ttfamily \doxylink{vector_8c_a3247bcffd4ad7a9f75c9a2e88ff7bd81}{reverse\+\_\+llong\+\_\+vector()}}\+: Function to reverse the order of a long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_aa77d55a8f5e4ab149edb6c75d98a94ce}{reverse\+\_\+ullong\+\_\+vector()}}\+: Function to reverse the order of an unsinged long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a086bbd995dc83d50532944330a44c450}{reverse\+\_\+float\+\_\+vector()}}\+: Function to reverse the order of a float vector or array.
+\item {\ttfamily \doxylink{vector_8c_a628e48950294512d38556f8b194284d4}{reverse\+\_\+double\+\_\+vector()}}\+: Function to reverse the order of a double vector or array.
+\item {\ttfamily \doxylink{vector_8c_a8a72b2219830bacf2a5ec926241ed924}{reverse\+\_\+ldouble\+\_\+vector()}}\+: Function to reverse the order of a long double vector or array.
+\item {\ttfamily \doxylink{vector_8c_a9b58a773830487b8a8f1973221e93366}{reverse\+\_\+bool\+\_\+vector()}}\+: Function to reverse the order of a bool vector or array.
+\item {\ttfamily \doxylink{vector_8c_a6297710c0ac2122db93e47a260e96ad8}{reverse\+\_\+string\+\_\+vector()}}\+: Function to reverse the order of a string vector or array.
+\item {\ttfamily \doxylink{vector_8c_a0c29cab75728310a3b5b78681af2df21}{sort\+\_\+char\+\_\+vector()}}\+: Function to sort a char vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a88af2cb1285800957b1de71e783ee93a}{sort\+\_\+uchar\+\_\+vector()}}\+: Function to sort an unsigned char vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a04f50afe6c127edeea202b08ad65f36a}{sort\+\_\+short\+\_\+vector()}}\+: Function to sort a short vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\+\_\+ushort\+\_\+vector()}}\+: Function to sort an unsigned short vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a0c29cab75728310a3b5b78681af2df21}{sort\+\_\+char\+\_\+vector()}}\+: Function to sort a char vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a88af2cb1285800957b1de71e783ee93a}{sort\+\_\+uchar\+\_\+vector()}}\+: Function to sort an unsigned char vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a04f50afe6c127edeea202b08ad65f36a}{sort\+\_\+short\+\_\+vector()}}\+: Function to sort a short vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a68df688dc04c74d9e826b629ef0f98c3}{sort\+\_\+ushort\+\_\+vector()}}\+: Function to sort an unsigned short vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a722d90a04d08a5ece84ba7a2b8d04d6d}{sort\+\_\+int\+\_\+vector()}}\+: Function to sort an integer vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a451f6cb1a5b4b2e77c1170c85656c3c6}{sort\+\_\+uint\+\_\+vector()}}\+: Function to sort an integer vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a573e6f77db28f1a05eefd8a982f850c7}{sort\+\_\+long\+\_\+vector()}}\+: Function to sort a long integer vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_adf53d931d4b9c3ab9d62298b6d3df5cd}{sort\+\_\+ulong\+\_\+vector()}}\+: Function to sort an unsigned long integer vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_ab1183f9c1a6c8a6d60b4457421e3072a}{sort\+\_\+llong\+\_\+vector()}}\+: Function to sort a long long integer vector or array in forward or reverse directions.
+\item {\ttfamily \doxylink{vector_8c_a3d45fbf7b754bf4bad8be3cbb6241a84}{sort\+\_\+ullong\+\_\+vector()}}\+: Function to sort an unsigned long long vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_aa3e927c35eb4eb79cb87d6df026e01a1}{sort\+\_\+float\+\_\+vector()}}\+: Function to sort a float vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_aa461bbfa3be53bc5dc4c56c94fb7fa62}{sort\+\_\+double\+\_\+vector()}}\+: Function to sort a double vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a3745eaf35ed1dfbae01e83d5b93e185d}{sort\+\_\+ldouble\+\_\+vector()}}\+: Function to sort a long double vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a68744cde4b7c17a0305d9cf512494a20}{sort\+\_\+bool\+\_\+vector()}}\+: Function to sort a bool vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_aead9f94df495db661d185ef0363ec1d6}{sort\+\_\+string\+\_\+vector()}}\+: Function to sort a string vector or array in forward or reverse direction.
+\item {\ttfamily \doxylink{vector_8c_a0684e2f1aee143f1769dd8ff908c852c}{sum\+\_\+char\+\_\+vector()}}\+: Function to determine the sum of char values in a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a643cb8d97c368f436a0010dacfca2401}{sum\+\_\+uchar\+\_\+vector()}}\+: Function to determine the sum of unsigned char values in a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a54d410de6d79f482b3d560bcb78fd2ff}{sum\+\_\+short\+\_\+vector()}}\+: Function to determine the sum of short integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a67f48de636722d00447f21d5040f8d81}{sum\+\_\+ushort\+\_\+vector()}}\+: Function to determine the sum of unsigned short integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_aaf01dd9c2caec4100d4315bd8d525a30}{sum\+\_\+int\+\_\+vector()}}\+: Function to determine the sum of integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a791fe9c8f9bd1d04158b01c3aa022edd}{sum\+\_\+uint\+\_\+vector()}}\+: Function to determine the sum of unsigned integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_af2ca62fb5fa87cccef8750d24b3979da}{sum\+\_\+long\+\_\+vector()}}\+: Function to determine the sum of long integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a3233da20e23c20659dd5aba81307b58d}{sum\+\_\+ulong\+\_\+vector()}}\+: Function to determine the sum of unsigned long integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a838510507e7f386e844fd1e5e3ae494a}{sum\+\_\+llong\+\_\+vector()}}\+: Function to determine the sum of long long integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_af1cc1dfd0470ab00fc1537ebcbb5c089}{sum\+\_\+ullong\+\_\+vector()}}\+: Function to determine the sum of unsigned long long integer values in a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_ab9177b68251ddf43f4a245afd559e462}{sum\+\_\+float\+\_\+vector()}}\+: Function to determine the sum of float values in a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a98a70f4f173d451a1ff5357f4779289d}{sum\+\_\+double\+\_\+vector()}}\+: Function to determine the sum of double values in a vector or array.
+\item {\ttfamily \doxylink{vector_8c_af2df2f0fe19814004ab61a91521d7b21}{sum\+\_\+ldouble\+\_\+vector()}}\+: Function to determine the sum of long double values in a vector or array.
+\item {\ttfamily \doxylink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector()}}\+: Function to determine the cumulative sum of a char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a877296aab1e625bc7b103322f6b93b14}{cumsum\+\_\+char\+\_\+vector()}}\+: Function to determine the cumulative sum of an unsigned char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a588f2bea0a2ac3d8bf87184d873a2804}{cumsum\+\_\+short\+\_\+vector()}}\+: Function to determine the cumulative sum of a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a94f7fe260f499b1a18150332e1a0e427}{cumsum\+\_\+ushort\+\_\+vector()}}\+: Function to determine the cumulative sum of an unsigned short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_acaf8f7f369483e4dcb9a7af53e79492c}{cumsum\+\_\+int\+\_\+vector()}}\+: Function to determine the cumulative sum of an integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_abe44138d94c38f7d65d62f63dddf668b}{cumsum\+\_\+uint\+\_\+vector()}}\+: Function to determine the cumulative sum of an unsigned integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_aacdbfadbd42e44ba909b315b43152012}{cumsum\+\_\+long\+\_\+vector()}}\+: Function to determine the cumulative sum of a long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_ae856339059aa7e6f5db1d5bd7de43306}{cumsum\+\_\+ulong\+\_\+vector()}}\+: Function to determine the cumulative sum of an unsigned long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a531b30e8b67bc20cad9865cc3d8afe50}{cumsum\+\_\+llong\+\_\+vector()}}\+: Function to determine the cumulative sum of a long long vector or array.
+\item {\ttfamily \doxylink{vector_8c_a07bde722230b2f57f1b14304054d1d6a}{cumsum\+\_\+ullong\+\_\+vector()}}\+: Function to determine the cumulative sum of an unsigned long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a9ddb912a129b46a9a2f2d147b4a1ddc8}{cumsum\+\_\+float\+\_\+vector()}}\+: Function to determine the cumulative sum of a float vector or array.
+\item {\ttfamily \doxylink{vector_8c_ae8512eab3bf15409bda6bce1d6ec0380}{cumsum\+\_\+double\+\_\+vector()}}\+: Function to determine the cumulative sum of a double vector or array.
+\item {\ttfamily cumsum\+\_\+ldouble\+\_\+vetor()}\+: Function to determine the cumulative sum of a long double vector or array.
+\item {\ttfamily \doxylink{vector_8c_a0a47e22454ec90b6c959915dbc3c87a6}{average\+\_\+char\+\_\+vector()}}\+: Function to determine the average value of a char vector or array.
+\item {\ttfamily \doxylink{vector_8c_ad821bfcf3659a78a11a5c9c7fd72a277}{average\+\_\+uchar\+\_\+vector()}}\+: Function to determine the average value of an unsigned char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a5a553d82722c04ec4b613014fa1d0688}{average\+\_\+short\+\_\+vector()}}\+: Function to determine the average value of a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a96018578b7bce5eb04f4b4dbbd63b582}{average\+\_\+ushort\+\_\+vector()}}\+: Function to determine the average value of an unsigned short vector or array.
+\item {\ttfamily \doxylink{vector_8c_a2e384c1e58cf1f6486ae0a8bc2e46379}{average\+\_\+int\+\_\+vector()}}\+: Function to determine the average value of an integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a35959e6bd4010b04681750611d00a7b7}{average\+\_\+uint\+\_\+vector()}}\+: Function to determine the average value of an unsigned integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_ad1feee1c2712401a20fbe6699f5c4bc7}{average\+\_\+long\+\_\+vector()}}\+: Function to determine the average value of a long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_aa94c4a725c6ab558c748baa93b652363}{average\+\_\+ulong\+\_\+vector()}}\+: Function to determine the average value of an unsigned long vector.
+\item {\ttfamily \doxylink{vector_8c_ae3782b50d088b4488da3a8283670ffcc}{average\+\_\+llong\+\_\+vector()}}\+: Function to determine the average value of a long long vector or array.
+\item {\ttfamily \doxylink{vector_8c_abb879670618c44d1259b4cb689d36698}{average\+\_\+ullong\+\_\+vector()}}\+: Function to determine the average value of an unsigned long long vector or array.
+\item {\ttfamily \doxylink{vector_8c_a95e8f18d7457adb1784ca850c7afa01e}{average\+\_\+float\+\_\+vector()}}\+: Function to determine the average value of a float vector or array.
+\item {\ttfamily \doxylink{vector_8c_ab0985989db7774a2f4ccf0f6bc7fd0ed}{average\+\_\+double\+\_\+vector()}}\+: Function to determine the average value of a double vector or array.
+\item {\ttfamily \doxylink{vector_8c_a136fac1692146b0fc1dd1f548b6a07a4}{average\+\_\+ldouble\+\_\+vector()}}\+: Function to determine the average value of a long double vector or array.
+\item {\ttfamily \doxylink{vector_8c_a918b7824d676e70026969bf6af72dba7}{stdev\+\_\+char\+\_\+vector()}}\+: Function to determine the standard deviation of a char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a9315ed5e7e8966f095ee8d334c5e10a4}{stdev\+\_\+uchar\+\_\+vector()}}\+: Function to determine the standard deviation of an unsigned char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a193f4372f93ae17ab490841af7e508c3}{stdev\+\_\+short\+\_\+vector()}}\+: Function to determine the standard deviation of a short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_ae0c29568372c468d83c1a5f33d4c60c6}{stdev\+\_\+ushort\+\_\+vector()}}\+: Function to determine the standard deviation of an unsigned short integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_aa469dd50aa2a8cd43ad5c577016145e8}{stdev\+\_\+int\+\_\+vector()}}\+: Function to determine the standard deviation of an integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a2a72fa8e25403401326d07853c45c7fe}{stdev\+\_\+uint\+\_\+vector()}}\+: Function to determine the standard deviation of an unsigned interger array.
+\item {\ttfamily \doxylink{vector_8c_ab875bc51d7595b4e6fe536770cfe62c5}{stdev\+\_\+long\+\_\+vector()}}\+: Function to determine the standard deviation of a long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a3cd9fa1fbe73338e380ccc9b98a6b768}{stdev\+\_\+ulong\+\_\+vector()}}\+: Function to determine the standard deviation of an unsigned long vector or array.
+\item {\ttfamily \doxylink{vector_8c_a5b29dc6f20528b67a4a53208c5beefe7}{stdev\+\_\+llong\+\_\+vector()}}\+: Function to determine the standard deviation of a long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a9cb0b02a7bedef69397ef758fd36baa6}{stdev\+\_\+ullong\+\_\+vector()}}\+: Function to determine the standard deviation of an unsigned long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_abb791f292ea37822fa3c8f20749b8571}{stdev\+\_\+float\+\_\+vector()}}\+: Function to determine the standard deviation of a float vector or array.
+\item {\ttfamily \doxylink{vector_8c_aa05c06bd35f0e74c8a07ef0257a8aa67}{stdev\+\_\+double\+\_\+vector()}}\+: Function to determine the standard deviation of a double vector or array.
+\item {\ttfamily \doxylink{vector_8c_abf8b31942231ba26f9f5d4729cdd5370}{stdev\+\_\+ldouble\+\_\+vector()}}\+: Function to determine the standard deviation of a long double vector or array.
+\item {\ttfamily \doxylink{vector_8c_ac45503684793e5582c2bdac1d7d52ba3}{max\+\_\+char\+\_\+vector()}}\+: Function to determine the maximum value in a char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a20c0c3f6f0baca86dd48608bbf4fb02e}{max\+\_\+uchar\+\_\+vector()}}\+: Function to determine the maximum value in an unsigned char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a9322308e4f52e03ae336549fd42b7934}{max\+\_\+short\+\_\+vector()}}\+: Function to determine the maximum value in a short vector or array.
+\item {\ttfamily \doxylink{vector_8c_a60d805f5dc29474286fb04c939b5c509}{max\+\_\+ushort\+\_\+vector()}}\+: Function to determine the maximum value in an unsigned short vector or array.
+\item {\ttfamily \doxylink{vector_8c_a2b015405abe5287fffe31e5dc0e31808}{max\+\_\+int\+\_\+vector()}}\+: Function to determine the maximum value in an integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a174988fd6cd94257cb6332b91429839d}{max\+\_\+uint\+\_\+vector()}}\+: Function to determine the maximum value in an unsigned integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a3b06accf11f120a22aec6d59ed16d9db}{max\+\_\+long\+\_\+vector()}}\+: Function to determine the maximum value in a long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_ab73b0a00fcc4f391123628e2913a19bb}{max\+\_\+ulong\+\_\+vector()}}\+: Function to determine the maximum value in an unsigned long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a812e8c27f2970204cc8460728d13c96f}{max\+\_\+llong\+\_\+vector()}}\+: Function to determine the maximum value in a long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a1960c8508e6fe43960e240626c497764}{max\+\_\+ullong\+\_\+vector()}}\+: Function to determine the maximum value in an unsigned long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a6a09841dc59b5a463a167ee7c2911efe}{max\+\_\+float\+\_\+vector()}}\+: Function to determine the maximum value in a float vector or array.
+\item {\ttfamily \doxylink{vector_8c_a2da642346c710d417636ad41cd99b9a9}{max\+\_\+double\+\_\+vector()}}\+: Function to determine the maximum value in an double vector or array.
+\item {\ttfamily \doxylink{vector_8c_adcda6720fac922e691d3bf4927edb42a}{max\+\_\+ldouble\+\_\+vector()}}\+: Function to determine the maximum value in an long double vector or array.
+\item {\ttfamily \doxylink{vector_8c_a891486b9b55a8c3ac25a1225553fb0c7}{min\+\_\+char\+\_\+vector()}}\+: Function to determine the minimum value in a char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a1dbc7c797a21eb6c44d009cb497b50ae}{min\+\_\+uchar\+\_\+vector()}}\+: Function to determine the minimum value in an unsigned char vector or array.
+\item {\ttfamily \doxylink{vector_8c_a21be2c6c074005bfa1c33603299f3181}{min\+\_\+short\+\_\+vector()}}\+: Function to determine the minimum value in a short vector or array.
+\item {\ttfamily \doxylink{vector_8c_a3b2bb12ccbe4e256ec4da071673dd601}{min\+\_\+ushort\+\_\+vector()}}\+: Function to determine the minimum value in an unsigned short vector or array.
+\item {\ttfamily \doxylink{vector_8c_aad99e117541f381f0c14f5620507f6e1}{min\+\_\+int\+\_\+vector()}}\+: Function to determine the minumum value in an integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a449905d346deae4f4a83314c592a5b80}{min\+\_\+uint\+\_\+vector()}}\+: Function to determine the minimum value in an unsigned integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_aaff52778fc2f05ace6de3570530e9068}{min\+\_\+long\+\_\+vector()}}\+: Function to determine the minimum value in a long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a98b9ea464f1a6e1012f3aae9031a8a13}{min\+\_\+ulong\+\_\+vector()}}\+: Function to determine the minimum value in an unsigned long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_ad1a7c046cbcac65a71e5442ec5680bdc}{min\+\_\+llong\+\_\+vector()}}\+: Function to determine the minimum value in a long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a10aea428d676da30abd474d11dbab300}{min\+\_\+ullong\+\_\+vector()}}\+: Function to determine the minimum value in an unsigned long long integer vector or array.
+\item {\ttfamily \doxylink{vector_8c_a37e7749c40c9ecefb35c6f677e6e2786}{min\+\_\+float\+\_\+vector()}}\+: Function to determine the minimum value in a float vector or array.
+\item {\ttfamily \doxylink{vector_8c_ac870c654ea8b8143650fb8504880d80a}{min\+\_\+double\+\_\+vector()}}\+: Function to determine the minimum value in an double vector or array.
+\item {\ttfamily \doxylink{vector_8c_af3eef7302375a05b37b3ae4e0d8251a8}{min\+\_\+ldouble\+\_\+vector()}}\+: Function to determine the minimum value in an long double vector or array.
+\item {\ttfamily \doxylink{vector_8c_ac3589c6090a8dc24ffe4211dbb42b15f}{range\+\_\+char\+\_\+vector()}}\+: Function to produce a range of char values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a14f0626112aa000e6739a14556f761ed}{range\+\_\+uchar\+\_\+vector()}}\+: Function to produce a range of unsigned char values as a vector.
+\item {\ttfamily \doxylink{vector_8c_adb305706da4585539cd057cfa0ec0e2c}{range\+\_\+short\+\_\+vector()}}\+: Function to produce a range of short integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a062892c86bd6a4934d91c804684cf755}{range\+\_\+ushort\+\_\+vector()}}\+: Function to produce a range of unsigned short integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a184898353e0603cd18372448c8a842e4}{range\+\_\+int\+\_\+vector()}}\+: Function to produce a range of integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_adce9ffbf72bc5678dbd702bf9840f363}{range\+\_\+uint\+\_\+vector()}}\+: Function to produce a range of unsigned integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_aed9932998976a7d3ce615075dd5af09b}{range\+\_\+long\+\_\+vector()}}\+: Function to produce a range of long integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a4fe9caa2febfe85a1107394d8b42c348}{range\+\_\+ulong\+\_\+vector()}}\+: Function to produce a range of unsigned long short integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_afa81d739815cef7056167d48361e0891}{range\+\_\+llong\+\_\+vector()}}\+: Function to produce a range of long long integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a6b8d5f1723a1e5e9a0d03da80e93b68e}{range\+\_\+ullong\+\_\+vector()}}\+: Function to produce a range of unsigned long long short integer values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a85d0392c18b7db31c0a14bc2aa13448c}{range\+\_\+float\+\_\+vector()}}\+: Function to produce a range of float values as a vector.
+\item {\ttfamily \doxylink{vector_8c_a636afa2f2e2af7dbbd34b7cb42d11163}{range\+\_\+double\+\_\+vector()}}\+: Function to produce a range of double values as a vector.
+\item {\ttfamily \doxylink{vector_8c_ae5505a9a69a6701bcafa4b92eb06055f}{range\+\_\+ldouble\+\_\+vector()}}\+: Function to produce a range of long double values as a vector.
+\item {\ttfamily \doxylink{vector_8c_aa99d3902c062bd4e5e31b85ccd8867bb}{char\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a char array or vector.
+\item {\ttfamily \doxylink{vector_8c_a5ec8248dfe94805dce29484cf23b9db5}{uchar\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a unsigned char array or vector.
+\item {\ttfamily \doxylink{vector_8c_a34d64d0cfc6dc0e1e5b3ab4d685f9b17}{short\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a short array or vector.
+\item {\ttfamily \doxylink{vector_8c_ae64308782a33a82a606c6463d0511a19}{ushort\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a unsigned short array or vector.
+\item {\ttfamily \doxylink{vector_8c_a3804e8951d833849ea5c7333b832bf1e}{int\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in an integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_ac6172e0e9433875fa34c0faaf8647c6c}{uint\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a unsigned integer char array or vector.
+\item {\ttfamily \doxylink{vector_8c_a78c08d70ca4769c5fa2e4d87bcd35f4e}{long\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a long integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_ae7aed886f0e33fc044d7d7bafcea088b}{ulong\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a unsigned long integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_ac368c61f3aceee6f22f7fdfd9c6866bc}{llong\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a long long integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_a401a9795be5292f8c20fb032218c4b1a}{ullong\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a unsigned long long integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_a84fbf5e526da1adcad6858a643df2462}{float\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a float array or vector.
+\item {\ttfamily \doxylink{vector_8c_a1c5e11f6eff0482afd6666532c1c150f}{double\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a double integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_a4ff7d557d90612b873092b0b9dd82b15}{ldouble\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a long double array or vector.
+\item {\ttfamily \doxylink{vector_8c_ab8ec8940661d127593fab26f02d3961a}{bool\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a bool integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_a1cb0a8bfe346307c5d842d15ffacbc0c}{string\+\_\+vector\+\_\+data()}}\+: Function to retrieve data from a user specified index in a string integer array or vector.
+\item {\ttfamily \doxylink{vector_8c_a4e9cace11cfb849b013d15d09053b0bb}{trim\+\_\+char\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a03a2814037d5194b5c291edca0155ae9}{trim\+\_\+uchar\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_aeec337d3614f9c62cd652fee528e8f10}{trim\+\_\+short\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a394639166d53eacb53725cf548f596db}{trim\+\_\+ushort\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a1365d9e27b0080e8e48d9809987e0824}{trim\+\_\+int\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_aafc05a4201bf2e5129655a7d4db8819c}{trim\+\_\+uint\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a8e0993c9b72acdbb4eec8bdea1687fd2}{trim\+\_\+long\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a2b44394f88268b15dfaf3640cb70f42f}{trim\+\_\+ulong\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_ad500a258d2da444ab4d9a0315a241ab9}{trim\+\_\+llong\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_aa2e26e5c689daa0f13844939ead1e484}{trim\+\_\+ullong\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a78d86f1a5dc7e8f980fecfb2f8d12395}{trim\+\_\+float\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a4a91fca62c49f8628e3efdc3713be344}{trim\+\_\+double\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_a7a50f85d6a874afbfdf345ba35b8a62e}{trim\+\_\+ldouble\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8c_ae838be1f19558e27f1c9ee40b7f0f368}{trim\+\_\+bool\+\_\+vector()}}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily trim\+\_\+string\+\_\+vector()}\+: Function to minimize allocated memory to minimum necessary value.
+\item {\ttfamily \doxylink{vector_8h_ae7ea4c14f63edfd4d7c039a02ae1a65e}{TRIM()}}\+: A Macro to minimize the allocated memory to the minimum necessary value for any data type listed above.
+\item {\ttfamily \doxylink{vector_8c_a5f8e0b70e42100f1ef36d8ba5f9115bf}{replace\+\_\+char\+\_\+vector\+\_\+index()}}\+: Function to replace a char value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a9eaf5407b4c3a2f3db66ea179836beac}{replace\+\_\+uchar\+\_\+vector\+\_\+index()}}\+: Function to replace an unsigned char value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_ab1de3c266f8b9ed02a1d6ce573da1f9a}{replace\+\_\+short\+\_\+vector\+\_\+index()}}\+: Function to replace a short integer value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a7bcc2cf2fbaf836342d35f0afa29eb74}{replace\+\_\+ushort\+\_\+vector\+\_\+index()}}\+: Function to replace an unsigned short integer value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a0e1744a0448c4e5dd1131593efb609b8}{replace\+\_\+int\+\_\+vector\+\_\+index()}}\+: Function to replace a int value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_aa1fc20f1e5fbd217726f0fd27b8b6ed7}{replace\+\_\+uint\+\_\+vector\+\_\+index()}}\+: Function to replace an unsigned integer value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a4ea2e9f2401e9cd4d1cbdbec1e149aba}{replace\+\_\+long\+\_\+vector\+\_\+index()}}\+: Function to replace a long int value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_abc7605a0d1c96745f5a21cde7850d646}{replace\+\_\+ulong\+\_\+vector\+\_\+index()}}\+: Function to replace an unsigned long integer value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a3743c4611f8d5bc6f7b50d138349e419}{replace\+\_\+llong\+\_\+vector\+\_\+index()}}\+: Function to replace a long long int value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_aec90d973d5ddfd94b2be73686077c4cb}{replace\+\_\+ullong\+\_\+vector\+\_\+index()}}\+: Function to replace an unsigned long long integer value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a9a562517abca96c42b1b9fe69469915f}{replace\+\_\+float\+\_\+vector\+\_\+index()}}\+: Function to replace a float value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a25c9a8f29ce2515cf260c9a50745fc69}{replace\+\_\+double\+\_\+vector\+\_\+index()}}\+: Function to replace an double value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a81d619ab6affe5d8ffa3e79c099c9bb8}{replace\+\_\+ldouble\+\_\+vector\+\_\+index()}}\+: Function to replace a long double value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_aadfbe9f5e5b78204f55c342826be1cd5}{replace\+\_\+bool\+\_\+vector\+\_\+index()}}\+: Function to replace an bool value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_a011a6f61257e9d5cc3296475ae8845ed}{replace\+\_\+string\+\_\+vector\+\_\+index()}}\+: Function to replace a string value at a specific vector index with another.
+\item {\ttfamily \doxylink{vector_8c_aece15dcc8e9d3cf0fa0cb65c0b7a05f2}{repeat\+\_\+char\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_aa03b84f9a537aa95ab335f38448051a0}{repeat\+\_\+uchar\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a1fbfbfeed7892cd604ac2175048a1ff3}{repeat\+\_\+short\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a87921615a6088f8e15e74f796abd294e}{repeat\+\_\+ushort\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_aeb26b3546bef2bb8e5afc6a8c93d23a1}{repeat\+\_\+int\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a1aa1df7f7e77404e77862ca75666165c}{repeat\+\_\+uint\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a1f0914c2c37de3b81b706c77be31e57a}{repeat\+\_\+long\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a8c9c95f3e41bcaa00e99db959130c509}{repeat\+\_\+ulong\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a7c24fd593c9332ba1779b780b85cc893}{repeat\+\_\+llong\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a6f8e17e6a8930bf7bf0f7422d65eeab5}{repeat\+\_\+ullong\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a58a085c7febff1b1bd9e6ec90510b36a}{repeat\+\_\+float\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_ac2a03364dd0dc653854b1f70101514c6}{repeat\+\_\+double\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a34a56cde6bc6f420f8b9063bf87232e1}{repeat\+\_\+ldouble\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a10df883121d1f71d331ae6ba273357f1}{repeat\+\_\+bool\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\item {\ttfamily \doxylink{vector_8c_a9f6bd7ebba53e2d4eb0b8e3d8931029c}{repeat\+\_\+string\+\_\+vector()}}\+: Function to produce a vector of repeated values.
+\end{DoxyItemize}\hypertarget{index_license_sec}{}\doxysection{\texorpdfstring{License}{License}}\label{index_license_sec}
+This library is released under the MIT License. 

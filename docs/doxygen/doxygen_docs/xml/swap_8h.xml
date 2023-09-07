@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="swap_8h" kind="file" language="C++">
+    <compoundname>swap.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="swap_8c" local="yes">/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c</includedby>
+    <includedby refid="vector_8h" local="yes">/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h</label>
+        <link refid="swap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.c</label>
+        <link refid="data__structures_8c"/>
+      </node>
+      <node id="4">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/data_structures.h</label>
+        <link refid="data__structures_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.c</label>
+        <link refid="print_8c"/>
+      </node>
+      <node id="6">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/print.h</label>
+        <link refid="print_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c</label>
+        <link refid="swap_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h</label>
+        <link refid="swap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.c</label>
+        <link refid="vector_8c"/>
+      </node>
+      <node id="3">
+        <label>/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="swap_8h_1aac9153aee4bdb92701df902e06a74eb3" prot="public" static="no">
+        <name>SWAP</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>		                          _Generic( (a), char: <ref refid="swap_8c_1a30ac4d4001cfea5cd988c8697c5756be" kindref="member">swap_char</ref>, \
+		                          unsigned char: <ref refid="swap_8c_1a99803287c0fa88fd89efa65c71a74a39" kindref="member">swap_uchar</ref>, \
+								  short int: <ref refid="swap_8c_1a67d6114e177ee4d85994ff482b1329cc" kindref="member">swap_short</ref>, \
+                                  unsigned short int: <ref refid="swap_8c_1a7946c35a5344cd2a139d81e5d807c877" kindref="member">swap_ushort</ref>, \
+								  int: <ref refid="swap_8c_1a10ec5db73aebdd0d7508b49e72770ef4" kindref="member">swap_int</ref>, \
+		                          unsigned int: <ref refid="swap_8c_1ad0c2579d9b7805b5ff6102ddc6f2ef85" kindref="member">swap_uint</ref>, \
+								  long int: <ref refid="swap_8c_1a0f866f8d63bc72771d9700427d483767" kindref="member">swap_long</ref>, \
+								  unsigned long int: <ref refid="swap_8c_1a54c3802c0ad98c4d033bd66be679ab6b" kindref="member">swap_ulong</ref>, \
+								  long long int: <ref refid="swap_8c_1a88fe4609428512028b7284547f316ae5" kindref="member">swap_llong</ref>, \
+								  unsigned long long int: <ref refid="swap_8c_1a7ff2f756663b834f0fb747ef72a00211" kindref="member">swap_ullong</ref>, \
+								  float: <ref refid="swap_8c_1a09cf214b72d833078d15069e39feda2e" kindref="member">swap_float</ref>, \
+								  double: <ref refid="swap_8c_1abfa4eebba539e060400a6a7fe746614e" kindref="member">swap_double</ref>, \
+								  long double: <ref refid="swap_8c_1a37e67cc39114f8a2b8020266bbf69d99" kindref="member">swap_ldouble</ref>, \
+								  bool: <ref refid="swap_8c_1a8a2a44625c90172a99a93e5cc1dba005" kindref="member">swap_bool</ref>)(&amp;a, &amp;b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro will swap two variables of the same type in memory</para>
+<para>/param a Variable 1 /param b Variable 2</para>
+<para><programlisting><codeline><highlight class="normal">int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">SWAP(a,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="367" column="9" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" bodystart="367" bodyend="380"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="swap_8h_1a99803287c0fa88fd89efa65c71a74a39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_uchar</definition>
+        <argsstring>(unsigned char *a, unsigned char *b)</argsstring>
+        <name>swap_uchar</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two uint8_t data types in memory</para>
+<para>/param a Variable 1 of type uint8_t /param b Variable 2 of type uint8_t</para>
+<para><programlisting><codeline><highlight class="normal">uint8_t<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">uint8_t<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_uchar(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="44" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="20" bodyend="24" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a67d6114e177ee4d85994ff482b1329cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_short</definition>
+        <argsstring>(short int *a, short int *b)</argsstring>
+        <name>swap_short</name>
+        <param>
+          <type>short int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>short int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two short int data types in memory</para>
+<para>/param a Variable 1 of type short int /param b Variable 2 of type short int</para>
+<para><programlisting><codeline><highlight class="normal">short<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">short<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_short(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="67" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="27" bodyend="31" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a7946c35a5344cd2a139d81e5d807c877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_ushort</definition>
+        <argsstring>(unsigned short int *a, unsigned short int *b)</argsstring>
+        <name>swap_ushort</name>
+        <param>
+          <type>unsigned short int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned short int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two unsigned short int data types in memory</para>
+<para>/param a Variable 1 of type unsigned short int /param b Variable 2 of type unsigned short int</para>
+<para><programlisting><codeline><highlight class="normal">unsigned<sp/>short<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">unsigned<sp/>short<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_ushort(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="90" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="34" bodyend="38" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a10ec5db73aebdd0d7508b49e72770ef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_int</definition>
+        <argsstring>(int *a, int *b)</argsstring>
+        <name>swap_int</name>
+        <param>
+          <type>int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two int data types in memory</para>
+<para>/param a Variable 1 of type int /param b Variable 2 of type int</para>
+<para><programlisting><codeline><highlight class="normal">int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_int(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="113" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="41" bodyend="45" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="113" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1ad0c2579d9b7805b5ff6102ddc6f2ef85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_uint</definition>
+        <argsstring>(unsigned int *a, unsigned int *b)</argsstring>
+        <name>swap_uint</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two unsigned int data types in memory</para>
+<para>/param a Variable 1 of type unsigned int /param b Variable 2 of type unsigned int</para>
+<para><programlisting><codeline><highlight class="normal">unsigned<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">unsigned<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_uint(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="136" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="48" bodyend="52" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="136" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a0f866f8d63bc72771d9700427d483767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_long</definition>
+        <argsstring>(long int *a, long int *b)</argsstring>
+        <name>swap_long</name>
+        <param>
+          <type>long int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>long int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two long int data types in memory</para>
+<para>/param a Variable 1 of type long int /param b Variable 2 of type long int</para>
+<para><programlisting><codeline><highlight class="normal">long<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">long<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_long(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="159" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="55" bodyend="59" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="159" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a54c3802c0ad98c4d033bd66be679ab6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_ulong</definition>
+        <argsstring>(unsigned long int *a, unsigned long int *b)</argsstring>
+        <name>swap_ulong</name>
+        <param>
+          <type>unsigned long int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned long int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two usngined long int data types in memory</para>
+<para>/param a Variable 1 of type unsigned long int /param b Variable 2 of type unsigned long int</para>
+<para><programlisting><codeline><highlight class="normal">unsigned<sp/>long<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">unsigned<sp/>long<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_ulong(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="182" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="62" bodyend="66" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="182" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a88fe4609428512028b7284547f316ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_llong</definition>
+        <argsstring>(long long int *a, long long int *b)</argsstring>
+        <name>swap_llong</name>
+        <param>
+          <type>long long int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>long long int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two long long int data types in memory</para>
+<para>/param a Variable 1 of type long long int /param b Variable 2 of type long long int</para>
+<para><programlisting><codeline><highlight class="normal">long<sp/>long<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">long<sp/>long<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_llong(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="205" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="69" bodyend="73" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="205" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a7ff2f756663b834f0fb747ef72a00211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_ullong</definition>
+        <argsstring>(unsigned long long int *a, unsigned long long int *b)</argsstring>
+        <name>swap_ullong</name>
+        <param>
+          <type>unsigned long long int *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>unsigned long long int *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two unsigned long long int data types in memory</para>
+<para>/param a Variable 1 of type unsigned long long int /param b Variable 2 of type unsigned long long int</para>
+<para><programlisting><codeline><highlight class="normal">unsigned<sp/>long<sp/>long<sp/>int<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">unsigned<sp/>long<sp/>long<sp/>int<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_ullong(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="228" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="76" bodyend="80" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="228" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a09cf214b72d833078d15069e39feda2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_float</definition>
+        <argsstring>(float *a, float *b)</argsstring>
+        <name>swap_float</name>
+        <param>
+          <type>float *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two float data types in memory</para>
+<para>/param a Variable 1 of type float /param b Variable 2 of type float</para>
+<para><programlisting><codeline><highlight class="normal">float<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_float(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="251" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="83" bodyend="87" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="251" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1abfa4eebba539e060400a6a7fe746614e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_double</definition>
+        <argsstring>(double *a, double *b)</argsstring>
+        <name>swap_double</name>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two double data types in memory</para>
+<para>/param a Variable 1 of type double /param b Variable 2 of type double</para>
+<para><programlisting><codeline><highlight class="normal">double<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">double<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_double(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="274" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="90" bodyend="94" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="274" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a37e67cc39114f8a2b8020266bbf69d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_ldouble</definition>
+        <argsstring>(long double *a, long double *b)</argsstring>
+        <name>swap_ldouble</name>
+        <param>
+          <type>long double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>long double *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two long double data types in memory</para>
+<para>/param a Variable 1 of type long double /param b Variable 2 of type long double</para>
+<para><programlisting><codeline><highlight class="normal">long<sp/>double<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">long<sp/>double<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_ldouble(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="297" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="97" bodyend="101" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="297" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a30ac4d4001cfea5cd988c8697c5756be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_char</definition>
+        <argsstring>(char *a, char *b)</argsstring>
+        <name>swap_char</name>
+        <param>
+          <type>char *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two char data types in memory</para>
+<para>/param a Variable 1 of type char /param b Variable 2 of type char</para>
+<para><programlisting><codeline><highlight class="normal">char<sp/>a<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>b<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_char(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>6</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>3</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="320" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="104" bodyend="108" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="320" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="swap_8h_1a8a2a44625c90172a99a93e5cc1dba005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void swap_bool</definition>
+        <argsstring>(bool *a, bool *b)</argsstring>
+        <name>swap_bool</name>
+        <param>
+          <type>bool *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function will swap two char data types in memory</para>
+<para>/param a Variable 1 of type bool /param b Variable 2 of type bool</para>
+<para><programlisting><codeline><highlight class="normal">bool<sp/>a<sp/>=<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>b<sp/>=<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>a:<sp/>&quot;,<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(&quot;Pre<sp/>Variable<sp/>b:<sp/>&quot;,<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">swap_char(&amp;a,<sp/>&amp;b);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>a:<sp/>&quot;<sp/>a);</highlight></codeline>
+<codeline><highlight class="normal">PRINT(Post<sp/>Variable<sp/>b:<sp/>&quot;<sp/>b);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>a:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Pre<sp/>Variable<sp/>b:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>a:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>&gt;&gt;<sp/>Post<sp/>Variable<sp/>b:<sp/>true</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" line="343" column="6" bodyfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.c" bodystart="111" bodyend="115" declfile="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h" declline="343" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>File:<sp/><sp/><sp/><sp/>swap.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Purpose:<sp/>This<sp/>file<sp/>contains<sp/>prototypes<sp/>for<sp/>functions<sp/>that<sp/>can<sp/>swap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>two<sp/>variables<sp/>of<sp/>the<sp/>same<sp/>data<sp/>type<sp/>in<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Source<sp/>Metadata</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Author:<sp/><sp/>Jonathan<sp/>A.<sp/>Webb</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Date:<sp/><sp/><sp/><sp/>March<sp/>28,<sp/>2023</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Version:<sp/>1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Copyright:<sp/>Copyright<sp/>2022,<sp/>Jon<sp/>Webb<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Include<sp/>modules<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>swap_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>swap_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SWAP_TYPE<sp/>prototypes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a99803287c0fa88fd89efa65c71a74a39" kindref="member">swap_uchar</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a67d6114e177ee4d85994ff482b1329cc" kindref="member">swap_short</ref>(</highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a7946c35a5344cd2a139d81e5d807c877" kindref="member">swap_ushort</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a10ec5db73aebdd0d7508b49e72770ef4" kindref="member">swap_int</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1ad0c2579d9b7805b5ff6102ddc6f2ef85" kindref="member">swap_uint</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a0f866f8d63bc72771d9700427d483767" kindref="member">swap_long</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a54c3802c0ad98c4d033bd66be679ab6b" kindref="member">swap_ulong</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a88fe4609428512028b7284547f316ae5" kindref="member">swap_llong</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a7ff2f756663b834f0fb747ef72a00211" kindref="member">swap_ullong</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a09cf214b72d833078d15069e39feda2e" kindref="member">swap_float</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1abfa4eebba539e060400a6a7fe746614e" kindref="member">swap_double</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a37e67cc39114f8a2b8020266bbf69d99" kindref="member">swap_ldouble</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a30ac4d4001cfea5cd988c8697c5756be" kindref="member">swap_char</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="swap_8h_1a8a2a44625c90172a99a93e5cc1dba005" kindref="member">swap_bool</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*a,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*b);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SWAP<sp/>GENERIC<sp/>OPERATOR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367" refid="swap_8h_1aac9153aee4bdb92701df902e06a74eb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SWAP(a,<sp/>b)<sp/>_Generic(<sp/>(a),<sp/>char:<sp/>swap_char,<sp/>\</highlight></codeline>
+<codeline lineno="368"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>char:<sp/>swap_uchar,<sp/>\</highlight></codeline>
+<codeline lineno="369"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>short<sp/>int:<sp/>swap_short,<sp/>\</highlight></codeline>
+<codeline lineno="370"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>short<sp/>int:<sp/>swap_ushort,<sp/>\</highlight></codeline>
+<codeline lineno="371"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int:<sp/>swap_int,<sp/>\</highlight></codeline>
+<codeline lineno="372"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>int:<sp/>swap_uint,<sp/>\</highlight></codeline>
+<codeline lineno="373"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>int:<sp/>swap_long,<sp/>\</highlight></codeline>
+<codeline lineno="374"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>int:<sp/>swap_ulong,<sp/>\</highlight></codeline>
+<codeline lineno="375"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>long<sp/>int:<sp/>swap_llong,<sp/>\</highlight></codeline>
+<codeline lineno="376"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>long<sp/>long<sp/>int:<sp/>swap_ullong,<sp/>\</highlight></codeline>
+<codeline lineno="377"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float:<sp/>swap_float,<sp/>\</highlight></codeline>
+<codeline lineno="378"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double:<sp/>swap_double,<sp/>\</highlight></codeline>
+<codeline lineno="379"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>long<sp/>double:<sp/>swap_ldouble,<sp/>\</highlight></codeline>
+<codeline lineno="380"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool:<sp/>swap_bool)(&amp;a,<sp/>&amp;b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>swap_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="comment">//<sp/>==========================================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight><highlight class="comment">//<sp/>eof</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/jonwebb/Code_Dev/C/c_libs/c_libs/include/swap.h"/>
+  </compounddef>
+</doxygen>
