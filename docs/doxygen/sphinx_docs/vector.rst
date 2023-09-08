@@ -808,9 +808,151 @@ and ``high`` should correspond to 0 and the maximum length of the array or vecto
 
 SUM
 ===
+The ``SUM`` Macro will determine the sum of all values in a vector or array.
+This macro will work with all vector data types except the ``String`` data type
+and the ``Bool`` data type.
+
+
+.. code-block:: c
+
+   type SUM(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: A vector or array data structure of type ``T``
+
+Returns
+-------
+
+- :c:`summation`: The sum of the values in a vector or array data structure. The type ``type`` must be consistent with type ``T``.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 4);
+   int a[4] = {1, 2, 3, 4};
+   INSERT(vec, a, 4, 0);
+   int b = SUM(vec);
+   PRINT(b);
+   FREE(b)
+
+.. code-block:: bash
+
+   >> 10
+
+The following functions can also be used in place of the ``SUM`` Macro.
+
+.. code-block:: c
+
+   short int sum_short_vector(Short *vec);
+   unsigned short int sum_ushort_vector(UShort *vec);
+   int sum_int_vector(Int *vec);
+   unsigned int sum_uint_vector(UInt *vec);
+   long int sum_long_vector(LInt *vec);
+   unsigned long int sum_ulong_vector(ULInt *vec);
+   long long int sum_llong_vector(LLInt *vec);
+   unsigned long long int sum_ullong_vector(ULLInt *vec);
+   float sum_float_vector(Flt *vec);
+   double sum_double_vector(Dble *vec);
+   long double sum_ldouble_vector(LDble *vec);
+   char sum_char_vector(Char *vec);
+   unsigned char sum_uchar_vector(UChar *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   init_int_vector(&vec, 4);
+   int a[4] = {1, 2, 3, 4};
+   insert_int_vector(&vec, &a, 4, 0);
+   int b = sum_int_vector(&vec);
+   PRINT(b);
+   free_int_vector(&b)
+
+.. code-block:: bash
+
+   >> 10
+
 
 CUMSUM
 ======
+The ``CUMSUM`` Macro will return a dynamically allocated vector data structure
+that contains a cumulative summation of the values in the original array
+or vector.
+
+.. code-block:: c
+
+   T CUMSUM(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: The vector or array data structure containing values to be summed
+
+Returns
+-------
+
+- :c:`new_vec`: A dynamically allocated vector with the running summation of the original vector or array.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Short vec;
+   INIT_VECTOR(vec, 5);
+   short a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   Short cum_vec = CUMSUM(vec);
+   PRINT(cum_vec);
+   FREE(vec);
+   FREE(cum_vec);
+
+.. code-block:: bash
+
+   << [ 1, 3, 6, 10, 15 ]
+
+The following functions can be used in place of the ``CUMSUM`` Macro.
+
+.. code-block:: c
+
+   Short cumsum_short_vector(Short *vec);
+   UShort cumsum_ushort_vector(UShort *vec);
+   Int cumsum_int_vector(Int *vec);
+   UInt cumsum_uint_vector(UInt *vec);
+   LInt cumsum_long_vector(LInt *vec);
+   ULInt cumsum_ulong_vector(ULInt *vec);
+   LLInt cumsum_llong_vector(LLInt *vec);
+   ULLInt cumsum_ullong_vector(ULLInt *vec);
+   Flt cumsum_float_vector(Flt *vec);
+   Dble cumsum_double_vector(Dble *vec);
+   LDble cumsum_ldouble_vector(LDble *vec);
+   Char cumsum_char_vector(Char *vec);
+   UChar cumsum_uchar_vector(UChar *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Short vec;
+   init_short_vector(&vec, 5);
+   short a[5] = {1, 2, 3, 4, 5};
+   insert_short_vector(&vec, &a, 5, 0);
+   Short cum_vec = cumsum_short_vector(vec);
+   PRINT(cum_vec);
+   free_short_vector(&vec);
+   free_short_vector(&cum_vec);
+
+.. code-block:: bash
+
+   << [ 1, 3, 6, 10, 15 ]
 
 AVERAGE
 =======
