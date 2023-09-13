@@ -1,7 +1,11 @@
 ******
 Vector
 ******
-To be filled in later
+The vector library contains data structures that help manage statically
+allocated arrays and dynamically allocated vectors.  In addition, this
+library contains functions that act on the data structures to organize
+the data and to calculate basic statistical values such as the mean,
+average, and standard deviation.
 
 .. _vec-struct:
 
@@ -956,35 +960,712 @@ The following functions can be used in place of the ``CUMSUM`` Macro.
 
 AVERAGE
 =======
+The ``AVERAGE`` Macro will return the average of all values in an array or vector data
+structure.  This Macro does not work with the ``String`` data type.
+
+.. code-block:: c
+
+   type AVERAGE(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: The vector or array data structure containing values to be averaged
+
+Returns
+-------
+
+- :c:`avg`: The average of the values in an array or vector data structure.  The returned type
+            is consistent with ``T``.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   INIT_VECTOR(vec, 5);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   INSERT(vec, a, 5, 0);
+   float avg = AVERAGE(vec);
+   PRINT(avg);
+   FREE(vec);
+
+.. code-block:: bash
+
+   << 3.30000
+
+The following functions can be used in place of the ``AVERAGE`` Macro.
+
+.. code-block:: c
+
+   char average_char_vector(Char *vec);
+   unsigned char average_uchar_vector(UCHar *vec);
+   float average_short_vector(Short *vec);
+   float average_ushort_vector(UShort *vec);
+   float average_int_vector(Int *vec);
+   float average_uint_vector(UInt *vec);
+   double average_long_vector(LInt *vec);
+   double average_ulong_vector(ULInt *vec);
+   long double average_llong_vector(LLInt *vec);
+   long double average_ullong_vector(ULLInt *vec);
+   float average_float_vector(Flt *vec);
+   double average_double_vector(Dble *vec);
+   long double average_ldouble_vector(LDble *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Flt vec;
+   init_float_vector(&vec, 5);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   insert_float_vector(&vec, &a, 5, 0);
+   float avg = average_float_vector(vec);
+   PRINT(cum_vec);
+   free_float_vector(&vec);
+
+.. code-block:: bash
+
+   << 3.30000
+
 
 STDEV
 =====
+The ``STDEV`` Macro will return the standard deviation of the values in an array of vector
+data structure.  This macro does not work with the ``String`` data type.
+
+.. code-block:: c
+
+   type STDEV(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: The vector or array data structure
+
+Returns
+-------
+
+- :c:`stdev`: The standard deviation of the values in an array or vector data structure.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Flt vec;
+   INIT_VECTOR(vec, 5);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   INSERT(vec, a, 5, 0);
+   float stdev = STDEV(vec);
+   PRINT(stdev);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> 1.739252
+
+The following functions can be used in place of the ``STDEV`` Macro.
+
+.. code-block:: c
+
+   float stdev_char_vector(Char *vec);
+   float stdev_uchar_vector(UChar *vec);
+   float stdev_short_vector(Short *vec);
+   float stdev_ushort_vector(UShort *vec);
+   float stdev_int_vector(Int *vec);
+   float stdev_uint_vector(UInt *vec);
+   double stdev_long_vectr(Lint *vec);
+   double stdev_ulong_vector(ULint *vec);
+   long double stdev_llong_vector(LLInt *vec);
+   long double stdev_ullong_vector(ULLint *vec);
+   float stdev_float_vector(Flt *vec);
+   double stdev_double_vector(Dble *vec);
+   long double stdev_ldouble_vector(LDble *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Flt vec;
+   init_float_vector(&vec, 5);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   insert_float_vector(&vec, &a, 5, 0);
+   float stdev = stdev_float_vector(&vec);
+   PRINT(stdev);
+   free_float_vector(&vec);
 
 MAX
 ===
+The ``MAX`` Macro will return the maximum value in an array or vector data
+structure.
+
+.. code-block:: c
+
+   type MAX(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: A vector or array data structure of type ``T``
+
+Returns
+-------
+
+- :c:`max_value`: The maximum value in a data structure.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   int max = MAX(vec);
+   PRINT(max);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> 5
+
+The following functions can be used in place of the ``MAX`` Macro.
+
+.. code-block:: c
+
+   char max_char_vector(Char *vec);
+   unsigned char max_uchar_vector(UChar *vec);
+   short int max_short_vector(Short *vec);
+   unsigned short int max_ushort_vector(UShort *vec);
+   int max_int_vector(Int *vec);
+   unsigned int max_uint_vector(UInt *vec);
+   long int max_long_vector(LInt *vec);
+   unsigned long int max_ulong_vector(ULInt *vec);
+   long long int max_llong_vector(LLInt *vec);
+   unsigned long long int max_ullong_vector(ULLInt *vec);
+   float max_float_vector(Flt *vec);
+   double max_double_vector(Dble *vec);
+   long double max_ldouble_vector(LDble *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   init_float_vector(&vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   insert_float_vector(&vec, &a, 5, 0);
+   int max = max_int_vector(&vec);
+   PRINT(max);
+   free_int_vector(&vec);
+
+.. code-block:: bash
+
+   >> 5
 
 MIN
 ===
+The ``MIN`` Macro will return the minimum value in an array or vector data
+structure.
+
+.. code-block:: c
+
+   type MIN(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: A vector or array data structure of type ``T``
+
+Returns
+-------
+
+- :c:`min_value`: The minimum value in a data structure.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   int min = IN(vec);
+   PRINT(min);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> 1
+
+The following functions can be used in place of the ``MIN`` Macro.
+
+.. code-block:: c
+
+   char min_char_vector(Char *vec);
+   unsigned char min_uchar_vector(UChar *vec);
+   short int min_short_vector(Short *vec);
+   unsigned short int min_ushort_vector(UShort *vec);
+   int min_int_vector(Int *vec);
+   unsigned int min_uint_vector(UInt *vec);
+   long int min_long_vector(LInt *vec);
+   unsigned long int min_ulong_vector(ULInt *vec);
+   long long int min_llong_vector(LLInt *vec);
+   unsigned long long int min_ullong_vector(ULLInt *vec);
+   float min_float_vector(Flt *vec);
+   double min_double_vector(Dble *vec);
+   long double min_ldouble_vector(LDble *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   init_float_vector(&vec, 5);
+   int a[5] = {1, 2, 3, 4, 5};
+   insert_float_vector(&vec, &a, 5, 0);
+   int min = min_int_vector(&vec);
+   PRINT(min);
+   free_int_vector(&vec);
+
+.. code-block:: bash
+
+   >> 1
 
 RANGE
 =====
+The ``RANGE`` Macro will return a range of value between the start and end values into a 
+data structure.
+
+.. code-block:: c
+
+   RANGE(T vec, type start, type end, type delta);
+
+Parameters
+----------
+
+- :c:`vec`: An array of vector data structure of type ``T``.
+- :c:`start`: The start value in the vector or array.
+- :c:`end`: Te end value in the vector or array.
+- :c:`delta`: The intervals between values.
+
+.. code-block:: c
+   
+   #include "data_structures.h"
+   #include "print.h"
+   Int vec;
+   INIT_VECTOR(vec, 10);
+   RANGE(vec, 2, 20, 2);
+   PRINT(vec);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> [ 2, 4, 6, 8, 10, 2, 14, 16, 18, 20 ]
+
+The following functions can be used in place of the ``RANGE`` Macro.
+
+.. code-block:: c
+
+   range_char_vector(Char *vec, char start, char end, char delta);
+   range_uchar_vector(UChar *vec, unsigned char start, unsigned char end, unsigned char delta);
+   range_short_vector(Short *vec, short int start, short int end, short int delta);
+   range_ushort_vector(UShort *vec, unsigned short int start, unsigned short int end, unsigned short int delta);
+   range_int_vector(Int *vec, int start, int end, int delta);
+   range_uint_vector(UInt *vec, unsigned int start, unsigned int end, unsigned int delta);
+   range_long_vector(LInt *vec, long int start, long int end, long int delta);
+   range_ulong_vector(ULInt *vec, unsigned long int start, unsigned long int end, unsigned long int delta);
+   range_llong_vector(LLInt *vec, long long int start, long long int end, long long int delta);
+   range_ullong_vector(ULLInt *vec, unsigned long long int start, unsigned long long int end, unsigned long long int delta);
+   range_float_vector(Flt *vec, float start, float end, float delta);
+   range_double_vector(Dble *vec, double start, double end, double delta);
+   range_ldouble_vector(LDble *vec, long double start, long double end, double delta);
+
+.. code-block:: c
+ 
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   init_int_vector(&vec, 10);
+   range_int_vector(&vec, 2, 20, 2);
+   PRINT(vec);
+   free_int_vector(&vec);
+
+.. code-block:: bash
+
+   >> [ 2, 4, 6, 8, 10, 2, 14, 16, 18, 20 ]
 
 COPY
 ====
+The ``COPY`` Macro will create a deep copy of a vector or array data structure as a dynamically
+allocated array.
+
+.. code-block:: c
+
+   T COPY(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: A vector or array data structure of type ``T``
+
+Returns
+-------
+
+- :c:`new_vec`: A copy of ``vec``.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Dble vec;
+   INIT_VECTOR(vec, 5);
+   double a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   Dble new_vec = COPY(vec);
+   PRINT(new_vec);
+   FREE(new_vec);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> [ 1, 2, 3, 4, 5 ]
+
+The following functions can be used in place of the ``COPY`` Macro.
+
+.. code-block:: c
+
+   Short copy_short_vector(Short *vec);
+   UShort copy_ushort_vector(UShort *vec);
+   Int copy_int_vector(Int *vec);
+   UInt copy_uint_vector(UInt *vec);
+   LInt copy_long_vector(LInt *vec);
+   ULInt copy_ulong_vector(ULInt *vec);
+   LLInt copy_llong_vector(LLInt *vec);
+   ULLInt copy_ullong_vector(ULLInt *vec);
+   Flt copy_float_vector(Flt *vec);
+   Dble copy_double_vector(Dble *vec);
+   LDble copy_ldouble_vector(LDble *vec);
+   Char copy_char_vector(Char *vec);
+   UChar copy_uchar_vector(UChar *vec);
+   Bool copy_bool_vector(Bool *vec);
+   String copy_string_vector(String *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Dble vec;
+   init_double_vector(&vec, 5);
+   double a[5] = {1, 2, 3, 4, 5};
+   insert_double_vector(&vec, &a, 5, 0);
+   Dble new_vec = copy_double_vector(&vec);
+   PRINT(new_vec);
+   free_double_vector(&new_vec);
+   free_double_vector(&vec);
+
+.. code-block:: bash
+
+   >> [ 1, 2, 3, 4, 5 ]
 
 IDATA
 =====
+The ``IDATA`` macro will return the value of a vector or array data structure at
+a user defined index.
+
+.. code-block:: c
+
+   type IDATA(T vec, size_t index);
+
+Parameters
+----------
+
+- :c:`vec`: A vector or array data structure of type ``T``
+- :c:`index`: The index containing data to be returned
+
+Returns
+-------
+
+- :c:`value`: The value at the position index
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   String vec;
+   init_string_vector(&vec);
+   PUSH(vec, "One");
+   PUSH(vec, "Two")
+   PUSH(vec, "Three");
+   char *a = IDATA(vec, 1);
+   PRINT(a);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> Two
+
+The following functions can be used in place of the ``IDATA`` Macro.
+
+.. code-block:: c
+
+   short int short_vector_data(Short *vec, size_t index);
+   unsigned short int ushort_vector_data(UShort *vec, size_t index);
+   int int_vector_data(Int *vec, size_t index);
+   unsigned int uint_vector_data(UInt *vec, size_t index);
+   long int long_vector_data(LInt *vec, size_t index);
+   unsigned long int ulong_vector_data(ULInt *vec, size_t index);
+   long long int llong_vector_data(LLInt *vec, size_t index);
+   unsigned long long int ullong_vector_data(ULLInt *vec, size_t index);
+   char char_vector_data(Char *vec, size_t index);
+   unsigned char uchar_vector_data(UChar *vec, size_t index);
+   float float_vector_data(Flt *vec, size_t index);
+   bool bool_vector_data(Bool *vec, size_t index);
+   char* string_vector_data(String *vec, size_t index);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   String vec;
+   init_string_vector(&vec);
+   push_string_vector(&vec, "One");
+   push_string_vector(&vec, "Two")
+   push_string_vector(&vec, "Three");
+   char *a = string_vector_data(&vec, 1);
+   PRINT(a);
+   free_string_data(&vec);
+
+.. code-block:: bash
+
+   >> Two
 
 REPLACE_INDEX
 =============
+The ``REPLACE_INDEX`` Macro will replace the value at a user defined index
+with another value.
+
+.. code-block:: c
+
+   int REPLACE_INDEX(T vec, type new_value, size_t index);
+
+Paramters
+---------
+
+- :c:`vec`: A vector or array data structure of type ``T``.
+- :c:`new_value`: The value that will replace the old value.  Must be of a type that is consistent with ``T``.
+- :c:`index`: The index where data will be replaced.
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the macro executes succesfully, -1 otherwise with a stderr message.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 10);
+   int a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   REPLACE_INDEX(vec, 10, 2);
+   PRINT(vec);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> [ 1, 2, 10, 4, 5 ]
+
+The following functions can also be used in place of the ``REPLACE_INDEX`` Macro.
+
+.. code-block:: c
+
+   int replace_short_vector_index(Short *vec, short int new_value, size_t index);
+   int replace_ushort_vector_index(UShort *vec, unsigned short int new_value, size_t index);
+   int replace_int_vector_index(Int *vec, int new_value, size_t index);
+   int replace_uint_vector_index(UInt *vec, unsigned int new_value, size_t index);
+   int replace_long_vector_index(LInt *vec, long int new_value, size_t index);
+   int replace_ulong_vector_index(ULInt *vec, unsigned long int new_value, size_t index);
+   int replace_llong_vector_index(LLInt *vec, long long int new_value, size_t index);
+   int replace_ullong_vector_index(ULLInt *vec, unsigned long long int new_value, size_t index);
+   int replace_float_vector_index(Flt *vec, float new_value, size_t index);
+   int replace_double_vector_index(Dble *vec, double new_value, size_t index);
+   int replace_ldouble_vector_index(LDble *vec, long double new_value, size_t index);
+   int replace_char_vector_index(Char *vec, char new_value, size_t index);
+   int replace_uchar_vector_index(UChar *vec, unsigned char new_value, size_t index);
+   int replace_bool_vector_index(Bool *vec, bool new_value, size_t index);
+   int replace_string_vector_index(String *vec, char *new_value, size_t index);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   init_int_vector(&vec, 10);
+   int a[5] = {1, 2, 3, 4, 5};
+   insert_int_vector(&vec, &a, 5, 0);
+   replace_int_vector(&vec, 10, 2);
+   PRINT(vec);
+   free_int_vector(&vec);
+
+.. code-block:: bash
+
+   >> [ 1, 2, 10, 4, 5 ]
 
 REPEAT
 ======
+The ``REPEAT`` Macro will repeat a value a user designated number of times in
+an array or vector data structure.
+
+.. code-block:: c
+
+   int REPEAT(T vec, type value, size_t num);
+
+Parameters
+----------
+
+- :c:`vec`: A vector or array data structure of type ``T``.
+- :c:`value`: The value to be repeated
+- :c:`num`: The number of times the value will be repeated
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the Macro executes succesfully, -1 otherwise with a stderr message
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 10);
+   REPEAT(vec, 10, 5);
+   PRINT(vec);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> [ 10, 10, 10, 10, 10 ]
+
+The following functions can be used in place of the ``REPEAT`` Macro.
+
+.. code-block:: c
+
+   int repeat_short_vector(Short *vec, short int value, size_t num);
+   int repeat_ushort_vector(UShort *vec, unsigned short int value, size_t num);
+   int repeat_int_vector(Int *vec, int value, size_t num);
+   int repeat_uint_vector(UInt *vec, unsigned int value, size_t num);
+   int repeat_long_vector(LInt *vec, long int value, size_t num);
+   int repeat_ulong_vector(ULInt *vec, unsigned long int value, size_t num);
+   int repeat_llong_vector(LLInt *vec, long long int value, size_t num);
+   int repeat_ullong_vector(ULLInt *vec, unsigned long long int value, size_t num);
+   int repeat_char_vector(Char *vec, char value, size_t num);
+   int repeat_uchar_vector(UChar *vec, unsigned char value, size_t num);
+   int repeat_float_vector(Flt *vec, float value, size_t num);
+   int repeat_double_vector(Dble *vec, double value, size_t num);
+   int repeat_ldouble_vector(LDble *vec, long double value, size_t num);
+   int repeat_bool_vector(Bool *vec, bool value, size_t num);
+   int repeat_string_vector(String *vec, char *value, size_t num);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Int vec;
+   init_int_vector(&vec, 10);
+   repeat_int_vector(&vec, 10, 5);
+   PRINT(vec);
+   free_int_vector(&vec);
+
+.. code-block:: bash
+
+   >> [ 10, 10, 10, 10, 10 ]
 
 TRIM
 ====
+The ``TRIM`` Macro will trim the allocated memory in a dynamically allocated
+array to the minimum necessary size.
 
+.. code-block:: c
 
+   void TRIM(T vec);
 
+Parameters
+----------
 
+- :c:`vec`: A vector data structure of type ``T``.
 
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Short vec;
+   INIT_VECTOR(vec, 40);
+   short int a[5] = {1, 2, 3, 4, 5};
+   INSERT(vec, a, 5, 0);
+   PRINT(Initial Length: "vec.allocated_length);
+   TRIM(vec);
+   PRINT("Final Length: ", vec.allocated_length);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> Initial Length: 40
+   >> Final Length: 5
+
+The following functions can be used in place of the ``TRIM`` Macro
+
+.. code-block:: c
+
+   void trim_short_vector(Short *vec);
+   void trim_ushort_vector(UShort *vec);
+   void trim_int_vector(Int *vec);
+   void trim_uint_vector(UInt *vec);
+   void trim_long_vector(LInt *vec);
+   void trim_ulong_vector(ULInt *vec);
+   void trim_llong_vector(LLInt *vec);
+   void trim_ullong_vector(ULLInt *vec);
+   void trim_char_vector(Char *vec);
+   void trim_uchar_vector(UChar *vec);
+   void trim_float_vector(Flt *vec);
+   void trim_double_vector(Dble *vec);
+   void trim_ldouble_vector(LDble *vec);
+   void trim_bool_vector(Bool *vec);
+
+.. code-block:: c
+
+   #include "vector.h"
+   #include "print.h"
+
+   Short vec;
+   init_short_vector(&vec, 40);
+   short int a[5] = {1, 2, 3, 4, 5};
+   insert_short_vector(&vec, &a, 5, 0);
+   PRINT(Initial Length: "vec.allocated_length);
+   trim_short_vector(&vec);
+   PRINT("Final Length: ", vec.allocated_length);
+   free_short_vector(&vec);
+
+.. code-block:: bash
+
+   >> Initial Length: 40
+   >> Final Length: 5

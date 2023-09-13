@@ -76,3 +76,24 @@ the Python virtual environments that are needed to support the Sphinx documentat
 
     - ``pip install -r requirements.txt``
 #. Ensure that `cmocka <https://cmocka.org/>`_ is installed locally to suuport unit testing.
+
+#. Build the code. **NOTE:** The current build platforms are Linux and Mac OS.  Presently scripts have
+   not been written to run this on Windows.
+
+   - If you are using bash, chante to teh following directory within the project ``c_libs/c_livs/script/bash``
+
+      - build the code with the following command ``bash build.sh``
+      - compile the test code with the following command ``bash compile.sh``
+      - Navigate to the following directory ``c_libs/c_libs/build/test``
+      - Verify the code runs correctly with the following command ``./unit_tests``
+
+   - If you are using zsh change to teh following directory within the project ``c_libs/c_libs/scripts/zsh``
+   
+      - build the code with the following command ``zsh build.zsh``
+      - compile the test code with the following command ``zsh compile.zsh``
+      - Navigate to the following directory ``c_libs/c_libs/build/test``
+      - Verify the code runs correctly with the following command ``./unit_tests``
+
+#. Install the library as a static library via xxx
+
+#. Install the library as a dynamically linked library via xxx
