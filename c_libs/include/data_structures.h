@@ -152,7 +152,22 @@
 							   Char: free_char_vector, \
 							   UChar: free_uchar_vector, \
 							   Bool: free_bool_vector, \
-							   String: free_string_vector)(&T)
+							   String: free_string_vector, \
+		                       ShortLL: free_short_list, \
+							   UShortLL: free_ushort_list, \
+							   IntLL: free_int_list, \
+							   UIntLL: free_uint_list, \
+							   LIntLL: free_long_list, \
+							   ULIntLL: free_ulong_list, \
+							   LLIntLL: free_llong_list, \
+							   ULLIntLL: free_ullong_list, \
+							   FltLL: free_float_list, \
+							   DbleLL: free_double_list, \
+							   LDbleLL: free_ldouble_list, \
+							   CharLL: free_char_list, \
+							   UCharLL: free_uchar_list, \
+							   BoolLL: free_bool_list, \
+							   StringLL: free_string_lives)(&T)
 // ==========================================================================================
 // ==========================================================================================
 
