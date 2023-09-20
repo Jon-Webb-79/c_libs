@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "vector.h"
+#include "llist.h"
 
 /* Define the number of data points to be printed in an array before advancing
  * to the next line */
@@ -51,6 +52,21 @@
 										 Char: true, \
 										 Bool: true, \
 										 String: true, \
+										 FltLL: true, \
+										 DbleLL: true, \
+										 LDbleLL: true, \
+										 ShortLL: true, \
+										 UShortLL: true, \
+										 IntLL: true, \
+										 UIntLL: true, \
+										 LIntLL: true, \
+										 ULIntLL: true, \
+										 LLIntLL: true, \
+										 ULLIntLL: true, \
+										 CharLL: true, \
+										 UCharLL: true, \
+										 BoolLL: true, \
+										 StringLL: true, \
 										 default: false)
 // ================================================================================
 // ================================================================================
@@ -90,6 +106,22 @@ void print_achar(Char x);
 void print_uachar(UChar x);
 void print_vbool(Bool x);
 void print_vstring(String x);
+
+// linked list structre print statments
+void print_llshort(ShortLL x);
+void print_llushort(UShortLL x);
+void print_llint(IntLL x);
+void print_lluint(UIntLL x);
+void print_lllong(LIntLL x);
+void print_llulong(ULIntLL x);
+void print_llllong(LLIntLL x);
+void print_llullong(ULLIntLL x);
+void print_llfloat(FltLL x);
+void print_lldouble(DbleLL x);
+void print_llldouble(LDbleLL x);
+void print_llchar(CharLL x);
+void print_llbool(BoolLL x);
+void print_llstring(StringLL x);
 // ================================================================================
 // ================================================================================
 // Begin macros that uses the various print functions.
@@ -118,7 +150,21 @@ void print_vstring(String x);
                                        UChar: print_uachar, \
 									   Bool: print_vbool, \
                                        LDble: print_vldble, \
-                                       String: print_vstring)(T)
+                                       String: print_vstring, \
+									   ShortLL: print_llshort, \
+									   UShortLL: print_llushort, \
+									   IntLL: print_llint, \
+									   UIntLL: print_lluint, \
+									   LIntLL: print_lllong, \
+									   ULIntLL: print_llulong, \
+									   LLIntLL: print_llllong, \
+                                       ULLIntLL: print_llullong, \
+									   FltLL: print_llfloat, \
+									   DbleLL: print_lldouble, \
+									   LDbleLL: print_llldouble, \
+									   CharLL: print_llchar, \
+									   BoolLL: print_llbool, \
+									   StringLL: print_llstring)(T)
 // --------------------------------------------------------------------------------
 
 #define PRINT1(a) do {															\

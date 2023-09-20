@@ -233,3 +233,165 @@ These functions can be accessed via the ``data_structures.h`` file.
 
    >> Active length before FREE: 4
    >> Active length after FREE: 0
+
+PUSH
+====
+The ``PUSH`` Macro will push a scalar value to a user defined quasi index.  A linked list is
+not truly indexed; however, in this instance the term index is meant to identify a location
+in the linked list where data will exist.
+
+.. code-block:: c
+
+   int PUSH(T list, type data, size_t index);
+
+Parameters
+----------
+
+- :c:`list`: The linked list struct of data type ``T``.
+- :c:`data`: The scalar valuable of a ``type`` that must be consistent with ``T``.
+- :c:`index`: The index where the value will be inserted.
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the function executes succesfully, -1 if the function fails with an standard error message.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   StringLL list;
+   INIT_LIST(list);
+   PUSH(list, "One", vec.active_length);
+   PUSH(list, "Two", vec.active_length);
+   PUSH(list, "Three", vec.active_length);
+   PUSH(list, "Four", 0);
+   PRINT(list);
+   // It is important, not to forget to free dynamically allocated memory
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( Four, One, Two, Three )
+
+The following functions can also be used in place of the Macro.
+
+.. code-block:: c
+
+   int push_short_list(ShortLL *list, short int value, size_t index);
+   int push_ushort_list(UShortLL *list, unsigned short int value, size_t index);
+   int push_int_list(IntLL *list, int value, size_t index);
+   int push_uint_list(UIntLL *list, unsigned int value, size_t index);
+   int push_long_list(LIntLL *list, long int value, size_t index);
+   int push_ulong_list(ULIntLL *list, unsigned long int value, size_t index);
+   int push_llong_list(LLIntLL *list, long long int value, size_t index);
+   int push_ullong_list(ULLIntLL *list, unsigned long long int value, size_t index);
+   int push_float_list(FltLL *list, float value, size_t index);
+   int push_double_list(DbleLL *list, double value, size_t index);
+   int push_ldouble_list(LDbleLL *list, long double value, size_t index);
+   int push_char_list(CharLL *list, char value, size_t index);
+   int push_uchar_list(UCharLL *list, unsigned char value, size_t index);
+   int push_bool_list(BoolLL *list, bool value, size_t index);
+   int push_string_list(StringLL *list, char *value, size_t index);
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   StringLL list;
+   init_string_list(&vec);
+   push_string_list(list, "One", list.active_length);
+   push_string_list(list, "Two", list.active_length);
+   push_string_list(list, "Three", list.active_length);
+   push_string_list(list, "Four", 0);
+   PRINT(list);
+   // It is important, not to forget to free dynamically allocated memory
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( Four, One, Two, Three )
+
+INSERT
+======
+The ``INSERT`` Macro will push an array of values to a user defined quasi index.  A linked list is
+not truly indexed; however, in this instance the term index is meant to identify a location
+in the linked list where data will exist. **NOTE:** This macro does not work with the ``StringLL``
+data type.
+
+.. code-block:: c
+
+   int INSERT(T list, type array, size_t length, size_t index);
+
+Parameters
+----------
+
+- :c:`list`: The linked list struct of data type ``T``.
+- :c:`array`: The array a ``type`` that must be consistent with ``T``.
+- :c:`length`: The length of the array to be inserted
+- :c:`index`: The index where the value will be inserted.
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the function executes succesfully, -1 if the function fails with an standard error message.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   ShortLL list;
+   INIT_LIST(list);
+   PUSH(list, 1, list.active_length);
+   PUSH(list, 2, list.active_length);
+   PUSH(list, 3, list.active_length);
+   short int a[3] = {5, 6, 7};
+   INSERT(list, a, 3, 1);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( 1, 5, 6, 7, 2, 3 )
+
+The following functions can be used in place of the ``INSERT`` Macro.
+
+.. code-block:: c
+
+   int insert_short_list(ShortLL *list, short int *elements, size_t num_indices, size_t index);
+   int insert_ushort_list(UShortLL *list, unsigned short int *elements, size_t num_indices, size_t index);
+   int insert_int_list(IntLL *list, int *elements, size_t num_indices, size_t index);
+   int insert_uint_list(UIntLL *list, unsigned int *elements, size_t num_indices, size_t index);
+   int insert_long_list(LIntLL *list, long int *elements, size_t num_indices, size_t index);
+   int insert_ulong_list(ULIntLL *list, unsigned long int *elements, size_t num_indices, size_t index);
+   int insert_llong_list(LLIntLL *list, long long int *elements, size_t num_indices, size_t index);
+   int insert_ullong_list(ULLIntLL *list, unsigned long long int *elements, size_t num_indices, size_t index);
+   int insert_float_list(FltLL *list, float *elements, size_t num_indices, size_t index);
+   int insert_double_list(DbleLL *list, double *elements, size_t num_indices, size_t index);
+   int insert_ldouble_list(LDbleLL *list, long double *elements, size_t num_indices, size_t index);
+   int insert_char_list(CharLL *list, char *elements, size_t num_indices, size_t index);
+   int insert_uchar_list(UCharLL *list, unsigned char *elements, size_t num_indices, size_t index);
+   int insert_bool_list(BoolLL *list, bool *elements, size_t num_indices, size_t index);
+   int insert_string_list(StringLL *list, char **elements, size_t num_indices, size_t index);
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   ShortLL list;
+   init_short_list(&list);
+   push_short_list(&list, 1, list.active_length);
+   push_short_list(&list, 2, list.active_length);
+   push_short_list(&list, 3, list.active_length);
+   short int a[3] = {5, 6, 7};
+   insert_short_vector(&list, &a, 3, 1);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( 1, 5, 6, 7, 2, 3 )

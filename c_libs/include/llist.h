@@ -65,6 +65,7 @@ LIST_STRUCT(float, float_list)
 LIST_STRUCT(double, double_list)
 LIST_STRUCT(long double, ldouble_list)
 LIST_STRUCT(char, char_list)
+LIST_STRUCT(unsigned char, uchar_list)
 LIST_STRUCT(bool, bool_list)
 LIST_STRUCT(char*, string_list)
 // --------------------------------------------------------------------------------
@@ -81,6 +82,7 @@ LIST_DAT_STRUCT(FltLL, float_list)
 LIST_DAT_STRUCT(DbleLL, double_list)
 LIST_DAT_STRUCT(LDbleLL, ldouble_list)
 LIST_DAT_STRUCT(CharLL, char_list)
+LIST_DAT_STRUCT(UCharLL, uchar_list)
 LIST_DAT_STRUCT(BoolLL, bool_list)
 LIST_DAT_STRUCT(StringLL, string_list)
 // ================================================================================
@@ -184,6 +186,14 @@ void init_char_list(CharLL *vec);
 // --------------------------------------------------------------------------------
 
 /**
+ * This function initializes a linked list struct of type UCharLL
+ *
+ * /param vec A List struct of type UCharLL
+ */
+void init_uchar_list(UCharLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
  * This function initializes a linked list struct of type BoolLL
  *
  * /param vec A List struct of type BoolLL
@@ -213,6 +223,7 @@ void init_string_list(StringLL *vec);
 										    DbleLL: init_double_list, \
 										    LDbleLL: init_ldouble_list, \
 										    CharLL: init_char_list, \
+											UCharLL: init_uchar_list, \
 											BoolLL: init_bool_list, \
 										    StringLL: init_string_list)(&T)
 // --------------------------------------------------------------------------------
@@ -336,6 +347,14 @@ void free_char_list(CharLL *list);
 // --------------------------------------------------------------------------------
 
 /**
+ * This function will free all memory from a linked list of type UCharLL
+ *
+ * /param list A struct of type UCharLL
+ */
+void free_uchar_list(UCharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
  * This function will free all memory from a linked list of type BoolLL
  *
  * /param list A struct of type BoolLL
@@ -349,7 +368,737 @@ void free_bool_list(BoolLL *list);
  * /param list A struct of type StringLL
  */
 void free_string_list(StringLL *list);
-#endif /* llist_H */
 // ================================================================================
 // ================================================================================
+// PUSH_TYPE_LIST FUNCTIONS
+
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type ShortLL
+ * /param data A scalar data point of type short int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * ShortLL vec;
+ * init_short_list(&vec);
+ * push_short_list(&vec, 0, 0);
+ * push_short_list(&vec, 1, 1);
+ * push_short_list(&vec, 2, 2);
+ * push_short_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_short_list(&vec);
+ * @endcode
+ */
+int push_short_list(ShortLL *vec, short int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type UShortLL
+ * /param data A scalar data point of type unsigned short int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * UShortLL vec;
+ * init_ushort_list(&vec);
+ * push_ushort_list(&vec, 0, 0);
+ * push_ushort_list(&vec, 1, 1);
+ * push_ushort_list(&vec, 2, 2);
+ * push_ushort_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_ushort_list(&vec);
+ * @endcode
+ */
+int push_ushort_list(UShortLL *vec, unsigned short int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type IntLL
+ * /param data A scalar data point of type int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * IntLL vec;
+ * init_int_list(&vec);
+ * push_int_list(&vec, 0, 0);
+ * push_int_list(&vec, 1, 1);
+ * push_int_list(&vec, 2, 2);
+ * push_int_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_int_list(&vec);
+ * @endcode
+ */
+int push_int_list(IntLL *vec, int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type UIntLL
+ * /param data A scalar data point of type unsigned int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * UIntLL vec;
+ * init_uint_list(&vec);
+ * push_uint_list(&vec, 0, 0);
+ * push_uint_list(&vec, 1, 1);
+ * push_uint_list(&vec, 2, 2);
+ * push_uint_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_uint_list(&vec);
+ * @endcode
+ */
+int push_uint_list(UIntLL *vec, unsigned int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type LIntLL
+ * /param data A scalar data point of type long int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * LIntLL vec;
+ * init_long_list(&vec);
+ * push_long_list(&vec, 0, 0);
+ * push_long_list(&vec, 1, 1);
+ * push_long_list(&vec, 2, 2);
+ * push_long_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_lint_list(&vec);
+ * @endcode
+ */
+int push_long_list(LIntLL *vec, long int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type ULIntLL
+ * /param data A scalar data point of type unsigned long int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * ULIntLL vec;
+ * init_ulong_list(&vec);
+ * push_ulong_list(&vec, 0, 0);
+ * push_ulong_list(&vec, 1, 1);
+ * push_ulong_list(&vec, 2, 2);
+ * push_ulong_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_ulint_list(&vec);
+ * @endcode
+ */
+int push_ulong_list(ULIntLL *vec, unsigned long int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type LLIntLL
+ * /param data A scalar data point of type long long int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * LLIntLL vec;
+ * init_llong_list(&vec);
+ * push_llong_list(&vec, 0, 0);
+ * push_llong_list(&vec, 1, 1);
+ * push_llong_list(&vec, 2, 2);
+ * push_llong_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_llint_list(&vec);
+ * @endcode
+ */
+int push_llong_list(LLIntLL *vec, long long int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type ULLIntLL
+ * /param data A scalar data point of type unsigned long long int
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * ULLIntLL vec;
+ * init_ullong_list(&vec);
+ * push_ullong_list(&vec, 0, 0);
+ * push_ullong_list(&vec, 1, 1);
+ * push_ullong_list(&vec, 2, 2);
+ * push_ullong_list(&vec, 3, 0);
+ * PRINT(vec);
+ * [ 3, 0, 1, 2 ]
+ * free_ullint_list(&vec);
+ * @endcode
+ */
+int push_ullong_list(ULLIntLL *vec, unsigned long long int data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type FltLL
+ * /param data A scalar data point of type float
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * FltLL vec;
+ * init_float_list(&vec);
+ * push_float_list(&vec, 0., 0);
+ * push_float_list(&vec, 1., 1);
+ * push_float_list(&vec, 2., 2);
+ * push_float_list(&vec, 3., 0);
+ * PRINT(vec);
+ * [ 3.000, 0.000, 1.000, 2.000 ]
+ * free_float_list(&vec);
+ * @endcode
+ */
+int push_float_list(FltLL *vec, float data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type DbleLL
+ * /param data A scalar data point of type double
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * DbleLL vec;
+ * init_double_list(&vec);
+ * push_double_list(&vec, 0., 0);
+ * push_double_list(&vec, 1., 1);
+ * push_double_list(&vec, 2., 2);
+ * push_double_list(&vec, 3., 0);
+ * PRINT(vec);
+ * [ 3.000, 0.000, 1.000, 2.000 ]
+ * free_double_list(&vec);
+ * @endcode
+ */
+int push_double_list(DbleLL *vec, double data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type LDbleLL
+ * /param data A scalar data point of type long double
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * LDbleLL vec;
+ * init_ldouble_list(&vec);
+ * push_ldouble_list(&vec, 0., 0);
+ * push_ldouble_list(&vec, 1., 1);
+ * push_ldouble_list(&vec, 2., 2);
+ * push_ldouble_list(&vec, 3., 0);
+ * PRINT(vec);
+ * [ 3.000, 0.000, 1.000, 2.000 ]
+ * free_ldouble_list(&vec);
+ * @endcode
+ */
+int push_ldouble_list(LDbleLL *vec, long double data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type CharLL
+ * /param data A scalar data point of type char
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * CharLL vec;
+ * init_char_list(&vec);
+ * push_char_list(&vec, 'a', 0);
+ * push_char_list(&vec, 'b', 1);
+ * push_char_list(&vec, 'c', 2);
+ * push_char_list(&vec, 'd', 3);
+ * PRINT(vec);
+ * [ 3.000, 0.000, 1.000, 2.000 ]
+ * free_char_list(&vec);
+ * @endcode
+ */
+int push_char_list(CharLL *vec, char data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type CharLL
+ * /param data A scalar data point of type char
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * UCharLL vec;
+ * init_uchar_list(&vec);
+ * push_uchar_list(&vec, 'a', 0);
+ * push_uchar_list(&vec, 'b', 1);
+ * push_uchar_list(&vec, 'c', 2);
+ * push_uchar_list(&vec, 'd', 3);
+ * PRINT(vec);
+ * [ 3.000, 0.000, 1.000, 2.000 ]
+ * free_uchar_list(&vec);
+ * @endcode
+ */
+int push_char_list(CharLL *vec, char data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type BoolLL
+ * /param data A scalar data point of type bool
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * BoolLL vec;
+ * init_bool_list(&vec);
+ * push_bool_list(&vec, true, 0);
+ * push_bool_list(&vec, true, 1);
+ * push_bool_list(&vec, false, 2);
+ * push_bool_list(&vec, false, 0);
+ * PRINT(vec);
+ * [ false, true, true, false ]
+ * free_bool_list(&vec);
+ * @endcode
+ */
+int push_bool_list(BoolLL *vec, bool data, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert a struct containing user specified data to a
+ * user define index within a linked list
+ *
+ * /param vec A struct of type StringLL
+ * /param data A scalar data point of type char*
+ * /param index The index where the struct will be inserted in the linked list
+ *
+ * @code
+ * #include "print.h"
+ *
+ * StringLL vec;
+ * init_string_list(&vec);
+ * push_string_list(&vec, "One", 0);
+ * push_string_list(&vec, "Two", 1);
+ * push_string_list(&vec, "Three", 2);
+ * push_string_list(&vec, "Four", 0);
+ * PRINT(vec);
+ * [ Four, One, Two, Three ]
+ * free_string_list(&vec);
+ * @endcode
+ */
+int push_string_list(StringLL *vec, char* data, size_t index);
+// ================================================================================
+// ================================================================================
+
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type ShortLL
+ * /param array An array of type short int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * ShortLL vec;
+ * init_short_list(&vec);
+ * push_short_list(&vec, 0, 0);
+ * push_short_list(&vec, 1, 1);
+ * push_short_list(&vec, 2, 2);
+ * short int a[4] = {10, 9, 8, 7};
+ * insert_short_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_short_list(&vec);
+ * @endcode
+ */
+int insert_short_list(ShortLL *vec, short int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type UShortLL
+ * /param array An array of type unsigned short int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * UShortLL vec;
+ * init_ushort_list(&vec);
+ * push_ushort_list(&vec, 0, 0);
+ * push_ushort_list(&vec, 1, 1);
+ * push_ushort_list(&vec, 2, 2);
+ * unsigned short int a[4] = {10, 9, 8, 7};
+ * insert_ushort_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_ushort_list(&vec);
+ * @endcode
+ */
+int insert_ushort_list(UShortLL *vec, unsigned short int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type IntLL
+ * /param array An array of type int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * IntLL vec;
+ * init_int_list(&vec);
+ * push_int_list(&vec, 0, 0);
+ * push_int_list(&vec, 1, 1);
+ * push_int_list(&vec, 2, 2);
+ * int a[4] = {10, 9, 8, 7};
+ * insert_int_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_int_list(&vec);
+ * @endcode
+ */
+int insert_int_list(IntLL *vec, int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type UIntLL
+ * /param array An array of type unsigned int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * UIntLL vec;
+ * init_uint_list(&vec);
+ * push_uint_list(&vec, 0, 0);
+ * push_uint_list(&vec, 1, 1);
+ * push_uint_list(&vec, 2, 2);
+ * unsigned int a[4] = {10, 9, 8, 7};
+ * insert_uint_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_uint_list(&vec);
+ * @endcode
+ */
+int insert_uint_list(UIntLL *vec, unsigned int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type LIntLL
+ * /param array An array of type long int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * LIntLL vec;
+ * init_long_list(&vec);
+ * push_long_list(&vec, 0, 0);
+ * push_long_list(&vec, 1, 1);
+ * push_long_list(&vec, 2, 2);
+ * long int a[4] = {10, 9, 8, 7};
+ * insert_long_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_long_list(&vec);
+ * @endcode
+ */
+int insert_long_list(LIntLL *vec, long int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type ULIntLL
+ * /param array An array of type unsigned long int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * ULIntLL vec;
+ * init_ulong_list(&vec);
+ * push_ulong_list(&vec, 0, 0);
+ * push_ulong_list(&vec, 1, 1);
+ * push_ulong_list(&vec, 2, 2);
+ * unsigned long int a[4] = {10, 9, 8, 7};
+ * insert_ulong_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_ulong_list(&vec);
+ * @endcode
+ */
+int insert_ulong_list(ULIntLL *vec, unsigned long int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type LLIntLL
+ * /param array An array of type long long int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * LLIntLL vec;
+ * init_llong_list(&vec);
+ * push_llong_list(&vec, 0, 0);
+ * push_llong_list(&vec, 1, 1);
+ * push_llong_list(&vec, 2, 2);
+ * long long int a[4] = {10, 9, 8, 7};
+ * insert_llong_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_llong_list(&vec);
+ * @endcode
+ */
+int insert_llong_list(LLIntLL *vec, long long int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type ULLIntLL
+ * /param array An array of type unsigned long long int
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * ULLIntLL vec;
+ * init_ullong_list(&vec);
+ * push_ullong_list(&vec, 0, 0);
+ * push_ullong_list(&vec, 1, 1);
+ * push_ullong_list(&vec, 2, 2);
+ * unsigned long long int a[4] = {10, 9, 8, 7};
+ * insert_ullong_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0, 10, 9, 8, 7, 1, 2 ]
+ * free_ullong_list(&vec);
+ * @endcode
+ */
+int insert_ullong_list(ULLIntLL *vec, unsigned long long int *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type FltLL
+ * /param array An array of type float
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * FltLL vec;
+ * init_float_list(&vec);
+ * push_float_list(&vec, 0., 0);
+ * push_float_list(&vec, 1., 1);
+ * push_float_list(&vec, 2., 2);
+ * float a[4] = {10., 9., 8., 7.};
+ * insert_float_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0.000, 10.000, 9.000, 8.000, 7.000, 1.000, 2.000 ]
+ * free_float_list(&vec);
+ * @endcode
+ */
+int insert_float_list(FltLL *vec, float *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type DbleLL
+ * /param array An array of type double
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * DbleLL vec;
+ * init_double_list(&vec);
+ * push_double_list(&vec, 0., 0);
+ * push_double_list(&vec, 1., 1);
+ * push_double_list(&vec, 2., 2);
+ * double a[4] = {10., 9., 8., 7.};
+ * insert_double_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0.000, 10.000, 9.000, 8.000, 7.000, 1.000, 2.000 ]
+ * free_double_list(&vec);
+ * @endcode
+ */
+int insert_double_list(DbleLL *vec, double *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type LDbleLL
+ * /param array An array of type long double
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * LDbleLL vec;
+ * init_ldouble_list(&vec);
+ * push_ldouble_list(&vec, 0., 0);
+ * push_ldouble_list(&vec, 1., 1);
+ * push_ldouble_list(&vec, 2., 2);
+ * long double a[4] = {10., 9., 8., 7.};
+ * insert_ldouble_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ 0.000, 10.000, 9.000, 8.000, 7.000, 1.000, 2.000 ]
+ * free_ldouble_list(&vec);
+ * @endcode
+ */
+int insert_ldouble_list(LDbleLL *vec, long double *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type CharLL
+ * /param array An array of type char
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * CharLL vec;
+ * init_char_list(&vec);
+ * push_char_list(&vec, 'a', 0);
+ * push_char_list(&vec, 'b', 1);
+ * push_char_list(&vec, 'c', 2);
+ * char a[4] = {'z', 'y', 'x', 'w'};
+ * insert_char_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ a, z, y, x, w, b, c ]
+ * free_char_list(&vec);
+ * @endcode
+ */
+int insert_char_list(CharLL *vec, char *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type UCharLL
+ * /param array An array of type unsigned char
+ * /param length The number of indices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * UCharLL vec;
+ * init_uchar_list(&vec);
+ * push_uchar_list(&vec, 'a', 0);
+ * push_uchar_list(&vec, 'b', 1);
+ * push_uchar_list(&vec, 'c', 2);
+ * unsigned char a[4] = {'z', 'y', 'x', 'w'};
+ * insert_uchar_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * ( a, z, y, x, w, b, c )
+ * free_uchar_list(&vec);
+ * @endcode
+ */
+int insert_uchar_list(UCharLL *vec, unsigned char *array, size_t length, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will insert an array of data into a linked list
+ *
+ * /param vec A struct of type BoolLL
+ * /param array An array of type bool
+ * /param length The number of indeices in array
+ * /param index The index where the array of data will be inserted into the
+ *              linked list
+ *
+ * @code
+ * BoolLL vec;
+ * init_bool_list(&vec);
+ * push_bool_list(&vec, true, 0);
+ * push_bool_list(&vec, false, 1);
+ * push_bool_list(&vec, false, 2);
+ * bool a[4] = {false, true, false, true};
+ * insert_bool_list(&vec, a, 4, 1);
+ * PRINT(vec);
+ * [ true, false, true, false, true, false, false ]
+ * free_bool_list(&vec);
+ * @endcode
+ */
+int insert_bool_list(BoolLL *vec, bool *array, size_t length, size_t index);
+// ================================================================================
+// ================================================================================
+#endif /* llist.h */
 // eof

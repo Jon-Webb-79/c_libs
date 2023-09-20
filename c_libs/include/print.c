@@ -338,4 +338,245 @@ void print_vstring(String x) {
 }
 // ================================================================================
 // ================================================================================
+// LINKED LIST PRINT FUNCTIONS
+
+
+void print_llshort(ShortLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct short_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_short(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_short(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llushort(UShortLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct ushort_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_ushort(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_ushort(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llint(IntLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct int_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_int(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_int(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_lluint(UIntLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct uint_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_uint(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_uint(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_lllong(LIntLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct long_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_long(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_long(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llulong(ULIntLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct ulong_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_ulong(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_ulong(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llllong(LLIntLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct llong_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_llong(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_llong(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llullong(ULLIntLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct ullong_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_ullong(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_ullong(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llfloat(FltLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct float_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_float(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_float(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_lldouble(DbleLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct double_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_double(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_double(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llldouble(LDbleLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct ldouble_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_longdouble(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_longdouble(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llchar(CharLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct char_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_char(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_char(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llbool(BoolLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct bool_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_bool(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_bool(current->data);
+	printf(" )");
+}
+// --------------------------------------------------------------------------------
+
+void print_llstring(StringLL x) {
+	if (x.active_length == 0) {
+		printf("( NULL )");
+		return;
+	}
+	printf("( ");
+	struct string_list *current = x.head;
+	for (size_t i = 0; i < x.active_length - 1; i++) {
+		print_string(current->data);
+		printf(", ");
+		current = current->next;
+	}
+	print_string(current->data);
+	printf(" )");
+}
+// ================================================================================
+// ================================================================================
 // eof
