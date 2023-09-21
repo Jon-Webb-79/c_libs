@@ -58,7 +58,22 @@
 										                 Char: push_char_vector, \
 														 UChar: push_uchar_vector, \
 														 Bool: push_bool_vector, \
-														 String: push_string_vector)(&T, value, index)
+														 String: push_string_vector, \
+													     IntLL: push_int_list, \
+														 UIntLL: push_uint_list, \
+														 ShortLL: push_short_list, \
+														 UShortLL: push_ushort_list, \
+														 LIntLL: push_long_list, \
+														 ULIntLL: push_ulong_list, \
+														 LLIntLL: push_llong_list, \
+														 ULLIntLL: push_ullong_list, \
+														 FltLL: push_float_list, \
+														 DbleLL: push_double_list, \
+														 LDbleLL: push_ldouble_list, \
+														 CharLL: push_char_list, \
+														 UCharLL: push_uchar_list, \
+														 BoolLL: push_bool_list, \
+														 StringLL: push_string_list)(&T, value, index)
 // ==========================================================================================
 // ==========================================================================================
 // INSERT GENERIC OPERATOR
@@ -105,7 +120,21 @@
 										                 Char: insert_char_vector, \
 														 UChar: insert_uchar_vector, \
 														 Bool: insert_bool_vector, \
-		                                                 String: insert_string_vector)(&T, elements, num_ind, index)
+		                                                 String: insert_string_vector, \
+														 ShortLL: insert_short_list, \
+														 UShortLL: insert_ushort_list, \
+														 IntLL: insert_int_list, \
+														 UIntLL: insert_uint_list, \
+														 LIntLL: insert_long_list, \
+														 ULIntLL: insert_ulong_list, \
+														 LLIntLL: insert_llong_list, \
+														 ULLIntLL: insert_ullong_list, \
+														 FltLL: insert_float_list, \
+														 DbleLL: insert_double_list, \
+														 LDbleLL: insert_ldouble_list, \
+														 CharLL: insert_char_list, \
+														 UCharLL: insert_uchar_list, \
+														 BoolLL: insert_bool_list)(&T, elements, num_ind, index)
 // ==========================================================================================
 // ==========================================================================================
 // INSERT GENERIC OPERATOR
@@ -167,7 +196,7 @@
 							   CharLL: free_char_list, \
 							   UCharLL: free_uchar_list, \
 							   BoolLL: free_bool_list, \
-							   StringLL: free_string_lives)(&T)
+							   StringLL: free_string_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 
@@ -670,7 +699,22 @@
 						               Dble: double_vector_data, \
 									   LDble: ldouble_vector_data, \
 									   Bool: bool_vector_data, \
-									   String: string_vector_data)(&T, index)
+									   String: string_vector_data, \
+									   ShortLL: short_list_data, \
+									   UShortLL: ushort_list_data, \
+									   IntLL: int_list_data, \
+									   UIntLL: uint_list_data, \
+									   LIntLL: long_list_data, \
+									   ULIntLL: ulong_list_data, \
+									   LLIntLL: llong_list_data, \
+									   ULLIntLL: ullong_list_data, \
+									   FltLL: float_list_data, \
+									   DbleLL: double_list_data, \
+									   LDbleLL: ldouble_list_data, \
+									   CharLL: char_list_data, \
+									   UCharLL: uchar_list_data, \
+									   BoolLL: bool_list_data, \
+									   StringLL: string_list_data)(&T, index)
 // ==========================================================================================
 // ==========================================================================================
 // REPLACE_INDEX

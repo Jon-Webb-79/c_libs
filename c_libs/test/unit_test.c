@@ -21,6 +21,7 @@
 
 #include "test_swap.h"
 #include "test_vector.h"
+#include "test_list.h"
 
 // Test functions for test_swap
 const struct CMUnitTest tests_swap[] = {
@@ -318,6 +319,24 @@ const struct CMUnitTest tests_vector[] = {
 	cmocka_unit_test(test_repeat_string_vec)
 };
 
+
+// Test functions for test_swap
+const struct CMUnitTest tests_list[] = {
+	cmocka_unit_test(test_push_short_list),
+    cmocka_unit_test(test_push_ushort_list),
+    cmocka_unit_test(test_push_int_list),
+    cmocka_unit_test(test_push_uint_list),
+	cmocka_unit_test(test_push_long_list),
+    cmocka_unit_test(test_push_ulong_list),
+    cmocka_unit_test(test_push_llong_list),
+    cmocka_unit_test(test_push_ullong_list),
+    cmocka_unit_test(test_push_float_list),
+    cmocka_unit_test(test_push_double_list),
+    cmocka_unit_test(test_push_ldouble_list),
+    cmocka_unit_test(test_push_char_list),
+    cmocka_unit_test(test_push_uchar_list)
+};
+
 // Begin code
 int main(int argc, const char * argv[]) {
 	int status;
@@ -330,7 +349,13 @@ int main(int argc, const char * argv[]) {
 
     // Run the tests for test_vector
     status = cmocka_run_group_tests(tests_vector, NULL, NULL);
-    return status;
+	if (status != 0) {
+		return status;
+	}
+
+	// Run the tests for test_linked list
+    status = cmocka_run_group_tests(tests_list, NULL, NULL);
+	return status;
 }
 // ================================================================================
 // ================================================================================

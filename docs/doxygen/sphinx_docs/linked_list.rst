@@ -395,3 +395,79 @@ The following functions can be used in place of the ``INSERT`` Macro.
 .. code-block:: bash
 
    >> ( 1, 5, 6, 7, 2, 3 )
+
+IDATA
+=====
+A linked list is not indexed like an array, so data can not be accesed by its position ``i`` in the
+array.  The ``IDATA`` Macro can be used to retrieve data from a position in the linked list
+based on its position.
+
+.. code-block:: c
+
+   type IDATA(T list, size_t index);
+
+Parameters
+----------
+
+- :c:`list`: The linked list data structure of type ``T``.
+- :c:`index`: The location in the linked list where data will be retireved
+
+Returns
+-------
+
+- :c:`data`: The data to be retrieved of type consistent with ``T``.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   ShortLL list;
+   INIT_LIST(list);
+   PUSH(list, 1, list.active_length);
+   PUSH(list, 2, list.active_length);
+   PUSH(list, 3, list.active_length);
+   PRINT(IDATA(list, 1));
+   FREE(list);
+
+.. code-block:: bash
+
+   >> 2
+
+The ``IDATA`` Macro can be replaced with the following functions.
+
+.. code-block:: c
+
+    short int short_list_data(ShortLL *list, size_t index);
+    unsigned short int ushort_list_data(UShortLL *list, size_t index);
+    int int_list_data(IntLL *list, size_t index);
+    unsigned int uint_list_data(UIntLL *list, size_t index);
+    long int long_list_data(LIntLL *list, size_t index);
+    unsigned long int ulong_list_data(ULIntLL *list, size_t index);
+    long long int llong_list_data(LLIntLL *list, size_t index);
+    unsigned long long int ullong_list_data(ULLIntLL *list, size_t index);
+    float float_list_data(FltLL *list, size_t index);
+    double double_list_data(DbleLL *list, size_t index);
+    long double ldouble_list_data(LDbleLL *list, size_t index);
+    char char_list_data(CharLL *list, size_t index);
+    unsigned uchar_list_data(UCharLL *list, size_t index);
+    bool bool_list_data(BoolLL *list, size_t index);
+    char* string_list_data(StringLL *list, size_t index);
+
+.. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
+
+   ShortLL list;
+   init_short_list(&list);
+   push_short_list(&list, 1, list.active_length);
+   push_short_list(&list, 2, list.active_length);
+   push_short_list(&list, 3, list.active_length);
+   PRINT(IDATA(list, 1));
+   free_short_list(&list);
+
+.. code-block:: bash
+
+   >> 2
+

@@ -695,7 +695,7 @@ int push_char_list(CharLL *vec, char data, size_t index);
  * free_uchar_list(&vec);
  * @endcode
  */
-int push_char_list(CharLL *vec, char data, size_t index);
+int push_uchar_list(UCharLL *vec, unsigned char data, size_t index);
 // --------------------------------------------------------------------------------
 
 /**
@@ -1098,6 +1098,323 @@ int insert_uchar_list(UCharLL *vec, unsigned char *array, size_t length, size_t 
  * @endcode
  */
 int insert_bool_list(BoolLL *vec, bool *array, size_t length, size_t index);
+// ================================================================================
+// ================================================================================
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type ShortLL
+ *
+ * /param vec A linked list struct of type ShortLL
+ * /param index The index from where data will be retrieved
+ * /return dat An short int data point
+ *
+ * @code
+ * ShortLL vec;
+ * init_short_list(&vec);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_list(&vec, a, 5, 0);
+ * PRINT(short_list_data(&vec, 2));
+ * // >> 3
+ * free_short_list(&vec);
+ * @endcode
+ */
+short int short_list_data(ShortLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type UShortLL
+ *
+ * /param vec A linked list struct of type UShortLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned short int data point
+ *
+ * @code
+ * UShortLL vec;
+ * init_ushort_list(&vec);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_list(&vec, a, 5, 0);
+ * PRINT(ushort_list_data(&vec, 2));
+ * // >> 3
+ * free_ushort_list(&vec);
+ * @endcode
+ */
+unsigned short int ushort_list_data(UShortLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type IntLL
+ *
+ * /param vec A linked list struct of type IntLL
+ * /param index The index from where data will be retrieved
+ * /return dat A int data point
+ *
+ * @code
+ * IntLL vec;
+ * init_int_list(&vec);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_list(&vec, a, 5, 0);
+ * PRINT(int_list_data(&vec, 2));
+ * // >> 3
+ * free_int_list(&vec);
+ * @endcode
+ */
+int int_list_data(IntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type UIntLL
+ *
+ * /param vec A linked list struct of type UIntLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned int data point
+ *
+ * @code
+ * UIntLL vec;
+ * init_uint_list(&vec);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_list(&vec, a, 5, 0);
+ * PRINT(uint_list_data(&vec, 2));
+ * // >> 3
+ * free_uint_list(&vec);
+ * @endcode
+ */
+unsigned int uint_list_data(UIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type LIntLL
+ *
+ * /param vec A linked list struct of type LIntLL
+ * /param index The index from where data will be retrieved
+ * /return dat A long int data point
+ *
+ * @code
+ * LIntLL vec;
+ * init_long_list(&vec);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_list(&vec, a, 5, 0);
+ * PRINT(long_list_data(&vec, 2));
+ * // >> 3
+ * free_long_list(&vec);
+ * @endcode
+ */
+long int long_list_data(LIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type ULIntLL
+ *
+ * /param vec A linked list struct of type ULIntLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned long int data point
+ *
+ * @code
+ * ULIntLL vec;
+ * init_ulong_list(&vec);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_list(&vec, a, 5, 0);
+ * PRINT(ulong_list_data(&vec, 2));
+ * // >> 3
+ * free_ulong_list(&vec);
+ * @endcode
+ */
+unsigned long int ulong_list_data(ULIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type LLIntLL
+ *
+ * /param vec A linked list struct of type LLIntLL
+ * /param index The index from where data will be retrieved
+ * /return dat A long long int data point
+ *
+ * @code
+ * LLIntLL vec;
+ * init_llong_list(&vec);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_list(&vec, a, 5, 0);
+ * PRINT(llong_list_data(&vec, 2));
+ * // >> 3
+ * free_llong_list(&vec);
+ * @endcode
+ */
+long long int llong_list_data(LLIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type ULLIntLL
+ *
+ * /param vec A linked list struct of type ULLIntLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned long long int data point
+ *
+ * @code
+ * ULLIntLL vec;
+ * init_ulong_list(&vec);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_list(&vec, a, 5, 0);
+ * PRINT(ullong_list_data(&vec, 2));
+ * // >> 3
+ * free_ullong_list(&vec);
+ * @endcode
+ */
+unsigned long long int ullong_list_data(ULLIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type FltLL
+ *
+ * /param vec A linked list struct of type FltLL
+ * /param index The index from where data will be retrieved
+ * /return dat A float data point
+ *
+ * @code
+ * FltLL vec;
+ * init_float_list(&vec);
+ * float a[5] = {1, 2, 3, 4, 5};
+ * insert_float_list(&vec, a, 5, 0);
+ * PRINT(float_list_data(&vec, 2));
+ * // >> 3
+ * free_float_list(&vec);
+ * @endcode
+ */
+float float_list_data(FltLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type Dble
+ *
+ * /param vec A linked list struct of type DbleLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned double data point
+ *
+ * @code
+ * DbleLL vec;
+ * init_double_list(&vec);
+ * double a[5] = {1, 2, 3, 4, 5};
+ * insert_double_list(&vec, a, 5, 0);
+ * PRINT(double_list_data(&vec, 2));
+ * // >> 3
+ * free_double_list(&vec);
+ * @endcode
+ */
+double double_list_data(DbleLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type LDbleLL
+ *
+ * /param vec A linked list struct of type LDbleLL
+ * /param index The index from where data will be retrieved
+ * /return dat A long double data point
+ *
+ * @code
+ * LDbleLL vec;
+ * init_ldouble_list(&vec);
+ * long double a[5] = {1, 2, 3, 4, 5};
+ * insert_ldouble_list(&vec, a, 5, 0);
+ * PRINT(ldouble_list_data(&vec, 2));
+ * // >> 3
+ * free_ldouble_list(&vec);
+ * @endcode
+ */
+long double ldouble_list_data(LDbleLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type CharLL
+ *
+ * /param vec A linked list struct of type CharLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned char data point
+ *
+ * @code
+ * CharLL vec;
+ * init_char_list(&vec);
+ * char a[5] = {'a'. 'b', 'c' 'd'};
+ * insert_char_list(&vec, a, 5, 0);
+ * PRINT(char_list_data(&vec, 2));
+ * // >> c
+ * free_char_list(&vec);
+ * @endcode
+ */
+char char_list_data(CharLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type UCharLL
+ *
+ * /param vec A linked list struct of type UCharLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned char data point
+ *
+ * @code
+ * UCharLL vec;
+ * init_uchar_list(&vec);
+ * unsgined char a[5] = {'a'. 'b', 'c' 'd'};
+ * insert_uchar_list(&vec, a, 5, 0);
+ * PRINT(uchar_list_data(&vec, 2));
+ * // >> c
+ * free_uchar_list(&vec);
+ * @endcode
+ */
+unsigned char uchar_list_data(UCharLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type BoolLL
+ *
+ * /param vec A linked list struct of type BoolLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * BoolLL vec;
+ * init_bool_list(&vec);
+ * bool a[5] = {true, true, false, false};
+ * insert_bool_list(&vec, a, 5, 0);
+ * PRINT(bool_list_data(&vec, 2));
+ * // >> false
+ * free_bool_list(&vec);
+ * @endcode
+ */
+bool bool_list_data(BoolLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will retireve the data from a user specified index in a
+ * linked list of type StringLL
+ *
+ * /param vec A linked list struct of type StringLL
+ * /param index The index from where data will be retrieved
+ * /return dat An unsigned bool data point
+ *
+ * @code
+ * StringLL vec;
+ * init_string_list(&vec);
+ * push_string_list(&vec, "One", 0);
+ * push_string_list(&vec, "Two". 1);
+ * push_string_list(&vec, "Three", 2);
+ * PRINT(string_list_data(&vec, 2));
+ * // >> Two
+ * free_string_list(&vec);
+ * @endcode
+ */
+char* string_list_data(StringLL *vec, size_t index);
 // ================================================================================
 // ================================================================================
 #endif /* llist.h */

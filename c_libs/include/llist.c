@@ -1930,4 +1930,320 @@ int insert_bool_list(BoolLL *vec, bool *array, size_t length, size_t index) {
 }
 // ================================================================================
 // ================================================================================
+
+short int short_list_data(ShortLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct short_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct short_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int ushort_list_data(UShortLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct ushort_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct ushort_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+int int_list_data(IntLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct int_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct int_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+unsigned int uint_list_data(UIntLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct uint_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct uint_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+long int long_list_data(LIntLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct long_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct long_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int ulong_list_data(ULIntLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct ulong_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct ulong_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+long long int llong_list_data(LLIntLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct llong_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct llong_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int ullong_list_data(ULLIntLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct ullong_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct ullong_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+float float_list_data(FltLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct float_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct float_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+double double_list_data(DbleLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct double_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct double_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+long double ldouble_list_data(LDbleLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct ldouble_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct ldouble_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+char char_list_data(CharLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct char_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct char_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+unsigned char uchar_list_data(UCharLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct uchar_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct uchar_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+bool bool_list_data(BoolLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct bool_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct bool_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// --------------------------------------------------------------------------------
+
+char* string_list_data(StringLL *vec, size_t index) {
+	if (index < 0 || index > vec->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+	}
+	if (index < vec->active_length / 2) {
+		struct string_list *current = vec->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		return current-> data;
+	}
+	else {
+		struct string_list *current = vec->tail;
+		for (size_t i = vec->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		return current->data;
+	}
+}
+// ================================================================================
+// ================================================================================
 // eof
