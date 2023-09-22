@@ -246,6 +246,256 @@ void test_push_uchar_list(void **state)
 	}
 	FREE(list);
 }
+// --------------------------------------------------------------------------------
+
+void test_push_bool_list(void **state)
+{
+	(void) state;
+	bool a[5] = {true, true, false, false, false};
+	UCharLL list;
+	INIT_LIST(list);
+	PUSH(list, true, list.active_length);
+	PUSH(list, false, list.active_length);
+	PUSH(list, false, list.active_length);
+	PUSH(list, false, list.active_length);
+	PUSH(list, true, 0);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), a[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_push_string_list(void **state)
+{
+	(void) state;
+	char *a[5] = {"One", "Two", "Three", "Four", "Five"};
+	StringLL list;
+	INIT_LIST(list);
+	PUSH(list, "Two", list.active_length);
+	PUSH(list, "Three", list.active_length);
+	PUSH(list, "Four", list.active_length);
+	PUSH(list, "Five", list.active_length);
+	PUSH(list, "One", 0);
+	int cmp;
+	for (size_t i = 0; i < list.active_length; i++) {
+		cmp = strcmp(IDATA(list, i), a[i]);
+		assert_int_equal(cmp, 0);
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
+// TEST_INSERT_TYPE
+
+void test_insert_short_list(void **state)
+{
+	ShortLL list;
+	INIT_LIST(list);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	short int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+/* // -------------------------------------------------------------------------------- */
+
+void test_insert_ushort_list(void **state)
+{
+	UShortLL list;
+	INIT_LIST(list);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	unsigned short int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_int_list(void **state)
+{
+	IntLL list;
+	INIT_LIST(list);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+/* // -------------------------------------------------------------------------------- */
+
+void test_insert_uint_list(void **state)
+{
+	UIntLL list;
+	INIT_LIST(list);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	unsigned int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_long_list(void **state)
+{
+	LIntLL list;
+	INIT_LIST(list);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+/* // -------------------------------------------------------------------------------- */
+
+void test_insert_ulong_list(void **state)
+{
+	ULIntLL list;
+	INIT_LIST(list);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	unsigned long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_llong_list(void **state)
+{
+	LLIntLL list;
+	INIT_LIST(list);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	long long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+/* // -------------------------------------------------------------------------------- */
+
+void test_insert_ullong_list(void **state)
+{
+	ULLIntLL list;
+	INIT_LIST(list);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	unsigned long long int b[4] = {1, 2, 4, 5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_float_list(void **state)
+{
+	FltLL list;
+	INIT_LIST(list);
+	float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	float b[4] = {1.1, 2.2, 4.4, 5.5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(IDATA(list, i), b[i], 1.0e-3);
+	}
+	FREE(list);
+}
+/* // -------------------------------------------------------------------------------- */
+
+void test_insert_double_list(void **state)
+{
+	DbleLL list;
+	INIT_LIST(list);
+	double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	double b[4] = {1.1, 2.2, 4.4, 5.5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(IDATA(list, i), b[i], 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_ldouble_list(void **state)
+{
+	LDbleLL list;
+	INIT_LIST(list);
+	long double a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	long double b[4] = {1.1, 2.2, 4.4, 5.5};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(IDATA(list, i), b[i], 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_char_list(void **state)
+{
+	CharLL list;
+	INIT_LIST(list);
+	char a[5] = {'a', 'b', 'c', 'd', 'e'};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	char b[4] = {'a', 'b', 'd', 'e'};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_uchar_list(void **state)
+{
+	UCharLL list;
+	INIT_LIST(list);
+	unsigned char a[5] = {'a', 'b', 'c', 'd', 'e'};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	char b[4] = {'a', 'b', 'd', 'e'};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_insert_bool_list(void **state)
+{
+	BoolLL list;
+	INIT_LIST(list);
+	bool a[5] = {true, false, true, false, true};
+	INSERT(list, a, 5, 0);
+	POP_INDEX(list, 2);
+	bool b[4] = {true, false, false, true};
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), b[i]);
+	}
+	FREE(list);
+}
 // ================================================================================
 // ================================================================================
 // eof

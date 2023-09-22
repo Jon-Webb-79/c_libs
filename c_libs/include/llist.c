@@ -2246,4 +2246,740 @@ char* string_list_data(StringLL *vec, size_t index) {
 }
 // ================================================================================
 // ================================================================================
+
+int pop_short_list_index(ShortLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct short_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct short_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct short_list *current = list->head;
+		struct short_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct short_list *current = list->tail;
+		struct short_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ushort_list_index(UShortLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct ushort_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct ushort_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct ushort_list *current = list->head;
+		struct ushort_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct ushort_list *current = list->tail;
+		struct ushort_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_int_list_index(IntLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct int_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct int_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct int_list *current = list->head;
+		struct int_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct int_list *current = list->tail;
+		struct int_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_uint_list_index(UIntLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct uint_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct uint_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->active_length -= 1;
+		list->tail = current->previous;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct uint_list *current = list->head;
+		struct uint_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct uint_list *current = list->tail;
+		struct uint_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_long_list_index(LIntLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct long_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct long_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct long_list *current = list->head;
+		struct long_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct long_list *current = list->tail;
+		struct long_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ulong_list_index(ULIntLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct ulong_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct ulong_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct ulong_list *current = list->head;
+		struct ulong_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct ulong_list *current = list->tail;
+		struct ulong_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_llong_list_index(LLIntLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct llong_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct llong_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct llong_list *current = list->head;
+		struct llong_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct llong_list *current = list->tail;
+		struct llong_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ullong_list_index(ULLIntLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct ullong_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct ullong_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct ullong_list *current = list->head;
+		struct ullong_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct ullong_list *current = list->tail;
+		struct ullong_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_float_list_index(FltLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct float_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct float_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct float_list *current = list->head;
+		struct float_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct float_list *current = list->tail;
+		struct float_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_double_list_index(DbleLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct double_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct double_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct double_list *current = list->head;
+		struct double_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct double_list *current = list->tail;
+		struct double_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_ldouble_list_index(LDbleLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct ldouble_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= -1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct ldouble_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct ldouble_list *current = list->head;
+		struct ldouble_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct ldouble_list *current = list->tail;
+		struct ldouble_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_char_list_index(CharLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct char_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct char_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct char_list *current = list->head;
+		struct char_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct char_list *current = list->tail;
+		struct char_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_uchar_list_index(UCharLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct uchar_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct uchar_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct uchar_list *current = list->head;
+		struct uchar_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct uchar_list *current = list->tail;
+		struct uchar_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_bool_list_index(BoolLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct bool_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct bool_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct bool_list *current = list->head;
+		struct bool_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct bool_list *current = list->tail;
+		struct bool_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int pop_string_list_index(StringLL *list, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index == 0) {
+		struct string_list *current = list->head;
+		(current->next)->previous = NULL;
+		list->head = current->next;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index == list->active_length - 1) {
+		struct string_list *current = list->tail;
+		(current->previous)->next = NULL;
+		list->tail = current->previous;
+		list->active_length -= 1;
+		free(current);
+	}
+	else if (index < list->active_length / 2) {
+		struct string_list *current = list->head;
+		struct string_list *previous;
+		for (size_t i = 0; i < index; i++) {
+			previous = current;
+			current = current->next;
+		}
+		previous->next = current->next;
+		(current->next)->previous = previous;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	else {
+		struct string_list *current = list->tail;
+		struct string_list *next;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			next = current;
+			current = current->previous;
+		}
+		next->previous = current->previous;
+		(current->previous)->next = current->next;
+
+		list->active_length -= 1;
+		free(current);
+	}
+	return 1;
+}
+// ================================================================================
+// ================================================================================
 // eof

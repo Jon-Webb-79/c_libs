@@ -43,6 +43,24 @@ void test_push_uchar_list(void **state);
 void test_push_bool_list(void **state);
 void test_push_string_list(void **state);
 
+// ================================================================================
+// ================================================================================
+// TEST_INSERT_TYPE
+
+void test_insert_short_list(void **state);
+void test_insert_ushort_list(void **state);
+void test_insert_int_list(void **state);
+void test_insert_uint_list(void **state);
+void test_insert_long_list(void **state);
+void test_insert_ulong_list(void **state);
+void test_insert_llong_list(void **state);
+void test_insert_ullong_list(void **state);
+void test_insert_float_list(void **state);
+void test_insert_double_list(void **state);
+void test_insert_ldouble_list(void **state);
+void test_insert_char_list(void **state);
+void test_insert_uchar_list(void **state);
+void test_insert_bool_list(void **state);
 #endif /* test_H */
 // ================================================================================
 // ================================================================================

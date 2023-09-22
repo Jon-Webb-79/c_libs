@@ -240,7 +240,22 @@
 							   Char: pop_char_vector_index, \
 							   UChar: pop_uchar_vector_index, \
 							   Bool: pop_bool_vector_index, \
-							   String: pop_string_vector_index)(&T, y)
+							   String: pop_string_vector_index, \
+							   ShortLL: pop_short_list_index, \
+							   UShortLL: pop_ushort_list_index, \
+							   IntLL: pop_int_list_index, \
+							   UIntLL: pop_uint_list_index, \
+							   LIntLL: pop_long_list_index, \
+							   ULIntLL: pop_ulong_list_index, \
+							   LLIntLL: pop_llong_list_index, \
+							   ULLIntLL: pop_ullong_list_index, \
+							   FltLL: pop_float_list_index, \
+							   DbleLL: pop_double_list_index, \
+							   LDbleLL: pop_ldouble_list_index, \
+							   CharLL: pop_char_list_index, \
+							   UCharLL: pop_uchar_list_index, \
+							   BoolLL: pop_bool_list_index, \
+							   StringLL: pop_string_list_index)(&T, y)
 // ==========================================================================================
 // ==========================================================================================
 // REPLACE_VALUES MACRO

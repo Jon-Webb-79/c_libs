@@ -1417,5 +1417,326 @@ bool bool_list_data(BoolLL *vec, size_t index);
 char* string_list_data(StringLL *vec, size_t index);
 // ================================================================================
 // ================================================================================
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type ShortLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * ShortLL vec;
+ * init_short_list(vec);
+ * short int a[4] = {1, 2, 3, 4};
+ * insert_short_list(&vec, a, 4, 0);
+ * pop_short_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_short_list(&vec);
+ * @endcode
+ */
+int pop_short_list_index(ShortLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type UShortLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * UShortLL vec;
+ * init_ushort_list(vec);
+ * unsigned short int a[4] = {1, 2, 3, 4};
+ * insert_ushort_list(&vec, a, 4, 0);
+ * pop_ushort_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_ushort_list(&vec);
+ * @endcode
+ */
+int pop_ushort_list_index(UShortLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type IntLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * IntLL vec;
+ * init_int_list(vec);
+ * int a[4] = {1, 2, 3, 4};
+ * insert_int_list(&vec, a, 4, 0);
+ * pop_int_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_int_list(&vec);
+ * @endcode
+ */
+int pop_int_list_index(IntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type UIntLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * UIntLL vec;
+ * init_uint_list(vec);
+ * unsigned int a[4] = {1, 2, 3, 4};
+ * insert_uint_list(&vec, a, 4, 0);
+ * pop_uint_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_uint_list(&vec);
+ * @endcode
+ */
+int pop_uint_list_index(UIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type LIntLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * LIntLL vec;
+ * init_long_list(vec);
+ * long int a[4] = {1, 2, 3, 4};
+ * insert_long_list(&vec, a, 4, 0);
+ * pop_long_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_long_list(&vec);
+ * @endcode
+ */
+int pop_long_list_index(LIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type ULIntLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * ULIntLL vec;
+ * init_ulong_list(vec);
+ * unsigned long int a[4] = {1, 2, 3, 4};
+ * insert_ulong_list(&vec, a, 4, 0);
+ * pop_ulong_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_ulonglist(&vec);
+ * @endcode
+ */
+int pop_ulong_list_index(ULIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type LLIntLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * LLIntLL vec;
+ * init_llong_list(vec);
+ * long long int a[4] = {1, 2, 3, 4};
+ * insert_llong_list(&vec, a, 4, 0);
+ * pop_llong_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_llong_list(&vec);
+ * @endcode
+ */
+int pop_llong_list_index(LLIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type ULLIntLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * ULLIntLL vec;
+ * init_ullong_list(vec);
+ * unsigned long long int a[4] = {1, 2, 3, 4};
+ * insert_ullong_list(&vec, a, 4, 0);
+ * pop_ullong_list(&vec, 2);
+ * PRINT(vec);
+ * [1, 2, 4 ]
+ * free_ullonglist(&vec);
+ * @endcode
+ */
+int pop_ullong_list_index(ULLIntLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type FltLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * FltLL vec;
+ * init_float_list(vec);
+ * float a[4] = {1., 2., 3., 4.};
+ * insert_float_list(&vec, a, 4, 0);
+ * pop_float_list(&vec, 2);
+ * PRINT(vec);
+ * [1.000, 2.000, 4.000 ]
+ * free_float_list(&vec);
+ * @endcode
+ */
+int pop_float_list_index(FltLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type DbleLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * DbleLL vec;
+ * init_double_list(vec);
+ * double a[4] = {1., 2., 3., 4.};
+ * insert_double_list(&vec, a, 4, 0);
+ * pop_double_list(&vec, 2);
+ * PRINT(vec);
+ * [1.000, 2.000, 4.000 ]
+ * free_double_list(&vec);
+ * @endcode
+ */
+int pop_double_list_index(DbleLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type LDbleLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * LDbleLL vec;
+ * init_ldouble_list(vec);
+ * long double a[4] = {1., 2., 3., 4.};
+ * insert_ldouble_list(&vec, a, 4, 0);
+ * pop_ldouble_list(&vec, 2);
+ * PRINT(vec);
+ * [1.000, 2.000, 4.000 ]
+ * free_ldouble_list(&vec);
+ * @endcode
+ */
+int pop_ldouble_list_index(LDbleLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type CharLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * CharLL vec;
+ * init_char_list(vec);
+ * char a[4] = {'a', 'b', 'c', 'd'};
+ * insert_char_list(&vec, a, 4, 0);
+ * pop_char_list(&vec, 2);
+ * PRINT(vec);
+ * [a, b, d ]
+ * free_char_list(&vec);
+ * @endcode
+ */
+int pop_char_list_index(CharLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type UCharLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * UCharLL vec;
+ * init_uchar_list(vec);
+ * unsigned char a[4] = {'a', 'b', 'c', 'd'};
+ * insert_uchar_list(&vec, a, 4, 0);
+ * pop_uchar_list(&vec, 2);
+ * PRINT(vec);
+ * [a, b, d ]
+ * free_uchar_list(&vec);
+ * @endcode
+ */
+int pop_uchar_list_index(UCharLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type BoolLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * BoolLL vec;
+ * init_bool_list(vec);
+ * bool a[4] = {true, true, false, false};
+ * insert_bool_list(&vec, a, 4, 0);
+ * pop_bool_list(&vec, 2);
+ * PRINT(vec);
+ * [true, true, false ]
+ * free_bool_list(&vec);
+ * @endcode
+ */
+int pop_bool_list_index(BoolLL *vec, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete a data point at a user specified index from the
+ * the linked list
+ *
+ * /param vec A linked list struct of type StringLL
+ * /param index The index where a user wishes to delete a data point
+ *
+ * @code
+ * StringLL vec;
+ * init_bool_list(&vec);
+ * push_string_list(&vec, "One", 0);
+ * push_string_list(&vec, "Two", 1);
+ * push_string_list(&vec, "Three", 2);
+ * push_string_list(&vec, "Four", 3);
+ * pop_string_list(&vec, 2);
+ * PRINT(vec);
+ * [ One, Two, Four ]
+ * free_string_list(&vec);
+ * @endcode
+ */
+int pop_string_list_index(StringLL *vec, size_t index);
+// ================================================================================
+// ================================================================================
+// TODO Test for memory leaks with Valgrind
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

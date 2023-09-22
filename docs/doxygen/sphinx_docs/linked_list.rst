@@ -471,3 +471,79 @@ The ``IDATA`` Macro can be replaced with the following functions.
 
    >> 2
 
+POP_INDEX
+=========
+The ``POP_INDEX`` Macro can be used to removed a value from the linked list at a user
+defined pseudo-index.  While this macro can remove a value from any index, only
+values removed from the first are last index can be executed at order ``O(0)``.
+The execution time for the removal of data from other indices will be proportional
+to the number of indices that the method has to iterate through to find the
+pseudo-index.
+
+.. code-block:: c
+
+   int POP_INDEX(T list, size_t index);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+- :c:`index`: The pseudo-index containing data to be poped from the data structure.
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the function executes succesfully, -1 otherwise with a message printed to standard error.
+
+
+.. code-block:: c
+
+   IntLL list;
+   INIT_LIST(list);
+   PUSH(list, 1, list.active_length);
+   PUSH(list, 2, list.active_length);
+   PUSH(list, 3, list.active_length);
+   PUSH(list, 4, list.active_length);
+   POP_INDEX(list, 1);
+   PRINT(list)
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( 1, 3, 4 )
+
+The following functions can be used in place of the ``POP_INDEX`` Macro.
+
+.. code-block:: c
+
+   int pop_short_index(ShortLL list, size_t index);
+   int pop_ushort_index(UShortLL list, size_t index);
+   int pop_int_index(IntLL list, size_t index);
+   int pop_uint_index(UIntLL list, size_t index);
+   int pop_long_index(LIntLL list, size_t index);
+   int pop_ulong_index(ULIntLL list, size_t index);
+   int pop_llong_index(LLIntLL list, size_t index);
+   int pop_ullong_index(ULLIntLL list, size_t index);
+   int pop_float_index(FltLL list, size_t index);
+   int pop_double_index(DbleLL list, size_t index);
+   int pop_ldouble_index(LDbleLL list, size_t index);
+   int pop_char_index(CharLL list, size_t index);
+   int pop_uchar_index(UCharLL list, size_t index);
+   int pop_bool_index(BoolLL list, size_t index);
+   int pop_string_index(StringLL list, size_t index);
+
+.. code-block:: c
+
+   IntLL list;
+   init_int_list(&list);
+   push_int_list(&list, 1, list.active_length);
+   push_int_list(&list, 2, list.active_length);
+   push_int_list(&list, 3, list.active_length);
+   push_int_list(&list, 4, list.active_length);
+   pop_int_list_index(&list, 1);
+   PRINT(list)
+   free_int_list(&list);
+
+.. code-block:: bash
+
+   >> ( 1, 3, 4 )
