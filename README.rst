@@ -52,3 +52,7 @@ In order to download this repository from github, follow these instructions
       - Verify code runs correctly with the following command ``./unit_tests``
 
 6. Install as a library with the command ``xxxx``
+
+Documentation
+#############
+Documentation for this module can be found from the `ReadtheDocs <https://c-libs.readthedocs.io/en/latest/>`_ website.
