@@ -1735,7 +1735,352 @@ int pop_bool_list_index(BoolLL *vec, size_t index);
 int pop_string_list_index(StringLL *vec, size_t index);
 // ================================================================================
 // ================================================================================
-// TODO Test for memory leaks with Valgrind
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type ShortLL
+ * /param new_value The replacement value of type short int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list);
+ * short int a[5] = {1, 2, 3, 4};
+ * insert_short_list(&list, a, 5, 0);
+ * replace_short_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+int replace_short_list_index(ShortLL *list, short int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type UShortLL
+ * /param new_value The replacement value of type unsigned short int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list);
+ * unsigned short int a[5] = {1, 2, 3, 4};
+ * insert_ushort_list(&list, a, 5, 0);
+ * replace_ushort_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+int replace_ushort_list_index(UShortLL *list, unsigned short int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type IntLL
+ * /param new_value The replacement value of type int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list);
+ * int a[5] = {1, 2, 3, 4};
+ * insert_int_list(&list, a, 5, 0);
+ * replace_int_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+int replace_int_list_index(IntLL *list, int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type UIntLL
+ * /param new_value The replacement value of type unsigned int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list);
+ * unsigned int a[5] = {1, 2, 3, 4};
+ * insert_uint_list(&list, a, 5, 0);
+ * replace_uint_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+int replace_uint_list_index(UIntLL *list, unsigned int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type LIntLL
+ * /param new_value The replacement value of type long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list);
+ * long int a[5] = {1, 2, 3, 4};
+ * insert_long_list(&list, a, 5, 0);
+ * replace_long_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+int replace_long_list_index(LIntLL *list, long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type ULIntLL
+ * /param new_value The replacement value of type unsigned long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list);
+ * unsigned long int a[5] = {1, 2, 3, 4};
+ * insert_ulong_list(&list, a, 5, 0);
+ * replace_ulong_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+int replace_ulong_list_index(ULIntLL *list, unsigned long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type LLIntLL
+ * /param new_value The replacement value of type long long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list);
+ * long llong int a[5] = {1, 2, 3, 4};
+ * insert_llong_list(&list, a, 5, 0);
+ * replace_llong_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+int replace_llong_list_index(LLIntLL *list, long long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type ULLIntLL
+ * /param new_value The replacement value of type unsigned long long int
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list);
+ * unsigned long long int a[5] = {1, 2, 3, 4};
+ * insert_ullong_list(&list, a, 5, 0);
+ * replace_ullong_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1, 2, 10, 4 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+int replace_ullong_list_index(ULLIntLL *list, unsigned long long int new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type FltLL
+ * /param new_value The replacement value of type float
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list);
+ * float a[5] = {1., 2., 3., 4.};
+ * insert_float_list(&list, a, 5, 0);
+ * replace_float_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1.000, 2.000, 10.000, 4.000 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+int replace_float_list_index(FltLL *list, float new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type DbleLL
+ * /param new_value The replacement value of type double
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list);
+ * double a[5] = {1., 2., 3., 4.};
+ * insert_double_list(&list, a, 5, 0);
+ * replace_double_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1.000, 2.000, 10.000, 4.000 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+int replace_double_list_index(DbleLL *list, double new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type LDbleLL
+ * /param new_value The replacement value of type long double
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list);
+ * long double a[5] = {1., 2., 3., 4.};
+ * insert_ldouble_list(&list, a, 5, 0);
+ * replace_ldouble_list_index(&list, 10, 2);
+ * PRINT(list);
+ * // >> [ 1.000, 2.000, 10.000, 4.000 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+int replace_ldouble_list_index(LDbleLL *list, long double new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type CharLL
+ * /param new_value The replacement value of type char
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * CharLL list;
+ * init_char_list(&list);
+ * char a[5] = {'a', 'b', 'c', 'd'};
+ * insert_char_list(&list, a, 5, 0);
+ * replace_char_list_index(&list, 'q', 2);
+ * PRINT(list);
+ * // >> [ a, b, q, d ]
+ * free_char_list(&list);
+ * @endcode
+ */
+int replace_char_list_index(CharLL *list, char new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type UCharLL
+ * /param new_value The replacement value of type unsigned char
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * UCharLL list;
+ * init_uchar_list(&list);
+ * unsigned char a[5] = {'a', 'b', 'c', 'd'};
+ * insert_uchar_list(&list, a, 5, 0);
+ * replace_uchar_list_index(&list, 'q', 2);
+ * PRINT(list);
+ * // >> [ a, b, q, d ]
+ * free_uchar_list(&list);
+ * @endcode
+ */
+int replace_uchar_list_index(UCharLL *list, unsigned char new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type BoolLL
+ * /param new_value The replacement value of type bool
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * BoolLL list;
+ * init_bool_list(&list);
+ * bool a[5] = {true, true, true, true};
+ * insert_bool_list(&list, a, 5, 0);
+ * replace_bool_list_index(&list, false, 2);
+ * PRINT(list);
+ * // >> [ true, true, false, true ]
+ * free_bool_list(&list);
+ * @endcode
+ */
+int replace_bool_list_index(BoolLL *list, bool new_value, size_t index);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace the value of a linked list at a user specified
+ * index.  If the user specifies an index that is out of bounds, the function will
+ * return -1, or 1 if successfull.
+ *
+ * /param vec A linked list struct of type StringLL
+ * /param new_value The replacement value of type char*
+ * /param index The index where a value will be replaced
+ *
+ * @code
+ * StringLL list;
+ * init_string_list(&list);
+ * push_string_list(&list, "One", 0);
+ * push_string_list(&list, "Two", 1);
+ * push_string_list(&list, "Three", 2);
+ * push_string_list(&list, "Four", 3);
+ * replace_string_list_index(&list, "Ten", 2);
+ * PRINT(list);
+ * // >> [ One, Two, Ten, Four ]
+ * free_string_list(&list);
+ * @endcode
+ */
+int replace_string_list_index(StringLL *list, char *new_value, size_t index);
 // ================================================================================
 // ================================================================================
 #endif /* llist.h */

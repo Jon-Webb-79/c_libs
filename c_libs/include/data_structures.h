@@ -766,7 +766,22 @@
 						                                Dble: replace_double_vector_index, \
 									                    LDble: replace_ldouble_vector_index, \
 											            Char: replace_char_vector_index, \
-											            Bool: replace_bool_vector_index)(&T, new_val, index)
+											            Bool: replace_bool_vector_index, \
+														ShortLL: replace_short_list_index, \
+														UShortLL: replace_ushort_list_index, \
+														IntLL: replace_int_list_index, \
+														UIntLL: replace_uint_list_index, \
+														LIntLL: replace_long_list_index, \
+														ULIntLL: replace_ulong_list_index, \
+														LLIntLL: replace_llong_list_index, \
+														ULLIntLL: replace_ullong_list_index, \
+														FltLL: replace_float_list_index, \
+														DbleLL: replace_double_list_index, \
+														LDbleLL: replace_ldouble_list_index, \
+														CharLL: replace_char_list_index, \
+                                                        UCharLL: replace_uchar_list_index, \
+														BoolLL: replace_bool_list_index, \
+														StringLL: replace_string_list_index)(&T, new_val, index)
 // ==========================================================================================
 // ==========================================================================================
 // REPEAT MACRO

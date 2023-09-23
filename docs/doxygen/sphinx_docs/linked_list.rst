@@ -547,3 +547,69 @@ The following functions can be used in place of the ``POP_INDEX`` Macro.
 .. code-block:: bash
 
    >> ( 1, 3, 4 )
+
+REPLACE_INDEX
+=============
+The ``REPLACE_INDEX`` Macro can be used to replace a value in a linked list
+at a pseudo-index location.
+
+.. code-block:: c
+
+   int REPLACE_INDEX(T list, type new_value, size_t index);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+- :c:`new_value`: The value of type consistent with ``T`` that will replace the old value at ``index``.
+- :c:`index`: The pseudo index where a value will be replaced with another.
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the macro executes succesfully, -1 otherwise with a stderr message.
+
+.. code-block:: c
+
+   FltLL list;
+   INIT_LIST(list);
+   float a[5] = {1.1, 2.2, 3.3, 4.4};
+   INSERT(list, a, 5, 0);
+   REPLACE_INDEX(list, 2, 27.3f);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: c
+
+   >> ( 1.1, 2.2, 27.3, 4.4 )
+
+The following functions can be used in place of the ``REPLACE_INDEX`` Macro.
+
+.. code-block:: c
+
+   int replace_short_list_index(ShortLL list, short int new_value, size_t index);
+   int replace_ushort_list_index(UShortLL list, unsigned short int new_value, size_t index);
+   int replace_int_list_index(IntLL list, int new_value, size_t index);
+   int replace_uint_list_index(UIntLL list, unsigned int new_value, size_t index);
+   int replace_long_list_index(LIntLL list, long int new_value, size_t index);
+   int replace_ulong_list_index(ULIntLL list, unsigned long int new_value, size_t index);
+   int replace_llong_list_index(LLIntLL list, long long int new_value, size_t index);
+   int replace_ullong_list_index(ULLIntLL list, unsigned long long int new_value, size_t index);
+   int replace_char_list_index(CharLL list, char new_value, size_t index);
+   int replace_uchar_list_index(UCharLL list, unsigned char new_value, size_t index);
+   int replace_float_list_index(FltLL list, float new_value, size_t index);
+   int replace_double_list_index(DbleLL list, double new_value, size_t index);
+   int replace_ldouble_list_index(LDbleLL list, long double new_value, size_t index);
+   int replace_bool_list_index(BoolLL list, bool new_value, size_t index);
+   int replace_string_list_index(StringLL list, char *new_value, size_t index);
+
+.. code-block:: c
+
+   FltLL list;
+   init_float_list(&list);
+   float a[5] = {1.1, 2.2, 3.3, 4.4};
+   insert_float_list(&list, a, 5, 0);
+   replace_float_list_index(&list, 2, 27.3f);
+   PRINT(list);
+   free_float_list(&list);
+

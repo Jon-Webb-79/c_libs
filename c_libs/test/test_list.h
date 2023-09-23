@@ -61,7 +61,26 @@ void test_insert_ldouble_list(void **state);
 void test_insert_char_list(void **state);
 void test_insert_uchar_list(void **state);
 void test_insert_bool_list(void **state);
+// ================================================================================
+// ================================================================================
+// TEST REPLACE_TYPE_LIST_INDEX
+
+void test_replace_short_list_index(void **state);
+void test_replace_ushort_list_index(void **state);
+void test_replace_int_list_index(void **state);
+void test_replace_uint_list_index(void **state);
+void test_replace_long_list_index(void **state);
+void test_replace_ulong_list_index(void **state);
+void test_replace_llong_list_index(void **state);
+void test_replace_ullong_list_index(void **state);
+void test_replace_float_list_index(void **state);
+void test_replace_double_list_index(void **state);
+void test_replace_ldouble_list_index(void **state);
+void test_replace_char_list_index(void **state);
+void test_replace_uchar_list_index(void **state);
+void test_replace_bool_list_index(void **state);
+void test_replace_string_list_index(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
-// ================================================================================
-// ================================================================================
 // eof

@@ -2982,4 +2982,350 @@ int pop_string_list_index(StringLL *list, size_t index) {
 }
 // ================================================================================
 // ================================================================================
+
+int replace_short_list_index(ShortLL *list, short int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct short_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct short_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ushort_list_index(UShortLL *list, unsigned short int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct ushort_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct ushort_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_int_list_index(IntLL *list, int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct int_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct int_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_uint_list_index(UIntLL *list, unsigned int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct uint_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct uint_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_long_list_index(LIntLL *list, long int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct long_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct long_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ulong_list_index(ULIntLL *list, unsigned long int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct ulong_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct ulong_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_llong_list_index(LLIntLL *list, long long int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct llong_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct llong_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ullong_list_index(ULLIntLL *list, unsigned long long int new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct ullong_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct ullong_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_float_list_index(FltLL *list, float new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct float_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct float_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_double_list_index(DbleLL *list, double new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct double_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct double_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_ldouble_list_index(LDbleLL *list, long double new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct ldouble_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct ldouble_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_char_list_index(CharLL *list, char new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct char_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct char_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_uchar_list_index(UCharLL *list, unsigned char new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct uchar_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct uchar_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_bool_list_index(BoolLL *list, bool new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct bool_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct bool_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int replace_string_list_index(StringLL *list, char *new_value, size_t index) {
+	if (index < 0 || index > list->active_length - 1) {
+		fprintf(stderr, "Index out of range\n");
+		return -1;
+	}
+	if (index < list->active_length / 2) {
+		struct string_list *current = list->head;
+		for (size_t i = 0; i < index; i++) {
+			current = current->next;
+		}
+		current->data = new_value;
+	}
+	else {
+		struct string_list *current = list->tail;
+		for (size_t i = list->active_length - 1; i > index; i--) {
+			current = current->previous;
+		}
+		current->data = new_value;
+	}
+	return 1;
+}
+// ================================================================================
+// ================================================================================
 // eof
