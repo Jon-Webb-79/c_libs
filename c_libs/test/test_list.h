@@ -233,5 +233,20 @@ void test_max_double_list(void **state);
 void test_max_ldouble_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_MIN_TYPE_LIST FUNCTIONS
+
+void test_min_short_list(void **state);
+void test_min_ushort_list(void **state);
+void test_min_int_list(void **state);
+void test_min_uint_list(void **state);
+void test_min_long_list(void **state);
+void test_min_ulong_list(void **state);
+void test_min_llong_list(void **state);
+void test_min_ullong_list(void **state);
+void test_min_float_list(void **state);
+void test_min_double_list(void **state);
+void test_min_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

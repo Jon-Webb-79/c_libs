@@ -5899,4 +5899,149 @@ long double max_ldouble_list(LDbleLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// MIN_TYPE_LIST FUNCTIONS
+
+short int min_short_list(ShortLL *list) {
+	struct short_list *guess = list->head;
+	short int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int min_ushort_list(UShortLL *list) {
+	struct ushort_list *guess = list->head;
+	unsigned short int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+int min_int_list(IntLL *list) {
+	struct int_list *guess = list->head;
+	int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int min_uint_list(UIntLL *list) {
+	struct uint_list *guess = list->head;
+	unsigned int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long int min_long_list(LIntLL *list) {
+	struct long_list *guess = list->head;
+	long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int min_ulong_list(ULIntLL *list) {
+	struct ulong_list *guess = list->head;
+	unsigned long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long long int min_llong_list(LLIntLL *list) {
+	struct llong_list *guess = list->head;
+	long long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int min_ullong_list(ULLIntLL *list) {
+	struct ullong_list *guess = list->head;
+	unsigned long long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+float min_float_list(FltLL *list) {
+	struct float_list *guess = list->head;
+	float max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+double min_double_list(DbleLL *list) {
+	struct double_list *guess = list->head;
+	double max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long double min_ldouble_list(LDbleLL *list) {
+	struct ldouble_list *guess = list->head;
+	long double max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data < max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// ================================================================================
+// ================================================================================
 // eof

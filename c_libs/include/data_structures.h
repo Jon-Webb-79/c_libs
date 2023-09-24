@@ -723,7 +723,18 @@
 							  ULLInt: min_ullong_vector, \
 							  Flt: min_float_vector, \
 						      Dble: min_double_vector, \
-							  LDble: min_ldouble_vector)(&T)
+							  LDble: min_ldouble_vector, \
+							  ShortLL: min_short_list, \
+							  UShortLL: min_ushort_list, \
+							  IntLL: min_int_list, \
+							  UIntLL: min_uint_list, \
+							  LIntLL: min_long_list, \
+							  ULIntLL: min_ulong_list, \
+							  LLIntLL: min_llong_list, \
+							  ULLIntLL: min_ullong_list, \
+							  FltLL: min_float_list, \
+							  DbleLL: min_double_list, \
+							  LDbleLL: min_ldouble_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // MAC MACRO

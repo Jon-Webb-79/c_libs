@@ -4612,5 +4612,227 @@ double max_double_list(DbleLL *list);
 long double max_ldouble_list(LDbleLL *list);
 // ================================================================================
 // ================================================================================
+// MIN_TYPE_LIST FUNCTIONS
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type ShortLL
+ *
+ * /param vec A linked list data structure of type ShortLL
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list, 5);
+ * short int a[5] = { 1, 2, 3, 4, 5};
+ * insert_short_list(&list, a, 5, 0);
+ * short int min = min_short_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_short_list(&list);
+ * @endcode
+ */
+short int min_short_list(ShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type USHortLL
+ *
+ * /param vec A linked list data structure of type UShortLL
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list, 5);
+ * unsigned short int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ushort_list(&list, a, 5, 0);
+ * unsigned short int min = min_ushort_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_ushort_list(&list);
+ * @endcode
+ */
+unsigned short int min_ushort_list(UShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type IntLL
+ *
+ * /param vec A linked list data structure of type IntLL
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list, 5);
+ * int a[5] = { 1, 2, 3, 4, 5};
+ * insert_int_list(&list, a, 5, 0);
+ * int min = min_int_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_int_list(&list);
+ * @endcode
+ */
+int min_int_list(IntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type UIntLL
+ *
+ * /param vec A linked list data structure of type UIntLL
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list, 5);
+ * unsigned int a[5] = { 1, 2, 3, 4, 5};
+ * insert_uint_list(&list, a, 5, 0);
+ * unsigned int min = min_uint_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_uint_list(&list);
+ * @endcode
+ */
+unsigned int min_uint_list(UIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type LIntLL
+ *
+ * /param vec A linked list data structure of type LIntLL
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list, 5);
+ * long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_long_list(&list, a, 5, 0);
+ * long int min = min_long_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_long_list(&list);
+ * @endcode
+ */
+long int min_long_list(LIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type ULIntLL
+ *
+ * /param vec A linked list data structure of type ULIntLL
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list, 5);
+ * unsigned long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ulong_list(&list, a, 5, 0);
+ * unsigned lonf int min = min_ulong_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_ulong_list(&list);
+ * @endcode
+ */
+unsigned long int min_ulong_list(ULIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type LLIntLL
+ *
+ * /param vec A linked list data structure of type LLIntLL
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list, 5);
+ * long long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_llong_list(&list, a, 5, 0);
+ * long long int min = min_llong_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_llong_list(&list);
+ * @endcode
+ */
+long long int min_llong_list(LLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type ULLIntLL
+ *
+ * /param vec A linked list data structure of type ULIntLL
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list, 5);
+ * unsigned long long int a[5] = { 1, 2, 3, 4, 5};
+ * insert_ullong_list(&list, a, 5, 0);
+ * unsigned long long int min = min_ullong_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_ullong_list(&list);
+ * @endcode
+ */
+unsigned long long int min_ullong_list(ULLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type FltLL
+ *
+ * /param vec A linked list data structure of type FltLL
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list, 5);
+ * float a[5] = {1., 2., 3., 4., 5.};
+ * insert_float_list(&list, a, 5, 0);
+ * float min = min_float_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_float_list(&list);
+ * @endcode
+ */
+float min_float_list(FltLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type DbleLL
+ *
+ * /param vec A linked list data structure of type DbleLL
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list, 5);
+ * double a[5] = { 1, 2, 3, 4, 5};
+ * insert_double_list(&list, a, 5, 0);
+ * double min = min_double_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_double_list(&list);
+ * @endcode
+ */
+double min_double_list(DbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will determine the min value in a linked list data structure
+ * of type LDbleLL
+ *
+ * /param vec A linked list data structure of type LDbleLL
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list, 5);
+ * long double a[5] = { 1, 2, 3, 4, 5};
+ * insert_ldouble_list(&list, a, 5, 0);
+ * long double min = min_ldouble_list(&list);
+ * PRINT(max);
+ * // >> 1
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+long double min_ldouble_list(LDbleLL *list);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

@@ -1254,7 +1254,65 @@ The following functions can be used in place of the ``MAX`` Macro.
 
 MIN
 ===
-TBD
+The ``MIN`` Macro will determine the maximum value in a linked list data structure.
+
+.. code-block:: c
+
+   type MIN(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of typ ``T``.
+
+Returns
+-------
+
+- :c:`minimum`: The minimum value in a linked list data structure.
+
+.. code-block:: c
+
+   DbleLL list;
+   INIT_LIST(list);
+   double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
+   INSERT(list, a, 5);
+   double minimum = MIN(list);
+   PRINT(maximum);
+   FREE(list);
+
+.. code-block:: c
+
+   >> 10.70000
+
+The following functions can be used in place of the ``MIN`` Macro.
+
+.. code-block:: c
+
+   short int min_short_list(ShortLL *list);
+   unsigned short int min_ushort_list(UShortLL *list);
+   int min_int_list(IntLL *list);
+   unsigned int min_uint_list(UIntLL *list);
+   long int min_long_list(LIntLL *list);
+   unsigned long int min_ulong_list(ULIntLL *list);
+   long long int min_llong_list(LLIntLL *list);
+   unsigned long long int min_ullong_list(ULLIntLL *list);
+   float min_float_list(FltLL *list);
+   double min_double_list(DbleLL *list);
+   long double min_ldouble_list(LDbleLL *list);
+
+.. code-block:: c
+
+   DbleLL list;
+   init_double_list(&list);
+   double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
+   insert_double_list(&list, a, 5);
+   double minimum = min_double_list(&list);
+   PRINT(minimum);
+   free_double_list(&list);
+
+.. code-block:: c
+
+   >> 10.700000
 
 RANGE
 =====

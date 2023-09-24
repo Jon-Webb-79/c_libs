@@ -2402,4 +2402,127 @@ void test_max_ldouble_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_MIN_TYPE_LIST FUNCTIONS
+
+void test_min_short_list(void **state) {
+	short int a[5] = {1, 2, 3, 4, 5};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	short int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ushort_list(void **state) {
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned short int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_int_list(void **state) {
+	int a[5] = {1, 2, 3, 4, 5};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_uint_list(void **state) {
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_long_list(void **state) {
+	long int a[5] = {1, 2, 3, 4, 5};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ulong_list(void **state) {
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned long int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_llong_list(void **state) {
+	long long int a[5] = {1, 2, 3, 4, 5};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long long int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ullong_list(void **state) {
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned long long int min = MIN(list);
+	assert_int_equal(1, min);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_float_list(void **state) {
+	float a[5] = {1., 2., 3., 4., 5.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float min = MIN(list);
+	assert_float_equal(1.f, min, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_double_list(void **state) {
+	double a[5] = {1., 2., 3., 4., 5.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	double min = MIN(list);
+	assert_float_equal(1.f, min, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_min_ldouble_list(void **state) {
+	long double a[5] = {1., 2., 3., 4., 5.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long double min = MIN(list);
+	assert_float_equal(1.f, min, 1.0e-3);
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof
