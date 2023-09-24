@@ -82,5 +82,24 @@ void test_replace_bool_list_index(void **state);
 void test_replace_string_list_index(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_REPLACE_TYPE_LIST_VALUES FUNCTIONS
+
+void test_replace_short_list_values(void **state);
+void test_replace_ushort_list_values(void **state);
+void test_replace_int_list_values(void **state);
+void test_replace_uint_list_values(void **state);
+void test_replace_long_list_values(void **state);
+void test_replace_ulong_list_values(void **state);
+void test_replace_llong_list_values(void **state);
+void test_replace_ullong_list_values(void **state);
+void test_replace_float_list_values(void **state);
+void test_replace_double_list_values(void **state);
+void test_replace_ldouble_list_values(void **state);
+void test_replace_char_list_values(void **state);
+void test_replace_uchar_list_values(void **state);
+void test_replace_bool_list_values(void **state);
+void test_replace_string_list_values(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

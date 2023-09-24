@@ -8,9 +8,10 @@ Welcome to c_libs Library
 
 The c_libs library contains a large assortment of typed and type-generic functionas
 and macros for various data structures and utilities such as file readers and the PRINT statement.
-The user of this library can select from the use of type specific functions, or they
-can choose to use a type-generic MACRO based interface, which will work with all
-data types that ship with ANSI standard C. This libraries relies upon the use
+This library was written for the express reason of providing a more modern object oriented
+interface to the C language.  The user of this library can interface with its functionality
+through a type generic interface driven by the ``_Generic`` operator, or they can interface
+with the equivalent type specific functions. This libraries relies upon the use
 of the ``_Generic`` operator to enable Macros such that the Macros do not consume extra memory.
 
 

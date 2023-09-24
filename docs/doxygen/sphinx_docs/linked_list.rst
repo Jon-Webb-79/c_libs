@@ -6,14 +6,12 @@ of various data types.  In addition, this library contains functions that act on
 the data structures to organize the data and calculate basic statistical values
 such as hte mean, averae, and standard deviation.
 
-**NOTE:** A Singly Likned List can save time in the act of inserting data
-into a linked list, and does not need to move all subsequent memory locations,
-such as is necessary with an array.  However, the time gained be changing pointers
-to the data is consumed by the time necessary to iterate through the unindexed
-data to find the insertion or deletion location in the data structure.  For
-this reason, this library only implements a double linked list, which allows
-the data structure to iterate in the forward and reverse direction, which
-can reduce the search time by half.
+**NOTE:** This library only includes a doubly linked list implementation.  A singly
+linked list may consume less memory than the implementation in this library;
+however, a singly linked list when averaged over a range of different use cases
+will execute insertations and deletions no faster than an array.  For this reason
+a doubly linked list was executed in this library, since it can execute insertions
+and deletions at approximately twice the speed of a singly linked list.
 
 LIST_STRUCT
 ===========
@@ -498,6 +496,9 @@ Returns
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    IntLL list;
    INIT_LIST(list);
    PUSH(list, 1, list.active_length);
@@ -533,6 +534,9 @@ The following functions can be used in place of the ``POP_INDEX`` Macro.
    int pop_string_index(StringLL list, size_t index);
 
 .. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
 
    IntLL list;
    init_int_list(&list);
@@ -571,6 +575,9 @@ Returns
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    FltLL list;
    INIT_LIST(list);
    float a[5] = {1.1, 2.2, 3.3, 4.4};
@@ -605,6 +612,9 @@ The following functions can be used in place of the ``REPLACE_INDEX`` Macro.
 
 .. code-block:: c
 
+   #include "llist.h"
+   #include "print.h"
+
    FltLL list;
    init_float_list(&list);
    float a[5] = {1.1, 2.2, 3.3, 4.4};
@@ -613,3 +623,78 @@ The following functions can be used in place of the ``REPLACE_INDEX`` Macro.
    PRINT(list);
    free_float_list(&list);
 
+REPLACE_VALUES
+==============
+The ``REPLACE_VALUES`` Macro will replace all instances of a value in a linked list
+with a user specified value.
+
+.. code-block:: c
+
+   void REPLACE_VALUES(T list, type old_value, type new_value);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+- :c:`old_value`: The value to be replaced of type consistent with ``T``.
+- :c:`new_value`: The value which will replace the old value of type consistent with ``T``.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   IntLL list;
+   INIT_LIST(list);
+   PUSH(list, 1, list.active_length);
+   PUSH(list, 2, list.active_length);
+   PUSH(list, 1, list.active_length);
+   PUSH(list, 4, list.active_length);
+   PUSH(list, 1, list.active_length);
+   REPLACE_VALUES(list, 1, 2);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( 2, 2, 2, 4, 2 )
+
+The following functions can be used in place of the ``REPLACE_VALUES`` Macro
+
+.. code-block:: c
+
+   void replace_short_list_values(ShortLL *list, short int old_value, short int new_value);
+   void replace_ushort_list_values(UShortLL *list, unsigned short int old_value, unsigned short int new_value);
+   void replace_int_list_values(IntLL *list, int old_value, int new_value);
+   void replace_uint_list_values(UIntLL *list, unsigned int old_value, unsigned int new_value);
+   void replace_long_list_values(LIntLL *list, long int old_value, long int new_value);
+   void replace_ulong_list_values(ULIntLL *list, unsigned long int old_value, unsigned long int new_value);
+   void replace_llong_list_values(LLIntLL *list, long long int old_value, long long int new_value);
+   void replace_ullong_list_values(ULLIntLL *list, unsigned long long int old_value, unsigned long long int new_value);
+   void replace_float_list_values(FltLL *list, float old_value, float new_value);
+   void replace_double_list_values(DbleLL *list, double old_value, double new_value);
+   void replace_ldouble_list_values(LDbleLL *list, long double old_value, long double new_value);
+   void replace_char_list_values(CharLL *list, char old_value, char new_value);
+   void replace_uchar_list_values(UCharLL *list, unsigned char old_value, unsigned char new_value);
+   void replace_bool_list_values(BoolLL *list, bool old_value, bool new_value);
+   void replace_string_list_values(StringLL *list,  char *old_value, char *new_value);
+
+.. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
+
+   IntLL list;
+   init_int_list(&list);
+   push_int_list(&list, 1, list.active_length);
+   push_int_list(&list, 2, list.active_length);
+   push_int_list(&list, 1, list.active_length);
+   push_int_list(&list, 4, list.active_length);
+   push_int_list(&list, 1, list.active_length);
+   replace_int_list_values(&list, 1, 2);
+   PRINT(list);
+   free_int_list(&list);
+
+.. code-block:: bash
+
+   >> ( 2, 2, 2, 4, 2 )

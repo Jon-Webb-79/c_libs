@@ -301,7 +301,22 @@
 										           Char: replace_char_vector_values, \
 												   UChar: replace_uchar_vector_values, \
 												   Bool: replace_bool_vector_values, \
-												   String: replace_string_vector_values)(&T, old, new)
+												   String: replace_string_vector_values, \
+												   ShortLL: replace_short_list_values, \
+												   UShortLL: replace_ushort_list_values, \
+												   IntLL: replace_int_list_values, \
+												   UIntLL: replace_uint_list_values, \
+												   LIntLL: replace_long_list_values, \
+												   ULIntLL: replace_ulong_list_values, \
+												   LLIntLL: replace_llong_list_values, \
+												   ULLIntLL: replace_ullong_list_values, \
+											       FltLL: replace_float_list_values, \
+												   DbleLL: replace_double_list_values, \
+												   LDbleLL: replace_ldouble_list_values, \
+												   CharLL: replace_char_list_values, \
+												   UCharLL: replace_uchar_list_values, \
+												   BoolLL: replace_bool_list_values, \
+												   StringLL: replace_string_list_values)(&T, old, new)
 // ==========================================================================================
 // ==========================================================================================
 // DELETE_TYPE_DUPLICATES OPERATOR

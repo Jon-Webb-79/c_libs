@@ -2083,5 +2083,325 @@ int replace_bool_list_index(BoolLL *list, bool new_value, size_t index);
 int replace_string_list_index(StringLL *list, char *new_value, size_t index);
 // ================================================================================
 // ================================================================================
+// REPLACE_TYPE_LIST FUNCTIONS
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type ShortLL
+ * /param old_value A value of type short int that will be replaced
+ * /param new_value A value of type short int that will replace the old value
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list);
+ * short int a[5] = {1, 2, 1, 3, 1};
+ * insert_short_list(&list, a, 5, 0);
+ * replace_short_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+void replace_short_list_values(ShortLL *list, short int old_value, short int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type UShortLL
+ * /param old_value A value of type unsigned short int that will be replaced
+ * /param new_value A value of type unsigned short int that will replace the old value
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list);
+ * unsigned short int a[5] = {1, 2, 1, 3, 1};
+ * insert_ushort_list(&list, a, 5, 0);
+ * replace_ushort_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+void replace_ushort_list_values(UShortLL *list, unsigned short int old_value, unsigned short int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type IntLL
+ * /param old_value A value of type int that will be replaced
+ * /param new_value A value of type int that will replace the old value
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list);
+ * int a[5] = {1, 2, 1, 3, 1};
+ * insert_int_list(&list, a, 5, 0);
+ * replace_int_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+void replace_int_list_values(IntLL *list, int old_value, int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type UIntLL
+ * /param old_value A value of type unsigned int that will be replaced
+ * /param new_value A value of type unsigned int that will replace the old value
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list);
+ * unsigned int a[5] = {1, 2, 1, 3, 1};
+ * insert_uint_list(&list, a, 5, 0);
+ * replace_uint_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+void replace_uint_list_values(UIntLL *list, unsigned int old_value, unsigned int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type LIntLL
+ * /param old_value A value of type long int that will be replaced
+ * /param new_value A value of type long int that will replace the old value
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list);
+ * long int a[5] = {1, 2, 1, 3, 1};
+ * insert_long_list(&list, a, 5, 0);
+ * replace_long_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+void replace_long_list_values(LIntLL *list, long int old_value, long int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type ULIntLL
+ * /param old_value A value of type unsigned long int that will be replaced
+ * /param new_value A value of type unsigned long int that will replace the old value
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list);
+ * unsigned long int a[5] = {1, 2, 1, 3, 1};
+ * insert_ulong_list(&list, a, 5, 0);
+ * replace_ulong_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+void replace_ulong_list_values(ULIntLL *list, unsigned long int old_value, unsigned long int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type LLIntLL
+ * /param old_value A value of type long long int that will be replaced
+ * /param new_value A value of type long long int that will replace the old value
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list);
+ * long long int a[5] = {1, 2, 1, 3, 1};
+ * insert_llong_list(&list, a, 5, 0);
+ * replace_llong_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+void replace_llong_list_values(LLIntLL *list, long long int old_value, long long int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type ULLIntLL
+ * /param old_value A value of type unsigned long long int that will be replaced
+ * /param new_value A value of type unsigned long long int that will replace the old value
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list);
+ * unsigned long long int a[5] = {1, 2, 1, 3, 1};
+ * insert_ullong_list(&list, a, 5, 0);
+ * replace_ullong_list_values(&list, 1, 10);
+ * PRINT(list);
+ * // >> [ 10, 2, 10, 3, 10 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+void replace_ullong_list_values(ULLIntLL *list, unsigned long long int old_value, unsigned long long int new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type FltLL
+ * /param old_value A value of type float that will be replaced
+ * /param new_value A value of type float that will replace the old value
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list);
+ * float a[5] = {1., 2., 1., 3., 1.};
+ * insert_float_list(&list, a, 5, 0);
+ * replace_llong_list_values(&list, 1.f, 10.f);
+ * PRINT(list);
+ * // >> [ 10.000, 2.000, 10.000, 3.000, 10.000 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+void replace_float_list_values(FltLL *list, float old_value, float new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type DbleLL
+ * /param old_value A value of type double that will be replaced
+ * /param new_value A value of type double that will replace the old value
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list);
+ * double a[5] = {1., 2., 1., 3., 1.};
+ * insert_double_list(&list, a, 5, 0);
+ * replace_double_list_values(&list, 1., 10.);
+ * PRINT(list);
+ * // >> [ 10.000, 2.000, 10.000, 3.000, 10.000 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+void replace_double_list_values(DbleLL *list, double old_value, double new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type LDbleLL
+ * /param old_value A value of type long double that will be replaced
+ * /param new_value A value of type long double that will replace the old value
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list);
+ * long double a[5] = {1., 2., 1., 3., 1.};
+ * insert_ldouble_list(&list, a, 5, 0);
+ * replace_ldouble_list_values(&list, 1., 10.);
+ * PRINT(list);
+ * // >> [ 10.000, 2.000, 10.000, 3.000, 10.000 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+void replace_ldouble_list_values(LDbleLL *list, long double old_value, long double new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type CharLL
+ * /param old_value A value of type char that will be replaced
+ * /param new_value A value of type char that will replace the old value
+ *
+ * @code
+ * CharLL list;
+ * init_char_list(&list);
+ * char a[5] = {'a','b','a','c', 'a'};
+ * insert_char_list(&list, a, 5, 0);
+ * replace_char_list_values(&list, 'a', 'q');
+ * PRINT(list);
+ * // >> [ q, b, q, c, q ]
+ * free_char_list(&list);
+ * @endcode
+ */
+void replace_char_list_values(CharLL *list, char old_value, char new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type UCharLL
+ * /param old_value A value of type unsigned char that will be replaced
+ * /param new_value A value of type unsigned char that will replace the old value
+ *
+ * @code
+ * UCharLL list;
+ * init_uchar_list(&list);
+ * unsigned char a[5] = {'a','b','a','c', 'a'};
+ * insert_uchar_list(&list, a, 5, 0);
+ * replace_uchar_list_values(&list, 'a', 'q');
+ * PRINT(list);
+ * // >> [ q, b, q, c, q ]
+ * free_uchar_list(&list);
+ * @endcode
+ */
+void replace_uchar_list_values(UCharLL *list, unsigned char old_value, unsigned char new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type BoolLL
+ * /param old_value A value of type bool that will be replaced
+ * /param new_value A value of type bool that will replace the old value
+ *
+ * @code
+ * BoolLL list;
+ * init_bool_list(&list);
+ * bool a[5] = {true, false, true, false, true};
+ * insert_bool_list(&list, a, 5, 0);
+ * replace_bool_list_values(&list, true, false);
+ * PRINT(list);
+ * // >> [ false, false, false, false, false ]
+ * free_bool_list(&list);
+ * @endcode
+ */
+void replace_bool_list_values(BoolLL *list, bool old_value, bool new_value);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will replace all instances of a value with another value
+ *
+ * /param list A linked list struct of type StringLL
+ * /param old_value A value of type char* that will be replaced
+ * /param new_value A value of type char* that will replace the old value
+ *
+ * @code
+ * StringLL list;
+ * init_string_list(&list);
+ * push_string_list(&list, "One", 0);
+ * push_string_list(&list, "Two", 1);
+ * push_string_list(&list, "One", 2);
+ * push_string_list(&list, "Four", 3);
+ * push_string_list(&list, "One", 4);
+ * replace_bool_list_values(&list, "One", "Ten");
+ * PRINT(list);
+ * // >> [ Ten, Two, Ten, Four, Ten ]
+ * free_string_list(&list);
+ * @endcode
+ */
+void replace_string_list_values(StringLL *list, char *old_value, char *new_value);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

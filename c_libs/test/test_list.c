@@ -714,4 +714,221 @@ void test_replace_string_list_index(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_REPLACE_TYPE_LIST_VALUES FUNCTIONS
+
+void test_replace_short_list_values(void **state) {
+	short int a[5] = {1, 2, 1, 4, 1};
+	short int b[5] = {10, 2, 10, 4, 10};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ushort_list_values(void **state) {
+	unsigned short int a[5] = {1, 2, 1, 4, 1};
+	unsigned short int b[5] = {10, 2, 10, 4, 10};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_int_list_values(void **state) {
+	int a[5] = {1, 2, 1, 4, 1};
+	int b[5] = {10, 2, 10, 4, 10};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_uint_list_values(void **state) {
+	unsigned int a[5] = {1, 2, 1, 4, 1};
+	unsigned int b[5] = {10, 2, 10, 4, 10};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_long_list_values(void **state) {
+	long int a[5] = {1, 2, 1, 4, 1};
+	long int b[5] = {10, 2, 10, 4, 10};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ulong_list_values(void **state) {
+	unsigned long int a[5] = {1, 2, 1, 4, 1};
+	unsigned long int b[5] = {10, 2, 10, 4, 10};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_llong_list_values(void **state) {
+	long long int a[5] = {1, 2, 1, 4, 1};
+	long long int b[5] = {10, 2, 10, 4, 10};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ullong_list_values(void **state) {
+	unsigned long long int a[5] = {1, 2, 1, 4, 1};
+	unsigned long long int b[5] = {10, 2, 10, 4, 10};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1, 10);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_float_list_values(void **state) {
+	float a[5] = {1., 2., 1., 4., 1.};
+	float b[5] = {10., 2., 10., 4., 10.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1.f, 10.f);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(b[i], IDATA(list, i), 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_double_list_values(void **state) {
+	double a[5] = {1., 2., 1., 4., 1.};
+	double b[5] = {10., 2., 10., 4., 10.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1., 10.);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(b[i], IDATA(list, i), 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_ldouble_list_values(void **state) {
+	long double a[5] = {1., 2., 1., 4., 1.};
+	long double b[5] = {10., 2., 10., 4., 10.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 1., 10.);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(b[i], IDATA(list, i), 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_char_list_values(void **state) {
+	char a[5] = {'a', 'b', 'a', 'd', 'a'};
+	char b[5] = {'q', 'b', 'q', 'd', 'q'};
+	CharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 'a', 'q');
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_uchar_list_values(void **state) {
+	unsigned char a[5] = {'a', 'b', 'a', 'd', 'a'};
+	unsigned char b[5] = {'q', 'b', 'q', 'd', 'q'};
+	UCharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, 'a', 'q');
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_bool_list_values(void **state) {
+	bool a[5] = {true, false, true, false, true};
+	bool b[5] = {true, true, true, true, true};
+	BoolLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REPLACE_VALUES(list, false, true);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_replace_string_list_values(void **state) {
+	char *a[5] = {"Ten", "Two", "Ten", "Four", "Ten"};
+	StringLL list;
+	INIT_LIST(list);
+	PUSH(list, "One", 0);
+	PUSH(list, "Two", 1);
+	PUSH(list, "One", 2);
+	PUSH(list, "Four", 3);
+	PUSH(list, "One", 4);
+	REPLACE_VALUES(list, "One", "Ten");
+	int cmp;
+	for (size_t i = 0; i < list.active_length; i++) {
+		cmp = strcmp(a[i], IDATA(list, i));
+		assert_int_equal(0, cmp);
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

@@ -3328,4 +3328,143 @@ int replace_string_list_index(StringLL *list, char *new_value, size_t index) {
 }
 // ================================================================================
 // ================================================================================
+// REPLACE_TYPE_LIST FUNCTIONS
+
+void replace_short_list_values(ShortLL *list, short int old_value, short int new_value) {
+	struct short_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_ushort_list_values(UShortLL *list, unsigned short int old_value, unsigned short int new_value) {
+	struct ushort_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_int_list_values(IntLL *list, int old_value, int new_value) {
+	struct int_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_uint_list_values(UIntLL *list, unsigned int old_value, unsigned int new_value) {
+	struct uint_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_long_list_values(LIntLL *list, long int old_value, long int new_value) {
+	struct long_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_ulong_list_values(ULIntLL *list, unsigned long int old_value, unsigned long int new_value) {
+	struct ulong_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_llong_list_values(LLIntLL *list, long long int old_value, long long int new_value) {
+	struct llong_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_ullong_list_values(ULLIntLL *list, unsigned long long int old_value, unsigned long long int new_value) {
+	struct ullong_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_float_list_values(FltLL *list, float old_value, float new_value) {
+	struct float_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_double_list_values(DbleLL *list, double old_value, double new_value) {
+	struct double_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_ldouble_list_values(LDbleLL *list, long double old_value, long double new_value) {
+	struct ldouble_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_char_list_values(CharLL *list, char old_value, char new_value) {
+	struct char_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_uchar_list_values(UCharLL *list, unsigned char old_value, unsigned char new_value) {
+	struct uchar_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_bool_list_values(BoolLL *list, bool old_value, bool new_value) {
+	struct bool_list *current = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		if (current->data == old_value) current->data = new_value;
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void replace_string_list_values(StringLL *list, char *old_value, char *new_value) {
+	struct string_list *current = list->head;
+	int cmp;
+	for (size_t i = 0; i < list->active_length; i++) {
+		cmp = strcmp(current->data, old_value);
+		if (cmp == 0) current->data = new_value;
+		current = current->next;
+	}
+}
+// ================================================================================
+// ================================================================================
 // eof
