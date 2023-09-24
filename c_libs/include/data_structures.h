@@ -768,7 +768,18 @@
 									               ULLInt: range_ullong_vector, \
 									               Flt: range_float_vector, \
 						                           Dble: range_double_vector, \
-									               LDble: range_ldouble_vector)(&T, start, end, delta)
+									               LDble: range_ldouble_vector, \
+												   ShortLL: range_short_list, \
+												   UShortLL: range_ushort_list, \
+												   IntLL: range_int_list, \
+												   UIntLL: range_uint_list, \
+												   LIntLL: range_long_list, \
+												   ULIntLL: range_ulong_list, \
+												   LLIntLL: range_llong_list, \
+												   ULLIntLL: range_ullong_list, \
+												   FltLL: range_float_list, \
+												   DbleLL: range_double_list, \
+												   LDbleLL: range_ldouble_list)(&T, start, end, delta)
 // ==========================================================================================
 // ==========================================================================================
 // COPY MACRO

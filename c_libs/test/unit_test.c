@@ -491,6 +491,15 @@ const struct CMUnitTest tests_list[] = {
 	cmocka_unit_test(test_min_float_list),
 	cmocka_unit_test(test_min_double_list),
 	cmocka_unit_test(test_min_ldouble_list),
+	cmocka_unit_test(test_range_short_list),
+	cmocka_unit_test(test_range_ushort_list),
+	cmocka_unit_test(test_range_long_list),
+	cmocka_unit_test(test_range_ulong_list),
+	cmocka_unit_test(test_range_llong_list),
+	cmocka_unit_test(test_range_ullong_list),
+	cmocka_unit_test(test_range_float_list),
+	cmocka_unit_test(test_range_double_list),
+	cmocka_unit_test(test_range_ldouble_list),
 };
 
 // Begin code

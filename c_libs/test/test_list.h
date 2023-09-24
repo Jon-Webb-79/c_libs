@@ -248,5 +248,20 @@ void test_min_double_list(void **state);
 void test_min_ldouble_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_RANGE_TYPE_LIST FUNCTIONS
+
+void test_range_short_list(void **state);
+void test_range_ushort_list(void **state);
+void test_range_int_list(void **state);
+void test_range_uint_list(void **state);
+void test_range_long_list(void **state);
+void test_range_ulong_list(void **state);
+void test_range_llong_list(void **state);
+void test_range_ullong_list(void **state);
+void test_range_float_list(void **state);
+void test_range_double_list(void **state);
+void test_range_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

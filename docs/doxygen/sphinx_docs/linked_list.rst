@@ -846,6 +846,7 @@ The following functions can be used in place of the ``REVERSE`` Macro.
 SORT
 ====
 The ``SORT`` Macro will sort a linked list data structure in ``FORWARD`` or ``REVERSE`` order.
+This macro and its related functions implement a quick sort algorithm.
 
 .. code-block:: c
 
@@ -1148,6 +1149,9 @@ Returns
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    IntLL list;
    INIT_LIST(list);
    int a[5] = {1, 2, 3, 4, 5};
@@ -1177,6 +1181,9 @@ The following functions can be used in place of the ``STDEV`` Macro.
    long double stdev_ldouble_list(LDbleLL *list);
 
 .. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
 
    IntLL list;
    init_int_list(&list);
@@ -1210,6 +1217,9 @@ Returns
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    DbleLL list;
    INIT_LIST(list);
    double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
@@ -1239,6 +1249,9 @@ The following functions can be used in place of the ``MAX`` Macro.
    long double max_ldouble_list(LDbleLL *list);
 
 .. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
 
    DbleLL list;
    init_double_list(&list);
@@ -1272,6 +1285,9 @@ Returns
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    DbleLL list;
    INIT_LIST(list);
    double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
@@ -1302,6 +1318,9 @@ The following functions can be used in place of the ``MIN`` Macro.
 
 .. code-block:: c
 
+   #include "llist.h"
+   #include "print.h"
+
    DbleLL list;
    init_double_list(&list);
    double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
@@ -1316,22 +1335,76 @@ The following functions can be used in place of the ``MIN`` Macro.
 
 RANGE
 =====
-TBD
+The ``RANGE`` Macro will insert a range of values into a linked list data structure
+starting with a user defined start and end point.
+
+.. code-block:: c
+
+   void RANGE(T list, type start, type end, type delta);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+- :c:`start`: The start point for the range
+- :c:`end`: The end point for the range
+- :c:`delta`: The interval between points
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   IntLL list;
+   INIT_LIST(list);
+   RANGE(list, 2, 10, 2);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( 2, 4, 6, 8, 10 )
+
+The following functions can be used in place of the ``RANGE`` Macro.
+
+.. code-block:: c
+
+   void range_short_list(ShortLL *list, short int start, short int end, short int delta);
+   void range_ushort_list(UShortLL *list, unsigned short int start, unsigned short int end, unsigned short int delta);
+   void range_int_list(IntLL *list, int start, int end, int delta);
+   void range_uint_list(UIntLL *list, unsigned int start, unsigned int end, unsigned int delta);
+   void range_long_list(LIntLL *list, long int start, long int end, long int delta);
+   void range_ulong_list(ULIntLL *list, unsigned long int start, unsigned long int end, unsigned long int delta);
+   void range_llong_list(LLIntLL *list, long long int start, long long int end, long long int delta);
+   void range_ullong_list(ULLIntLL *list, unsigned long long int start, unsigned long long int end, unsigned long long int delta);
+   void range_float_list(FltLL *list, float start, float end, float delta);
+   void range_double_list(DbleLL *list, double start, double end, double delta);
+   void range_ldouble_list(LDbleLL *list, long double start, long double end, long double delta);
+
+.. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
+
+   IntLL list;
+   init_int_list(&list);
+   range_int_list(&list, 2, 10, 2);
+   PRINT(list);
+   free_int_list(&list);
+
+.. code-block:: bash
+
+   >> ( 2, 4, 6, 8, 10 )
+
 
 COPY
 ====
 TBD
 
-IDATA
-=====
-TBD
-
-REPLACE_INDEX
-=============
-TBD
-
 REPEAT
 ======
+TBD
 
 LIST_TO_VECTOR
 ==============
+TBD

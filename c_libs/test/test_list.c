@@ -2525,4 +2525,183 @@ void test_min_ldouble_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_RANGE_TYPE_LIST FUNCTIONS
+
+
+void test_range_short_list(void **state) {
+	ShortLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	short a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct short_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ushort_list(void **state) {
+	UShortLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	unsigned short a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct ushort_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_int_list(void **state) {
+	IntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct int_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_uint_list(void **state) {
+	UIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	unsigned int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct uint_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_long_list(void **state) {
+	LIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct long_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ulong_list(void **state) {
+	ULIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	unsigned long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct ulong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_llong_list(void **state) {
+	LLIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	long long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct llong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ullong_list(void **state) {
+	ULLIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	unsigned long long int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+	struct ullong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, a[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_float_list(void **state) {
+	FltLL list;
+	INIT_LIST(list);
+	RANGE(list, 2.f, 20.f, 2.f);
+	float a[10] = {2., 4., 6., 8., 10., 12., 14., 16., 18., 20.};
+	struct float_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, a[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_double_list(void **state) {
+	DbleLL list;
+	INIT_LIST(list);
+	RANGE(list, 2., 20., 2.);
+	double a[10] = {2., 4., 6., 8., 10., 12., 14., 16., 18., 20.};
+	struct double_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, a[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_range_ldouble_list(void **state) {
+	LDbleLL list;
+	INIT_LIST(list);
+	RANGE(list, 2., 20., 2.);
+	long double a[10] = {2., 4., 6., 8., 10., 12., 14., 16., 18., 20.};
+	struct ldouble_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, a[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

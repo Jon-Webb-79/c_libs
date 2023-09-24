@@ -4834,5 +4834,254 @@ double min_double_list(DbleLL *list);
 long double min_ldouble_list(LDbleLL *list);
 // ================================================================================
 // ================================================================================
+// RANGE_TYPE_LIST FUNCTIONS
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type ShortLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list, 10);
+ * range_short_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+void range_short_list(ShortLL *list, short int start, short int end, short int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type UShortLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list, 10);
+ * range_ushort_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+void range_ushort_list(UShortLL *list, unsigned short int start, unsigned short int end,
+		               unsigned short int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type IntLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list, 10);
+ * range_int_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+void range_int_list(IntLL *list, int start, int end, int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type UIntLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list, 10);
+ * range_uint_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+void range_uint_list(UIntLL *list, unsigned int start, unsigned int end, unsigned int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type LIntLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list, 10);
+ * range_long_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+void range_long_list(LIntLL *list, long int start, long int end, long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type ULIntLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list, 10);
+ * range_ulong_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+void range_ulong_list(ULIntLL *list, unsigned long int start, unsigned long int end,
+		              unsigned long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type LLIntLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list, 10);
+ * range_llong_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+void range_llong_list(LLIntLL *list, long long int start, long long int end,
+		              long long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type ULLIntLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list, 10);
+ * range_ullong_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+void range_ullong_list(ULLIntLL *list, unsigned long long int start,
+		               unsigned long long int end,
+					   unsigned long long int delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type FltLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list, 10);
+ * range_float_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+void range_float_list(FltLL *list, float start, float end, float delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type DbleLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list, 10);
+ * range_double_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+void range_double_list(DbleLL *list, double start, double end, double delta);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will add a range of data points to a linked list data structure
+ * that start at a user defined data point and ends at another, or the nearest
+ * data point.
+ *
+ * /param vec A linked list data structure of type LDbleLL
+ * /param start The start point
+ * /param end The end point
+ * /param delta The difference between each data point
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list, 10);
+ * range_ldouble_list(&list, 2, 20, 2);
+ * PRINT(list);
+ * // [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+void range_ldouble_list(LDbleLL *list, long double start, long double end, long double delta);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

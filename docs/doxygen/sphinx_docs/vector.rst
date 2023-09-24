@@ -737,7 +737,7 @@ The following functions can be used in place of the ``REVERSE`` macro.
 SORT
 ====
 The ``SORT`` Macro will sort a vector or array data structure in ``FORWARD`` or
-``REVERSE`` order.
+``REVERSE`` order. This macro and its related functions implement a quick sort algorithm. 
 
 .. code-block:: c
 

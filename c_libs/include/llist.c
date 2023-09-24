@@ -6044,4 +6044,119 @@ long double min_ldouble_list(LDbleLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// RANGE_TYPE_LIST FUNCTIONS
+
+
+void range_short_list(ShortLL *list, short int start, short int end, short int delta) {
+		short int num = (end - start) / delta;
+		short int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_short_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_ushort_list(UShortLL *list, unsigned short start, unsigned short end, unsigned short delta) {
+		unsigned short int num = (end - start) / delta;
+		unsigned short int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_ushort_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_int_list(IntLL *list, int start, int end, int delta) {
+		int num = (end - start) / delta;
+		int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_int_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_uint_list(UIntLL *list, unsigned int start, unsigned int end, unsigned int delta) {
+		unsigned int num = (end - start) / delta;
+		unsigned int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_uint_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_long_list(LIntLL *list, long int start, long int end, long int delta) {
+		long int num = (end - start) / delta;
+		long int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_long_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_ulong_list(ULIntLL *list, unsigned long int start, unsigned long int end,
+		              long unsigned int delta) {
+		unsigned int num = (end - start) / delta;
+		unsigned int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_ulong_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_llong_list(LLIntLL *list, long long int start, long long int end, long long int delta) {
+		long long int num = (end - start) / delta;
+		long long int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_llong_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_ullong_list(ULLIntLL *list, unsigned long long int start, unsigned long long int end,
+		              long long unsigned int delta) {
+		unsigned long int num = (end - start) / delta;
+		unsigned long int advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_ullong_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_float_list(FltLL *list, float start, float end, float delta) {
+		float num = (end - start) / delta;
+		float advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_float_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_double_list(DbleLL *list, double start, double end, double delta) {
+		double num = (end - start) / delta;
+		double advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_double_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// --------------------------------------------------------------------------------
+
+void range_ldouble_list(LDbleLL *list, long double start, long double end, long double delta) {
+		long double num = (end - start) / delta;
+		long double advance = start;
+		for (size_t i = 0; i < num + 1; i++) {
+			push_ldouble_list(list, advance, list->active_length);
+			advance += delta;
+		}
+}
+// ================================================================================
+// ================================================================================
 // eof
