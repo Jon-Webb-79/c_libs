@@ -1679,7 +1679,7 @@ void test_sort_bool_list(void **state) {
 // --------------------------------------------------------------------------------
 
 void test_sort_string_list(void **state) {
-	const char* arr[] = {"Apple", "Banana", "Cucumber", "Xylaphone", "Zuchini"};
+	char* arr[] = {"Apple", "Banana", "Cucumber", "Xylaphone", "Zuchini"};
 	StringLL list;
 	INIT_LIST(list);
 	PUSH(list, "Xylaphone", 0);
@@ -1688,14 +1688,12 @@ void test_sort_string_list(void **state) {
 	PUSH(list, "Banana", 3);
     PUSH(list, "Zuchini", 4);
 	SORT(list, FORWARD);
-	struct string_list *guess = list.head;
-	size_t i = 0;
+	char *guess;
 	int cmp;
-	while (guess != NULL) {
-		cmp = strcmp(guess->data, arr[i]);
-		assert_int_equal(0, cmp);
-		i++;
-		guess = guess->next;
+	for (size_t i = 0; i < 5; i++) {
+		guess = IDATA(list, i);
+		cmp = strcmp(guess, arr[i]);
+		assert_int_equal(cmp, 0);
 	}
 	FREE(list);
 }

@@ -4717,37 +4717,27 @@ void sort_bool_list(BoolLL *list, size_t low, size_t high, sort_order order) {
 // --------------------------------------------------------------------------------
 
 struct string_list* partition_string_list(struct string_list *l, struct string_list *h, sort_order order) {
-	char* x = h->data;
+    char* x = h->data;
+    struct string_list *i = l->previous;
 
-	struct string_list *i = l->previous;
+    for (struct string_list *j = l; j != h; j = j->next) {
+        int comparison = strcmp(j->data, x);
 
-	for (struct string_list *j = l; j != h; j = j->next) {
-		if(j->data <= x && order == FORWARD) {
-			i = (i == NULL) ? l : i->next;
+        if ((comparison <= 0 && order == FORWARD) || (comparison >= 0 && order == REVERSE)) {
+            i = (i == NULL) ? l : i->next;
 
-			char* *a = &(i->data);
-			char* *b = &(j->data);
-			char* temp = *a;
-			*a = *b;
-			*b = temp;
-		}
-		if (j->data >= x && order == REVERSE) {
-			i = (i == NULL) ? l : i->next;
+            char* temp = i->data;
+            i->data = j->data;
+            j->data = temp;
+        }
+    }
 
-			char* *a = &(i->data);
-			char* *b = &(j->data);
-			char* temp = *a;
-			*a = *b;
-			*b = temp;
-		}
-	}
-	i = (i == NULL) ? l : i->next;
-	char* *a = &(i->data);
-	char* *b = &(h->data);
-    char* temp = *a;
-	*a = *b;
-	*b = temp;
-	return i;
+    struct string_list *pivot_position = (i == NULL) ? l : i->next;
+    char* temp = pivot_position->data;
+    pivot_position->data = h->data;
+    h->data = temp;
+
+    return pivot_position;
 }
 // --------------------------------------------------------------------------------
 
