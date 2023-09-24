@@ -4879,4 +4879,160 @@ long double sum_ldouble_list(LDbleLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// CUMSUM_TYPE_LIST FUNCTIONS
+
+ShortLL cumsum_short_list(ShortLL* list) {
+	ShortLL new_list;
+	init_short_list(&new_list);
+	struct short_list *iter = list->head;
+	short int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_short_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+UShortLL cumsum_ushort_list(UShortLL* list) {
+	UShortLL new_list;
+	init_ushort_list(&new_list);
+	struct ushort_list *iter = list->head;
+	unsigned short int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_ushort_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+IntLL cumsum_int_list(IntLL* list) {
+	IntLL new_list;
+	init_int_list(&new_list);
+	struct int_list *iter = list->head;
+	int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_int_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+UIntLL cumsum_uint_list(UIntLL* list) {
+	UIntLL new_list;
+	init_uint_list(&new_list);
+	struct uint_list *iter = list->head;
+	unsigned int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_uint_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+LIntLL cumsum_long_list(LIntLL* list) {
+	LIntLL new_list;
+	init_long_list(&new_list);
+	struct long_list *iter = list->head;
+	long int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_long_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+ULIntLL cumsum_ulong_list(ULIntLL* list) {
+	ULIntLL new_list;
+	init_ulong_list(&new_list);
+	struct ulong_list *iter = list->head;
+	unsigned long int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_ulong_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+LLIntLL cumsum_llong_list(LLIntLL* list) {
+	LLIntLL new_list;
+	init_llong_list(&new_list);
+	struct llong_list *iter = list->head;
+	long long int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_llong_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+ULLIntLL cumsum_ullong_list(ULLIntLL* list) {
+	ULLIntLL new_list;
+	init_ullong_list(&new_list);
+	struct ullong_list *iter = list->head;
+	unsigned long long int b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_ullong_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+FltLL cumsum_float_list(FltLL* list) {
+	FltLL new_list;
+	init_float_list(&new_list);
+	struct float_list *iter = list->head;
+	float b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_float_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+DbleLL cumsum_double_list(DbleLL* list) {
+	DbleLL new_list;
+	init_double_list(&new_list);
+	struct double_list *iter = list->head;
+	double b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_double_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+LDbleLL cumsum_ldouble_list(LDbleLL* list) {
+	LDbleLL new_list;
+	init_ldouble_list(&new_list);
+	struct ldouble_list *iter = list->head;
+	long double b = 0;
+	while (iter != NULL) {
+		b += iter->data;
+		push_ldouble_list(&new_list, b, new_list.active_length);
+		iter = iter->next;
+	}
+	return new_list;
+}
+// ================================================================================
+// ================================================================================
 // eof

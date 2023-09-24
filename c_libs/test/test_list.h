@@ -173,5 +173,20 @@ void test_sum_double_list(void **state);
 void test_sum_ldouble_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_CUMSUM_TYPE_LIST FUNCTIONS
+
+void test_cumsum_short_list(void **state);
+void test_cumsum_ushort_list(void **state);
+void test_cumsum_int_list(void **state);
+void test_cumsum_uint_list(void **state);
+void test_cumsum_long_list(void **state);
+void test_cumsum_ulong_list(void **state);
+void test_cumsum_llong_list(void **state);
+void test_cumsum_ullong_list(void **state);
+void test_cumsum_float_list(void **state);
+void test_cumsum_double_list(void **state);
+void test_cumsum_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

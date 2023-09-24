@@ -1822,4 +1822,215 @@ void test_sum_ldouble_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_CUMSUM_TYPE_LIST FUNCTIONS
+
+void test_cumsum_short_list(void **state) {
+	short int a[5] = {1, 2, 3, 4, 5};
+	short int b[5] = {1, 3, 6, 10, 15};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	ShortLL new_list = CUMSUM(list);
+	struct short_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ushort_list(void **state) {
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	unsigned short int b[5] = {1, 3, 6, 10, 15};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	UShortLL new_list = CUMSUM(list);
+	struct ushort_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_int_list(void **state) {
+	int a[5] = {1, 2, 3, 4, 5};
+	int b[5] = {1, 3, 6, 10, 15};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	IntLL new_list = CUMSUM(list);
+	struct int_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_uint_list(void **state) {
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	unsigned int b[5] = {1, 3, 6, 10, 15};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	UIntLL new_list = CUMSUM(list);
+	struct uint_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_long_list(void **state) {
+	long int a[5] = {1, 2, 3, 4, 5};
+	long int b[5] = {1, 3, 6, 10, 15};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	LIntLL new_list = CUMSUM(list);
+	struct long_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ulong_list(void **state) {
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	unsigned long int b[5] = {1, 3, 6, 10, 15};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	ULIntLL new_list = CUMSUM(list);
+	struct ulong_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_llong_list(void **state) {
+	long long int a[5] = {1, 2, 3, 4, 5};
+	long long int b[5] = {1, 3, 6, 10, 15};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	LLIntLL new_list = CUMSUM(list);
+	struct llong_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ullong_list(void **state) {
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	unsigned long long int b[5] = {1, 3, 6, 10, 15};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	ULLIntLL new_list = CUMSUM(list);
+	struct ullong_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_float_list(void **state) {
+	float a[5] = {1., 2., 3., 4., 5.};
+	float b[5] = {1., 3., 6., 10., 15.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	FltLL new_list = CUMSUM(list);
+	struct float_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_double_list(void **state) {
+	double a[5] = {1., 2., 3., 4., 5.};
+	double b[5] = {1., 3., 6., 10., 15.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	DbleLL new_list = CUMSUM(list);
+	struct double_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_cumsum_ldouble_list(void **state) {
+	long double a[5] = {1., 2., 3., 4., 5.};
+	long double b[5] = {1., 3., 6., 10., 15.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	LDbleLL new_list = CUMSUM(list);
+	struct ldouble_list *guess = new_list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// ================================================================================
+// ================================================================================
 // eof

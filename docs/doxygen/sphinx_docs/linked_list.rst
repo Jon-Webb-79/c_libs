@@ -989,7 +989,69 @@ The following functions can be used in place of the ``SUM`` Macro.
 
 CUMSUM
 ======
-TBD
+The ``CUMSUM`` Macro will produce a linked list data structure that stores 
+the cumulative summation of the original array as another linked list data
+structure of the same type.
+
+.. code-block:: c
+
+   T CUMSUM(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`cumulative`: A linked list data structure of type ``T`` containing the cumualtive sum of ``list``.
+
+.. code-block:: c
+
+   ShortLL list;
+   INIT_LIST(list);
+   short int a[5] = {1, 2, 3, 4, 5};
+   INSERT(list, a, 5, 0);
+   ShortLL cumulative_list = CUMSUM(list);
+   PRINT(cumulative_list);
+   FREE(list);
+   FREE(cumulative_list);
+
+.. code-block:: bash
+
+   >> ( 1, 3, 6, 10, 15 )
+
+The following functions can be used in place of the ``CUMSUM`` Macro.
+
+.. code-block:: c
+
+   ShortLL cumsum_short_list(ShortLL *list);
+   UShortLL cumsum_ushort_list(UShortLL *list);
+   IntLL cumsum_int_list(IntLL *list);
+   UIntLL cumsum_uint_list(UIntLL *list);
+   LIntLL cumsum_long_list(LIntLL *list);
+   ULIntLL cumsum_ulong_list(ULIntLL *list);
+   LLIntLL cumsum_llong_list(LIntLL *list);
+   ULLIntLL cumsum_ullong_list(ULLIntLL *list);
+   FltLL cumsum_float_list(FltLL *list);
+   DbleLL cumsum_double_list(DbleLL *list);
+   LDbleLL cumsum_ldouble_list(LDbleLL *list);
+
+.. code-block:: c
+
+   ShortLL list;
+   init_short_list(&list);
+   short int a[5] = {1, 2, 3, 4, 5};
+   insert_short_list(&list, a, 5, 0);
+   ShortLL cumulative_list = cumsum_short_list(&list);
+   PRINT(cumulative_list);
+   free_short_list(&list);
+   free_short_list(&cumulative_list);
+
+.. code-block:: bash
+
+   >> ( 1, 3, 6, 10, 15 )
 
 AVERAGE
 =======

@@ -3702,5 +3702,238 @@ double sum_double_list(DbleLL *vec);
 long double sum_ldouble_list(LDbleLL *vec);
 // ================================================================================
 // ================================================================================
+// CUMSUM_TYPE_LIST
+
+/**
+ * This function will return an ShortLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type ShortLL
+ * /return return_list A linked list container of type ShortLL
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&vec);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_list(&list, a, 5, 0);
+ * ShortLL cum_list = cumsum_short_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+ShortLL cumsum_short_list(ShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an UShortLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type UShortLL
+ * /return return_list A linked list container of type UShortLL
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&vec);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_list(&list, a, 5, 0);
+ * UShortLL cum_list = cumsum_ushort_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+UShortLL cumsum_ushort_list(UShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an IntLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type IntLL
+ * /return return_list A linked list container of type IntLL
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&vec);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_list(&list, a, 5, 0);
+ * IntLL cum_list = cumsum_int_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+IntLL cumsum_int_list(IntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an UInttLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type UIntLL
+ * /return return_list A linked list container of type UIntLL
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&vec);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_list(&list, a, 5, 0);
+ * UIntLL cum_list = cumsum_uint_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+UIntLL cumsum_uint_list(UIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an LIntLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type LIntLL
+ * /return return_list A linked list container of type LIntLL
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&vec);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_list(&list, a, 5, 0);
+ * LIntLL cum_list = cumsum_long_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+LIntLL cumsum_long_list(LIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an ULInttLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type ULIntLL
+ * /return return_list A linked list container of type ULIntLL
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&vec);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_list(&list, a, 5, 0);
+ * ULIntLL cum_list = cumsum_ulong_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+ULIntLL cumsum_ulong_list(ULIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an LLIntLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type LLIntLL
+ * /return return_list A linked list container of type LLIntLL
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&vec);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_list(&list, a, 5, 0);
+ * LLIntLL cum_list = cumsum_llong_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+LLIntLL cumsum_llong_list(LLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an ULLInttLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type ULLIntLL
+ * /return return_list A linked list container of type ULLIntLL
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&vec);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_list(&list, a, 5, 0);
+ * ULLIntLL cum_list = cumsum_ullong_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+ULLIntLL cumsum_ullong_list(ULLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an FltLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type FltLL
+ * /return return_list A linked list container of type FltLL
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&vec);
+ * float a[5] = {1, 2, 3, 4, 5};
+ * insert_float_list(&list, a, 5, 0);
+ * FltLL cum_list = cumsum_float_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+FltLL cumsum_float_list(FltLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an DbleLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type DbleLL
+ * /return return_list A linked list container of type DbleLL
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&vec);
+ * double a[5] = {1, 2, 3, 4, 5};
+ * insert_double_list(&list, a, 5, 0);
+ * DbleLL cum_list = cumsum_double_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+DbleLL cumsum_double_list(DbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will return an LDbleLL linked list container that holds an array
+ * containing the cumulative sum of the values in the input linked list
+ *
+ * /param list A linked list container of type LDbleLL
+ * /return return_list A linked list container of type LDbleLL
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&vec);
+ * long double a[5] = {1, 2, 3, 4, 5};
+ * insert_ldouble_list(&list, a, 5, 0);
+ * LDbleLL cum_list = cumsum_ldouble_list(&list);
+ * PRINT(vum_list);
+ * [ 1, 3, 6, 10, 15 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+LDbleLL cumsum_ldouble_list(LDbleLL *list);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

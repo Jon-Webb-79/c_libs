@@ -549,7 +549,18 @@
 						         Dble: cumsum_double_vector, \
 								 Char: cumsum_char_vector, \
 								 UChar: cumsum_uchar_vector, \
-								 LDble: cumsum_ldouble_vector)(&T)
+								 LDble: cumsum_ldouble_vector, \
+								 ShortLL: cumsum_short_list, \
+								 UShortLL: cumsum_ushort_list, \
+								 IntLL: cumsum_int_list, \
+								 UIntLL: cumsum_uint_list, \
+								 LIntLL: cumsum_long_list, \
+								 ULIntLL: cumsum_ulong_list, \
+								 LLIntLL: cumsum_llong_list, \
+								 ULLIntLL: cumsum_ullong_list, \
+								 FltLL: cumsum_float_list, \
+								 DbleLL: cumsum_double_list, \
+								 LDbleLL: cumsum_ldouble_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // AVERAGE MACRO
