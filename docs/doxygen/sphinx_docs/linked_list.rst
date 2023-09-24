@@ -1009,6 +1009,9 @@ Returns
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    ShortLL list;
    INIT_LIST(list);
    short int a[5] = {1, 2, 3, 4, 5};
@@ -1040,6 +1043,9 @@ The following functions can be used in place of the ``CUMSUM`` Macro.
 
 .. code-block:: c
 
+   #include "llist.h"
+   #include "print.h"
+
    ShortLL list;
    init_short_list(&list);
    short int a[5] = {1, 2, 3, 4, 5};
@@ -1055,7 +1061,73 @@ The following functions can be used in place of the ``CUMSUM`` Macro.
 
 AVERAGE
 =======
-TBD
+The ``AVERAGE`` Macro will calculate the average value of dat contained
+in a linked list data structure.
+
+.. code-block:: c
+
+   type AVERAGE(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`avg`: The average value of the data in a linked list.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   FltLL list;
+   INIT_LIST(list);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   INSERT(list, a, 5, 0);
+   float avg = AVERAGE(list);
+   PRINT(avg);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> 3.300000
+
+The following functions can be used in place of the ``AVERAGE`` Macro.
+
+.. code-block:: c
+
+   float average_short_list(ShortLL *list);
+   float average_ushort_list(UShortLL *list);
+   float average_int_list(IntLL *list);
+   float average_uint_list(UIntLL *list);
+   double average_long_list(LIntLL *list);
+   double average_ulong_list(ULIntLL *list);
+   long double average_llong_list(LLIntLL *list);
+   long double average_ullong_list(ULLIntLL *list);
+   float average_float_list(FltLL *list);
+   double average_double_list(DbleLL *list);
+   long double average_ldouble_list(LDbleLL *list);
+
+.. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
+
+   FltLL list;
+   init_float_list(&list);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   insert_float_list(&list, a, 5, 0);
+   float avg = average_float_list(&list);
+   PRINT(avg);
+   free_float_list(&list);
+
+.. code-block:: bash
+
+   >> 3.300000
+
 
 STDEV
 =====

@@ -5035,4 +5035,83 @@ LDbleLL cumsum_ldouble_list(LDbleLL* list) {
 }
 // ================================================================================
 // ================================================================================
+// AVERAGE_TYPE_LIST FUNCTIONS
+
+float average_short_list(ShortLL *list) {
+	short int sum = sum_short_list(list);
+	float avg = (float)sum / (float)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_ushort_list(UShortLL *list) {
+	unsigned short int sum = sum_ushort_list(list);
+	float avg = (float)sum / (float)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_int_list(IntLL *list) {
+	int sum = sum_int_list(list);
+	float avg = (float)sum / (float)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_uint_list(UIntLL *list) {
+	unsigned int sum = sum_uint_list(list);
+	float avg = (float)sum / (float)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+double average_long_list(LIntLL *list) {
+	long int sum = sum_long_list(list);
+	double avg = (double)sum / (double)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+double average_ulong_list(ULIntLL *list) {
+	unsigned long int sum = sum_ulong_list(list);
+	double avg = (double)sum / (double)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+long double average_llong_list(LLIntLL *list) {
+	long long int sum = sum_llong_list(list);
+	long double avg = (long double)sum / (long double)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+long double average_ullong_list(ULLIntLL *list) {
+	unsigned long long int sum = sum_ullong_list(list);
+	long double avg = (long double)sum / (long double)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+float average_float_list(FltLL *list) {
+	float sum = sum_float_list(list);
+	float avg = sum / (float)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+double average_double_list(DbleLL *list) {
+	double sum = sum_double_list(list);
+	double avg = sum / (double)list->active_length;
+	return avg;
+}
+// --------------------------------------------------------------------------------
+
+long double average_ldouble_list(LDbleLL *list) {
+	long double sum = sum_ldouble_list(list);
+	long double avg = sum / (long double)list->active_length;
+	return avg;
+}
+// ================================================================================
+// ================================================================================
 // eof

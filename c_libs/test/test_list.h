@@ -188,5 +188,20 @@ void test_cumsum_double_list(void **state);
 void test_cumsum_ldouble_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_AVERAGE_TYPE_LIST
+
+void test_average_short_list(void **state);
+void test_average_ushort_list(void **state);
+void test_average_int_list(void **state);
+void test_average_uint_list(void **state);
+void test_average_long_list(void **state);
+void test_average_ulong_list(void **state);
+void test_average_llong_list(void **state);
+void test_average_ullong_list(void **state);
+void test_average_float_list(void **state);
+void test_average_double_list(void **state);
+void test_average_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

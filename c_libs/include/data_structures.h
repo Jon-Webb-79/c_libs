@@ -593,7 +593,18 @@
 								  ULLInt: average_ullong_vector, \
 								  Flt: average_float_vector, \
 						          Dble: average_double_vector, \
-								  LDble: average_ldouble_vector)(&T)
+								  LDble: average_ldouble_vector, \
+								  ShortLL: average_short_list, \
+								  UShortLL: average_ushort_list, \
+								  IntLL: average_int_list, \
+								  UIntLL: average_uint_list, \
+								  LIntLL: average_long_list, \
+								  ULIntLL: average_ulong_list, \
+								  LLIntLL: average_llong_list, \
+								  ULLIntLL: average_ullong_list, \
+								  FltLL: average_float_list, \
+								  DbleLL: average_double_list, \
+								  LDbleLL: average_ldouble_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // STDEV MACRO
