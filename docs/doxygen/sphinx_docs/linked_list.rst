@@ -715,6 +715,9 @@ Parameters
 
 .. code-block:: c
 
+   #include "data_structures.h"
+   #include "print.h"
+
    StringLL list;
    INIT_LIST(list);
    PUSH(list, "One", list.active_length);
@@ -753,6 +756,9 @@ The following functions can be used in place of the ``DELETE_DUPLICATES`` Macro.
 
 .. code-block:: c
 
+   #include "llist.h"
+   #include "print.h"
+
    StringLL list;
    init_string_list(&list);
    push_string_list(&list, "One", list.active_length);
@@ -785,13 +791,16 @@ Parameters
 
 .. code-block:: c
 
-    ShortLL list;
-    INIT_LIST(list);
-    short int a[5] = {1, 2, 3, 4, 5};
-    INSERT(list, a, 5, 0);
-    REVERSE(list);
-    PRINT(list);
-    FREE(list);
+   #include "data_structures.h"
+   #include "print.h"
+
+   ShortLL list;
+   INIT_LIST(list);
+   short int a[5] = {1, 2, 3, 4, 5};
+   INSERT(list, a, 5, 0);
+   REVERSE(list);
+   PRINT(list);
+   FREE(list);
 
 .. code-block:: bash
 
@@ -819,13 +828,16 @@ The following functions can be used in place of the ``REVERSE`` Macro.
 
 .. code-block:: c
 
-    ShortLL list;
-    init_hosrt_list(&list);
-    short int a[5] = {1, 2, 3, 4, 5};
-    insert_short_list(&list, a, 5, 0);
-    reverse_short_list(&list);
-    PRINT(list);
-    free_short_list(&list);
+   #include "llist.h"
+   #include "print.h"
+
+   ShortLL list;
+   init_hosrt_list(&list);
+   short int a[5] = {1, 2, 3, 4, 5};
+   insert_short_list(&list, a, 5, 0);
+   reverse_short_list(&list);
+   PRINT(list);
+   free_short_list(&list);
 
 .. code-block:: bash
 
@@ -846,6 +858,9 @@ Parameters
 - :c:`order`: An enum representing the type of sort process.  A value of ``FORWARD`` will sort in ascending order, ``REVERSE`` will sort in descending order.
 
 .. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
 
    IntLL list;
    INIT_LIST(list);
@@ -885,6 +900,9 @@ and ``high`` should be 0 and the size of the array.
 
 .. code-block:: c
 
+   #include "data_llist.h"
+   #include "print.h"
+
    IntLL list;
    init_int_list(&list);
    int a[7] = {12, 4, 2, 7, 1, 21, 13};
@@ -899,3 +917,111 @@ and ``high`` should be 0 and the size of the array.
 
    >> ( 1, 2, 4, 7, 12, 13, 21 )
    >> ( 21, 13, 12, 7, 4, 2, 1 )
+
+SUM
+===
+The ``SUM`` Macro will output the sum of all values in an array.  This Macro will not
+work with ``BoolLL``, ``StringLL``, or ``CharLL`` data types.
+
+.. code-block:: c
+
+   type SUM(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`sum`: The sum value of all data in a linked list data structure.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   FltLL list;
+   INIT_LIST(list);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   INSERT(list, a, 5, 0);
+   float summation = SUM(list);
+   PRINT(summation)
+   FREE(list);
+
+.. code-block:: bash
+
+   >> 16.500000
+
+The following functions can be used in place of the ``SUM`` Macro.
+
+.. code-block:: c
+
+   type sun_short_list(ShortLL *list);
+   type sun_ushort_list(UShortLL *list);
+   type sun_int_list(IntLL *list);
+   type sun_uint_list(UIntLL *list);
+   type sun_long_list(LIntLL *list);
+   type sun_ulong_list(ULIntLL *list);
+   type sun_lLong_list(LlIntLL *list);
+   type sun_ulLong_list(UlLIntLL *list);
+   type sun_float_list(FltLL *list);
+   type sun_double_list(DbleLL *list);
+   type sun_ldouble_list(LDbleLL *list);
+
+.. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
+
+   FltLL list;
+   init_float_list(&list);
+   float a[5] = {1.1, 2.2, 3.3, 4.4, 5.5};
+   insert_float_list(&list, a, 5, 0);
+   float summation = sum_float_list(&list);
+   PRINT(summation)
+   free_float_list(&list);
+
+.. code-block:: bash
+
+   >> 16.500000
+
+CUMSUM
+======
+TBD
+
+AVERAGE
+=======
+TBD
+
+STDEV
+=====
+TBD
+
+MAX
+===
+TBD
+
+MIN
+===
+TBD
+
+RANGE
+=====
+TBD
+
+COPY
+====
+TBD
+
+IDATA
+=====
+TBD
+
+REPLACE_INDEX
+=============
+TBD
+
+REPEAT
+======

@@ -505,7 +505,18 @@
 						      Dble: sum_double_vector, \
 							  Char: sum_char_vector, \
 							  UChar: sum_uchar_vector, \
-							  LDble: sum_ldouble_vector)(&T)
+							  LDble: sum_ldouble_vector, \
+							  ShortLL: sum_short_list, \
+							  UShortLL: sum_ushort_list, \
+							  IntLL: sum_int_list, \
+							  UIntLL: sum_uint_list, \
+							  LIntLL: sum_long_list, \
+							  ULIntLL: sum_ulong_list, \
+							  LLIntLL: sum_llong_list, \
+							  ULLIntLL: sum_ullong_list, \
+							  FltLL: sum_float_list, \
+							  DbleLL: sum_double_list, \
+							  LDbleLL: sum_ldouble_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 

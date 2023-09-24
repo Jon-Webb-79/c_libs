@@ -1699,4 +1699,127 @@ void test_sort_string_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_SUM_TYPE_LIST
+
+void test_sum_short_list(void **state) {
+	short int a[5] = {1, 2, 3, 4, 5};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	short int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_ushort_list(void **state) {
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned short int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_int_list(void **state) {
+	int a[5] = {1, 2, 3, 4, 5};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_uint_list(void **state) {
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_long_list(void **state) {
+	long int a[5] = {1, 2, 3, 4, 5};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_ulong_list(void **state) {
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned long int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_llong_list(void **state) {
+	long long int a[5] = {1, 2, 3, 4, 5};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long long int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_ullong_list(void **state) {
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned long long int sum = SUM(list);
+	assert_int_equal(15, sum);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_float_list(void **state) {
+	float a[5] = {1., 2., 3., 4., 5.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float sum = SUM(list);
+	assert_float_equal(15, sum, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_double_list(void **state) {
+	double a[5] = {1., 2., 3., 4., 5.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	double sum = SUM(list);
+	assert_float_equal(15, sum, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sum_ldouble_list(void **state) {
+	long double a[5] = {1., 2., 3., 4., 5.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long double sum = SUM(list);
+	assert_float_equal(15, sum, 1.0e-3);
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

@@ -426,6 +426,17 @@ const struct CMUnitTest tests_list[] = {
     cmocka_unit_test(test_sort_uchar_list),
 	cmocka_unit_test(test_sort_bool_list),
 	cmocka_unit_test(test_sort_string_list),
+	cmocka_unit_test(test_sum_short_list),
+	cmocka_unit_test(test_sum_ushort_list),
+	cmocka_unit_test(test_sum_int_list),
+	cmocka_unit_test(test_sum_uint_list),
+	cmocka_unit_test(test_sum_long_list),
+	cmocka_unit_test(test_sum_ulong_list),
+	cmocka_unit_test(test_sum_llong_list),
+	cmocka_unit_test(test_sum_ullong_list),
+	cmocka_unit_test(test_sum_float_list),
+	cmocka_unit_test(test_sum_double_list),
+	cmocka_unit_test(test_sum_ldouble_list),
 };
 
 // Begin code

@@ -3480,5 +3480,227 @@ void sort_bool_list(BoolLL *vec, size_t low, size_t high, sort_order order);
 void sort_string_list(StringLL *vec, size_t low, size_t high, sort_order order);
 // ================================================================================
 // ================================================================================
+// SUM_TYPE_LIST FUNCTIONS
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type ShortLL
+ *
+ * /param vec A linked list data structure of type ShortLL
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list, 5);
+ * short int a[5] = {1, 2, 3, 4, 5};
+ * insert_short_list(&list, a, 5, 0);
+ * short int sum_value = sum_short_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_short_list(&list);
+ * @endcode
+ */
+short int sum_short_list(ShortLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type UShortLL
+ *
+ * /param vec A linked list data structure of type UShortLL
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list, 5);
+ * unsigned short int a[5] = {1, 2, 3, 4, 5};
+ * insert_ushort_list(&list, a, 5, 0);
+ * unsigned short int sum_value = sum_ushort_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ushort_list(&list);
+ * @endcode
+ */
+unsigned short int sum_ushort_list(UShortLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type IntLL
+ *
+ * /param vec A linked list data structure of type IntLL
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list, 5);
+ * int a[5] = {1, 2, 3, 4, 5};
+ * insert_int_list(&list, a, 5, 0);
+ * int sum_value = sum_int_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_int_list(&list);
+ * @endcode
+ */
+int sum_int_list(IntLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type UIntLL
+ *
+ * /param vec A linked list data structure of type UIntLL
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list, 5);
+ * unsigned int a[5] = {1, 2, 3, 4, 5};
+ * insert_uint_list(&list, a, 5, 0);
+ * unsigned int sum_value = sum_uint_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_uint_list(&list);
+ * @endcode
+ */
+unsigned int sum_uint_list(UIntLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type LIntLL
+ *
+ * /param vec A linked list data structure of type LIntLL
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list, 5);
+ * long int a[5] = {1, 2, 3, 4, 5};
+ * insert_long_list(&list, a, 5, 0);
+ * long int sum_value = sum_long_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_long_list(&list);
+ * @endcode
+ */
+long int sum_long_list(LIntLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type ULIntLL
+ *
+ * /param vec A linked list data structure of type ULIntLL
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list, 5);
+ * unsigned long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ulong_list(&list, a, 5, 0);
+ * unsigned long int sum_value = sum_ulong_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ulong_list(&list);
+ * @endcode
+ */
+unsigned long int sum_ulong_list(ULIntLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type LLIntLL
+ *
+ * /param vec A linked list data structure of type LLIntLL
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list, 5);
+ * long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_llong_list(&list, a, 5, 0);
+ * long long int sum_value = sum_llong_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_llong_list(&list);
+ * @endcode
+ */
+long long int sum_llong_list(LLIntLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type ULLIntLL
+ *
+ * /param vec A linked list data structure of type ULLIntLL
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list, 5);
+ * unsigned long long int a[5] = {1, 2, 3, 4, 5};
+ * insert_ullong_list(&list, a, 5, 0);
+ * unsigned long long int sum_value = sum_ullong_list(&vec);
+ * PRINT(vec);
+ * // >> 15
+ * free_ullong_list(&list);
+ * @endcode
+ */
+unsigned long long int sum_ullong_list(ULLIntLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type FltLL
+ *
+ * /param vec A linked list data structure of type FltLL
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list, 5);
+ * float a[5] = {1, 2, 3, 4, 5};
+ * insert_float_list(&list, a, 5, 0);
+ * float sum_value = sum_llong_list(&vec);
+ * PRINT(vec);
+ * // >> 15.000
+ * free_float_list(&list);
+ * @endcode
+ */
+float sum_float_list(FltLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type DbleLL
+ *
+ * /param vec A linked list data structure of type DbleLL
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list, 5);
+ * double a[5] = {1, 2, 3, 4, 5};
+ * insert_double_list(&list, a, 5, 0);
+ * double sum_value = sum_double_list(&vec);
+ * PRINT(vec);
+ * // >> 15.000
+ * free_double_list(&list);
+ * @endcode
+ */
+double sum_double_list(DbleLL *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will calculate the sum of the values in a linked list data structure
+ * of type LDbleLL
+ *
+ * /param vec A linked list data structure of type LDbleLL
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list, 5);
+ * long double a[5] = {1, 2, 3, 4, 5};
+ * insert_ldouble_list(&list, a, 5, 0);
+ * long double sum_value = sum_ldouble_list(&vec);
+ * PRINT(vec);
+ * // >> 15.000
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+long double sum_ldouble_list(LDbleLL *vec);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

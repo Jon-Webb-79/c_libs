@@ -158,5 +158,20 @@ void test_sort_bool_list(void **state);
 void test_sort_string_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_SUM_TYPE_LIST FUNCTIONS
+
+void test_sum_short_list(void **state);
+void test_sum_ushort_list(void **state);
+void test_sum_int_list(void **state);
+void test_sum_uint_list(void **state);
+void test_sum_long_list(void **state);
+void test_sum_ulong_list(void **state);
+void test_sum_llong_list(void **state);
+void test_sum_ullong_list(void **state);
+void test_sum_float_list(void **state);
+void test_sum_double_list(void **state);
+void test_sum_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

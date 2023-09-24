@@ -4756,4 +4756,127 @@ void sort_string_list(StringLL *list, size_t low, size_t high, sort_order order)
 }
 // ================================================================================
 // ================================================================================
+// SUM_TYPE_LIST FUNCTION
+
+short int sum_short_list(ShortLL *list) {
+	short int sum = 0;
+	struct short_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int sum_ushort_list(UShortLL *list) {
+	unsigned short int sum = 0;
+	struct ushort_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+int sum_int_list(IntLL *list) {
+	int sum = 0;
+	struct int_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int sum_uint_list(UIntLL *list) {
+	unsigned int sum = 0;
+	struct uint_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long int sum_long_list(LIntLL *list) {
+	long int sum = 0;
+	struct long_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int sum_ulong_list(ULIntLL *list) {
+	unsigned long int sum = 0;
+	struct ulong_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long long int sum_llong_list(LLIntLL *list) {
+	long long int sum = 0;
+	struct llong_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int sum_ullong_list(ULLIntLL *list) {
+	unsigned long long int sum = 0;
+	struct ullong_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+float sum_float_list(FltLL *list) {
+	float sum = 0.;
+	struct float_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+double sum_double_list(DbleLL *list) {
+	double sum = 0;
+	struct double_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// --------------------------------------------------------------------------------
+
+long double sum_ldouble_list(LDbleLL *list) {
+	long double sum = 0;
+	struct ldouble_list *new_list = list->head;
+	while (new_list != NULL) {
+		sum += new_list->data;
+		new_list = new_list->next;
+	}
+	return sum;
+}
+// ================================================================================
+// ================================================================================
 // eof
