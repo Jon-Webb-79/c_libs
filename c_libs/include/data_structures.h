@@ -351,7 +351,22 @@
 										    Char: delete_char_vector_duplicates, \
 											UChar: delete_uchar_vector_duplicates, \
 										    Bool: delete_bool_vector_duplicates, \
-										    String: delete_string_vector_duplicates)(&T)
+										    String: delete_string_vector_duplicates, \
+										    ShortLL: delete_short_list_duplicates, \
+										    UShortLL: delete_ushort_list_duplicates, \
+										    IntLL: delete_int_list_duplicates, \
+										    UIntLL: delete_uint_list_duplicates, \
+										    LIntLL: delete_long_list_duplicates, \
+										    ULIntLL: delete_ulong_list_duplicates, \
+										    LLIntLL: delete_llong_list_duplicates, \
+										    ULLIntLL: delete_ullong_list_duplicates, \
+										    FltLL: delete_float_list_duplicates, \
+										    DbleLL: delete_double_list_duplicates, \
+										    LDbleLL: delete_ldouble_list_duplicates, \
+										    CharLL: delete_char_list_duplicates, \
+											UCharLL: delete_uchar_list_duplicates, \
+										    BoolLL: delete_bool_list_duplicates, \
+										    StringLL: delete_string_list_duplicates)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // REVERSE MACRO

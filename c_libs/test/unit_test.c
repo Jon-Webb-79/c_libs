@@ -381,6 +381,21 @@ const struct CMUnitTest tests_list[] = {
 	cmocka_unit_test(test_replace_uchar_list_values),
 	cmocka_unit_test(test_replace_bool_list_values),
 	cmocka_unit_test(test_replace_string_list_values),
+	cmocka_unit_test(test_delete_short_list_duplicates),
+	cmocka_unit_test(test_delete_ushort_list_duplicates),
+	cmocka_unit_test(test_delete_int_list_duplicates),
+	cmocka_unit_test(test_delete_uint_list_duplicates),
+	cmocka_unit_test(test_delete_long_list_duplicates),
+	cmocka_unit_test(test_delete_ulong_list_duplicates),
+	cmocka_unit_test(test_delete_llong_list_duplicates),
+	cmocka_unit_test(test_delete_ullong_list_duplicates),
+	cmocka_unit_test(test_delete_float_list_duplicates),
+	cmocka_unit_test(test_delete_double_list_duplicates),
+	cmocka_unit_test(test_delete_ldouble_list_duplicates),
+	cmocka_unit_test(test_delete_char_list_duplicates),
+	cmocka_unit_test(test_delete_uchar_list_duplicates),
+	cmocka_unit_test(test_delete_bool_list_duplicates),
+	cmocka_unit_test(test_delete_string_list_duplicates)
 };
 
 // Begin code

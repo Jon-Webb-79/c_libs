@@ -698,3 +698,73 @@ The following functions can be used in place of the ``REPLACE_VALUES`` Macro
 .. code-block:: bash
 
    >> ( 2, 2, 2, 4, 2 )
+
+DELETE_DUPLICATES
+=================
+The ``DELETE_DUPLICATES`` Macro will delete all duplicate instances of
+every value in a linked list data structure.
+
+.. code-block:: c
+
+   void DELETE_DUPLICATES(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+.. code-block:: c
+
+   StringLL list;
+   INIT_LIST(list);
+   PUSH(list, "One", list.active_length);
+   PUSH(list, "One", list.active_length);
+   PUSH(list, "Two", list.active_length);
+   PUSH(list, "Two", list.active_length);
+   PUSH(list, "Three", list.active_length);
+   PUSH(list, "Three", list.active_length);
+   DELETE_DUPLICATES(list);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( One, Two, Three )
+
+The following functions can be used in place of the ``DELETE_DUPLICATES`` Macro.
+
+.. code-block:: c
+
+   void delete_short_list_duplicates(CharLL *list);
+   void delete_ushort_list_duplicates(UCharLL *list);
+   void delete_int_list_duplicates(IntLL *list);
+   void delete_uint_list_duplicates(UIntLL *list);
+   void delete_long_list_duplicates(LIntLL *list);
+   void delete_ulong_list_duplicates(ULIntLL *list);
+   void delete_llong_list_duplicates(LLIntLL *list);
+   void delete_ullong_list_duplicates(ULLIntLL *list);
+   void delete_char_list_duplicates(CharLL *list);
+   void delete_uchar_list_duplicates(UCharLL *list);
+   void delete_float_list_duplicates(FltLL *list);
+   void delete_double_list_duplicates(DbleLL *list);
+   void delete_ldouble_list_duplicates(LDbleLL *list);
+   void delete_bool_list_duplicates(BoolLL *list);
+   void delete_string_list_duplicates(StringLL *list);
+
+.. code-block:: c
+
+   StringLL list;
+   init_string_list(&list);
+   push_string_list(&list, "One", list.active_length);
+   push_string_list(&list, "One", list.active_length);
+   push_string_list(&list, "Two", list.active_length);
+   push_string_list(&list, "Two", list.active_length);
+   push_string_list(&list, "Three", list.active_length);
+   push_string_list(&list, "Three", list.active_length);
+   delete_string_list_duplicates(&list);
+   PRINT(list);
+   free_string_list(&list);
+
+.. code-block:: bash
+
+   >> ( One, Two, Three )

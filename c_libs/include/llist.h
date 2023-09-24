@@ -2403,5 +2403,367 @@ void replace_bool_list_values(BoolLL *list, bool old_value, bool new_value);
 void replace_string_list_values(StringLL *list, char *old_value, char *new_value);
 // ================================================================================
 // ================================================================================
+// DELETE_TYPE_LIST_DUPLICATES
+
+/**
+ * This function will delete all duplicate values in an ShortLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type ShortLL
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(list);
+ * push_short_list(list, 1, 0);
+ * push_short_list(list, 1, 1);
+ * push_short_list(list, 2, 2);
+ * push_short_list(list, 2, 3);
+ * push_short_list(list, 3, 4);
+ * push_short_list(list, 3, 5);
+ * delete_short_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+void delete_short_list_duplicates(ShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an UShortLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type UShortLL
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(list);
+ * push_ushort_list(list, 1, 0);
+ * push_ushort_list(list, 1, 1);
+ * push_ushort_list(list, 2, 2);
+ * push_ushort_list(list, 2, 3);
+ * push_ushort_list(list, 3, 4);
+ * push_ushort_list(list, 3, 5);
+ * delete_ushort_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+void delete_ushort_list_duplicates(UShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an IntLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type IntLL
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(list);
+ * push_int_list(list, 1, 0);
+ * push_int_list(list, 1, 1);
+ * push_int_list(list, 2, 2);
+ * push_int_list(list, 2, 3);
+ * push_int_list(list, 3, 4);
+ * push_int_list(list, 3, 5);
+ * delete_int_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+void delete_int_list_duplicates(IntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an UIntLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type UIntLL
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(list);
+ * push_uint_list(list, 1, 0);
+ * push_uint_list(list, 1, 1);
+ * push_uint_list(list, 2, 2);
+ * push_uint_list(list, 2, 3);
+ * push_uint_list(list, 3, 4);
+ * push_uint_list(list, 3, 5);
+ * delete_uint_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+void delete_uint_list_duplicates(UIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an LIntLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type LIntLL
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(list);
+ * push_long_list(list, 1, 0);
+ * push_long_list(list, 1, 1);
+ * push_long_list(list, 2, 2);
+ * push_long_list(list, 2, 3);
+ * push_long_list(list, 3, 4);
+ * push_long_list(list, 3, 5);
+ * delete_long_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+void delete_long_list_duplicates(LIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an ULIntLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type ULIntLL
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(list);
+ * push_ulong_list(list, 1, 0);
+ * push_ulong_list(list, 1, 1);
+ * push_ulong_list(list, 2, 2);
+ * push_ulong_list(list, 2, 3);
+ * push_ulong_list(list, 3, 4);
+ * push_ulong_list(list, 3, 5);
+ * delete_ulong_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+void delete_ulong_list_duplicates(ULIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an LLIntLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type LLIntLL
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(list);
+ * push_llong_list(list, 1, 0);
+ * push_llong_list(list, 1, 1);
+ * push_llong_list(list, 2, 2);
+ * push_llong_list(list, 2, 3);
+ * push_llong_list(list, 3, 4);
+ * push_llong_list(list, 3, 5);
+ * delete_llong_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+void delete_llong_list_duplicates(LLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an ULLIntLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type ULLIntLL
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(list);
+ * push_ullong_list(list, 1, 0);
+ * push_ullong_list(list, 1, 1);
+ * push_ullong_list(list, 2, 2);
+ * push_ullong_list(list, 2, 3);
+ * push_ullong_list(list, 3, 4);
+ * push_ullong_list(list, 3, 5);
+ * delete_ullong_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1, 2, 3 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+void delete_ullong_list_duplicates(ULLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an FltLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type FltLL
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(list);
+ * push_float_list(list, 1., 0);
+ * push_float_list(list, 1., 1);
+ * push_float_list(list, 2., 2);
+ * push_float_list(list, 2., 3);
+ * push_float_list(list, 3., 4);
+ * push_float_list(list, 3., 5);
+ * delete_float_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1.000, 2.000, 3.000 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+void delete_float_list_duplicates(FltLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an DbleLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type DbleLL
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(list);
+ * push_double_list(list, 1., 0);
+ * push_double_list(list, 1., 1);
+ * push_double_list(list, 2., 2);
+ * push_double_list(list, 2., 3);
+ * push_double_list(list, 3., 4);
+ * push_double_list(list, 3., 5);
+ * delete_double_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1.000, 2.000, 3.000 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+void delete_double_list_duplicates(DbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an LDbleLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type LDbleLL
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(list);
+ * push_ldouble_list(list, 1., 0);
+ * push_ldouble_list(list, 1., 1);
+ * push_ldouble_list(list, 2., 2);
+ * push_ldouble_list(list, 2., 3);
+ * push_ldouble_list(list, 3., 4);
+ * push_ldouble_list(list, 3., 5);
+ * delete_ldouble_list_duplicates(&list);
+ * PRINT(list);
+ * [ 1.000, 2.000, 3.000 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+void delete_ldouble_list_duplicates(LDbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an CharLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type CharLL
+ *
+ * @code
+ * CharLL list;
+ * init_char_list(list);
+ * push_char_list(list, 'a', 0);
+ * push_char_list(list, 'a', 1);
+ * push_char_list(list, 'b', 2);
+ * push_char_list(list, 'b', 3);
+ * push_char_list(list, 'c', 4);
+ * push_char_list(list, 'c', 5);
+ * delete_char_list_duplicates(&list);
+ * PRINT(list);
+ * [ a, b, c ]
+ * free_char_list(&list);
+ * @endcode
+ */
+void delete_char_list_duplicates(CharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an UCharLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type UCharLL
+ *
+ * @code
+ * UCharLL list;
+ * init_uchar_list(list);
+ * push_uchar_list(list, 'a', 0);
+ * push_uchar_list(list, 'a', 1);
+ * push_uchar_list(list, 'b', 2);
+ * push_uchar_list(list, 'b', 3);
+ * push_uchar_list(list, 'c', 4);
+ * push_uchar_list(list, 'c', 5);
+ * delete_uchar_list_duplicates(&list);
+ * PRINT(list);
+ * [ a, b, c ]
+ * free_uchar_list(&list);
+ * @endcode
+ */
+void delete_uchar_list_duplicates(UCharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an BoolLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type BoolLL
+ *
+ * @code
+ * BoolLL list;
+ * init_bool_list(list);
+ * push_bool_list(list, true, 0);
+ * push_bool_list(list, false, 1);
+ * push_bool_list(list, true, 2);
+ * push_bool_list(list, false, 3);
+ * push_bool_list(list, true, 4);
+ * push_bool_list(list, false, 5);
+ * delete_bool_list_duplicates(&list);
+ * PRINT(list);
+ * [ true, false ]
+ * free_bool_list(&list);
+ * @endcode
+ */
+void delete_bool_list_duplicates(BoolLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will delete all duplicate values in an StringLL struct, with
+ * exception of the first instance of the variable.
+ *
+ * /param vec A struct container of type StringLL
+ *
+ * @code
+ * StringLL list;
+ * init_string_list(list);
+ * push_string_list(list, "One", 0);
+ * push_string_list(list, "One", 1);
+ * push_string_list(list, "Two", 2);
+ * push_string_list(list, "Two", 3);
+ * push_string_list(list, "Three", 4);
+ * push_string_list(list, "Three", 5);
+ * delete_string_list_duplicates(&list);
+ * PRINT(list);
+ * [ One, Two, Three ]
+ * free_string_list(&list);
+ * @endcode
+ */
+void delete_string_list_duplicates(StringLL *list);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

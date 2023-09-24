@@ -101,5 +101,24 @@ void test_replace_bool_list_values(void **state);
 void test_replace_string_list_values(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_DELETE_TYPE_LIST_DUPLICATES
+
+void test_delete_short_list_duplicates(void **state);
+void test_delete_ushort_list_duplicates(void **state);
+void test_delete_int_list_duplicates(void **state);
+void test_delete_uint_list_duplicates(void **state);
+void test_delete_long_list_duplicates(void **state);
+void test_delete_ulong_list_duplicates(void **state);
+void test_delete_llong_list_duplicates(void **state);
+void test_delete_ullong_list_duplicates(void **state);
+void test_delete_float_list_duplicates(void **state);
+void test_delete_double_list_duplicates(void **state);
+void test_delete_ldouble_list_duplicates(void **state);
+void test_delete_char_list_duplicates(void **state);
+void test_delete_uchar_list_duplicates(void **state);
+void test_delete_bool_list_duplicates(void **state);
+void test_delete_string_list_duplicates(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

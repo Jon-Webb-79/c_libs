@@ -3467,4 +3467,324 @@ void replace_string_list_values(StringLL *list, char *old_value, char *new_value
 }
 // ================================================================================
 // ================================================================================
+// DELETE_TYPE_LIST_DUPLICATES FUNCTION
+
+void delete_short_list_duplicates(ShortLL *list) {
+	struct short_list *current = list->head;
+	struct short_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_short_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ushort_list_duplicates(UShortLL *list) {
+	struct ushort_list *current = list->head;
+	struct ushort_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_ushort_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_int_list_duplicates(IntLL *list) {
+	struct int_list *current = list->head;
+	struct int_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_int_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_uint_list_duplicates(UIntLL *list) {
+	struct uint_list *current = list->head;
+	struct uint_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_uint_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_long_list_duplicates(LIntLL *list) {
+	struct long_list *current = list->head;
+	struct long_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_long_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ulong_list_duplicates(ULIntLL *list) {
+	struct ulong_list *current = list->head;
+	struct ulong_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_ulong_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_llong_list_duplicates(LLIntLL *list) {
+	struct llong_list *current = list->head;
+	struct llong_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_llong_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ullong_list_duplicates(ULLIntLL *list) {
+	struct ullong_list *current = list->head;
+	struct ullong_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_ullong_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_float_list_duplicates(FltLL *list) {
+	struct float_list *current = list->head;
+	struct float_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_float_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_double_list_duplicates(DbleLL *list) {
+	struct double_list *current = list->head;
+	struct double_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_double_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_ldouble_list_duplicates(LDbleLL *list) {
+	struct ldouble_list *current = list->head;
+	struct ldouble_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_ldouble_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_char_list_duplicates(CharLL *list) {
+	struct char_list *current = list->head;
+	struct char_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_char_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_uchar_list_duplicates(UCharLL *list) {
+	struct uchar_list *current = list->head;
+	struct uchar_list *new_current = NULL;
+	int j;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if(new_current->data == current->data) {
+				new_current = new_current->next;
+				pop_uchar_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_bool_list_duplicates(BoolLL *list) {
+	struct bool_list *current = list->head;
+	struct bool_list *new_current = NULL;
+	int j;
+
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			if (current->data == new_current->data) {
+				new_current = new_current->next;
+				pop_bool_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// --------------------------------------------------------------------------------
+
+void delete_string_list_duplicates(StringLL *list) {
+	struct string_list *current = list->head;
+	struct string_list *new_current = NULL;
+	int j;
+	int cmp;
+	for (size_t i = 0; i < list->active_length - 1; i++) {
+		new_current = current->next;
+		j = i + 1;
+		while (new_current != NULL) {
+			cmp = strcmp(new_current->data, current->data);
+			if(cmp == 0) {
+				new_current = new_current->next;
+				pop_string_list_index(list, j);
+				j--;
+			}
+			else new_current = new_current->next;
+			j++;
+		}
+		current = current->next;
+	}
+}
+// ================================================================================
+// ================================================================================
 // eof

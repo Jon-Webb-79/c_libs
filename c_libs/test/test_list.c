@@ -931,4 +931,222 @@ void test_replace_string_list_values(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_DELETE_TYPE_DUPLICATES FUNCTIONS
+
+void test_delete_short_list_duplicates(void **state) {
+	short int a[6] = {1, 1, 2, 2, 3, 3};
+	short int b[3] = {1, 2, 3};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ushort_list_duplicates(void **state) {
+	unsigned short int a[6] = {1, 1, 2, 2, 3, 3};
+	unsigned short int b[3] = {1, 2, 3};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_int_list_duplicates(void **state) {
+	int a[6] = {1, 1, 2, 2, 3, 3};
+	int b[3] = {1, 2, 3};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_uint_list_duplicates(void **state) {
+	unsigned int a[6] = {1, 1, 2, 2, 3, 3};
+	unsigned int b[3] = {1, 2, 3};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_long_list_duplicates(void **state) {
+	long int a[6] = {1, 1, 2, 2, 3, 3};
+	long int b[3] = {1, 2, 3};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ulong_list_duplicates(void **state) {
+	unsigned long int a[6] = {1, 1, 2, 2, 3, 3};
+	unsigned long int b[3] = {1, 2, 3};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_llong_list_duplicates(void **state) {
+	long long int a[6] = {1, 1, 2, 2, 3, 3};
+	long long int b[3] = {1, 2, 3};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ullong_list_duplicates(void **state) {
+	unsigned long long int a[6] = {1, 1, 2, 2, 3, 3};
+	unsigned long long int b[3] = {1, 2, 3};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_float_list_duplicates(void **state) {
+	float a[6] = {1., 1., 2., 2., 3., 3.};
+	float b[3] = {1., 2., 3.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_float_equal(b[i], IDATA(list, i), 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_double_list_duplicates(void **state) {
+	double a[6] = {1., 1., 2., 2., 3., 3.};
+	double b[3] = {1., 2., 3.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_float_equal(b[i], IDATA(list, i), 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_ldouble_list_duplicates(void **state) {
+	long double a[6] = {1., 1., 2., 2., 3., 3.};
+	long double b[3] = {1., 2., 3.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_float_equal(b[i], IDATA(list, i), 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_char_list_duplicates(void **state) {
+	char a[6] = {'a', 'a', 'b', 'b', 'c', 'c'};
+	char b[3] = {'a', 'b', 'c'};
+	CharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_uchar_list_duplicates(void **state) {
+	unsigned char a[6] = {'a', 'a', 'b', 'b', 'c', 'c'};
+	unsigned char b[3] = {'a', 'b', 'c'};
+	UCharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_bool_list_duplicates(void **state) {
+	bool a[6] = {true, false, true, false, true, false};
+	bool b[2] = {true, false};
+	BoolLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 6, 0);
+	DELETE_DUPLICATES(list);
+	for (size_t i = 0; i <list.active_length; i++) {
+		assert_int_equal(b[i], IDATA(list, i));
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_delete_string_list_duplicates(void **state) {
+	char *b[3] = {"One", "Two", "Three"};
+	StringLL list;
+	INIT_LIST(list);
+	PUSH(list, "One", 0);
+	PUSH(list, "One", 1);
+	PUSH(list, "Two", 2);
+	PUSH(list, "Two", 3);
+	PUSH(list, "Three", 4);
+	PUSH(list, "Three", 5);
+	DELETE_DUPLICATES(list);
+	int cmp;
+	for (size_t i = 0; i <list.active_length; i++) {
+		cmp = strcmp(b[i], IDATA(list, i));
+		assert_int_equal(0, cmp);
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof
