@@ -4014,4 +4014,756 @@ void reverse_string_list(StringLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// SORT_TYPE_LIST FUNCTIONS
+
+struct short_list* partition_short_list(struct short_list *l, struct short_list *h, sort_order order) {
+	short int x = h->data;
+
+	struct short_list *i = l->previous;
+
+	for (struct short_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			short int *a = &(i->data);
+			short int *b = &(j->data);
+			short int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			short int *a = &(i->data);
+			short int *b = &(j->data);
+			short int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	short int *a = &(i->data);
+	short int *b = &(h->data);
+	short int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_short_list(struct short_list *l, struct short_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct short_list *p = partition_short_list(l, h, order);
+		_sort_short_list(l, p->previous, order);
+		_sort_short_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_short_list(ShortLL *list, size_t low, size_t high, sort_order order) {
+	struct short_list *h = list->tail;
+	_sort_short_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct ushort_list* partition_ushort_list(struct ushort_list *l, struct ushort_list *h, sort_order order) {
+	unsigned short int x = h->data;
+
+	struct ushort_list *i = l->previous;
+
+	for (struct ushort_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned short int *a = &(i->data);
+			unsigned short int *b = &(j->data);
+			unsigned short int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned short int *a = &(i->data);
+			unsigned short int *b = &(j->data);
+			unsigned short int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	unsigned short int *a = &(i->data);
+	unsigned short int *b = &(h->data);
+	unsigned short int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_ushort_list(struct ushort_list *l, struct ushort_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct ushort_list *p = partition_ushort_list(l, h, order);
+		_sort_ushort_list(l, p->previous, order);
+		_sort_ushort_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_ushort_list(UShortLL *list, size_t low, size_t high, sort_order order) {
+	struct ushort_list *h = list->tail;
+	_sort_ushort_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct int_list* partition_int_list(struct int_list *l, struct int_list *h, sort_order order) {
+	int x = h->data;
+
+	struct int_list *i = l->previous;
+
+	for (struct int_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			int *a = &(i->data);
+			int *b = &(j->data);
+			int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			int *a = &(i->data);
+			int *b = &(j->data);
+			int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	int *a = &(i->data);
+	int *b = &(h->data);
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_int_list(struct int_list *l, struct int_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct int_list *p = partition_int_list(l, h, order);
+		_sort_int_list(l, p->previous, order);
+		_sort_int_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_int_list(IntLL *list, size_t low, size_t high, sort_order order) {
+	struct int_list *h = list->tail;
+	_sort_int_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct uint_list* partition_uint_list(struct uint_list *l, struct uint_list *h, sort_order order) {
+	unsigned int x = h->data;
+
+	struct uint_list *i = l->previous;
+
+	for (struct uint_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned int *a = &(i->data);
+			unsigned int *b = &(j->data);
+			unsigned int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned int *a = &(i->data);
+			unsigned int *b = &(j->data);
+			unsigned int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	unsigned int *a = &(i->data);
+	unsigned int *b = &(h->data);
+	unsigned int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_uint_list(struct uint_list *l, struct uint_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct uint_list *p = partition_uint_list(l, h, order);
+		_sort_uint_list(l, p->previous, order);
+		_sort_uint_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_uint_list(UIntLL *list, size_t low, size_t high, sort_order order) {
+	struct uint_list *h = list->tail;
+	_sort_uint_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct long_list* partition_long_list(struct long_list *l, struct long_list *h, sort_order order) {
+	long int x = h->data;
+
+	struct long_list *i = l->previous;
+
+	for (struct long_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			long int *a = &(i->data);
+			long int *b = &(j->data);
+			long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			long int *a = &(i->data);
+			long int *b = &(j->data);
+			long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	long int *a = &(i->data);
+	long int *b = &(h->data);
+	long int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_long_list(struct long_list *l, struct long_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct long_list *p = partition_long_list(l, h, order);
+		_sort_long_list(l, p->previous, order);
+		_sort_long_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_long_list(LIntLL *list, size_t low, size_t high, sort_order order) {
+	struct long_list *h = list->tail;
+	_sort_long_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct ulong_list* partition_ulong_list(struct ulong_list *l, struct ulong_list *h, sort_order order) {
+	unsigned long int x = h->data;
+
+	struct ulong_list *i = l->previous;
+
+	for (struct ulong_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned long int *a = &(i->data);
+			unsigned long int *b = &(j->data);
+			unsigned long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned long int *a = &(i->data);
+			unsigned long int *b = &(j->data);
+			unsigned long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	unsigned long int *a = &(i->data);
+	unsigned long int *b = &(h->data);
+	unsigned long int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_ulong_list(struct ulong_list *l, struct ulong_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct ulong_list *p = partition_ulong_list(l, h, order);
+		_sort_ulong_list(l, p->previous, order);
+		_sort_ulong_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_ulong_list(ULIntLL *list, size_t low, size_t high, sort_order order) {
+	struct ulong_list *h = list->tail;
+	_sort_ulong_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct llong_list* partition_llong_list(struct llong_list *l, struct llong_list *h, sort_order order) {
+	long long int x = h->data;
+
+	struct llong_list *i = l->previous;
+
+	for (struct llong_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			long long int *a = &(i->data);
+			long long int *b = &(j->data);
+			long long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			long long int *a = &(i->data);
+			long long int *b = &(j->data);
+			long long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	long long int *a = &(i->data);
+	long long int *b = &(h->data);
+	long long int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_llong_list(struct llong_list *l, struct llong_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct llong_list *p = partition_llong_list(l, h, order);
+		_sort_llong_list(l, p->previous, order);
+		_sort_llong_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_llong_list(LLIntLL *list, size_t low, size_t high, sort_order order) {
+	struct llong_list *h = list->tail;
+	_sort_llong_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct ullong_list* partition_ullong_list(struct ullong_list *l, struct ullong_list *h, sort_order order) {
+	unsigned long long int x = h->data;
+
+	struct ullong_list *i = l->previous;
+
+	for (struct ullong_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned long long int *a = &(i->data);
+			unsigned long long int *b = &(j->data);
+			unsigned long long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned long long int *a = &(i->data);
+			unsigned long long int *b = &(j->data);
+			unsigned long long int temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	unsigned long long int *a = &(i->data);
+	unsigned long long int *b = &(h->data);
+	unsigned long long int temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_ullong_list(struct ullong_list *l, struct ullong_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct ullong_list *p = partition_ullong_list(l, h, order);
+		_sort_ullong_list(l, p->previous, order);
+		_sort_ullong_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_ullong_list(ULLIntLL *list, size_t low, size_t high, sort_order order) {
+	struct ullong_list *h = list->tail;
+	_sort_ullong_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct float_list* partition_float_list(struct float_list *l, struct float_list *h, sort_order order) {
+	float x = h->data;
+
+	struct float_list *i = l->previous;
+
+	for (struct float_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			float *a = &(i->data);
+			float *b = &(j->data);
+			float temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			float *a = &(i->data);
+			float *b = &(j->data);
+			float temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	float *a = &(i->data);
+	float *b = &(h->data);
+    float temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_float_list(struct float_list *l, struct float_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct float_list *p = partition_float_list(l, h, order);
+		_sort_float_list(l, p->previous, order);
+		_sort_float_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_float_list(FltLL *list, size_t low, size_t high, sort_order order) {
+	struct float_list *h = list->tail;
+	_sort_float_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct double_list* partition_double_list(struct double_list *l, struct double_list *h, sort_order order) {
+	double x = h->data;
+
+	struct double_list *i = l->previous;
+
+	for (struct double_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			double *a = &(i->data);
+			double *b = &(j->data);
+			double temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			double *a = &(i->data);
+			double *b = &(j->data);
+			double temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	double *a = &(i->data);
+	double *b = &(h->data);
+    double temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_double_list(struct double_list *l, struct double_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct double_list *p = partition_double_list(l, h, order);
+		_sort_double_list(l, p->previous, order);
+		_sort_double_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_double_list(DbleLL *list, size_t low, size_t high, sort_order order) {
+	struct double_list *h = list->tail;
+	_sort_double_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct ldouble_list* partition_ldouble_list(struct ldouble_list *l, struct ldouble_list *h, sort_order order) {
+	long double x = h->data;
+
+	struct ldouble_list *i = l->previous;
+
+	for (struct ldouble_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			long double *a = &(i->data);
+			long double *b = &(j->data);
+			long double temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			long double *a = &(i->data);
+			long double *b = &(j->data);
+			long double temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	long double *a = &(i->data);
+	long double *b = &(h->data);
+    long double temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_ldouble_list(struct ldouble_list *l, struct ldouble_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct ldouble_list *p = partition_ldouble_list(l, h, order);
+		_sort_ldouble_list(l, p->previous, order);
+		_sort_ldouble_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_ldouble_list(LDbleLL *list, size_t low, size_t high, sort_order order) {
+	struct ldouble_list *h = list->tail;
+	_sort_ldouble_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct char_list* partition_char_list(struct char_list *l, struct char_list *h, sort_order order) {
+	char x = h->data;
+
+	struct char_list *i = l->previous;
+
+	for (struct char_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			char *a = &(i->data);
+			char *b = &(j->data);
+			char temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			char *a = &(i->data);
+			char *b = &(j->data);
+			char temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	char *a = &(i->data);
+	char *b = &(h->data);
+    char temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_char_list(struct char_list *l, struct char_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct char_list *p = partition_char_list(l, h, order);
+		_sort_char_list(l, p->previous, order);
+		_sort_char_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_char_list(CharLL *list, size_t low, size_t high, sort_order order) {
+	struct char_list *h = list->tail;
+	_sort_char_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct uchar_list* partition_uchar_list(struct uchar_list *l, struct uchar_list *h, sort_order order) {
+	unsigned char x = h->data;
+
+	struct uchar_list *i = l->previous;
+
+	for (struct uchar_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned char *a = &(i->data);
+			unsigned char *b = &(j->data);
+			unsigned char temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			unsigned char *a = &(i->data);
+			unsigned char *b = &(j->data);
+			unsigned char temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	unsigned char *a = &(i->data);
+	unsigned char *b = &(h->data);
+    unsigned char temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_uchar_list(struct uchar_list *l, struct uchar_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct uchar_list *p = partition_uchar_list(l, h, order);
+		_sort_uchar_list(l, p->previous, order);
+		_sort_uchar_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_uchar_list(UCharLL *list, size_t low, size_t high, sort_order order) {
+	struct uchar_list *h = list->tail;
+	_sort_uchar_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct bool_list* partition_bool_list(struct bool_list *l, struct bool_list *h, sort_order order) {
+	bool x = h->data;
+
+	struct bool_list *i = l->previous;
+
+	for (struct bool_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			bool *a = &(i->data);
+			bool *b = &(j->data);
+			bool temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			bool *a = &(i->data);
+			bool *b = &(j->data);
+			bool temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	bool *a = &(i->data);
+	bool *b = &(h->data);
+    bool temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_bool_list(struct bool_list *l, struct bool_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct bool_list *p = partition_bool_list(l, h, order);
+		_sort_bool_list(l, p->previous, order);
+		_sort_bool_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_bool_list(BoolLL *list, size_t low, size_t high, sort_order order) {
+	struct bool_list *h = list->tail;
+	_sort_bool_list(list->head, h, order);
+}
+// --------------------------------------------------------------------------------
+
+struct string_list* partition_string_list(struct string_list *l, struct string_list *h, sort_order order) {
+	char* x = h->data;
+
+	struct string_list *i = l->previous;
+
+	for (struct string_list *j = l; j != h; j = j->next) {
+		if(j->data <= x && order == FORWARD) {
+			i = (i == NULL) ? l : i->next;
+
+			char* *a = &(i->data);
+			char* *b = &(j->data);
+			char* temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+		if (j->data >= x && order == REVERSE) {
+			i = (i == NULL) ? l : i->next;
+
+			char* *a = &(i->data);
+			char* *b = &(j->data);
+			char* temp = *a;
+			*a = *b;
+			*b = temp;
+		}
+	}
+	i = (i == NULL) ? l : i->next;
+	char* *a = &(i->data);
+	char* *b = &(h->data);
+    char* temp = *a;
+	*a = *b;
+	*b = temp;
+	return i;
+}
+// --------------------------------------------------------------------------------
+
+void _sort_string_list(struct string_list *l, struct string_list *h, sort_order order) {
+	if (h != NULL && l != h && l != h->next) {
+		struct string_list *p = partition_string_list(l, h, order);
+		_sort_string_list(l, p->previous, order);
+		_sort_string_list(p->next, h, order);
+	}
+}
+// --------------------------------------------------------------------------------
+
+void sort_string_list(StringLL *list, size_t low, size_t high, sort_order order) {
+	struct string_list *h = list->tail;
+	_sort_string_list(list->head, h, order);
+}
+// ================================================================================
+// ================================================================================
 // eof

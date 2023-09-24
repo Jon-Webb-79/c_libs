@@ -830,3 +830,72 @@ The following functions can be used in place of the ``REVERSE`` Macro.
 .. code-block:: bash
 
    >> ( 5, 4, 3, 2, 1 )
+
+SORT
+====
+The ``SORT`` Macro will sort a linked list data structure in ``FORWARD`` or ``REVERSE`` order.
+
+.. code-block:: c
+
+   void SORT(T list, sort_order order);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+- :c:`order`: An enum representing the type of sort process.  A value of ``FORWARD`` will sort in ascending order, ``REVERSE`` will sort in descending order.
+
+.. code-block:: c
+
+   IntLL list;
+   INIT_LIST(list);
+   int a[7] = {12, 4, 2, 7, 1, 21, 13};
+   INSERT(list, a, 7, 0);
+   SORT(list, FORWARD)
+   PRINT(list);
+   SORT(list, REVERSE);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: c
+
+   >> ( 1, 2, 4, 7, 12, 13, 21 )
+   >> ( 21, 13, 12, 7, 4, 2, 1 )
+
+The following functions can be used in place of the ``SORT`` Macro.  The terms ``low``
+and ``high`` should be 0 and the size of the array.
+
+.. code-block:: c
+
+   void sort_short_list(ShortLL *list, size_t low, size_t high, sort_order order);
+   void sort_ushort_list(UShortLL *list, size_t low, size_t high, sort_order order);
+   void sort_int_list(IntLL *list, size_t low, size_t high, sort_order order);
+   void sort_uint_list(UIntLL *list, size_t low, size_t high, sort_order order);
+   void sort_long_list(LIntLL *list, size_t low, size_t high, sort_order order);
+   void sort_ulong_list(ULIntLL *list, size_t low, size_t high, sort_order order);
+   void sort_llong_list(LLIntLL *list, size_t low, size_t high, sort_order order);
+   void sort_ullong_list(ULLIntLL *list, size_t low, size_t high, sort_order order);
+   void sort_char_list(CharLL *list, size_t low, size_t high, sort_order order);
+   void sort_uchar_list(UCharLL *list, size_t low, size_t high, sort_order order);
+   void sort_float_list(FltLL *list, size_t low, size_t high, sort_order order);
+   void sort_double_list(DbleLL *list, size_t low, size_t high, sort_order order);
+   void sort_ldouble_list(LDbleLL *list, size_t low, size_t high, sort_order order);
+   void sort_bool_list(BoolLL *list, size_t low, size_t high, sort_order order);
+   void sort_string_list(StringLL *list, size_t low, size_t high, sort_order order);
+
+.. code-block:: c
+
+   IntLL list;
+   init_int_list(&list);
+   int a[7] = {12, 4, 2, 7, 1, 21, 13};
+   insert_int_list(&list, a, 7, 0);
+   sort_int_list(&list, FORWARD)
+   PRINT(list);
+   sort_int_list(&list, REVERSE);
+   PRINT(list);
+   free_int_list(&list);
+
+.. code-block:: c
+
+   >> ( 1, 2, 4, 7, 12, 13, 21 )
+   >> ( 21, 13, 12, 7, 4, 2, 1 )

@@ -139,5 +139,24 @@ void test_reverse_bool_list(void **state);
 void test_reverse_string_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST SORT_TYPE_LIST FUNCTIONS
+
+void test_sort_short_list(void **state);
+void test_sort_ushort_list(void **state);
+void test_sort_int_list(void **state);
+void test_sort_uint_list(void **state);
+void test_sort_long_list(void **state);
+void test_sort_ulong_list(void **state);
+void test_sort_llong_list(void **state);
+void test_sort_ullong_list(void **state);
+void test_sort_float_list(void **state);
+void test_sort_double_list(void **state);
+void test_sort_ldouble_list(void **state);
+void test_sort_char_list(void **state);
+void test_sort_uchar_list(void **state);
+void test_sort_bool_list(void **state);
+void test_sort_string_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

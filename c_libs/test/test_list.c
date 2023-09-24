@@ -1424,4 +1424,281 @@ void test_reverse_string_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST SORT_TYPE_LIST FUNCTIONS
+
+void test_sort_short_list(void **state) {
+	short int a[5] = {2, 1, 5, 4, 3};
+	short int b[5] = {1, 2, 3, 4, 5};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct short_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ushort_list(void **state) {
+	unsigned short a[5] = {2, 1, 5, 4, 3};
+	unsigned short b[5] = {1, 2, 3, 4, 5};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct ushort_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_int_list(void **state) {
+	int a[5] = {2, 1, 5, 4, 3};
+	int b[5] = {1, 2, 3, 4, 5};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct int_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_uint_list(void **state) {
+	unsigned int a[5] = {2, 1, 5, 4, 3};
+	unsigned int b[5] = {1, 2, 3, 4, 5};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct uint_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_long_list(void **state) {
+	long int a[5] = {2, 1, 5, 4, 3};
+	long int b[5] = {1, 2, 3, 4, 5};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct long_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ulong_list(void **state) {
+	unsigned long int a[5] = {2, 1, 5, 4, 3};
+	unsigned long int b[5] = {1, 2, 3, 4, 5};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct ulong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_llong_list(void **state) {
+	long long int a[5] = {2, 1, 5, 4, 3};
+	long long int b[5] = {1, 2, 3, 4, 5};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct llong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ullong_list(void **state) {
+	unsigned long long int a[5] = {2, 1, 5, 4, 3};
+	unsigned long long int b[5] = {1, 2, 3, 4, 5};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct ullong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_float_list(void **state) {
+	float a[5] = {2., 1., 5., 4., 3.};
+	float b[5] = {1., 2., 3., 4., 5.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct float_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_double_list(void **state) {
+	double a[5] = {2., 1., 5., 4., 3.};
+	double b[5] = {1., 2., 3., 4., 5.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct double_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_ldouble_list(void **state) {
+	long double a[5] = {2., 1., 5., 4., 3.};
+	long double b[5] = {1., 2., 3., 4., 5.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct ldouble_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_char_list(void **state) {
+	char a[5] = {'b', 'a', 'e','d', 'c'};
+	char b[5] = {'a', 'b', 'c', 'd', 'e'};
+	CharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct char_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_uchar_list(void **state) {
+	unsigned char a[5] = {'b', 'a', 'e','d', 'c'};
+	unsigned char b[5] = {'a', 'b', 'c', 'd', 'e'};
+	UCharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct uchar_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_bool_list(void **state) {
+	bool a[5] = {true, false, true, false, true};
+	char b[5] = {false, false, true, true, true};
+	BoolLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	SORT(list, FORWARD);
+	struct bool_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_sort_string_list(void **state) {
+	const char* arr[] = {"Apple", "Banana", "Cucumber", "Xylaphone", "Zuchini"};
+	StringLL list;
+	INIT_LIST(list);
+	PUSH(list, "Xylaphone", 0);
+	PUSH(list, "Apple", 1);
+	PUSH(list, "Cucumber", 2);
+	PUSH(list, "Banana", 3);
+    PUSH(list, "Zuchini", 4);
+	SORT(list, FORWARD);
+	struct string_list *guess = list.head;
+	size_t i = 0;
+	int cmp;
+	while (guess != NULL) {
+		cmp = strcmp(guess->data, arr[i]);
+		assert_int_equal(0, cmp);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

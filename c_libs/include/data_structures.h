@@ -437,7 +437,22 @@
 										                 Char: sort_char_vector, \
 														 UChar: sort_uchar_vector, \
 														 Bool: sort_bool_vector, \
-														 String: sort_string_vector)(&T, low, high, order)
+														 String: sort_string_vector, \
+													     ShortLL: sort_short_list, \
+														 UShortLL: sort_ushort_list, \
+														 IntLL: sort_int_list, \
+														 UIntLL: sort_uint_list, \
+														 LIntLL: sort_long_list, \
+														 ULIntLL: sort_ulong_list, \
+														 LLIntLL: sort_llong_list, \
+														 ULLIntLL: sort_ullong_list, \
+														 FltLL: sort_float_list, \
+														 DbleLL: sort_double_list, \
+														 LDbleLL: sort_ldouble_list, \
+														 CharLL: sort_char_list, \
+														 UCharLL: sort_uchar_list, \
+														 BoolLL: sort_bool_list, \
+														 StringLL: sort_string_list)(&T, low, high, order)
 // --------------------------------------------------------------------------------
 // SORT MACRO
 

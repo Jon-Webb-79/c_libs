@@ -3069,5 +3069,416 @@ void reverse_bool_list(BoolLL *list);
 void reverse_string_list(StringLL *list);
 // ================================================================================
 // ================================================================================
+// SORT_TYPE_LIST FUNCTIONS
+
+
+/**
+ * This function will sort a linked list data structure of type ShortLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type ShortLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list);
+ * short int a[5] = {4, 2, 1, 3, 5};
+ * insert_short_list(&list, a, 5, 0);
+ * sort_short_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_short_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+void sort_short_list(ShortLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type UShortLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type UShortLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list);
+ * unsigned short int a[5] = {4, 2, 1, 3, 5};
+ * insert_ushort_list(&list, a, 5, 0);
+ * sort_ushort_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_ushort_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+void sort_ushort_list(UShortLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type IntLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type IntLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list);
+ * int a[5] = {4, 2, 1, 3, 5};
+ * insert_int_list(&list, a, 5, 0);
+ * sort_int_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_int_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+void sort_int_list(IntLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type UIntLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type UIntLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list);
+ * unsigned int a[5] = {4, 2, 1, 3, 5};
+ * insert_uint_list(&list, a, 5, 0);
+ * sort_uint_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_uint_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+void sort_uint_list(UIntLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type LIntLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type LIntLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list);
+ * long int a[5] = {4, 2, 1, 3, 5};
+ * insert_long_list(&list, a, 5, 0);
+ * sort_long_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_long_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+void sort_long_list(LIntLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type ULIntLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type ULIntLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list);
+ * unsigned long int a[5] = {4, 2, 1, 3, 5};
+ * insert_long_list(&list, a, 5, 0);
+ * sort_ulong_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_ulong_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+void sort_ulong_list(ULIntLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type LLIntLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type LLIntLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list);
+ * long long int a[5] = {4, 2, 1, 3, 5};
+ * insert_llong_list(&list, a, 5, 0);
+ * sort_llong_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_llong_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+void sort_llong_list(LLIntLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type ULLIntLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type ULLIntLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list);
+ * unsigned long long int a[5] = {4, 2, 1, 3, 5};
+ * insert_ullong_list(&list, a, 5, 0);
+ * sort_ullong_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1, 2, 3, 4, 5 ]
+ * sort_ullong_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5, 4, 3, 2, 1 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+void sort_ullong_list(ULLIntLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type FltLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type FltLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list);
+ * float a[5] = {4., 2., 1., 3., 5.};
+ * insert_float_list(&list, a, 5, 0);
+ * sort_float_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1.000, 2.000, 3.000, 4.000, 5.0000 ]
+ * sort_float_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5.000, 4.000, 3.000, 2.000, 1.000 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+void sort_float_list(FltLL *list, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type DbleLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type DbleLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list);
+ * double a[5] = {4, 2, 1, 3, 5};
+ * insert_double_list(&list, a, 5, 0);
+ * sort_double_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1.000, 2.000, 3.000, 4.000, 5.000 ]
+ * sort_double_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5.000, 4.000, 3.000, 2.000, 1.000 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+void sort_double_list(DbleLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type LDbleLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type LDbleLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list);
+ * long double a[5] = {4, 2, 1, 3, 5};
+ * insert_ldouble_list(&list, a, 5, 0);
+ * sort_ldouble_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ 1.000, 2.000, 3.000, 4.000, 5.000 ]
+ * sort_ldouble_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5.000, 4.000, 3.000, 2.000, 1.000 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+void sort_ldouble_list(LDbleLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type CharLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type CharLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * CharLL list;
+ * init_char_list(&list);
+ * char a[5] = {'a', 'b', 'c', 'd', 'e'};
+ * insert_char_list(&list, a, 5, 0);
+ * sort_char_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ a, b, c, d, e ]
+ * sort_char_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5.000, 4.000, 3.000, 2.000, 1.000 ]
+ * free_char_list(&list);
+ * @endcode
+ */
+void sort_char_list(CharLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type UCharLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type UCharLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * UCharLL list;
+ * init_uchar_list(&list);
+ * char a[5] = {'a', 'b', 'c', 'd', 'e'};
+ * insert_uchar_list(&list, a, 5, 0);
+ * sort_uchar_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ a, b, c, d, e ]
+ * sort_uchar_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5.000, 4.000, 3.000, 2.000, 1.000 ]
+ * free_uchar_list(&list);
+ * @endcode
+ */
+void sort_uchar_list(UCharLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type BoolLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type BoolLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * BoolLL list;
+ * init_bool_list(&list);
+ * bool a[5] = {true, true, true, false, false};
+ * insert_bool_list(&list, a, 5, 0);
+ * sort_bool_list(&list, 0, 5, FORWARD);
+ * PRINT(list);
+ * // >> [ true, true, true, false, false ]
+ * sort_bool_list(&list, 0, 5, REVERSE);
+ * PRINT(list);
+ * // >> [ 5.000, 4.000, 3.000, 2.000, 1.000 ]
+ * free_bool_list(&list);
+ * @endcode
+ */
+void sort_bool_list(BoolLL *vec, size_t low, size_t high, sort_order order);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will sort a linked list data structure of type StringLL in
+ * forward or reverse order
+ *
+ * /param vec A linked list data structure of type StringLL
+ * /param low The lowest indice for partitioning, recommended to be 0
+ * /param high The highest indice for sorting, recommended to be the last index
+ *             in the data structure
+ * /param order FORWARD for a forward sort, REVERSE for a reverse sort
+ *
+ * @code
+ * StringLL list;
+ * init_string_list(&list);
+ * bool a[5] = {true, true, true, false, false};
+ * push_string_list(&list, "Xylaphone", 0);
+ * push_string_list(&list, "Apple", 1);
+ * push_string_list(&list, "Cucumber", 2);
+ * push_string_list(&list, "Banana", 3);
+ * sort_string_list(&list, 0, 4, FORWARD);
+ * PRINT(list);
+ * // >> [ Apple, Banana, Cucumber, Xylaphone ]
+ * sort_bool_list(&list, 0, 4, REVERSE);
+ * PRINT(list);
+ * // >> [ Xylaphone, Cucmber, Banana, Apple ]
+ * free_string_list(&list);
+ * @endcode
+ */
+void sort_string_list(StringLL *vec, size_t low, size_t high, sort_order order);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof
