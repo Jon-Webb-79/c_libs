@@ -5114,4 +5114,789 @@ long double average_ldouble_list(LDbleLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// STDEV_TYPE_LIST FUNCTIONS
+
+float stdev_short_list(ShortLL *list) {
+	float average = average_short_list(list);
+	float var = 0.0;
+	float value;
+	struct short_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (float)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	float interm = (1.0f / ((float)list->active_length - 1.0f)) * var;
+
+	float number = interm;
+	float start = 0.0, end = number;
+	float mid;
+
+	float ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_ushort_list(UShortLL *list) {
+	float average = average_ushort_list(list);
+	float var = 0.0;
+	float value;
+	struct ushort_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (float)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	float interm = (1.0f / ((float)list->active_length - 1.0f)) * var;
+
+	float number = interm;
+	float start = 0.0, end = number;
+	float mid;
+
+	float ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_int_list(IntLL *list) {
+	float average = average_int_list(list);
+	float var = 0.0;
+	float value;
+	struct int_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (float)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	float interm = (1.0f / ((float)list->active_length - 1.0f)) * var;
+
+	float number = interm;
+	float start = 0.0, end = number;
+	float mid;
+
+	float ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_uint_list(UIntLL *list) {
+	float average = average_uint_list(list);
+	float var = 0.0;
+	float value;
+	struct uint_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (float)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	float interm = (1.0f / ((float)list->active_length - 1.0f)) * var;
+
+	float number = interm;
+	float start = 0.0, end = number;
+	float mid;
+
+	float ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.f;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.f;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_long_list(LIntLL *list) {
+	double average = average_long_list(list);
+	double var = 0.0;
+	double value;
+	struct long_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (double)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	double interm = (1.0 / ((double)list->active_length - 1.0)) * var;
+
+	double number = interm;
+	double start = 0.0, end = number;
+	double mid;
+
+	double ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_ulong_list(ULIntLL *list) {
+	double average = average_ulong_list(list);
+	double var = 0.0;
+	double value;
+	struct ulong_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (double)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	double interm = (1.0 / ((double)list->active_length - 1.0)) * var;
+
+	double number = interm;
+	double start = 0.0, end = number;
+	double mid;
+
+	double ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+long double stdev_llong_list(LLIntLL *list) {
+	long double average = average_llong_list(list);
+	long double var = 0.0;
+	long double value;
+	struct llong_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (long double)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	long double interm = (1.0 / ((long double)list->active_length - 1.0)) * var;
+
+	long double number = interm;
+	long double start = 0.0, end = number;
+	long double mid;
+
+	long double ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    long double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+long double stdev_ullong_list(ULLIntLL *list) {
+	long double average = average_ullong_list(list);
+	long double var = 0.0;
+	long double value;
+	struct ullong_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (long double)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	long double interm = (1.0 / ((long double)list->active_length - 1.0)) * var;
+
+	long double number = interm;
+	long double start = 0.0, end = number;
+	long double mid;
+
+	long double ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    long double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+float stdev_float_list(FltLL *list) {
+	float average = average_float_list(list);
+	float var = 0.0;
+	float value;
+	struct float_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (float)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	float interm = (1.0f / ((float)list->active_length - 1.0f)) * var;
+
+	float number = interm;
+	float start = 0.0, end = number;
+	float mid;
+
+	float ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    float increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+double stdev_double_list(DbleLL *list) {
+	double average = average_double_list(list);
+	double var = 0.0;
+	double value;
+	struct double_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (double)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	double interm = (1.0 / ((double)list->active_length - 1.0)) * var;
+
+	double number = interm;
+	double start = 0.0, end = number;
+	double mid;
+
+	double ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// --------------------------------------------------------------------------------
+
+long double stdev_ldouble_list(LDbleLL *list) {
+	long double average = average_ldouble_list(list);
+	long double var = 0.0;
+	long double value;
+	struct ldouble_list *guess = list->head;
+	for (size_t i = 0; i < list->active_length; i++) {
+		value = (long double)guess->data;
+		var += ((value - average) * (value - average));
+		guess = guess->next;
+	}
+	long double interm = (1.0 / ((long double)list->active_length - 1.0)) * var;
+
+	long double number = interm;
+	long double start = 0.0, end = number;
+	long double mid;
+
+	long double ans;
+
+	while (start <= end) {
+        // Find mid
+        mid = (start + end) / 2;
+        // If number is perfect square
+        // then break
+        if (mid * mid == number) {
+            ans = mid;
+            break;
+        }
+        // Increment start if integral
+        // part lies on right side
+        // of the mid
+        if (mid * mid < number) {
+          //first start value should be added to answer
+            ans=start;
+          //then start should be changed
+            start = mid + 1.;
+        }
+        // Decrement end if integral part
+        // lies on the left side of the mid
+        else {
+            end = mid - 1.;
+        }
+    }
+    // To find the fractional part
+    // of square root upto 5 decimal
+    long double increment = 0.1;
+    for (int i = 0; i < 5; i++) {
+        while (ans * ans <= number) {
+            ans += increment;
+        }
+        // Loop terminates,
+        // when ans * ans > number
+        ans = ans - increment;
+        increment = increment / 10;
+    }
+	return ans;
+}
+// ================================================================================
+// ================================================================================
+// MAX_TYPE_LIST FUNCTIONS
+
+short int max_short_list(ShortLL *list) {
+	struct short_list *guess = list->head;
+	short int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int max_ushort_list(UShortLL *list) {
+	struct ushort_list *guess = list->head;
+	unsigned short int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+int max_int_list(IntLL *list) {
+	struct int_list *guess = list->head;
+	int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int max_uint_list(UIntLL *list) {
+	struct uint_list *guess = list->head;
+	unsigned int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long int max_long_list(LIntLL *list) {
+	struct long_list *guess = list->head;
+	long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int max_ulong_list(ULIntLL *list) {
+	struct ulong_list *guess = list->head;
+	unsigned long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long long int max_llong_list(LLIntLL *list) {
+	struct llong_list *guess = list->head;
+	long long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int max_ullong_list(ULLIntLL *list) {
+	struct ullong_list *guess = list->head;
+	unsigned long long int max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+float max_float_list(FltLL *list) {
+	struct float_list *guess = list->head;
+	float max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+double max_double_list(DbleLL *list) {
+	struct double_list *guess = list->head;
+	double max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// --------------------------------------------------------------------------------
+
+long double max_ldouble_list(LDbleLL *list) {
+	struct ldouble_list *guess = list->head;
+	long double max = guess->data;
+	if (list->active_length <= 0) return max;
+	guess = guess->next;
+	while (guess != NULL) {
+		if (guess->data > max) max = guess->data;
+		guess = guess->next;
+	}
+	return max;
+}
+// ================================================================================
+// ================================================================================
 // eof

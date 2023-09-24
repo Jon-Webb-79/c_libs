@@ -1131,11 +1131,126 @@ The following functions can be used in place of the ``AVERAGE`` Macro.
 
 STDEV
 =====
-TBD
+The ``STDEV`` Macro will determine the standard deviation of values in a linked list
+data structure.
+
+.. type STDEV(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`sigma`: The standard deviation of the values in a linked list data structure.
+
+.. code-block:: c
+
+   IntLL list;
+   INIT_LIST(list);
+   int a[5] = {1, 2, 3, 4, 5};
+   INSERT(list, a, 5, 0);
+   float sigma = STDEV(list);
+   PRINT(sigma);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> 1.581138
+
+The following functions can be used in place of the ``STDEV`` Macro.
+ 
+.. code-block:: c
+
+   float stdev_short_list(ShortLL *list);
+   float stdev_ushort_list(UShortLL *list);
+   float stdev_int_list(IntLL *list);
+   float stdev_uint_list(UIntLL *list);
+   double stdev_long_list(LIntLL *list);
+   double stdev_ulong_list(ULIntLL *list);
+   long double stdev_llong_list(LLIntLL *list);
+   long double stdev_ullong_list(ULLIntLL *list);
+   float stdev_float_list(FltLL *list);
+   double stdev_double_list(DbleLL *list);
+   long double stdev_ldouble_list(LDbleLL *list);
+
+.. code-block:: c
+
+   IntLL list;
+   init_int_list(&list);
+   int a[5] = {1, 2, 3, 4, 5};
+   insert_int_list(&list, a, 5, 0);
+   float sigma = stdev_int_list(&list);
+   PRINT(sigma);
+   free_int_list(&list);
+
+.. code-block:: bash
+
+   >> 1.581138
 
 MAX
 ===
-TBD
+The ``MAX`` Macro will determine the maximum value in a linked list data structure.
+
+.. code-block:: c
+
+   type MAX(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of typ ``T``.
+
+Returns
+-------
+
+- :c:`maximum`: The maximum value in a linked list data structure.
+
+.. code-block:: c
+
+   DbleLL list;
+   INIT_LIST(list);
+   double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
+   INSERT(list, a, 5);
+   double maximum = MAX(list);
+   PRINT(maximum);
+   FREE(list);
+
+.. code-block:: c
+
+   >> 101.30000
+
+The following functions can be used in place of the ``MAX`` Macro.
+
+.. code-block:: c
+
+   short int max_short_list(ShortLL *list);
+   unsigned short int max_ushort_list(UShortLL *list);
+   int max_int_list(IntLL *list);
+   unsigned int max_uint_list(UIntLL *list);
+   long int max_long_list(LIntLL *list);
+   unsigned long int max_ulong_list(ULIntLL *list);
+   long long int max_llong_list(LLIntLL *list);
+   unsigned long long int max_ullong_list(ULLIntLL *list);
+   float max_float_list(FltLL *list);
+   double max_double_list(DbleLL *list);
+   long double max_ldouble_list(LDbleLL *list);
+
+.. code-block:: c
+
+   DbleLL list;
+   init_double_list(&list);
+   double a[5] = { 34.2, 18.7, 12.1, 101.3, 74.5};
+   insert_double_list(&list, a, 5);
+   double maximum = max_double_list(&list);
+   PRINT(maximum);
+   free_double_list(&list);
+
+.. code-block:: c
+
+   >> 101.30000
 
 MIN
 ===
@@ -1159,3 +1274,6 @@ TBD
 
 REPEAT
 ======
+
+LIST_TO_VECTOR
+==============

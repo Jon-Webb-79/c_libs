@@ -637,7 +637,18 @@
 								ULLInt: stdev_ullong_vector, \
 								Flt: stdev_float_vector, \
 						        Dble: stdev_double_vector, \
-								LDble: stdev_ldouble_vector)(&T)
+								LDble: stdev_ldouble_vector, \
+								ShortLL: stdev_short_list, \
+								UShortLL: stdev_ushort_list, \
+								IntLL: stdev_int_list, \
+								UIntLL: stdev_uint_list, \
+								LIntLL: stdev_long_list, \
+								ULIntLL: stdev_ulong_list, \
+								LLIntLL: stdev_llong_list, \
+								ULLIntLL: stdev_ullong_list, \
+								FltLL: stdev_float_list, \
+								DbleLL: stdev_double_list, \
+								LDbleLL: stdev_ldouble_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // MAC MACRO
@@ -669,7 +680,18 @@
 							  ULLInt: max_ullong_vector, \
 							  Flt: max_float_vector, \
 						      Dble: max_double_vector, \
-							  LDble: max_ldouble_vector)(&T)
+							  LDble: max_ldouble_vector, \
+							  ShortLL: max_short_list, \
+							  UShortLL: max_ushort_list, \
+							  IntLL: max_int_list, \
+							  UIntLL: max_uint_list, \
+							  LIntLL: max_long_list, \
+							  ULIntLL: max_ulong_list, \
+							  LLIntLL: max_llong_list, \
+							  ULLIntLL: max_ullong_list, \
+							  FltLL: max_float_list, \
+							  DbleLL: max_double_list, \
+							  LDbleLL: max_ldouble_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 // MIN MACRO

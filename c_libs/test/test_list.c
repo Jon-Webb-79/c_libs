@@ -2156,4 +2156,250 @@ void test_average_ldouble_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_STDEV_TYPE_LIST FUNCTIONS
+
+void test_stdev_short_list(void **state) {
+	short int a[5] = {1, 2, 3, 4, 5};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ushort_list(void **state) {
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_int_list(void **state) {
+	int a[5] = {1, 2, 3, 4, 5};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_uint_list(void **state) {
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_long_list(void **state) {
+	long int a[5] = {1, 2, 3, 4, 5};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	double b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ulong_list(void **state) {
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	double b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_llong_list(void **state) {
+	long long int a[5] = {1, 2, 3, 4, 5};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long double b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ullong_list(void **state) {
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long double b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_float_list(void **state) {
+	float a[5] = {1., 2., 3., 4., 5.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_double_list(void **state) {
+	double a[5] = {1, 2, 3, 4, 5};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	double b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_stdev_ldouble_list(void **state) {
+	long double a[5] = {1, 2, 3, 4, 5};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long double b = STDEV(list);
+	assert_float_equal(b, 1.581130, 1.0e-3);
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
+// TEST_MAX_LIST FUNCTIONS
+
+void test_max_short_list(void **state) {
+	short int a[5] = {1, 2, 3, 4, 5};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	short int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_ushort_list(void **state) {
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned short int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_int_list(void **state) {
+	int a[5] = {1, 2, 3, 4, 5};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_uint_list(void **state) {
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_long_list(void **state) {
+	long int a[5] = {1, 2, 3, 4, 5};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_ulong_list(void **state) {
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned long int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_llong_list(void **state) {
+	long long int a[5] = {1, 2, 3, 4, 5};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long long int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_ullong_list(void **state) {
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	unsigned long long int max = MAX(list);
+	assert_int_equal(5, max);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_float_list(void **state) {
+	float a[5] = {1., 2., 3., 4., 5.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	float max = MAX(list);
+	assert_float_equal(5.f, max, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_double_list(void **state) {
+	double a[5] = {1., 2., 3., 4., 5.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	double max = MAX(list);
+	assert_float_equal(5., max, 1.0e-3);
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_max_ldouble_list(void **state) {
+	long double a[5] = {1., 2., 3., 4., 5.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	long double max = MAX(list);
+	assert_float_equal(5., max, 1.0e-3);
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

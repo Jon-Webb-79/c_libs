@@ -203,5 +203,35 @@ void test_average_double_list(void **state);
 void test_average_ldouble_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_STDEV_TYPE_LIST FUNCTIONS
+
+void test_stdev_short_list(void **state);
+void test_stdev_ushort_list(void **state);
+void test_stdev_int_list(void **state);
+void test_stdev_uint_list(void **state);
+void test_stdev_long_list(void **state);
+void test_stdev_ulong_list(void **state);
+void test_stdev_llong_list(void **state);
+void test_stdev_ullong_list(void **state);
+void test_stdev_float_list(void **state);
+void test_stdev_double_list(void **state);
+void test_stdev_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
+// TEST_MAX_TYPE_LIST FUNCTIONS
+
+void test_max_short_list(void **state);
+void test_max_ushort_list(void **state);
+void test_max_int_list(void **state);
+void test_max_uint_list(void **state);
+void test_max_long_list(void **state);
+void test_max_ulong_list(void **state);
+void test_max_llong_list(void **state);
+void test_max_ullong_list(void **state);
+void test_max_float_list(void **state);
+void test_max_double_list(void **state);
+void test_max_ldouble_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

@@ -1669,3 +1669,6 @@ The following functions can be used in place of the ``TRIM`` Macro
 
    >> Initial Length: 40
    >> Final Length: 5
+
+VECTOR_TO_LIST
+==============
