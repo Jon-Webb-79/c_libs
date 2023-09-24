@@ -1149,4 +1149,279 @@ void test_delete_string_list_duplicates(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_REVERSE_TYPE_LIST FUNCTIONS
+
+void test_reverse_short_list(void **state) {
+	short int a[5] = {1, 2, 3, 4, 5};
+	short int b[5] = {5, 4, 3, 2, 1};
+	ShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct short_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ushort_list(void **state) {
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	unsigned short int b[5] = {5, 4, 3, 2, 1};
+	UShortLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct ushort_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_int_list(void **state) {
+	int a[5] = {1, 2, 3, 4, 5};
+	int b[5] = {5, 4, 3, 2, 1};
+	IntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct int_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_uint_list(void **state) {
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	unsigned int b[5] = {5, 4, 3, 2, 1};
+	UIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct uint_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_long_list(void **state) {
+	long int a[5] = {1, 2, 3, 4, 5};
+	long int b[5] = {5, 4, 3, 2, 1};
+	LIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct long_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ulong_list(void **state) {
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	unsigned long int b[5] = {5, 4, 3, 2, 1};
+	ULIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct ulong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_llong_list(void **state) {
+	long long int a[5] = {1, 2, 3, 4, 5};
+	long long int b[5] = {5, 4, 3, 2, 1};
+	LLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct llong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ullong_list(void **state) {
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	unsigned long long int b[5] = {5, 4, 3, 2, 1};
+	ULLIntLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct ullong_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_float_list(void **state) {
+	float a[5] = {1., 2., 3., 4., 5.};
+	float b[5] = {5., 4., 3., 2., 1.};
+	FltLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct float_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_double_list(void **state) {
+	double a[5] = {1., 2., 3., 4., 5.};
+	double b[5] = {5., 4., 3., 2., 1.};
+	DbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct double_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_ldouble_list(void **state) {
+	long double a[5] = {1., 2., 3., 4., 5.};
+	long double b[5] = {5., 4., 3., 2., 1.};
+	LDbleLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct ldouble_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_char_list(void **state) {
+	char a[5] = {'a', 'b','c', 'd', 'e'};
+	char b[5] = {'e', 'd', 'c', 'b', 'a'};
+	CharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct char_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_uchar_list(void **state) {
+	unsigned char a[5] = {'a', 'b','c', 'd', 'e'};
+	unsigned char b[5] = {'e', 'd', 'c', 'b', 'a'};
+	UCharLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct uchar_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_bool_list(void **state) {
+	bool a[5] = {true, true, true, false, false};
+	bool b[5] = {false, false, true, true, true};
+	BoolLL list;
+	INIT_LIST(list);
+	INSERT(list, a, 5, 0);
+	REVERSE(list);
+	struct bool_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_float_equal(guess->data, b[i], 1.0e-3);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_reverse_string_list(void **state) {
+	char *b[5] = {"Five", "Four", "Three", "Two", "One"};
+	StringLL list;
+	INIT_LIST(list);
+	PUSH(list, "One", 0);
+	PUSH(list, "Two", 1);
+	PUSH(list, "Three", 2);
+	PUSH(list, "Four", 3);
+	PUSH(list, "Five", 4);
+	REVERSE(list);
+	struct string_list *guess = list.head;
+	size_t i = 0;
+	while (guess != NULL) {
+		assert_int_equal(guess->data, b[i]);
+		i++;
+		guess = guess->next;
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

@@ -120,5 +120,24 @@ void test_delete_bool_list_duplicates(void **state);
 void test_delete_string_list_duplicates(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_REVERSE_TYPE_LIST FUNCTIONS
+
+void test_reverse_short_list(void **state);
+void test_reverse_ushort_list(void **state);
+void test_reverse_int_list(void **state);
+void test_reverse_uint_list(void **state);
+void test_reverse_long_list(void **state);
+void test_reverse_ulong_list(void **state);
+void test_reverse_llong_list(void **state);
+void test_reverse_ullong_list(void **state);
+void test_reverse_float_list(void **state);
+void test_reverse_double_list(void **state);
+void test_reverse_ldouble_list(void **state);
+void test_reverse_char_list(void **state);
+void test_reverse_uchar_list(void **state);
+void test_reverse_bool_list(void **state);
+void test_reverse_string_list(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof

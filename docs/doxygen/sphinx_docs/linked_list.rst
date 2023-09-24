@@ -768,3 +768,65 @@ The following functions can be used in place of the ``DELETE_DUPLICATES`` Macro.
 .. code-block:: bash
 
    >> ( One, Two, Three )
+
+REVERSE
+=======
+The ``REVERSE`` Macro will reverse the order of values in a linked list
+data structure.
+
+.. code-block:: c
+
+   void REVERSE(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+.. code-block:: c
+
+    ShortLL list;
+    INIT_LIST(list);
+    short int a[5] = {1, 2, 3, 4, 5};
+    INSERT(list, a, 5, 0);
+    REVERSE(list);
+    PRINT(list);
+    FREE(list);
+
+.. code-block:: bash
+
+   >> ( 5, 4, 3, 2, 1 )
+
+The following functions can be used in place of the ``REVERSE`` Macro.
+
+.. code-block:: c
+
+   void reverese_short_list(ShortLL *list);
+   void reverese_ushort_list(UShortLL *list);
+   void reverese_char_list(CharLL *list);
+   void reverese_uchar_list(UCharLL *list);
+   void reverese_int_list(IntLL *list);
+   void reverese_uint_list(UIntLL *list);
+   void reverese_long_list(LIntLL *list);
+   void reverese_ulong_list(ULIntLL *list);
+   void reverese_llong_list(LLIntLL *list);
+   void reverese_ullong_list(ULLIntLL *list);
+   void reverese_float_list(FltLL *list);
+   void reverese_double_list(DbleLL *list);
+   void reverese_ldouble_list(LDbleLL *list);
+   void reverese_bool_list(BoolLL *list);
+   void reverese_string_list(StringLL *list);
+
+.. code-block:: c
+
+    ShortLL list;
+    init_hosrt_list(&list);
+    short int a[5] = {1, 2, 3, 4, 5};
+    insert_short_list(&list, a, 5, 0);
+    reverse_short_list(&list);
+    PRINT(list);
+    free_short_list(&list);
+
+.. code-block:: bash
+
+   >> ( 5, 4, 3, 2, 1 )

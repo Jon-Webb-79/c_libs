@@ -395,7 +395,22 @@ const struct CMUnitTest tests_list[] = {
 	cmocka_unit_test(test_delete_char_list_duplicates),
 	cmocka_unit_test(test_delete_uchar_list_duplicates),
 	cmocka_unit_test(test_delete_bool_list_duplicates),
-	cmocka_unit_test(test_delete_string_list_duplicates)
+	cmocka_unit_test(test_delete_string_list_duplicates),
+	cmocka_unit_test(test_reverse_short_list),
+	cmocka_unit_test(test_reverse_ushort_list),
+	cmocka_unit_test(test_reverse_int_list),
+	cmocka_unit_test(test_reverse_uint_list),
+	cmocka_unit_test(test_reverse_long_list),
+	cmocka_unit_test(test_reverse_ulong_list),
+	cmocka_unit_test(test_reverse_llong_list),
+	cmocka_unit_test(test_reverse_ullong_list),
+	cmocka_unit_test(test_reverse_float_list),
+	cmocka_unit_test(test_reverse_double_list),
+	cmocka_unit_test(test_reverse_ldouble_list),
+	cmocka_unit_test(test_reverse_char_list),
+    cmocka_unit_test(test_reverse_uchar_list),
+	cmocka_unit_test(test_reverse_bool_list),
+	cmocka_unit_test(test_reverse_string_list),
 };
 
 // Begin code

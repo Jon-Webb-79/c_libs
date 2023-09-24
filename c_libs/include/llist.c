@@ -3787,4 +3787,231 @@ void delete_string_list_duplicates(StringLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// REVERSE_TYPE_LIST FUNCTIONS
+
+void reverse_short_list(ShortLL *list) {
+	struct short_list *temp = NULL;
+	struct short_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct short_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_ushort_list(UShortLL *list) {
+	struct ushort_list *temp = NULL;
+	struct ushort_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct ushort_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_int_list(IntLL *list) {
+	struct int_list *temp = NULL;
+	struct int_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct int_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_uint_list(UIntLL *list) {
+	struct uint_list *temp = NULL;
+	struct uint_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct uint_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_long_list(LIntLL *list) {
+	struct long_list *temp = NULL;
+	struct long_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct long_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_ulong_list(ULIntLL *list) {
+	struct ulong_list *temp = NULL;
+	struct ulong_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct ulong_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_llong_list(LLIntLL *list) {
+	struct llong_list *temp = NULL;
+	struct llong_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct llong_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_ullong_list(ULLIntLL *list) {
+	struct ullong_list *temp = NULL;
+	struct ullong_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct ullong_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_float_list(FltLL *list) {
+	struct float_list *temp = NULL;
+	struct float_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct float_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_double_list(DbleLL *list) {
+	struct double_list *temp = NULL;
+	struct double_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct double_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_ldouble_list(LDbleLL *list) {
+	struct ldouble_list *temp = NULL;
+	struct ldouble_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct ldouble_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_char_list(CharLL *list) {
+	struct char_list *temp = NULL;
+	struct char_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct char_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_uchar_list(UCharLL *list) {
+	struct uchar_list *temp = NULL;
+	struct uchar_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct uchar_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_bool_list(BoolLL *list) {
+	struct bool_list *temp = NULL;
+	struct bool_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct bool_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// --------------------------------------------------------------------------------
+
+void reverse_string_list(StringLL *list) {
+	struct string_list *temp = NULL;
+	struct string_list *current = list->head;
+	while (current != NULL) {
+		temp = current->previous;
+		current->previous = current->next;
+		current->next = temp;
+		current = current->previous;
+	}
+	struct string_list *new_tmp = list->head;
+	list->head = list->tail;
+	list->tail = new_tmp;
+}
+// ================================================================================
+// ================================================================================
 // eof

@@ -404,7 +404,22 @@
 								  Char: reverse_char_vector, \
 								  UChar: reverse_uchar_vector, \
 								  Bool: reverse_bool_vector, \
-                                  String: reverse_string_vector)(&T)
+                                  String: reverse_string_vector, \
+								  ShortLL: reverse_short_list, \
+								  UShortLL: reverse_ushort_list, \
+								  IntLL: reverse_int_list, \
+								  UIntLL: reverse_uint_list, \
+								  LIntLL: reverse_long_list, \
+								  ULIntLL: reverse_ulong_list, \
+								  LLIntLL: reverse_llong_list, \
+								  ULLIntLL: reverse_ullong_list, \
+								  FltLL: reverse_float_list, \
+								  DbleLL: reverse_double_list, \
+								  LDbleLL: reverse_ldouble_list, \
+								  CharLL: reverse_char_list, \
+								  UCharLL: reverse_uchar_list, \
+								  BoolLL: reverse_bool_list, \
+								  StringLL: reverse_string_list)(&T)
 // ==========================================================================================
 // ==========================================================================================
 

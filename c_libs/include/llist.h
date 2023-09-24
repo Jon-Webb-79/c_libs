@@ -2765,5 +2765,309 @@ void delete_bool_list_duplicates(BoolLL *list);
 void delete_string_list_duplicates(StringLL *list);
 // ================================================================================
 // ================================================================================
+// REVERSE_TYPE_LIST FUNCTIONS
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type ShortLL.
+ *
+ * /param vec A linked list struct container of type ShortLL
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list);
+ * short int a[4] = {1, 2, 3, 4};
+ * insert_short_list(&list, a, 4, 0);
+ * reverse_short_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+void reverse_short_list(ShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type UShortLL.
+ *
+ * /param vec A linked list struct container of type UShortLL
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list);
+ * unsigned short int a[4] = {1, 2, 3, 4};
+ * insert_ushort_list(&list, a, 4, 0);
+ * reverse_ushort_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+void reverse_ushort_list(UShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type IntLL.
+ *
+ * /param vec A linked list struct container of type IntLL
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list);
+ * int a[4] = {1, 2, 3, 4};
+ * insert_int_list(&list, a, 4, 0);
+ * reverse_int_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+void reverse_int_list(IntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type UIntLL.
+ *
+ * /param vec A linked list struct container of type UIntLL
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list);
+ * unsigned int a[4] = {1, 2, 3, 4};
+ * insert_uint_list(&list, a, 4, 0);
+ * reverse_uint_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+void reverse_uint_list(UIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type LIntLL.
+ *
+ * /param vec A linked list struct container of type LIntLL
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list);
+ * long int a[4] = {1, 2, 3, 4};
+ * insert_long_list(&list, a, 4, 0);
+ * reverse_long_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+void reverse_long_list(LIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type ULIntLL.
+ *
+ * /param vec A linked list struct container of type ULIntLL
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list);
+ * unsigned long int a[4] = {1, 2, 3, 4};
+ * insert_ulong_list(&list, a, 4, 0);
+ * reverse_ulong_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+void reverse_ulong_list(ULIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type LLIntLL.
+ *
+ * /param vec A linked list struct container of type LLIntLL
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list);
+ * long long int a[4] = {1, 2, 3, 4};
+ * insert_llong_list(&list, a, 4, 0);
+ * reverse_llong_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+void reverse_llong_list(LLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type ULLIntLL.
+ *
+ * /param vec A linked list struct container of type ULLIntLL
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list);
+ * unsigned long long int a[4] = {1, 2, 3, 4};
+ * insert_ullong_list(&list, a, 4, 0);
+ * reverse_ullong_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+void reverse_ullong_list(ULLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type FltLL.
+ *
+ * /param vec A linked list struct container of type FltLL
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list);
+ * float a[4] = {1., 2., 3., 4.};
+ * insert_float_list(&list, a, 4, 0);
+ * reverse_float_list(&list);
+ * PRINT(&list);
+ * [ 4.000, 3.000, 2.000, 1.000 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+void reverse_float_list(FltLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type DbleLL.
+ *
+ * /param vec A linked list struct container of type DbleLL
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list);
+ * double a[4] = {1., 2., 3., 4.};
+ * insert_double_list(&list, a, 4, 0);
+ * reverse_double_list(&list);
+ * PRINT(&list);
+ * [ 4, 3, 2, 1 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+void reverse_double_list(DbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type LDbleLL.
+ *
+ * /param vec A linked list struct container of type LDbleLL
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list);
+ * long double a[4] = {1., 2., 3., 4.};
+ * insert_ldouble_list(&list, a, 4, 0);
+ * reverse_ldouble_list(&list);
+ * PRINT(&list);
+ * [ 4.000, 3.000, 2.000, 1.000 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+void reverse_ldouble_list(LDbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type CharLL.
+ *
+ * /param vec A linked list struct container of type CharLL
+ *
+ * @code
+ * CharLL list;
+ * init_char_list(&list);
+ * char a[4] = {'a', 'b', 'c', 'd'};
+ * insert_char_list(&list, a, 4, 0);
+ * reverse_char_list(&list);
+ * PRINT(&list);
+ * [ d, c, b, a ]
+ * free_char_list(&list);
+ * @endcode
+ */
+void reverse_char_list(CharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type UCharLL.
+ *
+ * /param vec A linked list struct container of type UCharLL
+ *
+ * @code
+ * UCharLL list;
+ * init_uchar_list(&list);
+ * unsigned char a[4] = {'a', 'b', 'c', 'd'};
+ * insert_uchar_list(&list, a, 4, 0);
+ * reverse_uchar_list(&list);
+ * PRINT(&list);
+ * [ d, c, b, a ]
+ * free_uchar_list(&list);
+ * @endcode
+ */
+void reverse_uchar_list(UCharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type BoolLL.
+ *
+ * /param vec A linked list struct container of type BoolLL
+ *
+ * @code
+ * BoolLL list;
+ * init_bool_list(&list);
+ * bool a[4] = {true, true, false, false};
+ * insert_bool_list(&list, a, 4, 0);
+ * reverse_bool_list(&list);
+ * PRINT(&list);
+ * [ false, false, true, true ]
+ * free_bool_list(&list);
+ * @endcode
+ */
+void reverse_bool_list(BoolLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will reverse the order of the array in a struct of
+ * type StringLL.
+ *
+ * /param vec A linked list struct container of type StringLL
+ *
+ * @code
+ * StringLL list;
+ * init_string_list(&list);
+ * push_string_list(&list, "One", vec.active_length)
+ * push_string_list(&list, "Two", vec.active_length)
+ * push_string_list(&list, "Three", vec.active_length)
+ * push_string_list(&list, "Four", vec.active_length)
+ * reverse_string_list(&list);
+ * PRINT(vec);
+ * [ Four, Three, Two, One ]
+ * free_string_vector(&vec);
+ * @endcode
+ */
+void reverse_string_list(StringLL *list);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof
