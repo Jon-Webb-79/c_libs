@@ -1416,6 +1416,9 @@ Returns
 - :c:`list_copy`: A deep copy of a link list of type ``T``.
 
 .. code-block:: c
+   
+   #include "data_structures.h"
+   #include "print.h"
 
    StringLL list;
    INIT_LIST(list);
@@ -1454,6 +1457,9 @@ The following functions can be used in place of the ``COPY`` Macro.
 
 .. code-block:: c
 
+   #include "llist.h"
+   #include "print.h"
+
    StringLL list;
    init_string_list(&list);
    push_string_list(&list, "One", list.active_length);
@@ -1472,7 +1478,74 @@ The following functions can be used in place of the ``COPY`` Macro.
 
 REPEAT
 ======
-TBD
+The ``REPEAT`` Macro will repeat a value in a linked list data structure a user defined number of times.
+
+.. code-block:: c
+
+   int REPEAT(T list, type value, size_t num);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+- :c:`value`: A value of type consistent with ``T``.
+- :c:`num`: The number of times ``value`` will be repeated in the data structure.
+
+Returns
+-------
+
+- :c:`error_code`: 1 if the function executes succesfully, -1 otherwise with a stderr message.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   DbleLL list;
+   INIT_LIST(list);
+   REPEAT(list, 5.3, 3);
+   PRINT(list);
+   FREE(list);
+
+.. code-block:: bash
+
+   >> ( 5.3000, 5.3000, 5.3000 )
+
+The following functions can be used in place of the ``REPEAT`` Macro.
+
+.. code-block:: c
+
+   int repeat_short_list(ShortLL *list, short int value, size_t num);
+   int repeat_ushort_list(UShortLL *list, unsigned short int value, size_t num);
+   int repeat_int_list(IntLL *list, int value, size_t num);
+   int repeat_uint_list(UIntLL *list, unsigned int value, size_t num);
+   int repeat_long_list(LIntLL *list, long int value, size_t num);
+   int repeat_ulong_list(ULIntLL *list, unsigned long int value, size_t num);
+   int repeat_llong_list(LLIntLL *list, long long int value, size_t num);
+   int repeat_ullong_list(ULLIntLL *list, unsigned long long int value, size_t num);
+   int repeat_float_list(FltLL *list, float value, size_t num);
+   int repeat_double_list(DbleLL *list, double value, size_t num);
+   int repeat_ldouble_list(LDbleLL *list, long double value, size_t num);
+   int repeat_char_list(CharLL *list, char value, size_t num);
+   int repeat_uchar_list(UCharLL *list, unsigned char value, size_t num);
+   int repeat_bool_list(BoolLL *list, bool value, size_t num);
+   int repeat_string_list(StringLL *list, char *value, size_t num);
+
+.. code-block:: c
+
+   #include "llist.h"
+   #include "print.h"
+
+   DbleLL list;
+   init_double_list(&list);
+   repeat_double_list(&list, 5.3, 3);
+   PRINT(list);
+   free_double_list(&list);
+
+.. code-block:: bash
+
+   >> ( 5.3000, 5.3000, 5.3000 )
+
 
 LIST_TO_VECTOR
 ==============

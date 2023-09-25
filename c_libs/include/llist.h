@@ -5205,5 +5205,299 @@ CharLL copy_char_list(CharLL *list);
 UCharLL copy_uchar_list(UCharLL *list);
 // ================================================================================
 // ================================================================================
+// REPAT_TYPE_LIST FUNCTIONS
+
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type ShortLL
+ * /param value a value of type short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * ShortLL list;
+ * init_short_list(&list);
+ * repeat_short_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_short_list(&list);
+ * @endcode
+ */
+int repeat_short_list(ShortLL *list, short int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type UShortLL
+ * /param value a value of type unsigned short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * UShortLL list;
+ * init_ushort_list(&list);
+ * repeat_ushort_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ushort_list(&list);
+ * @endcode
+ */
+int repeat_ushort_list(UShortLL *list, unsigned short int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type IntLL
+ * /param value a value of type int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * IntLL list;
+ * init_int_list(&list);
+ * repeat_int_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_int_list(&list);
+ * @endcode
+ */
+int repeat_int_list(IntLL *list, int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type UIntLL
+ * /param value a value of type unsigned int short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * UIntLL list;
+ * init_uint_list(&list);
+ * repeat_uint_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_uint_list(&list);
+ * @endcode
+ */
+int repeat_uint_list(UIntLL *list, unsigned int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type LIntLL
+ * /param value a value of type long int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * LIntLL list;
+ * init_long_list(&list);
+ * repeat_long_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_long_list(&list);
+ * @endcode
+ */
+int repeat_long_list(LIntLL *list, long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type ULIntLL
+ * /param value a value of type unsigned long int short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * ULIntLL list;
+ * init_ulong_list(&list);
+ * repeat_ulong_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ulong_list(&list);
+ * @endcode
+ */
+int repeat_ulong_list(ULIntLL *list, unsigned long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type LLIntLL
+ * /param value a value of type long long int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * LLIntLL list;
+ * init_llong_list(&list);
+ * repeat_llong_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_llong_list(&list);
+ * @endcode
+ */
+int repeat_llong_list(LLIntLL *list, long long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type ULLIntLL
+ * /param value a value of type unsigned long long int short int that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * ULLIntLL list;
+ * init_ullong_list(&list);
+ * repeat_ullong_list(&list, 10, 4);
+ * PRINT(list);
+ * [ 10, 10, 10, 10, 10 ]
+ * free_ullong_list(&list);
+ * @endcode
+ */
+int repeat_ullong_list(ULLIntLL *list, unsigned long long int value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type FltLL
+ * /param value a value of type float that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * FltLL list;
+ * init_float_list(&list);
+ * repeat_float_list(&list, 10.f, 4);
+ * PRINT(list);
+ * [ 10.000, 10.000, 10.000, 10.000, 10.000 ]
+ * free_float_list(&list);
+ * @endcode
+ */
+int repeat_float_list(FltLL *list, float value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type DbleLL
+ * /param value a value of type double that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * DbleLL list;
+ * init_double_list(&list);
+ * repeat_double_list(&list, 10., 4);
+ * PRINT(list);
+ * [ 10.000, 10.000, 10.000, 10.000, 10.000 ]
+ * free_double_list(&list);
+ * @endcode
+ */
+int repeat_double_list(DbleLL *list, double value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type LDbleLL
+ * /param value a value of type long double that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * LDbleLL list;
+ * init_ldouble_list(&list);
+ * repeat_ldouble_list(&list, 10., 4);
+ * PRINT(list);
+ * [ 10.000, 10.000, 10.000, 10.000, 10.000 ]
+ * free_ldouble_list(&list);
+ * @endcode
+ */
+int repeat_ldouble_list(LDbleLL *list, long double value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type CharLL
+ * /param value a value of type char that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * CharLL list;
+ * init_char_list(&list);
+ * repeat_char_list(&list, 'h', 4);
+ * PRINT(list);
+ * [ h, h, h, h, h ]
+ * free_char_list(&list);
+ * @endcode
+ */
+int repeat_char_list(CharLL *list, char value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type CharLL
+ * /param value a value of type char that be repeated
+ * /param num The number of times a value is to be repeated
+ */
+int repeat_uchar_list(UCharLL *list, unsigned char value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type BoolLL
+ * /param value a value of type bool that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * BoolLL list;
+ * init_bool_list(&list);
+ * repeat_bool_list(&list, true, 4);
+ * PRINT(list);
+ * [ true, true, true, true, true ]
+ * free_bool_list(&list);
+ * @endcode
+ */
+int repeat_bool_list(BoolLL *list, bool value, size_t num);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will repeat a user defined value in a linked list
+ * data structure a user defined number of times.
+ *
+ * /param vec A vector or array data structure of type StringLL
+ * /param value a value of type char* that be repeated
+ * /param num The number of times a value is to be repeated
+ *
+ * @code
+ * StringLL list;
+ * init_string_list(&list);
+ * repeat_string_list(&list, "Hello", 4);
+ * PRINT(list);
+ * [ Hello, Hello, Hello, Hello, Hello ]
+ * free_string_list(&list);
+ * @endcode
+ */
+int repeat_string_list(StringLL *list, char *value, size_t num);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

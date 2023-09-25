@@ -2969,4 +2969,172 @@ void test_copy_string_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+
+void test_repeat_char_list(void **state) {
+	CharLL list;
+	INIT_LIST(list);
+	REPEAT(list, 'a', 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 'a');
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_uchar_list(void **state) {
+	UCharLL list;
+	INIT_LIST(list);
+	REPEAT(list, 'a', 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 'a');
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_short_list(void **state) {
+	ShortLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_ushort_list(void **state) {
+	UShortLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_int_list(void **state) {
+	IntLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_uint_list(void **state) {
+	UIntLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_long_list(void **state) {
+	LIntLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_ulong_list(void **state) {
+	ULIntLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_llong_list(void **state) {
+	LLIntLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_ullong_list(void **state) {
+	ULLIntLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), 1);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_float_list(void **state) {
+	FltLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1., 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(IDATA(list, i), 1., 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_double_list(void **state) {
+	DbleLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1., 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(IDATA(list, i), 1., 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_ldouble_list(void **state) {
+	LDbleLL list;
+	INIT_LIST(list);
+	REPEAT(list, 1., 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_float_equal(IDATA(list, i), 1., 1.0e-3);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_bool_list(void **state) {
+	DbleLL list;
+	INIT_LIST(list);
+	REPEAT(list, true, 5);
+	for (size_t i = 0; i < list.active_length; i++) {
+		assert_int_equal(IDATA(list, i), true);
+	}
+	FREE(list);
+}
+// --------------------------------------------------------------------------------
+
+void test_repeat_string_list(void **state) {
+	StringLL list;
+	INIT_LIST(list);
+	REPEAT(list, "One", 5);
+	int cmp;
+	for (size_t i = 0; i < list.active_length; i++) {
+		cmp = strcmp("One", IDATA(list, i));
+		assert_int_equal(cmp, 0);
+	}
+	FREE(list);
+}
+// ================================================================================
+// ================================================================================
 // eof

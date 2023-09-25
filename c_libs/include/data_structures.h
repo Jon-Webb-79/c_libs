@@ -969,7 +969,22 @@
 									       LDble: repeat_ldouble_vector, \
 										   Char: repeat_char_vector, \
 										   Bool: repeat_bool_vector, \
-										   String: repeat_string_vector)(&T, val, num)
+										   String: repeat_string_vector, \
+										   ShortLL: repeat_short_list, \
+										   UShortLL: repeat_ushort_list, \
+										   IntLL: repeat_int_list, \
+										   UIntLL: repeat_uint_list, \
+										   LIntLL: repeat_long_list, \
+										   ULIntLL: repeat_ulong_list, \
+										   LLIntLL: repeat_llong_list, \
+										   ULLIntLL: repeat_ullong_list, \
+										   FltLL: repeat_float_list, \
+										   DbleLL: repeat_double_list, \
+										   LDbleLL: repeat_ldouble_list, \
+										   CharLL: repeat_char_list, \
+										   UCharLL: repeat_uchar_list, \
+										   BoolLL: repeat_bool_list, \
+										   StringLL: repeat_string_list)(&T, val, num)
 #endif /* data_structures_H */
 // ==========================================================================================
 // ==========================================================================================

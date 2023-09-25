@@ -6341,4 +6341,156 @@ UCharLL copy_uchar_list(UCharLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// REPEAT_TYPE_LIST FUNCTIONS
+
+int repeat_short_list(ShortLL *list, short int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_short_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ushort_list(UShortLL *list, unsigned short int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ushort_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_int_list(IntLL *list, int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_int_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_uint_list(UIntLL *list, unsigned int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_uint_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_long_list(LIntLL *list, long int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_long_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ulong_list(ULIntLL *list, unsigned long int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ulong_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_llong_list(LLIntLL *list, long long int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_llong_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ullong_list(ULLIntLL *list, unsigned long long int value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ullong_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_float_list(FltLL *list, float value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_float_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_double_list(DbleLL *list, double value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_double_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_ldouble_list(LDbleLL *list, long double value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_ldouble_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_char_list(CharLL *list, char value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_char_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_bool_list(BoolLL *list, bool value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_bool_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_string_list(StringLL *list, char *value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_string_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// --------------------------------------------------------------------------------
+
+int repeat_uchar_list(UCharLL *list, unsigned char value, size_t num) {
+	int j = 0;
+	for (size_t i = 0; i < num; i++) {
+		j = push_uchar_list(list, value, list->active_length);
+		if (j < 0) return -1;
+	}
+	return 1;
+}
+// ================================================================================
+// ================================================================================
 // eof

@@ -283,5 +283,25 @@ void test_copy_short_list(void ** state);
 void test_copy_string_list(void ** state);
 // ================================================================================
 // ================================================================================
+// TEST_REPEAT
+
+void test_repeat_short_list(void ** state);
+void test_repeat_ushort_list(void ** state);
+void test_repeat_int_list(void ** state);
+void test_repeat_uint_list(void ** state);
+void test_repeat_long_list(void ** state);
+void test_repeat_ulong_list(void ** state);
+void test_repeat_llong_list(void ** state);
+void test_repeat_ullong_list(void ** state);
+void test_repeat_char_list(void ** state);
+void test_repeat_uchar_list(void ** state);
+void test_repeat_float_list(void ** state);
+void test_repeat_double_list(void ** state);
+void test_repeat_ldouble_list(void ** state);
+void test_repeat_bool_list(void ** state);
+void test_repeat_short_list(void ** state);
+void test_repeat_string_list(void ** state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof
