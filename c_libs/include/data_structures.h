@@ -1159,5 +1159,160 @@ String string_list_to_vector(StringLL *list);
 										    StringLL: string_list_to_vector)(&T)
 // ==========================================================================================
 // ==========================================================================================
+// TYPE_VECTOR_TO_LIST FUNCTIONS
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type Short
+ * /return A linked list data structure of type ShortLL
+ */
+ShortLL short_vector_to_list(Short *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type UShort64
+ * /return A linked list data structure of type UShortLL
+ */
+UShortLL ushort_vector_to_list(UShort *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type Int
+ * /return A linked list data structure of type IntLL
+ */
+IntLL int_vector_to_list(Int *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type UInt
+ * /return A linked list data structure of type UIntLL
+ */
+UIntLL uint_vector_to_list(UInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type LInt
+ * /return A linked list data structure of type LIntLL
+ */
+LIntLL long_vector_to_list(LInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type ULInt
+ * /return A linked list data structure of type ULIntLL
+ */
+ULIntLL ulong_vector_to_list(ULInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type LLInt
+ * /return A linked list data structure of type LLIntLL
+ */
+LLIntLL llong_vector_to_list(LLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type ULLInt
+ * /return A linked list data structure of type ULLIntLL
+ */
+ULLIntLL ullong_vector_to_list(ULLInt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type Flt
+ * /return A linked list data structure of type FltLL
+ */
+FltLL float_vector_to_list(Flt *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type Dble
+ * /return A linked list data structure of type DbleLL
+ */
+DbleLL double_vector_to_list(Dble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type LDble
+ * /return A linked list data structure of type LDbleLL
+ */
+LDbleLL ldouble_vector_to_list(LDble *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type Char
+ * /return A linked list data structure of type CharLL
+ */
+CharLL char_vector_to_list(Char *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type UChar
+ * /return A linked list data structure of type UCharLL
+ */
+UCharLL uchar_vector_to_list(UChar *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type Bool
+ * /return A linked list data structure of type BoolLL
+ */
+BoolLL bool_vector_to_list(Bool *vec);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a linked list from a vector or array input
+ *
+ * /param vec A vector data structure of type String
+ * /return A linked list data structure of type StringLL
+ */
+StringLL string_vector_to_list(String *vec);
+// ================================================================================
+// ================================================================================
+
+#define VECTOR_TO_LIST(T) _Generic( (T), Short: short_vector_to_list, \
+										 UShort: ushort_vector_to_list, \
+										 Int: int_vector_to_list, \
+										 UInt: uint_vector_to_list, \
+									     LInt: long_vector_to_list, \
+										 ULInt: ulong_vector_to_list, \
+										 LLInt: llong_vector_to_list, \
+										 ULLInt: ullong_vector_to_list, \
+										 Flt: float_vector_to_list, \
+										 Dble: double_vector_to_list, \
+										 LDble: ldouble_vector_to_list, \
+										 Char: char_vector_to_list, \
+										 UChar: uchar_vector_to_list, \
+										 Bool: bool_vector_to_list, \
+										 String: string_vector_to_list)(&T)
+// ==========================================================================================
+// ==========================================================================================
 #endif /* data_structures_H */
 // eof

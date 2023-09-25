@@ -1672,3 +1672,72 @@ The following functions can be used in place of the ``TRIM`` Macro
 
 VECTOR_TO_LIST
 ==============
+The ``VECTOR_TO_LIST`` Macro will copy the contents of a vector data structure to a linked list data structure.
+
+.. code-block:: c
+
+   list_t VECTOR_TO_LIST(T vec);
+
+Parameters
+----------
+
+- :c:`vec`: A vector data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`list`: A linked list data structure of type consistent with ``T``.
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   INIT_VECTOR(vec, 5);
+   REPEAT(vec, 2, 5);
+   IntLL list = VECTOR_TO_LIST(vec);
+   PRINT(list);
+   FREE(list);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> ( 2, 2, 2, 2, 2 )
+
+The following functions can be used in place of the ``VECTOR_TO_LIST`` Macro.
+
+.. code-block:: c
+
+   ShortLL short_vector_to_list(Short *vec);
+   UShortLL ushort_vector_to_list(UShort *vec);
+   IntLL int_vector_to_list(Int *vec);
+   UIntLL uint_vector_to_list(UInt *vec);
+   LIntLL long_vector_to_list(LInt *vec);
+   ULIntLL ulong_vector_to_list(ULInt *vec);
+   LLIntLL llong_vector_to_list(LLInt *vec);
+   ULLIntLL ullong_vector_to_list(ULLInt *vec);
+   FltLL float_vector_to_list(Flt *vec);
+   DbleLL double_vector_to_list(Dble *vec);
+   LDbleLL ldouble_vector_to_list(LDble *vec);
+   CharLL char_vector_to_list(Char *vec);
+   UCharLL uchar_vector_to_list(UChar *vec);
+   BoolLL bool_vector_to_list(Bool *vec);
+   StringLL string_vector_to_list(String *vec);
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   Int vec;
+   init_int_vector(&vec, 5);
+   repeat_int_vector(&vec, 2, 5);
+   IntLL list = int_vector_to_list(&vec);
+   PRINT(list);
+   free_int_list(&list);
+   free_int_vector(&vec);
+
+.. code-block:: bash
+
+   >> ( 2, 2, 2, 2, 2 )

@@ -388,6 +388,24 @@ void test_repeat_double_vec(void **state);
 void test_repeat_ldouble_vec(void **state);
 void test_repeat_bool_vec(void **state);
 void test_repeat_string_vec(void **state);
+// ==========================================================================================
+// ==========================================================================================
+
+void test_short_vector_to_list(void **state);
+void test_ushort_vector_to_list(void **state);
+void test_int_vector_to_list(void **state);
+void test_uint_vector_to_list(void **state);
+void test_long_vector_to_list(void **state);
+void test_ulong_vector_to_list(void **state);
+void test_llong_vector_to_list(void **state);
+void test_ullong_vector_to_list(void **state);
+void test_char_vector_to_list(void **state);
+void test_uchar_vector_to_list(void **state);
+void test_float_vector_to_list(void **state);
+void test_double_vector_to_list(void **state);
+void test_ldouble_vector_to_list(void **state);
+void test_bool_vector_to_list(void **state);
+void test_string_vector_to_list(void **state);
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================

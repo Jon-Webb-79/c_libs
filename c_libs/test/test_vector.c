@@ -3922,4 +3922,202 @@ void test_repeat_string_vec(void **state) {
 }
 // ==========================================================================================
 // ==========================================================================================
+
+void test_short_vector_to_list(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	ShortLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ushort_vector_to_list(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	UShortLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_int_vector_to_list(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	IntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_uint_vector_to_list(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	UIntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_long_vector_to_list(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	LIntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ulong_vector_to_list(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	ULIntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_llong_vector_to_list(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	LLIntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ullong_vector_to_list(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1, 5);
+	ULLIntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_char_vector_to_list(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 'a', 5);
+	CharLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_uchar_vector_to_list(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 'a', 5);
+	UIntLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_float_vector_to_list(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1.1, 5);
+	FltLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(IDATA(list, i), vec.array[i], 1.0e-3);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_double_vector_to_list(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1.1, 5);
+	DbleLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(IDATA(list, i), vec.array[i], 1.0e-3);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ldouble_vector_to_list(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, 1.1, 5);
+	LDbleLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_float_equal(IDATA(list, i), vec.array[i], 1.0e-3);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_bool_vector_to_list(void **state) {
+	Bool vec;
+	INIT_VECTOR(vec, 5);
+	REPEAT(vec, true, 5);
+	BoolLL list = VECTOR_TO_LIST(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		assert_int_equal(IDATA(list, i), vec.array[i]);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_string_vector_to_list(void **state) {
+	String vec;
+	init_string_vector(&vec);
+	REPEAT(vec, "One", 5);
+	StringLL list = VECTOR_TO_LIST(vec);
+	int cmp;
+	for (size_t i = 0; i < vec.active_length; i++) {
+		cmp = strcmp(IDATA(list, i), vec.array[i]);
+		assert_int_equal(cmp, 0);
+	}
+	FREE(list);
+	FREE(vec);
+}
+// ==========================================================================================
+// ==========================================================================================
 // eof

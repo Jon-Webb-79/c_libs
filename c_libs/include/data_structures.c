@@ -199,4 +199,156 @@ String string_list_to_vector(StringLL *list) {
 }
 // ================================================================================
 // ================================================================================
+// TYPE_VECTOR_TO_LIST FUNCTIONS
+
+ShortLL short_vector_to_list(Short *vec) {
+	ShortLL list;
+	init_short_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_short_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+UShortLL ushort_vector_to_list(UShort *vec) {
+	UShortLL list;
+	init_ushort_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ushort_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+IntLL int_vector_to_list(Int *vec) {
+	IntLL list;
+	init_int_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_int_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+UIntLL uint_vector_to_list(UInt *vec) {
+	UIntLL list;
+	init_uint_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_uint_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+LIntLL long_vector_to_list(LInt *vec) {
+	LIntLL list;
+	init_long_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_long_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+ULIntLL ulong_vector_to_list(ULInt *vec) {
+	ULIntLL list;
+	init_ulong_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ulong_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+LLIntLL llong_vector_to_list(LLInt *vec) {
+	LLIntLL list;
+	init_llong_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_llong_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+ULLIntLL ullong_vector_to_list(ULLInt *vec) {
+	ULLIntLL list;
+	init_ullong_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ullong_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+FltLL float_vector_to_list(Flt *vec) {
+	FltLL list;
+	init_float_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_float_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+DbleLL double_vector_to_list(Dble *vec) {
+	DbleLL list;
+	init_double_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_double_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+LDbleLL ldouble_vector_to_list(LDble *vec) {
+	LDbleLL list;
+	init_ldouble_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ldouble_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+CharLL char_vector_to_list(Char *vec) {
+	CharLL list;
+	init_char_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_char_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+UCharLL uchar_vector_to_list(UChar *vec) {
+	UCharLL list;
+	init_uchar_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_uchar_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+BoolLL bool_vector_to_list(Bool *vec) {
+	BoolLL list;
+	init_bool_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_bool_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// --------------------------------------------------------------------------------
+
+StringLL string_vector_to_list(String *vec) {
+	StringLL list;
+	init_string_list(&list);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_string_list(&list, vec->array[i], list.active_length);
+	}
+	return list;
+}
+// ================================================================================
+// ================================================================================
 // eof
