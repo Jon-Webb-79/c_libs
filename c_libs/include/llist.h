@@ -5083,5 +5083,127 @@ void range_double_list(DbleLL *list, double start, double end, double delta);
 void range_ldouble_list(LDbleLL *list, long double start, long double end, long double delta);
 // ================================================================================
 // ================================================================================
+// COPY_TYPE_LIST FUNCTIONS
+
+/**
+ * This function will create and return a deep copy of an ShortLL struct
+ *
+ * /param vec A linked list struct of type ShortLL
+ */
+ShortLL copy_short_list(ShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an UShortLL struct
+ *
+ * /param vec A linked list struct of type UShortLL
+ */
+UShortLL copy_ushort_list(UShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an IntLL struct
+ *
+ * /param vec A linked list struct of type IntLL
+ */
+IntLL copy_int_list(IntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an UIntLL struct
+ *
+ * /param vec A linked list struct of type UIntLL
+ */
+UIntLL copy_uint_list(UIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an LIntLL struct
+ *
+ * /param vec A linked list struct of type LIntLL
+ */
+LIntLL copy_long_list(LIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an ULIntLL struct
+ *
+ * /param vec A linked list struct of type ULIntLL
+ */
+ULIntLL copy_ulong_list(ULIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an LLIntLL struct
+ *
+ * /param vec A linked list struct of type LLIntLL
+ */
+LLIntLL copy_llong_list(LLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an ULLIntLL struct
+ *
+ * /param vec A linked list struct of type ULLIntLL
+ */
+ULLIntLL copy_ullong_list(ULLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an FltLL struct
+ *
+ * /param vec A linked list struct of type FltLL
+ */
+FltLL copy_float_list(FltLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an DbleLL struct
+ *
+ * /param vec A linked list struct of type DbleLL
+ */
+DbleLL copy_double_list(DbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an LDbleLL struct
+ *
+ * /param vec A linked list struct of type LDbleLL
+ */
+LDbleLL copy_ldouble_list(LDbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an BoolLL struct
+ *
+ * /param vec A linked list struct of type BoolLL
+ */
+ BoolLL copy_bool_list(BoolLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an StringLL struct
+ *
+ * /param vec A linked list struct of type StringLL
+ */
+StringLL copy_string_list(StringLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an CharLL struct
+ *
+ * /param vec A linked list struct of type CharLL
+ */
+CharLL copy_char_list(CharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create and return a deep copy of an UCharLL struct
+ *
+ * /param vec A linked list struct of type UCharLL
+ */
+UCharLL copy_uchar_list(UCharLL *list);
+// ================================================================================
+// ================================================================================
 #endif /* llist.h */
 // eof

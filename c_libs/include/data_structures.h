@@ -814,7 +814,22 @@
 							   LDble: copy_ldouble_vector, \
 							   Char: copy_char_vector, \
 							   Bool: copy_bool_vector, \
-							   String: copy_string_vector)(&T)
+							   String: copy_string_vector, \
+							   ShortLL: copy_short_list, \
+							   UShortLL: copy_ushort_list, \
+							   IntLL: copy_int_list, \
+							   UIntLL: copy_uint_list, \
+							   LIntLL: copy_long_list, \
+							   ULIntLL: copy_ulong_list, \
+							   LLIntLL: copy_llong_list, \
+							   ULLIntLL: copy_ullong_list, \
+							   FltLL: copy_float_list, \
+							   DbleLL: copy_double_list, \
+							   LDbleLL: copy_ldouble_list, \
+							   BoolLL: copy_bool_list, \
+							   CharLL: copy_char_list, \
+							   UCharLL: copy_uchar_list, \
+							   StringLL: copy_string_list)(&T)
 /// ==========================================================================================
 /// ==========================================================================================
 // IDATA MACRO

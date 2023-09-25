@@ -2704,4 +2704,269 @@ void test_range_ldouble_list(void **state) {
 }
 // ================================================================================
 // ================================================================================
+// TEST_COPY_TYPE
+
+void test_copy_short_list(void **state) {
+	ShortLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	ShortLL new_list = COPY(list);
+	short int one;
+	short int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_ushort_list(void **state) {
+	UShortLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	UShortLL new_list = COPY(list);
+	unsigned short int one;
+	unsigned short int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_int_list(void **state) {
+	IntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	IntLL new_list = COPY(list);
+	int one;
+	int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_uint_list(void **state) {
+	UIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	UIntLL new_list = COPY(list);
+	unsigned int one;
+	unsigned int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_long_list(void **state) {
+	LIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	LIntLL new_list = COPY(list);
+	long int one;
+	long int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_ulong_list(void **state) {
+	ULIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	ULIntLL new_list = COPY(list);
+	unsigned long int one;
+	unsigned long int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_llong_list(void **state) {
+	LLIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	LLIntLL new_list = COPY(list);
+	long long int one;
+	long long int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_ullong_list(void **state) {
+	ULLIntLL list;
+	INIT_LIST(list);
+	RANGE(list, 2, 20, 2);
+	ULLIntLL new_list = COPY(list);
+	unsigned long long int one;
+	unsigned long long int two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_char_list(void **state) {
+	CharLL list;
+	INIT_LIST(list);
+	char a[5] = { 'a', 'b', 'c', 'd', 'e'};
+	INSERT(list, a, 5, 0);
+	CharLL new_list = COPY(list);
+	char one;
+	char two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_uchar_list(void **state) {
+	UCharLL list;
+	INIT_LIST(list);
+    unsigned char a[5] = { 'a', 'b', 'c', 'd', 'e'};
+	INSERT(list, a, 5, 0);
+	UCharLL new_list = COPY(list);
+	unsigned char one;
+	unsigned char two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_float_list(void **state) {
+	FltLL list;
+	INIT_LIST(list);
+	RANGE(list, 2., 20., 2.);
+	FltLL new_list = COPY(list);
+	float one;
+	float two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_float_equal(one, two, 1.0e-3);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_double_list(void **state) {
+	DbleLL list;
+	INIT_LIST(list);
+	RANGE(list, 2., 20., 2.);
+	DbleLL new_list = COPY(list);
+	double one;
+	double two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_float_equal(one, two, 1.0e-3);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_ldouble_list(void **state) {
+	LDbleLL list;
+	INIT_LIST(list);
+	RANGE(list, 2., 20., 2.);
+	LDbleLL new_list = COPY(list);
+	long double one;
+	long double two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_float_equal(one, two, 1.0e-3);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_bool_list(void **state) {
+	BoolLL list;
+	INIT_LIST(list);
+	bool a[5] = {true, false, true, false, true};
+	INSERT(list, a, 5, 0);
+	BoolLL new_list = COPY(list);
+	bool one;
+	bool two;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		assert_int_equal(one, two);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_string_list(void **state) {
+	StringLL list;
+	INIT_LIST(list);
+	PUSH(list, "One", list.active_length);
+	PUSH(list, "Two", list.active_length);
+    PUSH(list, "Three", list.active_length);
+	PUSH(list, "Four", list.active_length);
+	StringLL new_list = COPY(list);
+	char *one;
+	char *two;
+	int cmp;
+	for (size_t i = 0; i < list.active_length; i++) {
+		one = IDATA(list, i);
+		two = IDATA(new_list, i);
+		cmp = strcmp(one, two);
+		assert_int_equal(cmp, 0);
+	}
+	FREE(list);
+	FREE(new_list);
+}
+// ================================================================================
+// ================================================================================
 // eof

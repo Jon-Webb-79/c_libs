@@ -1399,7 +1399,76 @@ The following functions can be used in place of the ``RANGE`` Macro.
 
 COPY
 ====
-TBD
+The ``COPY`` Macro will create a deep copy of a linked list data structure.
+
+.. code-block:: c
+
+   T COPY(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list dat atructure of type ``T``.
+
+Returns
+-------
+
+- :c:`list_copy`: A deep copy of a link list of type ``T``.
+
+.. code-block:: c
+
+   StringLL list;
+   INIT_LIST(list);
+   PUSH(list, "One", list.active_length);
+   PUSH(list, "Two", list.active_length);
+   PUSH(list, "Three", list.active_length);
+   PUSH(list, "Four", list.active_length);
+   StringLL new_list = COPY(list); 
+   PRINT(new_list);
+   FREE(list);
+   FREE(new_list);
+
+.. code-block:: bash
+
+   >> ( One, Two, Three, Four )
+
+The following functions can be used in place of the ``COPY`` Macro.
+
+.. code-block:: c
+
+   ShortLL copy_short_list(ShortLL *list);
+   UShortLL copy_ushort_list(UShortLL *list);
+   IntLL copy_int_list(IntLL *list);
+   UIntLL copy_uint_list(UIntLL *list);
+   LIntLL copy_long_list(LIntLL *list);
+   ULIntLL copy_ulong_list(ULIntLL *list);
+   LLIntLL copy_llong_list(LLIntLL *list);
+   ULLIntLL copy_ullong_list(ULLIntLL *list);
+   FltLL copy_float_list(FltLL *list);
+   DbleLL copy_double_list(DbleLL *list);
+   LDbleLL copy_ldouble_list(LDbleLL *list);
+   BoolLL copy_bool_list(BoolLL *list);
+   StringLL copy_string_list(StringLL *list);
+   CharLL copy_char_list(CharLL *list);
+   UCharLL copy_uchar_list(UCharLL *list);
+
+.. code-block:: c
+
+   StringLL list;
+   init_string_list(&list);
+   push_string_list(&list, "One", list.active_length);
+   push_string_list(&list, "Two", list.active_length);
+   push_string_list(&list, "Three", list.active_length);
+   push_string_list(&list, "Four", list.active_length);
+   StringLL new_list = copy_string_list(&list); 
+   PRINT(new_list);
+   free_string_list(&list);
+   free_string_list(&new_list);
+
+.. code-block:: bash
+
+   >> ( One, Two, Three, Four )
+
 
 REPEAT
 ======

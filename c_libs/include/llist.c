@@ -6159,4 +6159,186 @@ void range_ldouble_list(LDbleLL *list, long double start, long double end, long 
 }
 // ================================================================================
 // ================================================================================
+// COPY_TYPE_LIST FUNCTIONS
+
+ShortLL copy_short_list(ShortLL *list) {
+	ShortLL new_list;
+	init_short_list(&new_list);
+	struct short_list *guess = list->head;
+	while (guess != NULL) {
+		push_short_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+UShortLL copy_ushort_list(UShortLL *list) {
+	UShortLL new_list;
+	init_ushort_list(&new_list);
+	struct ushort_list *guess = list->head;
+	while (guess != NULL) {
+		push_ushort_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+IntLL copy_int_list(IntLL *list) {
+	IntLL new_list;
+	init_int_list(&new_list);
+	struct int_list *guess = list->head;
+	while (guess != NULL) {
+		push_int_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+UIntLL copy_uint_list(UIntLL *list) {
+	UIntLL new_list;
+	init_uint_list(&new_list);
+	struct uint_list *guess = list->head;
+	while (guess != NULL) {
+		push_uint_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+LIntLL copy_long_list(LIntLL *list) {
+	LIntLL new_list;
+	init_long_list(&new_list);
+	struct long_list *guess = list->head;
+	while (guess != NULL) {
+		push_long_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+ULIntLL copy_ulong_list(ULIntLL *list) {
+	ULIntLL new_list;
+	init_ulong_list(&new_list);
+	struct ulong_list *guess = list->head;
+	while (guess != NULL) {
+		push_ulong_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+LLIntLL copy_llong_list(LLIntLL *list) {
+	LLIntLL new_list;
+	init_llong_list(&new_list);
+	struct llong_list *guess = list->head;
+	while (guess != NULL) {
+		push_llong_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+ULLIntLL copy_ullong_list(ULLIntLL *list) {
+	ULLIntLL new_list;
+	init_ullong_list(&new_list);
+	struct ullong_list *guess = list->head;
+	while (guess != NULL) {
+		push_ullong_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+FltLL copy_float_list(FltLL *list) {
+	FltLL new_list;
+	init_float_list(&new_list);
+	struct float_list *guess = list->head;
+	while (guess != NULL) {
+		push_float_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+DbleLL copy_double_list(DbleLL *list) {
+	DbleLL new_list;
+	init_double_list(&new_list);
+	struct double_list *guess = list->head;
+	while (guess != NULL) {
+		push_double_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+LDbleLL copy_ldouble_list(LDbleLL *list) {
+	LDbleLL new_list;
+	init_ldouble_list(&new_list);
+	struct ldouble_list *guess = list->head;
+	while (guess != NULL) {
+		push_ldouble_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+BoolLL copy_bool_list(BoolLL *list) {
+	BoolLL new_list;
+	init_bool_list(&new_list);
+	struct bool_list *guess = list->head;
+	while (guess != NULL) {
+		push_bool_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+StringLL copy_string_list(StringLL *list) {
+	StringLL new_list;
+	init_string_list(&new_list);
+	struct string_list *guess = list->head;
+	while (guess != NULL) {
+		push_string_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+CharLL copy_char_list(CharLL *list) {
+	CharLL new_list;
+	init_char_list(&new_list);
+	struct char_list *guess = list->head;
+	while (guess != NULL) {
+		push_char_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// --------------------------------------------------------------------------------
+
+UCharLL copy_uchar_list(UCharLL *list) {
+	UCharLL new_list;
+	init_uchar_list(&new_list);
+	struct uchar_list *guess = list->head;
+	while (guess != NULL) {
+		push_uchar_list(&new_list, guess->data, new_list.active_length);
+		guess = guess->next;
+	}
+	return new_list;
+}
+// ================================================================================
+// ================================================================================
 // eof

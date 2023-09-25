@@ -263,5 +263,25 @@ void test_range_double_list(void **state);
 void test_range_ldouble_list(void **state);
 // ================================================================================
 // ================================================================================
+// TEST_COPY
+
+void test_copy_short_list(void ** state);
+void test_copy_ushort_list(void ** state);
+void test_copy_int_list(void ** state);
+void test_copy_uint_list(void ** state);
+void test_copy_long_list(void ** state);
+void test_copy_ulong_list(void ** state);
+void test_copy_llong_list(void ** state);
+void test_copy_ullong_list(void ** state);
+void test_copy_char_list(void ** state);
+void test_copy_uchar_list(void ** state);
+void test_copy_float_list(void ** state);
+void test_copy_double_list(void ** state);
+void test_copy_ldouble_list(void ** state);
+void test_copy_bool_list(void ** state);
+void test_copy_short_list(void ** state);
+void test_copy_string_list(void ** state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof
