@@ -17,6 +17,7 @@
 
 #include <stdio.h>
 #include "vector.h"
+#include "llist.h"
 
 // PUSH GENERIC OPERATOR
 
@@ -985,7 +986,178 @@
 										   UCharLL: repeat_uchar_list, \
 										   BoolLL: repeat_bool_list, \
 										   StringLL: repeat_string_list)(&T, val, num)
+// ==========================================================================================
+// ==========================================================================================
+// TYPE_LIST_TO_VECTOR FUNCTIONS
+
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type ShortLL
+ * /return vec A vector data structure of type Short
+ */
+Short short_list_to_vector(ShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type UShortLL
+ * /return vec A vector data structure of type UShort
+ */
+UShort ushort_list_to_vector(UShortLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type IntLL
+ * /return vec A vector data structure of type Int
+ */
+Int int_list_to_vector(IntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type UIntLL
+ * /return vec A vector data structure of type UInt
+ */
+UInt uint_list_to_vector(UIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type LIntLL
+ * /return vec A vector data structure of type LInt
+ */
+LInt long_list_to_vector(LIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type ULIntLL
+ * /return vec A vector data structure of type ULInt
+ */
+ULInt ulong_list_to_vector(ULIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type LLIntLL
+ * /return vec A vector data structure of type LLInt
+ */
+LLInt llong_list_to_vector(LLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type ULLIntLL
+ * /return vec A vector data structure of type ULLInt
+ */
+ULLInt ullong_list_to_vector(ULLIntLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type FltLL
+ * /return vec A vector data structure of type Flt
+ */
+Flt float_list_to_vector(FltLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type DbleLL
+ * /return vec A vector data structure of type Dble
+ */
+Dble double_list_to_vector(DbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type LDbleLL
+ * /return vec A vector data structure of type LDble
+ */
+LDble ldouble_list_to_vector(LDbleLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type CharLL
+ * /return vec A vector data structure of type Char
+ */
+Char char_list_to_vector(CharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type UCharLL
+ * /return vec A vector data structure of type UChar
+ */
+UChar uchar_list_to_vector(UCharLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type BoolLL
+ * /return vec A vector data structure of type Bool
+ */
+Bool bool_list_to_vector(BoolLL *list);
+// --------------------------------------------------------------------------------
+
+/**
+ * This function will create a vector data structure with the data contents
+ * of a linked list data structure
+ *
+ * /param list A linked list data structure of type StringLL
+ * /return vec A vector data structure of type String
+ */
+String string_list_to_vector(StringLL *list);
+// ==========================================================================================
+// ==========================================================================================
+
+#define LIST_TO_VECTOR(T) _Generic( (T), ShortLL: short_list_to_vector, \
+										    UShortLL: ushort_list_to_vector, \
+										    IntLL: int_list_to_vector, \
+										    UIntLL: uint_list_to_vector, \
+										    LIntLL: long_list_to_vector, \
+										    ULIntLL: ulong_list_to_vector, \
+										    LLIntLL: llong_list_to_vector, \
+										    ULLIntLL: ullong_list_to_vector, \
+										    FltLL: float_list_to_vector, \
+										    DbleLL: double_list_to_vector, \
+										    LDbleLL: ldouble_list_to_vector, \
+										    CharLL: char_list_to_vector, \
+											UCharLL: uchar_list_to_vector, \
+											BoolLL: bool_list_to_vector, \
+										    StringLL: string_list_to_vector)(&T)
+// ==========================================================================================
+// ==========================================================================================
 #endif /* data_structures_H */
-// ==========================================================================================
-// ==========================================================================================
 // eof

@@ -1549,4 +1549,74 @@ The following functions can be used in place of the ``REPEAT`` Macro.
 
 LIST_TO_VECTOR
 ==============
-TBD
+The ``LIST_TO_VECTOR`` Macro will copy the contents of a linked list data structure
+to a Vector data structure.
+
+.. code-block:: c
+
+   vec_t LIST_TO_VECTOR(T list);
+
+Parameters
+----------
+
+- :c:`list`: A linked list data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`vec`: A vector data structure of type consistent with ``T``.
+
+.. code-block:: c
+
+   #include "data_structure.h"
+   #include "print.h"
+
+   BoolLL list;
+   INIT_LIST(list);
+   REPEAT(list, true, 5);
+   Bool vec = LIST_TO_VECTOR(list);
+   PRINT(vec);
+   FREE(list);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> [ true, true, true, true, true ]
+
+The following functions can be used in place of the ``LIST_TO_VECTOR`` Macro.
+
+.. code-block:: c
+
+   Short short_list_to_vector(ShortLL *list);
+   UShort ushort_list_to_vector(UShortLL *list);
+   Int int_list_to_vector(IntLL *list);
+   UInt uint_list_to_vector(UIntLL *list);
+   LInt long_list_to_vector(LIntLL *list);
+   ULInt ulong_list_to_vector(ULIntLL *list);
+   LLInt llong_list_to_vector(LLIntLL *list);
+   ULLInt ullong_list_to_vector(ULLIntLL *list);
+   Flt float_list_to_vector(FltLL *list);
+   Dble double_list_to_vector(DbleLL *list);
+   LDble ldouble_list_to_vector(LDbleLL *list);
+   Char char_list_to_vector(CharLL *list);
+   UChar uchar_list_to_vector(UCharLL *list);
+   Bool bool_list_to_vector(BoolLL *list);
+   String string_list_to_vector(StringLL *list);
+
+.. code-block:: c
+
+   #include "data_structures.h"
+   #include "print.h"
+
+   BoolLL list;
+   init_bool_list(&list);
+   repeat_bool_list(&list, true, 5);
+   Bool vec = bool_list_to_vector(&list);
+   PRINT(vec);
+   free_bool_list(list);
+   free_bool_vector(vec);
+
+.. code-block:: bash
+
+   >> [ true, true, true, true, true ]
+

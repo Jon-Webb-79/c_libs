@@ -530,6 +530,21 @@ const struct CMUnitTest tests_list[] = {
     cmocka_unit_test(test_repeat_ldouble_list),
     cmocka_unit_test(test_repeat_bool_list),
     cmocka_unit_test(test_repeat_string_list),
+	cmocka_unit_test(test_short_list_to_vector),
+    cmocka_unit_test(test_ushort_list_to_vector),
+	cmocka_unit_test(test_int_list_to_vector),
+    cmocka_unit_test(test_uint_list_to_vector),
+	cmocka_unit_test(test_long_list_to_vector),
+    cmocka_unit_test(test_ulong_list_to_vector),
+	cmocka_unit_test(test_llong_list_to_vector),
+    cmocka_unit_test(test_ullong_list_to_vector),
+	cmocka_unit_test(test_char_list_to_vector),
+    cmocka_unit_test(test_uchar_list_to_vector),
+	cmocka_unit_test(test_float_list_to_vector),
+    cmocka_unit_test(test_double_list_to_vector),
+	cmocka_unit_test(test_ldouble_list_to_vector),
+    cmocka_unit_test(test_bool_list_to_vector),
+	cmocka_unit_test(test_string_list_to_vector)
 };
 
 // Begin code

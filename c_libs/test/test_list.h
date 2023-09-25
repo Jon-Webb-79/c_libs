@@ -303,5 +303,23 @@ void test_repeat_short_list(void ** state);
 void test_repeat_string_list(void ** state);
 // ================================================================================
 // ================================================================================
+
+void test_short_list_to_vector(void **state);
+void test_ushort_list_to_vector(void **state);
+void test_int_list_to_vector(void **state);
+void test_uint_list_to_vector(void **state);
+void test_long_list_to_vector(void **state);
+void test_ulong_list_to_vector(void **state);
+void test_llong_list_to_vector(void **state);
+void test_ullong_list_to_vector(void **state);
+void test_float_list_to_vector(void **state);
+void test_double_list_to_vector(void **state);
+void test_ldouble_list_to_vector(void **state);
+void test_char_list_to_vector(void **state);
+void test_uchar_list_to_vector(void **state);
+void test_bool_list_to_vector(void **state);
+void test_string_list_to_vector(void **state);
+// ================================================================================
+// ================================================================================
 #endif /* test_H */
 // eof
