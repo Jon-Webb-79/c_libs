@@ -1,3 +1,5 @@
+.. _list-data-struct:
+
 ***********
 Linked List
 ***********
@@ -23,7 +25,7 @@ in memory for the previous and future data structures.
 .. role:: c(code)
    :language: c
 
-The `LIST_STRUCT` macro produces a struct that tracks the location in memory
+The ``LIST_STRUCT`` macro produces a struct that tracks the location in memory
 of all data structure.
 
 .. code-block:: c
@@ -136,9 +138,9 @@ Parameters
    #include data_structures.h
    IntLL list
    // Instnatiate a Linked List data structure for storing integers
-   INIT_List(list)
+   INIT_LIST(list)
 
-The following functions can be used in place of the type generic ``INIT_VECTOR`` method.
+The following functions can be used in place of the type generic ``INIT_LIST`` method.
 These methods can be accessed via the ``data_structures.h`` or ``llist.h`` files.
 
 .. code-block:: c
@@ -1550,7 +1552,7 @@ The following functions can be used in place of the ``REPEAT`` Macro.
 LIST_TO_VECTOR
 ==============
 The ``LIST_TO_VECTOR`` Macro will copy the contents of a linked list data structure
-to a Vector data structure.
+to a :ref:`Vector<vec-data-struct>` data structure.
 
 .. code-block:: c
 
@@ -1620,3 +1622,5 @@ The following functions can be used in place of the ``LIST_TO_VECTOR`` Macro.
 
    >> [ true, true, true, true, true ]
 
+LIST_TO_BTREE
+=============

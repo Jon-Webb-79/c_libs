@@ -1,3 +1,5 @@
+.. _vec-data-struct:
+
 ******
 Vector
 ******
@@ -1672,7 +1674,8 @@ The following functions can be used in place of the ``TRIM`` Macro
 
 VECTOR_TO_LIST
 ==============
-The ``VECTOR_TO_LIST`` Macro will copy the contents of a vector data structure to a linked list data structure.
+The ``VECTOR_TO_LIST`` Macro will copy the contents of a vector data structure to a 
+:ref:`Linked List<list-data-struct>` data structure.
 
 .. code-block:: c
 
@@ -1741,3 +1744,7 @@ The following functions can be used in place of the ``VECTOR_TO_LIST`` Macro.
 .. code-block:: bash
 
    >> ( 2, 2, 2, 2, 2 )
+
+VECTOR_TO_BTREE
+===============
+TBD
