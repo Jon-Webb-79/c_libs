@@ -579,4 +579,314 @@ void print_llstring(StringLL x) {
 }
 // ================================================================================
 // ================================================================================
+// BINARY TREE FUNCTIONS
+
+void print_short_preorder(short_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%hd ", root->key);
+        print_short_preorder(root->left);
+        print_short_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btshort(ShortBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_short_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_ushort_preorder(ushort_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%hu ", root->key);
+        print_ushort_preorder(root->left);
+        print_ushort_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btushort(UShortBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_ushort_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_int_preorder(int_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%d ", root->key);
+        print_int_preorder(root->left);
+        print_int_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btint(IntBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_int_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_uint_preorder(uint_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%u ", root->key);
+        print_uint_preorder(root->left);
+        print_uint_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btuint(UIntBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_uint_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_long_preorder(long_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%ld ", root->key);
+        print_long_preorder(root->left);
+        print_long_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btlong(LIntBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_long_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_ulong_preorder(ulong_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%lu ", root->key);
+        print_ulong_preorder(root->left);
+        print_ulong_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btulong(ULIntBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_ulong_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_llong_preorder(llong_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%lld ", root->key);
+        print_llong_preorder(root->left);
+        print_llong_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btllong(LLIntBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_llong_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_ullong_preorder(ullong_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%llu ", root->key);
+        print_ullong_preorder(root->left);
+        print_ullong_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btullong(ULLIntBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_ullong_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_float_preorder(float_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%f ", root->key);
+        print_float_preorder(root->left);
+        print_float_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btfloat(FltBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_float_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_double_preorder(double_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%lf ", root->key);
+        print_double_preorder(root->left);
+        print_double_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btdouble(DbleBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_double_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_ldouble_preorder(ldouble_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%Lf ", root->key);
+        print_ldouble_preorder(root->left);
+        print_ldouble_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btldouble(LDbleBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_ldouble_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_char_preorder(char_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%c ", root->key);
+        print_char_preorder(root->left);
+        print_char_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btchar(CharBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_char_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_uchar_preorder(uchar_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%c ", root->key);
+        print_uchar_preorder(root->left);
+        print_uchar_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btuchar(UCharBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_uchar_preorder(x.root);
+	printf(">");
+}
+// --------------------------------------------------------------------------------
+
+void print_string_preorder(string_btree *root)
+{
+    if(root != NULL)
+    {
+        printf("%s ", root->key);
+        print_string_preorder(root->left);
+        print_string_preorder(root->right);
+    }
+}
+// --------------------------------------------------------------------------------
+
+void print_btstring(StringBT x) {
+	if (x.active_length == 0) {
+		printf("< NULL >");
+		return;
+	}
+	printf("< ");
+	print_string_preorder(x.root);
+	printf(">");
+}
+// ================================================================================
+// ================================================================================
 // eof

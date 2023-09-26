@@ -18,6 +18,7 @@
 #include <stdbool.h>
 #include "vector.h"
 #include "llist.h"
+#include "btree.h"
 
 /* Define the number of data points to be printed in an array before advancing
  * to the next line */
@@ -67,6 +68,20 @@
 										 UCharLL: true, \
 										 BoolLL: true, \
 										 StringLL: true, \
+										 ShortBT: true, \
+										 UShortBT: true, \
+										 IntBT: true, \
+										 UIntBT: true, \
+										 LIntBT: true, \
+										 ULIntBT: true, \
+										 LLIntBT: true, \
+										 ULLIntBT: true, \
+										 FltBT: true, \
+										 DbleBT: true, \
+										 LDbleBT: true, \
+										 CharBT: true, \
+										 UCharBT: true, \
+										 StringBT: true, \
 										 default: false)
 // ================================================================================
 // ================================================================================
@@ -122,6 +137,21 @@ void print_llldouble(LDbleLL x);
 void print_llchar(CharLL x);
 void print_llbool(BoolLL x);
 void print_llstring(StringLL x);
+
+void print_btshort(ShortBT x);
+void print_btushort(UShortBT x);
+void print_btint(IntBT x);
+void print_btuint(UIntBT x);
+void print_btlong(LIntBT x);
+void print_btulong(ULIntBT x);
+void print_btllong(LLIntBT x);
+void print_btullong(ULLIntBT x);
+void print_btfloat(FltBT x);
+void print_btdouble(DbleBT x);
+void print_btldouble(LDbleBT x);
+void print_btchar(CharBT x);
+void print_btuchar(UCharBT x);
+void print_btstring(StringBT x);
 // ================================================================================
 // ================================================================================
 // Begin macros that uses the various print functions.
@@ -164,7 +194,20 @@ void print_llstring(StringLL x);
 									   LDbleLL: print_llldouble, \
 									   CharLL: print_llchar, \
 									   BoolLL: print_llbool, \
-									   StringLL: print_llstring)(T)
+									   StringLL: print_llstring, \
+									   ShortBT: print_btshort, \
+                                       UShortBT: print_btushort, \
+                                       IntBT: print_btint, \
+                                       UIntBT: print_btuint, \
+                                       LIntBT: print_btlong, \
+                                       ULIntBT: print_btulong, \
+                                       LLIntBT: print_btllong, \
+                                       ULLIntBT: print_btullong, \
+                                       FltBT: print_btfloat, \
+                                       DbleBT: print_btdouble, \
+                                       LDbleBT: print_btldouble, \
+                                       CharBT: print_btchar, \
+									   UCharBT: print_btuchar)(T)
 // --------------------------------------------------------------------------------
 
 #define PRINT1(a) do {															\
