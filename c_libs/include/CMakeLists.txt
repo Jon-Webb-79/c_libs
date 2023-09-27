@@ -18,6 +18,8 @@ add_library( include
 	vector.h
 	llist.c
 	llist.h
+	btree.c
+	btree.h
 	print.c
 	print.h
 	data_structures.c

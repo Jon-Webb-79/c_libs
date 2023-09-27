@@ -22,6 +22,8 @@ add_executable(
   test_vector.h
   test_list.c
   test_list.h
+  test_btree.h
+  test_btree.c
 )
 target_link_libraries(
   unit_tests

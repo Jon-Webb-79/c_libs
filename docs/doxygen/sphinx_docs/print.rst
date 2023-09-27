@@ -57,6 +57,27 @@ will also encase a linked list in circular brackets ``( )`` to distringuish them
    >> ( 1, 2, 3, 4, 5 )
 
 
+In addition, the ``PRINT`` Macro will also encase a Binary Tree in ``< >`` brackets.  In addition,
+the ``PRINT`` statement will print a binary tree with a pre-order traversal method.
+
+.. code-block:: c
+
+   #include btree.h
+   // Can also use data_structures.h
+   ShortBT tree;
+   PUSH_BTREE(tree, 10);
+   PUSH_BTREE(tree, 20);
+   PUSH_BTREE(tree, 30);
+   PUSH_BTREE(tree, 40);
+   PUSH_BTREE(tree, 50);
+   PUSH_BTREE(tree, 25);
+   PRINT(tree);
+   FREE_BTREE(tree);
+
+.. code-block:: c
+
+   >> < 30, 20, 10, 25, 40, 5 >
+
 At present the ``PRINT`` macro does not support formatting.
 
 

@@ -196,7 +196,6 @@ void init_uchar_btree(UCharBT *tree);
 // ================================================================================
 // ================================================================================
 // INIT_BTREE MACRO
-
 #define INIT_BTREE(tree) _Generic ( (tree), ShortBT: init_short_btree, \
 										 UShortBT: init_ushort_btree, \
 										 IntBT: init_int_btree, \
@@ -1137,7 +1136,768 @@ void pop_string_btree(StringBT *btree, char *key);
 										 CharBT: pop_char_btree, \
 										 UCharBT: pop_uchar_btree, \
 										 StringBT: pop_string_btree)(&tree, key)
+// ================================================================================
+// ================================================================================
+// IS_BTREE_TYPE_DATA
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_short_btree_data(ShortBT *tree, short int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_ushort_btree_data(UShortBT *tree, unsigned short int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_int_btree_data(IntBT *tree, int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_uint_btree_data(UIntBT *tree, unsigned int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_long_btree_data(LIntBT *tree, long int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_ulong_btree_data(ULIntBT *tree, unsigned long int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_llong_btree_data(LLIntBT *tree, long long int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_ullong_btree_data(ULLIntBT *tree, unsigned long long int key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_float_btree_data(FltBT *tree, float key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_double_btree_data(DbleBT *tree, double key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_ldouble_btree_data(LDbleBT *tree, long double key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_char_btree_data(CharBT *tree, char key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_uchar_btree_data(UCharBT *tree, unsigned char key);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will return true if a value exists in a binary tree or false
+ * otherwise
+ */
+bool is_string_btree_data(StringBT *tree, char *key);
+// ================================================================================
+// ================================================================================
+// MIN_TYPE_BTREE FUNCTIONS
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type ShortBT
+ *
+ * @code
+ * ShortBT tree;
+ * init_short_btree(&tree);
+ * push_short_btree(&tree, 0);
+ * push_short_btree(&tree, 3);
+ * push_short_btree(&tree, 15);
+ * push_short_btree(&tree, 10);
+ * short int min = min_short_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_short_btree(&tree);
+ * @endcode
+ */
+short int min_short_btree(ShortBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type UShortBT
+ *
+ * @code
+ * UShortBT tree;
+ * init_ushort_btree(&tree);
+ * push_ushort_btree(&tree, 0);
+ * push_ushort_btree(&tree, 3);
+ * push_ushort_btree(&tree, 15);
+ * push_ushort_btree(&tree, 10);
+ * unsigned short int min = min_ushort_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ushort_btree(&tree);
+ * @endcode
+ */
+unsigned short int min_ushort_btree(UShortBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type IntBT
+ *
+ * @code
+ * IntBT tree;
+ * init_int_btree(&tree);
+ * push_int_btree(&tree, 0);
+ * push_int_btree(&tree, 3);
+ * push_int_btree(&tree, 15);
+ * push_int_btree(&tree, 10);
+ * int min = min_int_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_int_btree(&tree);
+ * @endcode
+ */
+int min_int_btree(IntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type UIntBT
+ *
+ * @code
+ * UIntBT tree;
+ * init_uint_btree(&tree);
+ * push_uint_btree(&tree, 0);
+ * push_uint_btree(&tree, 3);
+ * push_uint_btree(&tree, 15);
+ * push_uint_btree(&tree, 10);
+ * unsigned int min = min_uint_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_uint_btree(&tree);
+ * @endcode
+ */
+unsigned int min_uint_btree(UIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type LIntBT
+ *
+ * @code
+ * LIntBT tree;
+ * init_long_btree(&tree);
+ * push_long_btree(&tree, 0);
+ * push_long_btree(&tree, 3);
+ * push_long_btree(&tree, 15);
+ * push_long_btree(&tree, 10);
+ * long int min = min_long_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_long_btree(&tree);
+ * @endcode
+ */
+long int min_long_btree(LIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type ULIntBT
+ *
+ * @code
+ * ULIntBT tree;
+ * init_ulong_btree(&tree);
+ * push_ulong_btree(&tree, 0);
+ * push_ulong_btree(&tree, 3);
+ * push_ulong_btree(&tree, 15);
+ * push_ulong_btree(&tree, 10);
+ * unsigned long int min = min_ulong_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ulong_btree(&tree);
+ * @endcode
+ */
+unsigned long int min_ulong_btree(ULIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type LLIntBT
+ *
+ * @code
+ * LLIntBT tree;
+ * init_llong_btree(&tree);
+ * push_llong_btree(&tree, 0);
+ * push_llong_btree(&tree, 3);
+ * push_llong_btree(&tree, 15);
+ * push_llong_btree(&tree, 10);
+ * long long int min = min_llong_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_llong_btree(&tree);
+ * @endcode
+ */
+long long int min_llong_btree(LLIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type ULLIntBT
+ *
+ * @code
+ * ULLIntBT tree;
+ * init_ullong_btree(&tree);
+ * push_ullong_btree(&tree, 0);
+ * push_ullong_btree(&tree, 3);
+ * push_ullong_btree(&tree, 15);
+ * push_ullong_btree(&tree, 10);
+ * unsigned long long int min = min_ulong_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ullong_btree(&tree);
+ * @endcode
+ */
+unsigned long long int min_ullong_btree(ULLIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type FltBT
+ *
+ * @code
+ * FltBT tree;
+ * init_float_btree(&tree);
+ * push_float_btree(&tree, 0);
+ * push_float_btree(&tree, 3);
+ * push_float_btree(&tree, 15);
+ * push_float_btree(&tree, 10);
+ * float min = min_float_btree(&tree);
+ * PRINT(min);
+ * // >> 0.000
+ * free_float_btree(&tree);
+ * @endcode
+ */
+float min_float_btree(FltBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type DbleBT
+ *
+ * @code
+ * DbleBT tree;
+ * init_double_btree(&tree);
+ * push_double_btree(&tree, 0);
+ * push_double_btree(&tree, 3);
+ * push_double_btree(&tree, 15);
+ * push_double_btree(&tree, 10);
+ * double min = min_double_btree(&tree);
+ * PRINT(min);
+ * // >> 0.000
+ * free_double_btree(&tree);
+ * @endcode
+ */
+double min_double_btree(DbleBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type LDbleBT
+ *
+ * @code
+ * LDbleBT tree;
+ * init_ldouble_btree(&tree);
+ * push_ldouble_btree(&tree, 0);
+ * push_ldouble_btree(&tree, 3);
+ * push_ldouble_btree(&tree, 15);
+ * push_ldouble_btree(&tree, 10);
+ * long double min = min_ldouble_btree(&tree);
+ * PRINT(min);
+ * // >> 0.000
+ * free_ldouble_btree(&tree);
+ * @endcode
+ */
+long double min_ldouble_btree(LDbleBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type CharBT
+ *
+ * @code
+ * CharBT tree;
+ * init_char_btree(&tree);
+ * push_char_btree(&tree, 'a');
+ * push_char_btree(&tree, 'c');
+ * push_char_btree(&tree, 'o');
+ * push_char_btree(&tree, 'j');
+ * char min = min_char_btree(&tree);
+ * PRINT(min);
+ * // >> a
+ * free_char_btree(&tree);
+ * @endcode
+ */
+char min_char_btree(CharBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type UCharBT
+ *
+ * @code
+ * UCharBT tree;
+ * init_uchar_btree(&tree);
+ * push_uchar_btree(&tree, 'a');
+ * push_uchar_btree(&tree, 'c');
+ * push_uchar_btree(&tree, 'o');
+ * push_uchar_btree(&tree, 'j');
+ * unsigned char min = min_uchar_btree(&tree);
+ * PRINT(min);
+ * // >> a
+ * free_uchar_btree(&tree);
+ * @endcode
+ */
+unsigned char min_uchar_btree(UCharBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the smallest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type StringBT
+ *
+ * @code
+ * StringBT tree;
+ * init_string_btree(&tree);
+ * push_string_btree(&tree, "Apple");
+ * push_string_btree(&tree, "Banana");
+ * push_string_btree(&tree, "Cucumber");
+ * push_string_btree(&tree, "Lettuce");
+ * char *min = min_string_btree(&tree);
+ * PRINT(min);
+ * // >> Apple
+ * free_string_btree(&tree);
+ * @endcode
+ */
+char *min_string_btree(StringBT *btree);
+// ================================================================================
+
+#define MIN_BTREE(tree) _Generic ( (tree), ShortBT: min_short_btree, \
+										 UShortBT: min_ushort_btree, \
+										 IntBT: min_int_btree, \
+										 UIntBT: min_uint_btree, \
+										 LIntBT: min_long_btree, \
+										 ULIntBT: min_ulong_btree, \
+										 LLIntBT: min_llong_btree, \
+										 ULLIntBT: min_ullong_btree, \
+										 FltBT: min_float_btree, \
+										 DbleBT: min_double_btree, \
+										 LDbleBT: min_ldouble_btree, \
+										 CharBT: min_char_btree, \
+										 UCharBT: min_uchar_btree, \
+										 StringBT: min_string_btree)(&tree)
+// ================================================================================
+// ================================================================================
+// MAX_TYPE_BTREE FUNCTIONS
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type ShortBT
+ *
+ * @code
+ * ShortBT tree;
+ * init_short_btree(&tree);
+ * push_short_btree(&tree, 0);
+ * push_short_btree(&tree, 3);
+ * push_short_btree(&tree, 15);
+ * push_short_btree(&tree, 10);
+ * short int max = max_short_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_short_btree(&tree);
+ * @endcode
+ */
+short int max_short_btree(ShortBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type UShortBT
+ *
+ * @code
+ * UShortBT tree;
+ * init_ushort_btree(&tree);
+ * push_ushort_btree(&tree, 0);
+ * push_ushort_btree(&tree, 3);
+ * push_ushort_btree(&tree, 15);
+ * push_ushort_btree(&tree, 10);
+ * unsigned short max = max_ushort_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ushort_btree(&tree);
+ * @endcode
+ */
+unsigned short int max_ushort_btree(UShortBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type IntBT
+ *
+ * @code
+ * IntBT tree;
+ * init_int_btree(&tree);
+ * push_int_btree(&tree, 0);
+ * push_int_btree(&tree, 3);
+ * push_int_btree(&tree, 15);
+ * push_int_btree(&tree, 10);
+ * int max = max_int_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_int_btree(&tree);
+ * @endcode
+ */
+int max_int_btree(IntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type UIntBT
+ *
+ * @code
+ * UIntBT tree;
+ * init_uint_btree(&tree);
+ * push_uint_btree(&tree, 0);
+ * push_uint_btree(&tree, 3);
+ * push_uint_btree(&tree, 15);
+ * push_uint_btree(&tree, 10);
+ * unsigned int max = max_uint_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_uint_btree(&tree);
+ * @endcode
+ */
+unsigned int max_uint_btree(UIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type LIntBT
+ *
+ * @code
+ * LIntBT tree;
+ * init_long_btree(&tree);
+ * push_long_btree(&tree, 0);
+ * push_long_btree(&tree, 3);
+ * push_long_btree(&tree, 15);
+ * push_long_btree(&tree, 10);
+ * long int max = max_long_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_long_btree(&tree);
+ * @endcode
+ */
+long int max_long_btree(LIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type ULIntBT
+ *
+ * @code
+ * ULIntBT tree;
+ * init_ulong_btree(&tree);
+ * push_ulong_btree(&tree, 0);
+ * push_ulong_btree(&tree, 3);
+ * push_ulong_btree(&tree, 15);
+ * push_ulong_btree(&tree, 10);
+ * unsigned long int max = max_ulong_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ulong_btree(&tree);
+ * @endcode
+ */
+unsigned long int max_ulong_btree(ULIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type LLIntBT
+ *
+ * @code
+ * LLIntBT tree;
+ * init_llong_btree(&tree);
+ * push_llong_btree(&tree, 0);
+ * push_llong_btree(&tree, 3);
+ * push_llong_btree(&tree, 15);
+ * push_llong_btree(&tree, 10);
+ * long long int max = max_llong_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_llong_btree(&tree);
+ * @endcode
+ */
+long long int max_llong_btree(LLIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type ULLIntBT
+ *
+ * @code
+ * ULLIntBT tree;
+ * init_ullong_btree(&tree);
+ * push_ullong_btree(&tree, 0);
+ * push_ullong_btree(&tree, 3);
+ * push_ullong_btree(&tree, 15);
+ * push_ullong_btree(&tree, 10);
+ * unsigned long long int max = max_ullong_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ullong_btree(&tree);
+ * @endcode
+ */
+unsigned long long int max_ullong_btree(ULLIntBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type FltBT
+ *
+ * @code
+ * FltBT tree;
+ * init_float_btree(&tree);
+ * push_float_btree(&tree, 0);
+ * push_float_btree(&tree, 3);
+ * push_float_btree(&tree, 15);
+ * push_float_btree(&tree, 10);
+ * float max = max_float_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_float_btree(&tree);
+ * @endcode
+ */
+float max_float_btree(FltBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type DbleBT
+ *
+ * @code
+ * DbleBT tree;
+ * init_double_btree(&tree);
+ * push_double_btree(&tree, 0);
+ * push_double_btree(&tree, 3);
+ * push_doub;e_btree(&tree, 15);
+ * push_double_btree(&tree, 10);
+ * double max = max_double_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_double_btree(&tree);
+ * @endcode
+ */
+double max_double_btree(DbleBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type LDbleBT
+ *
+ * @code
+ * LDbleBT tree;
+ * init_ldouble_btree(&tree);
+ * push_ldouble_btree(&tree, 0);
+ * push_ldouble_btree(&tree, 3);
+ * push_ldouble_btree(&tree, 15);
+ * push_ldouble_btree(&tree, 10);
+ * long double max = max_ldouble_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_ldouble_btree(&tree);
+ * @endcode
+ */
+long double max_ldouble_btree(LDbleBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type CharBT
+ *
+ * @code
+ * CharBT tree;
+ * init_char_btree(&tree);
+ * push_char_btree(&tree, 0);
+ * push_char_btree(&tree, 3);
+ * push_char_btree(&tree, 15);
+ * push_char_btree(&tree, 10);
+ * char max = max_char_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_char_btree(&tree);
+ * @endcode
+ */
+char max_char_btree(CharBT *btree);
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type UCharBT
+ *
+ * @code
+ * UCharBT tree;
+ * init_uchar_btree(&tree);
+ * push_uchar_btree(&tree, 0);
+ * push_uchar_btree(&tree, 3);
+ * push_uchar_btree(&tree, 15);
+ * push_uchar_btree(&tree, 10);
+ * unsigned char max = max_char_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_uchar_btree(&tree);
+ * @endcode
+ */
+unsigned char max_uchar_btree(UCharBT *btree);
+
+// --------------------------------------------------------------------------------
+
+/*
+ * This function will determine the largest value in a binary tree data
+ * structure.
+ *
+ * /param A binary tree data structure of type StringBT
+ *
+ * @code
+ * StringBT tree;
+ * init_string_btree(&tree);
+ * push_string_btree(&tree, 0);
+ * push_string_btree(&tree, 3);
+ * push_string_btree(&tree, 15);
+ * push_string_btree(&tree, 10);
+ * char *max = max_string_btree(&tree);
+ * PRINT(min);
+ * // >> 0
+ * free_string_btree(&tree);
+ * @endcode
+ */
+char *max_string_btree(StringBT *btree);
+// ================================================================================
+
+#define MAX_BTREE(tree) _Generic ( (tree), Int8BT: max_int8_btree, \
+                                         UInt8BT: max_uint8_btree, \
+										 Int16BT: max_int16_btree, \
+										 UInt16BT: max_uint16_btree, \
+										 Int32BT: max_int32_btree, \
+										 UInt32BT: max_uint32_btree, \
+										 Int64BT: max_int64_btree, \
+										 UInt64BT: max_uint64_btree, \
+										 ShortBT: max_short_btree, \
+										 UShortBT: max_ushort_btree, \
+										 IntBT: max_int_btree, \
+										 UIntBT: max_uint_btree, \
+										 LIntBT: max_long_btree, \
+										 ULIntBT: max_ulong_btree, \
+										 LLIntBT: max_llong_btree, \
+										 ULLIntBT: max_ullong_btree, \
+										 FltBT: max_float_btree, \
+										 DbleBT: max_double_btree, \
+										 LDbleBT: max_ldouble_btree, \
+										 CharBT: max_char_btree, \
+										 StringBT: max_string_btree)(&tree)
+// ================================================================================
+// ================================================================================
+
 #endif /* btree_H */
-// ================================================================================
-// ================================================================================
 // eof

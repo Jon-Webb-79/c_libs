@@ -22,6 +22,7 @@
 #include "test_swap.h"
 #include "test_vector.h"
 #include "test_list.h"
+#include "test_btree.h"
 
 // Test functions for test_swap
 const struct CMUnitTest tests_swap[] = {
@@ -559,7 +560,38 @@ const struct CMUnitTest tests_list[] = {
     cmocka_unit_test(test_double_list_to_vector),
 	cmocka_unit_test(test_ldouble_list_to_vector),
     cmocka_unit_test(test_bool_list_to_vector),
-	cmocka_unit_test(test_string_list_to_vector)
+	cmocka_unit_test(test_string_list_to_vector),
+};
+
+/* // Test functions for test_swap */
+const struct CMUnitTest tests_btree[] = {
+	cmocka_unit_test(test_short_btree_push),
+	cmocka_unit_test(test_ushort_btree_push),
+	cmocka_unit_test(test_int_btree_push),
+	cmocka_unit_test(test_uint_btree_push),
+	cmocka_unit_test(test_long_btree_push),
+	cmocka_unit_test(test_ulong_btree_push),
+	cmocka_unit_test(test_llong_btree_push),
+	cmocka_unit_test(test_ullong_btree_push),
+	cmocka_unit_test(test_float_btree_push),
+	cmocka_unit_test(test_double_btree_push),
+	cmocka_unit_test(test_ldouble_btree_push),
+	cmocka_unit_test(test_char_btree_push),
+	cmocka_unit_test(test_string_btree_push),
+	cmocka_unit_test(test_short_btree_pop),
+	cmocka_unit_test(test_ushort_btree_pop),
+	cmocka_unit_test(test_int_btree_pop),
+	cmocka_unit_test(test_uint_btree_pop),
+	cmocka_unit_test(test_long_btree_pop),
+	cmocka_unit_test(test_ulong_btree_pop),
+	cmocka_unit_test(test_llong_btree_pop),
+	cmocka_unit_test(test_ullong_btree_pop),
+	cmocka_unit_test(test_float_btree_pop),
+	cmocka_unit_test(test_double_btree_pop),
+	cmocka_unit_test(test_ldouble_btree_pop),
+	cmocka_unit_test(test_char_btree_pop),
+    cmocka_unit_test(test_uchar_btree_pop),
+	cmocka_unit_test(test_string_btree_pop),
 };
 
 // Begin code
@@ -578,8 +610,14 @@ int main(int argc, const char * argv[]) {
 		return status;
 	}
 
-	// Run the tests for test_linked list
+	// Run the tests for test_list
     status = cmocka_run_group_tests(tests_list, NULL, NULL);
+	if (status != 0) {
+		return status;
+	}
+
+	// Run the tests for test_binary_tree
+    status = cmocka_run_group_tests(tests_btree, NULL, NULL);
 	return status;
 }
 // ================================================================================

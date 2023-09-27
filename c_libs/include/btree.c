@@ -2318,4 +2318,1821 @@ void free_string_btree(StringBT *btree) {
 }
 // ================================================================================
 // ================================================================================
+// MIN_TYPE_NODE (PRIVATE FUNCTIONS)
+
+short_btree *min_short_node(short_btree *node) {
+	struct short_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+ushort_btree *min_ushort_node(ushort_btree *node) {
+	struct ushort_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+int_btree *min_int_node(int_btree *node) {
+	struct int_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+uint_btree *min_uint_node(uint_btree *node) {
+	struct uint_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+long_btree *min_long_node(long_btree *node) {
+	struct long_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+ulong_btree *min_ulong_node(ulong_btree *node) {
+	struct ulong_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+llong_btree *min_llong_node(llong_btree *node) {
+	struct llong_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+ullong_btree *min_ullong_node(ullong_btree *node) {
+	struct ullong_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+float_btree *min_float_node(float_btree *node) {
+	struct float_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+double_btree *min_double_node(double_btree *node) {
+	struct double_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+ldouble_btree *min_ldouble_node(ldouble_btree *node) {
+	struct ldouble_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+char_btree *min_char_node(char_btree *node) {
+	struct char_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+uchar_btree *min_uchar_node(uchar_btree *node) {
+	struct uchar_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+// --------------------------------------------------------------------------------
+
+string_btree *min_string_node(string_btree *node) {
+	struct string_btree *current = node;
+	while (current->left != NULL) {
+		current = current->left;
+	}
+	return current;
+}
+
+// ================================================================================
+// ================================================================================
+// DELETE_TYPE_NODE (PRIVATE FUNCTIONS)
+
+short_btree *delete_short_node(short_btree *root, short int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_short_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_short_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct short_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct short_btree* temp = min_short_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_short_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(short_node_height(root->left),
+                               short_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = short_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && short_node_balance(root->left) >= 0)
+        return right_short_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && short_node_balance(root->left) < 0)
+    {
+        root->left =  left_short_rotate(root->left);
+        return right_short_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && short_node_balance(root->right) <= 0)
+        return left_short_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && short_node_balance(root->right) > 0)
+    {
+        root->right = right_short_rotate(root->right);
+        return left_short_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+ushort_btree *delete_ushort_node(ushort_btree *root, unsigned short int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_ushort_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_ushort_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct ushort_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct ushort_btree* temp = min_ushort_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_ushort_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(ushort_node_height(root->left),
+                               ushort_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = ushort_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && ushort_node_balance(root->left) >= 0)
+        return right_ushort_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && ushort_node_balance(root->left) < 0)
+    {
+        root->left =  left_ushort_rotate(root->left);
+        return right_ushort_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && ushort_node_balance(root->right) <= 0)
+        return left_ushort_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && ushort_node_balance(root->right) > 0)
+    {
+        root->right = right_ushort_rotate(root->right);
+        return left_ushort_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+int_btree *delete_int_node(int_btree *root, int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_int_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_int_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct int_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct int_btree* temp = min_int_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_int_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(int_node_height(root->left),
+                               int_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = int_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && int_node_balance(root->left) >= 0)
+        return right_int_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && int_node_balance(root->left) < 0)
+    {
+        root->left =  left_int_rotate(root->left);
+        return right_int_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && int_node_balance(root->right) <= 0)
+        return left_int_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && int_node_balance(root->right) > 0)
+    {
+        root->right = right_int_rotate(root->right);
+        return left_int_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+uint_btree *delete_uint_node(uint_btree *root, unsigned int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_uint_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_uint_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct uint_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct uint_btree* temp = min_uint_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_uint_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(uint_node_height(root->left),
+                               uint_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = uint_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && uint_node_balance(root->left) >= 0)
+        return right_uint_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && uint_node_balance(root->left) < 0)
+    {
+        root->left =  left_uint_rotate(root->left);
+        return right_uint_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && uint_node_balance(root->right) <= 0)
+        return left_uint_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && uint_node_balance(root->right) > 0)
+    {
+        root->right = right_uint_rotate(root->right);
+        return left_uint_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+long_btree *delete_long_node(long_btree *root, long int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_long_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_long_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct long_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct long_btree* temp = min_long_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_long_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(long_node_height(root->left),
+                               long_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = long_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && long_node_balance(root->left) >= 0)
+        return right_long_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && long_node_balance(root->left) < 0)
+    {
+        root->left =  left_long_rotate(root->left);
+        return right_long_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && long_node_balance(root->right) <= 0)
+        return left_long_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && long_node_balance(root->right) > 0)
+    {
+        root->right = right_long_rotate(root->right);
+        return left_long_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+ulong_btree *delete_ulong_node(ulong_btree *root, unsigned long int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_ulong_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_ulong_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct ulong_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct ulong_btree* temp = min_ulong_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_ulong_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(ulong_node_height(root->left),
+                               ulong_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = ulong_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && ulong_node_balance(root->left) >= 0)
+        return right_ulong_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && ulong_node_balance(root->left) < 0)
+    {
+        root->left =  left_ulong_rotate(root->left);
+        return right_ulong_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && ulong_node_balance(root->right) <= 0)
+        return left_ulong_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && ulong_node_balance(root->right) > 0)
+    {
+        root->right = right_ulong_rotate(root->right);
+        return left_ulong_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+llong_btree *delete_llong_node(llong_btree *root, long long int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_llong_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_llong_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct llong_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct llong_btree* temp = min_llong_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_llong_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(llong_node_height(root->left),
+                               llong_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = llong_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && llong_node_balance(root->left) >= 0)
+        return right_llong_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && llong_node_balance(root->left) < 0)
+    {
+        root->left =  left_llong_rotate(root->left);
+        return right_llong_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && llong_node_balance(root->right) <= 0)
+        return left_llong_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && llong_node_balance(root->right) > 0)
+    {
+        root->right = right_llong_rotate(root->right);
+        return left_llong_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+ullong_btree *delete_ullong_node(ullong_btree *root, unsigned long long int key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_ullong_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_ullong_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct ullong_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct ullong_btree* temp = min_ullong_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_ullong_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(ullong_node_height(root->left),
+                               ullong_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = ullong_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && ullong_node_balance(root->left) >= 0)
+        return right_ullong_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && ullong_node_balance(root->left) < 0)
+    {
+        root->left =  left_ullong_rotate(root->left);
+        return right_ullong_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && ullong_node_balance(root->right) <= 0)
+        return left_ullong_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && ullong_node_balance(root->right) > 0)
+    {
+        root->right = right_ullong_rotate(root->right);
+        return left_ullong_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+float_btree *delete_float_node(float_btree *root, float key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_float_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_float_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct float_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct float_btree* temp = min_float_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_float_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(float_node_height(root->left),
+                               float_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = float_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && float_node_balance(root->left) >= 0)
+        return right_float_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && float_node_balance(root->left) < 0)
+    {
+        root->left =  left_float_rotate(root->left);
+        return right_float_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && float_node_balance(root->right) <= 0)
+        return left_float_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && float_node_balance(root->right) > 0)
+    {
+        root->right = right_float_rotate(root->right);
+        return left_float_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+double_btree *delete_double_node(double_btree *root, double key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_double_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_double_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct double_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct double_btree* temp = min_double_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_double_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(double_node_height(root->left),
+                               double_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = double_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && double_node_balance(root->left) >= 0)
+        return right_double_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && double_node_balance(root->left) < 0)
+    {
+        root->left =  left_double_rotate(root->left);
+        return right_double_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && double_node_balance(root->right) <= 0)
+        return left_double_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && double_node_balance(root->right) > 0)
+    {
+        root->right = right_double_rotate(root->right);
+        return left_double_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+ldouble_btree *delete_ldouble_node(ldouble_btree *root, long double key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_ldouble_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_ldouble_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct ldouble_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct ldouble_btree* temp = min_ldouble_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_ldouble_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(ldouble_node_height(root->left),
+                               ldouble_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = ldouble_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && ldouble_node_balance(root->left) >= 0)
+        return right_ldouble_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && ldouble_node_balance(root->left) < 0)
+    {
+        root->left =  left_ldouble_rotate(root->left);
+        return right_ldouble_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && ldouble_node_balance(root->right) <= 0)
+        return left_ldouble_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && ldouble_node_balance(root->right) > 0)
+    {
+        root->right = right_ldouble_rotate(root->right);
+        return left_ldouble_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+char_btree *delete_char_node(char_btree *root, char key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_char_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_char_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct char_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct char_btree* temp = min_char_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_char_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(char_node_height(root->left),
+                               char_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = char_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && char_node_balance(root->left) >= 0)
+        return right_char_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && char_node_balance(root->left) < 0)
+    {
+        root->left =  left_char_rotate(root->left);
+        return right_char_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && char_node_balance(root->right) <= 0)
+        return left_char_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && char_node_balance(root->right) > 0)
+    {
+        root->right = right_char_rotate(root->right);
+        return left_char_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+uchar_btree *delete_uchar_node(uchar_btree *root, unsigned char key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_uchar_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_uchar_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct uchar_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct uchar_btree* temp = min_uchar_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_uchar_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(uchar_node_height(root->left),
+                               uchar_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = uchar_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && uchar_node_balance(root->left) >= 0)
+        return right_uchar_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && uchar_node_balance(root->left) < 0)
+    {
+        root->left =  left_uchar_rotate(root->left);
+        return right_uchar_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && uchar_node_balance(root->right) <= 0)
+        return left_uchar_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && uchar_node_balance(root->right) > 0)
+    {
+        root->right = right_uchar_rotate(root->right);
+        return left_uchar_rotate(root);
+    }
+
+    return root;
+}
+// --------------------------------------------------------------------------------
+
+string_btree *delete_string_node(string_btree *root, char *key) {
+	// STEP 1: PERFORM STANDARD BST DELETE
+
+    if (root == NULL)
+        return root;
+
+    // If the key to be deleted is smaller than the
+    // root's key, then it lies in left subtree
+    if ( key < root->key )
+        root->left = delete_string_node(root->left, key);
+
+    // If the key to be deleted is greater than the
+    // root's key, then it lies in right subtree
+    else if( key > root->key )
+        root->right = delete_string_node(root->right, key);
+
+    // if key is same as root's key, then This is
+    // the node to be deleted
+    else
+    {
+        // node with only one child or no child
+        if( (root->left == NULL) || (root->right == NULL) )
+        {
+            struct string_btree *temp = root->left ? root->left :
+                                             root->right;
+
+            // No child case
+            if (temp == NULL)
+            {
+					temp = root;
+                root = NULL;
+            }
+            else // One child case
+             *root = *temp; // Copy the contents of
+                            // the non-empty child
+            free(temp);
+        }
+        else
+        {
+            // node with two children: Get the inorder
+            // successor (smallest in the right subtree)
+            struct string_btree* temp = min_string_node(root->right);
+
+            // Copy the inorder successor's data to this node
+            root->key = temp->key;
+
+            // Delete the inorder successor
+            root->right = delete_string_node(root->right, temp->key);
+        }
+    }
+
+    // If the tree had only one node then return
+    if (root == NULL)
+      return root;
+
+    // STEP 2: UPDATE HEIGHT OF THE CURRENT NODE
+    root->height = 1 + max_num(string_node_height(root->left),
+                               string_node_height(root->right));
+
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to
+    // check whether this node became unbalanced)
+    short int balance = string_node_balance(root);
+
+    // If this node becomes unbalanced, then there are 4 cases
+
+    // Left Left Case
+    if (balance > 1 && string_node_balance(root->left) >= 0)
+        return right_string_rotate(root);
+
+    // Left Right Case
+    if (balance > 1 && string_node_balance(root->left) < 0)
+    {
+        root->left =  left_string_rotate(root->left);
+        return right_string_rotate(root);
+    }
+
+    // Right Right Case
+    if (balance < -1 && string_node_balance(root->right) <= 0)
+        return left_string_rotate(root);
+
+    // Right Left Case
+    if (balance < -1 && string_node_balance(root->right) > 0)
+    {
+        root->right = right_string_rotate(root->right);
+        return left_string_rotate(root);
+    }
+
+    return root;
+}
+// ================================================================================
+// ================================================================================
+// POP_TYPE_BTREE FUNCTIONS
+
+void pop_short_btree(ShortBT *btree, short int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_short_btree_data(btree, key) == false) return;
+	btree->root = delete_short_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_ushort_btree(UShortBT *btree, unsigned short int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_ushort_btree_data(btree, key) == false) return;
+	btree->root = delete_ushort_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_int_btree(IntBT *btree, int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_int_btree_data(btree, key) == false) return;
+	btree->root = delete_int_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_uint_btree(UIntBT *btree, unsigned int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_uint_btree_data(btree, key) == false) return;
+	btree->root = delete_uint_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_long_btree(LIntBT *btree, long int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_long_btree_data(btree, key) == false) return;
+	btree->root = delete_long_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_ulong_btree(ULIntBT *btree, unsigned long int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_ulong_btree_data(btree, key) == false) return;
+	btree->root = delete_ulong_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_llong_btree(LLIntBT *btree, long long int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_llong_btree_data(btree, key) == false) return;
+	btree->root = delete_llong_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_ullong_btree(ULLIntBT *btree, unsigned long long int key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_ullong_btree_data(btree, key) == false) return;
+	btree->root = delete_ullong_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_float_btree(FltBT *btree, float key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_float_btree_data(btree, key) == false) return;
+	btree->root = delete_float_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_double_btree(DbleBT *btree, double key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_double_btree_data(btree, key) == false) return;
+	btree->root = delete_double_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_ldouble_btree(LDbleBT *btree, long double key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_ldouble_btree_data(btree, key) == false) return;
+	btree->root = delete_ldouble_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_char_btree(CharBT *btree, char key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_char_btree_data(btree, key) == false) return;
+	btree->root = delete_char_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_uchar_btree(UCharBT *btree, unsigned char key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_uchar_btree_data(btree, key) == false) return;
+	btree->root = delete_uchar_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// --------------------------------------------------------------------------------
+
+void pop_string_btree(StringBT *btree, char *key) {
+	if (btree->status != true) {
+		fprintf(stderr, "Cannon pop binary tree struct that is not initialized\n");
+		return;
+	}
+	if (is_string_btree_data(btree, key) == false) return;
+	btree->root = delete_string_node(btree->root, key);
+	btree->active_length -= 1;
+}
+// ================================================================================
+// ================================================================================
+// MIN_TYPE_BTREE FUNCTIONS
+
+short int min_short_btree(ShortBT *tree) {
+	struct short_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int min_ushort_btree(UShortBT *tree) {
+	struct ushort_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+int min_int_btree(IntBT *tree) {
+	struct int_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int min_uint_btree(UIntBT *tree) {
+	struct uint_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+long int min_long_btree(LIntBT *tree) {
+	struct long_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int min_ulong_btree(ULIntBT *tree) {
+	struct ulong_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+long long int min_llong_btree(LLIntBT *tree) {
+	struct llong_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int min_ullong_btree(ULLIntBT *tree) {
+	struct ullong_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+float min_float_btree(FltBT *tree) {
+	struct float_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+double min_double_btree(DbleBT *tree) {
+	struct double_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+long double min_ldouble_btree(LDbleBT *tree) {
+	struct ldouble_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+char min_char_btree(CharBT *tree) {
+	struct char_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned char min_uchar_btree(UCharBT *tree) {
+	struct uchar_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// --------------------------------------------------------------------------------
+
+char* min_string_btree(StringBT *tree) {
+	struct string_btree *min = tree->root;
+	while (min->left != NULL) {
+		min = min->left;
+	}
+	return min->key;
+}
+// ================================================================================
+// ================================================================================
+// MAX_TYPE_BTREE FUNCTIONS
+
+short int max_short_btree(ShortBT *tree) {
+	struct short_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned short int max_ushort_btree(UShortBT *tree) {
+	struct ushort_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+int max_int_btree(IntBT *tree) {
+	struct int_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned int max_uint_btree(UIntBT *tree) {
+	struct uint_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+long int max_long_btree(LIntBT *tree) {
+	struct long_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long int max_ulong_btree(ULIntBT *tree) {
+	struct ulong_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+long long int max_llong_btree(LLIntBT *tree) {
+	struct llong_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned long long int max_ullong_btree(ULLIntBT *tree) {
+	struct ullong_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+float max_float_btree(FltBT *tree) {
+	struct float_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+double max_double_btree(DbleBT *tree) {
+	struct double_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+long double max_ldouble_btree(LDbleBT *tree) {
+	struct ldouble_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+char max_char_btree(CharBT *tree) {
+	struct char_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+unsigned char max_uchar_btree(UCharBT *tree) {
+	struct uchar_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// --------------------------------------------------------------------------------
+
+char* max_string_btree(StringBT *tree) {
+	struct string_btree *max = tree->root;
+	while (max->right != NULL) {
+		max = max->right;
+	}
+	return max->key;
+}
+// ================================================================================
+// ================================================================================
 // eof
