@@ -634,10 +634,8 @@ void test_double_btree_pop(void **state) {
 	PUSH_BTREE(tree, 1.);
 	PUSH_BTREE(tree, 2.);
 	PUSH_BTREE(tree, 10.);
-	PRINT(tree);
 	POP_BTREE(tree, 95.);
 	POP_BTREE(tree, 11.);
-	PRINT(tree);
 	// enusre active length is correct
 	assert_int_equal(tree.active_length, 7);
 
@@ -736,6 +734,565 @@ void test_string_btree_pop(void **state) {
 	POP_BTREE(tree, "Pumpkin");
 	// enusre active length is correct
 	assert_int_equal(tree.active_length, 5);
+	FREE_BTREE(tree);
+}
+// ================================================================================
+// ================================================================================
+// TEST_TYPE_MIN_BTREE FUNCTIONS
+
+
+void test_short_min_btree(void **state) {
+	ShortBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	short int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ushort_min_btree(void **state) {
+	UShortBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned short int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_int_min_btree(void **state) {
+	IntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_uint_min_btree(void **state) {
+	UIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_long_min_btree(void **state) {
+	LIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	long int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ulong_min_btree(void **state) {
+	ULIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned long int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_llong_min_btree(void **state) {
+	LLIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	long long int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ullong_min_btree(void **state) {
+	ULLIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned long long int min = MIN_BTREE(tree);
+	assert_int_equal(min, 0);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_float_min_btree(void **state) {
+	FltBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+
+	float min = MIN_BTREE(tree);
+	assert_float_equal(min, 0., 1.0e-3);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_double_min_btree(void **state) {
+	DbleBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+
+	double min = MIN_BTREE(tree);
+	assert_float_equal(min, 0., 1.0e-3);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ldouble_min_btree(void **state) {
+	LDbleBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+
+	long double min = MIN_BTREE(tree);
+	assert_float_equal(min, 0., 1.0e-3);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_char_min_btree(void **state) {
+	CharBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 'a');
+	PUSH_BTREE(tree, 'b');
+	PUSH_BTREE(tree, 'c');
+	PUSH_BTREE(tree, 'd');
+	PUSH_BTREE(tree, 'e');
+
+	char min = MIN_BTREE(tree);
+	assert_int_equal(min, 'a');
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_uchar_min_btree(void **state) {
+	UCharBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 'a');
+	PUSH_BTREE(tree, 'b');
+	PUSH_BTREE(tree, 'c');
+	PUSH_BTREE(tree, 'd');
+	PUSH_BTREE(tree, 'e');
+
+	unsigned char min = MIN_BTREE(tree);
+	assert_int_equal(min, 'a');
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_string_min_btree(void **state) {
+	StringBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, "Apple");
+	PUSH_BTREE(tree, "Banana");
+	PUSH_BTREE(tree, "Cucumber");
+	PUSH_BTREE(tree, "Pear");
+	PUSH_BTREE(tree, "Lettuce");
+
+	char *min = MIN_BTREE(tree);
+	int cmp = strcmp(min, "Apple");
+	assert_int_equal(cmp, 0);
+	FREE_BTREE(tree);
+}
+// ================================================================================
+// ================================================================================
+// TEST_TYPE_MAX_BTREE FUNCTIONS
+
+void test_short_max_btree(void **state) {
+	ShortBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	short int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ushort_max_btree(void **state) {
+	UShortBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned short int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_int_max_btree(void **state) {
+	IntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_uint_max_btree(void **state) {
+	UIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_long_max_btree(void **state) {
+	LIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	long int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ulong_max_btree(void **state) {
+	ULIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned long int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_llong_max_btree(void **state) {
+	LLIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	long long int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ullong_max_btree(void **state) {
+	ULLIntBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9);
+	PUSH_BTREE(tree, 5);
+	PUSH_BTREE(tree, 10);
+	PUSH_BTREE(tree, 0);
+	PUSH_BTREE(tree, 6);
+	PUSH_BTREE(tree, 11);
+	PUSH_BTREE(tree, 1);
+	PUSH_BTREE(tree, 2);
+	PUSH_BTREE(tree, 10);
+	POP_BTREE(tree, 95);
+	POP_BTREE(tree, 11);
+
+	unsigned long long int max = MAX_BTREE(tree);
+	assert_int_equal(max, 10);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_float_max_btree(void **state) {
+	FltBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+
+	float max = MAX_BTREE(tree);
+	assert_float_equal(max, 10., 1.0e-3);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_double_max_btree(void **state) {
+	DbleBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+
+	double max = MAX_BTREE(tree);
+	assert_float_equal(max, 10., 1.0e-3);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_ldouble_max_btree(void **state) {
+	LDbleBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+
+	long double max = MAX_BTREE(tree);
+	assert_float_equal(max, 10., 1.0e-3);
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_char_max_btree(void **state) {
+	CharBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 'a');
+	PUSH_BTREE(tree, 'b');
+	PUSH_BTREE(tree, 'c');
+	PUSH_BTREE(tree, 'd');
+	PUSH_BTREE(tree, 'e');
+
+	char max = MAX_BTREE(tree);
+	assert_int_equal(max, 'e');
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_uchar_max_btree(void **state) {
+	UCharBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 'a');
+	PUSH_BTREE(tree, 'b');
+	PUSH_BTREE(tree, 'c');
+	PUSH_BTREE(tree, 'd');
+	PUSH_BTREE(tree, 'e');
+
+	unsigned char max = MAX_BTREE(tree);
+	assert_int_equal(max, 'e');
+	FREE_BTREE(tree);
+}
+// --------------------------------------------------------------------------------
+
+void test_string_max_btree(void **state) {
+	StringBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, "Apple");
+	PUSH_BTREE(tree, "Banana");
+	PUSH_BTREE(tree, "Cucumber");
+	PUSH_BTREE(tree, "Pear");
+	PUSH_BTREE(tree, "Lettuce");
+
+	char *max = MAX_BTREE(tree);
+	int cmp = strcmp(max, "Pear");
+	assert_int_equal(cmp, 0);
 	FREE_BTREE(tree);
 }
 // ================================================================================

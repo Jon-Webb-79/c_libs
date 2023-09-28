@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include "vector.h"
 #include "llist.h"
+#include "btree.h"
 
 // PUSH GENERIC OPERATOR
 
@@ -1312,6 +1313,152 @@ StringLL string_vector_to_list(String *vec);
 										 UChar: uchar_vector_to_list, \
 										 Bool: bool_vector_to_list, \
 										 String: string_vector_to_list)(&T)
+// ==========================================================================================
+// ==========================================================================================
+// TYPE_VECTOR_TO_BTREE FUNCTIONS
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type UShort
+ * /return A linked binary tree data structure of type UShortBT
+ */
+UShortBT ushort_vector_to_btree(UShort *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type Short
+ * /return A linked binary tree data structure of type ShortBT
+ */
+ShortBT short_vector_to_btree(Short *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type UInt
+ * /return A linked binary tree data structure of type UIntBT
+ */
+UIntBT uint_vector_to_btree(UInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type Int
+ * /return A linked binary tree data structure of type IntBT
+ */
+IntBT int_vector_to_btree(Int *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type ULInt
+ * /return A linked binary tree data structure of type ULIntBT
+ */
+ULIntBT ulong_vector_to_btree(ULInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type LInt
+ * /return A linked binary tree data structure of type LIntBT
+ */
+LIntBT long_vector_to_btree(LInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type ULLInt
+ * /return A linked binary tree data structure of type ULLIntBT
+ */
+ULLIntBT ullong_vector_to_btree(ULLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type LLInt
+ * /return A linked binary tree data structure of type LLIntBT
+ */
+LLIntBT llong_vector_to_btree(LLInt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type Flt
+ * /return A linked binary tree data structure of type FltBT
+ */
+FltBT float_vector_to_btree(Flt *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type Dble
+ * /return A linked binary tree data structure of type DbleBT
+ */
+DbleBT double_vector_to_btree(Dble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type LDble
+ * /return A linked binary tree data structure of type LDbleBT
+ */
+LDbleBT ldouble_vector_to_btree(LDble *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type Char
+ * /return A linked binary tree data structure of type CharBT
+ */
+CharBT char_vector_to_btree(Char *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type UChar
+ * /return A linked binary tree data structure of type UCharBT
+ */
+UCharBT uchar_vector_to_btree(UChar *vec);
+// ------------------------------------------------------------------------------------------
+
+/**
+ * This function will create a binary tree data structure from a vector
+ *
+ * /param vec A vector data structure of type String
+ * /return A linked binary tree data structure of type StringBT
+ */
+StringBT string_vector_to_btree(String *vec);
+// ================================================================================
+// ================================================================================
+// Controlling expression to define function type for LIST_TO_VECTOR macro
+
+#define VECTOR_TO_BTREE(T) _Generic( (T), Short: short_vector_to_btree, \
+										  UShort: ushort_vector_to_btree, \
+										  Int: int_vector_to_btree, \
+										  UInt: uint_vector_to_btree, \
+										  LInt: long_vector_to_btree, \
+										  ULInt: ulong_vector_to_btree, \
+										  LLInt: llong_vector_to_btree, \
+										  ULLInt: ullong_vector_to_btree, \
+										  Flt: float_vector_to_btree, \
+										  Dble: double_vector_to_btree, \
+										  LDble: ldouble_vector_to_btree, \
+										  Char: char_vector_to_btree, \
+										  UChar: uchar_vector_to_btree, \
+										  String: string_vector_to_btree)(&T)
 // ==========================================================================================
 // ==========================================================================================
 #endif /* data_structures_H */

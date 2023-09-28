@@ -353,6 +353,68 @@ The following functions can be used in place of the ``POP_BTREE`` Macro.
    void pop_uchar_btree(UCharBT *btree, unsigned char key);
    void pop_string_btree(StringBT *btree, char *key);
 
+
+
+MIN_BTREE
+=========
+The ``MIN_BTREE`` Macro will return the minimum value in a Binary Tree data structure.
+
+.. code-block:: c
+
+   type MIN_BTREE(T tree);
+
+Parameters
+----------
+
+- :c:`tree`: A Binary Tree data structure of type ``T``
+
+Returns
+-------
+
+- :c:`min_value`: The minimum value in a Binary Tree data structure
+
+.. code-block:: c
+
+	DbleBT tree;
+	INIT_BTREE(tree);
+	PUSH_BTREE(tree, 9.);
+	PUSH_BTREE(tree, 5.);
+	PUSH_BTREE(tree, 10.);
+	PUSH_BTREE(tree, 0.);
+	PUSH_BTREE(tree, 6.);
+	PUSH_BTREE(tree, 11.);
+	PUSH_BTREE(tree, 1.);
+	PUSH_BTREE(tree, 2.);
+	PUSH_BTREE(tree, 10.);
+	POP_BTREE(tree, 95.);
+	POP_BTREE(tree, 11.);
+    double a = MIN_BTREE(tree);
+    PRINT(a);
+    FREE(tree);
+
+.. code-block:: c
+
+   >> 0.0000000
+
+The following functions can be used in place of the ``MIN_BTREE`` Macro.
+
+.. code-block:: c
+
+   short int min_short_btree(ShortBT *btree);
+   unsigned short int min_ushort_btree(UShortBT *btree);
+   int min_int_btree(IntBT *btree);
+   unsigned int min_uint_btree(UIntBT *btree);
+   long int min_long_btree(LIntBT *btree);
+   unsigned long int min_ulong_btree(ULIntBT *btree);
+   long long int min_llong_btree(LLIntBT *btree);
+   unsigned long long int min_ullong_btree(ULLIntBT *btree);
+   float min_float_btree(FltBT *btree);
+   double min_double_btree(DbleBT *btree);
+   long double min_ldouble_btree(LDbleBT *btree);
+   char min_char_btree(CharBT *btree);
+   unsigned char min_uchar_btree(UCharBT *btree);
+   char *min_string_btree(StringBT *btree);
+
 .. code-block:: c
 
 	DbleBT tree;
@@ -368,22 +430,94 @@ The following functions can be used in place of the ``POP_BTREE`` Macro.
 	push_double_btree(&tree, 10.);
 	pop_double_btree(&tree, 95.);
 	pop_double_btree(&tree, 11.);
-    PRINT(tree);
+    double a[5] = min_double_btree(&tree);
+    PRINT(a);
     free_double_btree(&tree);
 
 .. code-block:: c
 
-   >> , 9.0000, 5.0000, 1.0000, 0.0000, 2.0000, 6.0000, 10.0000, 110000 >
-   >> < 5.0000, 1.0000, 0.0000, 2.0000, 9.0000, 6.0000, 10.0000 > 
-
-
-MIN_BTREE
-=========
-TBD
+   >> 0.0000000
 
 MAX_BTREE
 =========
-TBD
+The ``MAX_BTREE`` Macro will return the maximum value in a Binary Tree data structure.
+
+.. code-block:: c
+
+   type MAX_BTREE(T tree);
+
+Parameters
+----------
+
+- :c:`tree`: A Binary Tree data structure of type ``T``
+
+Returns
+-------
+
+- :c:`max_value`: The maximum value in a Binary Tree data structure
+
+.. code-block:: c
+
+   #include 'data_structures.h'
+   DbleBT tree;
+   INIT_BTREE(tree);
+   PUSH_BTREE(tree, 9.);
+   PUSH_BTREE(tree, 5.);
+   PUSH_BTREE(tree, 10.);
+   PUSH_BTREE(tree, 0.);
+   PUSH_BTREE(tree, 6.);
+   PUSH_BTREE(tree, 11.);
+   PUSH_BTREE(tree, 1.);
+   PUSH_BTREE(tree, 2.);
+   PUSH_BTREE(tree, 10.);
+   double a = MAX_BTREE(tree);
+   PRINT(a);
+   FREE(tree);
+
+.. code-block:: c
+
+   >> 11.0000000
+
+The following functions can be used in place of the ``MAX_BTREE`` Macro.
+
+.. code-block:: c
+
+   short int max_short_btree(ShortBT *btree);
+   unsigned short int max_ushort_btree(UShortBT *btree);
+   int max_int_btree(IntBT *btree);
+   unsigned int max_uint_btree(UIntBT *btree);
+   long int max_long_btree(LIntBT *btree);
+   unsigned long int max_ulong_btree(ULIntBT *btree);
+   long long int max_llong_btree(LLIntBT *btree);
+   unsigned long long int max_ullong_btree(ULLIntBT *btree);
+   float max_float_btree(FltBT *btree);
+   double max_double_btree(DbleBT *btree);
+   long double max_ldouble_btree(LDbleBT *btree);
+   char max_char_btree(CharBT *btree);
+   unsigned char max_uchar_btree(UCharBT *btree);
+   char *max_string_btree(StringBT *btree);
+
+.. code-block:: c
+
+   #include 'data_structures.h'
+   DbleBT tree;
+   init_double_btree(&tree);
+   push_double_btree(&tree, 9.);
+   push_double_btree(&tree, 5.);
+   push_double_btree(&tree, 10.);
+   push_double_btree(&tree, 0.);
+   push_double_btree(&tree, 6.);
+   push_double_btree(&tree, 11.);
+   push_double_btree(&tree, 1.);
+   push_double_btree(&tree, 2.);
+   push_double_btree(&tree, 10.);
+   double a[5] = max_double_btree(&tree);
+   PRINT(a);
+   free_double_btree(&tree);
+
+.. code-block:: c
+
+   >> 11.0000000
 
 BTREE_TO_VECTOR
 ===============

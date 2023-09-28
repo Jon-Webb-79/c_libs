@@ -349,6 +349,147 @@ StringLL string_vector_to_list(String *vec) {
 	}
 	return list;
 }
+// ==========================================================================================
+// ==========================================================================================
+
+ShortBT short_vector_to_btree(Short *vec) {
+	ShortBT btree;
+	init_short_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_short_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+UShortBT ushort_vector_to_btree(UShort *vec) {
+	UShortBT btree;
+	init_ushort_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ushort_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+UIntBT uint_vector_to_btree(UInt *vec) {
+	UIntBT btree;
+	init_uint_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_uint_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+IntBT int_vector_to_btree(Int *vec) {
+	IntBT btree;
+	init_int_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_int_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+ULIntBT ulong_vector_to_btree(ULInt *vec) {
+	ULIntBT btree;
+	init_ulong_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ulong_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+LIntBT long_vector_to_btree(LInt *vec) {
+	LIntBT btree;
+	init_long_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_long_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+ULLIntBT ullong_vector_to_btree(ULLInt *vec) {
+	ULLIntBT btree;
+	init_ullong_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ullong_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+LLIntBT llong_vector_to_btree(LLInt *vec) {
+	LLIntBT btree;
+	init_llong_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_llong_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+FltBT float_vector_to_btree(Flt *vec) {
+	FltBT btree;
+	init_float_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_float_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+DbleBT double_vector_to_btree(Dble *vec) {
+	DbleBT btree;
+	init_double_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_double_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+LDbleBT ldouble_vector_to_btree(LDble *vec) {
+	LDbleBT btree;
+	init_ldouble_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_ldouble_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+CharBT char_vector_to_btree(Char *vec) {
+	CharBT btree;
+	init_char_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_char_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+UCharBT uchar_vector_to_btree(UChar *vec) {
+	UCharBT btree;
+	init_uchar_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_uchar_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
+// ------------------------------------------------------------------------------------------
+
+StringBT string_vector_to_btree(String *vec) {
+	StringBT btree;
+	init_string_btree(&btree);
+	for (size_t i = 0; i < vec->active_length; i++) {
+		push_string_btree(&btree, vec->array[i]);
+	}
+	return btree;
+}
 // ================================================================================
 // ================================================================================
 // eof

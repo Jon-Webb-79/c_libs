@@ -1875,15 +1875,7 @@ unsigned char max_uchar_btree(UCharBT *btree);
 char *max_string_btree(StringBT *btree);
 // ================================================================================
 
-#define MAX_BTREE(tree) _Generic ( (tree), Int8BT: max_int8_btree, \
-                                         UInt8BT: max_uint8_btree, \
-										 Int16BT: max_int16_btree, \
-										 UInt16BT: max_uint16_btree, \
-										 Int32BT: max_int32_btree, \
-										 UInt32BT: max_uint32_btree, \
-										 Int64BT: max_int64_btree, \
-										 UInt64BT: max_uint64_btree, \
-										 ShortBT: max_short_btree, \
+#define MAX_BTREE(tree) _Generic ( (tree), ShortBT: max_short_btree, \
 										 UShortBT: max_ushort_btree, \
 										 IntBT: max_int_btree, \
 										 UIntBT: max_uint_btree, \
@@ -1895,6 +1887,7 @@ char *max_string_btree(StringBT *btree);
 										 DbleBT: max_double_btree, \
 										 LDbleBT: max_ldouble_btree, \
 										 CharBT: max_char_btree, \
+										 UCharBT: max_uchar_btree, \
 										 StringBT: max_string_btree)(&tree)
 // ================================================================================
 // ================================================================================

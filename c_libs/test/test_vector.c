@@ -4118,6 +4118,205 @@ void test_string_vector_to_list(void **state) {
 	FREE(list);
 	FREE(vec);
 }
+// ================================================================================
+// ================================================================================
+// TEST_COPY_TYPE_VECTOR FUNCTIONS
+
+void test_short_vector_to_btree(void **state) {
+	Short vec;
+	INIT_VECTOR(vec, 5);
+	short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	ShortBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ushort_vector_to_btree(void **state) {
+	UShort vec;
+	INIT_VECTOR(vec, 5);
+	unsigned short int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	UShortBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_int_vector_to_btree(void **state) {
+	Int vec;
+	INIT_VECTOR(vec, 5);
+	int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	IntBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_uint_vector_to_btree(void **state) {
+	UInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	UIntBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_long_vector_to_btree(void **state) {
+	LInt vec;
+	INIT_VECTOR(vec, 5);
+	long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	LIntBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ulong_vector_to_btree(void **state) {
+	ULInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	ULIntBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_llong_vector_to_btree(void **state) {
+	LLInt vec;
+	INIT_VECTOR(vec, 5);
+	long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	LLIntBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ullong_vector_to_btree(void **state) {
+	ULLInt vec;
+	INIT_VECTOR(vec, 5);
+	unsigned long long int a[5] = {1, 2, 3, 4, 5};
+	INSERT(vec, a, 5, 0);
+	ULLIntBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_float_vector_to_btree(void **state) {
+	Flt vec;
+	INIT_VECTOR(vec, 5);
+	float a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	FltBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_double_vector_to_btree(void **state) {
+	Dble vec;
+	INIT_VECTOR(vec, 5);
+	double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	PRINT(vec);
+	DbleBT btree = VECTOR_TO_BTREE(vec);
+	PRINT(btree);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_ldouble_vector_to_btree(void **state) {
+	LDble vec;
+	INIT_VECTOR(vec, 5);
+	long double a[5] = {1., 2., 3., 4., 5.};
+	INSERT(vec, a, 5, 0);
+	LDbleBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_char_vector_to_btree(void **state) {
+	Char vec;
+	INIT_VECTOR(vec, 5);
+	char a[5] = {'a', 'b', 'c', 'd', 'e'};
+	INSERT(vec, a, 5, 0);
+	CharBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
+// ------------------------------------------------------------------------------------------
+
+void test_uchar_vector_to_btree(void **state) {
+	UChar vec;
+	INIT_VECTOR(vec, 5);
+	unsigned char a[5] = {'a', 'b', 'c', 'd', 'e'};
+	INSERT(vec, a, 5, 0);
+	UCharBT btree = VECTOR_TO_BTREE(vec);
+	for (size_t i = 0; i < vec.active_length; i++) {
+		POP_BTREE(btree, a[i]);
+	}
+	assert_int_equal(0, btree.active_length);
+	FREE(vec);
+	FREE_BTREE(btree);
+}
 // ==========================================================================================
 // ==========================================================================================
 // eof

@@ -406,6 +406,25 @@ void test_double_vector_to_list(void **state);
 void test_ldouble_vector_to_list(void **state);
 void test_bool_vector_to_list(void **state);
 void test_string_vector_to_list(void **state);
+// ==========================================================================================
+// ==========================================================================================
+// TEST VECTOR_TO_BTREE FUNCTIONS
+
+void test_short_vector_to_btree(void **state);
+void test_ushort_vector_to_btree(void **state);
+void test_int_vector_to_btree(void **state);
+void test_uint_vector_to_btree(void **state);
+void test_long_vector_to_btree(void **state);
+void test_ulong_vector_to_btree(void **state);
+void test_llong_vector_to_btree(void **state);
+void test_ullong_vector_to_btree(void **state);
+void test_float_vector_to_btree(void **state);
+void test_double_vector_to_btree(void **state);
+void test_ldouble_vector_to_btree(void **state);
+void test_char_vector_to_btree(void **state);
+void test_uchar_vector_to_btree(void **state);
+void test_string_vector_to_btree(void **state);
+
 #endif /* test_vector_H */
 // ==========================================================================================
 // ==========================================================================================

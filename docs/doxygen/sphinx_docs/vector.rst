@@ -1747,4 +1747,75 @@ The following functions can be used in place of the ``VECTOR_TO_LIST`` Macro.
 
 VECTOR_TO_BTREE
 ===============
-TBD
+The ``VECTOR_TO_BTREE`` Macro will create a Binary Tree from a vector or array data structure.
+
+.. code-block:: c
+
+   vector_t VECTOR_TO_TREE(T tree);
+
+
+Parameters
+----------
+
+- :c:`tree`: A Binary tree data structure of type ``T``.
+
+Returns
+-------
+
+- :c:`vec`: A vector data structure of type consistent with ``T``.
+
+.. code-block:: c
+
+   #include 'data_structures.h'
+   Dble vec;
+   INIT_VECTOR(vec, 5);
+   double a[5] = {1., 2., 3., 4., 5.};
+   INSERT(vec, a, 5, 0);
+   PRINT(vec);
+   DbleBT btree = VECTOR_TO_BTREE(vec);
+   PRINT(btree);
+   FREE(btree);
+   FREE(vec);
+
+.. code-block:: bash
+
+   >> [ 1.0000, 2.0000, 3.0000, 4.0000, 5.0000 ]
+   >> < 2.0000, 1.0000, 4.0000, 3.0000, 5.0000 >
+
+The following functions can be used in place of the ``VECTOR_TO_BTREE`` Macro.
+
+.. code-block:: c
+
+   UShortBT ushort_vector_to_btree(UShort *vec);
+   ShortBT short_vector_to_btree(Short *vec);
+   UIntBT uint_vector_to_btree(UInt *vec);
+   IntBT int_vector_to_btree(Int *vec);
+   ULIntBT ulong_vector_to_btree(ULInt *vec);
+   LIntBT long_vector_to_btree(LInt *vec);
+   ULLIntBT ullong_vector_to_btree(ULLInt *vec);
+   LLIntBT llong_vector_to_btree(LLInt *vec);
+   FltBT float_vector_to_btree(Flt *vec);
+   DbleBT double_vector_to_btree(Dble *vec);
+   LDbleBT ldouble_vector_to_btree(LDble *vec);
+   CharBT char_vector_to_btree(Char *vec);
+   UCharBT uchar_vector_to_btree(UChar *vec);
+   StringBT string_vector_to_btree(String *vec);
+
+.. code-block:: c
+
+   #include 'data_structures.h'
+   Dble vec;
+   init_double_vector(&vec, 5);
+   double a[5] = {1., 2., 3., 4., 5.};
+   insert_double_vector(&vec, a, 5, 0);
+   PRINT(vec);
+   DbleBT btree = double_vector_to_btree(&vec);
+   PRINT(btree);
+   free_double_btree(&btree);
+   free_double_vector(&vec);
+
+.. code-block:: bash
+
+   >> [ 1.0000, 2.0000, 3.0000, 4.0000, 5.0000 ]
+   >> < 2.0000, 1.0000, 4.0000, 3.0000, 5.0000 >
+
