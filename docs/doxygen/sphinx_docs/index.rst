@@ -14,11 +14,15 @@ through a type generic interface driven by the ``_Generic`` operator, or they ca
 with the equivalent type specific functions. This libraries relies upon the use
 of the ``_Generic`` operator to enable Macros such that the Macros do not consume extra memory.
 
+**NOTE:** This library is under maintenance.  Please check the documentation for each
+section to ensure it is still in working order.
+
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
+   Strings <strings>
    Swap <swap>
    Print <print>
    Vectors and Arrays <vector>

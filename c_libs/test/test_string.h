@@ -29,6 +29,11 @@ void test_append_string_free(void **state);
 void test_append_string_cleanup(void **state);
 void test_copy_memory(void **state);
 void test_move_memory(void **state);
+void test_replace_string_literal(void **state);
+void test_replace_string_str(void **state);
+void test_compare_equal_strings(void **state);
+void test_compare_larger_strings(void **state);
+void test_compare_smaller_strings(void **state);
 
 #endif /* test_H */
 // ================================================================================

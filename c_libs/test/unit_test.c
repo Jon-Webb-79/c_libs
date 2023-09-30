@@ -30,7 +30,12 @@
 	cmocka_unit_test(test_append_string_free),
     cmocka_unit_test(test_append_string_cleanup),
 	cmocka_unit_test(test_copy_memory),
-	cmocka_unit_test(test_move_memory)
+	cmocka_unit_test(test_move_memory),
+	cmocka_unit_test(test_replace_string_literal),
+	cmocka_unit_test(test_replace_string_str),
+	cmocka_unit_test(test_compare_equal_strings),
+    cmocka_unit_test(test_compare_larger_strings),
+    cmocka_unit_test(test_compare_smaller_strings),
  };
 // Test functions for test_swap
 /* const struct CMUnitTest tests_swap[] = { */

@@ -1,6 +1,8 @@
 ***********
 Binary Tree
 ***********
+**NOTE:**  This library is currently under maintenance and should not be used.
+
 This btree library contains data structures that help manage a binary search tree
 of various data types.  In addition this library contains functions that act 
 upon the binary tree data structure to extract and or add data to the tree.

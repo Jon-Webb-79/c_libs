@@ -4,7 +4,7 @@ PRINT
 The ``PRINT`` Macro can print up to eight arguments of any data type that ships with the ANSI-C
 distribution to include ``short int``, ``unsigned short int``, ``int``, ``unsigned int``,
 ``long int``, ``unsigned long int``, ``long long int``, ``unsigned long long int``, 
-``float``, ``double``, ``long double``, ``char``, ``unsigned char``, and
+``float``, ``double``, ``long double``, ``char``, ``unsigned char`, ``str```, and
 ``bool``. In addition, the PRINT Macro can accomodate all data types from
 the ``vector.h`` file described in :ref:`vec-data-type` and the ``llist.h`` file
 described in :ref:`list-data-type`
@@ -14,6 +14,8 @@ described in :ref:`list-data-type`
    void PRINT(...)
 
 .. code-block:: c
+
+   #include "print.h"
 
    int a = 5;
    float b = 5.318;
@@ -33,51 +35,71 @@ described in :ref:`list-data-type`
    >> This is an integer value: 5
    >> This is a vector [ 1.1000, 2.2000, 3.3000, 4.4000, 5.5000 ] and this is not 5.31000
 
-The ``PRINT`` macro will will encase a vector in brackets ``[ ]``; however, the ``PRINT`` macro
-will also encase a linked list in circular brackets ``( )`` to distringuish them from each other.
+The ``PRINT`` Macro will also print variables that are of type ``char*`` and ``str``.
 
 .. code-block:: c
 
-   UInt vec;
-   INIT_VECTOR(vec, 5);
-   unisgned int a[5] = {1, 2, 3, 4, 5}
-   INSERT(vec, a, 5, 0);
-   PRINT(vec);
-   FREE(vec);
+   #include "str.h"
+   #include "print.h"
 
-   UIntLL list;
-   INIT_LIST(list);
-   INSERT(list, a, 5, 0);
-   PRINT(list);
-   FREE(list);
+   char *a[] = "Hello World!"
+   str STR_NULL(b);
+   append_string(b, "Goodbye World!");
+   PRINT(a);
+   PRINT(b);
+   PRINT(str_list("Another World!"));
 
 .. code-block:: bash
 
-   >> [ 1, 2, 3, 4, 5 ]
-   >> ( 1, 2, 3, 4, 5 )
+   >> Hello World!
+   >> Goodybe World!
+   >> Another World!
+
+.. The ``PRINT`` macro will will encase a vector in brackets ``[ ]``; however, the ``PRINT`` macro
+.. will also encase a linked list in circular brackets ``( )`` to distringuish them from each other.
+
+.. .. code-block:: c
+
+..    UInt vec;
+..    INIT_VECTOR(vec, 5);
+..    unisgned int a[5] = {1, 2, 3, 4, 5}
+..    INSERT(vec, a, 5, 0);
+..    PRINT(vec);
+..    FREE(vec);
+
+..    UIntLL list;
+..    INIT_LIST(list);
+..    INSERT(list, a, 5, 0);
+..    PRINT(list);
+..    FREE(list);
+
+.. .. code-block:: bash
+
+..    >> [ 1, 2, 3, 4, 5 ]
+..    >> ( 1, 2, 3, 4, 5 )
 
 
-In addition, the ``PRINT`` Macro will also encase a Binary Tree in ``< >`` brackets.  In addition,
-the ``PRINT`` statement will print a binary tree with a pre-order traversal method.
+.. In addition, the ``PRINT`` Macro will also encase a Binary Tree in ``< >`` brackets.  In addition,
+.. the ``PRINT`` statement will print a binary tree with a pre-order traversal method.
 
-.. code-block:: c
+.. .. code-block:: c
 
-   #include btree.h
-   // Can also use data_structures.h
-   ShortBT tree;
-   PUSH_BTREE(tree, 10);
-   PUSH_BTREE(tree, 20);
-   PUSH_BTREE(tree, 30);
-   PUSH_BTREE(tree, 40);
-   PUSH_BTREE(tree, 50);
-   PUSH_BTREE(tree, 25);
-   PRINT(tree);
-   FREE_BTREE(tree);
+..    #include btree.h
+..    // Can also use data_structures.h
+..    ShortBT tree;
+..    PUSH_BTREE(tree, 10);
+..    PUSH_BTREE(tree, 20);
+..    PUSH_BTREE(tree, 30);
+..    PUSH_BTREE(tree, 40);
+..    PUSH_BTREE(tree, 50);
+..    PUSH_BTREE(tree, 25);
+..    PRINT(tree);
+..    FREE_BTREE(tree);
 
-.. code-block:: c
+.. .. code-block:: c
 
-   >> < 30, 20, 10, 25, 40, 5 >
+..    >> < 30, 20, 10, 25, 40, 5 >
 
-At present the ``PRINT`` macro does not support formatting.
+.. At present the ``PRINT`` macro does not support formatting.
 
 

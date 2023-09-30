@@ -215,6 +215,8 @@ bool str_is_empty(const str s)
  * @param s A struct of type str
  */
 void free_string(str* s);
+#define free_str(str_struct) _Generic((str_struct), \
+    default: free_string) (&str_struct)
 // ---------------------------------------------------------------------------------
 
 /**
@@ -232,7 +234,7 @@ void _str_free(str* s);
  *
  * @param var The variable name that will be collected and cleaned up
  */
-#define CLEANUP(var) var __attribute__((cleanup(_str_free))) = { .ptr=NULL, .len=0 }
+#define CLEANUP_STR(var) var __attribute__((cleanup(_str_free))) = { .ptr=NULL, .len=0 }
 // ---------------------------------------------------------------------------------
 
 /**
@@ -247,6 +249,9 @@ void _str_free(str* s);
  * @returns true if function executes succesfully, false otherwis
  */
 bool copy_memory(str *dest, const str *src, size_t n);
+
+#define copy_mem(str_struct1, str_struct2, n) _Generic((str_struct1), \
+    default: copy_memory) (&str_struct1, &str_struct2, n)
 // ---------------------------------------------------------------------------------
 
 /**
@@ -261,6 +266,9 @@ bool copy_memory(str *dest, const str *src, size_t n);
  * @returns true if function executes sucesfully, false otherwise
  */
 bool move_memory(str *dest, const str *src, size_t n);
+
+#define move_mem(str_struct1, str_struct2, n) _Generic((str_struct1), \
+    default: move_memory) (&str_struct1, &str_struct2, n)
 // ---------------------------------------------------------------------------------
 // Implement functions similar to those in string.h for standard strings
 

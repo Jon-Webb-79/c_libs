@@ -34,6 +34,8 @@
 		                                 unsigned long int: true, \
 									     long long int: true, \
 									     unsigned long long int: true, \
+										 int: true, \
+										 unsigned int: true, \
 									     float: true, \
 									     double: true, \
 									     long double: true, \
@@ -125,6 +127,8 @@ void print_sstring(str x);
 									   long double: print_longdouble, \
 									   char: print_char, \
 									   unsigned char: print_uchar, \
+									   int: print_int, \
+									   unsigned int: print_uint, \
 									   bool: print_bool, \
 									   char*: print_string, \
 									   str: print_sstring)(T)

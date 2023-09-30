@@ -3,6 +3,8 @@
 ***********
 Linked List
 ***********
+**NOTE:** This library is currently under maintenance and should not be user.
+
 The llist library contains data structures that help manage doubly linked lists
 of various data types.  In addition, this library contains functions that act on
 the data structures to organize the data and calculate basic statistical values

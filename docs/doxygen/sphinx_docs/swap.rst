@@ -1,6 +1,8 @@
 ****
 SWAP
 ****
+**NOTE:** This library is currently under maintenance and should not be used.
+
 The ``SWAP`` Macro can be used to swap to variables of the same data type in memory.
 This Macro uses a ``_Generic`` operator to determine the data types and the correct
 underlying function to use for the operation.  If the user enters to mis-matched data

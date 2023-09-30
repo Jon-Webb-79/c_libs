@@ -3,6 +3,9 @@
 ******
 Vector
 ******
+**NOTE:** This library is currently under maintenance and should not be
+used.
+
 The vector library contains data structures that help manage statically
 allocated arrays and dynamically allocated vectors.  In addition, this
 library contains functions that act on the data structures to organize
