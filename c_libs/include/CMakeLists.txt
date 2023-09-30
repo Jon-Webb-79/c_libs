@@ -12,18 +12,10 @@
 # ================================================================================
 
 add_library( include
-    swap.c
-	swap.h
-	vector.c
-	vector.h
-	llist.c
-	llist.h
-	btree.c
-	btree.h
 	print.c
 	print.h
-	data_structures.c
-	data_structures.h
+	str.c
+	str.h
 )
 
 target_include_directories(include PUBLIC .)

@@ -16,9 +16,11 @@
 
 #include <stdio.h>
 #include <stdbool.h>
-#include "vector.h"
-#include "llist.h"
-#include "btree.h"
+
+#include "str.h"
+//#include "vector.h"
+//#include "llist.h"
+//#include "btree.h"
 
 /* Define the number of data points to be printed in an array before advancing
  * to the next line */
@@ -36,52 +38,10 @@
 									     double: true, \
 									     long double: true, \
 									     char: true, \
-										 bool: true, \
 										 unsigned char: true, \
+										 bool: true, \
 									     char*: true, \
-										 Flt: true, \
-										 Dble: true, \
-										 LDble: true, \
-										 Int: true, \
-										 UInt: true, \
-										 Short: true, \
-										 UShort: true, \
-										 LInt: true, \
-										 ULInt: true, \
-										 LLInt: true, \
-										 ULLInt: true, \
-										 Char: true, \
-										 Bool: true, \
-										 String: true, \
-										 FltLL: true, \
-										 DbleLL: true, \
-										 LDbleLL: true, \
-										 ShortLL: true, \
-										 UShortLL: true, \
-										 IntLL: true, \
-										 UIntLL: true, \
-										 LIntLL: true, \
-										 ULIntLL: true, \
-										 LLIntLL: true, \
-										 ULLIntLL: true, \
-										 CharLL: true, \
-										 UCharLL: true, \
-										 BoolLL: true, \
-										 StringLL: true, \
-										 ShortBT: true, \
-										 UShortBT: true, \
-										 IntBT: true, \
-										 UIntBT: true, \
-										 LIntBT: true, \
-										 ULIntBT: true, \
-										 LLIntBT: true, \
-										 ULLIntBT: true, \
-										 FltBT: true, \
-										 DbleBT: true, \
-										 LDbleBT: true, \
-										 CharBT: true, \
-										 UCharBT: true, \
-										 StringBT: true, \
+										 str: true, \
 										 default: false)
 // ================================================================================
 // ================================================================================
@@ -104,59 +64,59 @@ void print_char(char x);
 void print_uchar(unsigned char x);
 void print_bool(bool x);
 void print_string(char *x);
+void print_sstring(str x);
 
 // vector data structure print statements
-void print_vshort(Short x);
-void print_vushort(UShort x);
-void print_vint(Int x);
-void print_vuint(UInt x);
-void print_vlint(LInt x);
-void print_vulint(ULInt x);
-void print_vllint(LLInt x);
-void print_vullint(ULLInt x);
-void print_vfloat(Flt x);
-void print_vdble(Dble x);
-void print_vldble(LDble x);
-void print_achar(Char x);
-void print_uachar(UChar x);
-void print_vbool(Bool x);
-void print_vstring(String x);
+/* void print_vshort(Short x); */
+/* void print_vushort(UShort x); */
+/* void print_vint(Int x); */
+/* void print_vuint(UInt x); */
+/* void print_vlint(LInt x); */
+/* void print_vulint(ULInt x); */
+/* void print_vllint(LLInt x); */
+/* void print_vullint(ULLInt x); */
+/* void print_vfloat(Flt x); */
+/* void print_vdble(Dble x); */
+/* void print_vldble(LDble x); */
+/* void print_achar(Char x); */
+/* void print_uachar(UChar x); */
+/* void print_vbool(Bool x); */
+/* void print_vstring(String x); */
 
 // linked list structre print statments
-void print_llshort(ShortLL x);
-void print_llushort(UShortLL x);
-void print_llint(IntLL x);
-void print_lluint(UIntLL x);
-void print_lllong(LIntLL x);
-void print_llulong(ULIntLL x);
-void print_llllong(LLIntLL x);
-void print_llullong(ULLIntLL x);
-void print_llfloat(FltLL x);
-void print_lldouble(DbleLL x);
-void print_llldouble(LDbleLL x);
-void print_llchar(CharLL x);
-void print_llbool(BoolLL x);
-void print_llstring(StringLL x);
+/* void print_llshort(ShortLL x); */
+/* void print_llushort(UShortLL x); */
+/* void print_llint(IntLL x); */
+/* void print_lluint(UIntLL x); */
+/* void print_lllong(LIntLL x); */
+/* void print_llulong(ULIntLL x); */
+/* void print_llllong(LLIntLL x); */
+/* void print_llullong(ULLIntLL x); */
+/* void print_llfloat(FltLL x); */
+/* void print_lldouble(DbleLL x); */
+/* void print_llldouble(LDbleLL x); */
+/* void print_llchar(CharLL x); */
+/* void print_llbool(BoolLL x); */
+/* void print_llstring(StringLL x); */
 
-void print_btshort(ShortBT x);
-void print_btushort(UShortBT x);
-void print_btint(IntBT x);
-void print_btuint(UIntBT x);
-void print_btlong(LIntBT x);
-void print_btulong(ULIntBT x);
-void print_btllong(LLIntBT x);
-void print_btullong(ULLIntBT x);
-void print_btfloat(FltBT x);
-void print_btdouble(DbleBT x);
-void print_btldouble(LDbleBT x);
-void print_btchar(CharBT x);
-void print_btuchar(UCharBT x);
-void print_btstring(StringBT x);
+/* void print_btshort(ShortBT x); */
+/* void print_btushort(UShortBT x); */
+/* void print_btint(IntBT x); */
+/* void print_btuint(UIntBT x); */
+/* void print_btlong(LIntBT x); */
+/* void print_btulong(ULIntBT x); */
+/* void print_btllong(LLIntBT x); */
+/* void print_btullong(ULLIntBT x); */
+/* void print_btfloat(FltBT x); */
+/* void print_btdouble(DbleBT x); */
+/* void print_btldouble(LDbleBT x); */
+/* void print_btchar(CharBT x); */
+/* void print_btuchar(UCharBT x); */
+/* void print_btstring(StringBT x); */
 // ================================================================================
 // ================================================================================
 // Begin macros that uses the various print functions.
-#define ITYPE_FORMAT(T) _Generic( (T), unsigned char: print_uachar, \
-		                               long int: print_long, \
+#define ITYPE_FORMAT(T) _Generic( (T), long int: print_long, \
 									   unsigned long int: print_ullong, \
 									   long long int: print_llong, \
 									   unsigned long long int: print_ullong, \
@@ -164,50 +124,10 @@ void print_btstring(StringBT x);
 									   double: print_double, \
 									   long double: print_longdouble, \
 									   char: print_char, \
+									   unsigned char: print_uchar, \
 									   bool: print_bool, \
 									   char*: print_string, \
-									   Int: print_vint, \
-									   UInt: print_vuint, \
-                                       Short: print_vshort, \
-                                       UShort: print_vushort, \
-                                       LInt: print_vlint, \
-                                       ULInt: print_vulint, \
-                                       LLInt: print_vllint, \
-                                       ULLInt: print_vullint, \
-                                       Flt: print_vfloat, \
-                                       Dble: print_vdble, \
-						               Char: print_achar, \
-                                       UChar: print_uachar, \
-									   Bool: print_vbool, \
-                                       LDble: print_vldble, \
-                                       String: print_vstring, \
-									   ShortLL: print_llshort, \
-									   UShortLL: print_llushort, \
-									   IntLL: print_llint, \
-									   UIntLL: print_lluint, \
-									   LIntLL: print_lllong, \
-									   ULIntLL: print_llulong, \
-									   LLIntLL: print_llllong, \
-                                       ULLIntLL: print_llullong, \
-									   FltLL: print_llfloat, \
-									   DbleLL: print_lldouble, \
-									   LDbleLL: print_llldouble, \
-									   CharLL: print_llchar, \
-									   BoolLL: print_llbool, \
-									   StringLL: print_llstring, \
-									   ShortBT: print_btshort, \
-                                       UShortBT: print_btushort, \
-                                       IntBT: print_btint, \
-                                       UIntBT: print_btuint, \
-                                       LIntBT: print_btlong, \
-                                       ULIntBT: print_btulong, \
-                                       LLIntBT: print_btllong, \
-                                       ULLIntBT: print_btullong, \
-                                       FltBT: print_btfloat, \
-                                       DbleBT: print_btdouble, \
-                                       LDbleBT: print_btldouble, \
-                                       CharBT: print_btchar, \
-									   UCharBT: print_btuchar)(T)
+									   str: print_sstring)(T)
 // --------------------------------------------------------------------------------
 
 #define PRINT1(a) do {															\
