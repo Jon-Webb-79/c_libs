@@ -34,6 +34,9 @@ void test_replace_string_str(void **state);
 void test_compare_equal_strings(void **state);
 void test_compare_larger_strings(void **state);
 void test_compare_smaller_strings(void **state);
+void test_literal_string_length(void **state);
+void test_copy_string_literal(void **state);
+void test_move_string_literal(void **state);
 
 #endif /* test_H */
 // ================================================================================

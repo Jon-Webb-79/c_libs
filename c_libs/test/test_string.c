@@ -113,6 +113,37 @@ void test_compare_smaller_strings(void **state)
 	int a = compare_strings(str_lit("aab"), str_lit("aac"));
 	assert_int_equal(a, -1);
 }
+// --------------------------------------------------------------------------------
+
+void test_literal_string_length(void **state)
+{
+	(void) state;
+	size_t a = literal_strlen("Hello");
+	assert_int_equal(a, 5);
+}
+// --------------------------------------------------------------------------------
+
+void test_copy_string_literal(void **state)
+{
+	(void) state;
+    const char src[50] = "https://www.tutorialspoint.com";
+    char dest[50] = "Heloooo!!";
+    literal_memcpy(dest, src, literal_strlen(src)+1);
+	int a = compare_strings(str_lit(dest), str_lit(dest));
+	assert_int_equal(a, 0);
+}
+// --------------------------------------------------------------------------------
+
+void test_move_string_literal(void **state)
+{
+	(void) state;
+    char string[] = "memmove can be very useful......";
+    literal_memmove(string+20, string+15, 11);
+	str string2= str_lit(string);
+	str string3 = str_lit("memmove can be very very useful.");
+	int a = compare_strings(string2, string3);
+	assert_int_equal(a, 0);
+}
 // ================================================================================
 // ================================================================================
 // eof

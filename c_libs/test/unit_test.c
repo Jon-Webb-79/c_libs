@@ -36,6 +36,9 @@
 	cmocka_unit_test(test_compare_equal_strings),
     cmocka_unit_test(test_compare_larger_strings),
     cmocka_unit_test(test_compare_smaller_strings),
+	cmocka_unit_test(test_literal_string_length),
+    cmocka_unit_test(test_copy_string_literal),
+    cmocka_unit_test(test_move_string_literal)
  };
 // Test functions for test_swap
 /* const struct CMUnitTest tests_swap[] = { */

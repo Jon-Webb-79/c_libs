@@ -448,7 +448,107 @@ Returns
 
    >> This is another stri
 
-String Literal Operations
-=========================
-Their are several functions that act on string literals that were ported to this library
-from the ``string.h`` library in order to reduce dependency on the ``string.h`` library.
+String Length
+=============
+The length of strings encapsulated in a ``str`` data types is contained in the ``len`` attribute;
+however, the length of a string literal must be determined by iterating through the string
+with a counter.  The ``literal_strlen`` function can be used to determine the length
+of a string literal and is modeled after the the ``strlen`` function in the ``string.h``
+library.
+
+.. code-block:: c
+
+   size_t literal_strlen(const char* str);
+
+Parameters
+----------
+
+- :c:`str`: A string literal of type ``const char*``.
+
+Returns
+-------
+
+- :c:`len`: The length of the string literal
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   const char* one[] = "Hello";
+   str two = str_lit("Hello");
+   size_t b = literal_strlen(&one);
+   PRINT("Literal Length: ", b);
+   PRINT("String Length:  ", two.len);
+
+.. code-block:: c
+
+   >> Literal Length: 5
+   >> String Length:  5
+
+literal_memcpy
+==============
+The ``literal_memcpy`` function copies ``n`` bytes of memory from one location to another.
+This function is a version of the ``memcpy`` function in the ``string.h`` library.
+This function may be used to help move memory in large arrays, as a result the
+``__attribute__((hot))`` attribute to optimize the function at compilation time is used.
+
+.. code-block:: c
+
+   void* literal_memcpy(void* dest, const void* src, size_t n);
+
+Parameters
+----------
+
+- :c:`dest`: A pointer to the location in memory where data is being copied.
+- :c:`src`: A pointer to the location in memory where data is being copied from.
+- :c:`n`: The number of bytes being copied from ``src`` to ``dest``.
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   const char src[50] = "https://www.tutorialspoint.com";
+   char dest[50];
+   const char dest[50] = "Heloooo!!"; 
+   PRINT("Before memcpy dest = ", dest);
+   memcpy(dest, src, strlen(src)+1);
+   PRINT("After memcpy dest = ", dest); 
+
+.. code-block:: bash
+
+   Before memcpy dest = Heloooo!!
+   After memcpy dest = https://www.tutorialspoint.com
+
+literal_memmove
+===============
+The ``literal_memmove`` function moves ``n`` bytes of memory from one location to another.
+This function is a version of the ``memmove`` function in the ``string.h`` library.
+This function may be used to help move memory in large arrays, as a result the
+``__attribute__((hot))`` attribute to optimize the function at compilation time is used.
+
+.. code-block:: c
+
+   void* literal_memmove(void* dest, const void* src, size_t n);
+
+Parameters
+----------
+
+- :c:`dest`: A pointer to the location in memory where data is being copied.
+- :c:`src`: A pointer to the location in memory where data is being copied from.
+- :c:`n`: The number of bytes being copied from ``src`` to ``dest``.
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   char string[] = "memmove can be very useful......";
+   literal_memmove(string+20, string+15, 11); 
+   PRINT(string)
+
+.. code-block:: bash
+
+   memove can be very very useful.
+
