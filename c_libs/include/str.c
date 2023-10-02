@@ -273,6 +273,21 @@ void* literal_memmove(void* dest, const void* src, size_t n) {
 }
 // --------------------------------------------------------------------------------
 
+char* literal_strcat(char* dest, const char* src) {
+    char* original_dest = dest;
+
+    // Move to the end of the destination string
+    while (*dest) {
+        dest++;
+    }
+
+    // Copy source string to the destination
+    while ((*dest++ = *src++));
+
+    return original_dest;
+}
+// --------------------------------------------------------------------------------
+
 str string_pop_token(str* s, char *token) {
 	str STR_NULL(result);
     char* last_occurrence = last_token_occurance(s->ptr, *token);
@@ -366,6 +381,39 @@ ErrorCodes resize_string(str *str_struct) {
     }
     return Success;
 }
+// ================================================================================
+// ================================================================================
+
+str add_strings_literal(int count, ...) {
+    va_list args;
+    int total_length = 0;
+
+    // First pass: calculate total length
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        const char* temp_str = va_arg(args, const char*);
+        total_length += literal_strlen(temp_str);
+    }
+    va_end(args);
+
+    // Allocate memory for the combined string
+    char* result_str = malloc(total_length + 1);  // +1 for null terminator
+    if (!result_str) {
+        return (str){.ptr = NULL, .len = 0, .is_dynamic = false};
+    }
+    result_str[0] = '\0';  // Initialize the result string as empty
+
+    // Second pass: concatenate strings
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        const char* temp_str = va_arg(args, const char*);
+        literal_strcat(result_str, temp_str);
+    }
+    va_end(args);
+
+    return (str){.ptr = result_str, .len = total_length, .is_dynamic = true};
+}
+
 // ================================================================================
 // ================================================================================
 // eof

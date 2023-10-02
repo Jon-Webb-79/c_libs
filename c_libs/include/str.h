@@ -17,6 +17,7 @@
 // TODO develop an iterator
 // TODO Add
 // TODO Subtract
+// TODO insert_sub_string
 #if !defined(__GNUC__) && !defined(__clang__)
 #error "This code is only compatible with GCC and Clang"
 #endif
@@ -31,6 +32,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdarg.h>
 
 #include "admin.h"
 
@@ -341,6 +343,18 @@ ErrorCodes resize_string(str *str_struct);
 #define resize_str(str) _Generic((str), default: resize_string)((&str))
 // =================================================================================
 // =================================================================================
+
+/**
+ * @brief A function that will add multiple str structs into one string that
+ *        is returned to the user
+ *
+ * @param count An integer representing the number of parameters being added
+ */
+str add_strings_literal(int count, ...);
+
+
+// =================================================================================
+// =================================================================================
 // Implement functions similar to those in string.h for standard strings
 
 /**
@@ -374,6 +388,16 @@ void* literal_memcpy(void* dest, const void* src, size_t n) __attribute__((hot))
  * @param n The number of bytest to be copied from src to dest
  */
 void* literal_memmove(void* dest, const void* src, size_t n) __attribute__((hot));
+// ---------------------------------------------------------------------------------
+
+/**
+ * @brief A function to concatenate strings
+ *
+ * @param dest The destination string that must have enough memory allocation
+ *             for itself and the src string
+ * @param src src The src to be joined with dest
+ */
+char* literal_strcat(char* dest, const char* src);
 // ---------------------------------------------------------------------------------
 
 /**

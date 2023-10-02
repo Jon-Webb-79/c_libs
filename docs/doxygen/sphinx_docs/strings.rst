@@ -717,6 +717,38 @@ Parameters
 
 .. _free_string:
 
+literal_strcat
+==============
+The ``literal_strcat`` function will concatenate two string literals.
+
+.. code-block:: c
+
+   char* literal_strcat(char* dest, const char* src);
+
+Parameters
+----------
+
+- :c:`dest`: The destination string which must have enough allocated memory to accomodate the ``src`` string.
+- :c:`src`: The string to be concatenated with ``dest``.
+
+Returns
+-------
+
+- :c:`string`: The concatenated string
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   char dest[100] = "One";
+   char *a = literal_strcat(dest, "Two");
+   PRINT(a);
+
+.. code-block:: bash
+
+   >> OneTwo
+
 last_token_occurance
 ====================
 The ``last_token_occurance`` function will determine the last location in a string where

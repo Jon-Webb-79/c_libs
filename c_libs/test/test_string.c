@@ -323,6 +323,15 @@ void test_remove_string_int(void **state)
 	assert_string_equal(date.ptr, "0106");
 	free_str(date);
 }
+// --------------------------------------------------------------------------------
+
+void test_concat_literal(void **state)
+{
+	(void) state;
+	char buffer[100] = "One";
+	char *a = literal_strcat(buffer, "Two");
+	assert_string_equal(a, "OneTwo");
+}
 // ================================================================================
 // ================================================================================
 // eof
