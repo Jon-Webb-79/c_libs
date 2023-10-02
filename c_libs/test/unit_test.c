@@ -54,6 +54,8 @@
     cmocka_unit_test(test_remove_string_token),
 	cmocka_unit_test(test_remove_string_int),
     cmocka_unit_test(test_concat_literal),
+	cmocka_unit_test(test_add_strings_literal),
+    cmocka_unit_test(test_add_strings_str)
  };
 // Test functions for test_swap
 /* const struct CMUnitTest tests_swap[] = { */

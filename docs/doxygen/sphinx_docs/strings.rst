@@ -617,6 +617,53 @@ Returns
 
    >> 0106
 
+Add Strings
+===========
+The ``add_strings`` macro allows a user to pass multiple ``str`` structs or multiple string literals
+to the function which will return a ``str`` struct with the concatenated strings.
+
+.. code-block:: c
+
+   str add_strings(int num, ...);
+
+Parameters
+----------
+
+- :c:`num`: The number of ``str`` structs or string literals to be concatenated together.
+- :c:`params`: A user defined number of string literals or ``str`` structs.
+
+Returns
+-------
+
+- :c:`string`: A struct of type ``str``.
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str string = add_strings(4, "One, ", "Two, ", "Three, ", "Four ");
+   PRINT(string);
+   free_str(string);
+
+.. code-block:: bash
+
+   >> One, Two, Three, Four
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str string = add_strings(4, str_lit("One, "), str_lit("Two, "), str_lit("Three, "), str_lit("Four "));
+   PRINT(string);
+   free_str(string);
+
+.. code-block:: bash
+
+   >> One, Two, Three, Four
+
+
 Resize String
 =============
 The ``resize_str`` macro will resize the memory allocation of a ``str`` data type to just

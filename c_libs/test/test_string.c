@@ -332,6 +332,24 @@ void test_concat_literal(void **state)
 	char *a = literal_strcat(buffer, "Two");
 	assert_string_equal(a, "OneTwo");
 }
+// --------------------------------------------------------------------------------
+
+void test_add_strings_literal(void **state)
+{
+	(void) state;
+	str string = add_strings(4, "One, ", "Two, ", "Three, ", "Four");
+	assert_string_equal(string.ptr, "One, Two, Three, Four");
+	free_str(string);
+}
+// --------------------------------------------------------------------------------
+
+void test_add_strings_str(void **state)
+{
+	(void) state;
+	str string = add_strings(4, str_lit("One, "), str_lit("Two, "), str_lit("Three, "), str_lit("Four"));
+	assert_string_equal(string.ptr, "One, Two, Three, Four");
+	free_str(string);
+}
 // ================================================================================
 // ================================================================================
 // eof

@@ -52,6 +52,8 @@ void test_resize_string(void **state);
 void test_remove_string_token(void **state);
 void test_remove_string_int(void **state);
 void test_concat_literal(void **state);
+void test_add_strings_literal(void **state);
+void test_add_strings_str(void **state);
 
 #endif /* test_H */
 // ================================================================================

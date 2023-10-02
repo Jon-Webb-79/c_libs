@@ -345,14 +345,30 @@ ErrorCodes resize_string(str *str_struct);
 // =================================================================================
 
 /**
+ * @brief A function that will add multiple string literals into one string that
+ *        is returned to the user
+ *
+ * @param count An integer representing the number of parameters being added
+ */
+str add_strings_cstr(int count, ...);
+// ---------------------------------------------------------------------------------
+
+/**
  * @brief A function that will add multiple str structs into one string that
  *        is returned to the user
  *
  * @param count An integer representing the number of parameters being added
  */
-str add_strings_literal(int count, ...);
 
+str add_strings_str(int count, ...);
 
+#define GET_FIRST_ARG(_1, ...) _1
+
+#define add_strings(first, ...) \
+    _Generic((GET_FIRST_ARG(__VA_ARGS__)), \
+        str: add_strings_str, \
+        char*: add_strings_cstr \
+    )(first, __VA_ARGS__)
 // =================================================================================
 // =================================================================================
 // Implement functions similar to those in string.h for standard strings

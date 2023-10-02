@@ -384,7 +384,7 @@ ErrorCodes resize_string(str *str_struct) {
 // ================================================================================
 // ================================================================================
 
-str add_strings_literal(int count, ...) {
+str add_strings_cstr(int count, ...) {
     va_list args;
     int total_length = 0;
 
@@ -413,7 +413,46 @@ str add_strings_literal(int count, ...) {
 
     return (str){.ptr = result_str, .len = total_length, .is_dynamic = true};
 }
+// --------------------------------------------------------------------------------
 
+str add_strings_str(int count, ...) {
+    size_t total_length = 0;
+    str result = {NULL, 0, false};
+    va_list args;
+
+    // First pass: Calculate the total length required
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        str current_str = va_arg(args, str);
+        total_length += current_str.len;
+    }
+    va_end(args);
+
+    // Allocate memory for the concatenated result
+    result.ptr = (char*) malloc(total_length + 1);  // +1 for null-terminator
+    if (!result.ptr) {
+        return result;  // Return an empty struct if malloc failed
+    }
+
+    result.is_dynamic = true;
+
+    char* current_pos = result.ptr;
+
+    // Second pass: Concatenate the strings
+    va_start(args, count);
+    for (int i = 0; i < count; i++) {
+        str current_str = va_arg(args, str);
+        for (size_t j = 0; j < current_str.len; j++) {
+            *current_pos++ = current_str.ptr[j];
+        }
+    }
+    va_end(args);
+
+    *current_pos = '\0';  // null-terminate the result
+    result.len = total_length;
+
+    return result;
+}
 // ================================================================================
 // ================================================================================
 // eof
