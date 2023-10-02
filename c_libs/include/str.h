@@ -14,7 +14,6 @@
 //
 //
 // Add capability
-// TODO Add resize_string method
 // TODO develop an iterator
 // TODO Add
 // TODO Subtract
@@ -302,6 +301,44 @@ str string_pop_int(str *s, size_t n);
         int: string_pop_int, \
         char*: string_pop_token \
     )((&s), (value))
+// =================================================================================
+// =================================================================================
+
+/**
+ * @brief Function removes all data after a token from the string
+ *
+ * @param s A struct of type str
+ * @param token A char* token
+ */
+ErrorCodes remove_string_token(str* s, char *token);
+// ---------------------------------------------------------------------------------
+
+/**
+ * @brief Function to remove all data after a pointer to an integer value
+ *
+ * @param s A struct of type str
+ * @param n An integer
+ */
+ErrorCodes remove_string_n(str* s, int n);
+
+#define remove_string_after(s, value) \
+    _Generic((value), \
+        int: remove_string_n, \
+        char*: remove_string_token \
+    )((&s), (value))
+// =================================================================================
+// =================================================================================
+
+/**
+ * @brief This function will resize the memory allocation to a str struct to
+ *        the minimum necessary memory to contain the string
+ *
+ * @param str_struct A struct of type str
+ * @returns An error code of Success or MemoryAllocationError
+ */
+ErrorCodes resize_string(str *str_struct);
+
+#define resize_str(str) _Generic((str), default: resize_string)((&str))
 // =================================================================================
 // =================================================================================
 // Implement functions similar to those in string.h for standard strings

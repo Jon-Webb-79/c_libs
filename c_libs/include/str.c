@@ -323,6 +323,49 @@ str string_pop_int(str* s, size_t n) {
     }
     return result;
 }
+// =================================================================================
+// =================================================================================
+
+ErrorCodes remove_string_token(str* s, char *token) {
+    char* last_occurrence = last_token_occurance(s->ptr, *token);
+    if (last_occurrence) {
+        *last_occurrence = '\0';  // null-terminate at the token's location
+        s->len = last_occurrence - s->ptr;  // update the length
+    }
+    // If the token is not found, we do nothing.
+	return Success;
+}
+// ---------------------------------------------------------------------------------
+
+ErrorCodes remove_string_n(str* s, int n) {
+    if (n <= 0) {
+        return OutOfBoundsError; // No characters to remove.
+    }
+
+    if (n >= s->len) {
+        s->ptr[0] = '\0'; // If n is greater than or equal to string length, clear the entire string.
+        s->len = 0;
+    } else {
+        s->ptr[s->len - n] = '\0';  // null-terminate `n` characters before the end.
+        s->len -= n;  // update the length
+    }
+	return Success;
+}
+// =================================================================================
+// =================================================================================
+
+ErrorCodes resize_string(str *str_struct) {
+    // Ensure the string is dynamically allocated
+    if (str_struct->ptr && str_struct->is_dynamic) {
+        char *new_ptr = realloc(str_struct->ptr, str_struct->len + 1); // +1 for null-terminator
+        if (!new_ptr) {
+            // Memory allocation failed
+            return MemoryAllocationError;
+        }
+        str_struct->ptr = new_ptr;
+    }
+    return Success;
+}
 // ================================================================================
 // ================================================================================
 // eof

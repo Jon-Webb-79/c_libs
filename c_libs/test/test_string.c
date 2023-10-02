@@ -288,6 +288,41 @@ void test_pop_string_int(void **state)
 	free_str(month);
 	free_str(day);
 }
+// --------------------------------------------------------------------------------
+
+void test_resize_string(void **state)
+{
+	(void) state;
+	str STR_NULL(date);
+    append_string(date, "01/062023");
+	str year = string_pop(date, "/");
+	resize_str(date);
+
+	free_str(date);
+	free_str(year);
+}
+// --------------------------------------------------------------------------------
+
+void test_remove_string_token(void **state)
+{
+	(void) state;
+	str STR_NULL(date);
+    append_string(date, "01/06/2023");
+	remove_string_after(date, "/");
+	assert_string_equal(date.ptr, "01/06");
+	free_str(date);
+}
+// --------------------------------------------------------------------------------
+
+void test_remove_string_int(void **state)
+{
+	(void) state;
+	str STR_NULL(date);
+    append_string(date, "01062023");
+	remove_string_after(date, 4);
+	assert_string_equal(date.ptr, "0106");
+	free_str(date);
+}
 // ================================================================================
 // ================================================================================
 // eof

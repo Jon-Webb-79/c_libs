@@ -493,6 +493,8 @@ Returns
    >> Literal Length: 5
    >> String Length:  5
 
+.. _pop_string:
+
 Pop String
 ==========
 The ``string_pop`` Macro provides a wrapper around the ``string_pop_int`` and ``string_pop_token``
@@ -530,14 +532,14 @@ Returns
 
    str STR_NULL(string);
    append_string(string, "01/06/2023");
-   str year = string_pop(date, "/");
-   str month = string_pop(date, "/");
-   str day = string_pop(date, "/");
+   str year = string_pop(string, "/");
+   str month = string_pop(string, "/");
+   str day = string_pop(string, "/");
    PRINT(year, ", ", month, ", ", day);
    free_str(year);
    free_str(day);
    free_str(month);
-   free(date);
+   free_str(string);
 
 .. code-block:: bash
 
@@ -550,18 +552,102 @@ Returns
 
    str STR_NULL(string);
    append_string(string, "01062023");
-   str year = string_pop(date, 4);
-   str month = string_pop(date, 2);
-   str day = string_pop(date, 2);
+   str year = string_pop(string, 4);
+   str month = string_pop(string, 2);
+   str day = string_pop(string, 2);
    PRINT(year, ", ", month, ", ", day);
    free_str(year);
    free_str(day);
    free_str(month);
-   free(date);
+   free_str(string);
 
 .. code-block:: c
 
    >> 2023, 06, 01
+
+Remove String After
+===================
+The ``remove_string_after`` macro acts similar to the :ref:`string_pop<pop_string>` macro that
+will remove all data in a ``str`` variable after an integer or char pointer.  However, unlike
+the ``string_pop`` macro, the ``remove_string_after`` macro will only remove data from a string,
+but will not return a ``str`` variable that would have to be free'd later in the program.
+
+.. code-block:: c
+
+   ErrorCodes remove_string_after(str str_struct, int a || char* a);
+
+Parameters
+----------
+
+- :c:`str_struct`: A struct of type ``str``
+- :c:`a`: A parser that is either an integer or a char pointer.  All data after this point will be removed
+
+Returns
+-------
+
+- :c:`error`: A :ref:`ErrorCodes<ErrorCodes>` enum of type ``Success``, or ``OutOfBoundsError`` 
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str STR_NULL(string);
+   append_string(string, "01/06/2023");
+   remove_string_after(string, "/");
+   PRINT(string);
+   free_str(string);
+
+.. code-block:: bash
+
+   >> 01/06
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str STR_NULL(string);
+   append_string(string, "01062023");
+   remove_string_after(string, 4);
+   PRINT(string);
+   free(string);
+
+.. code-block:: c
+
+   >> 0106
+
+Resize String
+=============
+The ``resize_str`` macro will resize the memory allocation of a ``str`` data type to just
+the necessary memory.
+
+.. code-block:: c
+
+   ErrorCodes resize_str(str str_struct);
+
+Parameters
+----------
+
+- :c:`str_struct`: A struct of type ``str``
+
+Returns
+-------
+
+- :c:`error`: A :ref:`ErrorCodes<ErrorCodes>` enum of type ``Success``, or ``MemoryAllocationError``  
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str STR_NULL(string);
+   append_string(string, "01/12345");
+   remove_string_after(string, "/");
+   // At this point string is allocated 9 characters but only using 3
+   resize_str(string);
+   // Now it is allocated 3 characters and uses 3 characters
+   free_str(string);
 
 literal_memcpy
 ==============

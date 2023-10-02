@@ -50,6 +50,9 @@
 	cmocka_unit_test(test_last_token_empty),
     cmocka_unit_test(test_pop_string_token),
 	cmocka_unit_test(test_pop_string_int),
+    cmocka_unit_test(test_resize_string),
+    cmocka_unit_test(test_remove_string_token),
+	cmocka_unit_test(test_remove_string_int),
  };
 // Test functions for test_swap
 /* const struct CMUnitTest tests_swap[] = { */

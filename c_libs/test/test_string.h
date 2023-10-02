@@ -48,7 +48,9 @@ void test_last_token_occurance(void **state);
 void test_last_token_empty(void **state);
 void test_pop_string_token(void **state);
 void test_pop_string_int(void **state);
-
+void test_resize_string(void **state);
+void test_remove_string_token(void **state);
+void test_remove_string_int(void **state);
 
 #endif /* test_H */
 // ================================================================================
