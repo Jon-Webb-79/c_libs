@@ -28,6 +28,7 @@ section to ensure it is still in working order.
    Vectors and Arrays <vector>
    Linked List <linked_list>
    Binary Tree <btree>
+   Error Codes <error>
 
 
 Indices and tables

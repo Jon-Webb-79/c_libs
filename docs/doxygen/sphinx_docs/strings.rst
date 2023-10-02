@@ -34,6 +34,7 @@ The ``str`` library relies on the following struct to contain information
    {
        char *ptr;
        size_t len;
+       bool is_dynamic;
    } str;
 
 
@@ -42,6 +43,7 @@ Attributes
 
 - :c:`ptr`: A Pointer to the string
 - :c:`len`: The length of the string in number of bytes
+- :c:`is_dynamic`: Denotes whther the string is dynamically allocated (true) or statically allocated (false)
 
 Initialize Static Strings
 =========================
@@ -80,7 +82,9 @@ Initialize Dynamic Strings
 ==========================
 The ``str.h`` library can instantiate dynamically allocated strings with the ``STR_NULL``
 Macro.  These strings must be manually de-allocated once they are no longer needed.
-This Macro only acts as a text replacement function to set up the instantiator.
+This Macro only acts as a text replacement function to set up the instantiator. All
+memory allocated with this constructor will need to be manually de-allocated with 
+the :ref:`free_str<free_string>` function.
 
 .. code-block:: c
 
@@ -115,6 +119,9 @@ which keeps track of all structs enabled under the Macro, and then automatically
 the memory associated with those structs when the struct goes out of scope.  This
 macro simplifies the use of dynamically allocated strings; however, the user should be
 aware that this will increase memory overhead and may also have an effect on execution speed.
+Even though the strings instantiated with garbage collection are meant to be automatically
+cleaned up, a user can also manually deallocate a string with the :ref:`free_str<free_string>`
+Macro if they choose to do so with no risk of segmentation faults.
 
 .. code-block:: c
 
@@ -148,7 +155,7 @@ types.
 
 .. code-block:: c
 
-   bool append_string(str container, char*||str string);
+   ErrorCodes append_string(str container, char* || str string);
 
 Parameters
 ----------
@@ -159,7 +166,7 @@ Parameters
 Returns
 -------
 
-- :c:`error_code`: ``true`` of the function executes succesfully, ``false`` otherwise with a ``stderr`` message.
+- :c:`error_code`: An :ref:`ErrorCodes<ErrorCodes>` enum of ``Success`` or ``MemoryAllocationError``.
 
 .. code-block:: c
 
@@ -220,7 +227,7 @@ to allow function overloading.
 
 .. code-block:: c
 
-   bool replace_string(str str_struct, str || char* value);
+   ErrorCodes replace_string(str str_struct, str || char* value);
 
 Parameters
 ----------
@@ -231,7 +238,7 @@ Parameters
 Returns
 -------
 
-- :c:`error_code`: ``true`` if the function executes succesfully, ``false`` otherwise with a ``stderr`` message.
+- :c:`error_code`: An :ref:`ErrorCodes<ErrorCodes>` enum of ``Success`` or ``MemoryAllocationError``.
 
 .. code-block:: c
 
@@ -283,7 +290,7 @@ The following functions can also be used in place of the ``replace_string`` Macr
 Compare Strings
 ===============
 The ``compare_strings`` function can be used to compare two ``str`` structures
-in much the same way the ``strcmp`` function does for string literals in the
+in much the same way the ``strccmp`` function does for string literals in the
 ``string.h`` library.
 
 .. code-block:: c
@@ -330,7 +337,7 @@ more byts than are available in the string in order to prevent a segmentation fa
 
 .. code-block:: c
 
-   bool copy_mem(str *dest, const str *src, size_t n);
+   ErrorCodes copy_mem(str *dest, const str *src, size_t n);
 
 Parameters
 ----------
@@ -342,7 +349,7 @@ Parameters
 Returns
 -------
 
-- :c:`bool`: ``true`` if the function executes succesfully, ``false`` otherwise with a ``stderr`` message
+- :c:`error_code`: An :ref:`ErrorCodes<ErrorCodes>` enum of ``Success``, ``MemoryAllocationError``, ``StrNullError``, or ``OutOfBoundsError``.
 
 .. code-block::
 
@@ -392,8 +399,8 @@ function fails if the user tries to pass more bytes than are available in the st
    str STR_NULL(string2);
    append_string(string1, "Message");
    size_t n = 12;
-   bool a = move_mem(string2, string1, n);
-   if ( !a ) {
+   ErrorCodes a = move_mem(string2, string1, n);
+   if ( a == OutOfBoundsError ) {
        PRINT("Exited append_string, tried to copy to much memory, stderr message released")
    }
    free_str(string1);
@@ -412,11 +419,11 @@ uses the ``_Generic`` operator as a wrapper around a single function to abstract
 the pointer references.  The underlying function does not allow a user to copy
 more byts than are available in the string in order to prevent a segmentation fault.
 This is a safer algorithm to use than the ``copy_memory`` funciton when their may be
-overlapping memory.
+overlapping memory, which will not occur if the user passes two different ``str`` structs.
 
 .. code-block:: c
 
-   bool move_mem(str *dest, const str *src, size_t n);
+   ErrorCodes move_mem(str *dest, const str *src, size_t n);
 
 Parameters
 ----------
@@ -428,7 +435,7 @@ Parameters
 Returns
 -------
 
-- :c:`bool`: ``true`` if the function executes succesfully, ``false`` otherwise with a ``stderr`` message
+- :c:`error_code`: An :ref:`ErrorCodes<ErrorCodes>` enum of ``Success``, ``MemoryAllocationError``, ``StrNullError``, or ``OutOfBoundsError``.
 
 .. code-block:: c
 
@@ -485,6 +492,76 @@ Returns
 
    >> Literal Length: 5
    >> String Length:  5
+
+Pop String
+==========
+The ``string_pop`` Macro provides a wrapper around the ``string_pop_int`` and ``string_pop_token``
+functions in order to provide an overloaded for different methods of poping a string variable.
+The user can either pass an integer or a ``char*`` token to the to the macro that will determine
+what data is popped.  If a ``char*`` variable is passed to the macro, it will look for the
+last instance of that variable in the string and pop all of the data to the right of it and
+return to the user.  If an integer is passed to the macro, a pointer will advance to the end
+of the string minus the pointer and pop everything past that point. Each call to ``string_pop``
+will result in the poped value being returned to the user and removed from the original string.
+
+**NOTE:** The user needs to remember that the returned ``str`` data types must be manually
+free'd.  If the user wants to add them to garbage collection they will need to instantiate
+a new ``str`` struct with a ``CLEANUP_STR`` macro and then on the spot de-allocate the
+returned ``str`` type.
+
+.. code-block:: c
+
+   str string_pop(str str_struct, int a || char* a );
+
+Parameters
+----------
+
+- :c:`str_struct`: A struct of type ``str``.
+
+Returns
+-------
+
+- :c:`a`: An integer or a pointer to a char value.
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str STR_NULL(string);
+   append_string(string, "01/06/2023");
+   str year = string_pop(date, "/");
+   str month = string_pop(date, "/");
+   str day = string_pop(date, "/");
+   PRINT(year, ", ", month, ", ", day);
+   free_str(year);
+   free_str(day);
+   free_str(month);
+   free(date);
+
+.. code-block:: bash
+
+   >> 2023, 06, 01
+
+.. code-block:: c
+
+   #include "str.h"
+   #include "print.h"
+
+   str STR_NULL(string);
+   append_string(string, "01062023");
+   str year = string_pop(date, 4);
+   str month = string_pop(date, 2);
+   str day = string_pop(date, 2);
+   PRINT(year, ", ", month, ", ", day);
+   free_str(year);
+   free_str(day);
+   free_str(month);
+   free(date);
+
+.. code-block:: c
+
+   >> 2023, 06, 01
 
 literal_memcpy
 ==============
@@ -551,4 +628,52 @@ Parameters
 .. code-block:: bash
 
    memove can be very very useful.
+
+.. _free_string:
+
+last_token_occurance
+====================
+The ``last_token_occurance`` function will determine the last location in a string where
+a character token exists.  This function uses a local version of the ``strrchr`` function
+from the ``string.h`` library.
+
+.. code-block:: c
+
+   char* last_token_occurance(const char *s, int c);
+
+Parameters
+----------
+
+- :c:`s`: A pointer to a string array or string literal.
+- :c:`c`: An integer representation of a char value.  Can be passed as a char.
+
+Returns
+-------
+
+- :c:`ptr`: A char pointer to the location where the last token resides/
+
+.. code-block:: c
+
+   #include "str.h"
+   
+   char *date = "01/06/2023";
+   char *val = last_token_occurance(&date, '/');
+   // val is returned as a pointer to the '/' character just before 2023
+
+Free String
+===========
+The ``free_str`` Macro utilizes the ``free_string`` function to abstract away the pointer reference.
+The ``free_str`` Macro or ``free_string`` function should only be used to free dynamically
+allocated ``ptr`` references in a ``str`` struct.  However, the function contains error checking
+to ensure that only dynamically allocated strings are free'd.  If a string is statically allocated
+the function will return contorl to the calling program and will throw no errors.
+
+.. code-block:: c
+
+   .. free_str(str str_struct);
+
+Parameters
+----------
+
+- :c:`str_struct`: A struct of type ``str``.
 

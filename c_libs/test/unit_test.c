@@ -29,8 +29,14 @@
  const struct CMUnitTest tests_string[] = {
 	cmocka_unit_test(test_append_string_free),
     cmocka_unit_test(test_append_string_cleanup),
+    cmocka_unit_test(test_cleanup_with_manual_deallocation),
+    cmocka_unit_test(test_append_string_manual_cleanup),
 	cmocka_unit_test(test_copy_memory),
+    cmocka_unit_test(test_copy_memory_overflow),
+	cmocka_unit_test(test_copy_memory_null),
 	cmocka_unit_test(test_move_memory),
+	cmocka_unit_test(test_move_memory_overflow),
+	cmocka_unit_test(test_move_memory_null),
 	cmocka_unit_test(test_replace_string_literal),
 	cmocka_unit_test(test_replace_string_str),
 	cmocka_unit_test(test_compare_equal_strings),
@@ -38,7 +44,12 @@
     cmocka_unit_test(test_compare_smaller_strings),
 	cmocka_unit_test(test_literal_string_length),
     cmocka_unit_test(test_copy_string_literal),
-    cmocka_unit_test(test_move_string_literal)
+    cmocka_unit_test(test_move_string_literal),
+	cmocka_unit_test(test_last_token_occurance),
+	cmocka_unit_test(test_last_token_occurance_null),
+	cmocka_unit_test(test_last_token_empty),
+    cmocka_unit_test(test_pop_string_token),
+	cmocka_unit_test(test_pop_string_int),
  };
 // Test functions for test_swap
 /* const struct CMUnitTest tests_swap[] = { */

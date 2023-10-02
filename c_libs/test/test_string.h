@@ -27,8 +27,14 @@
 
 void test_append_string_free(void **state);
 void test_append_string_cleanup(void **state);
+void test_cleanup_with_manual_deallocation(void **state);
+void test_append_string_manual_cleanup(void **state);
 void test_copy_memory(void **state);
+void test_copy_memory_overflow(void **state);
+void test_copy_memory_null(void **state);
 void test_move_memory(void **state);
+void test_move_memory_overflow(void **state);
+void test_move_memory_null(void **state);
 void test_replace_string_literal(void **state);
 void test_replace_string_str(void **state);
 void test_compare_equal_strings(void **state);
@@ -37,6 +43,12 @@ void test_compare_smaller_strings(void **state);
 void test_literal_string_length(void **state);
 void test_copy_string_literal(void **state);
 void test_move_string_literal(void **state);
+void test_last_token_occurance_null(void **state);
+void test_last_token_occurance(void **state);
+void test_last_token_empty(void **state);
+void test_pop_string_token(void **state);
+void test_pop_string_int(void **state);
+
 
 #endif /* test_H */
 // ================================================================================

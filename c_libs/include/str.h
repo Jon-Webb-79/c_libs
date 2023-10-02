@@ -12,23 +12,18 @@
 // ================================================================================
 // Include modules here
 //
-// Copy as is from string.h
-// TODO strchr
-// TODO strstr
-// TODO strspn
-// TODO strcspn
-//
-// Replace from string.h
-// TODO strcpy
-// TODO strcat
-// TODO strncpy
-// TODO strncat
 //
 // Add capability
-// TODO string_replace
-// TODO string_pop
+// TODO Add resize_string method
+// TODO develop an iterator
+// TODO Add
+// TODO Subtract
 #if !defined(__GNUC__) && !defined(__clang__)
 #error "This code is only compatible with GCC and Clang"
+#endif
+
+#if !defined(__STDC_VERSION__) || __STDC_VERSION__ < 201112L
+#error "This code requires C11 or later."
 #endif
 
 #ifndef str_H
@@ -37,6 +32,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+
+#include "admin.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -51,11 +48,13 @@ extern "C" {
  *
  * @attr ptr A pointer to the string array in memory
  * @attr len The length of the string
+ * @attr is_dynamic true if the struct is dynamically allocated, false otherwise
  */
 typedef struct
 {
 	char *ptr;
 	size_t len;
+	bool is_dynamic;
 } str;
 // ---------------------------------------------------------------------------------
 // pre-instantiator
@@ -65,7 +64,7 @@ typedef struct
  *
  *  @param var The varaible that will be assigned to the str implementation
  */
-#define STR_NULL(var) (var) = { .ptr=NULL, .len=0 }
+#define STR_NULL(var) (var) = { .ptr=NULL, .len=0, .is_dynamic=true }
 
 // =================================================================================
 // =================================================================================
@@ -76,7 +75,7 @@ typedef struct
  *
  * @param s The C-style string literal to be inserted into the str struct
  */
-#define str_lit(s) ((str){ .ptr=s, .len=sizeof(s) - 1 })
+#define str_lit(s) ((str){ .ptr=s, .len=sizeof(s) - 1, .is_dynamic=false } )
 // ---------------------------------------------------------------------------------
 
 /**
@@ -84,10 +83,10 @@ typedef struct
  *
  * @param str_struct1 A struct of type str
  * @param str_struct2 A string literal
- * @return true if the function executes succesfully, false otherwhise with a
- *         a message to stderr*
+ * @return returns a Success enum if function executes successfully,
+ *         MemoryAllocationError otherwise.
  */
-bool join_str_struct(str* str_struct1, str str_struct2);
+ErrorCodes join_str_struct(str* str_struct1, str str_struct2);
 // ---------------------------------------------------------------------------------
 
 /**
@@ -95,10 +94,10 @@ bool join_str_struct(str* str_struct1, str str_struct2);
  *
  * @param str_struct A struct of type str
  * @param cstr A C-style string literal
- * @return true if the function executes succesfully, false otherwhise with a
- *         a message to stderr
+ * @return returns a Success enum if function executes successfully,
+ *         MemoryAllocationError otherwise.
  */
-bool join_cstr(str* str_struct, const char* cstr);
+ErrorCodes join_cstr(str* str_struct, const char* cstr);
 // ---------------------------------------------------------------------------------
 
 /**
@@ -107,8 +106,8 @@ bool join_cstr(str* str_struct, const char* cstr);
  *
  * @param str_struct A struct of type str
  * @param cstr A c-style string literal or a struct of type str
- * @return true if the function executes succesfully, false otherwhise with a
- *         a message to stderr
+ * @return returns a Success enum if function executes successfully,
+ *         MemoryAllocationError otherwise.
  */
 #define append_string(str_struct, cstr) _Generic((cstr), \
     str: join_str_struct, \
@@ -122,18 +121,20 @@ bool join_cstr(str* str_struct, const char* cstr);
  *
  * @param s Pointer to the str variable.
  * @param cstr Pointer to the C-style string.
- * @return true on success, false on failure (e.g., memory allocation failure).
+ * @return returns a Success enum if function executes successfully,
+ *         MemoryAllocationError otherwise.
  */
-bool replace_str_with_cstr(str* s, const char* cstr);
+ErrorCodes replace_str_with_cstr(str* s, const char* cstr);
 
 /**
  * @brief Replaces the content of one str variable with another str variable.
  *
  * @param dest Pointer to the destination str variable.
  * @param src The source str variable.
- * @return true on success, false on failure (e.g., memory allocation failure).
+ * @return returns a Success enum if function executes successfully,
+ *         MemoryAllocationError otherwise.
  */
-bool replace_str_with_str(str* dest, str src);
+ErrorCodes replace_str_with_str(str* dest, str src);
 // ----------------------------------------------------------------------------------
 
 /**
@@ -142,8 +143,8 @@ bool replace_str_with_str(str* dest, str src);
  *
  * @param str_struct A struct of type str
  * @param cstr A c-style string literal or a struct of type str
- * @return true if the function executes succesfully, false otherwhise with a
- *         a message to stderr
+ * @return returns a Success enum if function executes successfully,
+ *         MemoryAllocationError otherwise.
  */
 #define replace_string(str_struct, value) _Generic((value), \
     str: replace_str_with_str, \
@@ -234,7 +235,7 @@ void _str_free(str* s);
  *
  * @param var The variable name that will be collected and cleaned up
  */
-#define CLEANUP_STR(var) var __attribute__((cleanup(_str_free))) = { .ptr=NULL, .len=0 }
+#define CLEANUP_STR(var) var __attribute__((cleanup(_str_free))) = { .ptr=NULL, .len=0, .is_dynamic=true }
 // ---------------------------------------------------------------------------------
 
 /**
@@ -248,7 +249,7 @@ void _str_free(str* s);
  * @param n Number of bytes to copy
  * @returns true if function executes succesfully, false otherwis
  */
-bool copy_memory(str *dest, const str *src, size_t n);
+ErrorCodes copy_memory(str *dest, const str *src, size_t n);
 
 #define copy_mem(str_struct1, str_struct2, n) _Generic((str_struct1), \
     default: copy_memory) (&str_struct1, &str_struct2, n)
@@ -265,18 +266,89 @@ bool copy_memory(str *dest, const str *src, size_t n);
  * @param n Number of bytes to copy
  * @returns true if function executes sucesfully, false otherwise
  */
-bool move_memory(str *dest, const str *src, size_t n);
+ErrorCodes move_memory(str *dest, const str *src, size_t n);
 
 #define move_mem(str_struct1, str_struct2, n) _Generic((str_struct1), \
     default: move_memory) (&str_struct1, &str_struct2, n)
 // ---------------------------------------------------------------------------------
+
+/**
+ * @brief looks for the last occurance of a char token and pop's the data following
+ *        the token and passes it back to the user
+ *
+ * @param s A struct of type str
+ * @param token A char* token that divides data to be popped
+ */
+str string_pop_token(str *s, char *token);
+// ---------------------------------------------------------------------------------
+
+/**
+ * @brief Pops all characters that are n characters from the end of a string
+ *
+ * @param s A struct of type str
+ * @param n An integer representing the slice where data will be popped.
+ */
+str string_pop_int(str *s, size_t n);
+// ---------------------------------------------------------------------------------
+/**
+ * @brief looks for the last occurance of a char token and pop's the data following
+ *        the token and passes it back to the user
+ *
+ * @param s A struct of type str
+ * @param token A char token or integer that divides data to be popped
+ */
+#define string_pop(s, value) \
+    _Generic((value), \
+        int: string_pop_int, \
+        char*: string_pop_token \
+    )((&s), (value))
+// =================================================================================
+// =================================================================================
 // Implement functions similar to those in string.h for standard strings
 
+/**
+ * @breif A local version of the memcpy function used in the string.h library.
+ *        This function determines the length of a string literal up to the
+ *        null terminator
+ *
+ * @param str A string literal
+ */
 size_t literal_strlen(const char* str);
+// ---------------------------------------------------------------------------------
 
+/**
+ * @brief A local version of the memcpy function used in the string.h library.
+ *        This function copies memory from one location to another.
+ *
+ * @param dest A pointer to where the data will be copied
+ * @param src A pointer to the location where memory will be copied from
+ * @param n The number of bytest to be copied from src to dest
+ */
 void* literal_memcpy(void* dest, const void* src, size_t n) __attribute__((hot));
+// ---------------------------------------------------------------------------------
 
+/**
+ * @brief A local version of the memcpy function used in the string.h library.
+ *        This function copies memory from one location to another. Safer than
+ *        literal_memcpy for scenarios with overlapping memory.
+ *
+ * @param dest A pointer to where the data will be copied
+ * @param src A pointer to the location where memory will be copied from
+ * @param n The number of bytest to be copied from src to dest
+ */
 void* literal_memmove(void* dest, const void* src, size_t n) __attribute__((hot));
+// ---------------------------------------------------------------------------------
+
+/**
+ * @brief A local version of the strrchar function from the string.h library. This
+ *        function will determine the last location of an occurance in a string and
+ *        pass a pointer to that location back to the user.
+ *
+ * @param s A string literal
+ * @param c An integer representation of a character.  This will be converted back
+ *          into a char in the function
+ */
+char* last_token_occurance(const char *s, int c);
 // =================================================================================
 // =================================================================================
 #ifdef __cplusplus
