@@ -2,6 +2,10 @@
 c_libs
 ######
 
+**NOTE:** This library is in the process of being ported to the CSalt library 
+and will be discontinuous at some point in the near future.  The CSalt library 
+can be found at `CSalt <https://github.com/Jon-Webb-79/csalt>`_ 
+
 This library contains C functions and generic operators that enable pre-defined data structures,
 generic print statements, random number generators, and file readers.  This library implements
 generic operators to simplify the user interface.  Unlike traditional macros, a generic operator
